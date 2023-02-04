@@ -1,0 +1,149 @@
+<!doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>EventInterceptorsGenerator</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../";</script>    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/jetbrains-mono.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<body>
+<div class="navigation-wrapper" id="navigation-wrapper">
+    <div id="leftToggler"><span class="icon-toggler"></span></div>
+    <div class="library-name">
+<a href="../../../index.html">
+<span>simple-robot</span>            </a>    </div>
+    <div>3.0.0-RC.2
+    </div>
+    <div class="pull-right d-flex">
+        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+    </div>
+</div>
+<div id="container">
+    <div id="leftColumn">
+        <div id="sideMenu"></div>
+    </div>
+    <div id="main">
+<div class="main-content" id="content" pageids="simbot-core::love.forte.simbot.core.event/EventInterceptorsGenerator///PointingToDeclaration//1315065822">
+  <div class="breadcrumbs"><a href="../../index.html">simbot-core</a><span class="delimiter">/</span><a href="../index.html">love.forte.simbot.core.event</a><span class="delimiter">/</span><span class="current">EventInterceptorsGenerator</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Event</span><wbr><span>Interceptors</span><wbr><span><span>Generator</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="index.html">EventInterceptorsGenerator</a>&nbsp;<span><span class="token annotation builtin">@</span><a href="../../../simbot-api/love.forte.simbot/-internal-simbot-api/index.html"><span class="token annotation builtin">InternalSimbotApi</span></a>&nbsp;</span><span class="token keyword">constructor</span><span class="clearfix"><span class="floating-right">(<a href="https://github.com/simple-robot/simpler-robot/tree/v3-main/simbot-core/src/main/kotlin/love/forte/simbot/core/event/EventInterceptorsGenerator.kt#L27">source</a>)</span></span></div><p class="paragraph">事件拦截器的生成/构建器，用于 <a href="../-simple-listener-manager-configuration/index.html">SimpleListenerManagerConfiguration</a> 中。</p><h3 class=""> 事件流程拦截器</h3><p class="paragraph">你可以通过 <a href="processing-intercept.html">processingIntercept</a> 等相关函数提供针对整个事件流程的拦截器.</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">// Kotlin<br>processingIntercept {<br>    // do..<br><br>    it.proceed()<br>}<br><br>processingIntercept(id = randomID(), priority = PriorityConstant.FIRST) {<br>    // do..<br><br>    it.proceed()<br>}</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="sample-container"><pre><code class="block lang-java" theme="idea">// Java<br> generator<br>        .processingIntercept(Identifies.randomID(), PriorityConstant.FIRST, context -&gt; {<br>            // do...<br>            return context.proceedBlocking();<br>        })<br>        .processingIntercept(Identifies.randomID(), PriorityConstant.FIRST, context -&gt; {<br>            // do...<br>            return context.proceedBlocking();<br>        })<br>        .end() // back to config<br>        // ...<br>        ;</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><h3 class=""> 监听函数拦截器</h3><p class="paragraph">你可以通过 <a href="listener-intercept.html">listenerIntercept</a> 等相关函数提供针对每个监听函数的拦截器.</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">// Kotlin<br>listenerIntercept {<br>    // do...<br><br>    it.proceed()<br>}<br>listenerIntercept(id = randomID(), priority = PriorityConstant.FIRST) {<br>    // do...<br>    it.proceed()<br>}</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="sample-container"><pre><code class="block lang-java" theme="idea">// Java<br> generator<br>        .listenerIntercept(Identifies.randomID(), PriorityConstant.FIRST, context -&gt; {<br>            // do...<br>            return context.proceedBlocking();<br>        })<br>        .listenerIntercept(Identifies.randomID(), PriorityConstant.FIRST, context -&gt; {<br>            // do...<br>            return context.proceedBlocking();<br>        })<br>        .end() // back to config<br>        // ...<br>        ;</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Constructors">Constructors</button><button class="section-tab" data-togglable="Functions">Functions</button><button class="section-tab" data-togglable="Properties">Properties</button></div>
+    <div class="tabs-section-body">
+      <h2 class="tabbedcontent">Constructors</h2>
+      <div class="table" data-togglable="Constructors"><a data-name="647861924%2FConstructors%2F1315065822" anchor-label="EventInterceptorsGenerator" id="647861924%2FConstructors%2F1315065822" data-filterable-set=":simbot-core:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simbot-core:dokkaHtmlPartial/main" data-filterable-set=":simbot-core:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue TabbedContent">
+            <div class=""><span class="inline-flex">
+                <div><a href="-event-interceptors-generator.html"><span>Event</span><wbr><span>Interceptors</span><wbr><span><span>Generator</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="647861924%2FConstructors%2F1315065822"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-core:dokkaHtmlPartial/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../../simbot-api/love.forte.simbot/-internal-simbot-api/index.html"><span class="token annotation builtin">InternalSimbotApi</span></a></div></div><span class="token keyword"></span><span class="token keyword">fun </span><a href="-event-interceptors-generator.html"><span class="token function">EventInterceptorsGenerator</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="">Functions</h2>
+      <div class="table" data-togglable="Functions"><a data-name="770676466%2FFunctions%2F1315065822" anchor-label="listenerIntercept" id="770676466%2FFunctions%2F1315065822" data-filterable-set=":simbot-core:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simbot-core:dokkaHtmlPartial/main" data-filterable-set=":simbot-core:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="listener-intercept.html"><span>listener</span><wbr><span><span>Intercept</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="770676466%2FFunctions%2F1315065822"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="listener-intercept.html"><span class="token function">listenerIntercept</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">id<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">interceptor<span class="token operator">: </span><a href="../../../simbot-api/love.forte.simbot.event/-event-listener-interceptor/index.html">EventListenerInterceptor</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">EventInterceptorsGenerator</a></div><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="listener-intercept.html"><span class="token function">listenerIntercept</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">id<span class="token operator">: </span><a href="../../../simbot-api/love.forte.simbot/-i-d/index.html">ID</a><span class="token operator"> = </span>randomID()<span class="token punctuation">, </span></span><span class="parameter ">interceptor<span class="token operator">: </span><a href="../../../simbot-api/love.forte.simbot.event/-event-listener-interceptor/index.html">EventListenerInterceptor</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">EventInterceptorsGenerator</a></div><div class="brief "><p class="paragraph">提供一个 <a href="listener-intercept.html">id</a> 和 <a href="listener-intercept.html">拦截器</a>, 向内部注册一个对应的拦截器。</p></div><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="listener-intercept.html"><span class="token function">listenerIntercept</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">id<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">point<span class="token operator">: </span><a href="../../../simbot-api/love.forte.simbot.event/-event-listener-interceptor/-point/index.html">EventListenerInterceptor.Point</a><span class="token operator"> = </span>EventListenerInterceptor.Point.DEFAULT<span class="token punctuation">, </span></span><span class="parameter ">priority<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span>PriorityConstant.NORMAL<span class="token punctuation">, </span></span><span class="parameter ">interceptFunction<span class="token operator">: </span><span class="token keyword">suspend </span><span class="token punctuation">(</span><span class="token keyword"></span><a href="../../../simbot-api/love.forte.simbot.event/-event-listener-interceptor/-context/index.html">EventListenerInterceptor.Context</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="../../../simbot-api/love.forte.simbot.event/-event-result/index.html">EventResult</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">EventInterceptorsGenerator</a></div><div class="brief "><p class="paragraph">提供一个 <a href="listener-intercept.html">id</a>, <a href="listener-intercept.html">优先级</a> 和 <a href="listener-intercept.html">拦截函数</a>, 得到一个流程拦截器 <a href="../../../simbot-api/love.forte.simbot.event/-event-listener-interceptor/index.html">EventListenerInterceptor</a>.</p></div><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="listener-intercept.html"><span class="token function">listenerIntercept</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">id<span class="token operator">: </span><a href="../../../simbot-api/love.forte.simbot/-i-d/index.html">ID</a><span class="token operator"> = </span>randomID()<span class="token punctuation">, </span></span><span class="parameter ">point<span class="token operator">: </span><a href="../../../simbot-api/love.forte.simbot.event/-event-listener-interceptor/-point/index.html">EventListenerInterceptor.Point</a><span class="token operator"> = </span>EventListenerInterceptor.Point.DEFAULT<span class="token punctuation">, </span></span><span class="parameter ">priority<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span>PriorityConstant.NORMAL<span class="token punctuation">, </span></span><span class="parameter ">interceptFunction<span class="token operator">: </span><span class="token keyword">suspend </span><span class="token punctuation">(</span><span class="token keyword"></span><a href="../../../simbot-api/love.forte.simbot.event/-event-listener-interceptor/-context/index.html">EventListenerInterceptor.Context</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="../../../simbot-api/love.forte.simbot.event/-event-result/index.html">EventResult</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">EventInterceptorsGenerator</a></div><div class="brief "><p class="paragraph">提供一个 <a href="listener-intercept.html">id</a>, <a href="listener-intercept.html">优先级</a> 和 <a href="listener-intercept.html">拦截函数</a>, 向内部注册一个对应的拦截器。</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1008419958%2FFunctions%2F1315065822" anchor-label="processingIntercept" id="1008419958%2FFunctions%2F1315065822" data-filterable-set=":simbot-core:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simbot-core:dokkaHtmlPartial/main" data-filterable-set=":simbot-core:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="processing-intercept.html"><span>processing</span><wbr><span><span>Intercept</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1008419958%2FFunctions%2F1315065822"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="processing-intercept.html"><span class="token function">processingIntercept</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">id<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">interceptor<span class="token operator">: </span><a href="../../../simbot-api/love.forte.simbot.event/-event-processing-interceptor/index.html">EventProcessingInterceptor</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">EventInterceptorsGenerator</a></div><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="processing-intercept.html"><span class="token function">processingIntercept</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">id<span class="token operator">: </span><a href="../../../simbot-api/love.forte.simbot/-i-d/index.html">ID</a><span class="token operator"> = </span>randomID()<span class="token punctuation">, </span></span><span class="parameter ">interceptor<span class="token operator">: </span><a href="../../../simbot-api/love.forte.simbot.event/-event-processing-interceptor/index.html">EventProcessingInterceptor</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">EventInterceptorsGenerator</a></div><div class="brief "><p class="paragraph">提供一个 <a href="processing-intercept.html">id</a> 和 <a href="processing-intercept.html">拦截器</a> 实例。</p></div><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="processing-intercept.html"><span class="token function">processingIntercept</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">id<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">priority<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span>PriorityConstant.NORMAL<span class="token punctuation">, </span></span><span class="parameter ">interceptFunction<span class="token operator">: </span><span class="token keyword">suspend </span><span class="token punctuation">(</span><span class="token keyword"></span><a href="../../../simbot-api/love.forte.simbot.event/-event-processing-interceptor/-context/index.html">EventProcessingInterceptor.Context</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="../../../simbot-api/love.forte.simbot.event/-event-processing-result/index.html">EventProcessingResult</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">EventInterceptorsGenerator</a></div><br><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="processing-intercept.html"><span class="token function">processingIntercept</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">id<span class="token operator">: </span><a href="../../../simbot-api/love.forte.simbot/-i-d/index.html">ID</a><span class="token operator"> = </span>randomID()<span class="token punctuation">, </span></span><span class="parameter ">priority<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span>PriorityConstant.NORMAL<span class="token punctuation">, </span></span><span class="parameter ">interceptFunction<span class="token operator">: </span><span class="token keyword">suspend </span><span class="token punctuation">(</span><span class="token keyword"></span><a href="../../../simbot-api/love.forte.simbot.event/-event-processing-interceptor/-context/index.html">EventProcessingInterceptor.Context</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="../../../simbot-api/love.forte.simbot.event/-event-processing-result/index.html">EventProcessingResult</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">EventInterceptorsGenerator</a></div><div class="brief "><p class="paragraph">提供一个 <a href="processing-intercept.html">id</a>, <a href="processing-intercept.html">优先级</a> 和 <a href="processing-intercept.html">拦截函数</a>，在内部构建一个拦截器。</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="">Properties</h2>
+      <div class="table" data-togglable="Properties"><a data-name="-238860435%2FProperties%2F1315065822" anchor-label="listenerInterceptors" id="-238860435%2FProperties%2F1315065822" data-filterable-set=":simbot-core:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simbot-core:dokkaHtmlPartial/main" data-filterable-set=":simbot-core:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="listener-interceptors.html"><span>listener</span><wbr><span><span>Interceptors</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-238860435%2FProperties%2F1315065822"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-core:dokkaHtmlPartial/main"><a data-name="-238860435%2FProperties%2F1315065822" anchor-label="listenerInterceptors" id="-238860435%2FProperties%2F1315065822" data-filterable-set=":simbot-core:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="listener-interceptors.html">listenerInterceptors</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../../simbot-api/love.forte.simbot/-i-d/index.html">ID</a><span class="token punctuation">, </span><span class="token keyword"></span><a href="../../../simbot-api/love.forte.simbot.event/-event-listener-interceptor/index.html">EventListenerInterceptor</a><span class="token operator">&gt;</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="158939118%2FProperties%2F1315065822" anchor-label="processingInterceptors" id="158939118%2FProperties%2F1315065822" data-filterable-set=":simbot-core:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simbot-core:dokkaHtmlPartial/main" data-filterable-set=":simbot-core:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="processing-interceptors.html"><span>processing</span><wbr><span><span>Interceptors</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="158939118%2FProperties%2F1315065822"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-core:dokkaHtmlPartial/main"><a data-name="158939118%2FProperties%2F1315065822" anchor-label="processingInterceptors" id="158939118%2FProperties%2F1315065822" data-filterable-set=":simbot-core:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="processing-interceptors.html">processingInterceptors</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../../simbot-api/love.forte.simbot/-i-d/index.html">ID</a><span class="token punctuation">, </span><span class="token keyword"></span><a href="../../../simbot-api/love.forte.simbot.event/-event-processing-interceptor/index.html">EventProcessingInterceptor</a><span class="token operator">&gt;</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2023 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+    </div>
+</div>
+
+</body></html>
+

@@ -1,0 +1,142 @@
+<!doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>Binder</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../";</script>    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/jetbrains-mono.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<body>
+<div class="navigation-wrapper" id="navigation-wrapper">
+    <div id="leftToggler"><span class="icon-toggler"></span></div>
+    <div class="library-name">
+<a href="../../../index.html">
+<span>simple-robot</span>            </a>    </div>
+    <div>3.0.0-RC.2
+    </div>
+    <div class="pull-right d-flex">
+        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+    </div>
+</div>
+<div id="container">
+    <div id="leftColumn">
+        <div id="sideMenu"></div>
+    </div>
+    <div id="main">
+<div class="main-content" id="content" pageids="simboot-core-annotation::love.forte.simboot.annotation/Binder///PointingToDeclaration//-1296193247">
+  <div class="breadcrumbs"><a href="../../index.html">simboot-core-annotation</a><span class="delimiter">/</span><a href="../index.html">love.forte.simboot.annotation</a><span class="delimiter">/</span><span class="current">Binder</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Binder</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simboot-core-annotation:dokkaHtmlPartial/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.annotation/-target/index.html"><span class="token annotation builtin">Target</span></a><span class="token punctuation">(</span><span>allowedTargets<span class="token operator"> = </span><span class="token punctuation">[</span><span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.annotation/-annotation-target/-f-u-n-c-t-i-o-n/index.html">AnnotationTarget.FUNCTION</a><span class="token punctuation">, </span></span><wbr><span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.annotation/-annotation-target/-c-l-a-s-s/index.html">AnnotationTarget.CLASS</a></span><wbr><span class="token punctuation">]</span></span><wbr><span class="token punctuation">)</span></div></div><span class="token keyword">annotation class </span><a href="index.html">Binder</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>value<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span><span class="token operator"> = </span>[]<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>scope<span class="token operator">: </span><a href="-scope/index.html">Binder.Scope</a><span class="token operator"> = </span>Scope.DEFAULT</span></span><span class="token punctuation">)</span><span class="clearfix"><span class="floating-right">(<a href="https://github.com/simple-robot/simpler-robot/tree/v3-main/simboot-core-annotation/src/main/kotlin/love/forte/simboot/annotation/Binder.kt#L20">source</a>)</span></span></div><p class="paragraph">标记在一个函数上。假如这个函数不存在 <a href="../-listener/index.html">Listener</a>, 则说明这个函数是一个 <a href="../../../simboot-api/love.forte.simboot.listener/-parameter-binder-factory/index.html">love.forte.simboot.listener.ParameterBinderFactory</a> 的函数体， 此时函数有且只能有一个参数 <a href="../../../simboot-api/love.forte.simboot.listener/-parameter-binder-factory/-context/index.html">love.forte.simboot.listener.ParameterBinderFactory.Context</a>, 且返回值必须为 <a href="../../../simboot-api/love.forte.simboot.listener/-parameter-binder-result/index.html">love.forte.simboot.listener.ParameterBinderResult</a>.</p><p class="paragraph">如果标记的函数上同样存在 <a href="../-listener/index.html">Listener</a>, 则代表将指定ID的binder应用于当前监听函数。此时作用域只能为 <a href="-scope/-s-p-e-c-i-f-y/index.html">Binder.Scope.SPECIFY</a> 且必须指定所需id。</p></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Types">Types</button><button class="section-tab" data-togglable="Properties">Properties</button><button class="section-tab" data-togglable="Extensions">Extensions</button><button class="section-tab" data-togglable="Parameters">Parameters</button><button class="section-tab" data-togglable="See also">See also</button></div>
+    <div class="tabs-section-body">
+      <h4 class="">See also</h4>
+      <div data-togglable="See also">
+        <div class="platform-hinted WithExtraAttributes" data-platform-hinted="data-platform-hinted" data-togglable="See also"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simboot-core-annotation:dokkaHtmlPartial/main"><div data-togglable="See also"><div class="table" data-togglable="See also"><div class="table-row" data-filterable-current=":simboot-core-annotation:dokkaHtmlPartial/main" data-filterable-set=":simboot-core-annotation:dokkaHtmlPartial/main"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><a href="../-specify-binder/index.html"><span>Specify</span><wbr><span><span>Binder</span></span></a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":simboot-core-annotation:dokkaHtmlPartial/main" data-filterable-set=":simboot-core-annotation:dokkaHtmlPartial/main"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><a href="../-current-binder/index.html"><span>Current</span><wbr><span><span>Binder</span></span></a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":simboot-core-annotation:dokkaHtmlPartial/main" data-filterable-set=":simboot-core-annotation:dokkaHtmlPartial/main"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><a href="../-global-binder/index.html"><span>Global</span><wbr><span><span>Binder</span></span></a></div></span></div><div></div></div></div></div></div></div></div>
+      </div>
+      <h4 class="">Parameters</h4>
+      <div data-togglable="Parameters">
+        <div class="platform-hinted WithExtraAttributes" data-platform-hinted="data-platform-hinted" data-togglable="Parameters"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simboot-core-annotation:dokkaHtmlPartial/main"><div data-togglable="Parameters"><div class="table" data-togglable="Parameters"><div class="table-row" data-filterable-current=":simboot-core-annotation:dokkaHtmlPartial/main" data-filterable-set=":simboot-core-annotation:dokkaHtmlPartial/main"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><u><span><span>value</span></span></u></div></span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">ID标识。当 <a href="scope.html">scope</a> 为 <a href="-scope/-s-p-e-c-i-f-y/index.html">Scope.SPECIFY</a> 时，指定对应ID. 指定id时，如果不是在 <a href="../-listener/index.html">Listener</a> 上，则值应当有且只有一个。</p></div></div></div></div></div><div class="table-row" data-filterable-current=":simboot-core-annotation:dokkaHtmlPartial/main" data-filterable-set=":simboot-core-annotation:dokkaHtmlPartial/main"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><u><span><span>scope</span></span></u></div></span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">binder作用域。</p></div></div></div></div></div></div></div></div></div>
+      </div>
+      <h2 class="">Types</h2>
+      <div class="table" data-togglable="Types"><a data-name="-791507018%2FClasslikes%2F-1296193247" anchor-label="Scope" id="-791507018%2FClasslikes%2F-1296193247" data-filterable-set=":simboot-core-annotation:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simboot-core-annotation:dokkaHtmlPartial/main" data-filterable-set=":simboot-core-annotation:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-scope/index.html"><span><span>Scope</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-791507018%2FClasslikes%2F-1296193247"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simboot-core-annotation:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">enum </span><a href="-scope/index.html">Scope</a> : <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-enum/index.html">Enum</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-scope/index.html">Binder.Scope</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph"><a href="index.html">Binder</a> 中的作用域。</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="">Properties</h2>
+      <div class="table" data-togglable="Properties"><a data-name="725490019%2FProperties%2F-1296193247" anchor-label="scope" id="725490019%2FProperties%2F-1296193247" data-filterable-set=":simboot-core-annotation:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simboot-core-annotation:dokkaHtmlPartial/main" data-filterable-set=":simboot-core-annotation:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="scope.html"><span><span>scope</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="725490019%2FProperties%2F-1296193247"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simboot-core-annotation:dokkaHtmlPartial/main"><a data-name="725490019%2FProperties%2F-1296193247" anchor-label="scope" id="725490019%2FProperties%2F-1296193247" data-filterable-set=":simboot-core-annotation:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="scope.html">scope</a><span class="token operator">: </span><a href="-scope/index.html">Binder.Scope</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="650547430%2FProperties%2F-1296193247" anchor-label="value" id="650547430%2FProperties%2F-1296193247" data-filterable-set=":simboot-core-annotation:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simboot-core-annotation:dokkaHtmlPartial/main" data-filterable-set=":simboot-core-annotation:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="value.html"><span><span>value</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="650547430%2FProperties%2F-1296193247"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simboot-core-annotation:dokkaHtmlPartial/main"><a data-name="650547430%2FProperties%2F-1296193247" anchor-label="value" id="650547430%2FProperties%2F-1296193247" data-filterable-set=":simboot-core-annotation:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="value.html">value</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="tabbedcontent">Extensions</h2>
+      <div class="table" data-togglable="Extensions"><a data-name="1643092266%2FExtensions%2F-1296193247" anchor-label="scopeIfDefault" id="1643092266%2FExtensions%2F-1296193247" data-filterable-set=":simboot-core-annotation:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simboot-core-annotation:dokkaHtmlPartial/main" data-filterable-set=":simboot-core-annotation:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../scope-if-default.html"><span>scope</span><wbr><span>If</span><wbr><span><span>Default</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1643092266%2FExtensions%2F-1296193247"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simboot-core-annotation:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><a href="index.html">Binder</a><span class="token punctuation">.</span><a href="../scope-if-default.html"><span class="token function">scopeIfDefault</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">block<span class="token operator">: </span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="-scope/index.html">Binder.Scope</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-scope/index.html">Binder.Scope</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2023 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+    </div>
+</div>
+
+</body></html>
+
