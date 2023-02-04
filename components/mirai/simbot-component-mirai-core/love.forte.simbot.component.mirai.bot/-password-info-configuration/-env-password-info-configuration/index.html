@@ -1,0 +1,156 @@
+<!doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>EnvPasswordInfoConfiguration</title>
+<link href="../../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../../";</script>    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="../../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../../styles/style.css" rel="Stylesheet">
+<link href="../../../../styles/jetbrains-mono.css" rel="Stylesheet">
+<link href="../../../../styles/main.css" rel="Stylesheet">
+<link href="../../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../../styles/logo-styles.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<body>
+<div class="navigation-wrapper" id="navigation-wrapper">
+    <div id="leftToggler"><span class="icon-toggler"></span></div>
+    <div class="library-name">
+<a href="../../../../index.html">
+<span>Simple Robot Component Mirai</span>            </a>    </div>
+    <div>3.0.0.0-M3
+    </div>
+    <div class="pull-right d-flex">
+        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+    </div>
+</div>
+<div id="container">
+    <div id="leftColumn">
+        <div id="sideMenu"></div>
+    </div>
+    <div id="main">
+<div class="main-content" id="content" pageids="simbot-component-mirai-core::love.forte.simbot.component.mirai.bot/PasswordInfoConfiguration.EnvPasswordInfoConfiguration///PointingToDeclaration//1961516927">
+  <div class="breadcrumbs"><a href="../../../index.html">simbot-component-mirai-core</a><span class="delimiter">/</span><a href="../../index.html">love.forte.simbot.component.mirai.bot</a><span class="delimiter">/</span><a href="../index.html">PasswordInfoConfiguration</a><span class="delimiter">/</span><span class="current">EnvPasswordInfoConfiguration</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Env</span><wbr><span>Password</span><wbr><span>Info</span><wbr><span><span>Configuration</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-mirai-core:dokkaHtmlPartial/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="love.forte.simbot.component.mirai.internal/InternalApi///PointingToDeclaration/"><span class="token annotation builtin">InternalApi</span></span></div></div><span class="token keyword">interface </span><a href="index.html">EnvPasswordInfoConfiguration</a><span class="clearfix"><span class="floating-right">(<a href="https://github.com/simple-robot/simbot-component-mirai/tree/main/simbot-component-mirai-core/src/main/kotlin/love/forte/simbot/component/mirai/bot/PasswordInfoConfiguration.kt#L137">source</a>)</span></span></div><p class="paragraph">内部用于标记后续的通过<strong>环境变量</strong>配置形式相关的 <a href="../index.html">PasswordInfoConfiguration</a> 实现， 并为它们提供统一的行为和辅助功能。</p><h2 class=""> 配置属性</h2><p class="paragraph"><a href="index.html">EnvPasswordInfoConfiguration</a> 的实现提供了两个可选属性：<a href="env.html">env</a> 和 <a href="prop.html">prop</a>。 这两个属性都是可选的，但是应当至少提供其中一个。换言之，它们不能<strong>同时为空</strong>。</p><p class="paragraph">在选取使用时，<a href="prop.html">prop</a> 的优先级高于 <a href="env.html">env</a>，<a href="index.html">EnvPasswordInfoConfiguration</a> 会优先尝试通过 <a href="prop.html">prop</a> (通过<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/System.html#getProperty-kotlin.String-">System.getProperty</a>) 获取对应的信息，而后再尝试通过 <a href="env.html">env</a> (通过<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/System.html#getenv-kotlin.String-">System.getenv</a>) 获取信息。</p><p class="paragraph">如果最终无法得到任何信息，则会抛出异常。</p><h2 class=""> 占位符替换</h2><p class="paragraph">默认情况下，配置属性 <a href="env.html">env</a> 和 <a href="prop.html">prop</a> 中的值，会将其中的简单占位符 <a href="-companion/-c-o-d-e_-m-a-r-k.html"><code class="lang-kotlin">$CODE$</code></a> 替换为当前配置账号的 code，即 <a href="../../-mirai-bot-verify-info-configuration/code.html">MiraiBotVerifyInfoConfiguration.code</a>。</p><p class="paragraph">例如如下配置：</p><div class="sample-container"><pre><code class="block lang-json" theme="idea">{<br>  "code": 123456,<br>  "passwordInfo": {<br>     "type": "env_xxxx",<br>     "prop": "simbot.mirai.$CODE$.password",<br>     "env": "simbot.mirai.$CODE$.password"<br>  }<br>}</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">其中的 <a href="prop.html">prop</a> 将会最终被替换为 <code class="lang-kotlin">"simbot.mirai.123456.password</code>。</p></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Types">Types</button><button class="section-tab" data-togglable="Properties">Properties</button><button class="section-tab" data-togglable="Inheritors">Inheritors</button></div>
+    <div class="tabs-section-body">
+      <h2 class="">Types</h2>
+      <div class="table" data-togglable="Types"><a data-name="1303924891%2FClasslikes%2F1961516927" anchor-label="Companion" id="1303924891%2FClasslikes%2F1961516927" data-filterable-set=":simbot-component-mirai-core:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simbot-component-mirai-core:dokkaHtmlPartial/main" data-filterable-set=":simbot-component-mirai-core:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-companion/index.html"><span><span>Companion</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1303924891%2FClasslikes%2F1961516927"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-mirai-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-companion/index.html">Companion</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="">Properties</h2>
+      <div class="table" data-togglable="Properties"><a data-name="-1555355577%2FProperties%2F1961516927" anchor-label="env" id="-1555355577%2FProperties%2F1961516927" data-filterable-set=":simbot-component-mirai-core:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simbot-component-mirai-core:dokkaHtmlPartial/main" data-filterable-set=":simbot-component-mirai-core:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="env.html"><span><span>env</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1555355577%2FProperties%2F1961516927"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-mirai-core:dokkaHtmlPartial/main"><a data-name="-1555355577%2FProperties%2F1961516927" anchor-label="env" id="-1555355577%2FProperties%2F1961516927" data-filterable-set=":simbot-component-mirai-core:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="env.html">env</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></div><div class="brief "><a data-name="-1555355577%2FProperties%2F1961516927" anchor-label="env" id="-1555355577%2FProperties%2F1961516927" data-filterable-set=":simbot-component-mirai-core:dokkaHtmlPartial/main"></a><p class="paragraph">环境变量属性的键名，即需要通过 <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/System.html#getenv-kotlin.String-">System.getenv</a> 读取的属性键。</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-2016632886%2FProperties%2F1961516927" anchor-label="envValue" id="-2016632886%2FProperties%2F1961516927" data-filterable-set=":simbot-component-mirai-core:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simbot-component-mirai-core:dokkaHtmlPartial/main" data-filterable-set=":simbot-component-mirai-core:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="env-value.html"><span>env</span><wbr><span><span>Value</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2016632886%2FProperties%2F1961516927"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-mirai-core:dokkaHtmlPartial/main"><a data-name="-2016632886%2FProperties%2F1961516927" anchor-label="envValue" id="-2016632886%2FProperties%2F1961516927" data-filterable-set=":simbot-component-mirai-core:dokkaHtmlPartial/main"></a><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="love.forte.simbot.component.mirai.internal/InternalApi///PointingToDeclaration/"><span class="token annotation builtin">InternalApi</span></span></div></div><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">val </span><a href="../../-mirai-bot-verify-info-configuration/index.html">MiraiBotVerifyInfoConfiguration</a><span class="token punctuation">.</span><a href="env-value.html">envValue</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><a data-name="-2016632886%2FProperties%2F1961516927" anchor-label="envValue" id="-2016632886%2FProperties%2F1961516927" data-filterable-set=":simbot-component-mirai-core:dokkaHtmlPartial/main"></a><p class="paragraph">尝试通过 <a href="prop.html">prop</a> 和 <a href="../-companion/env.html">env</a> 获取指定环境变量下的信息。</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="375687107%2FProperties%2F1961516927" anchor-label="prop" id="375687107%2FProperties%2F1961516927" data-filterable-set=":simbot-component-mirai-core:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simbot-component-mirai-core:dokkaHtmlPartial/main" data-filterable-set=":simbot-component-mirai-core:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="prop.html"><span><span>prop</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="375687107%2FProperties%2F1961516927"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-mirai-core:dokkaHtmlPartial/main"><a data-name="375687107%2FProperties%2F1961516927" anchor-label="prop" id="375687107%2FProperties%2F1961516927" data-filterable-set=":simbot-component-mirai-core:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="prop.html">prop</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></div><div class="brief "><a data-name="375687107%2FProperties%2F1961516927" anchor-label="prop" id="375687107%2FProperties%2F1961516927" data-filterable-set=":simbot-component-mirai-core:dokkaHtmlPartial/main"></a><p class="paragraph">虚拟机选项的键名，即需要通过 <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/System.html#getProperty-kotlin.String-">System.getProperty</a> 读取的属性键。</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="">Inheritors</h2>
+      <div class="table" data-togglable="Inheritors"><a data-name="1033764975%2FInheritors%2F1961516927" anchor-label="EnvText" id="1033764975%2FInheritors%2F1961516927" data-filterable-set=":simbot-component-mirai-core:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simbot-component-mirai-core:dokkaHtmlPartial/main" data-filterable-set=":simbot-component-mirai-core:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-env-text/index.html">EnvText</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1033764975%2FInheritors%2F1961516927"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div></div>
+          </div>
+        </div>
+<a data-name="-2075916773%2FInheritors%2F1961516927" anchor-label="EnvMd5Text" id="-2075916773%2FInheritors%2F1961516927" data-filterable-set=":simbot-component-mirai-core:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simbot-component-mirai-core:dokkaHtmlPartial/main" data-filterable-set=":simbot-component-mirai-core:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-env-md5-text/index.html">EnvMd5Text</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2075916773%2FInheritors%2F1961516927"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2023 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+    </div>
+</div>
+
+</body></html>
+

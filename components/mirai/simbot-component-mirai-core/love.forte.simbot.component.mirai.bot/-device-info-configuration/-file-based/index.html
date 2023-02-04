@@ -1,0 +1,170 @@
+<!doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>FileBased</title>
+<link href="../../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../../";</script>    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="../../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../../styles/style.css" rel="Stylesheet">
+<link href="../../../../styles/jetbrains-mono.css" rel="Stylesheet">
+<link href="../../../../styles/main.css" rel="Stylesheet">
+<link href="../../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../../styles/logo-styles.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<body>
+<div class="navigation-wrapper" id="navigation-wrapper">
+    <div id="leftToggler"><span class="icon-toggler"></span></div>
+    <div class="library-name">
+<a href="../../../../index.html">
+<span>Simple Robot Component Mirai</span>            </a>    </div>
+    <div>3.0.0.0-M3
+    </div>
+    <div class="pull-right d-flex">
+        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+    </div>
+</div>
+<div id="container">
+    <div id="leftColumn">
+        <div id="sideMenu"></div>
+    </div>
+    <div id="main">
+<div class="main-content" id="content" pageids="simbot-component-mirai-core::love.forte.simbot.component.mirai.bot/DeviceInfoConfiguration.FileBased///PointingToDeclaration//1961516927">
+  <div class="breadcrumbs"><a href="../../../index.html">simbot-component-mirai-core</a><span class="delimiter">/</span><a href="../../index.html">love.forte.simbot.component.mirai.bot</a><span class="delimiter">/</span><a href="../index.html">DeviceInfoConfiguration</a><span class="delimiter">/</span><span class="current">FileBased</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>File</span><wbr><span><span>Based</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-mirai-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="index.html">FileBased</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>file<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span>DEFAULT_FILE<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>fromResource<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span> : <a href="../index.html">DeviceInfoConfiguration</a><span class="clearfix"><span class="floating-right">(<a href="https://github.com/simple-robot/simbot-component-mirai/tree/main/simbot-component-mirai-core/src/main/kotlin/love/forte/simbot/component/mirai/bot/DeviceInfoConfiguration.kt#L249">source</a>)</span></span></div><p class="paragraph">通过指定的本地文件来记录设备信息。</p><div class="sample-container"><pre><code class="block lang-json" theme="idea">{<br>  "type": "file_based",<br>  "file": "device.json",<br>  "fromResource": null<br>}</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">与 <a href="../-resource/index.html">Resource</a> 不同的是，<a href="index.html">FileBased</a> 是基于 <a href="https://kdoc.mirai.mamoe.net/2.13.4/mirai-core-api/net.mamoe.mirai.utils/-device-info/-companion/load-as-device-info.html">DeviceInfo.loadAsDeviceInfo</a> 的， 其最终结果与行为会类似于使用 <a href="https://kdoc.mirai.mamoe.net/2.13.4/mirai-core-api/net.mamoe.mirai.utils/-bot-configuration/file-based-device-info.html">BotConfiguration.fileBasedDeviceInfo</a>。</p><p class="paragraph"><a href="index.html">FileBased</a> <strong>仅支持</strong> 本地文件，且所需要读取的设备信息文件的格式也与 <a href="https://kdoc.mirai.mamoe.net/2.13.4/mirai-core-api/net.mamoe.mirai.utils/-device-info/index.html">DeviceInfo</a> 存在些许不同，它们是存在"版本号"的信息格式，因此 <a href="index.html">FileBased</a> 的所需格式与 <a href="../-resource/index.html">Resource</a> 的所需格式可能并不通用。</p><p class="paragraph">好吧，骗你的。<a href="index.html">FileBased</a> 虽然"仅支持"本地文件，但是它提供了一个可选参数 <a href="from-resource.html">fromResource</a> 来允许在读取文件之前进行检测：当 <a href="file.html">file</a> 处的文件不存在时，会尝试从资源路径中的 <a href="from-resource.html">fromResource</a> 文件复制到 <a href="file.html">file</a> 处。 如果此行为尝试失败，则会输出警告日志，但不会终止流程。</p><p class="paragraph">与 <a href="https://kdoc.mirai.mamoe.net/2.13.4/mirai-core-api/net.mamoe.mirai.utils/-bot-configuration/file-based-device-info.html">BotConfiguration.fileBasedDeviceInfo</a> 不同的是，<a href="index.html">FileBased</a> 的属性 <a href="file.html">file</a> <strong>不会</strong> 被限制在 <a href="https://kdoc.mirai.mamoe.net/2.13.4/mirai-core-api/net.mamoe.mirai.utils/-bot-configuration/[native]working-dir.html">BotConfiguration.workingDir</a> 中，而是<strong>直接使用</strong>。</p><p class="paragraph"><a href="file.html">file</a> 和 <a href="from-resource.html">fromResource</a> 支持占位符替换，例如：</p><div class="sample-container"><pre><code class="block lang-json" theme="idea">{<br>  "type": "file_based",<br>  "file": "$CODE$-device.json",<br>  "fromResource": "$CODE$-device.json",<br>}</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Types">Types</button><button class="section-tab" data-togglable="Constructors">Constructors</button><button class="section-tab" data-togglable="Functions">Functions</button><button class="section-tab" data-togglable="Properties">Properties</button><button class="section-tab" data-togglable="See also">See also</button></div>
+    <div class="tabs-section-body">
+      <h4 class="">See also</h4>
+      <div data-togglable="See also">
+        <div class="platform-hinted WithExtraAttributes" data-platform-hinted="data-platform-hinted" data-togglable="See also"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-mirai-core:dokkaHtmlPartial/main"><div data-togglable="See also"><div class="table" data-togglable="See also"><div class="table-row" data-filterable-current=":simbot-component-mirai-core:dokkaHtmlPartial/main" data-filterable-set=":simbot-component-mirai-core:dokkaHtmlPartial/main"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><a href="../-resource/index.html"><span>Device</span><wbr><span>Info</span><wbr><span>Configuration.</span><wbr><span>Resource</span></a></div></span></div><div></div></div></div></div></div></div></div>
+      </div>
+      <h2 class="tabbedcontent">Constructors</h2>
+      <div class="table" data-togglable="Constructors"><a data-name="801540139%2FConstructors%2F1961516927" anchor-label="FileBased" id="801540139%2FConstructors%2F1961516927" data-filterable-set=":simbot-component-mirai-core:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simbot-component-mirai-core:dokkaHtmlPartial/main" data-filterable-set=":simbot-component-mirai-core:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue TabbedContent">
+            <div class=""><span class="inline-flex">
+                <div><a href="-file-based.html"><span>File</span><wbr><span><span>Based</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="801540139%2FConstructors%2F1961516927"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-mirai-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="-file-based.html"><span class="token function">FileBased</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">file<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span>DEFAULT_FILE<span class="token punctuation">, </span></span><span class="parameter ">fromResource<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="">Types</h2>
+      <div class="table" data-togglable="Types"><a data-name="1954868079%2FClasslikes%2F1961516927" anchor-label="Companion" id="1954868079%2FClasslikes%2F1961516927" data-filterable-set=":simbot-component-mirai-core:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simbot-component-mirai-core:dokkaHtmlPartial/main" data-filterable-set=":simbot-component-mirai-core:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-companion/index.html"><span><span>Companion</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1954868079%2FClasslikes%2F1961516927"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-mirai-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-companion/index.html">Companion</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="">Functions</h2>
+      <div class="table" data-togglable="Functions"><a data-name="-2086432319%2FFunctions%2F1961516927" anchor-label="invoke" id="-2086432319%2FFunctions%2F1961516927" data-filterable-set=":simbot-component-mirai-core:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simbot-component-mirai-core:dokkaHtmlPartial/main" data-filterable-set=":simbot-component-mirai-core:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="invoke.html"><span><span>invoke</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2086432319%2FFunctions%2F1961516927"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-mirai-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">operator override </span><span class="token keyword">fun </span><a href="invoke.html"><span class="token function">invoke</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">bot<span class="token operator">: </span><a href="https://kdoc.mirai.mamoe.net/2.13.4/mirai-core-api/net.mamoe.mirai/-bot/index.html">Bot</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kdoc.mirai.mamoe.net/2.13.4/mirai-core-api/net.mamoe.mirai.utils/-device-info/index.html">DeviceInfo</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="197344013%2FFunctions%2F1961516927" anchor-label="replaceCodeMark" id="197344013%2FFunctions%2F1961516927" data-filterable-set=":simbot-component-mirai-core:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simbot-component-mirai-core:dokkaHtmlPartial/main" data-filterable-set=":simbot-component-mirai-core:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../replace-code-mark.html"><span>replace</span><wbr><span>Code</span><wbr><span><span>Mark</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="197344013%2FFunctions%2F1961516927"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-mirai-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">protected </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">.</span><a href="../replace-code-mark.html"><span class="token function">replaceCodeMark</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">code<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="">Properties</h2>
+      <div class="table" data-togglable="Properties"><a data-name="1101890678%2FProperties%2F1961516927" anchor-label="file" id="1101890678%2FProperties%2F1961516927" data-filterable-set=":simbot-component-mirai-core:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simbot-component-mirai-core:dokkaHtmlPartial/main" data-filterable-set=":simbot-component-mirai-core:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="file.html"><span><span>file</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1101890678%2FProperties%2F1961516927"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-mirai-core:dokkaHtmlPartial/main"><a data-name="1101890678%2FProperties%2F1961516927" anchor-label="file" id="1101890678%2FProperties%2F1961516927" data-filterable-set=":simbot-component-mirai-core:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="file.html">file</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><a data-name="1101890678%2FProperties%2F1961516927" anchor-label="file" id="1101890678%2FProperties%2F1961516927" data-filterable-set=":simbot-component-mirai-core:dokkaHtmlPartial/main"></a><p class="paragraph">配置文件路径。默认为 <code class="lang-kotlin">device.json</code>。</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1807294822%2FProperties%2F1961516927" anchor-label="fromResource" id="-1807294822%2FProperties%2F1961516927" data-filterable-set=":simbot-component-mirai-core:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simbot-component-mirai-core:dokkaHtmlPartial/main" data-filterable-set=":simbot-component-mirai-core:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="from-resource.html"><span>from</span><wbr><span><span>Resource</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1807294822%2FProperties%2F1961516927"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-mirai-core:dokkaHtmlPartial/main"><a data-name="-1807294822%2FProperties%2F1961516927" anchor-label="fromResource" id="-1807294822%2FProperties%2F1961516927" data-filterable-set=":simbot-component-mirai-core:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="from-resource.html">fromResource</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null</div><div class="brief "><a data-name="-1807294822%2FProperties%2F1961516927" anchor-label="fromResource" id="-1807294822%2FProperties%2F1961516927" data-filterable-set=":simbot-component-mirai-core:dokkaHtmlPartial/main"></a><p class="paragraph">当 <a href="file.html">file</a> 处文件不存在时，尝试进行复制</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2023 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+    </div>
+</div>
+
+</body></html>
+
