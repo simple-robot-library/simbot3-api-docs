@@ -1,10 +1,5 @@
 # simbot3-api-docs
-与simbot3相关的API文档部署仓库
+与simbot3相关的API文档部署仓库站点: [docs.simbot.forte.love](https://docs.simbot.forte.love)
 
-[main](https://docs.simbot.forte.love/main) 目录下为 [simbot3核心库](https://github.com/simple-robot/simpler-robot) 的KDoc内容。
+用于记录与引导核心库以及组件库的KDoc和仓库的相关链接。
 
-[components](components) 目录下为各组件的KDoc内容：
-
-- [components/mirai](https://docs.simbot.forte.love/components/mirai): mirai组件的KDoc内容。
-- [components/kook](https://docs.simbot.forte.love/kook): kook组件的KDoc内容。
-- [components/tencent-guild](https://docs.simbot.forte.love/tencent-guild): tencent-guild组件的KDoc内容。
