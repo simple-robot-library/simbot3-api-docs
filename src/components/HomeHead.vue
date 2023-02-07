@@ -58,7 +58,9 @@ import {NAvatar, NCard, NGi, NGrid, NPageHeader, NStatistic, NSwitch} from "naiv
 import logoImg from '../assets/logo.png'
 import {ref} from "vue";
 
-const emit = defineEmits(['themeActiveChange'])
+const emit = defineEmits<{
+  (e: 'themeActiveChange', value: boolean): void
+}>()
 
 const themeActive = ref(false)
 
