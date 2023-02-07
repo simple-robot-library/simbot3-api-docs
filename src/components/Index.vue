@@ -2,15 +2,12 @@
   <n-config-provider :theme="theme">
     <div id="center-body">
       <n-layout position="absolute">
-        <n-layout-header style="" bordered>
-          <HomeHead @theme-active-change="onThemeActiveChange" />
+        <n-layout-header bordered>
+          <HomeHead @theme-active-change="onThemeActiveChange"/>
         </n-layout-header>
-        <n-layout position="absolute" style="top: 200px; bottom: 64px">
-          <n-scrollbar>
-            <n-layout :content-style="layoutCenterContentStyle">
-              <RepoDocCards/>
-            </n-layout>
-          </n-scrollbar>
+        <n-layout position="absolute" style="top: 200px; bottom: 64px" :native-scrollbar="false"
+                  :content-style="layoutCenterContentStyle">
+          <RepoDocCards/>
         </n-layout>
         <n-layout-footer
             bordered
@@ -26,9 +23,11 @@
 
 <script setup lang="ts">
 import HomeHead from "./HomeHead.vue";
-import {darkTheme, NConfigProvider, NLayout, NLayoutFooter, NLayoutHeader, NScrollbar} from "naive-ui";
+import {darkTheme, NConfigProvider, NLayout, NLayoutFooter, NLayoutHeader} from "naive-ui";
 import {reactive, ref} from "vue";
 import RepoDocCards from "./RepoDocCards.vue";
+import {BuiltInGlobalTheme} from "naive-ui/lib/themes/interface";
+
 
 const layoutCenterContentStyle = reactive({
   'padding-left': '50px',
@@ -37,9 +36,9 @@ const layoutCenterContentStyle = reactive({
   'padding-bottom': '50px',
 })
 
-const theme = ref(null)
+const theme = ref<BuiltInGlobalTheme | null>(null)
 
-function onThemeActiveChange(value) {
+function onThemeActiveChange(value: boolean) {
   if (value) {
     theme.value = darkTheme
   } else {
