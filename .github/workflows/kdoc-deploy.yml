@@ -1,0 +1,58 @@
+name: Deploy Index Page
+on:
+  push:
+    branches: kdoc-deploy-**
+
+env:
+  IS_MAIN_DOC: ${{ endsWith(github.event.ref, '-main') }}
+  IS_CP_MIRAI_DOC: ${{ endsWith(github.event.ref, '-component-mirai') }}
+  IS_CP_KOOK_DOC: ${{ endsWith(github.event.ref, '-component-kook') }}
+  IS_CP_TCG_DOC: ${{ endsWith(github.event.ref, '-component-tencent-guild') }}
+
+jobs:
+  deploy-doc:
+    name: deploy-index-page
+    runs-on: ubuntu-latest
+    steps:
+      # 检出仓库代码
+      - uses: actions/checkout@v2
+
+      # https://github.com/marketplace/actions/github-pages-action
+      - name: Push main to doc repository
+        uses: peaceiris/actions-gh-pages@v3
+        if: ${{ IS_MAIN_DOC }}
+        with:
+          personal_token: ${{ secrets.PUSH_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: main
+          destination_dir: main
+
+      ## Mirai
+      - name: Push component/mirai to doc repository
+        uses: peaceiris/actions-gh-pages@v3
+        if: ${{ IS_CP_MIRAI_DOC }}
+        with:
+          personal_token: ${{ secrets.PUSH_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: components/mirai
+          destination_dir: components/mirai
+
+      # KOOK
+      - name: Push component/mirai to doc repository
+        uses: peaceiris/actions-gh-pages@v3
+        if: ${{ IS_CP_KOOK_DOC }}
+        with:
+          personal_token: ${{ secrets.PUSH_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: components/kook
+          destination_dir: components/kook
+
+      # QQ频道
+      - name: Push component/mirai to doc repository
+        uses: peaceiris/actions-gh-pages@v3
+        if: ${{ IS_CP_TCG_DOC }}
+        with:
+          personal_token: ${{ secrets.PUSH_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: components/tencent-guild
+          destination_dir: components/tencent-guild
