@@ -1,23 +1,22 @@
-name: Deploy Mirai KDoc Pages
+name: Deploy Tencent Guild KDoc Pages
 on:
   push:
-    branches: 'kdoc-deploy/component-mirai'
+    branches: 'kdoc-deploy/component-tencent-guild'
 
 jobs:
-  deploy-mirai-kdoc-pages:
-    name: deploy-mirai-kdoc-pages
+  deploy-tencent-guild-kdoc-pages:
+    name: deploy-tencent-guild-kdoc-pages
     runs-on: ubuntu-latest
     steps:
       # 检出仓库代码
       - uses: actions/checkout@v3
 
       # https://github.com/marketplace/actions/github-pages-action
-      ## Mirai
-      - name: Deploy component/mirai to doc repository
+      - name: Deploy component/tencent-guild to doc repository
         uses: peaceiris/actions-gh-pages@v3
         with:
           personal_token: ${{ secrets.PUSH_TOKEN }}
           publish_branch: gh-pages
-          publish_dir: components/mirai
-          destination_dir: components/mirai
+          publish_dir: components/tencent-guild
+          destination_dir: components/tencent-guild
 
