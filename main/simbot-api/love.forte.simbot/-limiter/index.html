@@ -1,0 +1,256 @@
+<!doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>Limiter</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../";</script>    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/jetbrains-mono.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<body>
+<div class="navigation-wrapper" id="navigation-wrapper">
+    <div id="leftToggler"><span class="icon-toggler"></span></div>
+    <div class="library-name">
+<a href="../../../index.html">
+<span>Simple Robot</span>            </a>    </div>
+    <div>3.0.0-RC.2
+    </div>
+    <div class="pull-right d-flex">
+        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+    </div>
+</div>
+<div id="container">
+    <div id="leftColumn">
+        <div id="sideMenu"></div>
+    </div>
+    <div id="main">
+<div class="main-content" id="content" pageids="simbot-api::love.forte.simbot/Limiter///PointingToDeclaration//-341312757">
+  <div class="breadcrumbs"><a href="../../index.html">simbot-api</a><span class="delimiter">/</span><a href="../index.html">love.forte.simbot</a><span class="delimiter">/</span><span class="current">Limiter</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Limiter</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="index.html">Limiter</a><span class="clearfix"><span class="floating-right">(<a href="https://github.com/simple-robot/simpler-robot/tree/v3-main/simbot-api/src/main/kotlin/love/forte/simbot/Limiter.kt#L22">source</a>)</span></span></div><p class="paragraph">一个<strong>限流器</strong>。</p><p class="paragraph">通俗一点的理解，限流器可以理解为一个用于需要进行 <strong>数量限制</strong> 或者说需要 <strong>分页</strong> 的地方，常见于一些返回值为 <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.flow/-flow/index.html">Flow</a>, <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.sequences/-sequence/index.html">Sequence</a> 或者 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html">Stream</a> 之类的地方。</p><p class="paragraph">对于限流的具体实现细节由对应功能的实现者自行决定（包括是否真的进行分页等）。</p><p class="paragraph"><a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.flow/-flow/index.html">Flow</a> 有提供 <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.flow/index.html">Flow.take</a> 、<a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html">Stream</a> 有提供 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html#limit-kotlin.Long-">Stream.limit</a> 之类的函数，但是 <a href="index.html">Limiter</a> 更多的是为功能提供一个初始量。 有些情况下提供额外的Limiter参数可以对结果的获取有所优化，而有些情况下，使用 Limiter 的效果与直接使用流的API (例如<a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.flow/index.html">Flow.take</a>) 并无区别。</p><h2 class=""> 有效数字</h2><p class="paragraph"><a href="index.html">Limiter</a> 中，约定其所有有效数字均应大于 <code class="lang-kotlin">0</code>。</p><h2 class=""> 默认实现</h2><p class="paragraph"><a href="index.html">Limiter</a> 提供两个默认实现：</p><ul><li><p class="paragraph"><a href="-z-e-r-o/index.html">ZERO</a> 所有数值恒为 <code class="lang-kotlin">0</code> 的伴生实现，可直接作为默认值使用。</p></li><li><p class="paragraph">通过 <a href="-z-e-r-o/of.html">limiter.of(...)</a> (for java) 或者 <a href="../limiter.html">limiter(...)</a> (for kotlin) 得到一个默认的数据类实现。</p></li></ul><h2 class=""> 其他实现</h2><p class="paragraph">对于默认实现无法满足需求的情况，需要进行独立的实现，这一般由核心或者其他组件提供，并会整合在其他参数类型中， 例如存在一个 <code class="lang-kotlin">Query</code> 类型，它也许就会为了支持可限流的情况而对 Limiter 进行实现。</p><h2 class=""> 扩展</h2><p class="paragraph">Limiter提供了一些扩展函数来快速对 <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.flow/-flow/index.html">flow</a>、<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.sequences/-sequence/index.html">sequence</a>、<a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html">java stream</a> 进行操作, 以flow为例：</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">val limiter: Limiter = ...<br>val flow1 = Limiter.toFlow { batchSize -&gt;<br>     println("batchSize: $batchSize")<br>     emit(1)<br>     emit(2)<br>     emit(3)<br> }<br><br>val flow2 = flow { ... }.withLimiter(limiter)</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><h2 class=""> 解构</h2><p class="paragraph"><a href="index.html">Limiter</a> 支持对 <a href="offset.html">offset</a>、<a href="limit.html">limit</a>、<a href="batch-size.html">batchSize</a> 进行解构：</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">val (offset, limit, batchSize) = limiter</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><span class="kdoc-tag"><h4 class="">Author</h4><p class="paragraph">ForteScarlet</p></span></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Types">Types</button><button class="section-tab" data-togglable="Properties">Properties</button><button class="section-tab" data-togglable="Extensions">Extensions</button><button class="section-tab" data-togglable="See also">See also</button><button class="section-tab" data-togglable="Inheritors">Inheritors</button></div>
+    <div class="tabs-section-body">
+      <h4 class="">See also</h4>
+      <div data-togglable="See also">
+        <div class="platform-hinted WithExtraAttributes" data-platform-hinted="data-platform-hinted" data-togglable="See also"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/main"><div data-togglable="See also"><div class="table" data-togglable="See also"><div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><a href="-z-e-r-o/index.html"><span>Limiter.</span><wbr><span>ZERO</span></a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><a href="../limiter.html"><span><span>limiter</span></span></a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><a href="../with-limiter.html"><span>with</span><wbr><span><span>Limiter</span></span></a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><a href="../to-flow.html"><span>to</span><wbr><span><span>Flow</span></span></a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><a href="../to-sequence.html"><span>to</span><wbr><span><span>Sequence</span></span></a></div></span></div><div></div></div></div></div></div></div></div>
+      </div>
+      <h2 class="">Types</h2>
+      <div class="table" data-togglable="Types"><a data-name="-2133112364%2FClasslikes%2F-341312757" anchor-label="ZERO" id="-2133112364%2FClasslikes%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-z-e-r-o/index.html"><span><span>ZERO</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2133112364%2FClasslikes%2F-341312757"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-z-e-r-o/index.html">ZERO</a> : <a href="index.html">Limiter</a></div><div class="brief "><p class="paragraph"><a href="index.html">Limiter</a> 的默认值实现，<a href="-z-e-r-o/offset.html">offset</a> 与 <a href="-z-e-r-o/limit.html">limit</a> 均恒等于 <code class="lang-kotlin">0</code>。</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="">Properties</h2>
+      <div class="table" data-togglable="Properties"><a data-name="-253973736%2FProperties%2F-341312757" anchor-label="batchSize" id="-253973736%2FProperties%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="batch-size.html"><span>batch</span><wbr><span><span>Size</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-253973736%2FProperties%2F-341312757"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/main"><a data-name="-253973736%2FProperties%2F-341312757" anchor-label="batchSize" id="-253973736%2FProperties%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="batch-size.html">batchSize</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></div><div class="brief "><a data-name="-253973736%2FProperties%2F-341312757" anchor-label="batchSize" id="-253973736%2FProperties%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a><p class="paragraph">对于部分平台的实现中，很有可能是分批次查询来获取结果的。 当平台支持的时候，可以通过 <a href="batch-size.html">batchSize</a> 来指定一个批次大小来限制其内部每次对于API的请求数量。</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-267434824%2FProperties%2F-341312757" anchor-label="limit" id="-267434824%2FProperties%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="limit.html"><span><span>limit</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-267434824%2FProperties%2F-341312757"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/main"><a data-name="-267434824%2FProperties%2F-341312757" anchor-label="limit" id="-267434824%2FProperties%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="limit.html">limit</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></div><div class="brief "><a data-name="-267434824%2FProperties%2F-341312757" anchor-label="limit" id="-267434824%2FProperties%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a><p class="paragraph">限流数量，即本次所得数据量最大不应超过此限制。 例如 <code class="lang-kotlin">limit = 10</code>, 那么返回值结果中的最终元素数量应当 <code class="lang-kotlin">&lt;= 10</code>.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1728237324%2FProperties%2F-341312757" anchor-label="offset" id="-1728237324%2FProperties%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="offset.html"><span><span>offset</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1728237324%2FProperties%2F-341312757"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/main"><a data-name="-1728237324%2FProperties%2F-341312757" anchor-label="offset" id="-1728237324%2FProperties%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="offset.html">offset</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></div><div class="brief "><a data-name="-1728237324%2FProperties%2F-341312757" anchor-label="offset" id="-1728237324%2FProperties%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a><p class="paragraph">偏移量，即从第 <a href="offset.html">offset</a> 条数据开始返回。 偏移量预期中的基数为 <code class="lang-kotlin">0</code>, 即如果为 <code class="lang-kotlin">0</code> 或者小于 <code class="lang-kotlin">0</code>, 则代表从第一条数据开始获取。</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="">Inheritors</h2>
+      <div class="table" data-togglable="Inheritors"><a data-name="-2133112364%2FInheritors%2F-341312757" anchor-label="ZERO" id="-2133112364%2FInheritors%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-z-e-r-o/index.html">ZERO</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2133112364%2FInheritors%2F-341312757"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div></div>
+          </div>
+        </div>
+      </div>
+      <h2 class="tabbedcontent">Extensions</h2>
+      <div class="table" data-togglable="Extensions"><a data-name="1077893005%2FExtensions%2F-341312757" anchor-label="component1" id="1077893005%2FExtensions%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../component1.html"><span><span>component1</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1077893005%2FExtensions%2F-341312757"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">inline operator </span><span class="token keyword">fun </span><a href="index.html">Limiter</a><span class="token punctuation">.</span><a href="../component1.html"><span class="token function">component1</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></div><div class="brief "><p class="paragraph"><a href="index.html">Limiter</a> 解构扩展，第1个属性，相当于 <a href="offset.html">Limiter.offset</a>。</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-2083883698%2FExtensions%2F-341312757" anchor-label="component2" id="-2083883698%2FExtensions%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../component2.html"><span><span>component2</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2083883698%2FExtensions%2F-341312757"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">inline operator </span><span class="token keyword">fun </span><a href="index.html">Limiter</a><span class="token punctuation">.</span><a href="../component2.html"><span class="token function">component2</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></div><div class="brief "><p class="paragraph"><a href="index.html">Limiter</a> 解构扩展，第2个属性，相当于 <a href="limit.html">Limiter.limit</a>。</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-950693105%2FExtensions%2F-341312757" anchor-label="component3" id="-950693105%2FExtensions%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../component3.html"><span><span>component3</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-950693105%2FExtensions%2F-341312757"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">inline operator </span><span class="token keyword">fun </span><a href="index.html">Limiter</a><span class="token punctuation">.</span><a href="../component3.html"><span class="token function">component3</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></div><div class="brief "><p class="paragraph"><a href="index.html">Limiter</a> 解构扩展，第3个属性，相当于 <a href="batch-size.html">Limiter.batchSize</a>。</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="422530224%2FExtensions%2F-341312757" anchor-label="pageNum" id="422530224%2FExtensions%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../page-num.html"><span>page</span><wbr><span><span>Num</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="422530224%2FExtensions%2F-341312757"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="index.html">Limiter</a><span class="token punctuation">.</span><a href="../page-num.html">pageNum</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></div><div class="brief "><p class="paragraph">得到当前 <a href="index.html">Limiter</a> 中等价的分页属性：每页数量。计算方式大概类似于 <code class="lang-kotlin">pageNum = offset / pageSize</code>.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1982868247%2FExtensions%2F-341312757" anchor-label="pageSize" id="-1982868247%2FExtensions%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../page-size.html"><span>page</span><wbr><span><span>Size</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1982868247%2FExtensions%2F-341312757"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="index.html">Limiter</a><span class="token punctuation">.</span><a href="../page-size.html">pageSize</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></div><div class="brief "><p class="paragraph">得到当前 <a href="index.html">Limiter</a> 中等价的分页属性：页码大小。相当于 <a href="limit.html">Limiter.limit</a>.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="824986822%2FExtensions%2F-341312757" anchor-label="toFlow" id="824986822%2FExtensions%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../to-flow.html"><span>to</span><wbr><span><span>Flow</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="824986822%2FExtensions%2F-341312757"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../to-flow.html">T</a><span class="token operator">&gt; </span><a href="index.html">Limiter</a><span class="token punctuation">.</span><a href="../to-flow.html"><span class="token function">toFlow</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">crossinline </span>collector<span class="token operator">: </span><span class="token keyword">suspend </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.flow/-flow-collector/index.html">FlowCollector</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../to-flow.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token keyword"></span>batchSize<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.flow/-flow/index.html">Flow</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../to-flow.html">T</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">参数提供 <a href="batch-size.html">Limiter.batchSize</a>, receiver为 <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.flow/-flow-collector/index.html">FlowCollector</a>, flow的结果通过 <a href="../with-limiter.html">withLimiter</a> 限流</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-839626536%2FExtensions%2F-341312757" anchor-label="toSequence" id="-839626536%2FExtensions%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../to-sequence.html"><span>to</span><wbr><span><span>Sequence</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-839626536%2FExtensions%2F-341312757"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../to-sequence.html">T</a><span class="token operator">&gt; </span><a href="index.html">Limiter</a><span class="token punctuation">.</span><a href="../to-sequence.html"><span class="token function">toSequence</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">crossinline </span>block<span class="token operator">: </span><span class="token keyword">suspend </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.sequences/-sequence-scope/index.html">SequenceScope</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../to-sequence.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token keyword"></span>batchSize<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.sequences/-sequence/index.html">Sequence</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../to-sequence.html">T</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">参数提供 <a href="batch-size.html">Limiter.batchSize</a>, receiver为 <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.sequences/-sequence-scope/index.html">SequenceScope</a>, sequence的结果通过 <a href="../with-limiter.html">withLimiter</a> 限流</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2023 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+    </div>
+</div>
+
+</body></html>
+

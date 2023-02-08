@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>mute</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../";</script>    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/jetbrains-mono.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<body>
+<div class="navigation-wrapper" id="navigation-wrapper">
+    <div id="leftToggler"><span class="icon-toggler"></span></div>
+    <div class="library-name">
+<a href="../../../index.html">
+<span>Simple Robot</span>            </a>    </div>
+    <div>3.0.0-RC.2
+    </div>
+    <div class="pull-right d-flex">
+        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+    </div>
+</div>
+<div id="container">
+    <div id="leftColumn">
+        <div id="sideMenu"></div>
+    </div>
+    <div id="main">
+<div class="main-content" id="content" pageids="simbot-api::love.forte.simbot.action/MuteSupport/mute/#kotlin.time.Duration/PointingToDeclaration//-341312757">
+  <div class="breadcrumbs"><a href="../../index.html">simbot-api</a><span class="delimiter">/</span><a href="../index.html">love.forte.simbot.action</a><span class="delimiter">/</span><a href="index.html">MuteSupport</a><span class="delimiter">/</span><span class="current">mute</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>mute</span></span></h1>
+  </div>
+  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="mute.html"><span class="token function">mute</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">duration<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.time/-duration/index.html">Duration</a><span class="token operator"> = </span>DEFAULT_DURATION</span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="clearfix"><span class="floating-right">(<a href="https://github.com/simple-robot/simpler-robot/tree/v3-main/simbot-api/src/main/kotlin/love/forte/simbot/action/MuteSupport.kt#L49">source</a>)</span></span></div><p class="paragraph">对当前目标进行 <strong>禁言</strong> 操作。</p><p class="paragraph"><a href="mute.html">duration</a> 代表禁言时长。<a href="mute.html">duration</a> 并不能保证其存在效果与稳定性。绝大多数情况下，<a href="mute.html">duration</a> 有效值都应<strong>大于0</strong>。</p><p class="paragraph">当 <a href="mute.html">duration</a> 的值小于等于0的时候，通常情况下代表<strong>无限期</strong>的，或者视为 <strong>无效参数</strong> 。在默认情况下，<a href="mute.html">duration</a> 的值为 <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.time/-duration/-z-e-r-o.html">0</a> 。 对于一个必须提供时间的组件来讲，它可能会使用一个默认值，或者直接抛出异常。</p><p class="paragraph">当组件支持 <a href="mute.html">duration</a> 的时候，它们绝大多数情况下都会 <strong>至少以秒</strong> 为单位，除非你明确的知道当前实现能够支持更低量级，否则请尽可能使用秒或更高的单位。 同样的，很多情况下对于 <a href="mute.html">duration</a> 的上限也同样有限制。因此对于 <a href="mute.html">duration</a> 请自行斟酌数值，选取合理范围。</p><p class="paragraph">当组件不支持 <a href="mute.html">duration</a> 的时候，可能会由组件在其内部启动一个异步的延时任务来 <i>模拟</i> <a href="mute.html">duration</a> 的效果。这种情况下，<a href="mute.html">duration</a> 的表现将没有保障。因为 这个异步任务存在于当前应用程序的内存中，会伴随着程序的终止而消亡。如果这个异步任务是通过当前 bot 或者 bot 下某个子<a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-job/index.html">任务</a>，则这个异步任务 便会伴随着这个协程作用域的完成而消逝。 除了通过异步任务实现 <a href="mute.html">duration</a> 的效果，在不支持的情况下也有可能会将其直接忽略。</p><p class="paragraph">当 <a href="mute.html">mute</a> 行为不被支持的时候，大多数情况下组件会选择直接返回 <code class="lang-kotlin">false</code>, 但是并不排除可能会直接抛出异常的可能。</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">support.mute()<br>support.mute(5.seconds)</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><h4 class="">Parameters</h4><div data-togglable="Parameters"><div class="table" data-togglable="Parameters"><div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><u><span><span>duration</span></span></u></div></span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">持续时长</p></div></div></div></div></div></div></div><h4 class="">Throws</h4><div class="table" data-togglable="Throws"><div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../-unsupported-action-exception/index.html"><span>Unsupported</span><wbr><span>Action</span><wbr><span><span>Exception</span></span></a></div></span></div><div><div class="title"><p class="paragraph">当此行为不被支持时</p></div></div></div></div></div><hr><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="mute.html"><span class="token function">mute</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">time<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a><span class="token punctuation">, </span></span><span class="parameter ">timeUnit<span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/TimeUnit.html">TimeUnit</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="clearfix"><span class="floating-right">(<a href="https://github.com/simple-robot/simpler-robot/tree/v3-main/simbot-api/src/main/kotlin/love/forte/simbot/action/MuteSupport.kt#L80">source</a>)</span></span></div><p class="paragraph">对当前目标进行 <strong>禁言</strong> 操作。</p><div class="sample-container"><pre><code class="block lang-java" theme="idea">support.mute(5, TimeUnit.SECONDS)</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><h4 class="">See also</h4><div data-togglable="See also"><div class="table" data-togglable="See also"><div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><a href="mute.html"><span>Mute</span><wbr><span>Support.</span><wbr><span>mute</span></a></div></span></div><div></div></div></div></div></div></div></div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2023 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+    </div>
+</div>
+
+</body></html>
+

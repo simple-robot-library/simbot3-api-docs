@@ -1,0 +1,259 @@
+<!doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>Event</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../";</script>    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/jetbrains-mono.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<body>
+<div class="navigation-wrapper" id="navigation-wrapper">
+    <div id="leftToggler"><span class="icon-toggler"></span></div>
+    <div class="library-name">
+<a href="../../../index.html">
+<span>Simple Robot</span>            </a>    </div>
+    <div>3.0.0-RC.2
+    </div>
+    <div class="pull-right d-flex">
+        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+    </div>
+</div>
+<div id="container">
+    <div id="leftColumn">
+        <div id="sideMenu"></div>
+    </div>
+    <div id="main">
+<div class="main-content" id="content" pageids="simbot-api::love.forte.simbot.event/Event///PointingToDeclaration//-341312757">
+  <div class="breadcrumbs"><a href="../../index.html">simbot-api</a><span class="delimiter">/</span><a href="../index.html">love.forte.simbot.event</a><span class="delimiter">/</span><span class="current">Event</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Event</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="index.html">Event</a> : <a href="../../love.forte.simbot.definition/-bot-container/index.html">BotContainer</a>, <a href="../../love.forte.simbot.definition/-i-d-container/index.html">IDContainer</a>, <a href="../../love.forte.simbot/-component-container/index.html">ComponentContainer</a><span class="clearfix"><span class="floating-right">(<a href="https://github.com/simple-robot/simpler-robot/tree/v3-main/simbot-api/src/main/kotlin/love/forte/simbot/event/Event.kt#L30">source</a>)</span></span></div><h2 class=""> 事件类型</h2><p class="paragraph">所有 <a href="index.html">事件</a> 的顶层接口。</p><h2 class=""> Key</h2><p class="paragraph">在事件处理的时候，将不会根据其 <code class="lang-kotlin">class</code> 进行直接的类型关系判断来决定事件监听，而是根据 <a href="-key/index.html">Event.key</a> 进行事件之间的继承关系的判断。 对于任意一个继承此接口的事件类型（包括其他接口或抽象）， 其类型中必须存在一个实现了 <a href="-key/index.html">Event.Key</a> 的伴生对象或者通过 <a href="../-event-key/index.html">EventKey</a> 注解指定 <a href="-key/index.html">Event.Key</a> 的实现，否则此事件将会被视为 <strong>不可监听</strong>。</p><h2 class=""> 泛型事件类型</h2><p class="paragraph">所有能够监听的事件中，<strong>不建议</strong>监听带有泛型信息的事件类型（例如 <a href="../-changed-event/index.html">ChangedEvent</a>）, 虽然它们允许被监听，但是它们大多数都代表对其他事件的类型约束。</p><p class="paragraph">并且，在进行事件监听的时候，事件类型的判断 <strong>不支持</strong> 泛型判断，因此如果你需要监听这些携带泛型的事件类型， 那么你必须使用kotlin中的 <code class="lang-kotlin">*</code>，在Java中使用 <code class="lang-kotlin">?</code> 或直接忽略它。否则会很容易导致出现异常。</p><span class="kdoc-tag"><h4 class="">Author</h4><p class="paragraph">ForteScarlet</p></span></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Types">Types</button><button class="section-tab" data-togglable="Properties">Properties</button><button class="section-tab" data-togglable="Extensions">Extensions</button><button class="section-tab" data-togglable="See also">See also</button><button class="section-tab" data-togglable="Inheritors">Inheritors</button></div>
+    <div class="tabs-section-body">
+      <h4 class="">See also</h4>
+      <div data-togglable="See also">
+        <div class="platform-hinted WithExtraAttributes" data-platform-hinted="data-platform-hinted" data-togglable="See also"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/main"><div data-togglable="See also"><div class="table" data-togglable="See also"><div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><a href="-key/index.html"><span>Event.</span><wbr><span>Key</span></a></div></span></div><div></div></div></div></div></div></div></div>
+      </div>
+      <h2 class="">Types</h2>
+      <div class="table" data-togglable="Types"><a data-name="588442505%2FClasslikes%2F-341312757" anchor-label="Key" id="588442505%2FClasslikes%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-key/index.html"><span><span>Key</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="588442505%2FClasslikes%2F-341312757"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-key/index.html">Key</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-key/index.html">E</a><span class="token operator"> : </span><a href="index.html">Event</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">一个事件类型的Key。所有的计划对外的事件类型都必须通过 <strong>伴生对象</strong> 实现此类型并提供一个事件<strong>唯一</strong>的ID名称。 并非所有的事件接口 <a href="index.html">Event</a> 的类型都能够允许被监听，有些事件类型可能仅用做标记或者由于其他原因无法/不允许被<strong>直接</strong>监听， 因此在事件调度中，需要通过 <a href="-key/index.html">Key</a> 来判断事件类型与其之间的继承关系。</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-2005076072%2FClasslikes%2F-341312757" anchor-label="Root" id="-2005076072%2FClasslikes%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-root/index.html"><span><span>Root</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2005076072%2FClasslikes%2F-341312757"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-root/index.html">Root</a> : <a href="-key/index.html">Event.Key</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html">Event</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">所有事件的根类型。</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="">Properties</h2>
+      <div class="table" data-togglable="Properties"><a data-name="1392758542%2FProperties%2F-341312757" anchor-label="bot" id="1392758542%2FProperties%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="bot.html"><span><span>bot</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1392758542%2FProperties%2F-341312757"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/main"><a data-name="1392758542%2FProperties%2F-341312757" anchor-label="bot" id="1392758542%2FProperties%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="bot.html">bot</a><span class="token operator">: </span><a href="../../love.forte.simbot.bot/-bot/index.html">Bot</a></div><div class="brief "><a data-name="1392758542%2FProperties%2F-341312757" anchor-label="bot" id="1392758542%2FProperties%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a><p class="paragraph">与这个事件有关系的 <a href="../../love.forte.simbot.bot/-bot/index.html">Bot</a>.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1500466840%2FProperties%2F-341312757" anchor-label="component" id="1500466840%2FProperties%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="component.html"><span><span>component</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1500466840%2FProperties%2F-341312757"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/main"><a data-name="1500466840%2FProperties%2F-341312757" anchor-label="component" id="1500466840%2FProperties%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="component.html">component</a><span class="token operator">: </span><a href="../../love.forte.simbot/-component/index.html">Component</a></div><div class="brief "><a data-name="1500466840%2FProperties%2F-341312757" anchor-label="component" id="1500466840%2FProperties%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a><p class="paragraph">一个事件所属的组件。 通常与 <a href="bot.html">bot</a> 的组件所属一致。</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-2067904310%2FProperties%2F-341312757" anchor-label="id" id="-2067904310%2FProperties%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="id.html"><span><span>id</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2067904310%2FProperties%2F-341312757"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/main"><a data-name="-2067904310%2FProperties%2F-341312757" anchor-label="id" id="-2067904310%2FProperties%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="id.html">id</a><span class="token operator">: </span><a href="../../love.forte.simbot/-i-d/index.html">ID</a></div><div class="brief "><a data-name="-2067904310%2FProperties%2F-341312757" anchor-label="id" id="-2067904310%2FProperties%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a><p class="paragraph">事件的唯一标识。</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1770976906%2FProperties%2F-341312757" anchor-label="key" id="-1770976906%2FProperties%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="key.html"><span><span>key</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1770976906%2FProperties%2F-341312757"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/main"><a data-name="-1770976906%2FProperties%2F-341312757" anchor-label="key" id="-1770976906%2FProperties%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="key.html">key</a><span class="token operator">: </span><a href="-key/index.html">Event.Key</a><span class="token operator">&lt;</span><span class="token keyword">out </span><a href="index.html">Event</a><span class="token operator">&gt;</span></div><div class="brief "><a data-name="-1770976906%2FProperties%2F-341312757" anchor-label="key" id="-1770976906%2FProperties%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a><p class="paragraph">得到当前事件所对应的类型key。</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-2045517665%2FProperties%2F-341312757" anchor-label="timestamp" id="-2045517665%2FProperties%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="timestamp.html"><span><span>timestamp</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2045517665%2FProperties%2F-341312757"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/main"><a data-name="-2045517665%2FProperties%2F-341312757" anchor-label="timestamp" id="-2045517665%2FProperties%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="timestamp.html">timestamp</a><span class="token operator">: </span><a href="../../love.forte.simbot/-timestamp/index.html">Timestamp</a></div><div class="brief "><a data-name="-2045517665%2FProperties%2F-341312757" anchor-label="timestamp" id="-2045517665%2FProperties%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a><p class="paragraph">此时间发生的时间戳。</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="">Inheritors</h2>
+      <div class="table" data-togglable="Inheritors"><a data-name="-214487094%2FInheritors%2F-341312757" anchor-label="ChangeEvent" id="-214487094%2FInheritors%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-change-event/index.html">ChangeEvent</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-214487094%2FInheritors%2F-341312757"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div></div>
+          </div>
+        </div>
+<a data-name="-842264581%2FInheritors%2F-341312757" anchor-label="MessageEvent" id="-842264581%2FInheritors%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-message-event/index.html">MessageEvent</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-842264581%2FInheritors%2F-341312757"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div></div>
+          </div>
+        </div>
+<a data-name="-614413715%2FInheritors%2F-341312757" anchor-label="ObjectiveEvent" id="-614413715%2FInheritors%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-objective-event/index.html">ObjectiveEvent</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-614413715%2FInheritors%2F-341312757"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div></div>
+          </div>
+        </div>
+<a data-name="1877402755%2FInheritors%2F-341312757" anchor-label="RequestEvent" id="1877402755%2FInheritors%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-request-event/index.html">RequestEvent</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1877402755%2FInheritors%2F-341312757"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div></div>
+          </div>
+        </div>
+      </div>
+      <h2 class="tabbedcontent">Extensions</h2>
+      <div class="table" data-togglable="Extensions"><a data-name="535119136%2FExtensions%2F-341312757" anchor-label="replyIfSupport" id="535119136%2FExtensions%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../../love.forte.simbot.action/reply-if-support.html"><span>reply</span><wbr><span>If</span><wbr><span><span>Support</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="535119136%2FExtensions%2F-341312757"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="index.html">Event</a><span class="token punctuation">.</span><a href="../../love.forte.simbot.action/reply-if-support.html"><span class="token function">replyIfSupport</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">message<span class="token operator">: </span><a href="../../love.forte.simbot.message/-message/index.html">Message</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../love.forte.simbot.message/-message-receipt/index.html">MessageReceipt</a><span class="token operator">?</span></div><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="index.html">Event</a><span class="token punctuation">.</span><a href="../../love.forte.simbot.action/reply-if-support.html"><span class="token function">replyIfSupport</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">message<span class="token operator">: </span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="../../love.forte.simbot.message/-message/index.html">Message</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../love.forte.simbot.message/-message-receipt/index.html">MessageReceipt</a><span class="token operator">?</span></div><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="index.html">Event</a><span class="token punctuation">.</span><a href="../../love.forte.simbot.action/reply-if-support.html"><span class="token function">replyIfSupport</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">message<span class="token operator">: </span><a href="../../love.forte.simbot.message/-message-content/index.html">MessageContent</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../love.forte.simbot.message/-message-receipt/index.html">MessageReceipt</a><span class="token operator">?</span></div><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="index.html">Event</a><span class="token punctuation">.</span><a href="../../love.forte.simbot.action/reply-if-support.html"><span class="token function">replyIfSupport</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">message<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../love.forte.simbot.message/-message-receipt/index.html">MessageReceipt</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">如果此事件允许回复消息，发送，否则得到null。</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1563479371%2FExtensions%2F-341312757" anchor-label="sameIdWith" id="-1563479371%2FExtensions%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../../love.forte.simbot.definition/same-id-with.html"><span>same</span><wbr><span>Id</span><wbr><span><span>With</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1563479371%2FExtensions%2F-341312757"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">infix </span><span class="token keyword">fun </span><a href="../../love.forte.simbot.definition/-i-d-container/index.html">IDContainer</a><span class="token punctuation">.</span><a href="../../love.forte.simbot.definition/same-id-with.html"><span class="token function">sameIdWith</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">other<span class="token operator">: </span><a href="../../love.forte.simbot.definition/-i-d-container/index.html">IDContainer</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">比较两个 <a href="../../love.forte.simbot.definition/-i-d-container/index.html">IDContainer</a> 的 <a href="../../love.forte.simbot.definition/-i-d-container/id.html">IDContainer.id</a> 是否一致。</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2023 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+    </div>
+</div>
+
+</body></html>
+
