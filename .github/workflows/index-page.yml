@@ -24,7 +24,8 @@ jobs:
 
       - run: |
           mkdir main
-          mv kdoc/main main
+          cp -r kdoc/main/* main/
+          rm -rf kdoc/main
         working-directory: ./public
 
       - uses: actions/checkout@v3
@@ -34,7 +35,8 @@ jobs:
 
       - run: |
           mkdir -p components/mirai
-          mv kdoc/cp-mirai components/mirai
+          cp -r kdoc/cp-mirai/* components/mirai/
+          rm -rf kdoc/cp-mirai
         working-directory: ./public
 
 #      - uses: actions/checkout@v3
