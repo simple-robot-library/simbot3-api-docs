@@ -49,32 +49,32 @@ const componentCards = [
 <template>
   <div>
     <n-grid x-gap="12" y-gap="14" cols="1 s:2 m:3 l:4 xl:5 2xl:6" responsive="screen">
-      <n-gi v-for="componentCard in componentCards">
-        <n-card :title="componentCard.name" hoverable>
+        <n-gi v-for="componentCard in componentCards">
+          <n-card :title="componentCard.name" hoverable>
 
-          <n-space size="small">
-            <n-tag v-for="componentTag in componentCard.tags" :type="componentTag.type" size="small" round>
-              {{ componentTag.name }}
-            </n-tag>
-          </n-space>
+            <n-space size="small">
+              <n-tag v-for="componentTag in componentCard.tags" :type="componentTag.type" size="small" round>
+                {{ componentTag.name }}
+              </n-tag>
+            </n-space>
 
 
-          <n-p v-html="componentCard.description"></n-p>
+            <n-p v-html="componentCard.description"></n-p>
 
-          <template #action>
-            <n-grid :cols="componentCard.links.length" style="text-align: center">
-              <n-gi v-for="componentLink in componentCard.links">
-                <n-a :href="componentLink.href">
-                  <n-button quaternary :type="componentLink.type">
-                    {{ componentLink.name }}
-                  </n-button>
-                </n-a>
-              </n-gi>
-            </n-grid>
-          </template>
+            <template #action>
+              <n-grid :cols="componentCard.links.length" style="text-align: center">
+                <n-gi v-for="componentLink in componentCard.links">
+                  <n-a :href="componentLink.href">
+                    <n-button quaternary :type="componentLink.type">
+                      {{ componentLink.name }}
+                    </n-button>
+                  </n-a>
+                </n-gi>
+              </n-grid>
+            </template>
 
-        </n-card>
-      </n-gi>
+          </n-card>
+        </n-gi>
     </n-grid>
   </div>
 </template>

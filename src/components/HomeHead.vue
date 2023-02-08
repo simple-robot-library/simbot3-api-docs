@@ -77,7 +77,7 @@ const menuOptions = reactive<MenuOption[]>([
     icon: renderIcon(HomeSharp),
   },
   {
-    label: renderLinkFunc({href: 'https://github.com/simple-robot', target: '_blank'}, '仓库首页'),
+    label: renderLinkFunc({href: 'https://github.com/simple-robot', target: '_blank'}, '组织库'),
     key: 'github-home',
     icon: renderIcon(LogoGithub),
   },

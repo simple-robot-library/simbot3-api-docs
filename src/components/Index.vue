@@ -19,6 +19,11 @@
                     </Icon> &nbsp;
                     <n-text strong style="font-size: 19px">KDoc</n-text>
                   </n-divider>
+                  <n-divider title-placement="center">
+                    <n-collapse-transition :show="!showKDocRightValue">
+                      <n-text italic depth="3" style="user-select: none; font-size: 6px">点击展开</n-text>
+                    </n-collapse-transition>
+                  </n-divider>
                   <n-divider title-placement="right">
                     <n-collapse-transition :show="showKDocRightValue">
                       <n-text italic depth="3" style="user-select: none; font-size: 13px">Javadoc的好朋友</n-text>
@@ -34,11 +39,9 @@
         <n-layout-footer
             bordered
             position="absolute"
-            style="height: 64px; padding: 24px; text-align: center"
+            style="height: 88px; padding: 24px; text-align: center"
         >
-          <n-text depth="3">© 2023 <a class="copyright-link" href="https://github.com/ForteScarlet" target="_blank">ForteScarlet</a>.
-            All rights reserved.
-          </n-text>
+          <HomeFooter />
         </n-layout-footer>
       </n-layout>
     </div>
@@ -66,6 +69,7 @@ import RepoDocCards from "./RepoDocCards.vue";
 import {BuiltInGlobalTheme} from "naive-ui/lib/themes/interface";
 import {BookOutline} from '@vicons/ionicons5'
 import {Icon} from "@vicons/utils";
+import HomeFooter from "./HomeFooter.vue";
 
 const layoutCenterContentStyle = reactive({
   'padding-left': '50px',
