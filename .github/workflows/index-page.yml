@@ -20,30 +20,36 @@ jobs:
       - uses: actions/checkout@v3
         with:
           ref: 'kdoc-deploy/main'
-          path: 'public'
-          clean: false
+          path: 'public/kdoc/main'
+
+      - run: |
+          mkdir main
+          mv kdoc/main main
+        working-directory: ./public
 
       - uses: actions/checkout@v3
         with:
           ref: 'kdoc-deploy/component-mirai'
-          path: 'public'
-          clean: false
+          path: 'public/kdoc/cp-mirai'
 
-      - uses: actions/checkout@v3
-        with:
-          ref: 'kdoc-deploy/component-kook'
-          path: 'public'
-          clean: false
+      - run: |
+          mkdir -p components/mirai
+          mv kdoc/cp-mirai components/mirai
+        working-directory: ./public
 
-      - uses: actions/checkout@v3
-        with:
-          ref: 'kdoc-deploy/component-tencent-guild'
-          path: 'public'
-          clean: false
+#      - uses: actions/checkout@v3
+#        with:
+#          ref: 'kdoc-deploy/component-kook'
+#          path: 'public/kdoc/cp-kook'
+#
+#      - uses: actions/checkout@v3
+#        with:
+#          ref: 'kdoc-deploy/component-tencent-guild'
+#          path: 'public/kdoc/cp-tcg'
 
-
-      - run: npm ci
-      - run: npm run build
+      - run: |
+          npm ci
+          npm run build
 
       # https://github.com/marketplace/actions/github-pages-action
       - name: Push to doc repository
