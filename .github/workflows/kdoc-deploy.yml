@@ -1,13 +1,14 @@
 name: Deploy KDoc Index Page
 on:
   push:
-    branches: kdoc-deploy-**
+    branches:
+      - kdoc-deploy/**
 
 env:
-  IS_MAIN_DOC: ${{ endsWith(github.event.ref, '-main') }}
-  IS_CP_MIRAI_DOC: ${{ endsWith(github.event.ref, '-component-mirai') }}
-  IS_CP_KOOK_DOC: ${{ endsWith(github.event.ref, '-component-kook') }}
-  IS_CP_TCG_DOC: ${{ endsWith(github.event.ref, '-component-tencent-guild') }}
+  IS_MAIN_DOC: ${{ endsWith(github.event.ref, '/main') }}
+  IS_CP_MIRAI_DOC: ${{ endsWith(github.event.ref, '/component-mirai') }}
+  IS_CP_KOOK_DOC: ${{ endsWith(github.event.ref, '/component-kook') }}
+  IS_CP_TCG_DOC: ${{ endsWith(github.event.ref, '/component-tencent-guild') }}
 
 jobs:
   deploy-doc:
