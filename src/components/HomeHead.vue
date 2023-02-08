@@ -2,32 +2,17 @@
   <n-card embedded
           :bordered="false">
     <n-page-header subtitle="探寻你的梦中情档">
-      <n-grid :cols="5">
-        <n-gi>
-          <n-statistic label="正片" value="125 集"/>
-        </n-gi>
-        <n-gi>
-          <n-statistic label="嘉宾" value="22 位"/>
-        </n-gi>
-        <n-gi>
-          <n-statistic label="道歉" value="36 次"/>
-        </n-gi>
-        <n-gi>
-          <n-statistic label="话题" value="83 个"/>
-        </n-gi>
-        <n-gi>
-          <n-statistic label="参考链接" value="2,346 个"/>
-        </n-gi>
-      </n-grid>
       <template #title>
-        <a
-            href="https://anyway.fm/"
-            style="text-decoration: none; color: inherit"
-        >Simple Robot</a>
+        <n-text>Simple Robot</n-text>
       </template>
 
+      <n-menu v-model:value="menuActiveKey"
+              mode="horizontal"
+              :options="menuOptions"
+              bordered
+      />
+
       <template #header>
-        HEADER
       </template>
 
       <template #avatar>
@@ -54,9 +39,10 @@
 </template>
 
 <script setup lang="ts">
-import {NAvatar, NCard, NGi, NGrid, NPageHeader, NStatistic, NSwitch} from "naive-ui";
+import {MenuOption, NAvatar, NCard, NIcon, NMenu, NPageHeader, NSwitch, NText} from "naive-ui";
 import logoImg from '../assets/logo.png'
-import {ref} from "vue";
+import {Component, h, reactive, ref} from "vue";
+import {HomeSharp, LogoGithub} from "@vicons/ionicons5";
 
 const emit = defineEmits<{
   (e: 'themeActiveChange', value: boolean): void
@@ -64,14 +50,41 @@ const emit = defineEmits<{
 
 const themeActive = ref(false)
 
-
 function onThemeActiveChange() {
   const changeTo = !themeActive.value
   themeActive.value = changeTo
   emit('themeActiveChange', changeTo)
 }
 
+// menu
+
+function renderIcon(icon: Component) {
+  return () => h(NIcon, null, {default: () => h(icon)})
+}
+
+function renderLink(props?: any, children?: any) {
+  return h('a', props, children)
+}
+function renderLinkFunc(props?: any, children?: any) {
+  return () => renderLink(props, children)
+}
+
+const menuActiveKey = ref(null)
+const menuOptions = reactive<MenuOption[]>([
+  {
+    label: renderLinkFunc({ href: 'https://simbot.forte.love', target: '_blank' }, '官网'),
+    key: 'website-home',
+    icon: renderIcon(HomeSharp),
+  },
+  {
+    label: renderLinkFunc({ href: 'https://github.com/simple-robot', target: '_blank' }, '仓库首页'),
+    key: 'github-home',
+    icon: renderIcon(LogoGithub),
+  },
+])
+
 </script>
+
 
 <style scoped>
 

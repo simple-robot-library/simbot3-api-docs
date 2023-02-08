@@ -1,33 +1,74 @@
 <script setup lang="ts">
-import {NA, NButton, NCard, NGi, NGrid, NP, NTag} from "naive-ui";</script>
+import {NA, NButton, NCard, NGi, NGrid, NP, NSpace, NTag} from "naive-ui";
+
+const componentCards = [
+  {
+    name: "核心库",
+    tags: [{name: "核心", type: "info"}],
+    description: "核心库是组件库的基础，也是绝大多数基本API存在的地方。",
+    links: [
+      {name: "前往KDoc", href: "main", type: "primary"},
+      {name: "前往仓库", href: "https://github.com/simple-robot/simpler-robot", type: "info"},
+    ]
+  },
+
+  {
+    name: "mirai组件",
+    tags: [{name: "组件", type: "success"}],
+    description: "Mirai组件基于核心库对 <a href='https://github.com/mamoe/mirai'>mirai框架</a> 进行实现，提供强大的QQ机器人平台功能。",
+    links: [
+      {name: "前往KDoc", href: "components/mirai", type: "primary"},
+      {name: "前往仓库", href: "https://github.com/simple-robot/simbot-component-mirai", type: "info"},
+    ]
+  },
+
+  {
+    name: "KOOK组件",
+    tags: [{name: "组件", type: "success"}],
+    description: "KOOK组件基于核心库对 <a href='https://developer.kookapp.cn/doc/reference'>KOOK机器人</a> 进行实现，提供强大的KOOK机器人平台功能。",
+    links: [
+      {name: "前往KDoc", href: "components/kook", type: "primary"},
+      {name: "前往仓库", href: "https://github.com/simple-robot/simbot-component-kook", type: "info"},
+    ]
+  },
+
+  {
+    name: "QQ频道组件",
+    tags: [{name: "组件", type: "success"}],
+    description: "QQ频道组件基于核心库对 <a href='https://bot.q.qq.com/wiki'>QQ频道机器人</a> 进行实现，提供强大的QQ频道机器人平台功能。",
+    links: [
+      {name: "前往KDoc", href: "components/tencent-guild", type: "primary"},
+      {name: "前往仓库", href: "https://github.com/simple-robot/simbot-component-tencent-guild", type: "info"},
+    ]
+  },
+]
+
+</script>
 
 <template>
   <div>
-    <n-grid x-gap="12" y-gap="14" cols="2 s:3 m:4 l:5 xl:6 2xl:7" responsive="screen">
-      <n-gi v-for="i in 30">
-        <n-card :title="'组件库v-' + i" hoverable>
+    <n-grid x-gap="12" y-gap="14" cols="1 s:2 m:3 l:4 xl:5 2xl:6" responsive="screen">
+      <n-gi v-for="componentCard in componentCards">
+        <n-card :title="componentCard.name" hoverable>
 
-          <n-tag type="success" size="small" round>
-            组件
-          </n-tag>
+          <n-space size="small">
+            <n-tag v-for="componentTag in componentCard.tags" :type="componentTag.type" size="small" round>
+              {{componentTag.name}}
+            </n-tag>
+          </n-space>
 
-          <n-p v-for="n in i % 10">xxx组件库</n-p>
+
+          <n-p v-html="componentCard.description"></n-p>
 
           <template #action>
-            <n-grid cols="2" style="text-align: center">
-              <n-gi>
-                <n-button quaternary type="info">
-                  KDoc
-                </n-button>
-              </n-gi>
-              <n-gi>
-                <n-a href="/compnents/kook">
-                  <n-button quaternary type="primary">
-                    仓库
+            <n-grid :cols="componentCard.links.length" style="text-align: center">
+              <n-gi v-for="componentLink in componentCard.links">
+                <n-a :href="componentLink.href">
+                  <n-button quaternary :type="componentLink.type || 'primary'">
+                    {{componentLink.name}}
                   </n-button>
                 </n-a>
               </n-gi>
-
             </n-grid>
           </template>
 

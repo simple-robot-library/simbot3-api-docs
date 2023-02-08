@@ -5,16 +5,40 @@
         <n-layout-header bordered>
           <HomeHead @theme-active-change="onThemeActiveChange"/>
         </n-layout-header>
-        <n-layout position="absolute" style="top: 200px; bottom: 64px" :native-scrollbar="false"
+        <n-layout position="absolute" style="top: 150px; bottom: 64px" :native-scrollbar="false"
                   :content-style="layoutCenterContentStyle">
-          <RepoDocCards/>
+
+          <n-collapse :default-expanded-names="['KDoc']" @item-header-click="handleItemHeaderClick">
+            <n-card embedded :bordered="false">
+              <n-collapse-item name="KDoc">
+                <RepoDocCards/>
+                <template #header>
+                  <n-divider title-placement="left" style="user-select: none">
+                    <Icon>
+                      <BookOutline/>
+                    </Icon> &nbsp;
+                    <n-text strong style="font-size: 19px">KDoc</n-text>
+                  </n-divider>
+                  <n-divider title-placement="right">
+                    <n-collapse-transition :show="showKDocRightValue">
+                      <n-text italic depth="3" style="user-select: none; font-size: 13px">Javadoc的好朋友</n-text>
+                    </n-collapse-transition>
+                  </n-divider>
+                </template>
+              </n-collapse-item>
+            </n-card>
+          </n-collapse>
+
+
         </n-layout>
         <n-layout-footer
             bordered
             position="absolute"
-            style="height: 64px; padding: 24px"
+            style="height: 64px; padding: 24px; text-align: center"
         >
-          © Copyright ForteScarlet
+          <n-text depth="3">© 2023 <a class="copyright-link" href="https://github.com/ForteScarlet" target="_blank">ForteScarlet</a>.
+            All rights reserved.
+          </n-text>
         </n-layout-footer>
       </n-layout>
     </div>
@@ -23,11 +47,25 @@
 
 <script setup lang="ts">
 import HomeHead from "./HomeHead.vue";
-import {darkTheme, NConfigProvider, NLayout, NLayoutFooter, NLayoutHeader} from "naive-ui";
+import {
+  CollapseProps,
+  darkTheme,
+  NCard,
+  NCollapse,
+  NCollapseItem,
+  NCollapseTransition,
+  NConfigProvider,
+  NDivider,
+  NLayout,
+  NLayoutFooter,
+  NLayoutHeader,
+  NText
+} from "naive-ui";
 import {reactive, ref} from "vue";
 import RepoDocCards from "./RepoDocCards.vue";
 import {BuiltInGlobalTheme} from "naive-ui/lib/themes/interface";
-
+import {BookOutline} from '@vicons/ionicons5'
+import {Icon} from "@vicons/utils";
 
 const layoutCenterContentStyle = reactive({
   'padding-left': '50px',
@@ -47,6 +85,18 @@ function onThemeActiveChange(value: boolean) {
   }
 }
 
+const showKDocRightValue = ref(true)
+
+const handleItemHeaderClick: CollapseProps['onItemHeaderClick'] = ({
+                                                                     name,
+                                                                     expanded
+                                                                   }) => {
+
+  if (name == 'KDoc') {
+    showKDocRightValue.value = expanded
+  }
+}
+
 </script>
 
 <style scoped>
@@ -57,6 +107,7 @@ function onThemeActiveChange(value: boolean) {
   /*min-width: 320px;*/
   /*min-height: 100%;*/
 }
+
 
 #center-body {
   max-width: 1280px;
