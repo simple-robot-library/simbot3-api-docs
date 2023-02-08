@@ -1,0 +1,20 @@
+name: Deploy Main KDoc Pages
+on:
+  push:
+    branches: 'kdoc-deploy/main'
+
+jobs:
+  deploy-main-kdoc-pages:
+    name: deploy-main-kdoc-pages
+    runs-on: ubuntu-latest
+    steps:
+      # 检出仓库代码
+      - uses: actions/checkout@v3
+
+      # https://github.com/marketplace/actions/github-pages-action
+      - uses: peaceiris/actions-gh-pages@v3
+        with:
+          personal_token: ${{ secrets.PUSH_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: main
+          destination_dir: main
