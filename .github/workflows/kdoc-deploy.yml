@@ -1,14 +1,13 @@
 name: Deploy KDoc Pages
 on:
   push:
-    branches:
-      - 'kdoc-deploy/**'
+    branches: ['kdoc-deploy/**']
 
 env:
-  IS_MAIN_DOC: ${{ endsWith(github.event.ref, '/main') }}
-  IS_CP_MIRAI_DOC: ${{ endsWith(github.event.ref, '/component-mirai') }}
-  IS_CP_KOOK_DOC: ${{ endsWith(github.event.ref, '/component-kook') }}
-  IS_CP_TCG_DOC: ${{ endsWith(github.event.ref, '/component-tencent-guild') }}
+  IS_MAIN_DOC: ${{ endsWith(github.event.ref, 'kdoc-deploy/main') }}
+  IS_CP_MIRAI_DOC: ${{ endsWith(github.event.ref, 'kdoc-deploy/component-mirai') }}
+  IS_CP_KOOK_DOC: ${{ endsWith(github.event.ref, 'kdoc-deploy/component-kook') }}
+  IS_CP_TCG_DOC: ${{ endsWith(github.event.ref, 'kdoc-deploy/component-tencent-guild') }}
 
 jobs:
   deploy-kdoc-pages:
@@ -19,7 +18,7 @@ jobs:
       - uses: actions/checkout@v2
 
       # https://github.com/marketplace/actions/github-pages-action
-      - name: Push main to doc repository
+      - name: Deploy main to doc repository
         uses: peaceiris/actions-gh-pages@v3
         if: ${{ IS_MAIN_DOC }}
         with:
@@ -29,7 +28,7 @@ jobs:
           destination_dir: main
 
       ## Mirai
-      - name: Push component/mirai to doc repository
+      - name: Deploy component/mirai to doc repository
         uses: peaceiris/actions-gh-pages@v3
         if: ${{ IS_CP_MIRAI_DOC }}
         with:
@@ -39,7 +38,7 @@ jobs:
           destination_dir: components/mirai
 
       # KOOK
-      - name: Push component/kook to doc repository
+      - name: Deploy component/kook to doc repository
         uses: peaceiris/actions-gh-pages@v3
         if: ${{ IS_CP_KOOK_DOC }}
         with:
@@ -49,7 +48,7 @@ jobs:
           destination_dir: components/kook
 
       # QQ频道
-      - name: Push component/tencent-guild to doc repository
+      - name: Deploy component/tencent-guild to doc repository
         uses: peaceiris/actions-gh-pages@v3
         if: ${{ IS_CP_TCG_DOC }}
         with:
