@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       # 检出仓库代码
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
         # setup nodejs
       - uses: actions/setup-node@v3
@@ -17,18 +17,25 @@ jobs:
           node-version: 16.x
           cache: npm
 
-#      - name: Copy Main Docs
-#        uses: actions/checkout@v2
-#        with:
-#          ref: 'kdoc-deploy-main'
-#          path: 'public'
-#
-#      - name: Copy Component Mirai Docs
-#        uses: actions/checkout@v2
-#        with:
-#          ref: 'kdoc-deploy-component-mirai'
-#          path: 'public'
+      - uses: actions/checkout@v3
+        with:
+          ref: 'kdoc-deploy/main'
+          path: 'public'
 
+      - uses: actions/checkout@v3
+        with:
+          ref: 'kdoc-deploy/component-mirai'
+          path: 'public'
+
+      - uses: actions/checkout@v3
+        with:
+          ref: 'kdoc-deploy/component-kook'
+          path: 'public'
+
+      - uses: actions/checkout@v3
+        with:
+          ref: 'kdoc-deploy/component-tencent-guild'
+          path: 'public'
 
 
       - run: npm ci
