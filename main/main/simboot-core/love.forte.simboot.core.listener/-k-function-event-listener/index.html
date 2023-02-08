@@ -1,0 +1,316 @@
+<!doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>KFunctionEventListener</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../";</script>    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/jetbrains-mono.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<body>
+<div class="navigation-wrapper" id="navigation-wrapper">
+    <div id="leftToggler"><span class="icon-toggler"></span></div>
+    <div class="library-name">
+<a href="../../../index.html">
+<span>Simple Robot</span>            </a>    </div>
+    <div>3.0.0-RC.2
+    </div>
+    <div class="pull-right d-flex">
+        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+    </div>
+</div>
+<div id="container">
+    <div id="leftColumn">
+        <div id="sideMenu"></div>
+    </div>
+    <div id="main">
+<div class="main-content" id="content" pageids="simboot-core::love.forte.simboot.core.listener/KFunctionEventListener///PointingToDeclaration//717190085">
+  <div class="breadcrumbs"><a href="../../index.html">simboot-core</a><span class="delimiter">/</span><a href="../index.html">love.forte.simboot.core.listener</a><span class="delimiter">/</span><span class="current">KFunctionEventListener</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>KFunction</span><wbr><span>Event</span><wbr><span><span>Listener</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simboot-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="index.html">KFunctionEventListener</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html">R</a><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">targets<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-set/index.html">Set</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../../simbot-api/love.forte.simbot.event/-event/-key/index.html">Event.Key</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>binders<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../../simboot-api/love.forte.simboot.listener/-parameter-binder/index.html">ParameterBinder</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">attributeMap<span class="token operator">: </span><a href="../../../simbot-api/love.forte.simbot/-attribute-mutable-map/index.html">AttributeMutableMap</a><span class="token punctuation">, </span></span><span class="parameter ">matcher<span class="token operator">: </span><span class="token keyword">suspend </span><span class="token punctuation">(</span><span class="token keyword"></span><a href="../../../simbot-api/love.forte.simbot.event/-event-listener-processing-context/index.html">EventListenerProcessingContext</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token punctuation">, </span></span><span class="parameter ">caller<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-function/index.html">KFunction</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html">R</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span> : <a href="../../../simboot-api/love.forte.simboot.listener/-functional-bindable-event-listener/index.html">FunctionalBindableEventListener</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html">R</a><span class="token operator">&gt; </span><span class="clearfix"><span class="floating-right">(<a href="https://github.com/simple-robot/simpler-robot/tree/v3-main/simboot-core/src/main/kotlin/love/forte/simboot/core/listener/KFunctionEventListener.kt#L28">source</a>)</span></span></div><p class="paragraph">使用 <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-function/index.html">KFunction</a> 并可提供 <a href="binders.html">binders</a> 的 <a href="../../../simboot-api/love.forte.simboot.listener/-functional-bindable-event-listener/index.html">FunctionalBindableEventListener</a> 实现。</p></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Constructors">Constructors</button><button class="section-tab" data-togglable="Functions">Functions</button><button class="section-tab" data-togglable="Properties">Properties</button><button class="section-tab" data-togglable="Extensions">Extensions</button></div>
+    <div class="tabs-section-body">
+      <h2 class="tabbedcontent">Constructors</h2>
+      <div class="table" data-togglable="Constructors"><a data-name="1656795859%2FConstructors%2F717190085" anchor-label="KFunctionEventListener" id="1656795859%2FConstructors%2F717190085" data-filterable-set=":simboot-core:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simboot-core:dokkaHtmlPartial/main" data-filterable-set=":simboot-core:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue TabbedContent">
+            <div class=""><span class="inline-flex">
+                <div><a href="-k-function-event-listener.html"><span>KFunction</span><wbr><span>Event</span><wbr><span><span>Listener</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1656795859%2FConstructors%2F717190085"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simboot-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html">R</a><span class="token operator">&gt; </span><a href="-k-function-event-listener.html"><span class="token function">KFunctionEventListener</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">targets<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-set/index.html">Set</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../../simbot-api/love.forte.simbot.event/-event/-key/index.html">Event.Key</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">binders<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../../simboot-api/love.forte.simboot.listener/-parameter-binder/index.html">ParameterBinder</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">attributeMap<span class="token operator">: </span><a href="../../../simbot-api/love.forte.simbot/-attribute-mutable-map/index.html">AttributeMutableMap</a><span class="token punctuation">, </span></span><span class="parameter ">matcher<span class="token operator">: </span><span class="token keyword">suspend </span><span class="token punctuation">(</span><span class="token keyword"></span><a href="../../../simbot-api/love.forte.simbot.event/-event-listener-processing-context/index.html">EventListenerProcessingContext</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token punctuation">, </span></span><span class="parameter ">caller<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-function/index.html">KFunction</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html">R</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="">Functions</h2>
+      <div class="table" data-togglable="Functions"><a data-name="-1330922515%2FFunctions%2F717190085" anchor-label="convertValue" id="-1330922515%2FFunctions%2F717190085" data-filterable-set=":simboot-core:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simboot-core:dokkaHtmlPartial/main" data-filterable-set=":simboot-core:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="convert-value.html"><span>convert</span><wbr><span><span>Value</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1330922515%2FFunctions%2F717190085"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simboot-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">protected </span><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="convert-value.html"><span class="token function">convertValue</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">value<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">parameter<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-parameter/index.html">KParameter</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">?</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-37147919%2FFunctions%2F717190085" anchor-label="getAttribute" id="-37147919%2FFunctions%2F717190085" data-filterable-set=":simboot-core:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simboot-core:dokkaHtmlPartial/main" data-filterable-set=":simboot-core:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="get-attribute.html"><span>get</span><wbr><span><span>Attribute</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-37147919%2FFunctions%2F717190085"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simboot-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="get-attribute.html">T</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="get-attribute.html"><span class="token function">getAttribute</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">attribute<span class="token operator">: </span><a href="../../../simbot-api/love.forte.simbot/-attribute/index.html">Attribute</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="get-attribute.html">T</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="get-attribute.html">T</a><span class="token operator">?</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1507012052%2FFunctions%2F717190085" anchor-label="invoke" id="1507012052%2FFunctions%2F717190085" data-filterable-set=":simboot-core:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simboot-core:dokkaHtmlPartial/main" data-filterable-set=":simboot-core:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#1507012052%2FFunctions%2F717190085"><span><span>invoke</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1507012052%2FFunctions%2F717190085"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simboot-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">suspend operator override </span><span class="token keyword">fun </span><a href="index.html#1507012052%2FFunctions%2F717190085"><span class="token function">invoke</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">context<span class="token operator">: </span><a href="../../../simbot-api/love.forte.simbot.event/-event-listener-processing-context/index.html">EventListenerProcessingContext</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../../simbot-api/love.forte.simbot.event/-event-result/index.html">EventResult</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-863468486%2FFunctions%2F717190085" anchor-label="isTarget" id="-863468486%2FFunctions%2F717190085" data-filterable-set=":simboot-core:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simboot-core:dokkaHtmlPartial/main" data-filterable-set=":simboot-core:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="is-target.html"><span>is</span><wbr><span><span>Target</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-863468486%2FFunctions%2F717190085"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simboot-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="is-target.html"><span class="token function">isTarget</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">eventType<span class="token operator">: </span><a href="../../../simbot-api/love.forte.simbot.event/-event/-key/index.html">Event.Key</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="976021257%2FFunctions%2F717190085" anchor-label="match" id="976021257%2FFunctions%2F717190085" data-filterable-set=":simboot-core:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simboot-core:dokkaHtmlPartial/main" data-filterable-set=":simboot-core:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#976021257%2FFunctions%2F717190085"><span><span>match</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="976021257%2FFunctions%2F717190085"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simboot-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">suspend override </span><span class="token keyword">fun </span><a href="index.html#976021257%2FFunctions%2F717190085"><span class="token function">match</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">context<span class="token operator">: </span><a href="../../../simbot-api/love.forte.simbot.event/-event-listener-processing-context/index.html">EventListenerProcessingContext</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1622446898%2FFunctions%2F717190085" anchor-label="resultProcess" id="1622446898%2FFunctions%2F717190085" data-filterable-set=":simboot-core:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simboot-core:dokkaHtmlPartial/main" data-filterable-set=":simboot-core:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#1622446898%2FFunctions%2F717190085"><span>result</span><wbr><span><span>Process</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1622446898%2FFunctions%2F717190085"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simboot-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">protected </span><span class="token keyword">open </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="index.html#1622446898%2FFunctions%2F717190085"><span class="token function">resultProcess</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">result<span class="token operator">: </span><a href="index.html">R</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../../simbot-api/love.forte.simbot.event/-event-result/index.html">EventResult</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-243775794%2FFunctions%2F717190085" anchor-label="toString" id="-243775794%2FFunctions%2F717190085" data-filterable-set=":simboot-core:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simboot-core:dokkaHtmlPartial/main" data-filterable-set=":simboot-core:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="to-string.html"><span>to</span><wbr><span><span>String</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-243775794%2FFunctions%2F717190085"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simboot-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="to-string.html"><span class="token function">toString</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="">Properties</h2>
+      <div class="table" data-togglable="Properties"><a data-name="-2039982025%2FProperties%2F717190085" anchor-label="binders" id="-2039982025%2FProperties%2F717190085" data-filterable-set=":simboot-core:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simboot-core:dokkaHtmlPartial/main" data-filterable-set=":simboot-core:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="binders.html"><span><span>binders</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2039982025%2FProperties%2F717190085"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simboot-core:dokkaHtmlPartial/main"><a data-name="-2039982025%2FProperties%2F717190085" anchor-label="binders" id="-2039982025%2FProperties%2F717190085" data-filterable-set=":simboot-core:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword">protected </span><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="binders.html">binders</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../../simboot-api/love.forte.simboot.listener/-parameter-binder/index.html">ParameterBinder</a><span class="token operator">&gt;</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1631579951%2FProperties%2F717190085" anchor-label="caller" id="-1631579951%2FProperties%2F717190085" data-filterable-set=":simboot-core:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simboot-core:dokkaHtmlPartial/main" data-filterable-set=":simboot-core:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#-1631579951%2FProperties%2F717190085"><span><span>caller</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1631579951%2FProperties%2F717190085"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simboot-core:dokkaHtmlPartial/main"><a data-name="-1631579951%2FProperties%2F717190085" anchor-label="caller" id="-1631579951%2FProperties%2F717190085" data-filterable-set=":simboot-core:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword">override </span><span class="token keyword">val </span><a href="index.html#-1631579951%2FProperties%2F717190085">caller</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-function/index.html">KFunction</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html">R</a><span class="token operator">&gt;</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="tabbedcontent">Extensions</h2>
+      <div class="table" data-togglable="Extensions"><a data-name="-449129347%2FExtensions%2F717190085" anchor-label="rawBinders" id="-449129347%2FExtensions%2F717190085" data-filterable-set=":simboot-core:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simboot-core:dokkaHtmlPartial/main" data-filterable-set=":simboot-core:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-boot-listener-attributes/raw-binders.html"><span>raw</span><wbr><span><span>Binders</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-449129347%2FExtensions%2F717190085"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simboot-core:dokkaHtmlPartial/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-static/index.html"><span class="token annotation builtin">JvmStatic</span></a></div></div><span class="token keyword"></span><span class="token keyword">val </span><a href="../../../simbot-api/love.forte.simbot.event/-event-listener/index.html">EventListener</a><span class="token punctuation">.</span><a href="../-boot-listener-attributes/raw-binders.html">rawBinders</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-collection/index.html">Collection</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../../simboot-api/love.forte.simboot.listener/-parameter-binder/index.html">ParameterBinder</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">尝试从一个 <a href="../../../simbot-api/love.forte.simbot.event/-event-listener/index.html">EventListener</a> 中获取 <a href="../-boot-listener-attributes/-raw-binders.html">RawBinders</a> 属性。 如果使用的是simbot标准库中提供的boot相关实现（包括SpringBoot相关）则能够获取到此值，否则可能会无法得到。</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-742587481%2FExtensions%2F717190085" anchor-label="rawBindersOrNull" id="-742587481%2FExtensions%2F717190085" data-filterable-set=":simboot-core:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simboot-core:dokkaHtmlPartial/main" data-filterable-set=":simboot-core:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-boot-listener-attributes/raw-binders-or-null.html"><span>raw</span><wbr><span>Binders</span><wbr><span>Or</span><wbr><span><span>Null</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-742587481%2FExtensions%2F717190085"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simboot-core:dokkaHtmlPartial/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-static/index.html"><span class="token annotation builtin">JvmStatic</span></a></div></div><span class="token keyword"></span><span class="token keyword">val </span><a href="../../../simbot-api/love.forte.simbot.event/-event-listener/index.html">EventListener</a><span class="token punctuation">.</span><a href="../-boot-listener-attributes/raw-binders-or-null.html">rawBindersOrNull</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-collection/index.html">Collection</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../../simboot-api/love.forte.simboot.listener/-parameter-binder/index.html">ParameterBinder</a><span class="token operator">&gt;</span><span class="token operator">?</span></div><div class="brief "><p class="paragraph">尝试从一个 <a href="../../../simbot-api/love.forte.simbot.event/-event-listener/index.html">EventListener</a> 中获取 <a href="../-boot-listener-attributes/-raw-binders.html">RawBinders</a> 属性。 如果使用的是simbot标准库中提供的boot相关实现（包括SpringBoot相关）则能够获取到此值，否则可能会无法得到。</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="645703258%2FExtensions%2F717190085" anchor-label="rawFunction" id="645703258%2FExtensions%2F717190085" data-filterable-set=":simboot-core:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simboot-core:dokkaHtmlPartial/main" data-filterable-set=":simboot-core:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-boot-listener-attributes/raw-function.html"><span>raw</span><wbr><span><span>Function</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="645703258%2FExtensions%2F717190085"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simboot-core:dokkaHtmlPartial/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-static/index.html"><span class="token annotation builtin">JvmStatic</span></a></div></div><span class="token keyword"></span><span class="token keyword">val </span><a href="../../../simbot-api/love.forte.simbot.event/-event-listener/index.html">EventListener</a><span class="token punctuation">.</span><a href="../-boot-listener-attributes/raw-function.html">rawFunction</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-function/index.html">KFunction</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">尝试从一个 <a href="../../../simbot-api/love.forte.simbot.event/-event-listener/index.html">EventListener</a> 中获取 <a href="../-boot-listener-attributes/-raw-function.html">RawFunction</a> 属性。 如果使用的是simbot标准库中提供的boot相关实现（包括SpringBoot相关）则能够获取到此值，否则可能会无法得到。</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="23018436%2FExtensions%2F717190085" anchor-label="rawFunctionOrNull" id="23018436%2FExtensions%2F717190085" data-filterable-set=":simboot-core:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simboot-core:dokkaHtmlPartial/main" data-filterable-set=":simboot-core:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-boot-listener-attributes/raw-function-or-null.html"><span>raw</span><wbr><span>Function</span><wbr><span>Or</span><wbr><span><span>Null</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="23018436%2FExtensions%2F717190085"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simboot-core:dokkaHtmlPartial/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-static/index.html"><span class="token annotation builtin">JvmStatic</span></a></div></div><span class="token keyword"></span><span class="token keyword">val </span><a href="../../../simbot-api/love.forte.simbot.event/-event-listener/index.html">EventListener</a><span class="token punctuation">.</span><a href="../-boot-listener-attributes/raw-function-or-null.html">rawFunctionOrNull</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-function/index.html">KFunction</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token operator">?</span></div><div class="brief "><p class="paragraph">尝试从一个 <a href="../../../simbot-api/love.forte.simbot.event/-event-listener/index.html">EventListener</a> 中获取 <a href="../-boot-listener-attributes/-raw-function.html">RawFunction</a> 属性。 如果使用的是simbot标准库中提供的boot相关实现（包括SpringBoot相关）则能够获取到此值，否则可能会无法得到。</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-496180369%2FExtensions%2F717190085" anchor-label="rawListenTargets" id="-496180369%2FExtensions%2F717190085" data-filterable-set=":simboot-core:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simboot-core:dokkaHtmlPartial/main" data-filterable-set=":simboot-core:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-boot-listener-attributes/raw-listen-targets.html"><span>raw</span><wbr><span>Listen</span><wbr><span><span>Targets</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-496180369%2FExtensions%2F717190085"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simboot-core:dokkaHtmlPartial/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-static/index.html"><span class="token annotation builtin">JvmStatic</span></a></div></div><span class="token keyword"></span><span class="token keyword">val </span><a href="../../../simbot-api/love.forte.simbot.event/-event-listener/index.html">EventListener</a><span class="token punctuation">.</span><a href="../-boot-listener-attributes/raw-listen-targets.html">rawListenTargets</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-collection/index.html">Collection</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../../simbot-api/love.forte.simbot.event/-event/-key/index.html">Event.Key</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">尝试从一个 <a href="../../../simbot-api/love.forte.simbot.event/-event-listener/index.html">EventListener</a> 中获取 <a href="../-boot-listener-attributes/-raw-listen-targets.html">RawListenTargets</a> 属性。 如果使用的是simbot标准库中提供的boot相关实现（包括SpringBoot相关）则能够获取到此值，否则可能会无法得到。</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1011914009%2FExtensions%2F717190085" anchor-label="rawListenTargetsOrNull" id="1011914009%2FExtensions%2F717190085" data-filterable-set=":simboot-core:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simboot-core:dokkaHtmlPartial/main" data-filterable-set=":simboot-core:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-boot-listener-attributes/raw-listen-targets-or-null.html"><span>raw</span><wbr><span>Listen</span><wbr><span>Targets</span><wbr><span>Or</span><wbr><span><span>Null</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1011914009%2FExtensions%2F717190085"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simboot-core:dokkaHtmlPartial/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-static/index.html"><span class="token annotation builtin">JvmStatic</span></a></div></div><span class="token keyword"></span><span class="token keyword">val </span><a href="../../../simbot-api/love.forte.simbot.event/-event-listener/index.html">EventListener</a><span class="token punctuation">.</span><a href="../-boot-listener-attributes/raw-listen-targets-or-null.html">rawListenTargetsOrNull</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-collection/index.html">Collection</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../../simbot-api/love.forte.simbot.event/-event/-key/index.html">Event.Key</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token operator">&gt;</span><span class="token operator">?</span></div><div class="brief "><p class="paragraph">尝试从一个 <a href="../../../simbot-api/love.forte.simbot.event/-event-listener/index.html">EventListener</a> 中获取 <a href="../-boot-listener-attributes/-raw-listen-targets.html">RawListenTargets</a> 属性。 如果使用的是simbot标准库中提供的boot相关实现（包括SpringBoot相关）则能够获取到此值，否则可能会无法得到。</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2023 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+    </div>
+</div>
+
+</body></html>
+
