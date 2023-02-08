@@ -1,7 +1,5 @@
 name: Deploy KDoc Pages
-on:
-  push:
-    branches: ['kdoc-deploy/**']
+on: push
 
 env:
   IS_MAIN_DOC: ${{ endsWith(github.event.ref, 'kdoc-deploy/main') }}
