@@ -37,15 +37,25 @@ jobs:
           rm -rf kdoc/cp-mirai
         working-directory: ./public
 
-#      - uses: actions/checkout@v3
-#        with:
-#          ref: 'kdoc-deploy/component-kook'
-#          path: 'public/kdoc/cp-kook'
-#
-#      - uses: actions/checkout@v3
-#        with:
-#          ref: 'kdoc-deploy/component-tencent-guild'
-#          path: 'public/kdoc/cp-tcg'
+      - uses: actions/checkout@v3
+        with:
+          ref: 'kdoc-deploy/component-kook'
+          path: 'public/kdoc/cp-kook'
+
+      - run: |
+          cp -r kdoc/cp-kook/* ./
+          rm -rf kdoc/cp-kook
+        working-directory: ./public
+
+      - uses: actions/checkout@v3
+        with:
+          ref: 'kdoc-deploy/component-tencent-guild'
+          path: 'public/kdoc/cp-tcg'
+
+      - run: |
+          cp -r kdoc/cp-tcg/* ./
+          rm -rf kdoc/cp-tcg
+        working-directory: ./public
 
       - run: |
           npm ci
