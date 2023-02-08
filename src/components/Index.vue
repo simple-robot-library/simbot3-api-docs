@@ -20,12 +20,12 @@
                     <n-text strong style="font-size: 19px">KDoc</n-text>
                   </n-divider>
                   <n-divider title-placement="center">
-                    <n-collapse-transition :show="!showKDocRightValue">
+                    <n-collapse-transition :show="!collapseActions.kdoc">
                       <n-text italic depth="3" style="user-select: none; font-size: 6px">点击展开</n-text>
                     </n-collapse-transition>
                   </n-divider>
                   <n-divider title-placement="right">
-                    <n-collapse-transition :show="showKDocRightValue">
+                    <n-collapse-transition :show="collapseActions.kdoc">
                       <n-text italic depth="3" style="user-select: none; font-size: 13px">Javadoc的好朋友</n-text>
                     </n-collapse-transition>
                   </n-divider>
@@ -41,7 +41,7 @@
             position="absolute"
             style="height: 88px; padding: 24px; text-align: center"
         >
-          <HomeFooter />
+          <HomeFooter/>
         </n-layout-footer>
       </n-layout>
     </div>
@@ -89,15 +89,17 @@ function onThemeActiveChange(value: boolean) {
   }
 }
 
-const showKDocRightValue = ref(true)
+const collapseActions = reactive({
+  kdoc: true
+})
 
-const handleItemHeaderClick: CollapseProps['onItemHeaderClick'] = ({
-                                                                     name,
-                                                                     expanded
-                                                                   }) => {
-
+const handleItemHeaderClick: CollapseProps['onItemHeaderClick']
+    = ({
+         name,
+         expanded
+       }) => {
   if (name == 'KDoc') {
-    showKDocRightValue.value = expanded
+    collapseActions.kdoc = expanded
   }
 }
 
