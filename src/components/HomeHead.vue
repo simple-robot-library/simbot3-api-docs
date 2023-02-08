@@ -24,7 +24,7 @@
         />
       </template>
       <template #extra>
-        <n-switch :value="themeActive" @change="onThemeActiveChange">
+        <n-switch :value="themeActive" @update:value="onThemeActiveChange">
           <template #unchecked-icon>
             🔆
           </template>
@@ -65,6 +65,7 @@ function renderIcon(icon: Component) {
 function renderLink(props?: any, children?: any) {
   return h('a', props, children)
 }
+
 function renderLinkFunc(props?: any, children?: any) {
   return () => renderLink(props, children)
 }
@@ -72,12 +73,12 @@ function renderLinkFunc(props?: any, children?: any) {
 const menuActiveKey = ref(null)
 const menuOptions = reactive<MenuOption[]>([
   {
-    label: renderLinkFunc({ href: 'https://simbot.forte.love', target: '_blank' }, '官网'),
+    label: renderLinkFunc({href: 'https://simbot.forte.love', target: '_blank'}, '官网'),
     key: 'website-home',
     icon: renderIcon(HomeSharp),
   },
   {
-    label: renderLinkFunc({ href: 'https://github.com/simple-robot', target: '_blank' }, '仓库首页'),
+    label: renderLinkFunc({href: 'https://github.com/simple-robot', target: '_blank'}, '仓库首页'),
     key: 'github-home',
     icon: renderIcon(LogoGithub),
   },
