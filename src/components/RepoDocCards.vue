@@ -5,7 +5,7 @@ import {NA, NButton, NCard, NGi, NGrid, NP, NSpace, NTag} from "naive-ui";
 const componentCards = [
   {
     name: "核心库",
-    tags: {name: "核心", type: "info" as const},
+    tags: [{name: "核心", type: "info" as const}],
     description: "核心库是组件库的基础，也是绝大多数基本API存在的地方。",
     links: [
       {name: "前往KDoc", href: "main", type: "primary" as const},
