@@ -6,7 +6,7 @@
     </n-text>
 
     <n-text depth="3">
-      Feedback or assistance: <a href="https://github.com/simple-robot-library/simbot3-api-docs">source</a>
+      Feedback or assistance: <a href="https://github.com/simple-robot-library/simbot3-api-docs" target="_blank">source</a>
     </n-text>
   </n-space>
 
@@ -22,3 +22,6 @@ const copyRightYear = startYear == currentYear ? currentYear : startYear + '-' +
 
 </script>
 
+<style scoped>
+
+</style>
