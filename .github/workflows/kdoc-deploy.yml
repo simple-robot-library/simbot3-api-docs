@@ -1,5 +1,7 @@
 name: Deploy KDoc Pages
-on: push
+on:
+  push:
+    branches: 'kdoc-deploy/component-mirai'
 
 env:
   IS_MAIN_DOC: ${{ endsWith(github.event.ref, 'kdoc-deploy/main') }}
