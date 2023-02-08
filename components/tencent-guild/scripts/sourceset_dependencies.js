@@ -1,0 +1,1 @@
+sourceset_dependencies = '{":simbot-component-tencent-guild-stdlib:dokkaHtmlPartial/main":[],":simbot-component-tencent-guild-core:dokkaHtmlPartial/main":[],":simbot-component-tencent-guild-boot:dokkaHtmlPartial/main":[],":simbot-component-tencent-guild-api:dokkaHtmlPartial/main":[]}'
