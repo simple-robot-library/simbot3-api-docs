@@ -23,8 +23,7 @@ jobs:
           path: 'public/kdoc/main'
 
       - run: |
-          mkdir main
-          cp -r kdoc/main/* main/
+          cp -r kdoc/main/* ./
           rm -rf kdoc/main
         working-directory: ./public
 
@@ -34,8 +33,7 @@ jobs:
           path: 'public/kdoc/cp-mirai'
 
       - run: |
-          mkdir -p components/mirai
-          cp -r kdoc/cp-mirai/* components/mirai/
+          cp -r kdoc/cp-mirai/* ./
           rm -rf kdoc/cp-mirai
         working-directory: ./public
 
