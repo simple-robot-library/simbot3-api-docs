@@ -1,4 +1,4 @@
-name: Deploy KDoc Index Page
+name: Deploy KDoc Pages
 on:
   push:
     branches:
@@ -11,7 +11,7 @@ env:
   IS_CP_TCG_DOC: ${{ endsWith(github.event.ref, '/component-tencent-guild') }}
 
 jobs:
-  deploy-doc:
+  deploy-kdoc-pages:
     name: deploy-kdoc-pages
     runs-on: ubuntu-latest
     steps:
@@ -39,7 +39,7 @@ jobs:
           destination_dir: components/mirai
 
       # KOOK
-      - name: Push component/mirai to doc repository
+      - name: Push component/kook to doc repository
         uses: peaceiris/actions-gh-pages@v3
         if: ${{ IS_CP_KOOK_DOC }}
         with:
@@ -49,7 +49,7 @@ jobs:
           destination_dir: components/kook
 
       # QQ频道
-      - name: Push component/mirai to doc repository
+      - name: Push component/tencent-guild to doc repository
         uses: peaceiris/actions-gh-pages@v3
         if: ${{ IS_CP_TCG_DOC }}
         with:
