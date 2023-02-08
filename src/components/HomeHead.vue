@@ -17,7 +17,7 @@
 
       <template #avatar>
         <n-avatar
-            :src="logoImg"
+            src="/logo.png"
             :style="{
               backgroundColor: 'rgba(255,255,255,0)'
             }"
@@ -40,7 +40,6 @@
 
 <script setup lang="ts">
 import {MenuOption, NAvatar, NCard, NIcon, NMenu, NPageHeader, NSwitch, NText} from "naive-ui";
-import logoImg from '../assets/logo.png'
 import {Component, h, reactive, ref} from "vue";
 import {HomeSharp, LogoGithub} from "@vicons/ionicons5";
 
