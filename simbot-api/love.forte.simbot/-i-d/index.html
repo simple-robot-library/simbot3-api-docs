@@ -1,0 +1,314 @@
+<!doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>ID</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../";</script>    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/jetbrains-mono.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<body>
+<div class="navigation-wrapper" id="navigation-wrapper">
+    <div id="leftToggler"><span class="icon-toggler"></span></div>
+    <div class="library-name">
+<a href="../../../index.html">
+<span>Simple Robot</span>            </a>    </div>
+    <div>3.0.0-RC.3
+    </div>
+    <div class="pull-right d-flex">
+        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+    </div>
+</div>
+<div id="container">
+    <div id="leftColumn">
+        <div id="sideMenu"></div>
+    </div>
+    <div id="main">
+<div class="main-content" id="content" pageids="simbot-api::love.forte.simbot/ID///PointingToDeclaration//-341312757">
+  <div class="breadcrumbs"><a href="../../index.html">simbot-api</a><span class="delimiter">/</span><a href="../index.html">love.forte.simbot</a><span class="delimiter">/</span><span class="current">ID</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>ID</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-core/kotlinx.serialization/-serializable/index.html"><span class="token annotation builtin">Serializable</span></a></div></div><span class="token keyword">sealed </span><span class="token keyword">class </span><a href="index.html">ID</a> : <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-comparable/index.html">Comparable</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html">ID</a><span class="token operator">&gt; </span>, <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-cloneable/index.html">Cloneable</a><span class="clearfix"><span class="floating-right">(<a href="https://github.com/simple-robot/simpler-robot/tree/v3-main/simbot-api/src/main/kotlin/love/forte/simbot/ID.kt#L39">source</a>)</span></span></div><p class="paragraph">唯一标识 <a href="index.html">ID</a>.</p><p class="paragraph">一个 <a href="index.html">ID</a>，其代表了两种数据：ID的类型，以及ID具体的值。</p><p class="paragraph">假若一个 <a href="index.html">ID</a> 中实际存储的值仅有一个，则它的 <a href="to-string.html">toString</a> 应当就是它的字面值。 通常情况下 <a href="index.html">ID</a> 之间的相等判断即通过字面值进行。</p><p class="paragraph"><a href="index.html">ID</a> 是 <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-comparable/index.html">可排序的</a>。</p><h3 class=""> 序列化</h3><p class="paragraph"><a href="index.html">ID</a> 支持序列化, 且 <a href="index.html">ID</a> 的序列化器应当都是一个 <code class="lang-kotlin">primitive</code> 序列化器。 <a href="index.html">ID</a> 序列化后都不应是结构体, 而是一个值类型。</p><p class="paragraph">例如：</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">@Serializable<br>data class User(val id: LongID, val name: String)<br><br>val json = Json.encodeToString(User(213L.ID, "ForteScarlet"))<br>// json: {"id": 213, "name": "ForteScarlet"}</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">而由于 <a href="index.html">ID</a> 的最终序列化结果为值类型，因此在序列化是时使用 <a href="index.html">ID</a>，需要使用一个具体的最终类型。</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">// 直接使用具体的ID类型，比如LongID<br>@Serializable<br>data class User(val id: LongID)</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">在某个可序列化类型中，对于一个ID字段，如果你希望能够保证它能够完全的正反序列化，并且你只关心它的字面量而不关系其他方面， 那么你可以考虑将此字段的序列化器标记为 <a href="-as-char-sequence-i-d-serializer/index.html">ID.AsCharSequenceIDSerializer</a>.</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">@Serializable<br>data class Example(<br>     @Serializable(ID.AsCharSequenceIDSerializer::class)<br>     val id: ID,<br>     val name: String<br>)</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">此序列化其会永远将ID视为字符串作为序列化目标。</p><h3 class=""> 构造</h3><p class="paragraph"><a href="index.html">ID</a> 提供了名为 <code class="lang-kotlin">ID</code> 的后缀扩展属性来将某个值构造为 <a href="index.html">ID</a> 类型。</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">123.ID // IntID<br>'b'.ID // IntID<br>123L.ID // LongID<br>123.4.ID // DoubleID<br>123.4F.ID // FloatID<br>"str".ID // CharSequenceID</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">Java使用者可以通过 <code class="lang-kotlin">Identifies.ID(...)</code> 来进行与上述类似的操作。</p><div class="sample-container"><pre><code class="block lang-java" theme="idea">IntID          intId    = Identifies.ID(123);<br>IntID          charId   = Identifies.ID('b');<br>LongID         longId   = Identifies.ID(123L);<br>DoubleID       doubleId = Identifies.ID(123.4);<br>FloatID        floatId  = Identifies.ID(123.4F);<br>CharSequenceID strId    = Identifies.ID("str");</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">更多参考 <a href=".html">Int.ID</a> <a href=".html">Char.ID</a> <a href=".html">FloatID</a></p><h3 class=""> 随机ID</h3><p class="paragraph">如果你需要获取一个随机的ID，可以考虑使用 <a href="../random-i-d.html">randomID</a>. <a href="../random-i-d.html">randomID</a> 内使用 <a href="../../love.forte.simbot.utils/-random-i-d-util/random-i-d.html">RandomIDUtil.randomID</a> 生成一个 <i>类UUID风格</i> 的随机字符串并包装为 <a href="index.html">ID</a> 并返回.</p><h3 class=""> 具体类型</h3><p class="paragraph"><a href="index.html">ID</a> 是一个抽象类型，有关其他具体实现类型参阅它们各自的说明。</p><span class="kdoc-tag"><h4 class="">Author</h4><p class="paragraph">ForteScarlet</p></span></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Types">Types</button><button class="section-tab" data-togglable="Constructors">Constructors</button><button class="section-tab" data-togglable="Functions">Functions</button><button class="section-tab" data-togglable="Extensions">Extensions</button><button class="section-tab" data-togglable="See also">See also</button><button class="section-tab" data-togglable="Inheritors">Inheritors</button></div>
+    <div class="tabs-section-body">
+      <h4 class="">See also</h4>
+      <div data-togglable="See also">
+        <div class="platform-hinted WithExtraAttributes" data-platform-hinted="data-platform-hinted" data-togglable="See also"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/main"><div data-togglable="See also"><div class="table" data-togglable="See also"><div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><a href="../-char-sequence-i-d/index.html"><span>Char</span><wbr><span>Sequence</span><wbr><span><span>ID</span></span></a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><a href="../-numerical-i-d/index.html"><span>Numerical</span><wbr><span><span>ID</span></span></a></div></span></div><div></div></div></div></div></div></div></div>
+      </div>
+      <h2 class="tabbedcontent">Constructors</h2>
+      <div class="table" data-togglable="Constructors"><a data-name="-1359574531%2FConstructors%2F-341312757" anchor-label="ID" id="-1359574531%2FConstructors%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue TabbedContent">
+            <div class=""><span class="inline-flex">
+                <div><a href="-i-d.html"><span><span>ID</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1359574531%2FConstructors%2F-341312757"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">protected </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="-i-d.html"><span class="token function">ID</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="">Types</h2>
+      <div class="table" data-togglable="Types"><a data-name="1495835735%2FClasslikes%2F-341312757" anchor-label="AsCharSequenceIDSerializer" id="1495835735%2FClasslikes%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-as-char-sequence-i-d-serializer/index.html"><span>As</span><wbr><span>Char</span><wbr><span>Sequence</span><wbr><span><span>IDSerializer</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1495835735%2FClasslikes%2F-341312757"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-as-char-sequence-i-d-serializer/index.html">AsCharSequenceIDSerializer</a> : <a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-core/kotlinx.serialization/-k-serializer/index.html">KSerializer</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html">ID</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">将一个 <a href="index.html">ID</a> 视为一个 <a href="../-char-sequence-i-d/index.html">CharSequenceID</a> 进行序列化。</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1430967895%2FClasslikes%2F-341312757" anchor-label="Companion" id="-1430967895%2FClasslikes%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-companion/index.html"><span><span>Companion</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1430967895%2FClasslikes%2F-341312757"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-companion/index.html">Companion</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="">Functions</h2>
+      <div class="table" data-togglable="Functions"><a data-name="-756211898%2FFunctions%2F-341312757" anchor-label="clone" id="-756211898%2FFunctions%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-arbitrary-numerical-i-d/index.html#-756211898%2FFunctions%2F-341312757"><span><span>clone</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-756211898%2FFunctions%2F-341312757"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">protected </span><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="../-arbitrary-numerical-i-d/index.html#-756211898%2FFunctions%2F-341312757"><span class="token function">clone</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1941481031%2FFunctions%2F-341312757" anchor-label="compareTo" id="-1941481031%2FFunctions%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="compare-to.html"><span>compare</span><wbr><span><span>To</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1941481031%2FFunctions%2F-341312757"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">operator override </span><span class="token keyword">fun </span><a href="compare-to.html"><span class="token function">compareTo</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">other<span class="token operator">: </span><a href="index.html">ID</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></div><div class="brief "><p class="paragraph">ID之间应当是可以排序的。</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1092193499%2FFunctions%2F-341312757" anchor-label="doEquals" id="-1092193499%2FFunctions%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="do-equals.html"><span>do</span><wbr><span><span>Equals</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1092193499%2FFunctions%2F-341312757"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">protected </span><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="do-equals.html"><span class="token function">doEquals</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">other<span class="token operator">: </span><a href="index.html">ID</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1019548663%2FFunctions%2F-341312757" anchor-label="equals" id="-1019548663%2FFunctions%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="equals.html"><span><span>equals</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1019548663%2FFunctions%2F-341312757"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">operator override </span><span class="token keyword">fun </span><a href="equals.html"><span class="token function">equals</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">other<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1585258819%2FFunctions%2F-341312757" anchor-label="hashCode" id="-1585258819%2FFunctions%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="hash-code.html"><span>hash</span><wbr><span><span>Code</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1585258819%2FFunctions%2F-341312757"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="hash-code.html"><span class="token function">hashCode</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1763424884%2FFunctions%2F-341312757" anchor-label="toString" id="-1763424884%2FFunctions%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="to-string.html"><span>to</span><wbr><span><span>String</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1763424884%2FFunctions%2F-341312757"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="to-string.html"><span class="token function">toString</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph"><a href="index.html">ID</a> 的 <a href="to-string.html">toString</a> 结果必须是当前ID所对应的字面值。</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="">Inheritors</h2>
+      <div class="table" data-togglable="Inheritors"><a data-name="-1383141043%2FInheritors%2F-341312757" anchor-label="NumericalID" id="-1383141043%2FInheritors%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-numerical-i-d/index.html">NumericalID</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1383141043%2FInheritors%2F-341312757"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div></div>
+          </div>
+        </div>
+<a data-name="-1916095312%2FInheritors%2F-341312757" anchor-label="CharSequenceID" id="-1916095312%2FInheritors%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-char-sequence-i-d/index.html">CharSequenceID</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1916095312%2FInheritors%2F-341312757"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div></div>
+          </div>
+        </div>
+      </div>
+      <h2 class="tabbedcontent">Extensions</h2>
+      <div class="table" data-togglable="Extensions"><a data-name="-675436905%2FExtensions%2F-341312757" anchor-label="literal" id="-675436905%2FExtensions%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../literal.html"><span><span>literal</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-675436905%2FExtensions%2F-341312757"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="index.html">ID</a><span class="token punctuation">.</span><a href="../literal.html">literal</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph"><a href="index.html">ID</a>的字面值。等同于 <a href="to-string.html">ID.toString</a>.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1830846375%2FExtensions%2F-341312757" anchor-label="toCharSequenceID" id="-1830846375%2FExtensions%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../to-char-sequence-i-d.html"><span>to</span><wbr><span>Char</span><wbr><span>Sequence</span><wbr><span><span>ID</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1830846375%2FExtensions%2F-341312757"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html">ID</a><span class="token punctuation">.</span><a href="../to-char-sequence-i-d.html"><span class="token function">toCharSequenceID</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-char-sequence-i-d/index.html">CharSequenceID</a></div><div class="brief "><p class="paragraph">所有的ID都拥有转化为字符序列ID的能力。</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1979253004%2FExtensions%2F-341312757" anchor-label="tryToLong" id="-1979253004%2FExtensions%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../try-to-long.html"><span>try</span><wbr><span>To</span><wbr><span><span>Long</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1979253004%2FExtensions%2F-341312757"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html">ID</a><span class="token punctuation">.</span><a href="../try-to-long.html"><span class="token function">tryToLong</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a></div><div class="brief "><p class="paragraph">尝试将当前ID转化为一个 <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a>。</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1717060153%2FExtensions%2F-341312757" anchor-label="tryToLongID" id="1717060153%2FExtensions%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../try-to-long-i-d.html"><span>try</span><wbr><span>To</span><wbr><span>Long</span><wbr><span><span>ID</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1717060153%2FExtensions%2F-341312757"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html">ID</a><span class="token punctuation">.</span><a href="../try-to-long-i-d.html"><span class="token function">tryToLongID</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-long-i-d/index.html">LongID</a></div><div class="brief "><p class="paragraph">尝试将当前ID转为一个 <a href="../-long-i-d/index.html">LongID</a>.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="366369326%2FExtensions%2F-341312757" anchor-label="tryToNumericalID" id="366369326%2FExtensions%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../try-to-numerical-i-d.html"><span>try</span><wbr><span>To</span><wbr><span>Numerical</span><wbr><span><span>ID</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="366369326%2FExtensions%2F-341312757"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-overloads/index.html"><span class="token annotation builtin">JvmOverloads</span></a></div></div><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html">ID</a><span class="token punctuation">.</span><a href="../try-to-numerical-i-d.html"><span class="token function">tryToNumericalID</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">intAsLong<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">true</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-numerical-i-d/index.html">NumericalID</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">尝试将当前ID转为一个 <a href="../-numerical-i-d/index.html">NumericalID</a>。</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2023 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+    </div>
+</div>
+
+</body></html>
+

@@ -1,0 +1,134 @@
+<!doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>ConsoleSimbotLoggerProcessor</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../";</script>    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/jetbrains-mono.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<body>
+<div class="navigation-wrapper" id="navigation-wrapper">
+    <div id="leftToggler"><span class="icon-toggler"></span></div>
+    <div class="library-name">
+<a href="../../../index.html">
+<span>Simple Robot</span>            </a>    </div>
+    <div>3.0.0-RC.3
+    </div>
+    <div class="pull-right d-flex">
+        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+    </div>
+</div>
+<div id="container">
+    <div id="leftColumn">
+        <div id="sideMenu"></div>
+    </div>
+    <div id="main">
+<div class="main-content" id="content" pageids="simbot-logger-slf4j-impl::love.forte.simbot.logger.slf4j/ConsoleSimbotLoggerProcessor///PointingToDeclaration//900705374">
+  <div class="breadcrumbs"><a href="../../index.html">simbot-logger-slf4j-impl</a><span class="delimiter">/</span><a href="../index.html">love.forte.simbot.logger.slf4j</a><span class="delimiter">/</span><span class="current">ConsoleSimbotLoggerProcessor</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Console</span><wbr><span>Simbot</span><wbr><span>Logger</span><wbr><span><span>Processor</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="index.html">ConsoleSimbotLoggerProcessor</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">configuration<span class="token operator">: </span><a href="../-simbot-logger-configuration/index.html">SimbotLoggerConfiguration</a></span></span><span class="token punctuation">)</span> : <a href="../-simbot-logger-processor/index.html">SimbotLoggerProcessor</a><span class="clearfix"><span class="floating-right">(<a href="https://github.com/simple-robot/simpler-robot/tree/v3-main/simbot-logger-slf4j-impl/src/main/kotlin/love/forte/simbot/logger/slf4j/ConsoleSimbotLoggerProcessor.kt#L25">source</a>)</span></span></div><p class="paragraph">将日志直接打印到控制台上的处理器。 当参数 <a href="../../../simbot-logger-slf4j-impl/love.forte.simbot.logger.slf4j/-console-simbot-logger-processor/default-level.html">defaultLevel</a> 未指定日志等级的时候，会尝试加载系统参数 <a href="../../../simbot-logger-slf4j-impl/love.forte.simbot.logger.slf4j/-console-simbot-logger-processor/-companion/-s-i-m-b-o-t_-l-e-v-e-l_-p-r-o-p-e-r-t-y_-k-e-y.html"><code class="lang-kotlin">simbot.logger.level</code></a>, 如果系统参数也找不到，则默认为 love.forte.simbot.logger.LogLevel.INFO 级别。</p><p class="paragraph">你可以通过JVM参数 <a href="../../../simbot-logger-slf4j-impl/love.forte.simbot.logger.slf4j/-console-simbot-logger-processor/-companion/-s-i-m-b-o-t_-l-e-v-e-l_-p-r-o-p-e-r-t-y_-k-e-y.html"><code class="lang-kotlin">simbot.logger.level</code></a> 来指定一个控制台的日志等级而不需要直接提供一个新的 <a href="../-simbot-logger-processors-factory/index.html">SimbotLoggerProcessorsFactory</a> 实现, 例如</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">-Dsimbot.logger.level=DEBUG</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Types">Types</button><button class="section-tab" data-togglable="Constructors">Constructors</button><button class="section-tab" data-togglable="Functions">Functions</button></div>
+    <div class="tabs-section-body">
+      <h2 class="tabbedcontent">Constructors</h2>
+      <div class="table" data-togglable="Constructors"><a data-name="-1794658289%2FConstructors%2F900705374" anchor-label="ConsoleSimbotLoggerProcessor" id="-1794658289%2FConstructors%2F900705374" data-filterable-set=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main" data-filterable-set=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue TabbedContent">
+            <div class=""><span class="inline-flex">
+                <div><a href="-console-simbot-logger-processor.html"><span>Console</span><wbr><span>Simbot</span><wbr><span>Logger</span><wbr><span><span>Processor</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1794658289%2FConstructors%2F900705374"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="-console-simbot-logger-processor.html"><span class="token function">ConsoleSimbotLoggerProcessor</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">configuration<span class="token operator">: </span><a href="../-simbot-logger-configuration/index.html">SimbotLoggerConfiguration</a></span></span><span class="token punctuation">)</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="">Types</h2>
+      <div class="table" data-togglable="Types"><a data-name="-1716342468%2FClasslikes%2F900705374" anchor-label="Companion" id="-1716342468%2FClasslikes%2F900705374" data-filterable-set=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main" data-filterable-set=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-companion/index.html"><span><span>Companion</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1716342468%2FClasslikes%2F900705374"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-companion/index.html">Companion</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="">Functions</h2>
+      <div class="table" data-togglable="Functions"><a data-name="485602235%2FFunctions%2F900705374" anchor-label="doHandle" id="485602235%2FFunctions%2F900705374" data-filterable-set=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main" data-filterable-set=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="do-handle.html"><span>do</span><wbr><span><span>Handle</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="485602235%2FFunctions%2F900705374"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="do-handle.html"><span class="token function">doHandle</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">info<span class="token operator">: </span><a href="../-log-info/index.html">LogInfo</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">处理日志。 <a href="do-handle.html">doHandle</a> 是当 <a href="../-simbot-logger-factory/index.html">SimbotLoggerFactory</a> 中的异步处理通道尚未关闭的时候进行的处理函数。</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="2015431224%2FFunctions%2F900705374" anchor-label="isLevelEnabled" id="2015431224%2FFunctions%2F900705374" data-filterable-set=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main" data-filterable-set=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="is-level-enabled.html"><span>is</span><wbr><span>Level</span><wbr><span><span>Enabled</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2015431224%2FFunctions%2F900705374"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="is-level-enabled.html"><span class="token function">isLevelEnabled</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">name<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">level<span class="token operator">: </span><a href="../../../simbot-logger/love.forte.simbot.logger/-log-level/index.html">LogLevel</a><span class="token punctuation">, </span></span><span class="parameter ">marker<span class="token operator">: </span><a href="https://www.slf4j.org/apidocs/org/slf4j/Marker.html">Marker</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">检测日志等级是否可用。</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2023 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+    </div>
+</div>
+
+</body></html>
+
