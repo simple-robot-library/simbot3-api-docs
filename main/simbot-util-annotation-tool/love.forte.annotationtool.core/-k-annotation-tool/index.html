@@ -1,0 +1,241 @@
+<!doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>KAnnotationTool</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../";</script>    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/jetbrains-mono.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<body>
+<div class="navigation-wrapper" id="navigation-wrapper">
+    <div id="leftToggler"><span class="icon-toggler"></span></div>
+    <div class="library-name">
+<a href="../../../index.html">
+<span>Simple Robot</span>            </a>    </div>
+    <div>3.0.0-RC.3
+    </div>
+    <div class="pull-right d-flex">
+        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+    </div>
+</div>
+<div id="container">
+    <div id="leftColumn">
+        <div id="sideMenu"></div>
+    </div>
+    <div id="main">
+<div class="main-content" id="content" pageids="simbot-util-annotation-tool::love.forte.annotationtool.core/KAnnotationTool///PointingToDeclaration//-2004394158">
+  <div class="breadcrumbs"><a href="../../index.html">simbot-util-annotation-tool</a><span class="delimiter">/</span><a href="../index.html">love.forte.annotationtool.core</a><span class="delimiter">/</span><span class="current">KAnnotationTool</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>KAnnotation</span><wbr><span><span>Tool</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-util-annotation-tool:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="index.html">KAnnotationTool</a><span class="clearfix"><span class="floating-right">(<a href="https://github.com/simple-robot/simpler-robot/tree/v3-main/simbot-util-annotation-tool/src/main/kotlin/love/forte/annotationtool/core/KAnnotationTool.kt#L19">source</a>)</span></span></div><p class="paragraph">KAnnotation tool interface.</p><p class="paragraph">The KAnnotation tool interface provides some abstract methods to define some operations for annotations, such as .getAnnotation, .getProperties or <a href="create-annotation-instance.html">directly constructing an annotation instance</a>, etc.</p><p class="paragraph">You can implement this interface any way you like, but of course, the library provides a default implementation, as well as an implementation of the instance provided by <a href="index.html">KAnnotationTool</a>: <a href="../../../simbot-util-annotation-tool/love.forte.annotationtool.core/-simple-k-annotation-tool/index.html">SimpleKAnnotationTool</a>.</p><span class="kdoc-tag"><h4 class="">Author</h4><p class="paragraph">ForteScarlet</p></span></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Functions">Functions</button><button class="section-tab" data-togglable="Extensions">Extensions</button><button class="section-tab" data-togglable="See also">See also</button></div>
+    <div class="tabs-section-body">
+      <h4 class="">See also</h4>
+      <div data-togglable="See also">
+        <div class="platform-hinted WithExtraAttributes" data-platform-hinted="data-platform-hinted" data-togglable="See also"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-util-annotation-tool:dokkaHtmlPartial/main"><div data-togglable="See also"><div class="table" data-togglable="See also"><div class="table-row" data-filterable-current=":simbot-util-annotation-tool:dokkaHtmlPartial/main" data-filterable-set=":simbot-util-annotation-tool:dokkaHtmlPartial/main"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><a href="../../../simbot-util-annotation-tool/love.forte.annotationtool.core/-simple-k-annotation-tool/index.html"><span>Simple</span><wbr><span>KAnnotation</span><wbr><span><span>Tool</span></span></a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":simbot-util-annotation-tool:dokkaHtmlPartial/main" data-filterable-set=":simbot-util-annotation-tool:dokkaHtmlPartial/main"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><a href="index.html"><span>KAnnotation</span><wbr><span><span>Tool</span></span></a></div></span></div><div></div></div></div></div></div></div></div>
+      </div>
+      <h2 class="">Functions</h2>
+      <div class="table" data-togglable="Functions"><a data-name="-576363246%2FFunctions%2F-2004394158" anchor-label="clearCache" id="-576363246%2FFunctions%2F-2004394158" data-filterable-set=":simbot-util-annotation-tool:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simbot-util-annotation-tool:dokkaHtmlPartial/main" data-filterable-set=":simbot-util-annotation-tool:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="clear-cache.html"><span>clear</span><wbr><span><span>Cache</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-576363246%2FFunctions%2F-2004394158"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-util-annotation-tool:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="clear-cache.html"><span class="token function">clearCache</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Clean internal annotation instance cache. (if exists.)</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1334848270%2FFunctions%2F-2004394158" anchor-label="createAnnotationInstance" id="1334848270%2FFunctions%2F-2004394158" data-filterable-set=":simbot-util-annotation-tool:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simbot-util-annotation-tool:dokkaHtmlPartial/main" data-filterable-set=":simbot-util-annotation-tool:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="create-annotation-instance.html"><span>create</span><wbr><span>Annotation</span><wbr><span><span>Instance</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1334848270%2FFunctions%2F-2004394158"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-util-annotation-tool:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="create-annotation-instance.html">A</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-annotation/index.html">Annotation</a><span class="token operator">&gt; </span><a href="create-annotation-instance.html"><span class="token function">createAnnotationInstance</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">annotationType<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-class/index.html">KClass</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="create-annotation-instance.html">A</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="create-annotation-instance.html">A</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="create-annotation-instance.html">A</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-annotation/index.html">Annotation</a><span class="token operator">&gt; </span><a href="create-annotation-instance.html"><span class="token function">createAnnotationInstance</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">annotationType<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-class/index.html">KClass</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="create-annotation-instance.html">A</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">properties<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="create-annotation-instance.html">A</a></div><div class="brief "><p class="paragraph">Create an annotation proxy instance.</p></div><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="create-annotation-instance.html">A</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-annotation/index.html">Annotation</a><span class="token operator">&gt; </span><a href="create-annotation-instance.html"><span class="token function">createAnnotationInstance</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">annotationType<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-class/index.html">KClass</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="create-annotation-instance.html">A</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">properties<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">base<span class="token operator">: </span><a href="create-annotation-instance.html">A</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="create-annotation-instance.html">A</a></div><div class="brief "><p class="paragraph">Create an annotation instance.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1325754435%2FFunctions%2F-2004394158" anchor-label="getAnnotation" id="1325754435%2FFunctions%2F-2004394158" data-filterable-set=":simbot-util-annotation-tool:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simbot-util-annotation-tool:dokkaHtmlPartial/main" data-filterable-set=":simbot-util-annotation-tool:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="get-annotation.html"><span>get</span><wbr><span><span>Annotation</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1325754435%2FFunctions%2F-2004394158"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-util-annotation-tool:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="get-annotation.html">A</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-annotation/index.html">Annotation</a><span class="token operator">&gt; </span><a href="get-annotation.html"><span class="token function">getAnnotation</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">fromElement<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-annotated-element/index.html">KAnnotatedElement</a><span class="token punctuation">, </span></span><span class="parameter ">annotationType<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-class/index.html">KClass</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="get-annotation.html">A</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="get-annotation.html">A</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Get annotation instance fromElement <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-annotated-element/index.html">KAnnotatedElement</a>. e.g. fromElement <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-function/index.html">Function</a> or <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-class/index.html">KClass</a>.</p></div><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="get-annotation.html">A</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-annotation/index.html">Annotation</a><span class="token operator">&gt; </span><a href="get-annotation.html"><span class="token function">getAnnotation</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">fromElement<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-annotated-element/index.html">KAnnotatedElement</a><span class="token punctuation">, </span></span><span class="parameter ">annotationType<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-class/index.html">KClass</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="get-annotation.html">A</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">excludes<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-set/index.html">Set</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="get-annotation.html">A</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Get annotation instance from <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-annotated-element/index.html">KAnnotatedElement</a>. e.g. from <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-function/index.html">Function</a> or <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-class/index.html">KClass</a>.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1068524663%2FFunctions%2F-2004394158" anchor-label="getAnnotationPropertyTypes" id="1068524663%2FFunctions%2F-2004394158" data-filterable-set=":simbot-util-annotation-tool:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simbot-util-annotation-tool:dokkaHtmlPartial/main" data-filterable-set=":simbot-util-annotation-tool:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="get-annotation-property-types.html"><span>get</span><wbr><span>Annotation</span><wbr><span>Property</span><wbr><span><span>Types</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1068524663%2FFunctions%2F-2004394158"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-util-annotation-tool:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="get-annotation-property-types.html"><span class="token function">getAnnotationPropertyTypes</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">annotationType<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-class/index.html">KClass</a><span class="token operator">&lt;</span><span class="token keyword">out </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-annotation/index.html">Annotation</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-type/index.html">KType</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Get annotation type's value types.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-214924601%2FFunctions%2F-2004394158" anchor-label="getAnnotations" id="-214924601%2FFunctions%2F-2004394158" data-filterable-set=":simbot-util-annotation-tool:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simbot-util-annotation-tool:dokkaHtmlPartial/main" data-filterable-set=":simbot-util-annotation-tool:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="get-annotations.html"><span>get</span><wbr><span><span>Annotations</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-214924601%2FFunctions%2F-2004394158"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-util-annotation-tool:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="get-annotations.html">A</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-annotation/index.html">Annotation</a><span class="token operator">&gt; </span><a href="get-annotations.html"><span class="token function">getAnnotations</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">element<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-annotated-element/index.html">KAnnotatedElement</a><span class="token punctuation">, </span></span><span class="parameter ">annotationType<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-class/index.html">KClass</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="get-annotations.html">A</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="get-annotations.html">A</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Get a repeatable annotation instance from <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-annotated-element/index.html">KAnnotatedElement</a>. e.g. from <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-function/index.html">Function</a> or <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-class/index.html">KClass</a>.</p></div><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="get-annotations.html">A</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-annotation/index.html">Annotation</a><span class="token operator">&gt; </span><a href="get-annotations.html"><span class="token function">getAnnotations</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">element<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-annotated-element/index.html">KAnnotatedElement</a><span class="token punctuation">, </span></span><span class="parameter ">annotationType<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-class/index.html">KClass</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="get-annotations.html">A</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">excludes<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-set/index.html">Set</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="get-annotations.html">A</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Get annotation instance list from <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-annotated-element/index.html">KAnnotatedElement</a>.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-566427306%2FFunctions%2F-2004394158" anchor-label="getAnnotationValues" id="-566427306%2FFunctions%2F-2004394158" data-filterable-set=":simbot-util-annotation-tool:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simbot-util-annotation-tool:dokkaHtmlPartial/main" data-filterable-set=":simbot-util-annotation-tool:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="get-annotation-values.html"><span>get</span><wbr><span>Annotation</span><wbr><span><span>Values</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-566427306%2FFunctions%2F-2004394158"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-util-annotation-tool:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="get-annotation-values.html">A</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-annotation/index.html">Annotation</a><span class="token operator">&gt; </span><a href="get-annotation-values.html"><span class="token function">getAnnotationValues</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">annotation<span class="token operator">: </span><a href="get-annotation-values.html">A</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Get annotation values.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="275932636%2FFunctions%2F-2004394158" anchor-label="getProperties" id="275932636%2FFunctions%2F-2004394158" data-filterable-set=":simbot-util-annotation-tool:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simbot-util-annotation-tool:dokkaHtmlPartial/main" data-filterable-set=":simbot-util-annotation-tool:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="get-properties.html"><span>get</span><wbr><span><span>Properties</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="275932636%2FFunctions%2F-2004394158"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-util-annotation-tool:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="get-properties.html"><span class="token function"><strike>getProperties</strike></span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">annotation<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-annotation/index.html">Annotation</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-set/index.html">Set</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="58262108%2FFunctions%2F-2004394158" anchor-label="getPropertyNames" id="58262108%2FFunctions%2F-2004394158" data-filterable-set=":simbot-util-annotation-tool:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simbot-util-annotation-tool:dokkaHtmlPartial/main" data-filterable-set=":simbot-util-annotation-tool:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="get-property-names.html"><span>get</span><wbr><span>Property</span><wbr><span><span>Names</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="58262108%2FFunctions%2F-2004394158"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-util-annotation-tool:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="get-property-names.html"><span class="token function">getPropertyNames</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">annotation<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-annotation/index.html">Annotation</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-set/index.html">Set</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Get annotation property names.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="tabbedcontent">Extensions</h2>
+      <div class="table" data-togglable="Extensions"><a data-name="127468245%2FExtensions%2F-2004394158" anchor-label="createAnnotation" id="127468245%2FExtensions%2F-2004394158" data-filterable-set=":simbot-util-annotation-tool:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simbot-util-annotation-tool:dokkaHtmlPartial/main" data-filterable-set=":simbot-util-annotation-tool:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../create-annotation.html"><span>create</span><wbr><span><span>Annotation</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="127468245%2FExtensions%2F-2004394158"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-util-annotation-tool:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../create-annotation.html">A</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-annotation/index.html">Annotation</a><span class="token operator">&gt; </span><a href="index.html">KAnnotationTool</a><span class="token punctuation">.</span><a href="../create-annotation.html"><span class="token function">createAnnotation</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">properties<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt;</span><span class="token operator"> = </span>emptyMap()<span class="token punctuation">, </span></span><span class="parameter ">base<span class="token operator">: </span><a href="../create-annotation.html">A</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../create-annotation.html">A</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1289529692%2FExtensions%2F-2004394158" anchor-label="getAnnotation" id="1289529692%2FExtensions%2F-2004394158" data-filterable-set=":simbot-util-annotation-tool:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simbot-util-annotation-tool:dokkaHtmlPartial/main" data-filterable-set=":simbot-util-annotation-tool:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../get-annotation.html"><span>get</span><wbr><span><span>Annotation</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1289529692%2FExtensions%2F-2004394158"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-util-annotation-tool:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../get-annotation.html">A</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-annotation/index.html">Annotation</a><span class="token operator">&gt; </span><a href="index.html">KAnnotationTool</a><span class="token punctuation">.</span><a href="../get-annotation.html"><span class="token function">getAnnotation</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">element<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-annotated-element/index.html">KAnnotatedElement</a><span class="token punctuation">, </span></span><span class="parameter ">exclude<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-set/index.html">Set</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span><span class="token operator"> = </span>emptySet()</span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../get-annotation.html">A</a><span class="token operator">?</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1323288391%2FExtensions%2F-2004394158" anchor-label="getAnnotations" id="1323288391%2FExtensions%2F-2004394158" data-filterable-set=":simbot-util-annotation-tool:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simbot-util-annotation-tool:dokkaHtmlPartial/main" data-filterable-set=":simbot-util-annotation-tool:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../get-annotations.html"><span>get</span><wbr><span><span>Annotations</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1323288391%2FExtensions%2F-2004394158"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-util-annotation-tool:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../get-annotations.html">A</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-annotation/index.html">Annotation</a><span class="token operator">&gt; </span><a href="index.html">KAnnotationTool</a><span class="token punctuation">.</span><a href="../get-annotations.html"><span class="token function">getAnnotations</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">element<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-annotated-element/index.html">KAnnotatedElement</a><span class="token punctuation">, </span></span><span class="parameter ">exclude<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-set/index.html">Set</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span><span class="token operator"> = </span>emptySet()</span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../get-annotations.html">A</a><span class="token operator">&gt;</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2023 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+    </div>
+</div>
+
+</body></html>
+

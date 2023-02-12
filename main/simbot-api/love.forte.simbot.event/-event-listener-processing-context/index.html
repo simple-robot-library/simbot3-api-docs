@@ -1,0 +1,404 @@
+<!doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>EventListenerProcessingContext</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../";</script>    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/jetbrains-mono.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<body>
+<div class="navigation-wrapper" id="navigation-wrapper">
+    <div id="leftToggler"><span class="icon-toggler"></span></div>
+    <div class="library-name">
+<a href="../../../index.html">
+<span>Simple Robot</span>            </a>    </div>
+    <div>3.0.0-RC.3
+    </div>
+    <div class="pull-right d-flex">
+        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+    </div>
+</div>
+<div id="container">
+    <div id="leftColumn">
+        <div id="sideMenu"></div>
+    </div>
+    <div id="main">
+<div class="main-content" id="content" pageids="simbot-api::love.forte.simbot.event/EventListenerProcessingContext///PointingToDeclaration//-341312757">
+  <div class="breadcrumbs"><a href="../../index.html">simbot-api</a><span class="delimiter">/</span><a href="../index.html">love.forte.simbot.event</a><span class="delimiter">/</span><span class="current">EventListenerProcessingContext</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Event</span><wbr><span>Listener</span><wbr><span>Processing</span><wbr><span><span>Context</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="index.html">EventListenerProcessingContext</a> : <a href="../-event-processing-context/index.html">EventProcessingContext</a><span class="clearfix"><span class="floating-right">(<a href="https://github.com/simple-robot/simpler-robot/tree/v3-main/simbot-api/src/main/kotlin/love/forte/simbot/event/EventProcessingContext.kt#L97">source</a>)</span></span></div><p class="paragraph">每一个 <a href="../-event-listener/index.html">EventListener</a> 在事件处理流程中所对应的上下文类型。</p><p class="paragraph">相比较于 <a href="../-event-processing-context/index.html">EventProcessingContext</a>, <a href="index.html">EventListenerProcessingContext</a> 允许监听函数在执行流程中获取当前（将要）被执行的监听函数自身 <a href="listener.html">listener</a>。</p></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Functions">Functions</button><button class="section-tab" data-togglable="Properties">Properties</button><button class="section-tab" data-togglable="Extensions">Extensions</button></div>
+    <div class="tabs-section-body">
+      <h2 class="">Functions</h2>
+      <div class="table" data-togglable="Functions"><a data-name="1794654390%2FFunctions%2F-341312757" anchor-label="computeIfAbsent" id="1794654390%2FFunctions%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../../love.forte.simbot/-mutable-attribute-map/compute-if-absent.html"><span>compute</span><wbr><span>If</span><wbr><span><span>Absent</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1794654390%2FFunctions%2F-341312757"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../love.forte.simbot/-mutable-attribute-map/compute-if-absent.html">T</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="../../love.forte.simbot/-mutable-attribute-map/compute-if-absent.html"><span class="token function">computeIfAbsent</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">attribute<span class="token operator">: </span><a href="../../love.forte.simbot/-attribute/index.html">Attribute</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../love.forte.simbot/-mutable-attribute-map/compute-if-absent.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">mappingFunction<span class="token operator">: </span><span class="token punctuation">(</span><span class="token keyword"></span><a href="../../love.forte.simbot/-attribute/index.html">Attribute</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../love.forte.simbot/-mutable-attribute-map/compute-if-absent.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="../../love.forte.simbot/-mutable-attribute-map/compute-if-absent.html">T</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../love.forte.simbot/-mutable-attribute-map/compute-if-absent.html">T</a></div><div class="brief "><p class="paragraph">如果不存在，则计算并存入。</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-497039669%2FFunctions%2F-341312757" anchor-label="computeIfPresent" id="-497039669%2FFunctions%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../../love.forte.simbot/-mutable-attribute-map/compute-if-present.html"><span>compute</span><wbr><span>If</span><wbr><span><span>Present</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-497039669%2FFunctions%2F-341312757"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../love.forte.simbot/-mutable-attribute-map/compute-if-present.html">T</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="../../love.forte.simbot/-mutable-attribute-map/compute-if-present.html"><span class="token function">computeIfPresent</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">attribute<span class="token operator">: </span><a href="../../love.forte.simbot/-attribute/index.html">Attribute</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../love.forte.simbot/-mutable-attribute-map/compute-if-present.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">remappingFunction<span class="token operator">: </span><span class="token punctuation">(</span><span class="token keyword"></span><a href="../../love.forte.simbot/-attribute/index.html">Attribute</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../love.forte.simbot/-mutable-attribute-map/compute-if-present.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">, </span><span class="token keyword"></span><a href="../../love.forte.simbot/-mutable-attribute-map/compute-if-present.html">T</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="../../love.forte.simbot/-mutable-attribute-map/compute-if-present.html">T</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../love.forte.simbot/-mutable-attribute-map/compute-if-present.html">T</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">如果存在，则计算。如果计算函数中返回null，则为移除对应结果。</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1311197031%2FFunctions%2F-341312757" anchor-label="contains" id="1311197031%2FFunctions%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../../love.forte.simbot/-attribute-map/contains.html"><span><span>contains</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1311197031%2FFunctions%2F-341312757"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">operator </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../love.forte.simbot/-attribute-map/contains.html">T</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="../../love.forte.simbot/-attribute-map/contains.html"><span class="token function">contains</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">attribute<span class="token operator">: </span><a href="../../love.forte.simbot/-attribute/index.html">Attribute</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../love.forte.simbot/-attribute-map/contains.html">T</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">判断是否存在对应键名与类型的键。</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="466442070%2FFunctions%2F-341312757" anchor-label="fold" id="466442070%2FFunctions%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#466442070%2FFunctions%2F-341312757"><span><span>fold</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="466442070%2FFunctions%2F-341312757"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html#466442070%2FFunctions%2F-341312757">R</a><span class="token operator">&gt; </span><a href="index.html#466442070%2FFunctions%2F-341312757"><span class="token function">fold</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">initial<span class="token operator">: </span><a href="index.html#466442070%2FFunctions%2F-341312757">R</a><span class="token punctuation">, </span></span><span class="parameter ">operation<span class="token operator">: </span><span class="token punctuation">(</span><span class="token keyword"></span><a href="index.html#466442070%2FFunctions%2F-341312757">R</a><span class="token punctuation">, </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.coroutines/-coroutine-context/-element/index.html">CoroutineContext.Element</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="index.html#466442070%2FFunctions%2F-341312757">R</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html#466442070%2FFunctions%2F-341312757">R</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1058329899%2FFunctions%2F-341312757" anchor-label="get" id="1058329899%2FFunctions%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#232613081%2FFunctions%2F-341312757"><span><span>get</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1058329899%2FFunctions%2F-341312757"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">operator override </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html#232613081%2FFunctions%2F-341312757">E</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.coroutines/-coroutine-context/-element/index.html">CoroutineContext.Element</a><span class="token operator">&gt; </span><a href="index.html#232613081%2FFunctions%2F-341312757"><span class="token function">get</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">key<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.coroutines/-coroutine-context/-key/index.html">CoroutineContext.Key</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html#232613081%2FFunctions%2F-341312757">E</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html#232613081%2FFunctions%2F-341312757">E</a><span class="token operator">?</span></div><br><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">operator </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../love.forte.simbot/-attribute-map/get.html">T</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="../../love.forte.simbot/-attribute-map/get.html"><span class="token function">get</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">attribute<span class="token operator">: </span><a href="../../love.forte.simbot/-attribute/index.html">Attribute</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../love.forte.simbot/-attribute-map/get.html">T</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../love.forte.simbot/-attribute-map/get.html">T</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">通过 <a href="../../love.forte.simbot/-attribute-map/get.html">attribute</a> 得到对应的数据。</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-212436948%2FFunctions%2F-341312757" anchor-label="getAttribute" id="-212436948%2FFunctions%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="get-attribute.html"><span>get</span><wbr><span><span>Attribute</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-212436948%2FFunctions%2F-341312757"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">override </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="get-attribute.html">T</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="get-attribute.html"><span class="token function">getAttribute</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">attribute<span class="token operator">: </span><a href="../../love.forte.simbot/-attribute/index.html">Attribute</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="get-attribute.html">T</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="get-attribute.html">T</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">根据一个 <a href="../../love.forte.simbot/-attribute/index.html">Attribute</a> 得到一个属性。</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-410111841%2FFunctions%2F-341312757" anchor-label="merge" id="-410111841%2FFunctions%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../../love.forte.simbot/-mutable-attribute-map/merge.html"><span><span>merge</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-410111841%2FFunctions%2F-341312757"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../love.forte.simbot/-mutable-attribute-map/merge.html">T</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="../../love.forte.simbot/-mutable-attribute-map/merge.html"><span class="token function">merge</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">attribute<span class="token operator">: </span><a href="../../love.forte.simbot/-attribute/index.html">Attribute</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../love.forte.simbot/-mutable-attribute-map/merge.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">value<span class="token operator">: </span><a href="../../love.forte.simbot/-mutable-attribute-map/merge.html">T</a><span class="token punctuation">, </span></span><span class="parameter ">remapping<span class="token operator">: </span><span class="token punctuation">(</span><span class="token keyword"></span><a href="../../love.forte.simbot/-mutable-attribute-map/merge.html">T</a><span class="token punctuation">, </span><span class="token keyword"></span><a href="../../love.forte.simbot/-mutable-attribute-map/merge.html">T</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="../../love.forte.simbot/-mutable-attribute-map/merge.html">T</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../love.forte.simbot/-mutable-attribute-map/merge.html">T</a></div><div class="brief "><p class="paragraph">存入值，当值已经存在的时候进行合并处理。</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1830620809%2FFunctions%2F-341312757" anchor-label="minusKey" id="-1830620809%2FFunctions%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#-1830620809%2FFunctions%2F-341312757"><span>minus</span><wbr><span><span>Key</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1830620809%2FFunctions%2F-341312757"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="index.html#-1830620809%2FFunctions%2F-341312757"><span class="token function">minusKey</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">key<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.coroutines/-coroutine-context/-key/index.html">CoroutineContext.Key</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.coroutines/-coroutine-context/index.html">CoroutineContext</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1141296693%2FFunctions%2F-341312757" anchor-label="plus" id="1141296693%2FFunctions%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#1141296693%2FFunctions%2F-341312757"><span><span>plus</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1141296693%2FFunctions%2F-341312757"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">operator </span><span class="token keyword">fun </span><a href="index.html#1141296693%2FFunctions%2F-341312757"><span class="token function">plus</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">context<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.coroutines/-coroutine-context/index.html">CoroutineContext</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.coroutines/-coroutine-context/index.html">CoroutineContext</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1929208211%2FFunctions%2F-341312757" anchor-label="put" id="-1929208211%2FFunctions%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../../love.forte.simbot/-mutable-attribute-map/put.html"><span><span>put</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1929208211%2FFunctions%2F-341312757"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../love.forte.simbot/-mutable-attribute-map/put.html">T</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="../../love.forte.simbot/-mutable-attribute-map/put.html"><span class="token function">put</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">attribute<span class="token operator">: </span><a href="../../love.forte.simbot/-attribute/index.html">Attribute</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../love.forte.simbot/-mutable-attribute-map/put.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">value<span class="token operator">: </span><a href="../../love.forte.simbot/-mutable-attribute-map/put.html">T</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../love.forte.simbot/-mutable-attribute-map/put.html">T</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">存入一个值。</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1114889348%2FFunctions%2F-341312757" anchor-label="remove" id="1114889348%2FFunctions%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../../love.forte.simbot/-mutable-attribute-map/remove.html"><span><span>remove</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1114889348%2FFunctions%2F-341312757"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../love.forte.simbot/-mutable-attribute-map/remove.html">T</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="../../love.forte.simbot/-mutable-attribute-map/remove.html"><span class="token function">remove</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">attribute<span class="token operator">: </span><a href="../../love.forte.simbot/-attribute/index.html">Attribute</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../love.forte.simbot/-mutable-attribute-map/remove.html">T</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../love.forte.simbot/-mutable-attribute-map/remove.html">T</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">移除对应键名的值。</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1557067332%2FFunctions%2F-341312757" anchor-label="size" id="-1557067332%2FFunctions%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../../love.forte.simbot/-attribute-map/size.html"><span><span>size</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1557067332%2FFunctions%2F-341312757"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="../../love.forte.simbot/-attribute-map/size.html"><span class="token function">size</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></div><div class="brief "><p class="paragraph">数量</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="">Properties</h2>
+      <div class="table" data-togglable="Properties"><a data-name="342773633%2FProperties%2F-341312757" anchor-label="event" id="342773633%2FProperties%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="event.html"><span><span>event</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="342773633%2FProperties%2F-341312757"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/main"><a data-name="342773633%2FProperties%2F-341312757" anchor-label="event" id="342773633%2FProperties%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="event.html">event</a><span class="token operator">: </span><a href="../-event/index.html">Event</a></div><div class="brief "><a data-name="342773633%2FProperties%2F-341312757" anchor-label="event" id="342773633%2FProperties%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a><p class="paragraph">本次监听流程中的事件主体。</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1120150520%2FProperties%2F-341312757" anchor-label="key" id="-1120150520%2FProperties%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-event-processing-context/key.html"><span><span>key</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1120150520%2FProperties%2F-341312757"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/main"><a data-name="-1120150520%2FProperties%2F-341312757" anchor-label="key" id="-1120150520%2FProperties%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="../-event-processing-context/key.html">key</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.coroutines/-coroutine-context/-key/index.html">CoroutineContext.Key</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="448100267%2FProperties%2F-341312757" anchor-label="listener" id="448100267%2FProperties%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="listener.html"><span><span>listener</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="448100267%2FProperties%2F-341312757"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/main"><a data-name="448100267%2FProperties%2F-341312757" anchor-label="listener" id="448100267%2FProperties%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="listener.html">listener</a><span class="token operator">: </span><a href="../-event-listener/index.html">EventListener</a></div><div class="brief "><a data-name="448100267%2FProperties%2F-341312757" anchor-label="listener" id="448100267%2FProperties%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a><p class="paragraph">当前（将要）被执行的监听函数。</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="262640611%2FProperties%2F-341312757" anchor-label="listenerHandle" id="262640611%2FProperties%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="listener-handle.html"><span>listener</span><wbr><span><span>Handle</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="262640611%2FProperties%2F-341312757"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/main"><a data-name="262640611%2FProperties%2F-341312757" anchor-label="listenerHandle" id="262640611%2FProperties%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="listener-handle.html">listenerHandle</a><span class="token operator">: </span><a href="../-event-listener-handle/index.html">EventListenerHandle</a></div><div class="brief "><a data-name="262640611%2FProperties%2F-341312757" anchor-label="listenerHandle" id="262640611%2FProperties%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a><p class="paragraph">当前 <a href="listener.html">listener</a> 在事件调度容器中的句柄.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1622569434%2FProperties%2F-341312757" anchor-label="messagesSerializersModule" id="-1622569434%2FProperties%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-event-processing-context/messages-serializers-module.html"><span>messages</span><wbr><span>Serializers</span><wbr><span><span>Module</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1622569434%2FProperties%2F-341312757"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/main"><a data-name="-1622569434%2FProperties%2F-341312757" anchor-label="messagesSerializersModule" id="-1622569434%2FProperties%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="../-event-processing-context/messages-serializers-module.html">messagesSerializersModule</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-core/kotlinx.serialization.modules/-serializers-module/index.html">SerializersModule</a></div><div class="brief "><a data-name="-1622569434%2FProperties%2F-341312757" anchor-label="messagesSerializersModule" id="-1622569434%2FProperties%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a><p class="paragraph">当前事件所处环境中所能够提供的消息序列化模块信息。</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-2133528239%2FProperties%2F-341312757" anchor-label="results" id="-2133528239%2FProperties%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-event-processing-context/results.html"><span><span>results</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2133528239%2FProperties%2F-341312757"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/main"><a data-name="-2133528239%2FProperties%2F-341312757" anchor-label="results" id="-2133528239%2FProperties%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">val </span><a href="../-event-processing-context/results.html"><strike>results</strike></a><span class="token operator">: </span><span><span class="token annotation builtin">@</span><span data-unresolved-link="org.jetbrains.annotations/UnmodifiableView///PointingToDeclaration/"><span class="token annotation builtin">UnmodifiableView</span></span>&nbsp;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../-event-result/index.html">EventResult</a><span class="token operator">&gt;</span></div><div class="brief "><a data-name="-2133528239%2FProperties%2F-341312757" anchor-label="results" id="-2133528239%2FProperties%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a><p class="paragraph">已经执行过的所有监听函数的结果视图的二次列表收集。 此列表仅由事件处理器内部操作，是一个对外不可变视图。</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="522194988%2FProperties%2F-341312757" anchor-label="resultsView" id="522194988%2FProperties%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-event-processing-context/results-view.html"><span>results</span><wbr><span><span>View</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="522194988%2FProperties%2F-341312757"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/main"><a data-name="522194988%2FProperties%2F-341312757" anchor-label="resultsView" id="522194988%2FProperties%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="../-event-processing-context/results-view.html">resultsView</a><span class="token operator">: </span><a href="../../love.forte.simbot.utils.view/-index-access-view/index.html">IndexAccessView</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../-event-result/index.html">EventResult</a><span class="token operator">&gt;</span></div><div class="brief "><a data-name="522194988%2FProperties%2F-341312757" anchor-label="resultsView" id="522194988%2FProperties%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a><p class="paragraph">本次流程下执行后得到的所有响应结果的视图。按照顺序计入。</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1990222513%2FProperties%2F-341312757" anchor-label="textContent" id="-1990222513%2FProperties%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="text-content.html"><span>text</span><wbr><span><span>Content</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1990222513%2FProperties%2F-341312757"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/main"><a data-name="-1990222513%2FProperties%2F-341312757" anchor-label="textContent" id="-1990222513%2FProperties%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">var </span><a href="text-content.html">textContent</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></div><div class="brief "><a data-name="-1990222513%2FProperties%2F-341312757" anchor-label="textContent" id="-1990222513%2FProperties%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a><p class="paragraph">当前监听函数的主要文本内容，一般可用于在拦截器、过滤器、监听函数相互组合时进行一些过滤内容匹配。</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="tabbedcontent">Extensions</h2>
+      <div class="table" data-togglable="Extensions"><a data-name="-925895423%2FExtensions%2F-341312757" anchor-label="invoke" id="-925895423%2FExtensions%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-blocking-continuous-session-event-matcher/-always-true/invoke.html"><span><span>invoke</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-925895423%2FExtensions%2F-341312757"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">operator override </span><span class="token keyword">fun </span><a href="../-event-processing-context/index.html">EventProcessingContext</a><span class="token punctuation">.</span><a href="../-blocking-continuous-session-event-matcher/-always-true/invoke.html"><span class="token function">invoke</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">event<span class="token operator">: </span><a href="../-event/index.html">Event</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">suspend operator override </span><span class="token keyword">fun </span><a href="../-event-processing-context/index.html">EventProcessingContext</a><span class="token punctuation">.</span><a href="../-continuous-session-event-matcher/-always-true/invoke.html"><span class="token function">invoke</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">event<span class="token operator">: </span><a href="../-event/index.html">Event</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">根据条件判断结果。</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1734416608%2FExtensions%2F-341312757" anchor-label="set" id="1734416608%2FExtensions%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../../love.forte.simbot/set.html"><span><span>set</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1734416608%2FExtensions%2F-341312757"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">operator </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../love.forte.simbot/set.html">T</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="../../love.forte.simbot/-mutable-attribute-map/index.html">MutableAttributeMap</a><span class="token punctuation">.</span><a href="../../love.forte.simbot/set.html"><span class="token function">set</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">attribute<span class="token operator">: </span><a href="../../love.forte.simbot/-attribute/index.html">Attribute</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../love.forte.simbot/set.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">value<span class="token operator">: </span><a href="../../love.forte.simbot/set.html">T</a></span></span><span class="token punctuation">)</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2023 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+    </div>
+</div>
+
+</body></html>
+

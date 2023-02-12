@@ -1,0 +1,194 @@
+<!doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>Key</title>
+<link href="../../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../../";</script>    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="../../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../../styles/style.css" rel="Stylesheet">
+<link href="../../../../styles/jetbrains-mono.css" rel="Stylesheet">
+<link href="../../../../styles/main.css" rel="Stylesheet">
+<link href="../../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../../styles/logo-styles.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<body>
+<div class="navigation-wrapper" id="navigation-wrapper">
+    <div id="leftToggler"><span class="icon-toggler"></span></div>
+    <div class="library-name">
+<a href="../../../../index.html">
+<span>Simple Robot</span>            </a>    </div>
+    <div>3.0.0-RC.3
+    </div>
+    <div class="pull-right d-flex">
+        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+    </div>
+</div>
+<div id="container">
+    <div id="leftColumn">
+        <div id="sideMenu"></div>
+    </div>
+    <div id="main">
+<div class="main-content" id="content" pageids="simbot-api::love.forte.simbot.event/Event.Key///PointingToDeclaration//-341312757">
+  <div class="breadcrumbs"><a href="../../../index.html">simbot-api</a><span class="delimiter">/</span><a href="../../index.html">love.forte.simbot.event</a><span class="delimiter">/</span><a href="../index.html">Event</a><span class="delimiter">/</span><span class="current">Key</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Key</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="index.html">Key</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html">E</a><span class="token operator"> : </span><a href="../index.html">Event</a><span class="token operator">&gt;</span><span class="clearfix"><span class="floating-right">(<a href="https://github.com/simple-robot/simpler-robot/tree/v3-main/simbot-api/src/main/kotlin/love/forte/simbot/event/Event.kt#L112">source</a>)</span></span></div><p class="paragraph">一个事件类型的Key。所有的计划对外的事件类型都必须通过 <strong>伴生对象</strong> 实现此类型并提供一个事件<strong>唯一</strong>的ID名称。 并非所有的事件接口 <a href="../index.html">Event</a> 的类型都能够允许被监听，有些事件类型可能仅用做标记或者由于其他原因无法/不允许被<strong>直接</strong>监听， 因此在事件调度中，需要通过 <a href="index.html">Key</a> 来判断事件类型与其之间的继承关系。</p><p class="paragraph">所有事件的 <a href="id.html">Key.id</a> 必须尽可能保证唯一，因此建议对ID进行命名的时候使用较为特殊的命名方式以杜绝出现ID重复。 id重复不一定会出现异常提示，但是在使用 <a href="-companion/is-sub.html">isSub</a> 等方法的时候，很有可能会出现缓存内容混乱进而导致引发预期外的异常。</p><p class="paragraph">事件类型可以继承，且允许多继承，实现方可以通过 <a href="-companion/is-sub.html">isSub</a> 来判断当前事件是否为某个类型的子类型。</p><p class="paragraph">比如</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">val event: MessageEvent = ...<br>val isSub: Boolean = MessageEvent.Key isSub Event.Key</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph"><a href="index.html">Key</a> 的继承关系是单向传递的，因此你能够通过一个key找到它继承的所有父类型，但是无法反向查找。</p><p class="paragraph">当一个事件提供伴生Key的时候，<a href="index.html">E</a> 建议且应当与当前事件类型<strong>一致</strong>, 因为在 <a href="-companion/get-key.html">Key.getKey</a> 等通过类型获取Key的场景下，均默认为 <a href="index.html">Key</a> 的类型与当前事件类型一致。 如下所示：</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">interface MyEvent : Event {<br>     companion object Key: Event.Key&lt;MyEvent&gt; {<br>         // ...<br>     }<br>}</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Types">Types</button><button class="section-tab" data-togglable="Functions">Functions</button><button class="section-tab" data-togglable="Properties">Properties</button><button class="section-tab" data-togglable="Extensions">Extensions</button><button class="section-tab" data-togglable="See also">See also</button><button class="section-tab" data-togglable="Inheritors">Inheritors</button></div>
+    <div class="tabs-section-body">
+      <h4 class="">See also</h4>
+      <div data-togglable="See also">
+        <div class="platform-hinted WithExtraAttributes" data-platform-hinted="data-platform-hinted" data-togglable="See also"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/main"><div data-togglable="See also"><div class="table" data-togglable="See also"><div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><a href="-companion/get-key.html"><span>Event.</span><wbr><span>Key.</span><wbr><span>Companion.</span><wbr><span>getKey</span></a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><a href="../../-event-key/index.html"><span>Event</span><wbr><span><span>Key</span></span></a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><a href="-companion/is-sub.html"><span>Event.</span><wbr><span>Key.</span><wbr><span>Companion.</span><wbr><span>isSub</span></a></div></span></div><div></div></div></div></div></div></div></div>
+      </div>
+      <h2 class="">Types</h2>
+      <div class="table" data-togglable="Types"><a data-name="-1242599221%2FClasslikes%2F-341312757" anchor-label="Companion" id="-1242599221%2FClasslikes%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-companion/index.html"><span><span>Companion</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1242599221%2FClasslikes%2F-341312757"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-companion/index.html">Companion</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="">Functions</h2>
+      <div class="table" data-togglable="Functions"><a data-name="499122859%2FFunctions%2F-341312757" anchor-label="safeCast" id="499122859%2FFunctions%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="safe-cast.html"><span>safe</span><wbr><span><span>Cast</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="499122859%2FFunctions%2F-341312757"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="safe-cast.html"><span class="token function">safeCast</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">value<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">E</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">将一个提供的类型转化为当前的目标事件。 如果得到null，则说明无法被转化。</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="">Properties</h2>
+      <div class="table" data-togglable="Properties"><a data-name="-1256742629%2FProperties%2F-341312757" anchor-label="id" id="-1256742629%2FProperties%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="id.html"><span><span>id</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1256742629%2FProperties%2F-341312757"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/main"><a data-name="-1256742629%2FProperties%2F-341312757" anchor-label="id" id="-1256742629%2FProperties%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="id.html">id</a><span class="token operator">: </span><a href="../../../love.forte.simbot/-char-sequence-i-d/index.html">CharSequenceID</a></div><div class="brief "><a data-name="-1256742629%2FProperties%2F-341312757" anchor-label="id" id="-1256742629%2FProperties%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a><p class="paragraph">此事件的ID，需要是唯一的。假若在事件注册时出现了ID相同但不是同一个Key的情况将会导致异常。</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-207395749%2FProperties%2F-341312757" anchor-label="parents" id="-207395749%2FProperties%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="parents.html"><span><span>parents</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-207395749%2FProperties%2F-341312757"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/main"><a data-name="-207395749%2FProperties%2F-341312757" anchor-label="parents" id="-207395749%2FProperties%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="parents.html">parents</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-set/index.html">Set</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html">Event.Key</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token operator">&gt;</span></div><div class="brief "><a data-name="-207395749%2FProperties%2F-341312757" anchor-label="parents" id="-207395749%2FProperties%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a><p class="paragraph">此事件所继承的所有父事件。 此属性应当是不可变的，不应在运行期内发生变更。</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="">Inheritors</h2>
+      <div class="table" data-togglable="Inheritors"><a data-name="-2005076072%2FInheritors%2F-341312757" anchor-label="Root" id="-2005076072%2FInheritors%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-root/index.html">Root</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2005076072%2FInheritors%2F-341312757"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div></div>
+          </div>
+        </div>
+<a data-name="1565100248%2FInheritors%2F-341312757" anchor-label="BaseEventKey" id="1565100248%2FInheritors%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../../-base-event-key/index.html">BaseEventKey</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1565100248%2FInheritors%2F-341312757"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div></div>
+          </div>
+        </div>
+      </div>
+      <h2 class="tabbedcontent">Extensions</h2>
+      <div class="table" data-togglable="Extensions"><a data-name="157143407%2FExtensions%2F-341312757" anchor-label="contains" id="157143407%2FExtensions%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../../contains.html"><span><span>contains</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="157143407%2FExtensions%2F-341312757"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">operator </span><span class="token keyword">fun </span><a href="index.html">Event.Key</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="../../contains.html"><span class="token function">contains</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">parentIdMaybe<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="symbol monospace"><span class="token keyword">operator </span><span class="token keyword">fun </span><a href="index.html">Event.Key</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="../../contains.html"><span class="token function">contains</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">parentIdMaybe<span class="token operator">: </span><a href="../../../love.forte.simbot/-i-d/index.html">ID</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">判断当前类型是否为提供类型的子类型。</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1306125104%2FExtensions%2F-341312757" anchor-label="isSub" id="1306125104%2FExtensions%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-companion/is-sub.html"><span>is</span><wbr><span><span>Sub</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1306125104%2FExtensions%2F-341312757"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-static/index.html"><span class="token annotation builtin">JvmStatic</span></a></div></div><span class="token keyword">infix </span><span class="token keyword">fun </span><a href="index.html">Event.Key</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="-companion/is-sub.html"><span class="token function">isSub</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">from<span class="token operator">: </span><a href="index.html">Event.Key</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">检测当前接收器是否为 <a href="-companion/is-sub.html">from</a> 的子类型。</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2023 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+    </div>
+</div>
+
+</body></html>
+
