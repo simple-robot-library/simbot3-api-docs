@@ -11,8 +11,9 @@ const componentCards = [
     tags: [officialTag, coreTag],
     description: "核心库是组件库的基础，也是绝大多数基本API存在的地方。",
     links: [
-      {name: "前往KDoc", href: "main", type: "primary" as const},
       {name: "前往仓库", href: "https://github.com/simple-robot/simpler-robot", type: "info" as const},
+      {name: "前往KDoc", href: "main", type: "primary" as const},
+      {name: "前往手册", href: "https://simbot.forte.love", type: "default" as const},
     ]
   },
 
@@ -21,8 +22,9 @@ const componentCards = [
     tags: [officialTag, componentTag],
     description: "Mirai组件基于核心库对 <a href='https://github.com/mamoe/mirai'>mirai框架</a> 进行实现，提供强大的QQ机器人平台功能。",
     links: [
-      {name: "前往KDoc", href: "components/mirai", type: "primary" as const},
       {name: "前往仓库", href: "https://github.com/simple-robot/simbot-component-mirai", type: "info" as const},
+      {name: "前往KDoc", href: "components/mirai", type: "primary" as const},
+      {name: "前往手册", href: "https://component-mirai.simbot.forte.love", type: "default" as const},
     ]
   },
 
@@ -31,8 +33,8 @@ const componentCards = [
     tags: [officialTag, componentTag],
     description: "KOOK组件基于核心库对 <a href='https://developer.kookapp.cn/doc/reference'>KOOK机器人</a> 进行实现，提供强大的KOOK机器人平台功能。",
     links: [
-      {name: "前往KDoc", href: "components/kook", type: "primary" as const},
       {name: "前往仓库", href: "https://github.com/simple-robot/simbot-component-kook", type: "info" as const},
+      {name: "前往KDoc", href: "components/kook", type: "primary" as const},
     ]
   },
 
@@ -41,8 +43,8 @@ const componentCards = [
     tags: [officialTag, componentTag],
     description: "QQ频道组件基于核心库对 <a href='https://bot.q.qq.com/wiki'>QQ频道机器人</a> 进行实现，提供强大的QQ频道机器人平台功能。",
     links: [
-      {name: "前往KDoc", href: "components/tencent-guild", type: "primary" as const},
       {name: "前往仓库", href: "https://github.com/simple-robot/simbot-component-tencent-guild", type: "info" as const},
+      {name: "前往KDoc", href: "components/tencent-guild", type: "primary" as const},
     ]
   },
 ]
@@ -65,7 +67,8 @@ const componentCards = [
             <n-p v-html="componentCard.description"></n-p>
 
             <template #action>
-              <n-grid :cols="componentCard.links.length" style="text-align: center">
+<!--              <n-grid :cols="componentCard.links.length" style="text-align: center">-->
+              <n-grid cols="1" style="text-align: center; min-height: 120px">
                 <n-gi v-for="componentLink in componentCard.links">
                   <n-a :href="componentLink.href">
                     <n-button quaternary :type="componentLink.type">
