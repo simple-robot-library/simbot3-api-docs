@@ -17,6 +17,8 @@ jobs:
           node-version: 16.x
           cache: npm
 
+        # releases
+
       - uses: actions/checkout@v3
         with:
           ref: 'kdoc-deploy/main'
@@ -49,12 +51,54 @@ jobs:
 
       - uses: actions/checkout@v3
         with:
-          ref: 'kdoc-deploy/component-tencent-guild'
+          ref: 'kdoc-deploy/component-qq-guild'
           path: 'public/kdoc/cp-tcg'
 
       - run: |
           cp -r kdoc/cp-tcg/* ./
           rm -rf kdoc/cp-tcg
+        working-directory: ./public
+
+      # snapshots
+
+#       - uses: actions/checkout@v3
+#         with:
+#           ref: 'kdoc-deploy/main'
+#           path: 'public/kdoc/snapshot/main'
+
+#       - run: |
+#           cp -r kdoc/main/* ./
+#           rm -rf kdoc/main
+#         working-directory: ./public
+
+#       - uses: actions/checkout@v3
+#         with:
+#           ref: 'kdoc-deploy/component-mirai'
+#           path: 'public/kdoc/cp-mirai'
+
+#       - run: |
+#           cp -r kdoc/cp-mirai/* ./
+#           rm -rf kdoc/cp-mirai
+#         working-directory: ./public
+
+#       - uses: actions/checkout@v3
+#         with:
+#           ref: 'kdoc-deploy/component-kook'
+#           path: 'public/kdoc/cp-kook'
+
+#       - run: |
+#           cp -r kdoc/cp-kook/* ./
+#           rm -rf kdoc/cp-kook
+#         working-directory: ./public
+
+      - uses: actions/checkout@v3
+        with:
+          ref: 'kdoc-deploy/snapshot/component-qq-guild'
+          path: 'public/kdoc/snapshot/cp-qg'
+
+      - run: |
+          cp -r kdoc/snapshot/cp-qg/* ./
+          rm -rf kdoc/snapshot/cp-qg
         working-directory: ./public
 
       - run: |
