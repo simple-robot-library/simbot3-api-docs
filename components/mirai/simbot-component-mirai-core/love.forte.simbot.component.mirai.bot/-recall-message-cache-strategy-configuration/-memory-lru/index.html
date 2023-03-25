@@ -34,9 +34,12 @@
     <div class="library-name">
 <a href="../../../../index.html">
 <span>Simple Robot Component Mirai</span>            </a>    </div>
-    <div>3.0.0.0-RC
+    <div>3.0.0.0-RC.2
     </div>
     <div class="pull-right d-flex">
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":simbot-component-mirai-core:dokkaHtmlPartial/main">jvm</button>
+        </div>
         <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
         <div id="searchBar"></div>
     </div>
@@ -46,108 +49,116 @@
         <div id="sideMenu"></div>
     </div>
     <div id="main">
-<div class="main-content" id="content" pageids="simbot-component-mirai-core::love.forte.simbot.component.mirai.bot/RecallMessageCacheStrategyConfiguration.MemoryLru///PointingToDeclaration//1961516927">
+<div class="main-content" data-page-type="classlike" id="content" pageids="simbot-component-mirai-core::love.forte.simbot.component.mirai.bot/RecallMessageCacheStrategyConfiguration.MemoryLru///PointingToDeclaration//1961516927">
   <div class="breadcrumbs"><a href="../../../index.html">simbot-component-mirai-core</a><span class="delimiter">/</span><a href="../../index.html">love.forte.simbot.component.mirai.bot</a><span class="delimiter">/</span><a href="../index.html">RecallMessageCacheStrategyConfiguration</a><span class="delimiter">/</span><span class="current">MemoryLru</span></div>
   <div class="cover ">
     <h1 class="cover"><span>Memory</span><wbr><span><span>Lru</span></span></h1>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-mirai-core:dokkaHtmlPartial/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-core/kotlinx.serialization/-serializable/index.html"><span class="token annotation builtin">Serializable</span></a></div></div><span class="token keyword">data </span><span class="token keyword">class </span><a href="index.html">MemoryLru</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>groupMaxSize<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span>MemoryLruMiraiRecallMessageCacheStrategy.DEFAULT_GROUP_MAX_SIZE<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>friendMaxSize<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span>MemoryLruMiraiRecallMessageCacheStrategy.DEFAULT_FRIEND_MAX_SIZE<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>loadFactor<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a><span class="token operator"> = </span>MemoryLruMiraiRecallMessageCacheStrategy.DEFAULT_LOAD_FACTOR</span></span><span class="token punctuation">)</span> : <a href="../index.html">RecallMessageCacheStrategyConfiguration</a><span class="clearfix"><span class="floating-right">(<a href="https://github.com/simple-robot/simbot-component-mirai/tree/main/simbot-component-mirai-core/src/main/kotlin/love/forte/simbot/component/mirai/bot/RecallMessageCacheStrategyConfiguration.kt#L59">source</a>)</span></span></div><p class="paragraph">代表为使用 <a href="../../../love.forte.simbot.component.mirai/-memory-lru-mirai-recall-message-cache-strategy/index.html">MemoryLruMiraiRecallMessageCacheStrategy</a> ， 即使用基于内存的LRU缓存策略。</p><div class="sample-container"><pre><code class="block lang-json" theme="idea">{<br>   "type": "memory_lru",<br>   "groupMaxSize": 1536,<br>   "friendMaxSize": 96<br>}</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-mirai-core:dokkaHtmlPartial/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-core/kotlinx.serialization/-serializable/index.html"><span class="token annotation builtin">Serializable</span></a></div></div><span class="token keyword">data </span><span class="token keyword">class </span><a href="index.html">MemoryLru</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>groupMaxSize<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span>MemoryLruMiraiRecallMessageCacheStrategy.DEFAULT_GROUP_MAX_SIZE<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>friendMaxSize<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span>MemoryLruMiraiRecallMessageCacheStrategy.DEFAULT_FRIEND_MAX_SIZE<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>loadFactor<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a><span class="token operator"> = </span>MemoryLruMiraiRecallMessageCacheStrategy.DEFAULT_LOAD_FACTOR</span></span><span class="token punctuation">)</span> : <a href="../index.html">RecallMessageCacheStrategyConfiguration</a><span class="clearfix"><span class="floating-right">(<a href="https://github.com/simple-robot/simbot-component-mirai/tree/main/simbot-component-mirai-core/src/main/kotlin/love/forte/simbot/component/mirai/bot/RecallMessageCacheStrategyConfiguration.kt#L77">source</a>)</span></span></div><p class="paragraph">代表为使用 <a href="../../../love.forte.simbot.component.mirai/-memory-lru-mirai-recall-message-cache-strategy/index.html">MemoryLruMiraiRecallMessageCacheStrategy</a> ， 即使用基于内存的LRU缓存策略。</p><div class="sample-container"><pre><code class="block lang-json" theme="idea">{<br>   "type": "memory_lru",<br>   "groupMaxSize": 1536,<br>   "friendMaxSize": 96<br>}</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
   </div>
   <div class="tabbedcontent">
-    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Types">Types</button><button class="section-tab" data-togglable="Constructors">Constructors</button><button class="section-tab" data-togglable="Functions">Functions</button><button class="section-tab" data-togglable="Properties">Properties</button></div>
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,FUNCTION,PROPERTY">Members</button></div>
     <div class="tabs-section-body">
-      <h2 class="tabbedcontent">Constructors</h2>
-      <div class="table" data-togglable="Constructors"><a data-name="-760149265%2FConstructors%2F1961516927" anchor-label="MemoryLru" id="-760149265%2FConstructors%2F1961516927" data-filterable-set=":simbot-component-mirai-core:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":simbot-component-mirai-core:dokkaHtmlPartial/main" data-filterable-set=":simbot-component-mirai-core:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue TabbedContent">
-            <div class=""><span class="inline-flex">
-                <div><a href="-memory-lru.html"><span>Memory</span><wbr><span><span>Lru</span></span></a></div>
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="">Constructors</h2>
+        <div class="table"><a data-name="-760149265%2FConstructors%2F1961516927" anchor-label="MemoryLru" id="-760149265%2FConstructors%2F1961516927" data-filterable-set=":simbot-component-mirai-core:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-togglable="CONSTRUCTOR" data-filterable-current=":simbot-component-mirai-core:dokkaHtmlPartial/main" data-filterable-set=":simbot-component-mirai-core:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-memory-lru.html"><span>Memory</span><wbr><span><span>Lru</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-760149265%2FConstructors%2F1961516927"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-mirai-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="-memory-lru.html"><span class="token function">MemoryLru</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">groupMaxSize<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span>MemoryLruMiraiRecallMessageCacheStrategy.DEFAULT_GROUP_MAX_SIZE<span class="token punctuation">, </span></span><span class="parameter ">friendMaxSize<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span>MemoryLruMiraiRecallMessageCacheStrategy.DEFAULT_FRIEND_MAX_SIZE<span class="token punctuation">, </span></span><span class="parameter ">loadFactor<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a><span class="token operator"> = </span>MemoryLruMiraiRecallMessageCacheStrategy.DEFAULT_LOAD_FACTOR</span></span><span class="token punctuation">)</span></div></div></div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-mirai-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">groupMaxSize<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span>MemoryLruMiraiRecallMessageCacheStrategy.DEFAULT_GROUP_MAX_SIZE<span class="token punctuation">, </span></span><span class="parameter ">friendMaxSize<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span>MemoryLruMiraiRecallMessageCacheStrategy.DEFAULT_FRIEND_MAX_SIZE<span class="token punctuation">, </span></span><span class="parameter ">loadFactor<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a><span class="token operator"> = </span>MemoryLruMiraiRecallMessageCacheStrategy.DEFAULT_LOAD_FACTOR</span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <h2 class="">Types</h2>
-      <div class="table" data-togglable="Types"><a data-name="795945939%2FClasslikes%2F1961516927" anchor-label="Companion" id="795945939%2FClasslikes%2F1961516927" data-filterable-set=":simbot-component-mirai-core:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":simbot-component-mirai-core:dokkaHtmlPartial/main" data-filterable-set=":simbot-component-mirai-core:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="-companion/index.html"><span><span>Companion</span></span></a></div>
+      <div data-togglable="TYPE">
+        <h2 class="">Types</h2>
+        <div class="table"><a data-name="795945939%2FClasslikes%2F1961516927" anchor-label="Companion" id="795945939%2FClasslikes%2F1961516927" data-filterable-set=":simbot-component-mirai-core:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-mirai-core:dokkaHtmlPartial/main" data-filterable-set=":simbot-component-mirai-core:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-companion/index.html"><span><span>Companion</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="795945939%2FClasslikes%2F1961516927"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-mirai-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-companion/index.html">Companion</a></div></div></div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-mirai-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-companion/index.html">Companion</a></div></div></div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <h2 class="">Functions</h2>
-      <div class="table" data-togglable="Functions"><a data-name="591443139%2FFunctions%2F1961516927" anchor-label="recallMessageCacheStrategy" id="591443139%2FFunctions%2F1961516927" data-filterable-set=":simbot-component-mirai-core:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":simbot-component-mirai-core:dokkaHtmlPartial/main" data-filterable-set=":simbot-component-mirai-core:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="recall-message-cache-strategy.html"><span>recall</span><wbr><span>Message</span><wbr><span>Cache</span><wbr><span><span>Strategy</span></span></a></div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="591443139%2FFunctions%2F1961516927" anchor-label="recallMessageCacheStrategy" id="591443139%2FFunctions%2F1961516927" data-filterable-set=":simbot-component-mirai-core:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-mirai-core:dokkaHtmlPartial/main" data-filterable-set=":simbot-component-mirai-core:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="recall-message-cache-strategy.html"><span>recall</span><wbr><span>Message</span><wbr><span>Cache</span><wbr><span><span>Strategy</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="591443139%2FFunctions%2F1961516927"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-mirai-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="recall-message-cache-strategy.html"><span class="token function">recallMessageCacheStrategy</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">config<span class="token operator">: </span><a href="../../-mirai-bot-verify-info-configuration/index.html">MiraiBotVerifyInfoConfiguration</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../../love.forte.simbot.component.mirai/-mirai-recall-message-cache-strategy/index.html">MiraiRecallMessageCacheStrategy</a></div><div class="brief "><p class="paragraph">提供 <a href="../../-mirai-bot-verify-info-configuration/index.html">MiraiBotVerifyInfoConfiguration</a> 信息，计算并得到一个缓存策略 <a href="../../../love.forte.simbot.component.mirai/-mirai-recall-message-cache-strategy/index.html">MiraiRecallMessageCacheStrategy</a>。</p></div></div></div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-mirai-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="recall-message-cache-strategy.html"><span class="token function">recallMessageCacheStrategy</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">config<span class="token operator">: </span><a href="../../-mirai-bot-verify-info-configuration/index.html">MiraiBotVerifyInfoConfiguration</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../../love.forte.simbot.component.mirai/-mirai-recall-message-cache-strategy/index.html">MiraiRecallMessageCacheStrategy</a></div><div class="brief "><p class="paragraph">提供 <a href="../../-mirai-bot-verify-info-configuration/index.html">MiraiBotVerifyInfoConfiguration</a> 信息，计算并得到一个缓存策略 <a href="../../../love.forte.simbot.component.mirai/-mirai-recall-message-cache-strategy/index.html">MiraiRecallMessageCacheStrategy</a>。</p></div></div></div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <h2 class="">Properties</h2>
-      <div class="table" data-togglable="Properties"><a data-name="1740429797%2FProperties%2F1961516927" anchor-label="friendMaxSize" id="1740429797%2FProperties%2F1961516927" data-filterable-set=":simbot-component-mirai-core:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":simbot-component-mirai-core:dokkaHtmlPartial/main" data-filterable-set=":simbot-component-mirai-core:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="friend-max-size.html"><span>friend</span><wbr><span>Max</span><wbr><span><span>Size</span></span></a></div>
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="1740429797%2FProperties%2F1961516927" anchor-label="friendMaxSize" id="1740429797%2FProperties%2F1961516927" data-filterable-set=":simbot-component-mirai-core:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-mirai-core:dokkaHtmlPartial/main" data-filterable-set=":simbot-component-mirai-core:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="friend-max-size.html"><span>friend</span><wbr><span>Max</span><wbr><span><span>Size</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1740429797%2FProperties%2F1961516927"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-mirai-core:dokkaHtmlPartial/main"><a data-name="1740429797%2FProperties%2F1961516927" anchor-label="friendMaxSize" id="1740429797%2FProperties%2F1961516927" data-filterable-set=":simbot-component-mirai-core:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="friend-max-size.html">friendMaxSize</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></div><div class="brief "><a data-name="1740429797%2FProperties%2F1961516927" anchor-label="friendMaxSize" id="1740429797%2FProperties%2F1961516927" data-filterable-set=":simbot-component-mirai-core:dokkaHtmlPartial/main"></a><p class="paragraph">缓存好友消息的最大上限, 会根据 <a href="load-factor.html">loadFactor</a> 计算为最终的初始化容量</p></div></div></div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-mirai-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="friend-max-size.html">friendMaxSize</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></div><div class="brief "><p class="paragraph">缓存好友消息的最大上限, 会根据 <a href="load-factor.html">loadFactor</a> 计算为最终的初始化容量</p></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 <a data-name="-1232147128%2FProperties%2F1961516927" anchor-label="groupMaxSize" id="-1232147128%2FProperties%2F1961516927" data-filterable-set=":simbot-component-mirai-core:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":simbot-component-mirai-core:dokkaHtmlPartial/main" data-filterable-set=":simbot-component-mirai-core:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="group-max-size.html"><span>group</span><wbr><span>Max</span><wbr><span><span>Size</span></span></a></div>
+          <div class="table-row" data-filterable-current=":simbot-component-mirai-core:dokkaHtmlPartial/main" data-filterable-set=":simbot-component-mirai-core:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="group-max-size.html"><span>group</span><wbr><span>Max</span><wbr><span><span>Size</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1232147128%2FProperties%2F1961516927"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-mirai-core:dokkaHtmlPartial/main"><a data-name="-1232147128%2FProperties%2F1961516927" anchor-label="groupMaxSize" id="-1232147128%2FProperties%2F1961516927" data-filterable-set=":simbot-component-mirai-core:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="group-max-size.html">groupMaxSize</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></div><div class="brief "><a data-name="-1232147128%2FProperties%2F1961516927" anchor-label="groupMaxSize" id="-1232147128%2FProperties%2F1961516927" data-filterable-set=":simbot-component-mirai-core:dokkaHtmlPartial/main"></a><p class="paragraph">缓存消息的最大上限, 会根据 <a href="load-factor.html">loadFactor</a> 计算为最终的初始化容量</p></div></div></div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-mirai-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="group-max-size.html">groupMaxSize</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></div><div class="brief "><p class="paragraph">缓存消息的最大上限, 会根据 <a href="load-factor.html">loadFactor</a> 计算为最终的初始化容量</p></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 <a data-name="1153280665%2FProperties%2F1961516927" anchor-label="loadFactor" id="1153280665%2FProperties%2F1961516927" data-filterable-set=":simbot-component-mirai-core:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":simbot-component-mirai-core:dokkaHtmlPartial/main" data-filterable-set=":simbot-component-mirai-core:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="load-factor.html"><span>load</span><wbr><span><span>Factor</span></span></a></div>
+          <div class="table-row" data-filterable-current=":simbot-component-mirai-core:dokkaHtmlPartial/main" data-filterable-set=":simbot-component-mirai-core:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="load-factor.html"><span>load</span><wbr><span><span>Factor</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1153280665%2FProperties%2F1961516927"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-mirai-core:dokkaHtmlPartial/main"><a data-name="1153280665%2FProperties%2F1961516927" anchor-label="loadFactor" id="1153280665%2FProperties%2F1961516927" data-filterable-set=":simbot-component-mirai-core:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="load-factor.html">loadFactor</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a></div><div class="brief "><a data-name="1153280665%2FProperties%2F1961516927" anchor-label="loadFactor" id="1153280665%2FProperties%2F1961516927" data-filterable-set=":simbot-component-mirai-core:dokkaHtmlPartial/main"></a><p class="paragraph">内部哈希表所使用的负载因子</p></div></div></div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-mirai-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="load-factor.html">loadFactor</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a></div><div class="brief "><p class="paragraph">内部哈希表所使用的负载因子</p></div></div></div>
+                </div>
               </div>
             </div>
           </div>
@@ -161,6 +172,6 @@
       </div>
     </div>
 </div>
-
-</body></html>
+</body>
+</html>
 
