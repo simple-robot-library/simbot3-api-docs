@@ -35,6 +35,7 @@ const componentCards = [
     links: [
       {name: "前往仓库", href: "https://github.com/simple-robot/simbot-component-kook", type: "info" as const},
       {name: "前往KDoc", href: "components/kook", type: "primary" as const},
+      {name: "前往KDoc(快照)", href: "snapshots/components/kook", type: "primary" as const},
     ]
   },
 
@@ -44,7 +45,8 @@ const componentCards = [
     description: "QQ频道组件基于核心库对 <a href='https://bot.q.qq.com/wiki'>QQ频道机器人</a> 进行实现，提供强大的QQ频道机器人平台功能。",
     links: [
       {name: "前往仓库", href: "https://github.com/simple-robot/simbot-component-tencent-guild", type: "info" as const},
-      {name: "前往KDoc", href: "components/tencent-guild", type: "primary" as const},
+      {name: "前往KDoc", href: "components/qq-guild", type: "primary" as const},
+      {name: "前往KDoc(快照)", href: "snapshots/components/qq-guild", type: "primary" as const},
     ]
   },
 ]
