@@ -52,7 +52,7 @@ const componentCards = [
         tags: [officialTag, componentTag],
         description: "QQ频道组件基于核心库对 <a href='https://bot.q.qq.com/wiki'>QQ频道机器人</a> 进行实现，提供强大的QQ频道机器人平台功能。",
         links: [
-            [{name: "前往仓库", href: "https://github.com/simple-robot/simbot-component-tencent-guild", type: "info"}],
+            [{name: "前往仓库", href: "https://github.com/simple-robot/simbot-component-qq-guild", type: "info"}],
             [
                 {name: "KDoc", href: "components/qq-guild", type: "primary"},
                 {name: "KDoc(快照)", href: "snapshots/components/qq-guild", type: "primary"}
