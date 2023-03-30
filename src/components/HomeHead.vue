@@ -43,11 +43,15 @@ import {MenuOption, NAvatar, NCard, NIcon, NMenu, NPageHeader, NSwitch, NText} f
 import {Component, h, reactive, ref} from "vue";
 import {HomeSharp, LogoGithub} from "@vicons/ionicons5";
 
+const props = defineProps({
+    initThemeActiveValue: Boolean
+})
+
 const emit = defineEmits<{
   (e: 'themeActiveChange', value: boolean): void
 }>()
 
-const themeActive = ref(false)
+const themeActive = ref(props.initThemeActiveValue)
 
 function onThemeActiveChange() {
   const changeTo = !themeActive.value

@@ -55,6 +55,7 @@ jobs:
           path: 'public/kdoc/cp-qg'
 
       - run: |
+          mkdir -p kdoc/cp-qg
           cp -r kdoc/cp-qg/* ./
           rm -rf kdoc/cp-qg
         working-directory: ./public
