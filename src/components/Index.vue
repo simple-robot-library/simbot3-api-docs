@@ -94,7 +94,7 @@ function onThemeActiveChange(value: boolean) {
 }
 
 const initCollapseActionsStorage = localStorage.getItem("collapseActions_items")
-let initCollapseActions: Array<String>
+let initCollapseActions: Array<string>
 if (initCollapseActionsStorage == null) {
     initCollapseActions = ["KDoc"]
 } else {
@@ -112,7 +112,7 @@ if (initCollapseActionsStorage == null) {
     }
 }
 
-const collapseActions = reactive<Set<String>>(new Set(initCollapseActions))
+const collapseActions = reactive<Set<string>>(new Set(initCollapseActions))
 
 const handleItemHeaderClick: CollapseProps['onItemHeaderClick']
     = ({name, expanded}) => {
