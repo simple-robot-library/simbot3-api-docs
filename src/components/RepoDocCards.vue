@@ -81,7 +81,7 @@ const componentCards = [
           <template #action>
             <n-grid cols="1" style="text-align: center; min-height: 120px">
               <n-gi v-for="componentLinks in componentCard.links">
-                <n-a v-for="componentLink in componentLinks" :href="componentLink.href">
+                <n-a v-for="componentLink in componentLinks" :href="componentLink.href" target="_blank">
                   <n-button quaternary :type="componentLink.type">
                     {{ componentLink.name }}
                   </n-button>
