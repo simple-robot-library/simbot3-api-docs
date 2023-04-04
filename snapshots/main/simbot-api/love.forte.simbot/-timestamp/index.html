@@ -1,0 +1,222 @@
+<!doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>Timestamp</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../";</script>    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/jetbrains-mono.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<body>
+<div class="navigation-wrapper" id="navigation-wrapper">
+    <div id="leftToggler"><span class="icon-toggler"></span></div>
+    <div class="library-name">
+<a href="../../../index.html">
+<span>Simple Robot</span>            </a>    </div>
+    <div>3.0.0-RC.3
+    </div>
+    <div class="pull-right d-flex">
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":simbot-api:dokkaHtmlPartial/main">jvm</button>
+        </div>
+        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+    </div>
+</div>
+<div id="container">
+    <div id="leftColumn">
+        <div id="sideMenu"></div>
+    </div>
+    <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="simbot-api::love.forte.simbot/Timestamp///PointingToDeclaration//-341312757">
+  <div class="breadcrumbs"><a href="../../index.html">simbot-api</a><span class="delimiter">/</span><a href="../index.html">love.forte.simbot</a><span class="delimiter">/</span><span class="current">Timestamp</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Timestamp</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-core/kotlinx.serialization/-serializable/index.html"><span class="token annotation builtin">Serializable</span></a><span class="token punctuation">(</span><span>with<span class="token operator"> = </span><a href="../-timestamp-serializer/index.html">TimestampSerializer::class</a></span><wbr><span class="token punctuation">)</span></div></div><span class="token keyword">sealed </span><span class="token keyword">class </span><a href="index.html">Timestamp</a> : <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-comparable/index.html">Comparable</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html">Timestamp</a><span class="token operator">&gt; </span><span class="clearfix"><span class="floating-right">(<a href="https://github.com/simple-robot/simpler-robot/tree/v3-dev/simbot-api/src/main/kotlin/love/forte/simbot/Timestamp.kt#L37">source</a>)</span></span></div><p class="paragraph">一个 <strong>时间戳</strong> 。</p><p class="paragraph">通常情况下，<a href="second.html">second</a> 或 <a href="millisecond.html">millisecond</a> 得到-1的值，那么就说明此时间戳并不是一个真正的时间戳， 而是一个不被支持的默认值。 通过 <a href="index.html">Timestamp</a> 你可以直接通过 <a href="is-support.html">isSupport</a> 对支持情况进行判断。</p><span class="kdoc-tag"><h4 class="">Author</h4><p class="paragraph">ForteScarlet</p></span><h4 class="">See also</h4><div class="table"><div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../-instant-timestamp/index.html"><span>Instant</span><wbr><span><span>Timestamp</span></span></a></div></span></div><div></div></div></div></div><h4 class="">Inheritors</h4><div class="table"><div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="-not-support/index.html">NotSupport</a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../-instant-timestamp/index.html">InstantTimestamp</a></div></span></div><div></div></div></div></div></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,FUNCTION,PROPERTY">Members</button><button class="section-tab" data-togglable="CONSTRUCTOR,TYPE,FUNCTION,PROPERTY,EXTENSION_PROPERTY,EXTENSION_FUNCTION">Members &amp; Extensions</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="">Constructors</h2>
+        <div class="table"><a data-name="476893935%2FConstructors%2F-341312757" anchor-label="Timestamp" id="476893935%2FConstructors%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-togglable="CONSTRUCTOR" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-timestamp.html"><span><span>Timestamp</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="476893935%2FConstructors%2F-341312757"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">protected </span><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="TYPE">
+        <h2 class="">Types</h2>
+        <div class="table"><a data-name="1091439724%2FClasslikes%2F-341312757" anchor-label="Companion" id="1091439724%2FClasslikes%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-companion/index.html"><span><span>Companion</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1091439724%2FClasslikes%2F-341312757"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-companion/index.html">Companion</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-160254642%2FClasslikes%2F-341312757" anchor-label="NotSupport" id="-160254642%2FClasslikes%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-not-support/index.html"><span>Not</span><wbr><span><span>Support</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-160254642%2FClasslikes%2F-341312757"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-core/kotlinx.serialization/-serializable/index.html"><span class="token annotation builtin">Serializable</span></a></div></div><span class="token keyword">object </span><a href="-not-support/index.html">NotSupport</a> : <a href="index.html">Timestamp</a></div><div class="brief "><p class="paragraph">一个代表"不支持"的时间戳类型.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="16968342%2FFunctions%2F-341312757" anchor-label="compareTo" id="16968342%2FFunctions%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#16968342%2FFunctions%2F-341312757"><span>compare</span><wbr><span><span>To</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="16968342%2FFunctions%2F-341312757"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">operator </span><span class="token keyword">fun </span><a href="index.html#16968342%2FFunctions%2F-341312757"><span class="token function">compareTo</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">other<span class="token operator">: </span><a href="index.html">Timestamp</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1863909971%2FFunctions%2F-341312757" anchor-label="isNotSupport" id="-1863909971%2FFunctions%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../is-not-support.html"><span>is</span><wbr><span>Not</span><wbr><span><span>Support</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1863909971%2FFunctions%2F-341312757"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html">Timestamp</a><span class="token punctuation">.</span><a href="../is-not-support.html"><span class="token function">isNotSupport</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">是否不支持的 timestamp。等同于 <a href="is-support.html">isSupport</a> != true。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="775863168%2FFunctions%2F-341312757" anchor-label="isSupport" id="775863168%2FFunctions%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-support.html"><span>is</span><wbr><span><span>Support</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="775863168%2FFunctions%2F-341312757"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="is-support.html"><span class="token function">isSupport</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">此时间戳是否是一个被支持的真实时间戳。 如果得到false，则代表此时间戳本质上不存在， 且上述 <a href="second.html">second</a> 和 <a href="millisecond.html">millisecond</a> 最终结果应为-1。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="1292920439%2FProperties%2F-341312757" anchor-label="instantValue" id="1292920439%2FProperties%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-togglable="EXTENSION_PROPERTY" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../instant-value.html"><span>instant</span><wbr><span><span>Value</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1292920439%2FProperties%2F-341312757"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="index.html">Timestamp</a><span class="token punctuation">.</span><a href="../instant-value.html">instantValue</a><span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/time/Instant.html">Instant</a></div><div class="brief "><p class="paragraph">将当前时间戳实例转化为 <a href="https://docs.oracle.com/javase/8/docs/api/java/time/Instant.html">Instant</a>。 如果 <a href="index.html">Timestamp</a> 满足 <a href="is-support.html">isSupport</a> != true，则会得到 <a href="https://docs.oracle.com/javase/8/docs/api/java/time/Instant.html#EPOCH--">Instant.EPOCH</a>。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1048457788%2FProperties%2F-341312757" anchor-label="millisecond" id="-1048457788%2FProperties%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="millisecond.html"><span><span>millisecond</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1048457788%2FProperties%2F-341312757"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="millisecond.html">millisecond</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a></div><div class="brief "><p class="paragraph">此时间戳对应的毫秒值。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1883346079%2FProperties%2F-341312757" anchor-label="second" id="-1883346079%2FProperties%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="second.html"><span><span>second</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1883346079%2FProperties%2F-341312757"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="second.html">second</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a></div><div class="brief "><p class="paragraph">此时间戳对应的秒。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2023 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+    </div>
+</div>
+</body>
+</html>
+
