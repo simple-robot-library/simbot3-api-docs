@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>toMessages</title>
+<link href="../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../";</script>    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../styles/style.css" rel="Stylesheet">
+<link href="../../styles/jetbrains-mono.css" rel="Stylesheet">
+<link href="../../styles/main.css" rel="Stylesheet">
+<link href="../../styles/prism.css" rel="Stylesheet">
+<link href="../../styles/logo-styles.css" rel="Stylesheet">
+<script type="text/javascript" src="../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<body>
+<div class="navigation-wrapper" id="navigation-wrapper">
+    <div id="leftToggler"><span class="icon-toggler"></span></div>
+    <div class="library-name">
+<a href="../../index.html">
+<span>Simple Robot Component KOOK</span>            </a>    </div>
+    <div>3.0.0.0-alpha.5-SNAPSHOT
+    </div>
+    <div class="pull-right d-flex">
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":simbot-component-kook-core:dokkaHtmlPartial/main">jvm</button>
+        </div>
+        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+    </div>
+</div>
+<div id="container">
+    <div id="leftColumn">
+        <div id="sideMenu"></div>
+    </div>
+    <div id="main">
+<div class="main-content" data-page-type="member" id="content" pageids="simbot-component-kook-core::love.forte.simbot.component.kook.message//toMessages/love.forte.simbot.kook.event.Event[love.forte.simbot.kook.event.Event.Extra.Text]#/PointingToDeclaration//-1619185879">
+  <div class="breadcrumbs"><a href="../index.html">simbot-component-kook-core</a><span class="delimiter">/</span><a href="index.html">love.forte.simbot.component.kook.message</a><span class="delimiter">/</span><span class="current">toMessages</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>to</span><wbr><span><span>Messages</span></span></h1>
+  </div>
+  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="../../simbot-component-kook-api/love.forte.simbot.kook.event/-event/index.html">Event</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../simbot-component-kook-api/love.forte.simbot.kook.event/-event/-extra/-text/index.html">Event.Extra.Text</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="to-messages.html"><span class="token function">toMessages</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://docs.simbot.forte.love/main/simbot-api/love.forte.simbot.message/-messages/index.html">Messages</a><span class="clearfix"><span class="floating-right">(<a href="https://github.com/simple-robot/simbot-component-kook/tree/main/simbot-component-kook-core/src/main/kotlin/love/forte/simbot/component/kook/message/KookReceiveMessageContent.kt#L155">source</a>)</span></span></div><p class="paragraph">将消息事件相关内容转化为 <a href="https://docs.simbot.forte.love/main/simbot-api/love.forte.simbot.message/-messages/index.html">Messages</a>.</p><table><thead><tr><th><a href="../../simbot-component-kook-api/love.forte.simbot.kook.event/-event/-extra/index.html">Event.Extra</a></th><th>转化规则</th></tr></thead><tbody><tr><td><a href="../../simbot-component-kook-api/love.forte.simbot.kook.event.message/-text-event-extra/index.html">TextEventExtra</a></td><td>将 <a href="../../simbot-component-kook-api/love.forte.simbot.kook.event/-event/content.html">Event.content</a> 转化为 <a href="https://docs.simbot.forte.love/main/simbot-api/love.forte.simbot.message/-text/index.html">Text</a></td></tr><tr><td><a href="../../simbot-component-kook-api/love.forte.simbot.kook.event.message/-image-event-extra/index.html">ImageEventExtra</a></td><td>将 <a href="../../simbot-component-kook-api/love.forte.simbot.kook.event.message/-image-event-extra/attachments.html">ImageEventExtra.attachments</a> 转化为 <a href="-kook-attachment-message/index.html">KookAttachmentMessage</a></td></tr><tr><td><a href="../../simbot-component-kook-api/love.forte.simbot.kook.event.message/-file-event-extra/index.html">FileEventExtra</a></td><td>将 <a href="../../simbot-component-kook-api/love.forte.simbot.kook.event.message/-file-event-extra/attachments.html">FileEventExtra.attachments</a> 转化为 <a href="-kook-attachment-message/index.html">KookAttachmentMessage</a></td></tr><tr><td><a href="../../simbot-component-kook-api/love.forte.simbot.kook.event.message/-video-event-extra/index.html">VideoEventExtra</a></td><td>将 <a href="../../simbot-component-kook-api/love.forte.simbot.kook.event.message/-video-event-extra/attachments.html">VideoEventExtra.attachments</a> 转化为 <a href="-kook-attachment-message/index.html">KookAttachmentMessage</a></td></tr><tr><td><a href="../../simbot-component-kook-api/love.forte.simbot.kook.event.message/-card-event-extra/index.html">CardEventExtra</a></td><td>将 <a href="../../simbot-component-kook-api/love.forte.simbot.kook.event/-event/content.html">Event.content</a> 转化为 <a href="https://docs.simbot.forte.love/main/simbot-api/love.forte.simbot.message/-text/index.html">Text</a></td></tr><tr><td><a href="../../simbot-component-kook-api/love.forte.simbot.kook.event.message/-k-markdown-event-extra/index.html">KMarkdownEventExtra</a></td><td>将 <a href="../../simbot-component-kook-api/love.forte.simbot.kook.event/-event/content.html">Event.content</a> 转化为 <a href="https://docs.simbot.forte.love/main/simbot-api/love.forte.simbot.message/-text/index.html">Text</a>（会对特殊内容进行适当的移除）；<br> 追加其他由 <a href="../../simbot-component-kook-api/love.forte.simbot.kook.event/-event/-extra/-text/mention.html">mention</a>、<a href="../../simbot-component-kook-api/love.forte.simbot.kook.event/-event/-extra/-text/mention-roles.html">mentionRoles</a>、<a href="../../simbot-component-kook-api/love.forte.simbot.kook.event/-event/-extra/-text/is-mention-all.html">isMentionAll</a>、<a href="../../simbot-component-kook-api/love.forte.simbot.kook.event/-event/-extra/-text/is-mention-here.html">isMentionHere</a> 等信息而解析出来的 <a href="https://docs.simbot.forte.love/main/simbot-api/love.forte.simbot.message/-at/index.html">At</a>、<a href="https://docs.simbot.forte.love/main/simbot-api/love.forte.simbot.message/-at-all/index.html">AtAll</a>、<a href="-kook-at-all-here/index.html">KookAtAllHere</a> 等信息。其中，<a href="https://docs.simbot.forte.love/main/simbot-api/love.forte.simbot.message/-at-all/index.html">AtAll</a>、<a href="-kook-at-all-here/index.html">KookAtAllHere</a> 至多只会各自出现一次。</td></tr><tr><td>其他</td><td>将 <a href="../../simbot-component-kook-api/love.forte.simbot.kook.event/-event/content.html">Event.content</a> 转化为 <a href="https://docs.simbot.forte.love/main/simbot-api/love.forte.simbot.message/-text/index.html">Text</a></td></tr></tbody></table></div></div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2023 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+    </div>
+</div>
+</body>
+</html>
+
