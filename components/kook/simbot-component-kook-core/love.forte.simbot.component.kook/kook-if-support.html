@@ -34,9 +34,12 @@
     <div class="library-name">
 <a href="../../index.html">
 <span>Simple Robot Component KOOK</span>            </a>    </div>
-    <div>3.0.0.0-alpha.4
+    <div>3.0.0.0-alpha.5
     </div>
     <div class="pull-right d-flex">
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":simbot-component-kook-core:dokkaHtmlPartial/main">jvm</button>
+        </div>
         <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
         <div id="searchBar"></div>
     </div>
@@ -46,18 +49,18 @@
         <div id="sideMenu"></div>
     </div>
     <div id="main">
-<div class="main-content" id="content" pageids="simbot-component-kook-core::love.forte.simbot.component.kook//kookIfSupport/love.forte.simbot.application.BotRegistrar#kotlin.coroutines.SuspendFunction1[love.forte.simbot.component.kook.KookBotManager,kotlin.Unit]/PointingToDeclaration//-1619185879">
+<div class="main-content" data-page-type="member" id="content" pageids="simbot-component-kook-core::love.forte.simbot.component.kook//kookIfSupport/love.forte.simbot.application.BotRegistrar#kotlin.coroutines.SuspendFunction1[love.forte.simbot.component.kook.KookBotManager,kotlin.Unit]/PointingToDeclaration//-1619185879">
   <div class="breadcrumbs"><a href="../index.html">simbot-component-kook-core</a><span class="delimiter">/</span><a href="index.html">love.forte.simbot.component.kook</a><span class="delimiter">/</span><span class="current">kookIfSupport</span></div>
   <div class="cover ">
     <h1 class="cover"><span>kook</span><wbr><span>If</span><wbr><span><span>Support</span></span></h1>
   </div>
-  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">inline suspend </span><span class="token keyword">fun </span><a href="https://docs.simbot.forte.love/main/simbot-api/love.forte.simbot.application/-bot-registrar/index.html">BotRegistrar</a><span class="token punctuation">.</span><a href="kook-if-support.html"><span class="token function">kookIfSupport</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">crossinline </span>block<span class="token operator">: </span><span class="token keyword">suspend </span><span class="token keyword"></span><a href="-kook-bot-manager/index.html">KookBotManager</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span><span class="clearfix"><span class="floating-right">(<a href="https://github.com/simple-robot/simbot-component-kook/tree/main/simbot-component-kook-core/src/main/kotlin/love/forte/simbot/component/kook/KookBotManagers.kt#L112">source</a>)</span></span></div><p class="paragraph">在 <a href="https://docs.simbot.forte.love/main/simbot-api/love.forte.simbot.application/-application-builder/bots.html">ApplicationBuilder.bots</a> 作用域中寻找并使用 <a href="-kook-bot-manager/index.html">KookBotManager</a>.</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">simpleApplication {<br>    bots {<br>       Kook {<br>            val bot = register("client id", "token") {<br>                // config...<br>            }<br>            bot.start()<br>        }<br>    }<br>}</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">如果当前环境中不存在任何 <a href="-kook-bot-manager/index.html">KookBotManager</a>, 则不会执行 <a href="kook-if-support.html">block</a>。</p></div></div>
+  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">inline suspend </span><span class="token keyword">fun </span><a href="https://docs.simbot.forte.love/main/simbot-api/love.forte.simbot.application/-bot-registrar/index.html">BotRegistrar</a><span class="token punctuation">.</span><a href="kook-if-support.html"><span class="token function">kookIfSupport</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">crossinline </span>block<span class="token operator">: </span><span class="token keyword">suspend </span><span class="token keyword"></span><a href="-kook-bot-manager/index.html">KookBotManager</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span><span class="clearfix"><span class="floating-right">(<a href="https://github.com/simple-robot/simbot-component-kook/tree/main/simbot-component-kook-core/src/main/kotlin/love/forte/simbot/component/kook/KookBotManagers.kt#L131">source</a>)</span></span></div><p class="paragraph">在 <a href="https://docs.simbot.forte.love/main/simbot-api/love.forte.simbot.application/-application-builder/bots.html">ApplicationBuilder.bots</a> 作用域中寻找并使用 <a href="-kook-bot-manager/index.html">KookBotManager</a>.</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">simpleApplication {<br>    bots {<br>       Kook {<br>            val bot = register("client id", "token") {<br>                // config...<br>            }<br>            bot.start()<br>        }<br>    }<br>}</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">如果当前环境中不存在任何 <a href="-kook-bot-manager/index.html">KookBotManager</a>, 则不会执行 <a href="kook-if-support.html">block</a>。</p></div></div>
 </div>
       <div class="footer">
         <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2023 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
       </div>
     </div>
 </div>
-
-</body></html>
+</body>
+</html>
 

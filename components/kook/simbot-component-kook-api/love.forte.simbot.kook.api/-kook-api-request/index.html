@@ -34,9 +34,12 @@
     <div class="library-name">
 <a href="../../../index.html">
 <span>Simple Robot Component KOOK</span>            </a>    </div>
-    <div>3.0.0.0-alpha.4
+    <div>3.0.0.0-alpha.5
     </div>
     <div class="pull-right d-flex">
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":simbot-component-kook-api:dokkaHtmlPartial/main">jvm</button>
+        </div>
         <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
         <div id="searchBar"></div>
     </div>
@@ -46,213 +49,253 @@
         <div id="sideMenu"></div>
     </div>
     <div id="main">
-<div class="main-content" id="content" pageids="simbot-component-kook-api::love.forte.simbot.kook.api/KookApiRequest///PointingToDeclaration//1365149280">
+<div class="main-content" data-page-type="classlike" id="content" pageids="simbot-component-kook-api::love.forte.simbot.kook.api/KookApiRequest///PointingToDeclaration//1365149280">
   <div class="breadcrumbs"><a href="../../index.html">simbot-component-kook-api</a><span class="delimiter">/</span><a href="../index.html">love.forte.simbot.kook.api</a><span class="delimiter">/</span><span class="current">KookApiRequest</span></div>
   <div class="cover ">
     <h1 class="cover"><span>Kook</span><wbr><span>Api</span><wbr><span><span>Request</span></span></h1>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook-api:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">class </span><a href="index.html">KookApiRequest</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html">T</a><span class="token operator">&gt;</span> : <a href="https://docs.simbot.forte.love/main/simbot-util-api-requestor-core/love.forte.simbot.util.api.requestor/-a-p-i/index.html">API</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../-kook-api-requestor/index.html">KookApiRequestor</a><span class="token punctuation">, </span><span class="token keyword"></span><a href="index.html">T</a><span class="token operator">&gt; </span><span class="clearfix"><span class="floating-right">(<a href="https://github.com/simple-robot/simbot-component-kook/tree/main/simbot-component-kook-api/src/main/kotlin/love/forte/simbot/kook/api/KookApiRequest.kt#L40">source</a>)</span></span></div><p class="paragraph">代表、包装了一个 Kook api的请求。</p><h3 class=""> 反序列化</h3><p class="paragraph"><a href="index.html">KookApiRequest</a> 面向 ktor, 并基于 <code class="lang-kotlin">kotlinx.serialization</code> 进行反序列化。</p><h3 class=""> Url内容</h3><p class="paragraph">最终进行请求的 <a href="url.html">url</a> 中部分参数（例如host）来自于 <a href="../../love.forte.simbot.kook/-kook/index.html">Kook</a>.</p><h3 class=""> 不可变</h3><p class="paragraph">此接口的实现类应当是不可变、可复用的。</p></div></div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook-api:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">class </span><a href="index.html">KookApiRequest</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html">T</a><span class="token operator">&gt;</span> : <a href="https://docs.simbot.forte.love/main/simbot-util-api-requestor-core/love.forte.simbot.util.api.requestor/-a-p-i/index.html">API</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../-kook-api-requestor/index.html">KookApiRequestor</a><span class="token punctuation">, </span><span class="token keyword"></span><a href="index.html">T</a><span class="token operator">&gt; </span><span class="clearfix"><span class="floating-right">(<a href="https://github.com/simple-robot/simbot-component-kook/tree/main/simbot-component-kook-api/src/main/kotlin/love/forte/simbot/kook/api/KookApiRequest.kt#L55">source</a>)</span></span></div><p class="paragraph">代表、包装了一个 Kook api的请求。</p><h3 class=""> 反序列化</h3><p class="paragraph"><a href="index.html">KookApiRequest</a> 面向 ktor, 并基于 <code class="lang-kotlin">kotlinx.serialization</code> 进行反序列化。</p><h3 class=""> Url内容</h3><p class="paragraph">最终进行请求的 <a href="url.html">url</a> 中部分参数（例如host）来自于 <a href="../../love.forte.simbot.kook/-kook/index.html">Kook</a>.</p><h3 class=""> 不可变</h3><p class="paragraph">此接口的实现类应当是不可变、可复用的。</p><h4 class="">Inheritors</h4><div class="table"><div class="table-row" data-filterable-current=":simbot-component-kook-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../-base-kook-api-request/index.html">BaseKookApiRequest</a></div></span></div><div></div></div></div></div></div></div>
   </div>
   <div class="tabbedcontent">
-    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Types">Types</button><button class="section-tab" data-togglable="Constructors">Constructors</button><button class="section-tab" data-togglable="Functions">Functions</button><button class="section-tab" data-togglable="Properties">Properties</button><button class="section-tab" data-togglable="Inheritors">Inheritors</button></div>
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,FUNCTION,PROPERTY">Members</button></div>
     <div class="tabs-section-body">
-      <h2 class="tabbedcontent">Constructors</h2>
-      <div class="table" data-togglable="Constructors"><a data-name="-165317277%2FConstructors%2F1365149280" anchor-label="KookApiRequest" id="-165317277%2FConstructors%2F1365149280" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":simbot-component-kook-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue TabbedContent">
-            <div class=""><span class="inline-flex">
-                <div><a href="-kook-api-request.html"><span>Kook</span><wbr><span>Api</span><wbr><span><span>Request</span></span></a></div>
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="">Constructors</h2>
+        <div class="table"><a data-name="-165317277%2FConstructors%2F1365149280" anchor-label="KookApiRequest" id="-165317277%2FConstructors%2F1365149280" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-togglable="CONSTRUCTOR" data-filterable-current=":simbot-component-kook-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-kook-api-request.html"><span>Kook</span><wbr><span>Api</span><wbr><span><span>Request</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-165317277%2FConstructors%2F1365149280"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook-api:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="-kook-api-request.html"><span class="token function">KookApiRequest</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook-api:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <h2 class="">Types</h2>
-      <div class="table" data-togglable="Types"><a data-name="-1478572407%2FClasslikes%2F1365149280" anchor-label="Companion" id="-1478572407%2FClasslikes%2F1365149280" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":simbot-component-kook-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="-companion/index.html"><span><span>Companion</span></span></a></div>
+      <div data-togglable="TYPE">
+        <h2 class="">Types</h2>
+        <div class="table"><a data-name="-1478572407%2FClasslikes%2F1365149280" anchor-label="Companion" id="-1478572407%2FClasslikes%2F1365149280" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-kook-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-companion/index.html"><span><span>Companion</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1478572407%2FClasslikes%2F1365149280"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook-api:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-companion/index.html">Companion</a></div></div></div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook-api:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-companion/index.html">Companion</a></div></div></div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <h2 class="">Functions</h2>
-      <div class="table" data-togglable="Functions"><a data-name="207138780%2FFunctions%2F1365149280" anchor-label="request" id="207138780%2FFunctions%2F1365149280" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":simbot-component-kook-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="request.html"><span><span>request</span></span></a></div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="207138780%2FFunctions%2F1365149280" anchor-label="request" id="207138780%2FFunctions%2F1365149280" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-kook-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="request.html"><span><span>request</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="207138780%2FFunctions%2F1365149280"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook-api:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="request.html"><span class="token function">request</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">client<span class="token operator">: </span><a href="https://api.ktor.io/ktor-client-core/io.ktor.client/-http-client/index.html">HttpClient</a><span class="token punctuation">, </span></span><span class="parameter ">authorization<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">postChecker<span class="token operator">: </span><span class="token keyword">suspend </span><span class="token punctuation">(</span><span class="token keyword"></span><a href="https://api.ktor.io/ktor-client-core/io.ktor.client.statement/-http-response/index.html">HttpResponse</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a><span class="token operator"> = </span>{}</span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-api-result/index.html">ApiResult</a></div><div class="brief "><p class="paragraph">通过 <a href="request.html">client</a> 执行网络请求并尝试得到结果。</p></div></div></div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook-api:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="request.html"><span class="token function">request</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">client<span class="token operator">: </span><a href="https://api.ktor.io/ktor-client-core/io.ktor.client/-http-client/index.html">HttpClient</a><span class="token punctuation">, </span></span><span class="parameter ">authorization<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">postChecker<span class="token operator">: </span><span class="token keyword">suspend </span><span class="token punctuation">(</span><span class="token keyword"></span><a href="https://api.ktor.io/ktor-client-core/io.ktor.client.statement/-http-response/index.html">HttpResponse</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a><span class="token operator"> = </span>{}</span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-api-result/index.html">ApiResult</a></div><div class="brief "><p class="paragraph">通过 <a href="request.html">client</a> 执行网络请求并尝试得到结果。</p></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
+<a data-name="-1540241820%2FFunctions%2F1365149280" anchor-label="requestAsync" id="-1540241820%2FFunctions%2F1365149280" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-kook-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="request-async.html"><span>request</span><wbr><span><span>Async</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1540241820%2FFunctions%2F1365149280"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook-api:dokkaHtmlPartial/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://docs.simbot.forte.love/main/simbot-api/love.forte.simbot/-api4-j/index.html"><span class="token annotation builtin">Api4J</span></a></div><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-overloads/index.html"><span class="token annotation builtin">JvmOverloads</span></a></div></div><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="request-async.html"><span class="token function">requestAsync</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">client<span class="token operator">: </span><a href="https://api.ktor.io/ktor-client-core/io.ktor.client/-http-client/index.html">HttpClient</a><span class="token punctuation">, </span></span><span class="parameter ">authorization<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">postChecker<span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Consumer.html">Consumer</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://api.ktor.io/ktor-client-core/io.ktor.client.statement/-http-response/index.html">HttpResponse</a><span class="token operator">&gt;</span><span class="token operator"> = </span>defaultRequestPostChecker</span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html">CompletableFuture</a><span class="token operator">&lt;</span><span class="token keyword">out </span><a href="../-api-result/index.html">ApiResult</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">异步地请求当前 API。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
 <a data-name="1675617591%2FFunctions%2F1365149280" anchor-label="requestBlocking" id="1675617591%2FFunctions%2F1365149280" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":simbot-component-kook-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="request-blocking.html"><span>request</span><wbr><span><span>Blocking</span></span></a></div>
+          <div class="table-row" data-filterable-current=":simbot-component-kook-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="request-blocking.html"><span>request</span><wbr><span><span>Blocking</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1675617591%2FFunctions%2F1365149280"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook-api:dokkaHtmlPartial/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://docs.simbot.forte.love/main/simbot-api/love.forte.simbot/-api4-j/index.html"><span class="token annotation builtin">Api4J</span></a></div><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-overloads/index.html"><span class="token annotation builtin">JvmOverloads</span></a></div></div><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="request-blocking.html"><span class="token function">requestBlocking</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">client<span class="token operator">: </span><a href="https://api.ktor.io/ktor-client-core/io.ktor.client/-http-client/index.html">HttpClient</a><span class="token punctuation">, </span></span><span class="parameter ">authorization<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">postChecker<span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Consumer.html">Consumer</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://api.ktor.io/ktor-client-core/io.ktor.client.statement/-http-response/index.html">HttpResponse</a><span class="token operator">&gt;</span><span class="token operator"> = </span>defaultRequestPostChecker</span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-api-result/index.html">ApiResult</a></div><div class="brief "><p class="paragraph">通过 <a href="request-blocking.html">client</a> 执行网络请求并尝试得到结果。</p></div></div></div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook-api:dokkaHtmlPartial/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://docs.simbot.forte.love/main/simbot-api/love.forte.simbot/-api4-j/index.html"><span class="token annotation builtin">Api4J</span></a></div><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-overloads/index.html"><span class="token annotation builtin">JvmOverloads</span></a></div></div><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="request-blocking.html"><span class="token function">requestBlocking</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">client<span class="token operator">: </span><a href="https://api.ktor.io/ktor-client-core/io.ktor.client/-http-client/index.html">HttpClient</a><span class="token punctuation">, </span></span><span class="parameter ">authorization<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">postChecker<span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Consumer.html">Consumer</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://api.ktor.io/ktor-client-core/io.ktor.client.statement/-http-response/index.html">HttpResponse</a><span class="token operator">&gt;</span><span class="token operator"> = </span>defaultRequestPostChecker</span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-api-result/index.html">ApiResult</a></div><div class="brief "><p class="paragraph">阻塞地请求当前 API。</p></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-<a data-name="1263129487%2FFunctions%2F1365149280" anchor-label="requestBlockingBy" id="1263129487%2FFunctions%2F1365149280" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":simbot-component-kook-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="request-blocking-by.html"><span>request</span><wbr><span>Blocking</span><wbr><span><span>By</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1263129487%2FFunctions%2F1365149280"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook-api:dokkaHtmlPartial/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://docs.simbot.forte.love/main/simbot-api/love.forte.simbot/-api4-j/index.html"><span class="token annotation builtin">Api4J</span></a></div></div><span class="token keyword"></span><span class="token keyword">fun </span><a href="request-blocking-by.html"><span class="token function">requestBlockingBy</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">requester<span class="token operator">: </span><a href="../-kook-api-requestor/index.html">KookApiRequestor</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">T</a></div></div></div>
-              </div>
-            </div>
-          </div>
-        </div>
 <a data-name="1418971386%2FFunctions%2F1365149280" anchor-label="requestBy" id="1418971386%2FFunctions%2F1365149280" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":simbot-component-kook-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="request-by.html"><span>request</span><wbr><span><span>By</span></span></a></div>
+          <div class="table-row" data-filterable-current=":simbot-component-kook-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="request-by.html"><span>request</span><wbr><span><span>By</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1418971386%2FFunctions%2F1365149280"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook-api:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">suspend override </span><span class="token keyword">fun </span><a href="request-by.html"><span class="token function">requestBy</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">requestor<span class="token operator">: </span><a href="../-kook-api-requestor/index.html">KookApiRequestor</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">T</a></div></div></div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook-api:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">suspend override </span><span class="token keyword">fun </span><a href="request-by.html"><span class="token function">requestBy</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">requestor<span class="token operator">: </span><a href="../-kook-api-requestor/index.html">KookApiRequestor</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">T</a></div><div class="brief "><p class="paragraph">根据 <a href="request-by.html">requestor</a> 中的信息请求当前API。</p></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
+<a data-name="522882740%2FFunctions%2F1365149280" anchor-label="requestByAsync" id="522882740%2FFunctions%2F1365149280" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-kook-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="request-by-async.html"><span>request</span><wbr><span>By</span><wbr><span><span>Async</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="522882740%2FFunctions%2F1365149280"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook-api:dokkaHtmlPartial/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://docs.simbot.forte.love/main/simbot-api/love.forte.simbot/-api4-j/index.html"><span class="token annotation builtin">Api4J</span></a></div></div><span class="token keyword"></span><span class="token keyword">fun </span><a href="request-by-async.html"><span class="token function">requestByAsync</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">requestor<span class="token operator">: </span><a href="../-kook-api-requestor/index.html">KookApiRequestor</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html">CompletableFuture</a><span class="token operator">&lt;</span><span class="token keyword">out </span><a href="index.html">T</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">异步的请求当前API。如果 <a href="request-by-async.html">requestor</a> 是 <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-coroutine-scope/index.html">CoroutineScope</a> 类型则会使用其作用域。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1453002191%2FFunctions%2F1365149280" anchor-label="requestByBlocking" id="1453002191%2FFunctions%2F1365149280" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-kook-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="request-by-blocking.html"><span>request</span><wbr><span>By</span><wbr><span><span>Blocking</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1453002191%2FFunctions%2F1365149280"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook-api:dokkaHtmlPartial/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://docs.simbot.forte.love/main/simbot-api/love.forte.simbot/-api4-j/index.html"><span class="token annotation builtin">Api4J</span></a></div></div><span class="token keyword"></span><span class="token keyword">fun </span><a href="request-by-blocking.html"><span class="token function">requestByBlocking</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">requestor<span class="token operator">: </span><a href="../-kook-api-requestor/index.html">KookApiRequestor</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">T</a></div><div class="brief "><p class="paragraph">阻塞的请求当前API。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
 <a data-name="166590412%2FFunctions%2F1365149280" anchor-label="requestData" id="166590412%2FFunctions%2F1365149280" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":simbot-component-kook-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="request-data.html"><span>request</span><wbr><span><span>Data</span></span></a></div>
+          <div class="table-row" data-filterable-current=":simbot-component-kook-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="request-data.html"><span>request</span><wbr><span><span>Data</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="166590412%2FFunctions%2F1365149280"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook-api:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="request-data.html"><span class="token function">requestData</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">client<span class="token operator">: </span><a href="https://api.ktor.io/ktor-client-core/io.ktor.client/-http-client/index.html">HttpClient</a><span class="token punctuation">, </span></span><span class="parameter ">authorization<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">decoder<span class="token operator">: </span><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-json/kotlinx.serialization.json/-json/index.html">Json</a><span class="token operator"> = </span>DEFAULT_JSON</span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">T</a></div><div class="brief "><p class="paragraph">通过 <a href="request-data.html">client</a> 执行网络请求并尝试得到结果。</p></div></div></div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook-api:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="request-data.html"><span class="token function">requestData</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">client<span class="token operator">: </span><a href="https://api.ktor.io/ktor-client-core/io.ktor.client/-http-client/index.html">HttpClient</a><span class="token punctuation">, </span></span><span class="parameter ">authorization<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">decoder<span class="token operator">: </span><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-json/kotlinx.serialization.json/-json/index.html">Json</a><span class="token operator"> = </span>DEFAULT_JSON</span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">T</a></div><div class="brief "><p class="paragraph">通过 <a href="request-data.html">client</a> 执行网络请求并尝试得到结果。</p></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
+<a data-name="1650156736%2FFunctions%2F1365149280" anchor-label="requestDataAsync" id="1650156736%2FFunctions%2F1365149280" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-kook-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="request-data-async.html"><span>request</span><wbr><span>Data</span><wbr><span><span>Async</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1650156736%2FFunctions%2F1365149280"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook-api:dokkaHtmlPartial/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://docs.simbot.forte.love/main/simbot-api/love.forte.simbot/-api4-j/index.html"><span class="token annotation builtin">Api4J</span></a></div><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-overloads/index.html"><span class="token annotation builtin">JvmOverloads</span></a></div></div><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="request-data-async.html"><span class="token function">requestDataAsync</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">client<span class="token operator">: </span><a href="https://api.ktor.io/ktor-client-core/io.ktor.client/-http-client/index.html">HttpClient</a><span class="token punctuation">, </span></span><span class="parameter ">authorization<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">decoder<span class="token operator">: </span><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-json/kotlinx.serialization.json/-json/index.html">Json</a><span class="token operator"> = </span>DEFAULT_JSON</span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html">CompletableFuture</a><span class="token operator">&lt;</span><span class="token keyword">out </span><a href="index.html">T</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">异步地请求当前API并得到结果。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
 <a data-name="424925217%2FFunctions%2F1365149280" anchor-label="requestDataBlocking" id="424925217%2FFunctions%2F1365149280" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":simbot-component-kook-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="request-data-blocking.html"><span>request</span><wbr><span>Data</span><wbr><span><span>Blocking</span></span></a></div>
+          <div class="table-row" data-filterable-current=":simbot-component-kook-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="request-data-blocking.html"><span>request</span><wbr><span>Data</span><wbr><span><span>Blocking</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="424925217%2FFunctions%2F1365149280"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook-api:dokkaHtmlPartial/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://docs.simbot.forte.love/main/simbot-api/love.forte.simbot/-api4-j/index.html"><span class="token annotation builtin">Api4J</span></a></div><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-overloads/index.html"><span class="token annotation builtin">JvmOverloads</span></a></div></div><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="request-data-blocking.html"><span class="token function">requestDataBlocking</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">client<span class="token operator">: </span><a href="https://api.ktor.io/ktor-client-core/io.ktor.client/-http-client/index.html">HttpClient</a><span class="token punctuation">, </span></span><span class="parameter ">authorization<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">decoder<span class="token operator">: </span><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-json/kotlinx.serialization.json/-json/index.html">Json</a><span class="token operator"> = </span>DEFAULT_JSON</span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">T</a></div><div class="brief "><p class="paragraph">通过 <a href="request-data-blocking.html">client</a> 执行网络请求并尝试得到结果。</p></div></div></div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook-api:dokkaHtmlPartial/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://docs.simbot.forte.love/main/simbot-api/love.forte.simbot/-api4-j/index.html"><span class="token annotation builtin">Api4J</span></a></div><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-overloads/index.html"><span class="token annotation builtin">JvmOverloads</span></a></div></div><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="request-data-blocking.html"><span class="token function">requestDataBlocking</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">client<span class="token operator">: </span><a href="https://api.ktor.io/ktor-client-core/io.ktor.client/-http-client/index.html">HttpClient</a><span class="token punctuation">, </span></span><span class="parameter ">authorization<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">decoder<span class="token operator">: </span><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-json/kotlinx.serialization.json/-json/index.html">Json</a><span class="token operator"> = </span>DEFAULT_JSON</span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">T</a></div><div class="brief "><p class="paragraph">阻塞地请求当前API并得到结果。</p></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 <a data-name="1012952950%2FFunctions%2F1365149280" anchor-label="requestFinishingAction" id="1012952950%2FFunctions%2F1365149280" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":simbot-component-kook-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="request-finishing-action.html"><span>request</span><wbr><span>Finishing</span><wbr><span><span>Action</span></span></a></div>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":simbot-component-kook-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="request-finishing-action.html"><span>request</span><wbr><span>Finishing</span><wbr><span><span>Action</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1012952950%2FFunctions%2F1365149280"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook-api:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">protected </span><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="https://api.ktor.io/ktor-client-core/io.ktor.client.request/-http-request-builder/index.html">HttpRequestBuilder</a><span class="token punctuation">.</span><a href="request-finishing-action.html"><span class="token function">requestFinishingAction</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">可以为 <a href="request.html">request</a> 提供更多行为的函数，例如提供body、重置contentType等。</p></div></div></div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook-api:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">protected </span><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="https://api.ktor.io/ktor-client-core/io.ktor.client.request/-http-request-builder/index.html">HttpRequestBuilder</a><span class="token punctuation">.</span><a href="request-finishing-action.html"><span class="token function">requestFinishingAction</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">可以为 <a href="request.html">request</a> 提供更多行为的函数，例如提供body、重置contentType等。</p></div></div></div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <h2 class="">Properties</h2>
-      <div class="table" data-togglable="Properties"><a data-name="233277079%2FProperties%2F1365149280" anchor-label="method" id="233277079%2FProperties%2F1365149280" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":simbot-component-kook-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="method.html"><span><span>method</span></span></a></div>
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="233277079%2FProperties%2F1365149280" anchor-label="method" id="233277079%2FProperties%2F1365149280" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-kook-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="method.html"><span><span>method</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="233277079%2FProperties%2F1365149280"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook-api:dokkaHtmlPartial/main"><a data-name="233277079%2FProperties%2F1365149280" anchor-label="method" id="233277079%2FProperties%2F1365149280" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="method.html">method</a><span class="token operator">: </span><a href="https://api.ktor.io/ktor-http/io.ktor.http/-http-method/index.html">HttpMethod</a></div><div class="brief "><a data-name="233277079%2FProperties%2F1365149280" anchor-label="method" id="233277079%2FProperties%2F1365149280" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main"></a><p class="paragraph">此请求的 method.</p></div></div></div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook-api:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="method.html">method</a><span class="token operator">: </span><a href="https://api.ktor.io/ktor-http/io.ktor.http/-http-method/index.html">HttpMethod</a></div><div class="brief "><p class="paragraph">此请求的 method.</p></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 <a data-name="-242996152%2FProperties%2F1365149280" anchor-label="resultDeserializer" id="-242996152%2FProperties%2F1365149280" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":simbot-component-kook-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="result-deserializer.html"><span>result</span><wbr><span><span>Deserializer</span></span></a></div>
+          <div class="table-row" data-filterable-current=":simbot-component-kook-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="result-deserializer.html"><span>result</span><wbr><span><span>Deserializer</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-242996152%2FProperties%2F1365149280"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook-api:dokkaHtmlPartial/main"><a data-name="-242996152%2FProperties%2F1365149280" anchor-label="resultDeserializer" id="-242996152%2FProperties%2F1365149280" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="result-deserializer.html">resultDeserializer</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-core/kotlinx.serialization/-deserialization-strategy/index.html">DeserializationStrategy</a><span class="token operator">&lt;</span><span class="token keyword">out </span><a href="index.html">T</a><span class="token operator">&gt;</span></div><div class="brief "><a data-name="-242996152%2FProperties%2F1365149280" anchor-label="resultDeserializer" id="-242996152%2FProperties%2F1365149280" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main"></a><p class="paragraph">得到响应值的反序列化器.</p></div></div></div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook-api:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="result-deserializer.html">resultDeserializer</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-core/kotlinx.serialization/-deserialization-strategy/index.html">DeserializationStrategy</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html">T</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">得到响应值的反序列化器.</p></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 <a data-name="1092330099%2FProperties%2F1365149280" anchor-label="url" id="1092330099%2FProperties%2F1365149280" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":simbot-component-kook-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="url.html"><span><span>url</span></span></a></div>
+          <div class="table-row" data-filterable-current=":simbot-component-kook-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="url.html"><span><span>url</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1092330099%2FProperties%2F1365149280"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook-api:dokkaHtmlPartial/main"><a data-name="1092330099%2FProperties%2F1365149280" anchor-label="url" id="1092330099%2FProperties%2F1365149280" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="url.html">url</a><span class="token operator">: </span><a href="https://api.ktor.io/ktor-http/io.ktor.http/-url/index.html">Url</a></div><div class="brief "><a data-name="1092330099%2FProperties%2F1365149280" anchor-label="url" id="1092330099%2FProperties%2F1365149280" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main"></a><p class="paragraph">此请求最终对应的url。最终拼接的URL中部分参数（例如host）来自于 <a href="../../love.forte.simbot.kook/-kook/index.html">Kook</a>.</p></div></div></div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook-api:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="url.html">url</a><span class="token operator">: </span><a href="https://api.ktor.io/ktor-http/io.ktor.http/-url/index.html">Url</a></div><div class="brief "><p class="paragraph">此请求最终对应的url。最终拼接的URL中部分参数（例如host）来自于 <a href="../../love.forte.simbot.kook/-kook/index.html">Kook</a>.</p></div></div></div>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-      <h2 class="">Inheritors</h2>
-      <div class="table" data-togglable="Inheritors"><a data-name="-1244757706%2FInheritors%2F1365149280" anchor-label="BaseKookApiRequest" id="-1244757706%2FInheritors%2F1365149280" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":simbot-component-kook-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="../-base-kook-api-request/index.html">BaseKookApiRequest</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1244757706%2FInheritors%2F1365149280"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div></div>
           </div>
         </div>
       </div>
@@ -264,6 +307,6 @@
       </div>
     </div>
 </div>
-
-</body></html>
+</body>
+</html>
 

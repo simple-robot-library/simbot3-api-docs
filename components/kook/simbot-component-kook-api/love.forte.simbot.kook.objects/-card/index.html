@@ -34,9 +34,12 @@
     <div class="library-name">
 <a href="../../../index.html">
 <span>Simple Robot Component KOOK</span>            </a>    </div>
-    <div>3.0.0.0-alpha.4
+    <div>3.0.0.0-alpha.5
     </div>
     <div class="pull-right d-flex">
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":simbot-component-kook-api:dokkaHtmlPartial/main">jvm</button>
+        </div>
         <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
         <div id="searchBar"></div>
     </div>
@@ -46,104 +49,108 @@
         <div id="sideMenu"></div>
     </div>
     <div id="main">
-<div class="main-content" id="content" pageids="simbot-component-kook-api::love.forte.simbot.kook.objects/Card///PointingToDeclaration//1365149280">
+<div class="main-content" data-page-type="classlike" id="content" pageids="simbot-component-kook-api::love.forte.simbot.kook.objects/Card///PointingToDeclaration//1365149280">
   <div class="breadcrumbs"><a href="../../index.html">simbot-component-kook-api</a><span class="delimiter">/</span><a href="../index.html">love.forte.simbot.kook.objects</a><span class="delimiter">/</span><span class="current">Card</span></div>
   <div class="cover ">
     <h1 class="cover"><span><span>Card</span></span></h1>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook-api:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="index.html">Card</a>&nbsp;<span><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-overloads/index.html"><span class="token annotation builtin">JvmOverloads</span></a>&nbsp;</span><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>theme<span class="token operator">: </span><a href="../-theme/index.html">Theme</a><span class="token operator"> = </span>Theme.PRIMARY<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>color<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>size<span class="token operator">: </span><a href="../-size/index.html">Size</a><span class="token operator"> = </span>Size.Default<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>modules<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../-card-module/index.html">CardModule</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="clearfix"><span class="floating-right">(<a href="https://github.com/simple-robot/simbot-component-kook/tree/main/simbot-component-kook-api/src/main/kotlin/love/forte/simbot/kook/objects/Card.kt#L227">source</a>)</span></span></div><p class="paragraph"><a href="https://developer.kaiheila.cn/doc/cardmessage#%E5%8D%A1%E7%89%87">卡片</a>.</p><p class="paragraph">e.g.</p><div class="sample-container"><pre><code class="block lang-json" theme="idea">{<br>    "type": "card",<br>    "theme" : "primary|warning|danger|info|none...", // 卡片风格，默认为primay<br>    "color":"#aaaaaa", //色值<br>    "size": "sm|lg", //目前只支持sm与lg, 如果不填为lg。 lg仅在PC端有效, 在移动端不管填什么，均为sm。<br>    "modules": [<br>        // modules...<br>    ]<br>}</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook-api:dokkaHtmlPartial/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-core/kotlinx.serialization/-serializable/index.html"><span class="token annotation builtin">Serializable</span></a></div></div><span class="token keyword">data </span><span class="token keyword">class </span><a href="index.html">Card</a>&nbsp;<span><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-overloads/index.html"><span class="token annotation builtin">JvmOverloads</span></a>&nbsp;</span><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>theme<span class="token operator">: </span><a href="../-theme/index.html">Theme</a><span class="token operator"> = </span>Theme.PRIMARY<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>color<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>size<span class="token operator">: </span><a href="../-size/index.html">Size</a><span class="token operator"> = </span>Size.Default<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>modules<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../-card-module/index.html">CardModule</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="clearfix"><span class="floating-right">(<a href="https://github.com/simple-robot/simbot-component-kook/tree/main/simbot-component-kook-api/src/main/kotlin/love/forte/simbot/kook/objects/Card.kt#L246">source</a>)</span></span></div><p class="paragraph"><a href="https://developer.kaiheila.cn/doc/cardmessage#%E5%8D%A1%E7%89%87">卡片</a>.</p><p class="paragraph">e.g.</p><div class="sample-container"><pre><code class="block lang-json" theme="idea">{<br>    "type": "card",<br>    "theme" : "primary|warning|danger|info|none...", // 卡片风格，默认为primay<br>    "color":"#aaaaaa", //色值<br>    "size": "sm|lg", //目前只支持sm与lg, 如果不填为lg。 lg仅在PC端有效, 在移动端不管填什么，均为sm。<br>    "modules": [<br>        // modules...<br>    ]<br>}</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
   </div>
   <div class="tabbedcontent">
-    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Constructors">Constructors</button><button class="section-tab" data-togglable="Properties">Properties</button></div>
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,FUNCTION,PROPERTY">Members</button></div>
     <div class="tabs-section-body">
-      <h2 class="tabbedcontent">Constructors</h2>
-      <div class="table" data-togglable="Constructors"><a data-name="-551847275%2FConstructors%2F1365149280" anchor-label="Card" id="-551847275%2FConstructors%2F1365149280" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":simbot-component-kook-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue TabbedContent">
-            <div class=""><span class="inline-flex">
-                <div><a href="-card.html"><span><span>Card</span></span></a></div>
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="">Constructors</h2>
+        <div class="table"><a data-name="-551847275%2FConstructors%2F1365149280" anchor-label="Card" id="-551847275%2FConstructors%2F1365149280" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-togglable="CONSTRUCTOR" data-filterable-current=":simbot-component-kook-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-card.html"><span><span>Card</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-551847275%2FConstructors%2F1365149280"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook-api:dokkaHtmlPartial/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-overloads/index.html"><span class="token annotation builtin">JvmOverloads</span></a></div></div><span class="token keyword"></span><span class="token keyword">fun </span><a href="-card.html"><span class="token function">Card</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">theme<span class="token operator">: </span><a href="../-theme/index.html">Theme</a><span class="token operator"> = </span>Theme.PRIMARY<span class="token punctuation">, </span></span><span class="parameter ">color<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">size<span class="token operator">: </span><a href="../-size/index.html">Size</a><span class="token operator"> = </span>Size.Default<span class="token punctuation">, </span></span><span class="parameter ">modules<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../-card-module/index.html">CardModule</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div></div></div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook-api:dokkaHtmlPartial/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-overloads/index.html"><span class="token annotation builtin">JvmOverloads</span></a></div></div><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">theme<span class="token operator">: </span><a href="../-theme/index.html">Theme</a><span class="token operator"> = </span>Theme.PRIMARY<span class="token punctuation">, </span></span><span class="parameter ">color<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">size<span class="token operator">: </span><a href="../-size/index.html">Size</a><span class="token operator"> = </span>Size.Default<span class="token punctuation">, </span></span><span class="parameter ">modules<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../-card-module/index.html">CardModule</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <h2 class="">Properties</h2>
-      <div class="table" data-togglable="Properties"><a data-name="1622205566%2FProperties%2F1365149280" anchor-label="color" id="1622205566%2FProperties%2F1365149280" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":simbot-component-kook-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="color.html"><span><span>color</span></span></a></div>
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="1622205566%2FProperties%2F1365149280" anchor-label="color" id="1622205566%2FProperties%2F1365149280" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-kook-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="color.html"><span><span>color</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1622205566%2FProperties%2F1365149280"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook-api:dokkaHtmlPartial/main"><a data-name="1622205566%2FProperties%2F1365149280" anchor-label="color" id="1622205566%2FProperties%2F1365149280" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="color.html">color</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null</div><div class="brief "><a data-name="1622205566%2FProperties%2F1365149280" anchor-label="color" id="1622205566%2FProperties%2F1365149280" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main"></a><p class="paragraph">色值</p></div></div></div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook-api:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="color.html">color</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null</div><div class="brief "><p class="paragraph">色值</p></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 <a data-name="544603098%2FProperties%2F1365149280" anchor-label="modules" id="544603098%2FProperties%2F1365149280" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":simbot-component-kook-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="modules.html"><span><span>modules</span></span></a></div>
+          <div class="table-row" data-filterable-current=":simbot-component-kook-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="modules.html"><span><span>modules</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="544603098%2FProperties%2F1365149280"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook-api:dokkaHtmlPartial/main"><a data-name="544603098%2FProperties%2F1365149280" anchor-label="modules" id="544603098%2FProperties%2F1365149280" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="modules.html">modules</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../-card-module/index.html">CardModule</a><span class="token operator">&gt;</span></div><div class="brief "><a data-name="544603098%2FProperties%2F1365149280" anchor-label="modules" id="544603098%2FProperties%2F1365149280" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main"></a><p class="paragraph">modules只能为模块.</p></div></div></div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook-api:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="modules.html">modules</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../-card-module/index.html">CardModule</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">modules只能为模块.</p></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 <a data-name="-689290344%2FProperties%2F1365149280" anchor-label="size" id="-689290344%2FProperties%2F1365149280" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":simbot-component-kook-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="size.html"><span><span>size</span></span></a></div>
+          <div class="table-row" data-filterable-current=":simbot-component-kook-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="size.html"><span><span>size</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-689290344%2FProperties%2F1365149280"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook-api:dokkaHtmlPartial/main"><a data-name="-689290344%2FProperties%2F1365149280" anchor-label="size" id="-689290344%2FProperties%2F1365149280" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="size.html">size</a><span class="token operator">: </span><a href="../-size/index.html">Size</a></div><div class="brief "><a data-name="-689290344%2FProperties%2F1365149280" anchor-label="size" id="-689290344%2FProperties%2F1365149280" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main"></a><p class="paragraph">目前只支持sm与lg, 如果不填为lg。 lg仅在PC端有效, 在移动端不管填什么，均为sm。</p></div></div></div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook-api:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="size.html">size</a><span class="token operator">: </span><a href="../-size/index.html">Size</a></div><div class="brief "><p class="paragraph">目前只支持sm与lg, 如果不填为lg。 lg仅在PC端有效, 在移动端不管填什么，均为sm。</p></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 <a data-name="714505432%2FProperties%2F1365149280" anchor-label="theme" id="714505432%2FProperties%2F1365149280" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":simbot-component-kook-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="theme.html"><span><span>theme</span></span></a></div>
+          <div class="table-row" data-filterable-current=":simbot-component-kook-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="theme.html"><span><span>theme</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="714505432%2FProperties%2F1365149280"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook-api:dokkaHtmlPartial/main"><a data-name="714505432%2FProperties%2F1365149280" anchor-label="theme" id="714505432%2FProperties%2F1365149280" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="theme.html">theme</a><span class="token operator">: </span><a href="../-theme/index.html">Theme</a></div><div class="brief "><a data-name="714505432%2FProperties%2F1365149280" anchor-label="theme" id="714505432%2FProperties%2F1365149280" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main"></a><p class="paragraph">卡片风格，默认为primary</p></div></div></div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook-api:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="theme.html">theme</a><span class="token operator">: </span><a href="../-theme/index.html">Theme</a></div><div class="brief "><p class="paragraph">卡片风格，默认为primary</p></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 <a data-name="-803211649%2FProperties%2F1365149280" anchor-label="type" id="-803211649%2FProperties%2F1365149280" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":simbot-component-kook-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="type.html"><span><span>type</span></span></a></div>
+          <div class="table-row" data-filterable-current=":simbot-component-kook-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="type.html"><span><span>type</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-803211649%2FProperties%2F1365149280"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook-api:dokkaHtmlPartial/main"><a data-name="-803211649%2FProperties%2F1365149280" anchor-label="type" id="-803211649%2FProperties%2F1365149280" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="type.html">type</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook-api:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="type.html">type</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
               </div>
             </div>
           </div>
@@ -157,6 +164,6 @@
       </div>
     </div>
 </div>
-
-</body></html>
+</body>
+</html>
 
