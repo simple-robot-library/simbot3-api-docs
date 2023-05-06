@@ -53,7 +53,7 @@
   <div class="breadcrumbs"></div>
   <div class="cover ">
     <h1 class="cover"><span><span>simbot-logger-slf4j-impl</span></span></h1>
-    <div class="platform-hinted UnderCoverText" data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main"><p class="paragraph">基于 ../simbot-logger 模块的 <a href="http://www.slf4j.org/">SLF4J</a> API 实现，可以应用于任何使用了 SLF4J API 的地方， 包括 ../simbot-logger。</p><h2 class=""> 配置文件</h2><p class="paragraph">支持读取配置文件。在项目根路径或资源根路径创建文件 <code class="lang-kotlin">simbot-logger-slf4j.properties</code></p><div class="sample-container"><pre><code class="block lang-properties" theme="idea"># level 为默认全局等级<br>level=DEBUG<br># 代表前缀为 love.forte.foo1 的日志等级为 TRACE<br>level.love.forte.foo1=TRACE<br># 代表 **控制台输出的日志** 前缀为 love.forte.foo2 时等级为 INFO。<br># 某个特定的处理器（例如此处的 console 日志处理器）优先级高于全局配置。<br>console.level.love.forte.foo2=INFO</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+    <div class="platform-hinted UnderCoverText" data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main"><p class="paragraph">基于 ../simbot-logger 模块的 <a href="http://www.slf4j.org/">SLF4J</a> API 实现，可以应用于任何使用了 SLF4J API 的地方， 包括 ../simbot-logger。</p><h2 class=""> 配置文件</h2><p class="paragraph">支持读取配置文件。在项目根路径或资源根路径创建文件 <code class="lang-kotlin">simbot-logger-slf4j.properties</code></p><div class="sample-container"><pre><code class="block lang-properties" theme="idea"># level 为默认全局等级<br>level=DEBUG<br># 代表前缀为 love.forte.foo1 的日志等级为 TRACE<br>level.love.forte.foo1=TRACE<br># 代表 **控制台输出的日志** 前缀为 love.forte.foo2 时等级为 INFO。<br># 某个特定的处理器（例如此处的 console 日志处理器）优先级高于全局配置。<br>console.level.love.forte.foo2=INFO<br><br># 日志处理的调度模式<br># 默认：基于 disruptor 的高性能异步调度<br>dispatcher=DISRUPTOR<br># 或：同步处理，非异步<br># dispatcher=SYNC<br># 或：普通的基于线程池的异步处理<br># dispatcher=SYNC</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">更多可用的配置相关内容参考 src/main/kotlin/love/forte/simbot/logger/slf4j/SimbotLoggerConfiguration.kt。</p></div></div>
   </div>
   <h2 class="">Packages</h2>
   <div class="table"><a data-name="-543795435%2FPackages%2F900705374" anchor-label="love.forte.simbot.logger.slf4j" id="-543795435%2FPackages%2F900705374" data-filterable-set=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main"></a>
@@ -81,6 +81,24 @@
           <div class=""><span class="inline-flex">
               <div><a href="love.forte.simbot.logger.slf4j.color/index.html">love.forte.simbot.logger.slf4j.color</a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1716713334%2FPackages%2F900705374"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">jvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="1627624932%2FPackages%2F900705374" anchor-label="love.forte.simbot.logger.slf4j.dispatcher" id="1627624932%2FPackages%2F900705374" data-filterable-set=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main"></a>
+    <div class="table-row" data-filterable-current=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main" data-filterable-set=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="love.forte.simbot.logger.slf4j.dispatcher/index.html">love.forte.simbot.logger.slf4j.dispatcher</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1627624932%2FPackages%2F900705374"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div class="pull-right">
