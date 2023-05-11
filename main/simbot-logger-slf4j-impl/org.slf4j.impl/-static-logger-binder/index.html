@@ -34,9 +34,12 @@
     <div class="library-name">
 <a href="../../../index.html">
 <span>Simple Robot</span>            </a>    </div>
-    <div>3.0.0-RC.3
+    <div>3.0.0
     </div>
     <div class="pull-right d-flex">
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main">jvm</button>
+        </div>
         <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
         <div id="searchBar"></div>
     </div>
@@ -46,61 +49,59 @@
         <div id="sideMenu"></div>
     </div>
     <div id="main">
-<div class="main-content" id="content" pageids="simbot-logger-slf4j-impl::org.slf4j.impl/StaticLoggerBinder///PointingToDeclaration//900705374">
+<div class="main-content" data-page-type="classlike" id="content" pageids="simbot-logger-slf4j-impl::org.slf4j.impl/StaticLoggerBinder///PointingToDeclaration//900705374">
   <div class="breadcrumbs"><a href="../../index.html">simbot-logger-slf4j-impl</a><span class="delimiter">/</span><a href="../index.html">org.slf4j.impl</a><span class="delimiter">/</span><span class="current">StaticLoggerBinder</span></div>
   <div class="cover ">
     <h1 class="cover"><span>Static</span><wbr><span>Logger</span><wbr><span><span>Binder</span></span></h1>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="index.html">StaticLoggerBinder</a> : <a href="https://www.slf4j.org/apidocs/org/slf4j/spi/LoggerFactoryBinder.html">LoggerFactoryBinder</a><span class="clearfix"><span class="floating-right">(<a href="https://github.com/simple-robot/simpler-robot/tree/v3-main/simbot-logger-slf4j-impl/src/main/kotlin/org/slf4j/impl/StaticLoggerBinder.kt#L24">source</a>)</span></span></div><p class="paragraph">simbot-logger 下的日志工厂绑定器。</p><p class="paragraph"><code class="lang-kotlin">simbot-logger</code> 的所有日志处理均通过 <a href="../../love.forte.simbot.logger.slf4j/-simbot-logger-processors-factory/index.html">SimbotLoggerProcessorsFactory</a> 所得到的处理器列表进行链式处理。</p><h2 class=""> 配置文件</h2><p class="paragraph">会读取配置文件 <code class="lang-kotlin">simbot-logger-slf4j.properties</code> 文件，此文件优先寻找当前项目根目录，其次则会根据当前类加载器寻找资源目录，否则不读取。</p><p class="paragraph">可通过JVM属性 <code class="lang-kotlin">simbot.logger.configFile.disable=true</code> 来直接关闭配置文件的读取。</p><p class="paragraph">可通过JVM属性 <code class="lang-kotlin">simbot.logger.configFile.file</code> 来指定一个配置文件。此文件需要为 <code class="lang-kotlin">properties</code> 格式。</p><h2 class=""> JVM属性</h2><p class="paragraph">默认情况下，除了配置文件还会加载所有 <a href="../../love.forte.simbot.logger.slf4j/-simbot-logger-configuration/-companion/-j-v-m_-p-r-o-p-e-r-t-y_-p-r-e-f-i-x.html"><code class="lang-kotlin">'simbot.logger'</code></a> 为开头的JVM属性， 并（在去除前缀之后）以高优先级加载为配置属性。</p><p class="paragraph">例如 <code class="lang-kotlin">-Dsimbot.logger.level=DEBUG</code> 会被加载为 <code class="lang-kotlin">level=DEBUG</code></p><span class="kdoc-tag"><h4 class="">Author</h4><p class="paragraph">forte</p></span></div></div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="index.html"><strike>StaticLoggerBinder</strike></a> : <a href="https://www.slf4j.org/apidocs/org/slf4j/spi/LoggerFactoryBinder.html">LoggerFactoryBinder</a><span class="clearfix"><span class="floating-right">(<a href="https://github.com/simple-robot/simpler-robot/tree/v3-dev/simbot-logger-slf4j-impl/src/main/kotlin/org/slf4j/impl/StaticLoggerBinder.kt#L54">source</a>)</span></span></div><div class="deprecation-content"><h3 class="">Deprecated</h3><p class="paragraph">Use SimbotLoggerProvider via ServiceLoader</p></div><p class="paragraph">simbot-logger 下的日志工厂绑定器。</p><details><summary>说明</summary><p class="paragraph"><code class="lang-kotlin">simbot-logger</code> 的所有日志处理均通过 <a href="../../love.forte.simbot.logger.slf4j/-simbot-logger-processors-factory/index.html">SimbotLoggerProcessorsFactory</a> 所得到的处理器列表进行链式处理。</p><h2 class=""> 配置文件</h2><p class="paragraph">会读取配置文件 <code class="lang-kotlin">simbot-logger-slf4j.properties</code> 文件，此文件优先寻找当前项目根目录，其次则会根据当前类加载器寻找资源目录，否则不读取。</p><p class="paragraph">可通过JVM属性 <code class="lang-kotlin">simbot.logger.configFile.disable=true</code> 来直接关闭配置文件的读取。</p><p class="paragraph">可通过JVM属性 <code class="lang-kotlin">simbot.logger.configFile.file</code> 来指定一个配置文件。此文件需要为 <code class="lang-kotlin">properties</code> 格式。</p><h2 class=""> JVM属性</h2><p class="paragraph">默认情况下，除了配置文件还会加载所有 <a href="../../love.forte.simbot.logger.slf4j/-simbot-logger-configuration/-companion/-j-v-m_-p-r-o-p-e-r-t-y_-p-r-e-f-i-x.html"><code class="lang-kotlin">'simbot.logger'</code></a> 为开头的JVM属性， 并（在去除前缀之后）以高优先级加载为配置属性。</p><p class="paragraph">例如 <code class="lang-kotlin">-Dsimbot.logger.level=DEBUG</code> 会被加载为 <code class="lang-kotlin">level=DEBUG</code></p></details><p class="paragraph"><strong>Deprecated</strong></p><p class="paragraph">在 SLF4J 2.x 中被 <a href="../../love.forte.simbot.logger.slf4j/-simbot-logger-provider/index.html">SimbotLoggerProvider</a> 取代。</p><span class="kdoc-tag"><h4 class="">Author</h4><p class="paragraph">forte</p></span><h4 class="">See also</h4><div class="table"><div class="table-row" data-filterable-current=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main" data-filterable-set=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../../love.forte.simbot.logger.slf4j/-simbot-logger-provider/index.html"><span>Simbot</span><wbr><span>Logger</span><wbr><span><span>Provider</span></span></a></div></span></div><div></div></div></div></div></div></div>
   </div>
   <div class="tabbedcontent">
-    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Functions">Functions</button><button class="section-tab" data-togglable="See also">See also</button></div>
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,FUNCTION,PROPERTY">Members</button></div>
     <div class="tabs-section-body">
-      <h4 class="">See also</h4>
-      <div data-togglable="See also">
-        <div class="platform-hinted WithExtraAttributes" data-platform-hinted="data-platform-hinted" data-togglable="See also"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main"><div data-togglable="See also"><div class="table" data-togglable="See also"><div class="table-row" data-filterable-current=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main" data-filterable-set=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><a href="../../love.forte.simbot.logger.slf4j/-simbot-logger-factory/index.html"><span>Simbot</span><wbr><span>Logger</span><wbr><span><span>Factory</span></span></a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main" data-filterable-set=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><a href="../../love.forte.simbot.logger.slf4j/-simbot-logger-processors-factory/index.html"><span>Simbot</span><wbr><span>Logger</span><wbr><span>Processors</span><wbr><span><span>Factory</span></span></a></div></span></div><div></div></div></div></div></div></div></div>
-      </div>
-      <h2 class="">Functions</h2>
-      <div class="table" data-togglable="Functions"><a data-name="-1960565684%2FFunctions%2F900705374" anchor-label="getLoggerFactory" id="-1960565684%2FFunctions%2F900705374" data-filterable-set=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main" data-filterable-set=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="get-logger-factory.html"><span>get</span><wbr><span>Logger</span><wbr><span><span>Factory</span></span></a></div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="-1960565684%2FFunctions%2F900705374" anchor-label="getLoggerFactory" id="-1960565684%2FFunctions%2F900705374" data-filterable-set=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main" data-filterable-set=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-logger-factory.html"><span>get</span><wbr><span>Logger</span><wbr><span><span>Factory</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1960565684%2FFunctions%2F900705374"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="get-logger-factory.html"><span class="token function">getLoggerFactory</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://www.slf4j.org/apidocs/org/slf4j/ILoggerFactory.html">ILoggerFactory</a></div></div></div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="get-logger-factory.html"><span class="token function">getLoggerFactory</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://www.slf4j.org/apidocs/org/slf4j/ILoggerFactory.html">ILoggerFactory</a></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 <a data-name="-1801459277%2FFunctions%2F900705374" anchor-label="getLoggerFactoryClassStr" id="-1801459277%2FFunctions%2F900705374" data-filterable-set=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main" data-filterable-set=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="get-logger-factory-class-str.html"><span>get</span><wbr><span>Logger</span><wbr><span>Factory</span><wbr><span>Class</span><wbr><span><span>Str</span></span></a></div>
+          <div class="table-row" data-filterable-current=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main" data-filterable-set=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-logger-factory-class-str.html"><span>get</span><wbr><span>Logger</span><wbr><span>Factory</span><wbr><span>Class</span><wbr><span><span>Str</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1801459277%2FFunctions%2F900705374"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="get-logger-factory-class-str.html"><span class="token function">getLoggerFactoryClassStr</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="get-logger-factory-class-str.html"><span class="token function">getLoggerFactoryClassStr</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 <a data-name="69604155%2FFunctions%2F900705374" anchor-label="getSingleton" id="69604155%2FFunctions%2F900705374" data-filterable-set=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main" data-filterable-set=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="get-singleton.html"><span>get</span><wbr><span><span>Singleton</span></span></a></div>
+          <div class="table-row" data-filterable-current=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main" data-filterable-set=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-singleton.html"><span>get</span><wbr><span><span>Singleton</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="69604155%2FFunctions%2F900705374"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-static/index.html"><span class="token annotation builtin">JvmStatic</span></a></div></div><span class="token keyword"></span><span class="token keyword">fun </span><a href="get-singleton.html"><span class="token function">getSingleton</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">StaticLoggerBinder</a></div></div></div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-static/index.html"><span class="token annotation builtin">JvmStatic</span></a></div></div><span class="token keyword"></span><span class="token keyword">fun </span><a href="get-singleton.html"><span class="token function">getSingleton</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">StaticLoggerBinder</a></div></div></div>
+                </div>
               </div>
             </div>
           </div>
@@ -114,6 +115,6 @@
       </div>
     </div>
 </div>
-
-</body></html>
+</body>
+</html>
 

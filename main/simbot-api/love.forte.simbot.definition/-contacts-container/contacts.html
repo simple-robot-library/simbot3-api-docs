@@ -34,9 +34,12 @@
     <div class="library-name">
 <a href="../../../index.html">
 <span>Simple Robot</span>            </a>    </div>
-    <div>3.0.0-RC.3
+    <div>3.0.0
     </div>
     <div class="pull-right d-flex">
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":simbot-api:dokkaHtmlPartial/main">jvm</button>
+        </div>
         <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
         <div id="searchBar"></div>
     </div>
@@ -46,18 +49,18 @@
         <div id="sideMenu"></div>
     </div>
     <div id="main">
-<div class="main-content" id="content" pageids="simbot-api::love.forte.simbot.definition/ContactsContainer/contacts/#/PointingToDeclaration//-341312757">
+<div class="main-content" data-page-type="member" id="content" pageids="simbot-api::love.forte.simbot.definition/ContactsContainer/contacts/#/PointingToDeclaration//-341312757">
   <div class="breadcrumbs"><a href="../../index.html">simbot-api</a><span class="delimiter">/</span><a href="../index.html">love.forte.simbot.definition</a><span class="delimiter">/</span><a href="index.html">ContactsContainer</a><span class="delimiter">/</span><span class="current">contacts</span></div>
   <div class="cover ">
     <h1 class="cover"><span><span>contacts</span></span></h1>
   </div>
-  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="contacts.html">contacts</a><span class="token operator">: </span><a href="../../love.forte.simbot.utils.item/-items/index.html">Items</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../-contact/index.html">Contact</a><span class="token operator">&gt;</span><span class="clearfix"><span class="floating-right">(<a href="https://github.com/simple-robot/simpler-robot/tree/v3-main/simbot-api/src/main/kotlin/love/forte/simbot/definition/SocialRelationsContainers.kt#L126">source</a>)</span></span></div><p class="paragraph">得到当前容器中能够获取到的联系人序列。</p><p class="paragraph"><a href="contacts.html">contacts</a> 可能是一个根据 <a href="../../love.forte.simbot.utils.item/-items/batch.html">Items.batch</a> 批次发起某种网络请求的真实序列， 也可能是由当前容器内部提前缓存好的伪序列，而不会发起真正的网络请求。</p><p class="paragraph">联系人序列不能保证结果为 <strong><i>预期内的</i></strong><strong> 全量</strong> 序列，尤其是对于一个 <a href="../../love.forte.simbot.bot/-bot/index.html">Bot</a> 而言。 因为站在容器对于"联系人"的角度上来说，<a href="../-contact/index.html">Contact</a> 大多数情况下代表为一个"会话"。 如果一个联系人与当前容器从未构建过任何会话， 且二者之间没有硬性的"羁绊"（例如互为 <a href="../-friend/index.html">好友</a>）， 则 <a href="contacts.html">contacts</a> 大概率无法包含这个"未曾交流过的"联系人。</p><p class="paragraph">在组件支持的情况下，<a href="contact.html">contact</a> 能够在 <a href="contacts.html">contacts</a> 中不存在目标的情况下主动创建二者之间的会话。 而此时 <a href="contacts.html">contacts</a> 所得到的序列中也会有概率包含这些创建出的会话结果。</p><p class="paragraph">因此如果只是为了寻找部分具有<strong>明确标识</strong>的目标，考虑通过 <a href="contact.html">contact</a> 进行获取。</p></div></div>
+  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="contacts.html">contacts</a><span class="token operator">: </span><a href="../../love.forte.simbot.utils.item/-items/index.html">Items</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../-contact/index.html">Contact</a><span class="token operator">&gt;</span><span class="clearfix"><span class="floating-right">(<a href="https://github.com/simple-robot/simpler-robot/tree/v3-dev/simbot-api/src/main/kotlin/love/forte/simbot/definition/SocialRelationsContainers.kt#L193">source</a>)</span></span></div><p class="paragraph">得到当前容器中能够获取到的联系人序列。</p><p class="paragraph"><a href="contacts.html">contacts</a> 可能是一个根据 <a href="../../love.forte.simbot.utils.item/-items/batch.html">Items.batch</a> 批次发起某种网络请求的真实序列， 也可能是由当前容器内部提前缓存好的伪序列，而不会发起真正的网络请求。</p><p class="paragraph">联系人序列不能保证结果为 <strong><i>预期内的</i></strong><strong> 全量</strong> 序列，尤其是对于一个 <a href="../../love.forte.simbot.bot/-bot/index.html">Bot</a> 而言。 因为站在容器对于"联系人"的角度上来说，<a href="../-contact/index.html">Contact</a> 大多数情况下代表为一个"会话"。 如果一个联系人与当前容器从未构建过任何会话， 且二者之间没有硬性的"羁绊"（例如互为 <a href="../-friend/index.html">好友</a>）， 则 <a href="contacts.html">contacts</a> 大概率无法包含这个"未曾交流过的"联系人。</p><p class="paragraph">在组件支持的情况下，<a href="contact.html">contact</a> 能够在 <a href="contacts.html">contacts</a> 中不存在目标的情况下主动创建二者之间的会话。 而此时 <a href="contacts.html">contacts</a> 所得到的序列中也会有概率包含这些创建出的会话结果。</p><p class="paragraph">因此如果只是为了寻找部分具有<strong>明确标识</strong>的目标，考虑通过 <a href="contact.html">contact</a> 进行获取。</p></div></div>
 </div>
       <div class="footer">
         <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2023 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
       </div>
     </div>
 </div>
-
-</body></html>
+</body>
+</html>
 
