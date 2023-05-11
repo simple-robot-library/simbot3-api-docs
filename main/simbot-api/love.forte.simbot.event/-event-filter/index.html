@@ -34,9 +34,12 @@
     <div class="library-name">
 <a href="../../../index.html">
 <span>Simple Robot</span>            </a>    </div>
-    <div>3.0.0-RC.3
+    <div>3.0.0
     </div>
     <div class="pull-right d-flex">
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":simbot-api:dokkaHtmlPartial/main">jvm</button>
+        </div>
         <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
         <div id="searchBar"></div>
     </div>
@@ -46,59 +49,50 @@
         <div id="sideMenu"></div>
     </div>
     <div id="main">
-<div class="main-content" id="content" pageids="simbot-api::love.forte.simbot.event/EventFilter///PointingToDeclaration//-341312757">
+<div class="main-content" data-page-type="classlike" id="content" pageids="simbot-api::love.forte.simbot.event/EventFilter///PointingToDeclaration//-341312757">
   <div class="breadcrumbs"><a href="../../index.html">simbot-api</a><span class="delimiter">/</span><a href="../index.html">love.forte.simbot.event</a><span class="delimiter">/</span><span class="current">EventFilter</span></div>
   <div class="cover ">
     <h1 class="cover"><span>Event</span><wbr><span><span>Filter</span></span></h1>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="index.html">EventFilter</a> : <a href="../../love.forte.simbot/-filter/index.html">Filter</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../-event-listener-processing-context/index.html">EventListenerProcessingContext</a><span class="token operator">&gt; </span><span class="clearfix"><span class="floating-right">(<a href="https://github.com/simple-robot/simpler-robot/tree/v3-main/simbot-api/src/main/kotlin/love/forte/simbot/event/EventFilter.kt#L22">source</a>)</span></span></div><p class="paragraph">事件过滤器。</p><p class="paragraph">事件过滤器一般与监听函数绑定，为简化监听函数相似的过滤条件服务。</p><p class="paragraph"><a href="index.html">EventFilter</a> 是 <a href="../-event-listener/index.html">EventListener</a> 的一种辅助特性，并非独立的机制存在。</p><p class="paragraph">通常情况下，一个 <a href="../-event-listener/index.html">EventListener</a> 内可能有隐式的多个filter，并在filter流程任意节点出现false的时候得到一个默认返回值. 对于此接口的直接运用，常见的为在匹配失败的时候直接返回一个 <a href="../-event-result/-invalid/index.html">无效响应</a>。</p><p class="paragraph">过滤器存在 <a href="priority.html">优先级</a>, 默认情况下的优先级为 <a href="../../love.forte.simbot/-priority-constant/-n-o-r-m-a-l.html">PriorityConstant.NORMAL</a>.</p><p class="paragraph">对于不支持挂起函数的实现者，可参考 <a href="../-blocking-event-filter/index.html">BlockingEventFilter</a>。</p><span class="kdoc-tag"><h4 class="">Author</h4><p class="paragraph">ForteScarlet</p></span></div></div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="index.html">EventFilter</a> : <a href="../../love.forte.simbot/-filter/index.html">Filter</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../-event-listener-processing-context/index.html">EventListenerProcessingContext</a><span class="token operator">&gt; </span><span class="clearfix"><span class="floating-right">(<a href="https://github.com/simple-robot/simpler-robot/tree/v3-dev/simbot-api/src/main/kotlin/love/forte/simbot/event/EventFilter.kt#L37">source</a>)</span></span></div><p class="paragraph">事件过滤器。</p><p class="paragraph">事件过滤器一般与监听函数绑定，为简化监听函数相似的过滤条件服务。</p><p class="paragraph"><a href="index.html">EventFilter</a> 是 <a href="../-event-listener/index.html">EventListener</a> 的一种辅助特性，并非独立的机制存在。</p><p class="paragraph">通常情况下，一个 <a href="../-event-listener/index.html">EventListener</a> 内可能有隐式的多个filter，并在filter流程任意节点出现false的时候得到一个默认返回值. 对于此接口的直接运用，常见的为在匹配失败的时候直接返回一个 <a href="../-event-result/-invalid/index.html">无效响应</a>。</p><p class="paragraph">过滤器存在 <a href="priority.html">优先级</a>, 默认情况下的优先级为 <a href="../../love.forte.simbot/-priority-constant/-n-o-r-m-a-l.html">PriorityConstant.NORMAL</a>.</p><p class="paragraph">对于不支持挂起函数的实现者，可参考 <a href="../-blocking-event-filter/index.html">BlockingEventFilter</a>。</p><span class="kdoc-tag"><h4 class="">Author</h4><p class="paragraph">ForteScarlet</p></span><h4 class="">Inheritors</h4><div class="table"><div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../-blocking-event-filter/index.html">BlockingEventFilter</a></div></span></div><div></div></div></div></div></div></div>
   </div>
   <div class="tabbedcontent">
-    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Functions">Functions</button><button class="section-tab" data-togglable="Properties">Properties</button><button class="section-tab" data-togglable="Inheritors">Inheritors</button></div>
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,FUNCTION,PROPERTY">Members</button></div>
     <div class="tabs-section-body">
-      <h2 class="">Functions</h2>
-      <div class="table" data-togglable="Functions"><a data-name="2121297307%2FFunctions%2F-341312757" anchor-label="test" id="2121297307%2FFunctions%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="test.html"><span><span>test</span></span></a></div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="2121297307%2FFunctions%2F-341312757" anchor-label="test" id="2121297307%2FFunctions%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="test.html"><span><span>test</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2121297307%2FFunctions%2F-341312757"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">suspend override </span><span class="token keyword">fun </span><a href="test.html"><span class="token function">test</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">context<span class="token operator">: </span><a href="../-event-listener-processing-context/index.html">EventListenerProcessingContext</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">过滤器的检测函数。通过 <a href="../-event-processing-context/index.html">EventProcessingContext</a> 来验证是否需要处理当前事件。</p></div></div></div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">suspend override </span><span class="token keyword">fun </span><a href="test.html"><span class="token function">test</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">context<span class="token operator">: </span><a href="../-event-listener-processing-context/index.html">EventListenerProcessingContext</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">过滤器的检测函数。通过 <a href="../-event-processing-context/index.html">EventProcessingContext</a> 来验证是否需要处理当前事件。</p></div></div></div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <h2 class="">Properties</h2>
-      <div class="table" data-togglable="Properties"><a data-name="707659449%2FProperties%2F-341312757" anchor-label="priority" id="707659449%2FProperties%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="priority.html"><span><span>priority</span></span></a></div>
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="707659449%2FProperties%2F-341312757" anchor-label="priority" id="707659449%2FProperties%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="priority.html"><span><span>priority</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="707659449%2FProperties%2F-341312757"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/main"><a data-name="707659449%2FProperties%2F-341312757" anchor-label="priority" id="707659449%2FProperties%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">val </span><a href="priority.html">priority</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></div><div class="brief "><a data-name="707659449%2FProperties%2F-341312757" anchor-label="priority" id="707659449%2FProperties%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a><p class="paragraph">优先级。</p></div></div></div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">val </span><a href="priority.html">priority</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></div><div class="brief "><p class="paragraph">优先级。</p></div></div></div>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-      <h2 class="">Inheritors</h2>
-      <div class="table" data-togglable="Inheritors"><a data-name="-2112886345%2FInheritors%2F-341312757" anchor-label="BlockingEventFilter" id="-2112886345%2FInheritors%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="../-blocking-event-filter/index.html">BlockingEventFilter</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2112886345%2FInheritors%2F-341312757"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div></div>
           </div>
         </div>
       </div>
@@ -110,6 +104,6 @@
       </div>
     </div>
 </div>
-
-</body></html>
+</body>
+</html>
 

@@ -34,9 +34,12 @@
     <div class="library-name">
 <a href="../../../index.html">
 <span>Simple Robot</span>            </a>    </div>
-    <div>3.0.0-RC.3
+    <div>3.0.0
     </div>
     <div class="pull-right d-flex">
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":simbot-api:dokkaHtmlPartial/main">jvm</button>
+        </div>
         <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
         <div id="searchBar"></div>
     </div>
@@ -46,18 +49,18 @@
         <div id="sideMenu"></div>
     </div>
     <div id="main">
-<div class="main-content" id="content" pageids="simbot-api::love.forte.simbot/Interceptor/intercept/#TypeParam(bounds=[love.forte.simbot.Interceptor.Context[TypeParam(bounds=[kotlin.Any?])]])/PointingToDeclaration//-341312757">
+<div class="main-content" data-page-type="member" id="content" pageids="simbot-api::love.forte.simbot/Interceptor/intercept/#TypeParam(bounds=[love.forte.simbot.Interceptor.Context[TypeParam(bounds=[kotlin.Any?])]])/PointingToDeclaration//-341312757">
   <div class="breadcrumbs"><a href="../../index.html">simbot-api</a><span class="delimiter">/</span><a href="../index.html">love.forte.simbot</a><span class="delimiter">/</span><a href="index.html">Interceptor</a><span class="delimiter">/</span><span class="current">intercept</span></div>
   <div class="cover ">
     <h1 class="cover"><span><span>intercept</span></span></h1>
   </div>
-  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="intercept.html"><span class="token function">intercept</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">context<span class="token operator">: </span><a href="index.html">C</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">R</a><span class="clearfix"><span class="floating-right">(<a href="https://github.com/simple-robot/simpler-robot/tree/v3-main/simbot-api/src/main/kotlin/love/forte/simbot/Interceptor.kt#L26">source</a>)</span></span></div><p class="paragraph">对当前指定的拦截内容进行处理。</p><p class="paragraph">想要继续流程则使用 <a href="-context/proceed.html">Context.proceed</a> 进入到下一个拦截器，或者进入正常流程。</p><p class="paragraph">例如放行:</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">override suspend fun intercept(context: FooContext): FooResult {<br>   // do something...?<br><br>   // 执行 context.proceed() 就是放行。<br>   val result = context.proceed()<br>   // and do something...?<br><br>   return result<br>}</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">例如拦截:</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">override suspend fun intercept(context: BarContext): BarResult {<br>   // 不执行 context.proceed() 就是拦截。<br>   // 自行构建一个result实例<br>   return BarResult(...)<br><br>}</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="intercept.html"><span class="token function">intercept</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">context<span class="token operator">: </span><a href="index.html">C</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">R</a><span class="clearfix"><span class="floating-right">(<a href="https://github.com/simple-robot/simpler-robot/tree/v3-dev/simbot-api/src/main/kotlin/love/forte/simbot/Interceptor.kt#L55">source</a>)</span></span></div><p class="paragraph">对当前指定的拦截内容进行处理。</p><p class="paragraph">想要继续流程则使用 <a href="-context/proceed.html">Context.proceed</a> 进入到下一个拦截器，或者进入正常流程。</p><p class="paragraph">例如放行:</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">override suspend fun intercept(context: FooContext): FooResult {<br>   // do something...?<br><br>   // 执行 context.proceed() 就是放行。<br>   val result = context.proceed()<br>   // and do something...?<br><br>   return result<br>}</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">例如拦截:</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">override suspend fun intercept(context: BarContext): BarResult {<br>   // 不执行 context.proceed() 就是拦截。<br>   // 自行构建一个result实例<br>   return BarResult(...)<br><br>}</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
 </div>
       <div class="footer">
         <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2023 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
       </div>
     </div>
 </div>
-
-</body></html>
+</body>
+</html>
 

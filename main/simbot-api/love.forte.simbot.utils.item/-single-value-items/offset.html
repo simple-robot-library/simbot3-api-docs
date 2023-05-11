@@ -34,9 +34,12 @@
     <div class="library-name">
 <a href="../../../index.html">
 <span>Simple Robot</span>            </a>    </div>
-    <div>3.0.0-RC.3
+    <div>3.0.0
     </div>
     <div class="pull-right d-flex">
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":simbot-api:dokkaHtmlPartial/main">jvm</button>
+        </div>
         <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
         <div id="searchBar"></div>
     </div>
@@ -46,18 +49,18 @@
         <div id="sideMenu"></div>
     </div>
     <div id="main">
-<div class="main-content" id="content" pageids="simbot-api::love.forte.simbot.utils.item/SingleValueItems/offset/#kotlin.Int/PointingToDeclaration//-341312757">
+<div class="main-content" data-page-type="member" id="content" pageids="simbot-api::love.forte.simbot.utils.item/SingleValueItems/offset/#kotlin.Int/PointingToDeclaration//-341312757">
   <div class="breadcrumbs"><a href="../../index.html">simbot-api</a><span class="delimiter">/</span><a href="../index.html">love.forte.simbot.utils.item</a><span class="delimiter">/</span><a href="index.html">SingleValueItems</a><span class="delimiter">/</span><span class="current">offset</span></div>
   <div class="cover ">
     <h1 class="cover"><span><span>offset</span></span></h1>
   </div>
-  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="offset.html"><span class="token function">offset</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">count<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-items/index.html">Items</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html">T</a><span class="token operator">&gt;</span><span class="clearfix"><span class="floating-right">(<a href="https://github.com/simple-robot/simpler-robot/tree/v3-main/simbot-api/src/main/kotlin/love/forte/simbot/utils/item/SingleValueItems.kt#L36">source</a>)</span></span></div><p class="paragraph">数据偏移。从 <a href="offset.html">offset</a> 数量之后的数据后开始获取。当 <a href="offset.html">offset</a> 0 时有效。</p><h2 class=""> 预处理</h2><p class="paragraph"><a href="offset.html">offset</a> 是一个 <strong>预处理</strong> 函数， 不同于 Flow.drop 、 <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.sequences/index.html">Sequence.drop</a> 或 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html#skip-kotlin.Long-">Stream.skip</a>。 当配置 <a href="offset.html">offset</a> 的时候，不一定会有任何真正的上述序列类型产生， 有可能只是记录了一个 <code class="lang-kotlin">offset</code> 值并准备于转换或最终收集函数中使用。</p><p class="paragraph">为了避免实现细节所产生的逻辑差异，对于 <strong>预处理</strong> 函数，同一个函数你应当至多只调用1次。</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">limit.offset(10).offset(5) // 可能的最终offset值：5</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">有关预处理api的描述参考 <a href="../-items/index.html">Items</a> 类注释。</p></div></div>
+  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="offset.html"><span class="token function">offset</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">count<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-items/index.html">Items</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html">T</a><span class="token operator">&gt;</span><span class="clearfix"><span class="floating-right">(<a href="https://github.com/simple-robot/simpler-robot/tree/v3-dev/simbot-api/src/main/kotlin/love/forte/simbot/utils/item/SingleValueItems.kt#L35">source</a>)</span></span></div><p class="paragraph">数据偏移。从 <a href="offset.html">offset</a> 数量之后的数据后开始获取。当 <a href="offset.html">offset</a> 0 时有效。</p><h2 class=""> 预处理</h2><p class="paragraph"><a href="offset.html">offset</a> 是一个 <strong>预处理</strong> 函数， 不同于 Flow.drop 、 <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.sequences/index.html">Sequence.drop</a> 或 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html#skip-kotlin.Long-">Stream.skip</a>。 当配置 <a href="offset.html">offset</a> 的时候，不一定会有任何真正的上述序列类型产生， 有可能只是记录了一个 <code class="lang-kotlin">offset</code> 值并准备于转换或最终收集函数中使用。</p><p class="paragraph">为了避免实现细节所产生的逻辑差异，对于 <strong>预处理</strong> 函数，同一个函数你应当至多只调用1次。</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">limit.offset(10).offset(5) // 可能的最终offset值：5</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">有关预处理api的描述参考 <a href="../-items/index.html">Items</a> 类注释。</p></div></div>
 </div>
       <div class="footer">
         <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2023 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
       </div>
     </div>
 </div>
-
-</body></html>
+</body>
+</html>
 

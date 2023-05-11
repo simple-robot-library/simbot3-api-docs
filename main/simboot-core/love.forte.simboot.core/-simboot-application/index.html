@@ -34,9 +34,12 @@
     <div class="library-name">
 <a href="../../../index.html">
 <span>Simple Robot</span>            </a>    </div>
-    <div>3.0.0-RC.3
+    <div>3.0.0
     </div>
     <div class="pull-right d-flex">
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":simboot-core:dokkaHtmlPartial/main">jvm</button>
+        </div>
         <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
         <div id="searchBar"></div>
     </div>
@@ -46,117 +49,119 @@
         <div id="sideMenu"></div>
     </div>
     <div id="main">
-<div class="main-content" id="content" pageids="simboot-core::love.forte.simboot.core/SimbootApplication///PointingToDeclaration//717190085">
+<div class="main-content" data-page-type="classlike" id="content" pageids="simboot-core::love.forte.simboot.core/SimbootApplication///PointingToDeclaration//717190085">
   <div class="breadcrumbs"><a href="../../index.html">simboot-core</a><span class="delimiter">/</span><a href="../index.html">love.forte.simboot.core</a><span class="delimiter">/</span><span class="current">SimbootApplication</span></div>
   <div class="cover ">
     <h1 class="cover"><span>Simboot</span><wbr><span><span>Application</span></span></h1>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simboot-core:dokkaHtmlPartial/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.annotation/-target/index.html"><span class="token annotation builtin">Target</span></a><span class="token punctuation">(</span><span>allowedTargets<span class="token operator"> = </span><span class="token punctuation">[</span><span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.annotation/-annotation-target/-c-l-a-s-s/index.html">AnnotationTarget.CLASS</a></span><wbr><span class="token punctuation">]</span></span><wbr><span class="token punctuation">)</span></div></div><span class="token keyword">annotation class </span><a href="index.html">SimbootApplication</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>classesPackages<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span><span class="token operator"> = </span>[]<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>topListenerPackages<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span><span class="token operator"> = </span>[]<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>classesPackagesForTopListener<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>topBinderPackages<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span><span class="token operator"> = </span>[]<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>classesPackagesForTopBinder<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>botResources<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span><span class="token operator"> = </span>[]<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>autoStartBots<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">true</span></span></span><span class="token punctuation">)</span><span class="clearfix"><span class="floating-right">(<a href="https://github.com/simple-robot/simpler-robot/tree/v3-main/simboot-core/src/main/kotlin/love/forte/simboot/core/SimbootApplication.kt#L19">source</a>)</span></span></div><p class="paragraph">基础的 boot-core 所使用的启动类标记注解，提供部分参数， 主要用于在 <a href="../-simboot-app/index.html">SimbootApp</a> 中使用。</p><p class="paragraph"><strong>不应</strong> 在spring环境下使用。</p><p class="paragraph"><a href="index.html">SimbootApplication</a> 暂不支持注解继承等机制。在使用的时候会直接被获取。</p></div></div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simboot-core:dokkaHtmlPartial/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.annotation/-target/index.html"><span class="token annotation builtin">Target</span></a><span class="token punctuation">(</span><span>allowedTargets<span class="token operator"> = </span><span class="token punctuation">[</span><span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.annotation/-annotation-target/-c-l-a-s-s/index.html">AnnotationTarget.CLASS</a></span><wbr><span class="token punctuation">]</span></span><wbr><span class="token punctuation">)</span></div></div><span class="token keyword">annotation class </span><a href="index.html">SimbootApplication</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>classesPackages<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span><span class="token operator"> = </span>[]<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>topListenerPackages<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span><span class="token operator"> = </span>[]<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>classesPackagesForTopListener<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>topBinderPackages<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span><span class="token operator"> = </span>[]<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>classesPackagesForTopBinder<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>botResources<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span><span class="token operator"> = </span>[]<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>autoStartBots<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">true</span></span></span><span class="token punctuation">)</span><span class="clearfix"><span class="floating-right">(<a href="https://github.com/simple-robot/simpler-robot/tree/v3-dev/simboot-core/src/main/kotlin/love/forte/simboot/core/SimbootApplication.kt#L27">source</a>)</span></span></div><p class="paragraph">基础的 boot-core 所使用的启动类标记注解，提供部分参数， 主要用于在 <a href="../-simboot-app/index.html">SimbootApp</a> 中使用。</p><p class="paragraph"><strong>不应</strong> 在spring环境下使用。</p><p class="paragraph"><a href="index.html">SimbootApplication</a> 暂不支持注解继承等机制。在使用的时候会直接被获取。</p></div></div>
   </div>
   <div class="tabbedcontent">
-    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Properties">Properties</button></div>
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,FUNCTION,PROPERTY">Members</button></div>
     <div class="tabs-section-body">
-      <h2 class="">Properties</h2>
-      <div class="table" data-togglable="Properties"><a data-name="-320530325%2FProperties%2F717190085" anchor-label="autoStartBots" id="-320530325%2FProperties%2F717190085" data-filterable-set=":simboot-core:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":simboot-core:dokkaHtmlPartial/main" data-filterable-set=":simboot-core:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="auto-start-bots.html"><span>auto</span><wbr><span>Start</span><wbr><span><span>Bots</span></span></a></div>
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="-320530325%2FProperties%2F717190085" anchor-label="autoStartBots" id="-320530325%2FProperties%2F717190085" data-filterable-set=":simboot-core:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":simboot-core:dokkaHtmlPartial/main" data-filterable-set=":simboot-core:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="auto-start-bots.html"><span>auto</span><wbr><span>Start</span><wbr><span><span>Bots</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-320530325%2FProperties%2F717190085"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simboot-core:dokkaHtmlPartial/main"><a data-name="-320530325%2FProperties%2F717190085" anchor-label="autoStartBots" id="-320530325%2FProperties%2F717190085" data-filterable-set=":simboot-core:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="auto-start-bots.html">autoStartBots</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">true</span></div><div class="brief "><a data-name="-320530325%2FProperties%2F717190085" anchor-label="autoStartBots" id="-320530325%2FProperties%2F717190085" data-filterable-set=":simboot-core:dokkaHtmlPartial/main"></a><p class="paragraph">是否在最终自动启动所有注册的bot。默认为true。</p></div></div></div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simboot-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="auto-start-bots.html">autoStartBots</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">true</span></div><div class="brief "><p class="paragraph">是否在最终自动启动所有注册的bot。默认为true。</p></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 <a data-name="1526510034%2FProperties%2F717190085" anchor-label="botResources" id="1526510034%2FProperties%2F717190085" data-filterable-set=":simboot-core:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":simboot-core:dokkaHtmlPartial/main" data-filterable-set=":simboot-core:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="bot-resources.html"><span>bot</span><wbr><span><span>Resources</span></span></a></div>
+          <div class="table-row" data-filterable-current=":simboot-core:dokkaHtmlPartial/main" data-filterable-set=":simboot-core:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="bot-resources.html"><span>bot</span><wbr><span><span>Resources</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1526510034%2FProperties%2F717190085"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simboot-core:dokkaHtmlPartial/main"><a data-name="1526510034%2FProperties%2F717190085" anchor-label="botResources" id="1526510034%2FProperties%2F717190085" data-filterable-set=":simboot-core:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="bot-resources.html">botResources</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span></div><div class="brief "><a data-name="1526510034%2FProperties%2F717190085" anchor-label="botResources" id="1526510034%2FProperties%2F717190085" data-filterable-set=":simboot-core:dokkaHtmlPartial/main"></a><p class="paragraph">指定具体的bot配置文件扫描路径。</p></div></div></div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simboot-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="bot-resources.html">botResources</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">指定具体的bot配置文件扫描路径。</p></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 <a data-name="-747622761%2FProperties%2F717190085" anchor-label="classesPackages" id="-747622761%2FProperties%2F717190085" data-filterable-set=":simboot-core:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":simboot-core:dokkaHtmlPartial/main" data-filterable-set=":simboot-core:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="classes-packages.html"><span>classes</span><wbr><span><span>Packages</span></span></a></div>
+          <div class="table-row" data-filterable-current=":simboot-core:dokkaHtmlPartial/main" data-filterable-set=":simboot-core:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="classes-packages.html"><span>classes</span><wbr><span><span>Packages</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-747622761%2FProperties%2F717190085"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simboot-core:dokkaHtmlPartial/main"><a data-name="-747622761%2FProperties%2F717190085" anchor-label="classesPackages" id="-747622761%2FProperties%2F717190085" data-filterable-set=":simboot-core:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="classes-packages.html">classesPackages</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span></div><div class="brief "><a data-name="-747622761%2FProperties%2F717190085" anchor-label="classesPackages" id="-747622761%2FProperties%2F717190085" data-filterable-set=":simboot-core:dokkaHtmlPartial/main"></a><p class="paragraph">指定所需扫描包路径。 如果为空默认选取标记类所在包路径为根路径。</p></div></div></div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simboot-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="classes-packages.html">classesPackages</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">指定所需扫描包路径。 如果为空默认选取标记类所在包路径为根路径。</p></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 <a data-name="-1593972831%2FProperties%2F717190085" anchor-label="classesPackagesForTopBinder" id="-1593972831%2FProperties%2F717190085" data-filterable-set=":simboot-core:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":simboot-core:dokkaHtmlPartial/main" data-filterable-set=":simboot-core:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="classes-packages-for-top-binder.html"><span>classes</span><wbr><span>Packages</span><wbr><span>For</span><wbr><span>Top</span><wbr><span><span>Binder</span></span></a></div>
+          <div class="table-row" data-filterable-current=":simboot-core:dokkaHtmlPartial/main" data-filterable-set=":simboot-core:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="classes-packages-for-top-binder.html"><span>classes</span><wbr><span>Packages</span><wbr><span>For</span><wbr><span>Top</span><wbr><span><span>Binder</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1593972831%2FProperties%2F717190085"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simboot-core:dokkaHtmlPartial/main"><a data-name="-1593972831%2FProperties%2F717190085" anchor-label="classesPackagesForTopBinder" id="-1593972831%2FProperties%2F717190085" data-filterable-set=":simboot-core:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="classes-packages-for-top-binder.html">classesPackagesForTopBinder</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span></div><div class="brief "><a data-name="-1593972831%2FProperties%2F717190085" anchor-label="classesPackagesForTopBinder" id="-1593972831%2FProperties%2F717190085" data-filterable-set=":simboot-core:dokkaHtmlPartial/main"></a><p class="paragraph">是否在 <a href="top-binder-packages.html">topBinderPackages</a> 为空的情况下使用 <a href="classes-packages.html">classesPackages</a> 的最终值。 如果为 <code class="lang-kotlin">true</code>, 则当 <a href="top-binder-packages.html">topBinderPackages</a> 为空的时候（也就是默认的时候）使用 <a href="classes-packages.html">classesPackages</a>. 同样的，如果 <a href="classes-packages.html">classesPackages</a> 为空，则会使用被标记类所在包的路径。</p></div></div></div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simboot-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="classes-packages-for-top-binder.html">classesPackagesForTopBinder</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span></div><div class="brief "><p class="paragraph">是否在 <a href="top-binder-packages.html">topBinderPackages</a> 为空的情况下使用 <a href="classes-packages.html">classesPackages</a> 的最终值。 如果为 <code class="lang-kotlin">true</code>, 则当 <a href="top-binder-packages.html">topBinderPackages</a> 为空的时候（也就是默认的时候）使用 <a href="classes-packages.html">classesPackages</a>. 同样的，如果 <a href="classes-packages.html">classesPackages</a> 为空，则会使用被标记类所在包的路径。</p></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 <a data-name="2059336791%2FProperties%2F717190085" anchor-label="classesPackagesForTopListener" id="2059336791%2FProperties%2F717190085" data-filterable-set=":simboot-core:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":simboot-core:dokkaHtmlPartial/main" data-filterable-set=":simboot-core:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="classes-packages-for-top-listener.html"><span>classes</span><wbr><span>Packages</span><wbr><span>For</span><wbr><span>Top</span><wbr><span><span>Listener</span></span></a></div>
+          <div class="table-row" data-filterable-current=":simboot-core:dokkaHtmlPartial/main" data-filterable-set=":simboot-core:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="classes-packages-for-top-listener.html"><span>classes</span><wbr><span>Packages</span><wbr><span>For</span><wbr><span>Top</span><wbr><span><span>Listener</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2059336791%2FProperties%2F717190085"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simboot-core:dokkaHtmlPartial/main"><a data-name="2059336791%2FProperties%2F717190085" anchor-label="classesPackagesForTopListener" id="2059336791%2FProperties%2F717190085" data-filterable-set=":simboot-core:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="classes-packages-for-top-listener.html">classesPackagesForTopListener</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span></div><div class="brief "><a data-name="2059336791%2FProperties%2F717190085" anchor-label="classesPackagesForTopListener" id="2059336791%2FProperties%2F717190085" data-filterable-set=":simboot-core:dokkaHtmlPartial/main"></a><p class="paragraph">是否在 <a href="top-listener-packages.html">topListenerPackages</a> 为空的情况下使用 <a href="classes-packages.html">classesPackages</a> 的最终值。 如果为 <code class="lang-kotlin">true</code>, 则当 <a href="top-listener-packages.html">topListenerPackages</a> 为空的时候（也就是默认的时候）使用 <a href="classes-packages.html">classesPackages</a>. 同样的，如果 <a href="classes-packages.html">classesPackages</a> 为空，则会使用被标记类所在包的路径。</p></div></div></div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simboot-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="classes-packages-for-top-listener.html">classesPackagesForTopListener</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span></div><div class="brief "><p class="paragraph">是否在 <a href="top-listener-packages.html">topListenerPackages</a> 为空的情况下使用 <a href="classes-packages.html">classesPackages</a> 的最终值。 如果为 <code class="lang-kotlin">true</code>, 则当 <a href="top-listener-packages.html">topListenerPackages</a> 为空的时候（也就是默认的时候）使用 <a href="classes-packages.html">classesPackages</a>. 同样的，如果 <a href="classes-packages.html">classesPackages</a> 为空，则会使用被标记类所在包的路径。</p></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 <a data-name="766397246%2FProperties%2F717190085" anchor-label="topBinderPackages" id="766397246%2FProperties%2F717190085" data-filterable-set=":simboot-core:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":simboot-core:dokkaHtmlPartial/main" data-filterable-set=":simboot-core:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="top-binder-packages.html"><span>top</span><wbr><span>Binder</span><wbr><span><span>Packages</span></span></a></div>
+          <div class="table-row" data-filterable-current=":simboot-core:dokkaHtmlPartial/main" data-filterable-set=":simboot-core:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="top-binder-packages.html"><span>top</span><wbr><span>Binder</span><wbr><span><span>Packages</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="766397246%2FProperties%2F717190085"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simboot-core:dokkaHtmlPartial/main"><a data-name="766397246%2FProperties%2F717190085" anchor-label="topBinderPackages" id="766397246%2FProperties%2F717190085" data-filterable-set=":simboot-core:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="top-binder-packages.html">topBinderPackages</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span></div><div class="brief "><a data-name="766397246%2FProperties%2F717190085" anchor-label="topBinderPackages" id="766397246%2FProperties%2F717190085" data-filterable-set=":simboot-core:dokkaHtmlPartial/main"></a><p class="paragraph">指定需要扫描的<strong>顶层 </strong><a href="../../../simboot-api/love.forte.simboot.listener/-parameter-binder-factory/index.html"><strong>BinderFactory</strong></a><strong> 函数</strong>路径。</p></div></div></div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simboot-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="top-binder-packages.html">topBinderPackages</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">指定需要扫描的<strong>顶层 </strong><a href="../../../simboot-api/love.forte.simboot.listener/-parameter-binder-factory/index.html"><strong>BinderFactory</strong></a><strong> 函数</strong>路径。</p></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 <a data-name="-953651340%2FProperties%2F717190085" anchor-label="topListenerPackages" id="-953651340%2FProperties%2F717190085" data-filterable-set=":simboot-core:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":simboot-core:dokkaHtmlPartial/main" data-filterable-set=":simboot-core:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="top-listener-packages.html"><span>top</span><wbr><span>Listener</span><wbr><span><span>Packages</span></span></a></div>
+          <div class="table-row" data-filterable-current=":simboot-core:dokkaHtmlPartial/main" data-filterable-set=":simboot-core:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="top-listener-packages.html"><span>top</span><wbr><span>Listener</span><wbr><span><span>Packages</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-953651340%2FProperties%2F717190085"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simboot-core:dokkaHtmlPartial/main"><a data-name="-953651340%2FProperties%2F717190085" anchor-label="topListenerPackages" id="-953651340%2FProperties%2F717190085" data-filterable-set=":simboot-core:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="top-listener-packages.html">topListenerPackages</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span></div><div class="brief "><a data-name="-953651340%2FProperties%2F717190085" anchor-label="topListenerPackages" id="-953651340%2FProperties%2F717190085" data-filterable-set=":simboot-core:dokkaHtmlPartial/main"></a><p class="paragraph">指定需要扫描的<strong>顶层监听函数</strong>路径。</p></div></div></div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simboot-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="top-listener-packages.html">topListenerPackages</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">指定需要扫描的<strong>顶层监听函数</strong>路径。</p></div></div></div>
+                </div>
               </div>
             </div>
           </div>
@@ -170,6 +175,6 @@
       </div>
     </div>
 </div>
-
-</body></html>
+</body>
+</html>
 

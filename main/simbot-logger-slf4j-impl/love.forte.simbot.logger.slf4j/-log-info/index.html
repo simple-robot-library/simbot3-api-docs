@@ -34,9 +34,12 @@
     <div class="library-name">
 <a href="../../../index.html">
 <span>Simple Robot</span>            </a>    </div>
-    <div>3.0.0-RC.3
+    <div>3.0.0
     </div>
     <div class="pull-right d-flex">
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main">jvm</button>
+        </div>
         <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
         <div id="searchBar"></div>
     </div>
@@ -46,196 +49,202 @@
         <div id="sideMenu"></div>
     </div>
     <div id="main">
-<div class="main-content" id="content" pageids="simbot-logger-slf4j-impl::love.forte.simbot.logger.slf4j/LogInfo///PointingToDeclaration//900705374">
+<div class="main-content" data-page-type="classlike" id="content" pageids="simbot-logger-slf4j-impl::love.forte.simbot.logger.slf4j/LogInfo///PointingToDeclaration//900705374">
   <div class="breadcrumbs"><a href="../../index.html">simbot-logger-slf4j-impl</a><span class="delimiter">/</span><a href="../index.html">love.forte.simbot.logger.slf4j</a><span class="delimiter">/</span><span class="current">LogInfo</span></div>
   <div class="cover ">
     <h1 class="cover"><span>Log</span><wbr><span><span>Info</span></span></h1>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="index.html">LogInfo</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>level<span class="token operator">: </span><a href="../../../simbot-logger/love.forte.simbot.logger/-log-level/index.html">LogLevel</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>marker<span class="token operator">: </span><a href="https://www.slf4j.org/apidocs/org/slf4j/Marker.html">Marker</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>msg<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>args<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><span class="token keyword">out </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">?</span><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>error<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html">Throwable</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>name<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>fullName<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>thread<span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Thread.html">Thread</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>timestamp<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a></span></span><span class="token punctuation">)</span><span class="clearfix"><span class="floating-right">(<a href="https://github.com/simple-robot/simpler-robot/tree/v3-main/simbot-logger-slf4j-impl/src/main/kotlin/love/forte/simbot/logger/slf4j/SimbotLoggerProcessor.kt#L46">source</a>)</span></span></div><p class="paragraph">一次日志所记录的信息。</p></div></div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="index.html">LogInfo</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>level<span class="token operator">: </span><a href="../../../simbot-logger/love.forte.simbot.logger/-log-level/index.html">LogLevel</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>marker<span class="token operator">: </span><a href="https://www.slf4j.org/apidocs/org/slf4j/Marker.html">Marker</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>msg<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>args<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><span class="token keyword">out </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">?</span><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>error<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html">Throwable</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>name<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>fullName<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>thread<span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Thread.html">Thread</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>timestamp<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a></span></span><span class="token punctuation">)</span><span class="clearfix"><span class="floating-right">(<a href="https://github.com/simple-robot/simpler-robot/tree/v3-dev/simbot-logger-slf4j-impl/src/main/kotlin/love/forte/simbot/logger/slf4j/SimbotLoggerProcessor.kt#L55">source</a>)</span></span></div><p class="paragraph">一次日志所记录的信息。</p></div></div>
   </div>
   <div class="tabbedcontent">
-    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Types">Types</button><button class="section-tab" data-togglable="Constructors">Constructors</button><button class="section-tab" data-togglable="Properties">Properties</button></div>
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,FUNCTION,PROPERTY">Members</button></div>
     <div class="tabs-section-body">
-      <h2 class="tabbedcontent">Constructors</h2>
-      <div class="table" data-togglable="Constructors"><a data-name="-1334113368%2FConstructors%2F900705374" anchor-label="LogInfo" id="-1334113368%2FConstructors%2F900705374" data-filterable-set=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main" data-filterable-set=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue TabbedContent">
-            <div class=""><span class="inline-flex">
-                <div><a href="-log-info.html"><span>Log</span><wbr><span><span>Info</span></span></a></div>
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="">Constructors</h2>
+        <div class="table"><a data-name="-1334113368%2FConstructors%2F900705374" anchor-label="LogInfo" id="-1334113368%2FConstructors%2F900705374" data-filterable-set=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-togglable="CONSTRUCTOR" data-filterable-current=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main" data-filterable-set=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-log-info.html"><span>Log</span><wbr><span><span>Info</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1334113368%2FConstructors%2F900705374"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="-log-info.html"><span class="token function">LogInfo</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">level<span class="token operator">: </span><a href="../../../simbot-logger/love.forte.simbot.logger/-log-level/index.html">LogLevel</a><span class="token punctuation">, </span></span><span class="parameter ">marker<span class="token operator">: </span><a href="https://www.slf4j.org/apidocs/org/slf4j/Marker.html">Marker</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">msg<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">args<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><span class="token keyword">out </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">?</span><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">error<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html">Throwable</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">name<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">fullName<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">thread<span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Thread.html">Thread</a><span class="token punctuation">, </span></span><span class="parameter ">timestamp<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a></span></span><span class="token punctuation">)</span></div></div></div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">level<span class="token operator">: </span><a href="../../../simbot-logger/love.forte.simbot.logger/-log-level/index.html">LogLevel</a><span class="token punctuation">, </span></span><span class="parameter ">marker<span class="token operator">: </span><a href="https://www.slf4j.org/apidocs/org/slf4j/Marker.html">Marker</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">msg<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">args<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><span class="token keyword">out </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">?</span><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">error<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html">Throwable</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">name<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">fullName<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">thread<span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Thread.html">Thread</a><span class="token punctuation">, </span></span><span class="parameter ">timestamp<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <h2 class="">Types</h2>
-      <div class="table" data-togglable="Types"><a data-name="1433986525%2FClasslikes%2F900705374" anchor-label="Companion" id="1433986525%2FClasslikes%2F900705374" data-filterable-set=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main" data-filterable-set=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="-companion/index.html"><span><span>Companion</span></span></a></div>
+      <div data-togglable="TYPE">
+        <h2 class="">Types</h2>
+        <div class="table"><a data-name="1433986525%2FClasslikes%2F900705374" anchor-label="Companion" id="1433986525%2FClasslikes%2F900705374" data-filterable-set=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main" data-filterable-set=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-companion/index.html"><span><span>Companion</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1433986525%2FClasslikes%2F900705374"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-companion/index.html">Companion</a></div></div></div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-companion/index.html">Companion</a></div></div></div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <h2 class="">Properties</h2>
-      <div class="table" data-togglable="Properties"><a data-name="-1243791097%2FProperties%2F900705374" anchor-label="args" id="-1243791097%2FProperties%2F900705374" data-filterable-set=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main" data-filterable-set=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="args.html"><span><span>args</span></span></a></div>
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="-1243791097%2FProperties%2F900705374" anchor-label="args" id="-1243791097%2FProperties%2F900705374" data-filterable-set=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main" data-filterable-set=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="args.html"><span><span>args</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1243791097%2FProperties%2F900705374"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main"><a data-name="-1243791097%2FProperties%2F900705374" anchor-label="args" id="-1243791097%2FProperties%2F900705374" data-filterable-set=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="args.html">args</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><span class="token keyword">out </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">?</span><span class="token operator">&gt;</span></div></div></div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="args.html">args</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><span class="token keyword">out </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">?</span><span class="token operator">&gt;</span></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 <a data-name="-675909618%2FProperties%2F900705374" anchor-label="error" id="-675909618%2FProperties%2F900705374" data-filterable-set=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main" data-filterable-set=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="error.html"><span><span>error</span></span></a></div>
+          <div class="table-row" data-filterable-current=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main" data-filterable-set=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="error.html"><span><span>error</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-675909618%2FProperties%2F900705374"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main"><a data-name="-675909618%2FProperties%2F900705374" anchor-label="error" id="-675909618%2FProperties%2F900705374" data-filterable-set=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="error.html">error</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html">Throwable</a><span class="token operator">?</span></div></div></div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="error.html">error</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html">Throwable</a><span class="token operator">?</span></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 <a data-name="-386365761%2FProperties%2F900705374" anchor-label="formattedMsg" id="-386365761%2FProperties%2F900705374" data-filterable-set=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main" data-filterable-set=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="formatted-msg.html"><span>formatted</span><wbr><span><span>Msg</span></span></a></div>
+          <div class="table-row" data-filterable-current=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main" data-filterable-set=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="formatted-msg.html"><span>formatted</span><wbr><span><span>Msg</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-386365761%2FProperties%2F900705374"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main"><a data-name="-386365761%2FProperties%2F900705374" anchor-label="formattedMsg" id="-386365761%2FProperties%2F900705374" data-filterable-set=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="formatted-msg.html">formattedMsg</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><a data-name="-386365761%2FProperties%2F900705374" anchor-label="formattedMsg" id="-386365761%2FProperties%2F900705374" data-filterable-set=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main"></a><p class="paragraph">获取格式化之后的消息文本。</p></div></div></div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="formatted-msg.html">formattedMsg</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">获取格式化之后的消息文本。</p></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 <a data-name="1027704650%2FProperties%2F900705374" anchor-label="fullName" id="1027704650%2FProperties%2F900705374" data-filterable-set=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main" data-filterable-set=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="full-name.html"><span>full</span><wbr><span><span>Name</span></span></a></div>
+          <div class="table-row" data-filterable-current=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main" data-filterable-set=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="full-name.html"><span>full</span><wbr><span><span>Name</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1027704650%2FProperties%2F900705374"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main"><a data-name="1027704650%2FProperties%2F900705374" anchor-label="fullName" id="1027704650%2FProperties%2F900705374" data-filterable-set=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="full-name.html">fullName</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="full-name.html">fullName</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 <a data-name="1046612498%2FProperties%2F900705374" anchor-label="level" id="1046612498%2FProperties%2F900705374" data-filterable-set=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main" data-filterable-set=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="level.html"><span><span>level</span></span></a></div>
+          <div class="table-row" data-filterable-current=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main" data-filterable-set=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="level.html"><span><span>level</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1046612498%2FProperties%2F900705374"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main"><a data-name="1046612498%2FProperties%2F900705374" anchor-label="level" id="1046612498%2FProperties%2F900705374" data-filterable-set=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="level.html">level</a><span class="token operator">: </span><a href="../../../simbot-logger/love.forte.simbot.logger/-log-level/index.html">LogLevel</a></div></div></div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="level.html">level</a><span class="token operator">: </span><a href="../../../simbot-logger/love.forte.simbot.logger/-log-level/index.html">LogLevel</a></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 <a data-name="1778797194%2FProperties%2F900705374" anchor-label="marker" id="1778797194%2FProperties%2F900705374" data-filterable-set=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main" data-filterable-set=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="marker.html"><span><span>marker</span></span></a></div>
+          <div class="table-row" data-filterable-current=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main" data-filterable-set=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="marker.html"><span><span>marker</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1778797194%2FProperties%2F900705374"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main"><a data-name="1778797194%2FProperties%2F900705374" anchor-label="marker" id="1778797194%2FProperties%2F900705374" data-filterable-set=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="marker.html">marker</a><span class="token operator">: </span><a href="https://www.slf4j.org/apidocs/org/slf4j/Marker.html">Marker</a><span class="token operator">?</span></div></div></div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="marker.html">marker</a><span class="token operator">: </span><a href="https://www.slf4j.org/apidocs/org/slf4j/Marker.html">Marker</a><span class="token operator">?</span></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 <a data-name="-523303179%2FProperties%2F900705374" anchor-label="msg" id="-523303179%2FProperties%2F900705374" data-filterable-set=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main" data-filterable-set=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="msg.html"><span><span>msg</span></span></a></div>
+          <div class="table-row" data-filterable-current=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main" data-filterable-set=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="msg.html"><span><span>msg</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-523303179%2FProperties%2F900705374"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main"><a data-name="-523303179%2FProperties%2F900705374" anchor-label="msg" id="-523303179%2FProperties%2F900705374" data-filterable-set=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="msg.html">msg</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="msg.html">msg</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 <a data-name="252589849%2FProperties%2F900705374" anchor-label="name" id="252589849%2FProperties%2F900705374" data-filterable-set=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main" data-filterable-set=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="name.html"><span><span>name</span></span></a></div>
+          <div class="table-row" data-filterable-current=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main" data-filterable-set=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="name.html"><span><span>name</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="252589849%2FProperties%2F900705374"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main"><a data-name="252589849%2FProperties%2F900705374" anchor-label="name" id="252589849%2FProperties%2F900705374" data-filterable-set=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="name.html">name</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="name.html">name</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 <a data-name="1561295546%2FProperties%2F900705374" anchor-label="thread" id="1561295546%2FProperties%2F900705374" data-filterable-set=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main" data-filterable-set=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="thread.html"><span><span>thread</span></span></a></div>
+          <div class="table-row" data-filterable-current=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main" data-filterable-set=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="thread.html"><span><span>thread</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1561295546%2FProperties%2F900705374"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main"><a data-name="1561295546%2FProperties%2F900705374" anchor-label="thread" id="1561295546%2FProperties%2F900705374" data-filterable-set=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="thread.html">thread</a><span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Thread.html">Thread</a></div></div></div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="thread.html">thread</a><span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Thread.html">Thread</a></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 <a data-name="-724553664%2FProperties%2F900705374" anchor-label="timestamp" id="-724553664%2FProperties%2F900705374" data-filterable-set=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main" data-filterable-set=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="timestamp.html"><span><span>timestamp</span></span></a></div>
+          <div class="table-row" data-filterable-current=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main" data-filterable-set=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="timestamp.html"><span><span>timestamp</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-724553664%2FProperties%2F900705374"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main"><a data-name="-724553664%2FProperties%2F900705374" anchor-label="timestamp" id="-724553664%2FProperties%2F900705374" data-filterable-set=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="timestamp.html">timestamp</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a></div></div></div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="timestamp.html">timestamp</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a></div></div></div>
+                </div>
               </div>
             </div>
           </div>
@@ -249,6 +258,6 @@
       </div>
     </div>
 </div>
-
-</body></html>
+</body>
+</html>
 
