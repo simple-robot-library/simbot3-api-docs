@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>doRequestRaw</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../";</script>    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/jetbrains-mono.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<body>
+<div class="navigation-wrapper" id="navigation-wrapper">
+    <div id="leftToggler"><span class="icon-toggler"></span></div>
+    <div class="library-name">
+<a href="../../../index.html">
+<span>Simple Robot Component Tencent Guild</span>            </a>    </div>
+    <div>3.1.0.0-alpha.9-SNAPSHOT
+    </div>
+    <div class="pull-right d-flex">
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain">common</button>
+        </div>
+        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+    </div>
+</div>
+<div id="container">
+    <div id="leftColumn">
+        <div id="sideMenu"></div>
+    </div>
+    <div id="main">
+<div class="main-content" data-page-type="member" id="content" pageids="simbot-component-qq-guild-api::love.forte.simbot.qguild.api.message.direct/DmsSendApi/doRequestRaw/#io.ktor.client.HttpClient#io.ktor.http.Url#kotlin.String/PointingToDeclaration//1533000741">
+  <div class="breadcrumbs"><a href="../../index.html">simbot-component-qq-guild-api</a><span class="delimiter">/</span><a href="../index.html">love.forte.simbot.qguild.api.message.direct</a><span class="delimiter">/</span><a href="index.html">DmsSendApi</a><span class="delimiter">/</span><span class="current">doRequestRaw</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>do</span><wbr><span>Request</span><wbr><span><span>Raw</span></span></h1>
+  </div>
+  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">suspend override </span><span class="token keyword">fun </span><a href="do-request-raw.html"><span class="token function">doRequestRaw</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">client<span class="token operator">: </span><a href="https://api.ktor.io/ktor-client-core/io.ktor.client/-http-client/index.html">HttpClient</a><span class="token punctuation">, </span></span><span class="parameter ">server<span class="token operator">: </span><a href="https://api.ktor.io/ktor-http/io.ktor.http/-url/index.html">Url</a><span class="token punctuation">, </span></span><span class="parameter ">token<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="clearfix"><span class="floating-right">(<a href="https://github.com/simple-robot/simbot-component-qq-guild/tree/main/simbot-component-qq-guild-api/src/commonMain/kotlin/love/forte/simbot/qguild/api/message/direct/DmsSendApi.kt#L111">source</a>)</span></span></div><p class="paragraph">使用当前API发送消息</p><h4 class="">Throws</h4><div class="table"><div class="table-row" data-filterable-current=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../../love.forte.simbot.qguild.api/-message-audited-exception/index.html"><span>Message</span><wbr><span>Audited</span><wbr><span><span>Exception</span></span></a></div></span></div><div><div class="title"><p class="paragraph">当响应状态为表示消息审核的 <code class="lang-kotlin">304023</code>、<code class="lang-kotlin">304024</code> 时</p></div></div></div></div><div class="table-row" data-filterable-current=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-exception/index.html"><span><span>Exception</span></span></a></div></span></div><div><div class="title"><p class="paragraph">see <a href="https://api.ktor.io/ktor-client-core/io.ktor.client.request/index.html">HttpClient.request</a>, 可能会抛出任何ktor请求过程中的异常。</p></div></div></div></div><div class="table-row" data-filterable-current=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../../love.forte.simbot.qguild/-q-q-guild-api-exception/index.html"><span>QQGuild</span><wbr><span>Api</span><wbr><span><span>Exception</span></span></a></div></span></div><div><div class="title"><p class="paragraph">请求过程中出现了错误（http状态码 !in 200 .. 300）</p></div></div></div></div></div></div></div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2023 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+    </div>
+</div>
+</body>
+</html>
+
