@@ -34,7 +34,7 @@
     <div class="library-name">
 <a href="../../../index.html">
 <span>Simple Robot</span>            </a>    </div>
-    <div>3.1.1
+    <div>3.2.0
     </div>
     <div class="pull-right d-flex">
         <div class="filter-section" id="filter-section">
@@ -56,8 +56,27 @@
     <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../../simbot-annotations/love.forte.simbot/-fragile-simbot-api/index.html"><span class="token annotation builtin">FragileSimbotApi</span></a></div></div><span class="token keyword">object </span><a href="index.html">OriginBotManager</a> : <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-set/index.html">Set</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../-bot-manager/index.html">BotManager</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token operator">&gt; </span><span class="clearfix"><span class="floating-right">(<a href="https://github.com/simple-robot/simpler-robot/tree/v3-dev/simbot-api/src/main/kotlin/love/forte/simbot/bot/OriginBotManager.kt#L51">source</a>)</span></span></div><p class="paragraph">所有 <a href="../-bot-manager/index.html">BotManager</a> 的统一管理器.</p><p class="paragraph"><a href="index.html">OriginBotManager</a> 是所有 <a href="../-bot-manager/index.html">BotManager</a> 实例的统一管理类，在正常情况下， 所有的 <a href="../-bot-manager/index.html">BotManager</a> 实现类在新建实例的时候都会将自身交由 <a href="index.html">OriginBotManager</a> 进行统一管理。 <a href="index.html">OriginBotManager</a> 内部不会持有这些manager，当一个 <a href="../-bot-manager/index.html">BotManager</a> 执行了 <a href="cancel.html">cancel</a> 或被垃圾回收后， <a href="index.html">OriginBotManager</a> 中将无法再获取到它。</p><p class="paragraph">如果你想要某个 <a href="../-bot-manager/index.html">BotManager</a> 脱离 <a href="index.html">OriginBotManager</a> 的管理，使用 <a href="../-bot-manager/break-away.html">BotManager.breakAway</a></p><p class="paragraph"><strong>遍历所有</strong>:</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">OriginBotManager.forEach { manager -&gt;<br> // do...<br> }</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><h2 class=""> ⚠ 谨慎使用</h2><p class="paragraph"><a href="index.html">OriginBotManager</a> 是脱离环境的 <strong>全局性</strong> 功能，当你的整个应用中存在多个环境时，使用它则很可能造成各种混乱。 <a href="../-bot-manager/index.html">BotManager</a> 作为属性存在于很多对象中，你应当优先考虑使用那些明确的api（例如 <a href="../-bot/manager.html">Bot.manager</a>、<a href="../../love.forte.simbot.event/-event/bot.html">love.forte.simbot.event.Event.bot</a> 等）， 而对于全局性的 <a href="index.html">OriginBotManager</a>, 是最后的选择。</p></div></div>
   </div>
   <div class="tabbedcontent">
-    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,FUNCTION,PROPERTY">Members</button><button class="section-tab" data-togglable="CONSTRUCTOR,TYPE,FUNCTION,PROPERTY,EXTENSION_PROPERTY,EXTENSION_FUNCTION">Members &amp; Extensions</button></div>
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button><button class="section-tab" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION,EXTENSION_PROPERTY,EXTENSION_FUNCTION">Members &amp; Extensions</button></div>
     <div class="tabs-section-body">
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="433475535%2FProperties%2F-341312757" anchor-label="size" id="433475535%2FProperties%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="size.html"><span><span>size</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="433475535%2FProperties%2F-341312757"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="size.html">size</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></div><div class="brief "><p class="paragraph">得到当前被管理的manager数量。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div data-togglable="FUNCTION">
         <h2 class="">Functions</h2>
         <div class="table"><a data-name="2046260680%2FFunctions%2F-341312757" anchor-label="aggregation" id="2046260680%2FFunctions%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a>
@@ -446,25 +465,6 @@
               <div>
                 <div class="title">
                   <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html">Iterable</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../love.forte.simbot.message/-message/-element/index.html">Message.Element</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="../../love.forte.simbot.message/to-messages.html"><span class="token function">toMessages</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../love.forte.simbot.message/-messages/index.html">Messages</a></div><div class="brief "><p class="paragraph">将 元素为 <a href="../../love.forte.simbot.message/-message/-element/index.html">MsgElement</a> 的 <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html">Iterable</a> 转化为 <a href="../../love.forte.simbot.message/-messages/index.html">Messages</a> 实例。</p></div></div></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div data-togglable="PROPERTY">
-        <h2 class="">Properties</h2>
-        <div class="table"><a data-name="433475535%2FProperties%2F-341312757" anchor-label="size" id="433475535%2FProperties%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a>
-          <div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main">
-            <div class="main-subrow keyValue ">
-              <div class=""><span class="inline-flex">
-                  <div><a href="size.html"><span><span>size</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="433475535%2FProperties%2F-341312757"></span>
-                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                  </span></span></div>
-              <div>
-                <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="size.html">size</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></div><div class="brief "><p class="paragraph">得到当前被管理的manager数量。</p></div></div></div>
                 </div>
               </div>
             </div>

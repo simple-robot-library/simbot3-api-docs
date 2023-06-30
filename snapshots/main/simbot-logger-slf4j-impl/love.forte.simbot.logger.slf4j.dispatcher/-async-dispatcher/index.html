@@ -34,7 +34,7 @@
     <div class="library-name">
 <a href="../../../index.html">
 <span>Simple Robot</span>            </a>    </div>
-    <div>3.1.1
+    <div>3.2.0
     </div>
     <div class="pull-right d-flex">
         <div class="filter-section" id="filter-section">
@@ -56,7 +56,7 @@
     <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="index.html">AsyncDispatcher</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">processors<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../love.forte.simbot.logger.slf4j/-simbot-logger-processor/index.html">SimbotLoggerProcessor</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">configuration<span class="token operator">: </span><a href="../../love.forte.simbot.logger.slf4j/-simbot-logger-configuration/index.html">SimbotLoggerConfiguration</a></span></span><span class="token punctuation">)</span> : <a href="../-log-dispatcher/index.html">LogDispatcher</a><span class="clearfix"><span class="floating-right">(<a href="https://github.com/simple-robot/simpler-robot/tree/v3-dev/simbot-logger-slf4j-impl/src/main/kotlin/love/forte/simbot/logger/slf4j/dispatcher/AsyncDispatcher.kt#L44">source</a>)</span></span></div><p class="paragraph">异步地调度日志。</p><p class="paragraph">纯粹地使用线程池作为调度器。</p><h2 class=""> 配置项</h2><ul><li><p class="paragraph"><code class="lang-kotlin">dispatcher.async.corePoolSize</code> 调度使用的线程池的核心线程数，默认为 <code class="lang-kotlin">0</code>。</p></li><li><p class="paragraph"><code class="lang-kotlin">dispatcher.async.maximumPoolSize</code> 调度使用的线程池的最大线程数，默认为 CPU数量 / 2 ，至少为 <code class="lang-kotlin">1</code>。</p></li><li><p class="paragraph"><code class="lang-kotlin">dispatcher.async.keepAliveTimeMs</code> 调度使用的线程池的线程存活时间，单位毫秒。默认为 60_000 （60s），至少为 <code class="lang-kotlin">0</code>。（不可为负）</p></li><li><p class="paragraph"><code class="lang-kotlin">dispatcher.async.daemon</code> 调度使用的线程池中产生的线程是否为守护线程。默认为 <code class="lang-kotlin">false</code></p></li><li><p class="paragraph"><code class="lang-kotlin">dispatcher.async.threadGroupName</code> 调度使用的线程池中产生的线程的线程组名称。</p></li></ul><p class="paragraph">注意：调度器默认使用无界任务队列 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/LinkedBlockingQueue.html">LinkedBlockingQueue</a>。</p><span class="kdoc-tag"><h4 class="">Author</h4><p class="paragraph">ForteScarlet</p></span></div></div>
   </div>
   <div class="tabbedcontent">
-    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,FUNCTION,PROPERTY">Members</button></div>
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
     <div class="tabs-section-body">
       <div data-togglable="CONSTRUCTOR">
         <h2 class="">Constructors</h2>

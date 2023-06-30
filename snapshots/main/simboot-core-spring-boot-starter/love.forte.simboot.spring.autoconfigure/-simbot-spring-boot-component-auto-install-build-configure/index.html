@@ -34,7 +34,7 @@
     <div class="library-name">
 <a href="../../../index.html">
 <span>Simple Robot</span>            </a>    </div>
-    <div>3.1.1
+    <div>3.2.0
     </div>
     <div class="pull-right d-flex">
         <div class="filter-section" id="filter-section">
@@ -56,7 +56,7 @@
     <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simboot-core-spring-boot-starter:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="index.html">SimbotSpringBootComponentAutoInstallBuildConfigure</a><span class="clearfix"><span class="floating-right">(<a href="https://github.com/simple-robot/simpler-robot/tree/v3-dev/simboot-core-spring-boot-starter/src/main/kotlin/love/forte/simboot/spring/autoconfigure/SimbotSpringBootComponentAutoInstallBuildConfigure.kt#L71">source</a>)</span></span></div><p class="paragraph">自动配置当前可加载的所有 <a href="../../../simbot-annotations/love.forte.simbot/-component/index.html">Component</a> 的配置类。</p><p class="paragraph">如果当前spring环境中存在任何额外的<a href="../../../simbot-annotations/love.forte.simbot/-component-factory/index.html">ComponentFactory</a>, 则使用这些 factory; 否则会直接使用 <a href="../../../simbot-annotations/love.forte.simbot/index.html">installAllComponents</a> 来尝试加载环境中的所有可加载项。</p><p class="paragraph">For example custom factories:</p><p class="paragraph"><strong>Kotlin</strong></p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">@Configuration(proxyBeanMethods = false)<br>open class MyCustomFactoryConfiguration {<br><br>   @Bean<br>   fun fooFactory(): FooComponent.Factory {<br>      return FooComponent<br>   }<br><br>   @Bean<br>   fun barFactory(): BarFactory {<br>      return BarFactory()<br>   }<br><br>   // ...<br><br>}</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph"><strong>Java</strong></p><div class="sample-container"><pre><code class="block lang-java" theme="idea">@Configuration(proxyBeanMethods = false)<br>public class MyCustomFactoryConfiguration {<br><br>   @Bean<br>   public FooComponent.Factory fooFactory() {<br>      return FooComponent.Factory;<br>   }<br><br>   @Bean<br>   public BarFactory barFactory() {<br>      return new BarFactory();<br>   }<br>}</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><span class="kdoc-tag"><h4 class="">Author</h4><p class="paragraph">ForteScarlet</p></span></div></div>
   </div>
   <div class="tabbedcontent">
-    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,FUNCTION,PROPERTY">Members</button></div>
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
     <div class="tabs-section-body">
       <div data-togglable="CONSTRUCTOR">
         <h2 class="">Constructors</h2>
