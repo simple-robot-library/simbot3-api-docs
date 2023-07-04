@@ -34,7 +34,7 @@
     <div class="library-name">
 <a href="../../../index.html">
 <span>Simple Robot</span>            </a>    </div>
-    <div>3.1.0
+    <div>3.2.0
     </div>
     <div class="pull-right d-flex">
         <div class="filter-section" id="filter-section">
@@ -56,8 +56,42 @@
     <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="index.html">EventProcessingContextResolver</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html">C</a><span class="token operator"> : </span><a href="../../../simbot-api/love.forte.simbot.event/-event-processing-context/index.html">EventProcessingContext</a><span class="token operator">&gt;</span><span class="clearfix"><span class="floating-right">(<a href="https://github.com/simple-robot/simpler-robot/tree/v3-dev/simbot-core/src/main/kotlin/love/forte/simbot/core/event/SimpleEventListenerManager.kt#L131">source</a>)</span></span></div><p class="paragraph">事件流程上下文的管理器，<a href="../-simple-event-listener-manager/index.html">SimpleEventListenerManager</a> 通过此接口实例完成对 <a href="../../../simbot-api/love.forte.simbot.event/-event-processing-context/index.html">EventProcessingContext</a> 的统一管理。</p><p class="paragraph">在 <a href="../-simple-event-listener-manager/index.html">SimpleEventListenerManager</a> 中仅会使用同一个 <a href="index.html">EventProcessingContextResolver</a> 实例。</p></div></div>
   </div>
   <div class="tabbedcontent">
-    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,FUNCTION,PROPERTY">Members</button></div>
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
     <div class="tabs-section-body">
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="-980893628%2FProperties%2F1315065822" anchor-label="continuousSessionContext" id="-980893628%2FProperties%2F1315065822" data-filterable-set=":simbot-core:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":simbot-core:dokkaHtmlPartial/main" data-filterable-set=":simbot-core:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="continuous-session-context.html"><span>continuous</span><wbr><span>Session</span><wbr><span><span>Context</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-980893628%2FProperties%2F1315065822"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-core:dokkaHtmlPartial/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../../simbot-annotations/love.forte.simbot/-experimental-simbot-api/index.html"><span class="token annotation builtin">ExperimentalSimbotApi</span></a></div></div><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="continuous-session-context.html">continuousSessionContext</a><span class="token operator">: </span><a href="../../../simbot-api/love.forte.simbot.event/-continuous-session-context/index.html">ContinuousSessionContext</a></div><div class="brief "><p class="paragraph">获取为当前manager服务的持续会话作用域。 持续会话作用域与一个独立的监听函数无关，因此应当能够脱离监听函数流程之外而获取。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1902525086%2FProperties%2F1315065822" anchor-label="globalContext" id="-1902525086%2FProperties%2F1315065822" data-filterable-set=":simbot-core:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":simbot-core:dokkaHtmlPartial/main" data-filterable-set=":simbot-core:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="global-context.html"><span>global</span><wbr><span><span>Context</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1902525086%2FProperties%2F1315065822"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-core:dokkaHtmlPartial/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../../simbot-annotations/love.forte.simbot/-experimental-simbot-api/index.html"><span class="token annotation builtin">ExperimentalSimbotApi</span></a></div></div><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="global-context.html">globalContext</a><span class="token operator">: </span><a href="../../../simbot-api/love.forte.simbot.event/-scope-context/index.html">ScopeContext</a></div><div class="brief "><p class="paragraph">获取为当前manager服务的全局作用域对象。 作为一个全局作用域，它理应能够脱离事件调用流程之外而获取。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div data-togglable="FUNCTION">
         <h2 class="">Functions</h2>
         <div class="table"><a data-name="1071850316%2FFunctions%2F1315065822" anchor-label="appendResultIntoContext" id="1071850316%2FFunctions%2F1315065822" data-filterable-set=":simbot-core:dokkaHtmlPartial/main"></a>
@@ -101,40 +135,6 @@
               <div>
                 <div class="title">
                   <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="resolve-event-to-context.html"><span class="token function">resolveEventToContext</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">event<span class="token operator">: </span><a href="../../../simbot-api/love.forte.simbot.event/-event/index.html">Event</a><span class="token punctuation">, </span></span><span class="parameter ">listenerSize<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">C</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">根据一个事件得到对应的流程上下文。 只有在对应事件存在至少一个对应的监听函数的时候才会被触发。</p></div></div></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div data-togglable="PROPERTY">
-        <h2 class="">Properties</h2>
-        <div class="table"><a data-name="-980893628%2FProperties%2F1315065822" anchor-label="continuousSessionContext" id="-980893628%2FProperties%2F1315065822" data-filterable-set=":simbot-core:dokkaHtmlPartial/main"></a>
-          <div class="table-row" data-filterable-current=":simbot-core:dokkaHtmlPartial/main" data-filterable-set=":simbot-core:dokkaHtmlPartial/main">
-            <div class="main-subrow keyValue ">
-              <div class=""><span class="inline-flex">
-                  <div><a href="continuous-session-context.html"><span>continuous</span><wbr><span>Session</span><wbr><span><span>Context</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-980893628%2FProperties%2F1315065822"></span>
-                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                  </span></span></div>
-              <div>
-                <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-core:dokkaHtmlPartial/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../../simbot-annotations/love.forte.simbot/-experimental-simbot-api/index.html"><span class="token annotation builtin">ExperimentalSimbotApi</span></a></div></div><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="continuous-session-context.html">continuousSessionContext</a><span class="token operator">: </span><a href="../../../simbot-api/love.forte.simbot.event/-continuous-session-context/index.html">ContinuousSessionContext</a></div><div class="brief "><p class="paragraph">获取为当前manager服务的持续会话作用域。 持续会话作用域与一个独立的监听函数无关，因此应当能够脱离监听函数流程之外而获取。</p></div></div></div>
-                </div>
-              </div>
-            </div>
-          </div>
-<a data-name="-1902525086%2FProperties%2F1315065822" anchor-label="globalContext" id="-1902525086%2FProperties%2F1315065822" data-filterable-set=":simbot-core:dokkaHtmlPartial/main"></a>
-          <div class="table-row" data-filterable-current=":simbot-core:dokkaHtmlPartial/main" data-filterable-set=":simbot-core:dokkaHtmlPartial/main">
-            <div class="main-subrow keyValue ">
-              <div class=""><span class="inline-flex">
-                  <div><a href="global-context.html"><span>global</span><wbr><span><span>Context</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1902525086%2FProperties%2F1315065822"></span>
-                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                  </span></span></div>
-              <div>
-                <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-core:dokkaHtmlPartial/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../../simbot-annotations/love.forte.simbot/-experimental-simbot-api/index.html"><span class="token annotation builtin">ExperimentalSimbotApi</span></a></div></div><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="global-context.html">globalContext</a><span class="token operator">: </span><a href="../../../simbot-api/love.forte.simbot.event/-scope-context/index.html">ScopeContext</a></div><div class="brief "><p class="paragraph">获取为当前manager服务的全局作用域对象。 作为一个全局作用域，它理应能够脱离事件调用流程之外而获取。</p></div></div></div>
                 </div>
               </div>
             </div>

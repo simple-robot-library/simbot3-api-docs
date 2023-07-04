@@ -34,7 +34,7 @@
     <div class="library-name">
 <a href="../../../index.html">
 <span>Simple Robot</span>            </a>    </div>
-    <div>3.1.0
+    <div>3.2.0
     </div>
     <div class="pull-right d-flex">
         <div class="filter-section" id="filter-section">
@@ -56,7 +56,7 @@
     <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="index.html">SimpleEventListenerManager</a> : <a href="../../../simbot-api/love.forte.simbot.event/-event-listener-manager/index.html">EventListenerManager</a><span class="clearfix"><span class="floating-right">(<a href="https://github.com/simple-robot/simpler-robot/tree/v3-dev/simbot-core/src/main/kotlin/love/forte/simbot/core/event/SimpleEventListenerManager.kt#L71">source</a>)</span></span></div><p class="paragraph">核心监听函数管理器。</p><h2 class=""> 调度</h2><p class="paragraph"><a href="index.html">SimpleEventListenerManager</a> 遵守 <a href="../../../simbot-api/love.forte.simbot.event/-event-processor/index.html">EventProcessor</a> 接口描述，通过当前事件中的 <a href="../../../simbot-api/love.forte.simbot.event/-event/bot.html">bot</a> 所提供的作用域进行事件调度。</p><h2 class=""> 异步函数</h2><p class="paragraph"><a href="index.html">SimpleEventListenerManager</a> 中，对于一个异步函数 (<a href="../../../simbot-api/love.forte.simbot.event/-event-listener-registration-description/is-async.html">EventListenerRegistrationDescription.isAsync</a> == true 的函数) 的处理方式与其接口定义的描述相同， 对于这个异步函数的拦截器会与当前异步函数共同进入一个由当前事件管理器所提供的异步任务中，并对当前的 <a href="../../../simbot-api/love.forte.simbot.event/-event-processing-context/index.html">EventProcessingContext</a> 立即返回一个 <a href="../../../simbot-api/love.forte.simbot.event/-async-event-result/index.html">AsyncEventResult</a>.</p><h2 class=""> 监听函数的解析、缓存与获取</h2><p class="paragraph">在 <a href="index.html">SimpleEventListenerManager</a> 中，真正被执行的监听函数是经过缓存与转化的，它们只会在遇到一个目前缓存中未知的事件类型的时候进行同步转化缓存。</p><p class="paragraph">因此先通过 <a href="../../../simbot-core/love.forte.simbot.core.event/-simple-event-listener-manager/is-processable.html">isProcessable</a> 判断是否支持当前事件类型，再进行事件的构建是个不错的优化方案：</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">if(eventManager.isProcessable(FooEvent)) {<br>   val event = FooEvent(...)<br>   eventManager.push(event)<br>}</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">或使用扩展函数 <a href="../../../simbot-api/love.forte.simbot.event/index.html">pushIfProcessable</a>：</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">eventManager(FooEvent) {<br>   val event = FooEvent(...)<br>   eventManager.push(event)<br>}</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">这样可以一定程度上避免或降低频繁创建不会被使用的事件对象。</p><p class="paragraph">但是这存在例外：当存在任何通过 <a href="../../../simbot-api/love.forte.simbot.event/-continuous-session-context/index.html">ContinuousSessionContext</a> 而注册的持续会话监听函数的时候，<a href="../../../simbot-core/love.forte.simbot.core.event/-simple-event-listener-manager/is-processable.html">isProcessable</a> 将会始终得到 <code class="lang-kotlin">true</code>。</p><p class="paragraph">需要注意的是, <a href="../../../simbot-core/love.forte.simbot.core.event/-simple-event-listener-manager/is-processable.html">isProcessable</a> 的结果并不保证是 <strong>"强可靠"</strong> 的。由于对监听函数动态增删的支持，其内部持有的监听函数集应当保证线程安全， 但是不会保证<strong>强一致性</strong>。这可能会导致当一个监听函数被追加的这一<strong>瞬间</strong>，<a href="../../../simbot-core/love.forte.simbot.core.event/-simple-event-listener-manager/is-processable.html">isProcessable</a> 仍无法感知到它的存在。</p></div></div>
   </div>
   <div class="tabbedcontent">
-    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,FUNCTION,PROPERTY">Members</button><button class="section-tab" data-togglable="CONSTRUCTOR,TYPE,FUNCTION,PROPERTY,EXTENSION_PROPERTY,EXTENSION_FUNCTION">Members &amp; Extensions</button></div>
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button><button class="section-tab" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION,EXTENSION_PROPERTY,EXTENSION_FUNCTION">Members &amp; Extensions</button></div>
     <div class="tabs-section-body">
       <div data-togglable="TYPE">
         <h2 class="">Types</h2>
@@ -71,6 +71,55 @@
               <div>
                 <div class="title">
                   <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-companion/index.html">Companion</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="-1096400787%2FProperties%2F1315065822" anchor-label="continuousSessionContext" id="-1096400787%2FProperties%2F1315065822" data-filterable-set=":simbot-core:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":simbot-core:dokkaHtmlPartial/main" data-filterable-set=":simbot-core:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="continuous-session-context.html"><span>continuous</span><wbr><span>Session</span><wbr><span><span>Context</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1096400787%2FProperties%2F1315065822"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-core:dokkaHtmlPartial/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../../simbot-annotations/love.forte.simbot/-experimental-simbot-api/index.html"><span class="token annotation builtin">ExperimentalSimbotApi</span></a></div></div><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="continuous-session-context.html">continuousSessionContext</a><span class="token operator">: </span><a href="../../../simbot-api/love.forte.simbot.event/-continuous-session-context/index.html">ContinuousSessionContext</a></div><div class="brief "><p class="paragraph">获取当前监听函数管理器中所使用的持续会话context。 其获取结果相当于在监听函数中使用 <a href="../../love.forte.simbot.core.scope/-simple-scope/-continuous-session.html">SimpleScope.ContinuousSession</a> 进行获取而得到的作用域。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1658410409%2FProperties%2F1315065822" anchor-label="globalScopeContext" id="-1658410409%2FProperties%2F1315065822" data-filterable-set=":simbot-core:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":simbot-core:dokkaHtmlPartial/main" data-filterable-set=":simbot-core:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="global-scope-context.html"><span>global</span><wbr><span>Scope</span><wbr><span><span>Context</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1658410409%2FProperties%2F1315065822"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-core:dokkaHtmlPartial/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../../simbot-annotations/love.forte.simbot/-experimental-simbot-api/index.html"><span class="token annotation builtin">ExperimentalSimbotApi</span></a></div></div><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="global-scope-context.html">globalScopeContext</a><span class="token operator">: </span><a href="../../../simbot-api/love.forte.simbot.event/-scope-context/index.html">ScopeContext</a></div><div class="brief "><p class="paragraph">获取当前监听函数管理器中所使用的全局作用域的context。 其获取结果相当于在监听函数中使用 <a href="../../love.forte.simbot.core.scope/-simple-scope/-global.html">SimpleScope.Global</a> 进行获取而得到的作用域。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1815839735%2FProperties%2F1315065822" anchor-label="listeners" id="1815839735%2FProperties%2F1315065822" data-filterable-set=":simbot-core:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":simbot-core:dokkaHtmlPartial/main" data-filterable-set=":simbot-core:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#1815839735%2FProperties%2F1315065822"><span><span>listeners</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1815839735%2FProperties%2F1315065822"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="index.html#1815839735%2FProperties%2F1315065822">listeners</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.sequences/-sequence/index.html">Sequence</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../../simbot-api/love.forte.simbot.event/-event-listener/index.html">EventListener</a><span class="token operator">&gt;</span></div></div></div>
                 </div>
               </div>
             </div>
@@ -210,55 +259,6 @@
               <div>
                 <div class="title">
                   <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html#-1813773079%2FFunctions%2F1315065822"><span class="token function">register</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">listener<span class="token operator">: </span><a href="../../../simbot-api/love.forte.simbot.event/-event-listener/index.html">EventListener</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../../simbot-api/love.forte.simbot.event/-event-listener-handle/index.html">EventListenerHandle</a></div><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html#831978358%2FFunctions%2F1315065822"><span class="token function">register</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">registrationDescription<span class="token operator">: </span><a href="../../../simbot-api/love.forte.simbot.event/-event-listener-registration-description/index.html">EventListenerRegistrationDescription</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../../simbot-api/love.forte.simbot.event/-event-listener-handle/index.html">EventListenerHandle</a></div></div></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div data-togglable="PROPERTY">
-        <h2 class="">Properties</h2>
-        <div class="table"><a data-name="-1096400787%2FProperties%2F1315065822" anchor-label="continuousSessionContext" id="-1096400787%2FProperties%2F1315065822" data-filterable-set=":simbot-core:dokkaHtmlPartial/main"></a>
-          <div class="table-row" data-filterable-current=":simbot-core:dokkaHtmlPartial/main" data-filterable-set=":simbot-core:dokkaHtmlPartial/main">
-            <div class="main-subrow keyValue ">
-              <div class=""><span class="inline-flex">
-                  <div><a href="continuous-session-context.html"><span>continuous</span><wbr><span>Session</span><wbr><span><span>Context</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1096400787%2FProperties%2F1315065822"></span>
-                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                  </span></span></div>
-              <div>
-                <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-core:dokkaHtmlPartial/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../../simbot-annotations/love.forte.simbot/-experimental-simbot-api/index.html"><span class="token annotation builtin">ExperimentalSimbotApi</span></a></div></div><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="continuous-session-context.html">continuousSessionContext</a><span class="token operator">: </span><a href="../../../simbot-api/love.forte.simbot.event/-continuous-session-context/index.html">ContinuousSessionContext</a></div><div class="brief "><p class="paragraph">获取当前监听函数管理器中所使用的持续会话context。 其获取结果相当于在监听函数中使用 <a href="../../love.forte.simbot.core.scope/-simple-scope/-continuous-session.html">SimpleScope.ContinuousSession</a> 进行获取而得到的作用域。</p></div></div></div>
-                </div>
-              </div>
-            </div>
-          </div>
-<a data-name="-1658410409%2FProperties%2F1315065822" anchor-label="globalScopeContext" id="-1658410409%2FProperties%2F1315065822" data-filterable-set=":simbot-core:dokkaHtmlPartial/main"></a>
-          <div class="table-row" data-filterable-current=":simbot-core:dokkaHtmlPartial/main" data-filterable-set=":simbot-core:dokkaHtmlPartial/main">
-            <div class="main-subrow keyValue ">
-              <div class=""><span class="inline-flex">
-                  <div><a href="global-scope-context.html"><span>global</span><wbr><span>Scope</span><wbr><span><span>Context</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1658410409%2FProperties%2F1315065822"></span>
-                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                  </span></span></div>
-              <div>
-                <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-core:dokkaHtmlPartial/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../../simbot-annotations/love.forte.simbot/-experimental-simbot-api/index.html"><span class="token annotation builtin">ExperimentalSimbotApi</span></a></div></div><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="global-scope-context.html">globalScopeContext</a><span class="token operator">: </span><a href="../../../simbot-api/love.forte.simbot.event/-scope-context/index.html">ScopeContext</a></div><div class="brief "><p class="paragraph">获取当前监听函数管理器中所使用的全局作用域的context。 其获取结果相当于在监听函数中使用 <a href="../../love.forte.simbot.core.scope/-simple-scope/-global.html">SimpleScope.Global</a> 进行获取而得到的作用域。</p></div></div></div>
-                </div>
-              </div>
-            </div>
-          </div>
-<a data-name="1815839735%2FProperties%2F1315065822" anchor-label="listeners" id="1815839735%2FProperties%2F1315065822" data-filterable-set=":simbot-core:dokkaHtmlPartial/main"></a>
-          <div class="table-row" data-filterable-current=":simbot-core:dokkaHtmlPartial/main" data-filterable-set=":simbot-core:dokkaHtmlPartial/main">
-            <div class="main-subrow keyValue ">
-              <div class=""><span class="inline-flex">
-                  <div><a href="index.html#1815839735%2FProperties%2F1315065822"><span><span>listeners</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1815839735%2FProperties%2F1315065822"></span>
-                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                  </span></span></div>
-              <div>
-                <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="index.html#1815839735%2FProperties%2F1315065822">listeners</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.sequences/-sequence/index.html">Sequence</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../../simbot-api/love.forte.simbot.event/-event-listener/index.html">EventListener</a><span class="token operator">&gt;</span></div></div></div>
                 </div>
               </div>
             </div>

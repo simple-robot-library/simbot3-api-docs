@@ -34,7 +34,7 @@
     <div class="library-name">
 <a href="../../../index.html">
 <span>Simple Robot</span>            </a>    </div>
-    <div>3.1.0
+    <div>3.2.0
     </div>
     <div class="pull-right d-flex">
         <div class="filter-section" id="filter-section">
@@ -56,42 +56,8 @@
     <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="index.html">ContactsContainer</a> : <a href="../-social-relations-container/index.html">SocialRelationsContainer</a><span class="clearfix"><span class="floating-right">(<a href="https://github.com/simple-robot/simpler-robot/tree/v3-dev/simbot-api/src/main/kotlin/love/forte/simbot/definition/SocialRelationsContainers.kt#L162">source</a>)</span></span></div><p class="paragraph">提供获取 <a href="../-contact/index.html">Contact</a> 的容器。</p><p class="paragraph">通常应用于 <a href="../../love.forte.simbot.bot/-bot/index.html">Bot</a> 中为其提供获取 <a href="../-contact/index.html">Contact</a> 相关的属性api。</p><p class="paragraph"><a href="../-contact/index.html">联系人</a> 通常代表为与当前容器存在"会话"或可以建立会话的目标， 它们之间必须存在一种硬性关系（例如它们之间是 <a href="../-friend/index.html">好友</a> 关系） 或者存在一个被创建过的"会话"（例如某联系人主动与bot进行过交流或者 与当前容器（<a href="../../love.forte.simbot.bot/-bot/index.html">Bot</a>）创建过与某个目标的会话）。</p><p class="paragraph">因上述约束，<a href="contacts.html">ContactsContainer.contacts</a> 通常不具备检索 <a href="../-member/index.html">组织成员</a> 这类<strong>间接</strong>联系人的能力, 尽管 <a href="../-member/index.html">Member</a> 也属于 <a href="../-contact/index.html">Contact</a> 类型 ———— 除非它们与当前容器存在<strong>直接</strong>会话。</p><p class="paragraph">当一个bot中，所有可能的联系人都是与bot存在硬性关系（例如它们之间是 <a href="../-friend/index.html">好友</a> 关系）的时候， <a href="index.html">ContactsContainer</a> 的表现将会与 <a href="../-friends-container/index.html">FriendsContainer</a> 类似。</p><h4 class="">Inheritors</h4><div class="table"><div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../../love.forte.simbot.bot/-bot/index.html">Bot</a></div></span></div><div></div></div></div></div></div></div>
   </div>
   <div class="tabbedcontent">
-    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,FUNCTION,PROPERTY">Members</button></div>
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
     <div class="tabs-section-body">
-      <div data-togglable="FUNCTION">
-        <h2 class="">Functions</h2>
-        <div class="table"><a data-name="-721451613%2FFunctions%2F-341312757" anchor-label="contact" id="-721451613%2FFunctions%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a>
-          <div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main">
-            <div class="main-subrow keyValue ">
-              <div class=""><span class="inline-flex">
-                  <div><a href="contact.html"><span><span>contact</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-721451613%2FFunctions%2F-341312757"></span>
-                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                  </span></span></div>
-              <div>
-                <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="contact.html"><span class="token function">contact</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">id<span class="token operator">: </span><a href="../../love.forte.simbot/-i-d/index.html">ID</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-contact/index.html">Contact</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">通过唯一标识获取对应的 <a href="../-contact/index.html">Contact</a> 实例。当且仅当因标识对应联系人不存在而导致无法获取时得到null。</p></div></div></div>
-                </div>
-              </div>
-            </div>
-          </div>
-<a data-name="886060991%2FFunctions%2F-341312757" anchor-label="contactCount" id="886060991%2FFunctions%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a>
-          <div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main">
-            <div class="main-subrow keyValue ">
-              <div class=""><span class="inline-flex">
-                  <div><a href="contact-count.html"><span>contact</span><wbr><span><span>Count</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="886060991%2FFunctions%2F-341312757"></span>
-                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                  </span></span></div>
-              <div>
-                <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="contact-count.html"><span class="token function">contactCount</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></div><div class="brief "><p class="paragraph">得到当前容器中所有<a href="../-contact/index.html">联系人</a>的总数量。</p></div></div></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
       <div data-togglable="PROPERTY">
         <h2 class="">Properties</h2>
         <div class="table"><a data-name="-102890181%2FProperties%2F-341312757" anchor-label="contacts" id="-102890181%2FProperties%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a>
@@ -120,6 +86,40 @@
               <div>
                 <div class="title">
                   <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">val </span><a href="is-contacts-supported.html">isContactsSupported</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">是否支持contacts相关的获取操作。当 <a href="contacts.html">contacts</a> 和 <a href="contact.html">contact</a> 都不被支持时得到 <code class="lang-kotlin">false</code>。 默认情况下视其为 <code class="lang-kotlin">true</code>，由实现者重写此属性来决定其可用性。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="-721451613%2FFunctions%2F-341312757" anchor-label="contact" id="-721451613%2FFunctions%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="contact.html"><span><span>contact</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-721451613%2FFunctions%2F-341312757"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="contact.html"><span class="token function">contact</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">id<span class="token operator">: </span><a href="../../love.forte.simbot/-i-d/index.html">ID</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-contact/index.html">Contact</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">通过唯一标识获取对应的 <a href="../-contact/index.html">Contact</a> 实例。当且仅当因标识对应联系人不存在而导致无法获取时得到null。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="886060991%2FFunctions%2F-341312757" anchor-label="contactCount" id="886060991%2FFunctions%2F-341312757" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="contact-count.html"><span>contact</span><wbr><span><span>Count</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="886060991%2FFunctions%2F-341312757"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="contact-count.html"><span class="token function">contactCount</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></div><div class="brief "><p class="paragraph">得到当前容器中所有<a href="../-contact/index.html">联系人</a>的总数量。</p></div></div></div>
                 </div>
               </div>
             </div>
