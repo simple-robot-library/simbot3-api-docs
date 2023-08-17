@@ -34,7 +34,7 @@
     <div class="library-name">
 <a href="../../../index.html">
 <span>Simple Robot Component KOOK</span>            </a>    </div>
-    <div>3.0.0.0-alpha.7
+    <div>3.2.0.0-alpha.8-dev.2
     </div>
     <div class="pull-right d-flex">
         <div class="filter-section" id="filter-section">
@@ -53,7 +53,7 @@
   <div class="breadcrumbs"><a href="../../index.html">simbot-component-kook-core</a><span class="delimiter">/</span><a href="../index.html">love.forte.simbot.component.kook.event</a><span class="delimiter">/</span><span class="current">KookMemberExitedChannelEvent</span></div>
   <div class="cover ">
     <h1 class="cover"><span>Kook</span><wbr><span>Member</span><wbr><span>Exited</span><wbr><span>Channel</span><wbr><span><span>Event</span></span></h1>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">class </span><a href="index.html">KookMemberExitedChannelEvent</a> : <a href="../-kook-member-channel-changed-event/index.html">KookMemberChannelChangedEvent</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../../simbot-component-kook-api/love.forte.simbot.kook.event.system.user/-user-exited-channel-event-body/index.html">UserExitedChannelEventBody</a><span class="token operator">&gt; </span>, <a href="https://docs.simbot.forte.love/main/simbot-api/love.forte.simbot.event/-member-decrease-event/index.html">MemberDecreaseEvent</a><span class="clearfix"><span class="floating-right">(<a href="https://github.com/simple-robot/simbot-component-kook/tree/main/simbot-component-kook-core/src/main/kotlin/love/forte/simbot/component/kook/event/KookMemberChangedEvent.kt#L188">source</a>)</span></span></div><p class="paragraph">Kook 成员离开(频道)事件。</p><p class="paragraph">此事件被触发时，相关成员<strong>已经</strong>被移除自对应频道，且终止了内置的所有任务。 因此 <a href="before.html">before</a> 不可用于执行禁言等操作，<a href="before.html">before</a> 也不会存在于当前频道成员中。</p><span class="kdoc-tag"><h4 class="">Author</h4><p class="paragraph">forte</p></span><h4 class="">See also</h4><div class="table"><div class="table-row" data-filterable-current=":simbot-component-kook-core:dokkaHtmlPartial/main" data-filterable-set=":simbot-component-kook-core:dokkaHtmlPartial/main"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../../../simbot-component-kook-api/love.forte.simbot.kook.event.system.user/-user-exited-channel-event/index.html"><span>User</span><wbr><span>Exited</span><wbr><span>Channel</span><wbr><span><span>Event</span></span></a></div></span></div><div></div></div></div></div></div></div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">class </span><a href="index.html">KookMemberExitedChannelEvent</a> : <a href="../-kook-member-channel-changed-event/index.html">KookMemberChannelChangedEvent</a>, <a href="https://docs.simbot.forte.love/main/simbot-api/love.forte.simbot.event/-member-decrease-event/index.html">MemberDecreaseEvent</a><span class="clearfix"><span class="floating-right">(<a href="https://github.com/simple-robot/simbot-component-kook/tree/main/simbot-component-kook-core/src/main/kotlin/love/forte/simbot/component/kook/event/KookMemberChangedEvent.kt#L174">source</a>)</span></span></div><p class="paragraph">KOOK 成员离开(频道)事件。</p><p class="paragraph">此事件被触发时，相关成员<strong>已经</strong>被移除自对应频道，且终止了内置的所有任务。 因此 <a href="before.html">before</a> 不可用于执行禁言等操作，<a href="before.html">before</a> 也不会存在于当前频道成员中。</p><span class="kdoc-tag"><h4 class="">Author</h4><p class="paragraph">forte</p></span><h4 class="">See also</h4><div class="table"><div class="table-row" data-filterable-current=":simbot-component-kook-core:dokkaHtmlPartial/main" data-filterable-set=":simbot-component-kook-core:dokkaHtmlPartial/main"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../../../simbot-component-kook-api/love.forte.simbot.kook.event/-joined-channel-event-extra/index.html"><span>Joined</span><wbr><span>Channel</span><wbr><span>Event</span><wbr><span><span>Extra</span></span></a></div></span></div><div></div></div></div></div></div></div>
   </div>
   <div class="tabbedcontent">
     <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,FUNCTION,PROPERTY">Members</button></div>
@@ -108,7 +108,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">suspend override </span><span class="token keyword">fun </span><a href="after.html"><span class="token function">after</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../love.forte.simbot.component.kook/-kook-guild-member/index.html">KookGuildMember</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">成员离开后。始终为null。</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">suspend override </span><span class="token keyword">fun </span><a href="after.html"><span class="token function">after</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../love.forte.simbot.component.kook/-kook-member/index.html">KookMember</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">成员离开后。始终为null。</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -123,7 +123,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">suspend override </span><span class="token keyword">fun </span><a href="before.html"><span class="token function">before</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../love.forte.simbot.component.kook/-kook-guild-member/index.html">KookGuildMember</a></div><div class="brief "><p class="paragraph">离开的成员。</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">suspend override </span><span class="token keyword">fun </span><a href="before.html"><span class="token function">before</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../love.forte.simbot.component.kook/-kook-member/index.html">KookMember</a></div><div class="brief "><p class="paragraph">离开的成员。</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -138,7 +138,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">suspend override </span><span class="token keyword">fun </span><a href="../-kook-member-changed-event/member.html"><span class="token function">member</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../love.forte.simbot.component.kook/-kook-guild-member/index.html">KookGuildMember</a></div><div class="brief "><p class="paragraph">本次变更涉及的频道成员信息。同 <a href="../-kook-member-changed-event/user.html">user</a></p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">suspend override </span><span class="token keyword">fun </span><a href="../-kook-member-changed-event/member.html"><span class="token function">member</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../love.forte.simbot.component.kook/-kook-member/index.html">KookMember</a></div><div class="brief "><p class="paragraph">本次变更涉及的频道成员信息。同 <a href="../-kook-member-changed-event/user.html">user</a></p></div></div></div>
                 </div>
               </div>
             </div>
@@ -153,7 +153,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">suspend override </span><span class="token keyword">fun </span><a href="operator.html"><span class="token function">operator</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../love.forte.simbot.component.kook/-kook-guild-member/index.html">KookGuildMember</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Kook 群员离开频道事件的操作者始终为null （无法确定操作者）。</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">suspend override </span><span class="token keyword">fun </span><a href="operator.html"><span class="token function">operator</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../love.forte.simbot.component.kook/-kook-member/index.html">KookMember</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">成员离开频道事件的操作者始终为null （无法确定操作者）。</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -213,7 +213,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">suspend override </span><span class="token keyword">fun </span><a href="../-kook-member-changed-event/user.html"><span class="token function">user</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../love.forte.simbot.component.kook/-kook-guild-member/index.html">KookGuildMember</a></div><div class="brief "><p class="paragraph">本次变更涉及的频道成员信息。同 <a href="../-kook-member-changed-event/member.html">member</a></p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">suspend override </span><span class="token keyword">fun </span><a href="../-kook-member-changed-event/user.html"><span class="token function">user</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../love.forte.simbot.component.kook/-kook-member/index.html">KookMember</a></div><div class="brief "><p class="paragraph">本次变更涉及的频道成员信息。同 <a href="../-kook-member-changed-event/member.html">member</a></p></div></div></div>
                 </div>
               </div>
             </div>
@@ -232,7 +232,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="action-type.html">actionType</a><span class="token operator">: </span><a href="https://docs.simbot.forte.love/main/simbot-api/love.forte.simbot.action/-action-type/index.html">ActionType</a></div><div class="brief "><p class="paragraph">Kook 群员离开频道事件的行为类型始终为 <a href="https://docs.simbot.forte.love/main/simbot-api/love.forte.simbot.action/-action-type/-p-r-o-a-c-t-i-v-e/index.html">主动的</a>。</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="action-type.html">actionType</a><span class="token operator">: </span><a href="https://docs.simbot.forte.love/main/simbot-api/love.forte.simbot.action/-action-type/index.html">ActionType</a></div><div class="brief "><p class="paragraph">KOOK 群员离开频道事件的行为类型始终为 <a href="https://docs.simbot.forte.love/main/simbot-api/love.forte.simbot.action/-action-type/-p-r-o-a-c-t-i-v-e/index.html">主动的</a> （无法确定真正的类型）。</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -307,7 +307,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="../-kook-event/bot.html">bot</a><span class="token operator">: </span><a href="../../love.forte.simbot.component.kook/-kook-component-bot/index.html">KookComponentBot</a></div><div class="brief "><p class="paragraph">此事件对应的bot示例。</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="../-kook-event/bot.html">bot</a><span class="token operator">: </span><a href="../../love.forte.simbot.component.kook.bot/-kook-bot/index.html">KookBot</a></div><div class="brief "><p class="paragraph">此事件对应的bot示例。</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -492,32 +492,32 @@
               </div>
             </div>
           </div>
-<a data-name="1612309304%2FProperties%2F-1619185879" anchor-label="sourceBody" id="1612309304%2FProperties%2F-1619185879" data-filterable-set=":simbot-component-kook-core:dokkaHtmlPartial/main"></a>
+<a data-name="1652912323%2FProperties%2F-1619185879" anchor-label="sourceBody" id="1652912323%2FProperties%2F-1619185879" data-filterable-set=":simbot-component-kook-core:dokkaHtmlPartial/main"></a>
           <div class="table-row" data-filterable-current=":simbot-component-kook-core:dokkaHtmlPartial/main" data-filterable-set=":simbot-component-kook-core:dokkaHtmlPartial/main">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
-                  <div><a href="../-kook-system-event/source-body.html"><span>source</span><wbr><span><span>Body</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1612309304%2FProperties%2F-1619185879"></span>
+                  <div><a href="source-body.html"><span>source</span><wbr><span><span>Body</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1652912323%2FProperties%2F-1619185879"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">val </span><a href="../-kook-system-event/source-body.html">sourceBody</a><span class="token operator">: </span><a href="../../../simbot-component-kook-api/love.forte.simbot.kook.event.system.user/-user-exited-channel-event-body/index.html">UserExitedChannelEventBody</a></div><div class="brief "><p class="paragraph"><a href="../../../simbot-component-kook-core/love.forte.simbot.component.kook.event/-kook-system-event/source-event.html">sourceEvent</a> 中的 <code class="lang-kotlin">extra.body</code> 信息。</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="source-body.html">sourceBody</a><span class="token operator">: </span><a href="../../../simbot-component-kook-api/love.forte.simbot.kook.event/-joined-channel-event-body/index.html">JoinedChannelEventBody</a></div><div class="brief "><p class="paragraph"><a href="source-event.html">sourceEvent</a> 中的 <code class="lang-kotlin">extra.body</code> 信息。</p></div></div></div>
                 </div>
               </div>
             </div>
           </div>
-<a data-name="1456907927%2FProperties%2F-1619185879" anchor-label="sourceEvent" id="1456907927%2FProperties%2F-1619185879" data-filterable-set=":simbot-component-kook-core:dokkaHtmlPartial/main"></a>
+<a data-name="-353914117%2FProperties%2F-1619185879" anchor-label="sourceEvent" id="-353914117%2FProperties%2F-1619185879" data-filterable-set=":simbot-component-kook-core:dokkaHtmlPartial/main"></a>
           <div class="table-row" data-filterable-current=":simbot-component-kook-core:dokkaHtmlPartial/main" data-filterable-set=":simbot-component-kook-core:dokkaHtmlPartial/main">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
-                  <div><a href="../-kook-event/source-event.html"><span>source</span><wbr><span><span>Event</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1456907927%2FProperties%2F-1619185879"></span>
+                  <div><a href="source-event.html"><span>source</span><wbr><span><span>Event</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-353914117%2FProperties%2F-1619185879"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="../-kook-event/source-event.html">sourceEvent</a><span class="token operator">: </span><a href="../../../simbot-component-kook-api/love.forte.simbot.kook.event/-event/index.html">Event</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../../simbot-component-kook-api/love.forte.simbot.kook.event/-event/-extra/-sys/index.html">Event.Extra.Sys</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../../simbot-component-kook-api/love.forte.simbot.kook.event.system.user/-user-exited-channel-event-body/index.html">UserExitedChannelEventBody</a><span class="token operator">&gt;</span><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">当前事件内部对应的原始事件实体。</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="source-event.html">sourceEvent</a><span class="token operator">: </span><a href="../../../simbot-component-kook-api/love.forte.simbot.kook.event/-event/index.html">Event</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../../simbot-component-kook-api/love.forte.simbot.kook.event/-joined-channel-event-extra/index.html">JoinedChannelEventExtra</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">当前事件内部对应的原始事件实体。</p></div></div></div>
                 </div>
               </div>
             </div>
