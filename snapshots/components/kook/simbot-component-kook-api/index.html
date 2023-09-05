@@ -34,11 +34,14 @@
     <div class="library-name">
 <a href="../index.html">
 <span>Simple Robot Component KOOK</span>            </a>    </div>
-    <div>3.0.0.0-alpha.7-SNAPSHOT
+    <div>3.2.0.0-alpha.8-dev.4-SNAPSHOT
     </div>
     <div class="pull-right d-flex">
         <div class="filter-section" id="filter-section">
-                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":simbot-component-kook-api:dokkaHtmlPartial/main">jvm</button>
+                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":simbot-component-kook-api:dokkaHtmlPartial/commonMain">common</button>
+                <button class="platform-tag platform-selector js-like" data-active="" data-filter=":simbot-component-kook-api:dokkaHtmlPartial/jsMain">js</button>
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":simbot-component-kook-api:dokkaHtmlPartial/jvmMain">jvm</button>
+                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":simbot-component-kook-api:dokkaHtmlPartial/nativeMain">native</button>
         </div>
         <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
         <div id="searchBar"></div>
@@ -49,421 +52,318 @@
         <div id="sideMenu"></div>
     </div>
     <div id="main">
-<div class="main-content" id="content" pageids="simbot-component-kook-api::////PointingToDeclaration//1365149280">
+<div class="main-content" id="content" pageids="simbot-component-kook-api::////PointingToDeclaration//947691434">
   <div class="breadcrumbs"></div>
   <div class="cover ">
     <h1 class="cover"><span><span>simbot-component-kook-api</span></span></h1>
-    <div class="platform-hinted UnderCoverText" data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook-api:dokkaHtmlPartial/main"><p class="paragraph">用于提供对KOOK中各内容（例如事件、API、对象等）的定义模块。此模块依赖 <code class="lang-kotlin">simbot-api</code>，但仅最低限度的实现 <code class="lang-kotlin">simbot-api</code> 中的部分类型， 不实现任何功能性内容（例如只实现 <code class="lang-kotlin">id</code>、<code class="lang-kotlin">username</code> 属性的获取，但是不考虑诸如 <strong>消息发送</strong> 等相关内容的实现 ）。</p><p class="paragraph">此模块定义封装KOOK中绝大多数的API（例如获取属性、发送消息等）供于其他模块或外界使用。 API的封装于定义基于 <a href="https://ktor.io/">Ktor（v2）</a>，如果仅希望获得一些对API的基本封装，则可以考虑单独使用此模块。</p><h2 class=""> 日志</h2><p class="paragraph">当使用API的时候，会在名称 <code class="lang-kotlin">love.forte.simbot.kook.api</code> 中输出相关的DEBUG日志。</p><p class="paragraph">其中，部分日志中出现向右的箭头代表为 <code class="lang-kotlin">request</code> 相关的日志，例如 </p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">API[555] =======&gt; xxx</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">向左的则为 <code class="lang-kotlin">response</code> 相关的日志，例如</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">API[222] &lt;======== xxx</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">其中，<code class="lang-kotlin">API</code> 后面的方括号中是当前请求API的对象实例信息，例如哈希值等。</p></div></div>
   </div>
   <h2 class="">Packages</h2>
-  <div class="table"><a data-name="464314576%2FPackages%2F1365149280" anchor-label="love.forte.simbot.kook" id="464314576%2FPackages%2F1365149280" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main"></a>
-    <div class="table-row" data-filterable-current=":simbot-component-kook-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main">
+  <div class="table"><a data-name="464314576%2FPackages%2F-18215637" anchor-label="love.forte.simbot.kook" id="464314576%2FPackages%2F-18215637" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/commonMain"></a>
+    <div class="table-row" data-filterable-current=":simbot-component-kook-api:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/commonMain">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="love.forte.simbot.kook/index.html">love.forte.simbot.kook</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="464314576%2FPackages%2F1365149280"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="464314576%2FPackages%2F-18215637"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div class="pull-right">
             <div class="platform-tags no-gutters">
-              <div class="platform-tag jvm-like">jvm</div>
+              <div class="platform-tag common-like">common</div>
             </div>
           </div>
         </div>
         <div></div>
       </div>
     </div>
-<a data-name="-414532100%2FPackages%2F1365149280" anchor-label="love.forte.simbot.kook.api" id="-414532100%2FPackages%2F1365149280" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main"></a>
-    <div class="table-row" data-filterable-current=":simbot-component-kook-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main">
+<a data-name="-414532100%2FPackages%2F947691434" anchor-label="love.forte.simbot.kook.api" id="-414532100%2FPackages%2F947691434" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/commonMain :simbot-component-kook-api:dokkaHtmlPartial/jsMain :simbot-component-kook-api:dokkaHtmlPartial/jvmMain :simbot-component-kook-api:dokkaHtmlPartial/nativeMain"></a>
+    <div class="table-row" data-filterable-current=":simbot-component-kook-api:dokkaHtmlPartial/commonMain :simbot-component-kook-api:dokkaHtmlPartial/jsMain :simbot-component-kook-api:dokkaHtmlPartial/jvmMain :simbot-component-kook-api:dokkaHtmlPartial/nativeMain" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/commonMain :simbot-component-kook-api:dokkaHtmlPartial/jsMain :simbot-component-kook-api:dokkaHtmlPartial/jvmMain :simbot-component-kook-api:dokkaHtmlPartial/nativeMain">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="love.forte.simbot.kook.api/index.html">love.forte.simbot.kook.api</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-414532100%2FPackages%2F1365149280"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-414532100%2FPackages%2F947691434"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div class="pull-right">
             <div class="platform-tags no-gutters">
+              <div class="platform-tag common-like">common</div>
+              <div class="platform-tag js-like">js</div>
               <div class="platform-tag jvm-like">jvm</div>
+              <div class="platform-tag common-like">native</div>
             </div>
           </div>
         </div>
         <div></div>
       </div>
     </div>
-<a data-name="-2042324098%2FPackages%2F1365149280" anchor-label="love.forte.simbot.kook.api.asset" id="-2042324098%2FPackages%2F1365149280" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main"></a>
-    <div class="table-row" data-filterable-current=":simbot-component-kook-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main">
+<a data-name="-2042324098%2FPackages%2F947691434" anchor-label="love.forte.simbot.kook.api.asset" id="-2042324098%2FPackages%2F947691434" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/commonMain :simbot-component-kook-api:dokkaHtmlPartial/jsMain :simbot-component-kook-api:dokkaHtmlPartial/jvmMain :simbot-component-kook-api:dokkaHtmlPartial/nativeMain"></a>
+    <div class="table-row" data-filterable-current=":simbot-component-kook-api:dokkaHtmlPartial/commonMain :simbot-component-kook-api:dokkaHtmlPartial/jsMain :simbot-component-kook-api:dokkaHtmlPartial/jvmMain :simbot-component-kook-api:dokkaHtmlPartial/nativeMain" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/commonMain :simbot-component-kook-api:dokkaHtmlPartial/jsMain :simbot-component-kook-api:dokkaHtmlPartial/jvmMain :simbot-component-kook-api:dokkaHtmlPartial/nativeMain">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="love.forte.simbot.kook.api.asset/index.html">love.forte.simbot.kook.api.asset</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2042324098%2FPackages%2F1365149280"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2042324098%2FPackages%2F947691434"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div class="pull-right">
             <div class="platform-tags no-gutters">
+              <div class="platform-tag common-like">common</div>
+              <div class="platform-tag js-like">js</div>
               <div class="platform-tag jvm-like">jvm</div>
+              <div class="platform-tag common-like">native</div>
             </div>
           </div>
         </div>
         <div></div>
       </div>
     </div>
-<a data-name="-513101615%2FPackages%2F1365149280" anchor-label="love.forte.simbot.kook.api.channel" id="-513101615%2FPackages%2F1365149280" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main"></a>
-    <div class="table-row" data-filterable-current=":simbot-component-kook-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main">
+<a data-name="-513101615%2FPackages%2F-18215637" anchor-label="love.forte.simbot.kook.api.channel" id="-513101615%2FPackages%2F-18215637" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/commonMain"></a>
+    <div class="table-row" data-filterable-current=":simbot-component-kook-api:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/commonMain">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="love.forte.simbot.kook.api.channel/index.html">love.forte.simbot.kook.api.channel</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-513101615%2FPackages%2F1365149280"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-513101615%2FPackages%2F-18215637"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div class="pull-right">
             <div class="platform-tags no-gutters">
-              <div class="platform-tag jvm-like">jvm</div>
+              <div class="platform-tag common-like">common</div>
             </div>
           </div>
         </div>
         <div></div>
       </div>
     </div>
-<a data-name="1754914497%2FPackages%2F1365149280" anchor-label="love.forte.simbot.kook.api.guild" id="1754914497%2FPackages%2F1365149280" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main"></a>
-    <div class="table-row" data-filterable-current=":simbot-component-kook-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main">
+<a data-name="1754914497%2FPackages%2F-18215637" anchor-label="love.forte.simbot.kook.api.guild" id="1754914497%2FPackages%2F-18215637" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/commonMain"></a>
+    <div class="table-row" data-filterable-current=":simbot-component-kook-api:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/commonMain">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="love.forte.simbot.kook.api.guild/index.html">love.forte.simbot.kook.api.guild</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1754914497%2FPackages%2F1365149280"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1754914497%2FPackages%2F-18215637"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div class="pull-right">
             <div class="platform-tags no-gutters">
-              <div class="platform-tag jvm-like">jvm</div>
+              <div class="platform-tag common-like">common</div>
             </div>
           </div>
         </div>
         <div></div>
       </div>
     </div>
-<a data-name="-187151783%2FPackages%2F1365149280" anchor-label="love.forte.simbot.kook.api.guild.emoji" id="-187151783%2FPackages%2F1365149280" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main"></a>
-    <div class="table-row" data-filterable-current=":simbot-component-kook-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main">
-      <div>
-        <div class="main-subrow ">
-          <div class=""><span class="inline-flex">
-              <div><a href="love.forte.simbot.kook.api.guild.emoji/index.html">love.forte.simbot.kook.api.guild.emoji</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-187151783%2FPackages%2F1365149280"></span>
-                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-              </span></span></div>
-          <div class="pull-right">
-            <div class="platform-tags no-gutters">
-              <div class="platform-tag jvm-like">jvm</div>
-            </div>
-          </div>
-        </div>
-        <div></div>
-      </div>
-    </div>
-<a data-name="-2028315897%2FPackages%2F1365149280" anchor-label="love.forte.simbot.kook.api.guild.role" id="-2028315897%2FPackages%2F1365149280" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main"></a>
-    <div class="table-row" data-filterable-current=":simbot-component-kook-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main">
-      <div>
-        <div class="main-subrow ">
-          <div class=""><span class="inline-flex">
-              <div><a href="love.forte.simbot.kook.api.guild.role/index.html">love.forte.simbot.kook.api.guild.role</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2028315897%2FPackages%2F1365149280"></span>
-                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-              </span></span></div>
-          <div class="pull-right">
-            <div class="platform-tags no-gutters">
-              <div class="platform-tag jvm-like">jvm</div>
-            </div>
-          </div>
-        </div>
-        <div></div>
-      </div>
-    </div>
-<a data-name="1381678874%2FPackages%2F1365149280" anchor-label="love.forte.simbot.kook.api.intimacy" id="1381678874%2FPackages%2F1365149280" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main"></a>
-    <div class="table-row" data-filterable-current=":simbot-component-kook-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main">
-      <div>
-        <div class="main-subrow ">
-          <div class=""><span class="inline-flex">
-              <div><a href="love.forte.simbot.kook.api.intimacy/index.html">love.forte.simbot.kook.api.intimacy</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1381678874%2FPackages%2F1365149280"></span>
-                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-              </span></span></div>
-          <div class="pull-right">
-            <div class="platform-tags no-gutters">
-              <div class="platform-tag jvm-like">jvm</div>
-            </div>
-          </div>
-        </div>
-        <div></div>
-      </div>
-    </div>
-<a data-name="1460940927%2FPackages%2F1365149280" anchor-label="love.forte.simbot.kook.api.invite" id="1460940927%2FPackages%2F1365149280" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main"></a>
-    <div class="table-row" data-filterable-current=":simbot-component-kook-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main">
+<a data-name="1460940927%2FPackages%2F-18215637" anchor-label="love.forte.simbot.kook.api.invite" id="1460940927%2FPackages%2F-18215637" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/commonMain"></a>
+    <div class="table-row" data-filterable-current=":simbot-component-kook-api:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/commonMain">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="love.forte.simbot.kook.api.invite/index.html">love.forte.simbot.kook.api.invite</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1460940927%2FPackages%2F1365149280"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1460940927%2FPackages%2F-18215637"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div class="pull-right">
             <div class="platform-tags no-gutters">
-              <div class="platform-tag jvm-like">jvm</div>
+              <div class="platform-tag common-like">common</div>
             </div>
           </div>
         </div>
         <div></div>
       </div>
     </div>
-<a data-name="-429869355%2FPackages%2F1365149280" anchor-label="love.forte.simbot.kook.api.message" id="-429869355%2FPackages%2F1365149280" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main"></a>
-    <div class="table-row" data-filterable-current=":simbot-component-kook-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main">
+<a data-name="1631799504%2FPackages%2F-18215637" anchor-label="love.forte.simbot.kook.api.member" id="1631799504%2FPackages%2F-18215637" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/commonMain"></a>
+    <div class="table-row" data-filterable-current=":simbot-component-kook-api:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/commonMain">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="love.forte.simbot.kook.api.member/index.html">love.forte.simbot.kook.api.member</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1631799504%2FPackages%2F-18215637"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag common-like">common</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="-429869355%2FPackages%2F-18215637" anchor-label="love.forte.simbot.kook.api.message" id="-429869355%2FPackages%2F-18215637" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/commonMain"></a>
+    <div class="table-row" data-filterable-current=":simbot-component-kook-api:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/commonMain">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="love.forte.simbot.kook.api.message/index.html">love.forte.simbot.kook.api.message</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-429869355%2FPackages%2F1365149280"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-429869355%2FPackages%2F-18215637"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div class="pull-right">
             <div class="platform-tags no-gutters">
-              <div class="platform-tag jvm-like">jvm</div>
+              <div class="platform-tag common-like">common</div>
             </div>
           </div>
         </div>
         <div></div>
       </div>
     </div>
-<a data-name="-1636367423%2FPackages%2F1365149280" anchor-label="love.forte.simbot.kook.api.user" id="-1636367423%2FPackages%2F1365149280" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main"></a>
-    <div class="table-row" data-filterable-current=":simbot-component-kook-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main">
+<a data-name="-1546991444%2FPackages%2F-18215637" anchor-label="love.forte.simbot.kook.api.role" id="-1546991444%2FPackages%2F-18215637" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/commonMain"></a>
+    <div class="table-row" data-filterable-current=":simbot-component-kook-api:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/commonMain">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="love.forte.simbot.kook.api.role/index.html">love.forte.simbot.kook.api.role</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1546991444%2FPackages%2F-18215637"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag common-like">common</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="-1636367423%2FPackages%2F-18215637" anchor-label="love.forte.simbot.kook.api.user" id="-1636367423%2FPackages%2F-18215637" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/commonMain"></a>
+    <div class="table-row" data-filterable-current=":simbot-component-kook-api:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/commonMain">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="love.forte.simbot.kook.api.user/index.html">love.forte.simbot.kook.api.user</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1636367423%2FPackages%2F1365149280"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1636367423%2FPackages%2F-18215637"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div class="pull-right">
             <div class="platform-tags no-gutters">
-              <div class="platform-tag jvm-like">jvm</div>
+              <div class="platform-tag common-like">common</div>
             </div>
           </div>
         </div>
         <div></div>
       </div>
     </div>
-<a data-name="-2136796775%2FPackages%2F1365149280" anchor-label="love.forte.simbot.kook.api.userchat" id="-2136796775%2FPackages%2F1365149280" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main"></a>
-    <div class="table-row" data-filterable-current=":simbot-component-kook-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main">
+<a data-name="-2136796775%2FPackages%2F-18215637" anchor-label="love.forte.simbot.kook.api.userchat" id="-2136796775%2FPackages%2F-18215637" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/commonMain"></a>
+    <div class="table-row" data-filterable-current=":simbot-component-kook-api:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/commonMain">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="love.forte.simbot.kook.api.userchat/index.html">love.forte.simbot.kook.api.userchat</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2136796775%2FPackages%2F1365149280"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2136796775%2FPackages%2F-18215637"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div class="pull-right">
             <div class="platform-tags no-gutters">
-              <div class="platform-tag jvm-like">jvm</div>
+              <div class="platform-tag common-like">common</div>
             </div>
           </div>
         </div>
         <div></div>
       </div>
     </div>
-<a data-name="1448228476%2FPackages%2F1365149280" anchor-label="love.forte.simbot.kook.event" id="1448228476%2FPackages%2F1365149280" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main"></a>
-    <div class="table-row" data-filterable-current=":simbot-component-kook-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main">
+<a data-name="1448228476%2FPackages%2F-18215637" anchor-label="love.forte.simbot.kook.event" id="1448228476%2FPackages%2F-18215637" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/commonMain"></a>
+    <div class="table-row" data-filterable-current=":simbot-component-kook-api:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/commonMain">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="love.forte.simbot.kook.event/index.html">love.forte.simbot.kook.event</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1448228476%2FPackages%2F1365149280"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1448228476%2FPackages%2F-18215637"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div class="pull-right">
             <div class="platform-tags no-gutters">
-              <div class="platform-tag jvm-like">jvm</div>
+              <div class="platform-tag common-like">common</div>
             </div>
           </div>
         </div>
         <div></div>
       </div>
     </div>
-<a data-name="-1800949931%2FPackages%2F1365149280" anchor-label="love.forte.simbot.kook.event.message" id="-1800949931%2FPackages%2F1365149280" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main"></a>
-    <div class="table-row" data-filterable-current=":simbot-component-kook-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main">
+<a data-name="1147440046%2FPackages%2F-18215637" anchor-label="love.forte.simbot.kook.messages" id="1147440046%2FPackages%2F-18215637" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/commonMain"></a>
+    <div class="table-row" data-filterable-current=":simbot-component-kook-api:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/commonMain">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
-              <div><a href="love.forte.simbot.kook.event.message/index.html">love.forte.simbot.kook.event.message</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1800949931%2FPackages%2F1365149280"></span>
+              <div><a href="love.forte.simbot.kook.messages/index.html">love.forte.simbot.kook.messages</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1147440046%2FPackages%2F-18215637"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div class="pull-right">
             <div class="platform-tags no-gutters">
-              <div class="platform-tag jvm-like">jvm</div>
+              <div class="platform-tag common-like">common</div>
             </div>
           </div>
         </div>
         <div></div>
       </div>
     </div>
-<a data-name="1784752037%2FPackages%2F1365149280" anchor-label="love.forte.simbot.kook.event.system" id="1784752037%2FPackages%2F1365149280" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main"></a>
-    <div class="table-row" data-filterable-current=":simbot-component-kook-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main">
-      <div>
-        <div class="main-subrow ">
-          <div class=""><span class="inline-flex">
-              <div><a href="love.forte.simbot.kook.event.system/index.html">love.forte.simbot.kook.event.system</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1784752037%2FPackages%2F1365149280"></span>
-                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-              </span></span></div>
-          <div class="pull-right">
-            <div class="platform-tags no-gutters">
-              <div class="platform-tag jvm-like">jvm</div>
-            </div>
-          </div>
-        </div>
-        <div></div>
-      </div>
-    </div>
-<a data-name="-516595334%2FPackages%2F1365149280" anchor-label="love.forte.simbot.kook.event.system.channel" id="-516595334%2FPackages%2F1365149280" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main"></a>
-    <div class="table-row" data-filterable-current=":simbot-component-kook-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main">
-      <div>
-        <div class="main-subrow ">
-          <div class=""><span class="inline-flex">
-              <div><a href="love.forte.simbot.kook.event.system.channel/index.html">love.forte.simbot.kook.event.system.channel</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-516595334%2FPackages%2F1365149280"></span>
-                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-              </span></span></div>
-          <div class="pull-right">
-            <div class="platform-tags no-gutters">
-              <div class="platform-tag jvm-like">jvm</div>
-            </div>
-          </div>
-        </div>
-        <div></div>
-      </div>
-    </div>
-<a data-name="494577066%2FPackages%2F1365149280" anchor-label="love.forte.simbot.kook.event.system.guild" id="494577066%2FPackages%2F1365149280" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main"></a>
-    <div class="table-row" data-filterable-current=":simbot-component-kook-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main">
-      <div>
-        <div class="main-subrow ">
-          <div class=""><span class="inline-flex">
-              <div><a href="love.forte.simbot.kook.event.system.guild/index.html">love.forte.simbot.kook.event.system.guild</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="494577066%2FPackages%2F1365149280"></span>
-                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-              </span></span></div>
-          <div class="pull-right">
-            <div class="platform-tags no-gutters">
-              <div class="platform-tag jvm-like">jvm</div>
-            </div>
-          </div>
-        </div>
-        <div></div>
-      </div>
-    </div>
-<a data-name="1925054818%2FPackages%2F1365149280" anchor-label="love.forte.simbot.kook.event.system.guild.member" id="1925054818%2FPackages%2F1365149280" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main"></a>
-    <div class="table-row" data-filterable-current=":simbot-component-kook-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main">
-      <div>
-        <div class="main-subrow ">
-          <div class=""><span class="inline-flex">
-              <div><a href="love.forte.simbot.kook.event.system.guild.member/index.html">love.forte.simbot.kook.event.system.guild.member</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1925054818%2FPackages%2F1365149280"></span>
-                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-              </span></span></div>
-          <div class="pull-right">
-            <div class="platform-tags no-gutters">
-              <div class="platform-tag jvm-like">jvm</div>
-            </div>
-          </div>
-        </div>
-        <div></div>
-      </div>
-    </div>
-<a data-name="1264483774%2FPackages%2F1365149280" anchor-label="love.forte.simbot.kook.event.system.guild.role" id="1264483774%2FPackages%2F1365149280" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main"></a>
-    <div class="table-row" data-filterable-current=":simbot-component-kook-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main">
-      <div>
-        <div class="main-subrow ">
-          <div class=""><span class="inline-flex">
-              <div><a href="love.forte.simbot.kook.event.system.guild.role/index.html">love.forte.simbot.kook.event.system.guild.role</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1264483774%2FPackages%2F1365149280"></span>
-                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-              </span></span></div>
-          <div class="pull-right">
-            <div class="platform-tags no-gutters">
-              <div class="platform-tag jvm-like">jvm</div>
-            </div>
-          </div>
-        </div>
-        <div></div>
-      </div>
-    </div>
-<a data-name="-433363074%2FPackages%2F1365149280" anchor-label="love.forte.simbot.kook.event.system.message" id="-433363074%2FPackages%2F1365149280" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main"></a>
-    <div class="table-row" data-filterable-current=":simbot-component-kook-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main">
-      <div>
-        <div class="main-subrow ">
-          <div class=""><span class="inline-flex">
-              <div><a href="love.forte.simbot.kook.event.system.message/index.html">love.forte.simbot.kook.event.system.message</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-433363074%2FPackages%2F1365149280"></span>
-                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-              </span></span></div>
-          <div class="pull-right">
-            <div class="platform-tags no-gutters">
-              <div class="platform-tag jvm-like">jvm</div>
-            </div>
-          </div>
-        </div>
-        <div></div>
-      </div>
-    </div>
-<a data-name="-430097480%2FPackages%2F1365149280" anchor-label="love.forte.simbot.kook.event.system.user" id="-430097480%2FPackages%2F1365149280" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main"></a>
-    <div class="table-row" data-filterable-current=":simbot-component-kook-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main">
-      <div>
-        <div class="main-subrow ">
-          <div class=""><span class="inline-flex">
-              <div><a href="love.forte.simbot.kook.event.system.user/index.html">love.forte.simbot.kook.event.system.user</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-430097480%2FPackages%2F1365149280"></span>
-                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-              </span></span></div>
-          <div class="pull-right">
-            <div class="platform-tags no-gutters">
-              <div class="platform-tag jvm-like">jvm</div>
-            </div>
-          </div>
-        </div>
-        <div></div>
-      </div>
-    </div>
-<a data-name="-984144778%2FPackages%2F1365149280" anchor-label="love.forte.simbot.kook.objects" id="-984144778%2FPackages%2F1365149280" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main"></a>
-    <div class="table-row" data-filterable-current=":simbot-component-kook-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main">
+<a data-name="-984144778%2FPackages%2F-18215637" anchor-label="love.forte.simbot.kook.objects" id="-984144778%2FPackages%2F-18215637" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/commonMain"></a>
+    <div class="table-row" data-filterable-current=":simbot-component-kook-api:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/commonMain">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="love.forte.simbot.kook.objects/index.html">love.forte.simbot.kook.objects</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-984144778%2FPackages%2F1365149280"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-984144778%2FPackages%2F-18215637"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div class="pull-right">
             <div class="platform-tags no-gutters">
-              <div class="platform-tag jvm-like">jvm</div>
+              <div class="platform-tag common-like">common</div>
             </div>
           </div>
         </div>
         <div></div>
       </div>
     </div>
-<a data-name="-628415772%2FPackages%2F1365149280" anchor-label="love.forte.simbot.kook.util" id="-628415772%2FPackages%2F1365149280" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main"></a>
-    <div class="table-row" data-filterable-current=":simbot-component-kook-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/main">
+<a data-name="-1428820852%2FPackages%2F-18215637" anchor-label="love.forte.simbot.kook.objects.card" id="-1428820852%2FPackages%2F-18215637" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/commonMain"></a>
+    <div class="table-row" data-filterable-current=":simbot-component-kook-api:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/commonMain">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
-              <div><a href="love.forte.simbot.kook.util/index.html">love.forte.simbot.kook.util</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-628415772%2FPackages%2F1365149280"></span>
+              <div><a href="love.forte.simbot.kook.objects.card/index.html">love.forte.simbot.kook.objects.card</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1428820852%2FPackages%2F-18215637"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div class="pull-right">
             <div class="platform-tags no-gutters">
-              <div class="platform-tag jvm-like">jvm</div>
+              <div class="platform-tag common-like">common</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="290800074%2FPackages%2F-18215637" anchor-label="love.forte.simbot.kook.objects.kmd" id="290800074%2FPackages%2F-18215637" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/commonMain"></a>
+    <div class="table-row" data-filterable-current=":simbot-component-kook-api:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/commonMain">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="love.forte.simbot.kook.objects.kmd/index.html">love.forte.simbot.kook.objects.kmd</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="290800074%2FPackages%2F-18215637"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag common-like">common</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="-628415772%2FPackages%2F-18215637" anchor-label="love.forte.simbot.kook.util" id="-628415772%2FPackages%2F-18215637" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/commonMain"></a>
+    <div class="table-row" data-filterable-current=":simbot-component-kook-api:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/commonMain">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="love.forte.simbot.kook.util/index.html">love.forte.simbot.kook.util</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-628415772%2FPackages%2F-18215637"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag common-like">common</div>
             </div>
           </div>
         </div>
