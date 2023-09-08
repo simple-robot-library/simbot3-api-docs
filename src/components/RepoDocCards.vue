@@ -1,5 +1,5 @@
 <script setup>
-import {NA, NButton, NCard, NGi, NGrid, NP, NSpace, NTag} from "naive-ui";
+import {NA, NButton, NCard, NGi, NGrid, NImage, NImageGroup, NP, NSpace, NTag} from "naive-ui";
 
 const officialTag = {name: "Official", type: "info"}
 const coreTag = {name: "核心", type: "info"}
@@ -9,6 +9,9 @@ const componentCards = [
     {
         name: "核心库",
         tags: [officialTag, coreTag],
+        shields: [
+          { src: "https://img.shields.io/github/v/release/simple-robot/simpler-robot?label=version", alt: "核心库" },
+        ],
         description: "核心库是组件库的基础，也是绝大多数基本API存在的地方。",
         links: [
             [{name: "前往仓库", href: "https://github.com/simple-robot/simpler-robot", type: "info"}],
@@ -23,6 +26,9 @@ const componentCards = [
     {
         name: "mirai组件",
         tags: [officialTag, componentTag],
+        shields: [
+          { src: "https://img.shields.io/maven-central/v/love.forte.simbot.component/simbot-component-mirai-core?&label=version", alt: "mirai组件" },
+        ],
         description: "Mirai组件基于核心库对 <a href='https://github.com/mamoe/mirai'>mirai框架</a> 进行实现，提供强大的QQ机器人平台功能。",
         links: [
             [{name: "前往仓库", href: "https://github.com/simple-robot/simbot-component-mirai", type: "info"}],
@@ -37,6 +43,9 @@ const componentCards = [
     {
         name: "KOOK组件",
         tags: [officialTag, componentTag],
+        shields: [
+          { src: "https://img.shields.io/maven-central/v/love.forte.simbot.component/simbot-component-kook-core?&label=version", alt: "KOOK组件" },
+        ],
         description: "KOOK组件基于核心库对 <a href='https://developer.kookapp.cn/doc/reference'>KOOK机器人</a> 进行实现，提供强大的KOOK机器人平台功能。",
         links: [
             [{name: "前往仓库", href: "https://github.com/simple-robot/simbot-component-kook", type: "info"}],
@@ -51,6 +60,9 @@ const componentCards = [
     {
         name: "QQ频道组件",
         tags: [officialTag, componentTag],
+        shields: [
+          { src: "https://img.shields.io/maven-central/v/love.forte.simbot.component/simbot-component-qq-guild-core?&label=version", alt: "QQ频道组件" },
+        ],
         description: "QQ频道组件基于核心库对 <a href='https://bot.q.qq.com/wiki'>QQ频道机器人</a> 进行实现，提供强大的QQ频道机器人平台功能。",
         links: [
             [{name: "前往仓库", href: "https://github.com/simple-robot/simbot-component-qq-guild", type: "info"}],
@@ -71,11 +83,18 @@ const componentCards = [
       <n-gi v-for="componentCard in componentCards">
         <n-card :title="componentCard.name" hoverable :content-style="{'min-height': '160px'}">
 
+          <n-image-group>
+            <n-space size="small">
+              <n-image v-for="shield in componentCard.shields" :alt="shield.alt" :src="shield.src" preview-disabled />
+            </n-space>
+          </n-image-group>
+
           <n-space size="small">
             <n-tag v-for="componentTag in componentCard.tags" :type="componentTag.type" size="small" round>
               {{ componentTag.name }}
             </n-tag>
           </n-space>
+
 
 
           <n-p v-html="componentCard.description"></n-p>
