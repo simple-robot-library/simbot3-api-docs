@@ -53,7 +53,7 @@ const componentCards = [
                 {name: "KDoc", href: "components/kook", type: "primary"},
                 {name: "KDoc(快照)", href: "snapshots/components/kook", type: "primary"},
             ],
-            [{name: "前往手册(暂无域名)", href: "https://simple-robot.github.io/simbot-component-kook/", type: "default"}],
+            [{name: "前往手册", href: "https://component-kook.simbot.forte.love/", type: "default"}],
         ]
     },
 
