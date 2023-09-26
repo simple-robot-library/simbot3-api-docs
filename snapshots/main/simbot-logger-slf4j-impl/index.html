@@ -1,0 +1,150 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>simbot-logger-slf4j-impl</title>
+<link href="../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../scripts/sourceset_dependencies.js" async></script>
+<link href="../styles/style.css" rel="Stylesheet">
+<link href="../styles/main.css" rel="Stylesheet">
+<link href="../styles/prism.css" rel="Stylesheet">
+<link href="../styles/logo-styles.css" rel="Stylesheet">
+<link href="../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<script type="text/javascript" src="../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../scripts/main.js" defer></script>
+<script type="text/javascript" src="../scripts/prism.js" async></script>
+<script type="text/javascript" src="../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<body>
+    <div class="root">
+<nav class="navigation" id="navigation-wrapper">
+    <div class="navigation--inner">
+        <div class="navigation-title">
+            <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
+            <div class="library-name">
+<a class="library-name--link" href="../index.html">
+                            Simple Robot
+                    </a>            </div>
+            <div class="library-version">3.3.0
+            </div>
+        </div>
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main">jvm</button>
+        </div>
+    </div>
+    <div class="navigation-controls">
+        <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
+        <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
+    </div>
+</nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="sidebar--inner" id="sideMenu"></div>
+            </div>
+            <div id="main">
+<div class="main-content" id="content" pageids="simbot-logger-slf4j-impl::////PointingToDeclaration//900705374">
+  <div class="breadcrumbs"></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>simbot-logger-slf4j-impl</span></span></h1>
+    <div class="platform-hinted UnderCoverText" data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main"><p class="paragraph">基于 ../simbot-logger 模块的 <a href="http://www.slf4j.org/">SLF4J</a> API 实现，可以应用于任何使用了 SLF4J API 的地方， 包括 ../simbot-logger。</p><h2 class=""> 配置文件</h2><p class="paragraph">支持读取配置文件。在项目根路径或资源根路径创建文件 <code class="lang-kotlin">simbot-logger-slf4j.properties</code></p><div class="sample-container"><pre><code class="block lang-properties" theme="idea"># level 为默认全局等级<br>level=DEBUG<br># 代表前缀为 love.forte.foo1 的日志等级为 TRACE<br>level.love.forte.foo1=TRACE<br># 代表 **控制台输出的日志** 前缀为 love.forte.foo2 时等级为 INFO。<br># 某个特定的处理器（例如此处的 console 日志处理器）优先级高于全局配置。<br>console.level.love.forte.foo2=INFO<br><br># 日志处理的调度模式<br># 默认：基于 disruptor 的高性能异步调度<br>dispatcher=DISRUPTOR<br># 或：同步处理，非异步<br># dispatcher=SYNC<br># 或：普通的基于线程池的异步处理<br># dispatcher=ASYNC</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">更多可用的配置相关内容参考 src/main/kotlin/love/forte/simbot/logger/slf4j/SimbotLoggerConfiguration.kt。</p></div></div>
+  </div>
+  <h2 class="">Packages</h2>
+  <div class="table"><a data-name="-543795435%2FPackages%2F900705374" anchor-label="love.forte.simbot.logger.slf4j" id="-543795435%2FPackages%2F900705374" data-filterable-set=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main"></a>
+    <div class="table-row" data-filterable-current=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main" data-filterable-set=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="love.forte.simbot.logger.slf4j/index.html">love.forte.simbot.logger.slf4j</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-543795435%2FPackages%2F900705374"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">jvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="-1716713334%2FPackages%2F900705374" anchor-label="love.forte.simbot.logger.slf4j.color" id="-1716713334%2FPackages%2F900705374" data-filterable-set=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main"></a>
+    <div class="table-row" data-filterable-current=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main" data-filterable-set=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="love.forte.simbot.logger.slf4j.color/index.html">love.forte.simbot.logger.slf4j.color</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1716713334%2FPackages%2F900705374"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">jvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="1627624932%2FPackages%2F900705374" anchor-label="love.forte.simbot.logger.slf4j.dispatcher" id="1627624932%2FPackages%2F900705374" data-filterable-set=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main"></a>
+    <div class="table-row" data-filterable-current=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main" data-filterable-set=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="love.forte.simbot.logger.slf4j.dispatcher/index.html">love.forte.simbot.logger.slf4j.dispatcher</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1627624932%2FPackages%2F900705374"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">jvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="-1791222153%2FPackages%2F900705374" anchor-label="org.slf4j.impl" id="-1791222153%2FPackages%2F900705374" data-filterable-set=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main"></a>
+    <div class="table-row" data-filterable-current=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main" data-filterable-set=":simbot-logger-slf4j-impl:dokkaHtmlPartial/main">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="org.slf4j.impl/index.html">org.slf4j.impl</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1791222153%2FPackages%2F900705374"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">jvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2023 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
