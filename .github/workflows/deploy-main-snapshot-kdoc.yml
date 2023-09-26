@@ -1,0 +1,22 @@
+name: Deploy QQ Guild Snapshots KDoc Pages
+on:
+  push:
+    branches: 'kdoc-deploy/snapshots/main'
+
+jobs:
+  deploy-main-snapshots-kdoc-pages:
+    name: deploy-main-snapshots-kdoc-pages
+    runs-on: ubuntu-latest
+    steps:
+      # 检出仓库代码
+      - uses: actions/checkout@v3
+
+      # https://github.com/marketplace/actions/github-pages-action
+      - name: Deploy snapshots/main to doc repository
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          personal_token: ${{ secrets.PUSH_TOKEN }}
+          publish_branch: gh-pages
+          # 前缀为 snapshots
+          publish_dir: snapshots/main
+          destination_dir: snapshots/main
