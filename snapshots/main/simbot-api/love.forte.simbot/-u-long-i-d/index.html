@@ -1,9 +1,11 @@
 <!doctype html>
-<html>
+<html class="no-js">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
     <title>ULongID</title>
-<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../";</script>    <script>const storage = localStorage.getItem("dokka-dark-mode")
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
     if (storage == null) {
         const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
         if (osDarkSchemePreferred === true) {
@@ -16,12 +18,13 @@
         }
     }
     </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
 <script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
 <link href="../../../styles/style.css" rel="Stylesheet">
-<link href="../../../styles/jetbrains-mono.css" rel="Stylesheet">
 <link href="../../../styles/main.css" rel="Stylesheet">
 <link href="../../../styles/prism.css" rel="Stylesheet">
 <link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
 <script type="text/javascript" src="../../../scripts/clipboard.js" async></script>
 <script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
 <script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
@@ -29,31 +32,37 @@
 <script type="text/javascript" src="../../../scripts/prism.js" async></script>
 <script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
 <body>
-<div class="navigation-wrapper" id="navigation-wrapper">
-    <div id="leftToggler"><span class="icon-toggler"></span></div>
-    <div class="library-name">
-<a href="../../../index.html">
-<span>Simple Robot</span>            </a>    </div>
-    <div>3.2.0
-    </div>
-    <div class="pull-right d-flex">
+    <div class="root">
+<nav class="navigation" id="navigation-wrapper">
+    <div class="navigation--inner">
+        <div class="navigation-title">
+            <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
+            <div class="library-name">
+<a class="library-name--link" href="../../../index.html">
+                            Simple Robot
+                    </a>            </div>
+            <div class="library-version">3.3.0
+            </div>
+        </div>
         <div class="filter-section" id="filter-section">
                 <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":simbot-api:dokkaHtmlPartial/main">jvm</button>
         </div>
-        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
-        <div id="searchBar"></div>
     </div>
-</div>
-<div id="container">
-    <div id="leftColumn">
-        <div id="sideMenu"></div>
+    <div class="navigation-controls">
+        <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
+        <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
     </div>
-    <div id="main">
+</nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="sidebar--inner" id="sideMenu"></div>
+            </div>
+            <div id="main">
 <div class="main-content" data-page-type="classlike" id="content" pageids="simbot-api::love.forte.simbot/ULongID///PointingToDeclaration//-341312757">
   <div class="breadcrumbs"><a href="../../index.html">simbot-api</a><span class="delimiter">/</span><a href="../index.html">love.forte.simbot</a><span class="delimiter">/</span><span class="current">ULongID</span></div>
   <div class="cover ">
     <h1 class="cover"><span>ULong</span><wbr><span><span>ID</span></span></h1>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-core/kotlinx.serialization/-serializable/index.html"><span class="token annotation builtin">Serializable</span></a><span class="token punctuation">(</span><span>with<span class="token operator"> = </span><a href="../../../simbot-annotations/love.forte.simbot/-u-long-i-d/-serializer/index.html">ULongID.Serializer::class</a></span><wbr><span class="token punctuation">)</span></div></div><span class="token keyword">data </span><span class="token keyword">class </span><a href="index.html">ULongID</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>number<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-u-long/index.html">ULong</a></span></span><span class="token punctuation">)</span> : <a href="../-i-d/index.html">ID</a>, <a href="../-number-similarly/index.html">NumberSimilarly</a><span class="clearfix"><span class="floating-right">(<a href="https://github.com/simple-robot/simpler-robot/tree/v3-dev/simbot-api/src/main/kotlin/love/forte/simbot/ID.kt#L808">source</a>)</span></span></div><p class="paragraph">使用 <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-u-long/index.html">ULong</a> 字面值的 <a href="../-i-d/index.html">ID</a> 实现。</p><p class="paragraph"><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-u-long/index.html">ULong</a> 不是 <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html">Number</a> 的实现，因此 <a href="index.html">ULongID</a> 并非 <a href="../-numerical-i-d/index.html">NumericalID</a> 类型。 但是 <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-u-long/index.html">ULong</a> 会提供类似于 <a href="../-numerical-i-d/index.html">NumericalID</a> 的一些数值转化类型，并且允许与 <a href="../-numerical-i-d/index.html">NumericalID</a> 进行数值比较。</p><p class="paragraph"><a href="index.html">ULongID</a> 与 <a href="../-long-i-d/index.html">LongID</a> 是<strong>不同</strong>的，不要使用值可能为负的 <a href="../-long-i-d/index.html">LongID</a> 来代替 <a href="index.html">ULongID</a>。 <a href="index.html">ULongID</a> 在进行 <code class="lang-kotlin">equals</code> 和 <code class="lang-kotlin">compareTo</code> 的时候，如果目标为数值类型且值为负， 则会直接将其判定为不相等或小数值。</p><p class="paragraph">举个明显的例子：</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">val ul = ULong.MAX_VALUE<br>val l = ULong.MAX_VALUE.toLong()<br><br>println(ul.toLong() == l)          // true<br>println(ul == l.toULong())         // true<br>println(ul.toLong() compareTo l)   // 0<br>println(ul compareTo l.toULong())  // 0<br><br>val ulID: ID = ul.ID<br>val lID: ID = l.ID<br><br>println(ulID == lID)                // false<br>println(ulID compareTo lID)         // 1</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">在JVM中，当仅作为数值而互相转化、比较时，<code class="lang-kotlin">ul</code> 和 <code class="lang-kotlin">l</code> 的实际数值是一样的， 而当它们各自作为 <a href="index.html">ULongID</a> 和 <a href="../-long-i-d/index.html">LongID</a> 时， 不论是 <code class="lang-kotlin">equals</code> 还是 <code class="lang-kotlin">compareTo</code> 的结果都表明它们是不同的。</p><span class="kdoc-tag"><h4 class="">Since</h4><p class="paragraph">3.1.0</p></span><h4 class="">See also</h4><div class="table"><div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../-i-d.html"><span><span>ID</span></span></a></div></span></div><div></div></div></div></div></div></div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-core/kotlinx.serialization/-serial-name/index.html"><span class="token annotation builtin">SerialName</span></a><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">"ID.ULong"</span></span></span><wbr><span class="token punctuation">)</span></div><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-core/kotlinx.serialization/-serializable/index.html"><span class="token annotation builtin">Serializable</span></a><span class="token punctuation">(</span><span>with<span class="token operator"> = </span><a href="../../../simbot-annotations/love.forte.simbot/-u-long-i-d/-serializer/index.html">ULongID.Serializer::class</a></span><wbr><span class="token punctuation">)</span></div></div><span class="token keyword">data </span><span class="token keyword">class </span><a href="index.html">ULongID</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>number<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-u-long/index.html">ULong</a></span></span><span class="token punctuation">)</span> : <a href="../-i-d/index.html">ID</a>, <a href="../-number-similarly/index.html">NumberSimilarly</a><span class="clearfix"><span class="floating-right">(<a href="https://github.com/simple-robot/simpler-robot/tree/v3-dev/simbot-api/src/main/kotlin/love/forte/simbot/ID.kt#L808">source</a>)</span></span></div><p class="paragraph">使用 <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-u-long/index.html">ULong</a> 字面值的 <a href="../-i-d/index.html">ID</a> 实现。</p><p class="paragraph"><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-u-long/index.html">ULong</a> 不是 <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html">Number</a> 的实现，因此 <a href="index.html">ULongID</a> 并非 <a href="../-numerical-i-d/index.html">NumericalID</a> 类型。 但是 <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-u-long/index.html">ULong</a> 会提供类似于 <a href="../-numerical-i-d/index.html">NumericalID</a> 的一些数值转化类型，并且允许与 <a href="../-numerical-i-d/index.html">NumericalID</a> 进行数值比较。</p><p class="paragraph"><a href="index.html">ULongID</a> 与 <a href="../-long-i-d/index.html">LongID</a> 是<strong>不同</strong>的，不要使用值可能为负的 <a href="../-long-i-d/index.html">LongID</a> 来代替 <a href="index.html">ULongID</a>。 <a href="index.html">ULongID</a> 在进行 <code class="lang-kotlin">equals</code> 和 <code class="lang-kotlin">compareTo</code> 的时候，如果目标为数值类型且值为负， 则会直接将其判定为不相等或小数值。</p><p class="paragraph">举个明显的例子：</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">val ul = ULong.MAX_VALUE<br>val l = ULong.MAX_VALUE.toLong()<br><br>println(ul.toLong() == l)          // true<br>println(ul == l.toULong())         // true<br>println(ul.toLong() compareTo l)   // 0<br>println(ul compareTo l.toULong())  // 0<br><br>val ulID: ID = ul.ID<br>val lID: ID = l.ID<br><br>println(ulID == lID)                // false<br>println(ulID compareTo lID)         // 1</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">在JVM中，当仅作为数值而互相转化、比较时，<code class="lang-kotlin">ul</code> 和 <code class="lang-kotlin">l</code> 的实际数值是一样的， 而当它们各自作为 <a href="index.html">ULongID</a> 和 <a href="../-long-i-d/index.html">LongID</a> 时， 不论是 <code class="lang-kotlin">equals</code> 还是 <code class="lang-kotlin">compareTo</code> 的结果都表明它们是不同的。</p><span class="kdoc-tag"><h4 class="">Since</h4><p class="paragraph">3.1.0</p></span><h4 class="">See also</h4><div class="table"><div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/main" data-filterable-set=":simbot-api:dokkaHtmlPartial/main"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../-i-d.html"><span><span>ID</span></span></a></div></span></div><div></div></div></div></div></div></div>
   </div>
   <div class="tabbedcontent">
     <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button><button class="section-tab" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION,EXTENSION_PROPERTY,EXTENSION_FUNCTION">Members &amp; Extensions</button></div>
@@ -365,8 +374,9 @@
       <div class="footer">
         <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2023 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
       </div>
+            </div>
+        </div>
     </div>
-</div>
 </body>
 </html>
 
