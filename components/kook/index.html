@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html class="no-js">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
     <title>All modules</title>
     <link href="images/logo-icon.svg" rel="icon" type="image/svg">
     <script>var pathToRoot = "";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
     <script>const storage = localStorage.getItem("dokka-dark-mode")
     if (storage == null) {
         const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
@@ -20,10 +21,10 @@
     </script>
 <script type="text/javascript" src="scripts/sourceset_dependencies.js" async="async"></script>
 <link href="styles/style.css" rel="Stylesheet">
-<link href="styles/jetbrains-mono.css" rel="Stylesheet">
 <link href="styles/main.css" rel="Stylesheet">
 <link href="styles/prism.css" rel="Stylesheet">
 <link href="styles/logo-styles.css" rel="Stylesheet">
+<link href="styles/font-jb-sans-auto.css" rel="Stylesheet">
 <script type="text/javascript" src="scripts/clipboard.js" async="async"></script>
 <script type="text/javascript" src="scripts/navigation-loader.js" async="async"></script>
 <script type="text/javascript" src="scripts/platform-content-handler.js" async="async"></script>
@@ -34,48 +35,58 @@
 <link href="styles/kdoc-style.css" rel="Stylesheet">
 </head>
 <body>
-<div class="navigation-wrapper" id="navigation-wrapper">
-    <div id="leftToggler"><span class="icon-toggler"></span></div>
-    <div class="library-name">
-            <a href="index.html">
-                    <span>Simple Robot Component KOOK</span>
-            </a>
+    <div class="root">
+<nav class="navigation" id="navigation-wrapper">
+    <div class="navigation--inner">
+        <div class="navigation-title">
+            <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
+            <div class="library-name">
+                    <a class="library-name--link" href="index.html">
+                            Simple Robot Component KOOK
+                    </a>
+            </div>
+            <div class="library-version">
+3.3.0.0-beta1            </div>
+        </div>
     </div>
-    <div>
-3.2.0.0-alpha.8    </div>
-    <div class="pull-right d-flex">
-        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
-        <div id="searchBar"></div>
+    <div class="navigation-controls">
+        <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
+        <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
     </div>
-</div>
-<div id="container">
-    <div id="leftColumn">
-        <div id="sideMenu"></div>
-    </div>
-    <div id="main">
+</nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="sidebar--inner" id="sideMenu"></div>
+            </div>
+            <div id="main">
 <div class="main-content" id="content" pageIds="Simple Robot Component KOOK::.ext/allModules///PointingToDeclaration//0">
   <div class="breadcrumbs"></div>
   <div class="cover ">
     <div class="cover ">
-      <h1 class="">Simple Robot KOOK 组件</h1>
+      <h1 class="">Simple Robot - KOOK 组件</h1>
       <p class="paragraph">此为 <a href="https://github.com/simple-robot/simpler-robot">Simple Robot v3</a> （以下简称为 <code class="lang-kotlin">simbot3</code> ） 下基于simbot标准API对 <a href="https://www.kookapp.cn/">KOOK API</a> 的组件支持。</p>
+      <p class="paragraph"><strong>Simple Robot - KOOK 组件</strong> <small>以下简称KOOK组件</small>  是一个基于 <a href="https://kotlinlang.org/docs/multiplatform.html">KMP</a>、 支持多平台（<code class="lang-kotlin">JVM</code>、<code class="lang-kotlin">JS</code>、native）且JVM平台库对Java友好、 （特定模块）实现simbot3标准API的 <strong>KOOK 机器人API</strong> 依赖库。</p>
+      <p class="paragraph"><strong>KOOK组件</strong>提供多平台的KOOK API、bot事件订阅等功能实现的底层库， 以及基于simbot3标准API的高级功能应用库。</p>
       <h2 class=""> 文档</h2>
       <p class="paragraph">了解<strong>simbot3</strong>: <a href="https://simbot.forte.love">simbot3官网</a></p>
-      <p class="paragraph">KOOK组件的<strong>组件手册</strong>: <a href="https://simple-robot.github.io/simbot-component-kook/">组件手册</a> </p>
+      <p class="paragraph">KOOK组件的<strong>组件手册</strong>: <a href="https://component-kook.simbot.forte.love/">组件手册</a></p>
       <blockquote class="quotation">
-        <p class="paragraph">版本进入稳定后考虑配置域名，目前暂未配置。</p>
+        <p class="paragraph">!note 手册与simbot3官网均部署于GitHub Pages。 为了更好的浏览体验，<strong>推荐</strong>开启魔法后访问。</p>
       </blockquote>
       <p class="paragraph"><strong>API文档</strong>: <a href="https://docs.simbot.forte.love">API文档引导站</a></p>
-      <blockquote class="quotation">
-        <p class="paragraph"><strong>Warning</strong> README 施工中。。。</p>
-      </blockquote>
       <h2 class=""> 支持情况</h2>
-      <p class="paragraph">前往查看 support-list.md</p>
-      <h2 class=""> 使用</h2>
-      <p class="paragraph">前往 <a href="https://simple-robot.github.io/simbot-component-kook/">组件官网</a> 参考 <strong>快速开始</strong> 相关章节。</p>
+      <p class="paragraph">前往查看 support-list.md。</p>
+      <h2 class=""> 快速开始</h2>
+      <p class="paragraph">前往 <a href="https://component-kook.simbot.forte.love/">组件手册</a> 阅读 <strong>快速开始</strong> 相关章节。</p>
       <h2 class=""> 走马观花</h2>
 <details>
-<summary>简单示例</summary>      <div class="sample-container">
+<summary>简单示例</summary>      <blockquote class="quotation">
+        <p class="paragraph">!note Java开发者可直接参考 <a href="https://component-kook.simbot.forte.love/">组件手册</a> 中<strong>快速开始</strong>相关示例的Java部分代码。</p>
+      </blockquote>
+      <blockquote class="quotation">
+        <p class="paragraph">使用 Kotlin + <code class="lang-kotlin">simbot-component-kook-core</code> 配合 <code class="lang-kotlin">simboot-core-spring-boot-starter</code> 使用 <code class="lang-kotlin">Spring Boot</code> 的情况下：</p>
+      </blockquote>
+      <div class="sample-container">
         <pre><code class="block lang-kotlin" theme="idea">// simbot-core / simbot-boot<br>suspend fun KookContactMessageEvent.onEvent() {<br>    author().send(&quot;Hello World&quot;)<br>}</code></pre>
 <span class="top-right-position"><span class="copy-icon"></span>
           <div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div>
@@ -91,12 +102,17 @@
           <div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div>
         </span></div>
       <p class="paragraph">简单的完整示例：</p>
+      <blockquote class="quotation">
+        <p class="paragraph">(使用 Kotlin + <code class="lang-kotlin">simbot-component-kook-core</code>, 非 Spring Boot 的情况下：)</p>
+      </blockquote>
       <div class="sample-container">
         <pre><code class="block lang-kotlin" theme="idea">suspend fun main() {<br>    createSimpleApplication {<br>        // 注册并使用Kook组件。<br>        useKook()<br>        <br>        // 注册各种监听函数<br>        listeners {<br>            // 监听联系人(私聊)消息<br>            // 此事件的逻辑：收到消息，回复一句&quot;你说的是：&quot;，<br>            // 然后再复读一遍你说的话。<br>            ContactMessageEvent { event -&gt;<br>                val contact: Contact = event.source()<br>                contact.send(&quot;你说的是：&quot;)<br>                contact.send(event.messageContent)<br>            }<br>        }<br>        <br>        // 注册kook的bot<br>        kookBots {<br>            val bot = register(&quot;client_id&quot;, &quot;token&quot;)<br>            // bot需要start才能连接服务器、初始化信息等。<br>            bot.start()<br>        }<br>    }.join() // join, 挂起直到被终止。<br>}</code></pre>
 <span class="top-right-position"><span class="copy-icon"></span>
           <div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div>
         </span></div>
-</details>      <h2 class=""> License</h2>
+</details>      <h2 class=""> 应用案例</h2>
+      <p class="paragraph">如果你想看看通过 simbot 开发的bot是什么样子，不妨添加我们亲爱的 <a href="https://www.kookapp.cn/app/oauth2/authorize?id=10250&amp;permissions=197958144&amp;client_id=jqdlyHK85xe1i5Bo&amp;redirect_uri=&amp;scope=bot">法欧莉斯卡雷特</a> 并使用 <code class="lang-kotlin">@法欧莉 今天的我</code> 来看看效果吧~</p>
+      <h2 class=""> License</h2>
       <p class="paragraph"><code class="lang-kotlin">simbot-component-kook</code> 使用 <code class="lang-kotlin">LGPLv3</code> 许可证开源。</p>
       <div class="sample-container">
         <pre><code class="block lang-kotlin" theme="idea">This program is free software: you can redistribute it and/or modify it under the terms of <br>the GNU Lesser General Public License as published by the Free Software Foundation, either <br>version 3 of the License, or (at your option) any later version.<br><br>This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;<br>without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. <br>See the GNU Lesser General Public License for more details.<br><br>You should have received a copy of the GNU Lesser General Public License along with this <br>program. If not, see &lt;https://www.gnu.org/licenses/&gt;.</code></pre>
@@ -146,7 +162,8 @@
                 class="pull-right"><span>Generated by </span><a
                 href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
       </div>
+            </div>
+        </div>
     </div>
-</div>
 </body>
 </html>
