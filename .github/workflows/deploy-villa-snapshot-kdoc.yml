@@ -1,0 +1,22 @@
+name: Deploy Miyoushe Villa Snapshots KDoc Pages
+on:
+  push:
+    branches: 'kdoc-deploy/snapshots/component-miyoushe-villa'
+
+jobs:
+  deploy-miyoushe-villa-snapshots-kdoc-pages:
+    name: deploy-miyoushe-villa-snapshots-kdoc-pages
+    runs-on: ubuntu-latest
+    steps:
+      # 检出仓库代码
+      - uses: actions/checkout@v3
+
+      # https://github.com/marketplace/actions/github-pages-action
+      - name: Deploy snapshots/components/miyoushe-villa to doc repository
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          personal_token: ${{ secrets.PUSH_TOKEN }}
+          publish_branch: gh-pages
+          # 前缀为 snapshots
+          publish_dir: snapshots/components/miyoushe-villa
+          destination_dir: snapshots/components/miyoushe-villa
