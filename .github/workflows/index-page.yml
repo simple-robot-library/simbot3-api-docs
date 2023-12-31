@@ -19,6 +19,7 @@ jobs:
 
         # releases
 
+      # main
       - uses: actions/checkout@v3
         with:
           ref: 'kdoc-deploy/main'
@@ -29,6 +30,7 @@ jobs:
           rm -rf kdoc/main
         working-directory: ./public
 
+      # mirai
       - uses: actions/checkout@v3
         with:
           ref: 'kdoc-deploy/component-mirai'
@@ -39,6 +41,7 @@ jobs:
           rm -rf kdoc/cp-mirai
         working-directory: ./public
 
+      # KOOK
       - uses: actions/checkout@v3
         with:
           ref: 'kdoc-deploy/component-kook'
@@ -49,6 +52,7 @@ jobs:
           rm -rf kdoc/cp-kook
         working-directory: ./public
 
+      # QQ频道
       - uses: actions/checkout@v3
         with:
           ref: 'kdoc-deploy/component-qq-guild'
@@ -60,6 +64,18 @@ jobs:
           rm -rf kdoc/cp-qg
         working-directory: ./public
 
+      # 大别野
+      - uses: actions/checkout@v3
+        with:
+          ref: 'kdoc-deploy/component-miyoushe-villa'
+          path: 'public/kdoc/cp-villa'
+
+      - run: |
+          mkdir -p kdoc/cp-villa
+          cp -r kdoc/cp-villa/* ./
+          rm -rf kdoc/cp-villa
+        working-directory: ./public
+        
       # snapshots
 
       # main 快照
@@ -104,6 +120,17 @@ jobs:
       - run: |
           cp -r kdoc/snapshots/cp-qg/* ./
           rm -rf kdoc/snapshots/cp-qg
+        working-directory: ./public
+
+      # 大别野快照
+      - uses: actions/checkout@v3
+        with:
+          ref: 'kdoc-deploy/snapshots/component-miyoushe-villa'
+          path: 'public/kdoc/snapshots/cp-villa'
+
+      - run: |
+          cp -r kdoc/snapshots/cp-villa/* ./
+          rm -rf kdoc/snapshots/cp-villa
         working-directory: ./public
 
       - run: |
