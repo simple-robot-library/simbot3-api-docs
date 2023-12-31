@@ -1,0 +1,21 @@
+name: Deploy Miyoushe Villa KDoc Pages
+on:
+  push:
+    branches: 'kdoc-deploy/component-miyoushe-villa'
+
+jobs:
+  deploy-miyoushe-villa-kdoc-pages:
+    name: deploy-miyoushe-villa-kdoc-pages
+    runs-on: ubuntu-latest
+    steps:
+      # 检出仓库代码
+      - uses: actions/checkout@v3
+
+      # https://github.com/marketplace/actions/github-pages-action
+      - name: Deploy component/miyoushe-villa to doc repository
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          personal_token: ${{ secrets.PUSH_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: components/miyoushe-villa
+          destination_dir: components/miyoushe-villa
