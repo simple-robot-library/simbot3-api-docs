@@ -1,0 +1,378 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>Bot</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<body>
+    <div class="root">
+<nav class="navigation" id="navigation-wrapper">
+    <div class="navigation--inner">
+        <div class="navigation-title">
+            <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
+            <div class="library-name">
+<a class="library-name--link" href="../../../index.html">
+                            Simple Robot Component 米游社
+                    </a>            </div>
+            <div class="library-version">0.0.1-SNAPSHOT
+            </div>
+        </div>
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":simbot-component-miyoushe-villa-stdlib:dokkaHtmlPartial/commonMain">common</button>
+        </div>
+    </div>
+    <div class="navigation-controls">
+        <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
+        <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
+    </div>
+</nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="sidebar--inner" id="sideMenu"></div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="simbot-component-miyoushe-villa-stdlib::love.forte.simbot.miyoushe.stdlib.bot/Bot///PointingToDeclaration//1753114559">
+  <div class="breadcrumbs"><a href="../../index.html">simbot-component-miyoushe-villa-stdlib</a><span class="delimiter">/</span><a href="../index.html">love.forte.simbot.miyoushe.stdlib.bot</a><span class="delimiter">/</span><span class="current">Bot</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Bot</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-miyoushe-villa-stdlib:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="index.html">Bot</a> : <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-coroutine-scope/index.html">CoroutineScope</a><span class="clearfix"><span class="floating-right">(<a href="https://github.com/simple-robot/simbot-component-miyoushe/tree/main/simbot-component-miyoushe-villa-stdlib/src/commonMain/kotlin/love/forte/simbot/miyoushe/stdlib/bot/Bot.kt#L50">source</a>)</span></span></div><p class="paragraph">一个米游社大别野的 bot。</p><p class="paragraph"><a href="index.html">Bot</a> 基于 <a href="https://webstatic.mihoyo.com/vila/bot/doc/websocket/">Websocket</a> 与米游社大别野建立连接并订阅、处理事件。</p><h3 class=""> 终止</h3><p class="paragraph"><a href="index.html">Bot</a> 可能会通过 <a href="logout.html">logout</a>、<a href="cancel.html">cancel</a> 主动终止，或收到了 <a href="../../../simbot-component-miyoushe-villa-api/love.forte.simbot.miyoushe.ws/-p-kick-off/index.html">PKickOff</a> 数据包而被动终止。 <a href="index.html">Bot</a> 被终止后 <strong>不可重新启动</strong>。</p><span class="kdoc-tag"><h4 class="">Author</h4><p class="paragraph">ForteScarlet</p></span></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button><button class="section-tab" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION,EXTENSION_PROPERTY,EXTENSION_FUNCTION">Members &amp; Extensions</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="TYPE">
+        <h2 class="">Types</h2>
+        <div class="table"><a data-name="1199286493%2FClasslikes%2F1753114559" anchor-label="Ticket" id="1199286493%2FClasslikes%2F1753114559" data-filterable-set=":simbot-component-miyoushe-villa-stdlib:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-miyoushe-villa-stdlib:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-miyoushe-villa-stdlib:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-ticket/index.html"><span><span>Ticket</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1199286493%2FClasslikes%2F1753114559"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-miyoushe-villa-stdlib:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="-ticket/index.html">Ticket</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>botId<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>botSecret<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Bot 的信息。用于构建 token、建立连接等。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="-748030655%2FProperties%2F1753114559" anchor-label="apiClient" id="-748030655%2FProperties%2F1753114559" data-filterable-set=":simbot-component-miyoushe-villa-stdlib:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-miyoushe-villa-stdlib:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-miyoushe-villa-stdlib:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="api-client.html"><span>api</span><wbr><span><span>Client</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-748030655%2FProperties%2F1753114559"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-miyoushe-villa-stdlib:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="api-client.html">apiClient</a><span class="token operator">: </span><a href="https://api.ktor.io/ktor-client-core/io.ktor.client/-http-client/index.html">HttpClient</a></div><div class="brief "><p class="paragraph">bot用于api请求的 <a href="https://api.ktor.io/ktor-client-core/io.ktor.client/-http-client/index.html">HttpClient</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1068372246%2FProperties%2F1753114559" anchor-label="apiDecoder" id="-1068372246%2FProperties%2F1753114559" data-filterable-set=":simbot-component-miyoushe-villa-stdlib:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-miyoushe-villa-stdlib:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-miyoushe-villa-stdlib:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="api-decoder.html"><span>api</span><wbr><span><span>Decoder</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1068372246%2FProperties%2F1753114559"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-miyoushe-villa-stdlib:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="api-decoder.html">apiDecoder</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-json/kotlinx.serialization.json/-json/index.html">Json</a></div><div class="brief "><p class="paragraph">用于api请求并反序列化的 <a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-json/kotlinx.serialization.json/-json/index.html">Json</a></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1966633840%2FProperties%2F1753114559" anchor-label="configuration" id="1966633840%2FProperties%2F1753114559" data-filterable-set=":simbot-component-miyoushe-villa-stdlib:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-miyoushe-villa-stdlib:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-miyoushe-villa-stdlib:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="configuration.html"><span><span>configuration</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1966633840%2FProperties%2F1753114559"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-miyoushe-villa-stdlib:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="configuration.html">configuration</a><span class="token operator">: </span><a href="../-bot-configuration/index.html">BotConfiguration</a></div><div class="brief "><p class="paragraph">bot 的配置信息。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="519335773%2FProperties%2F1753114559" anchor-label="coroutineContext" id="519335773%2FProperties%2F1753114559" data-filterable-set=":simbot-component-miyoushe-villa-stdlib:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-miyoushe-villa-stdlib:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-miyoushe-villa-stdlib:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="coroutine-context.html"><span>coroutine</span><wbr><span><span>Context</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="519335773%2FProperties%2F1753114559"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-miyoushe-villa-stdlib:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="coroutine-context.html">coroutineContext</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.coroutines/-coroutine-context/index.html">CoroutineContext</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1500361884%2FProperties%2F1753114559" anchor-label="isActive" id="-1500361884%2FProperties%2F1753114559" data-filterable-set=":simbot-component-miyoushe-villa-stdlib:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-miyoushe-villa-stdlib:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-miyoushe-villa-stdlib:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-active.html"><span>is</span><wbr><span><span>Active</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1500361884%2FProperties%2F1753114559"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-miyoushe-villa-stdlib:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="is-active.html">isActive</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">bot 协程任务是否存活</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1255436415%2FProperties%2F1753114559" anchor-label="isCancelled" id="1255436415%2FProperties%2F1753114559" data-filterable-set=":simbot-component-miyoushe-villa-stdlib:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-miyoushe-villa-stdlib:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-miyoushe-villa-stdlib:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-cancelled.html"><span>is</span><wbr><span><span>Cancelled</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1255436415%2FProperties%2F1753114559"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-miyoushe-villa-stdlib:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="is-cancelled.html">isCancelled</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">bot 是否已经被终止。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="508842181%2FProperties%2F1753114559" anchor-label="isCompleted" id="508842181%2FProperties%2F1753114559" data-filterable-set=":simbot-component-miyoushe-villa-stdlib:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-miyoushe-villa-stdlib:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-miyoushe-villa-stdlib:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-completed.html"><span>is</span><wbr><span><span>Completed</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="508842181%2FProperties%2F1753114559"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-miyoushe-villa-stdlib:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="is-completed.html">isCompleted</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">bot 是否已经完成（结束）。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-376672241%2FProperties%2F1753114559" anchor-label="isStarted" id="-376672241%2FProperties%2F1753114559" data-filterable-set=":simbot-component-miyoushe-villa-stdlib:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-miyoushe-villa-stdlib:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-miyoushe-villa-stdlib:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-started.html"><span>is</span><wbr><span><span>Started</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-376672241%2FProperties%2F1753114559"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-miyoushe-villa-stdlib:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="is-started.html">isStarted</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">bot 是否使用过 <a href="start.html">start</a> 且成功启动过至少一次。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1666040216%2FProperties%2F1753114559" anchor-label="ticket" id="-1666040216%2FProperties%2F1753114559" data-filterable-set=":simbot-component-miyoushe-villa-stdlib:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-miyoushe-villa-stdlib:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-miyoushe-villa-stdlib:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="ticket.html"><span><span>ticket</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1666040216%2FProperties%2F1753114559"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-miyoushe-villa-stdlib:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="ticket.html">ticket</a><span class="token operator">: </span><a href="-ticket/index.html">Bot.Ticket</a></div><div class="brief "><p class="paragraph">Bot 的相关信息。可能存在敏感信息。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="619348234%2FFunctions%2F1753114559" anchor-label="cancel" id="619348234%2FFunctions%2F1753114559" data-filterable-set=":simbot-component-miyoushe-villa-stdlib:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-miyoushe-villa-stdlib:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-miyoushe-villa-stdlib:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="cancel.html"><span><span>cancel</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="619348234%2FFunctions%2F1753114559"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-miyoushe-villa-stdlib:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="cancel.html"><span class="token function">cancel</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="cancel.html"><span class="token function">cancel</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">reason<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html">Throwable</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">关闭当前 bot 所处协程任务。也会使得 bot 与服务器的连接断开。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1859480522%2FFunctions%2F1753114559" anchor-label="join" id="1859480522%2FFunctions%2F1753114559" data-filterable-set=":simbot-component-miyoushe-villa-stdlib:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-miyoushe-villa-stdlib:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-miyoushe-villa-stdlib:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="join.html"><span><span>join</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1859480522%2FFunctions%2F1753114559"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-miyoushe-villa-stdlib:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="join.html"><span class="token function">join</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">挂起直到此 bot 的协程被终止。 可能会通过 <a href="logout.html">logout</a>、<a href="cancel.html">cancel</a> 主动终止，或收到了 <a href="../../../simbot-component-miyoushe-villa-api/love.forte.simbot.miyoushe.ws/-p-kick-off/index.html">PKickOff</a> 数据包而被动终止。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-150159958%2FFunctions%2F1753114559" anchor-label="logout" id="-150159958%2FFunctions%2F1753114559" data-filterable-set=":simbot-component-miyoushe-villa-stdlib:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-miyoushe-villa-stdlib:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-miyoushe-villa-stdlib:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="logout.html"><span><span>logout</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-150159958%2FFunctions%2F1753114559"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-miyoushe-villa-stdlib:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="logout.html"><span class="token function">logout</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">向服务器发出 <a href="https://webstatic.mihoyo.com/vila/bot/doc/websocket/websocket_package.html#%E7%99%BB%E5%87%BA">登出</a> (<a href="../../../simbot-component-miyoushe-villa-api/love.forte.simbot.miyoushe.ws/-p-logout/index.html">PLogout</a>) 数据包。 bot 会继续运行直到服务器响应了 <a href="../../../simbot-component-miyoushe-villa-api/love.forte.simbot.miyoushe.ws/-p-logout-reply/index.html">PLogoutReply</a>。 如果希望直接终止 bot，则考虑使用 <a href="cancel.html">cancel</a> 以协程的方式关闭。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1755464476%2FFunctions%2F1753114559" anchor-label="processEvent" id="-1755464476%2FFunctions%2F1753114559" data-filterable-set=":simbot-component-miyoushe-villa-stdlib:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":simbot-component-miyoushe-villa-stdlib:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-miyoushe-villa-stdlib:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../process-event.html"><span>process</span><wbr><span><span>Event</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1755464476%2FFunctions%2F1753114559"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-miyoushe-villa-stdlib:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../process-event.html">E</a><span class="token operator"> : </span><a href="../../../simbot-component-miyoushe-villa-api/love.forte.simbot.miyoushe.event/-event-extend-data/index.html">EventExtendData</a><span class="token operator">&gt; </span><a href="index.html">Bot</a><span class="token punctuation">.</span><a href="../process-event.html"><span class="token function">processEvent</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">crossinline </span>processor<span class="token operator">: </span><span class="token keyword">suspend </span><span class="token keyword"></span><a href="../../../simbot-component-miyoushe-villa-api/love.forte.simbot.miyoushe.event/-event/index.html">Event</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../process-event.html">E</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token keyword"></span><a href="../../../simbot-component-miyoushe-villa-api/love.forte.simbot.miyoushe.event/-event-source/index.html">EventSource</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../love.forte.simbot.miyoushe.stdlib/-disposable-handle/index.html">DisposableHandle</a></div><div class="brief "><p class="paragraph">注册一个仅处理指定 <a href="../../../simbot-component-miyoushe-villa-api/love.forte.simbot.miyoushe.event/-event-extend-data/index.html">EventExtendData</a> 类型的事件处理器。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-489671625%2FFunctions%2F1753114559" anchor-label="processEventWithSource" id="-489671625%2FFunctions%2F1753114559" data-filterable-set=":simbot-component-miyoushe-villa-stdlib:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":simbot-component-miyoushe-villa-stdlib:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-miyoushe-villa-stdlib:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../process-event-with-source.html"><span>process</span><wbr><span>Event</span><wbr><span>With</span><wbr><span><span>Source</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-489671625%2FFunctions%2F1753114559"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-miyoushe-villa-stdlib:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../process-event-with-source.html">E</a><span class="token operator"> : </span><a href="../../../simbot-component-miyoushe-villa-api/love.forte.simbot.miyoushe.event/-event-extend-data/index.html">EventExtendData</a><span class="token punctuation">, </span><span class="token keyword"></span><a href="../process-event-with-source.html">S</a><span class="token operator"> : </span><a href="../../../simbot-component-miyoushe-villa-api/love.forte.simbot.miyoushe.event/-event-source/index.html">EventSource</a><span class="token operator">&gt; </span><a href="index.html">Bot</a><span class="token punctuation">.</span><a href="../process-event-with-source.html"><span class="token function">processEventWithSource</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">crossinline </span>processor<span class="token operator">: </span><span class="token keyword">suspend </span><span class="token keyword"></span><a href="../../../simbot-component-miyoushe-villa-api/love.forte.simbot.miyoushe.event/-event/index.html">Event</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../process-event-with-source.html">E</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token keyword"></span><a href="../process-event-with-source.html">S</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../love.forte.simbot.miyoushe.stdlib/-disposable-handle/index.html">DisposableHandle</a></div><div class="brief "><p class="paragraph">注册一个仅处理指定源 <a href="../process-event-with-source.html">S</a>、指定 <a href="../../../simbot-component-miyoushe-villa-api/love.forte.simbot.miyoushe.event/-event-extend-data/index.html">EventExtendData</a> 类型 <a href="../process-event-with-source.html">E</a> 的事件处理器。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1957751380%2FFunctions%2F1753114559" anchor-label="processSource" id="1957751380%2FFunctions%2F1753114559" data-filterable-set=":simbot-component-miyoushe-villa-stdlib:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":simbot-component-miyoushe-villa-stdlib:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-miyoushe-villa-stdlib:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../process-source.html"><span>process</span><wbr><span><span>Source</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1957751380%2FFunctions%2F1753114559"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-miyoushe-villa-stdlib:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../process-source.html">S</a><span class="token operator"> : </span><a href="../../../simbot-component-miyoushe-villa-api/love.forte.simbot.miyoushe.event/-event-source/index.html">EventSource</a><span class="token operator">&gt; </span><a href="index.html">Bot</a><span class="token punctuation">.</span><a href="../process-source.html"><span class="token function">processSource</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">crossinline </span>processor<span class="token operator">: </span><span class="token keyword">suspend </span><span class="token keyword"></span><a href="../../../simbot-component-miyoushe-villa-api/love.forte.simbot.miyoushe.event/-event/index.html">Event</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token keyword"></span><a href="../process-source.html">S</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../love.forte.simbot.miyoushe.stdlib/-disposable-handle/index.html">DisposableHandle</a></div><div class="brief "><p class="paragraph">注册一个仅处理指定源 <a href="../process-source.html">S</a> 的事件处理器。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1749831670%2FFunctions%2F1753114559" anchor-label="registerPreProcessor" id="-1749831670%2FFunctions%2F1753114559" data-filterable-set=":simbot-component-miyoushe-villa-stdlib:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-miyoushe-villa-stdlib:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-miyoushe-villa-stdlib:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="register-pre-processor.html"><span>register</span><wbr><span>Pre</span><wbr><span><span>Processor</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1749831670%2FFunctions%2F1753114559"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-miyoushe-villa-stdlib:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="register-pre-processor.html"><span class="token function">registerPreProcessor</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">processor<span class="token operator">: </span><a href="../-event-processor/index.html">EventProcessor</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../love.forte.simbot.miyoushe.stdlib/-disposable-handle/index.html">DisposableHandle</a></div><div class="brief "><p class="paragraph">添加一个事件<strong>预处理器</strong>。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="859272159%2FFunctions%2F1753114559" anchor-label="registerProcessor" id="859272159%2FFunctions%2F1753114559" data-filterable-set=":simbot-component-miyoushe-villa-stdlib:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-miyoushe-villa-stdlib:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-miyoushe-villa-stdlib:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="register-processor.html"><span>register</span><wbr><span><span>Processor</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="859272159%2FFunctions%2F1753114559"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-miyoushe-villa-stdlib:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="register-processor.html"><span class="token function">registerProcessor</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">processor<span class="token operator">: </span><a href="../-event-processor/index.html">EventProcessor</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../love.forte.simbot.miyoushe.stdlib/-disposable-handle/index.html">DisposableHandle</a></div><div class="brief "><p class="paragraph">注册一个事件处理器。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-26603900%2FFunctions%2F1753114559" anchor-label="start" id="-26603900%2FFunctions%2F1753114559" data-filterable-set=":simbot-component-miyoushe-villa-stdlib:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-miyoushe-villa-stdlib:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-miyoushe-villa-stdlib:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="start.html"><span><span>start</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-26603900%2FFunctions%2F1753114559"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-miyoushe-villa-stdlib:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="start.html"><span class="token function">start</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">启动当前 bot （建立 ws 连接）并开始接收、处理事件。 如果已经启动，则重新调用会断开现有连接并重新建立连接。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2023 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

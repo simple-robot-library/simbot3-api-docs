@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>All modules</title>
+    <link href="images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="scripts/sourceset_dependencies.js" async="async"></script>
+<link href="styles/style.css" rel="Stylesheet">
+<link href="styles/main.css" rel="Stylesheet">
+<link href="styles/prism.css" rel="Stylesheet">
+<link href="styles/logo-styles.css" rel="Stylesheet">
+<link href="styles/font-jb-sans-auto.css" rel="Stylesheet">
+<script type="text/javascript" src="scripts/clipboard.js" async="async"></script>
+<script type="text/javascript" src="scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="scripts/symbol-parameters-wrapper_deferred.js" defer="defer"></script>
+<link href="images/logo-icon.svg">
+<link href="styles/kdoc-style.css" rel="Stylesheet">
+</head>
+<body>
+    <div class="root">
+<nav class="navigation" id="navigation-wrapper">
+    <div class="navigation--inner">
+        <div class="navigation-title">
+            <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
+            <div class="library-name">
+                    <a class="library-name--link" href="index.html">
+                            Simple Robot Component 米游社
+                    </a>
+            </div>
+            <div class="library-version">
+0.0.1-SNAPSHOT            </div>
+        </div>
+    </div>
+    <div class="navigation-controls">
+        <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
+        <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
+    </div>
+</nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="sidebar--inner" id="sideMenu"></div>
+            </div>
+            <div id="main">
+<div class="main-content" id="content" pageIds="Simple Robot Component 米游社::.ext/allModules///PointingToDeclaration//0">
+  <div class="breadcrumbs"></div>
+  <div class="cover ">
+    <div class="cover ">
+      <h1 class="">Simple Robot 米游社组件</h1>
+      <p class="paragraph">此为 <a href="https://github.com/simple-robot/simpler-robot">Simple Robot v3</a> （以下简称为 <code class="lang-kotlin">simbot3</code> ） 下基于simbot标准API对 <a href="https://webstatic.mihoyo.com/vila/bot/doc/">米游社 API</a> 的组件支持。</p>
+      <h2 class=""> 文档</h2>
+      <p class="paragraph">了解<strong>simbot3</strong>: <a href="https://simbot.forte.love">simbot3官网</a></p>
+      <h2 class=""> 风格预览</h2>
+      <blockquote class="quotation">
+        <p class="paragraph">!note 不论是 simbot API 本身还是其衍生项目（比如本项目）都会提供对 Java 的友好兼容。</p>
+      </blockquote>
+      <h3 class=""> API</h3>
+      <blockquote class="quotation">
+        <p class="paragraph">!note API 模块基于 KMP 支持多平台，包括 JVM、JS（nodeJS）和 native。</p>
+      </blockquote>
+      <p class="paragraph">simbot-component-miyoushe-villa-api 尽可能保证对API的定义与使用&quot;原汁原味&quot;，全面而不做过多封装，是一种 <code class="lang-kotlin">low-level</code> 库。</p>
+      <p class="paragraph">以 &quot;获取房间列表信息&quot; 为例</p>
+      <div class="sample-container">
+        <pre><code class="block lang-kotlin" theme="idea">// 准备一个请求API时需要填充到请求头中的信息<br>val token = MiyousheVillaApiToken(botId, botSecret, villaId)<br>// 准备一个 Ktor HttpClient<br>val client = HttpClient()<br>// 构建API，此API没有参数<br>val api = GetVillaGroupRoomListApi.create()<br><br>// 请求API，得到预期类型的结果。<br>val data = api.requestData(client, token)<br><br>println(data)</code></pre>
+<span class="top-right-position"><span class="copy-icon"></span>
+          <div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div>
+        </span></div>
+      <h3 class=""> stdlib</h3>
+      <blockquote class="quotation">
+        <p class="paragraph">!note stdlib 模块基于 KMP 支持多平台，包括 JVM、JS（nodeJS）和 native。</p>
+      </blockquote>
+      <p class="paragraph">simbot-component-miyoushe-villa-stdlib 基于 simbot-component-miyoushe-villa-api， 提供针对 <code class="lang-kotlin">Bot</code> 相关的基本功能实现，主要包括建立连接、事件订阅以及基于 <code class="lang-kotlin">Bot</code> 对 <code class="lang-kotlin">api模块</code> 中请求API的方式的简化等。</p>
+      <h4 class=""> 创建 Bot 、订阅事件</h4>
+      <div class="sample-container">
+        <pre><code class="block lang-kotlin" theme="idea">// bot 的一些信息，比如id等。<br>val ticket = Bot.Ticket(botId, botSecret)<br><br>// 构建一个 bot，并可选的修改一些配置<br>val bot = BotFactory.create(ticket) {<br>    loginVillaId = villaId<br>}<br><br>// 注册一个监听任何类型事件的处理器<br>bot.registerProcessor { source -&gt; // this: Event&lt;EventExtendData&gt;<br>    println(&quot;event: $this&quot;)<br>}<br><br>// 注册一个只监听消息事件 SendMessage 的处理器<br>bot.processEvent&lt;SendMessage&gt; { source -&gt; // this: Event&lt;SendMessage&gt;<br>    val content = extendData.content<br>    // 可以使用 bot.apiDecoder 解析 content 的 JSON 为封装好的对应类型。<br>    val msgContentInfo = bot.apiDecoder.decodeFromString&lt;MsgContentInfo&lt;TextMsgContent&gt;&gt;(content)<br>    println(msgContentInfo)<br><br>    if (&quot;stop&quot; in msgContentInfo.content.text) {<br>        // 在事件中关闭 bot<br>        bot.cancel()<br>    }<br><br>    // 或者使用API发起请求之类的。<br>}<br><br>// 启动bot<br>bot.start()<br>// 挂起bot，直到它被关闭<br>bot.join()</code></pre>
+<span class="top-right-position"><span class="copy-icon"></span>
+          <div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div>
+        </span></div>
+      <h4 class=""> 使用 Bot 请求API</h4>
+      <p class="paragraph">以 &quot;获取房间列表信息&quot; 为例</p>
+      <div class="sample-container">
+        <pre><code class="block lang-kotlin" theme="idea">// 假设你构建了一个 Bot<br>val bot = ...<br>// 准备一个API<br>val api = GetVillaGroupRoomListApi.create()<br>// 直接通过 bot 请求API，并给它一个当前的大别野id<br>val data = api.requestDataBy(bot, villaId)<br><br>println(data)</code></pre>
+<span class="top-right-position"><span class="copy-icon"></span>
+          <div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div>
+        </span></div>
+      <h3 class=""> core</h3>
+      <blockquote class="quotation">
+        <p class="paragraph">!warning TODO 尚未完成。可参考 <a href="https://simbot.forte.love/docs/take-a-look/listen-overview">simbot3 走马观花</a> 中的API风格。</p>
+      </blockquote>
+      <h2 class=""> License</h2>
+      <p class="paragraph"><code class="lang-kotlin">simbot-component-miyoushe</code> 使用 <code class="lang-kotlin">LGPLv3</code> 许可证开源。</p>
+      <div class="sample-container">
+        <pre><code class="block lang-kotlin" theme="idea">This program is free software: you can redistribute it and/or modify it under the terms of <br>the GNU Lesser General Public License as published by the Free Software Foundation, either <br>version 3 of the License, or (at your option) any later version.<br><br>This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;<br>without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. <br>See the GNU Lesser General Public License for more details.<br><br>You should have received a copy of the GNU Lesser General Public License along with this <br>program. If not, see &lt;https://www.gnu.org/licenses/&gt;.</code></pre>
+<span class="top-right-position"><span class="copy-icon"></span>
+          <div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div>
+        </span></div>
+    </div>
+    <h2 class="">All modules:</h2>
+    <div class="table"><a data-name="1858998405%2FMain%2F0" anchor-label="simbot-component-miyoushe-villa-api" id="1858998405%2FMain%2F0" data-filterable-set=""></a>
+      <div class="table-row">
+        <div class="main-subrow ">
+          <div class="w-100"><span class="inline-flex">
+              <div><a href="simbot-component-miyoushe-villa-api/index.html">simbot-component-miyoushe-villa-api</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1858998405%2FMain%2F0"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div><span class="brief-comment"></span></div>
+        </div>
+      </div>
+<a data-name="-1310455292%2FMain%2F0" anchor-label="simbot-component-miyoushe-villa-core" id="-1310455292%2FMain%2F0" data-filterable-set=""></a>
+      <div class="table-row">
+        <div class="main-subrow ">
+          <div class="w-100"><span class="inline-flex">
+              <div><a href="simbot-component-miyoushe-villa-core/index.html">simbot-component-miyoushe-villa-core</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1310455292%2FMain%2F0"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div><span class="brief-comment"></span></div>
+        </div>
+      </div>
+<a data-name="1996268801%2FMain%2F0" anchor-label="simbot-component-miyoushe-villa-stdlib" id="1996268801%2FMain%2F0" data-filterable-set=""></a>
+      <div class="table-row">
+        <div class="main-subrow ">
+          <div class="w-100"><span class="inline-flex">
+              <div><a href="simbot-component-miyoushe-villa-stdlib/index.html">simbot-component-miyoushe-villa-stdlib</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1996268801%2FMain%2F0"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div><span class="brief-comment"></span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2021-2023 <a href='https://github.com/simple-robot'>Simple Robot</a>, <a href='https://github.com/ForteScarlet'>ForteScarlet</a>. All rights reserved.</span><span
+                class="pull-right"><span>Generated by </span><a
+                href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
