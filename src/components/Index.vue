@@ -32,6 +32,30 @@
                 </template>
               </n-collapse-item>
             </n-card>
+            <n-card embedded :bordered="false">
+              <n-collapse-item name="作品展示">
+                <ShowCards/>
+                <template #header>
+                  <n-divider title-placement="left" style="user-select: none">
+                    <n-text strong style="font-size: 19px">作品展示</n-text>
+                    &nbsp;
+                    <Icon>
+                      <HeartOutline/>
+                    </Icon>
+                  </n-divider>
+                  <n-divider title-placement="center">
+                    <n-collapse-transition :show="!collapseActions.has('作品展示')">
+                      <n-text italic depth="3" style="user-select: none; font-size: 6px">点击展开</n-text>
+                    </n-collapse-transition>
+                  </n-divider>
+                  <n-divider title-placement="right">
+                    <n-collapse-transition :show="collapseActions.has('作品展示')">
+                      <n-text italic depth="3" style="user-select: none; font-size: 13px">看看大家的好宝贝</n-text>
+                    </n-collapse-transition>
+                  </n-divider>
+                </template>
+              </n-collapse-item>
+            </n-card>
           </n-collapse>
 
 
@@ -51,25 +75,26 @@
 <script setup lang="ts">
 import HomeHead from "./HomeHead.vue";
 import {
-    CollapseProps,
-    darkTheme,
-    NCard,
-    NCollapse,
-    NCollapseItem,
-    NCollapseTransition,
-    NConfigProvider,
-    NDivider,
-    NLayout,
-    NLayoutFooter,
-    NLayoutHeader,
-    NText
+  CollapseProps,
+  darkTheme,
+  NCard,
+  NCollapse,
+  NCollapseItem,
+  NCollapseTransition,
+  NConfigProvider,
+  NDivider,
+  NLayout,
+  NLayoutFooter,
+  NLayoutHeader,
+  NText
 } from "naive-ui";
 import {reactive, ref} from "vue";
 import RepoDocCards from "./RepoDocCards.vue";
 import {BuiltInGlobalTheme} from "naive-ui/lib/themes/interface";
-import {BookOutline} from '@vicons/ionicons5'
+import {BookOutline, HeartOutline} from '@vicons/ionicons5'
 import {Icon} from "@vicons/utils";
 import HomeFooter from "./HomeFooter.vue";
+import ShowCards from "./show/ShowCards.vue";
 
 const layoutCenterContentStyle = reactive({
     'padding-left': '50px',
