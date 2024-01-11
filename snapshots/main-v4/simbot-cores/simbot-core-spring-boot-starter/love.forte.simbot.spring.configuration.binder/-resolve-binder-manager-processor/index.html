@@ -1,0 +1,442 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>ResolveBinderManagerProcessor</title>
+<link href="../../../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../../styles/style.css" rel="Stylesheet">
+<link href="../../../../styles/main.css" rel="Stylesheet">
+<link href="../../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<body>
+    <div class="root">
+<nav class="navigation" id="navigation-wrapper">
+    <div class="navigation--inner">
+        <div class="navigation-title">
+            <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
+            <div class="library-name">
+<a class="library-name--link" href="../../../../index.html">
+                            Simple Robot
+                    </a>            </div>
+            <div class="library-version">4.0.0-dev1-SNAPSHOT
+            </div>
+        </div>
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":simbot-cores:simbot-core-spring-boot-starter:dokkaHtmlPartial/main">jvm</button>
+        </div>
+    </div>
+    <div class="navigation-controls">
+        <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
+        <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
+    </div>
+</nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="sidebar--inner" id="sideMenu"></div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="simbot-core-spring-boot-starter::love.forte.simbot.spring.configuration.binder/ResolveBinderManagerProcessor///PointingToDeclaration//826273384">
+  <div class="breadcrumbs"><a href="../../index.html">simbot-core-spring-boot-starter</a><span class="delimiter">/</span><a href="../index.html">love.forte.simbot.spring.configuration.binder</a><span class="delimiter">/</span><span class="current">ResolveBinderManagerProcessor</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Resolve</span><wbr><span>Binder</span><wbr><span>Manager</span><wbr><span><span>Processor</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-cores:simbot-core-spring-boot-starter:dokkaHtmlPartial/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/autoconfigure/AutoConfigureBefore.html"><span class="token annotation builtin">AutoConfigureBefore</span></a><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="token punctuation">[</span><span><a href="../../love.forte.simbot.spring.configuration.listener/-simbot-event-listener-function-processor/index.html">SimbotEventListenerFunctionProcessor::class</a></span><wbr><span class="token punctuation">]</span></span><wbr><span class="token punctuation">)</span></div></div><span class="token keyword">open </span><span class="token keyword">class </span><a href="index.html">ResolveBinderManagerProcessor</a> : <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/annotation/ConfigurationClassPostProcessor.html">ConfigurationClassPostProcessor</a><span class="clearfix"><span class="floating-right">(<a href="https://github.com/simple-robot/simpler-robot/tree/v4-dev/simbot-cores/simbot-core-spring-boot-starter/src//main/kotlin/love/forte/simbot/spring/configuration/binder/ResolveBinderManagerProcessor.kt#L51">source</a>)</span></span></div><p class="paragraph">将标记了 <a href="../../../../simbot-quantcat/simbot-quantcat-annotations/love.forte.simbot.quantcat.annotations/-binder/index.html">Binder</a> 的类型和函数转化为 <a href="../../../../simbot-quantcat/simbot-quantcat-common/love.forte.simbot.quantcat.common.binder/-parameter-binder-factory/index.html">ParameterBinderFactory</a>、 处理 <a href="../-parameter-binder-manager-builder-configurer/index.html">ParameterBinderManagerBuilderConfigurer</a> 以及加载所有的 <a href="../../../../simbot-quantcat/simbot-quantcat-common/love.forte.simbot.quantcat.common.binder/-parameter-binder-factory/index.html">ParameterBinderFactory</a></p><span class="kdoc-tag"><h4 class="">Author</h4><p class="paragraph">ForteScarlet</p></span></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="">Constructors</h2>
+        <div class="table"><a data-name="167072336%2FConstructors%2F826273384" anchor-label="ResolveBinderManagerProcessor" id="167072336%2FConstructors%2F826273384" data-filterable-set=":simbot-cores:simbot-core-spring-boot-starter:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-togglable="CONSTRUCTOR" data-filterable-current=":simbot-cores:simbot-core-spring-boot-starter:dokkaHtmlPartial/main" data-filterable-set=":simbot-cores:simbot-core-spring-boot-starter:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-resolve-binder-manager-processor.html"><span>Resolve</span><wbr><span>Binder</span><wbr><span>Manager</span><wbr><span><span>Processor</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="167072336%2FConstructors%2F826273384"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-cores:simbot-core-spring-boot-starter:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="TYPE">
+        <h2 class="">Types</h2>
+        <div class="table"><a data-name="-1030001582%2FClasslikes%2F826273384" anchor-label="Companion" id="-1030001582%2FClasslikes%2F826273384" data-filterable-set=":simbot-cores:simbot-core-spring-boot-starter:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":simbot-cores:simbot-core-spring-boot-starter:dokkaHtmlPartial/main" data-filterable-set=":simbot-cores:simbot-core-spring-boot-starter:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-companion/index.html"><span><span>Companion</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1030001582%2FClasslikes%2F826273384"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-cores:simbot-core-spring-boot-starter:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-companion/index.html">Companion</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-661613699%2FClasslikes%2F826273384" anchor-label="ParameterBinderManagerBuilderImpl" id="-661613699%2FClasslikes%2F826273384" data-filterable-set=":simbot-cores:simbot-core-spring-boot-starter:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":simbot-cores:simbot-core-spring-boot-starter:dokkaHtmlPartial/main" data-filterable-set=":simbot-cores:simbot-core-spring-boot-starter:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-parameter-binder-manager-builder-impl/index.html"><span>Parameter</span><wbr><span>Binder</span><wbr><span>Manager</span><wbr><span>Builder</span><wbr><span><span>Impl</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-661613699%2FClasslikes%2F826273384"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-cores:simbot-core-spring-boot-starter:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">protected </span><span class="token keyword">open </span><span class="token keyword">class </span><a href="-parameter-binder-manager-builder-impl/index.html">ParameterBinderManagerBuilderImpl</a> : <a href="../-parameter-binder-manager-builder/index.html">ParameterBinderManagerBuilder</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="-514840302%2FProperties%2F826273384" anchor-label="registry" id="-514840302%2FProperties%2F826273384" data-filterable-set=":simbot-cores:simbot-core-spring-boot-starter:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":simbot-cores:simbot-core-spring-boot-starter:dokkaHtmlPartial/main" data-filterable-set=":simbot-cores:simbot-core-spring-boot-starter:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="registry.html"><span><span>registry</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-514840302%2FProperties%2F826273384"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-cores:simbot-core-spring-boot-starter:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">protected </span><span class="token keyword">open </span><span class="token keyword">lateinit </span><span class="token keyword">var </span><a href="registry.html">registry</a><span class="token operator">: </span><a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/beans/factory/support/BeanDefinitionRegistry.html">BeanDefinitionRegistry</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="906363877%2FFunctions%2F826273384" anchor-label="enhanceConfigurationClasses" id="906363877%2FFunctions%2F826273384" data-filterable-set=":simbot-cores:simbot-core-spring-boot-starter:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":simbot-cores:simbot-core-spring-boot-starter:dokkaHtmlPartial/main" data-filterable-set=":simbot-cores:simbot-core-spring-boot-starter:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../love.forte.simbot.spring.configuration.listener/-simbot-event-listener-function-processor/index.html#906363877%2FFunctions%2F826273384"><span>enhance</span><wbr><span>Configuration</span><wbr><span><span>Classes</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="906363877%2FFunctions%2F826273384"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-cores:simbot-core-spring-boot-starter:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="../../love.forte.simbot.spring.configuration.listener/-simbot-event-listener-function-processor/index.html#906363877%2FFunctions%2F826273384"><span class="token function">enhanceConfigurationClasses</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">beanFactory<span class="token operator">: </span><a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/beans/factory/config/ConfigurableListableBeanFactory.html">ConfigurableListableBeanFactory</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1680039564%2FFunctions%2F826273384" anchor-label="getOrder" id="1680039564%2FFunctions%2F826273384" data-filterable-set=":simbot-cores:simbot-core-spring-boot-starter:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":simbot-cores:simbot-core-spring-boot-starter:dokkaHtmlPartial/main" data-filterable-set=":simbot-cores:simbot-core-spring-boot-starter:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../love.forte.simbot.spring.configuration.listener/-simbot-event-listener-function-processor/index.html#1680039564%2FFunctions%2F826273384"><span>get</span><wbr><span><span>Order</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1680039564%2FFunctions%2F826273384"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-cores:simbot-core-spring-boot-starter:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="../../love.forte.simbot.spring.configuration.listener/-simbot-event-listener-function-processor/index.html#1680039564%2FFunctions%2F826273384"><span class="token function">getOrder</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1055411405%2FFunctions%2F826273384" anchor-label="isBeanExcludedFromAotProcessing" id="1055411405%2FFunctions%2F826273384" data-filterable-set=":simbot-cores:simbot-core-spring-boot-starter:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":simbot-cores:simbot-core-spring-boot-starter:dokkaHtmlPartial/main" data-filterable-set=":simbot-cores:simbot-core-spring-boot-starter:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../love.forte.simbot.spring.configuration.listener/-simbot-event-listener-function-processor/index.html#1055411405%2FFunctions%2F826273384"><span>is</span><wbr><span>Bean</span><wbr><span>Excluded</span><wbr><span>From</span><wbr><span>Aot</span><wbr><span><span>Processing</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1055411405%2FFunctions%2F826273384"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-cores:simbot-core-spring-boot-starter:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="../../love.forte.simbot.spring.configuration.listener/-simbot-event-listener-function-processor/index.html#1055411405%2FFunctions%2F826273384"><span class="token function">isBeanExcludedFromAotProcessing</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-435292249%2FFunctions%2F826273384" anchor-label="postProcessBeanDefinitionRegistry" id="-435292249%2FFunctions%2F826273384" data-filterable-set=":simbot-cores:simbot-core-spring-boot-starter:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":simbot-cores:simbot-core-spring-boot-starter:dokkaHtmlPartial/main" data-filterable-set=":simbot-cores:simbot-core-spring-boot-starter:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="post-process-bean-definition-registry.html"><span>post</span><wbr><span>Process</span><wbr><span>Bean</span><wbr><span>Definition</span><wbr><span><span>Registry</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-435292249%2FFunctions%2F826273384"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-cores:simbot-core-spring-boot-starter:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="post-process-bean-definition-registry.html"><span class="token function">postProcessBeanDefinitionRegistry</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">registry<span class="token operator">: </span><a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/beans/factory/support/BeanDefinitionRegistry.html">BeanDefinitionRegistry</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1842259153%2FFunctions%2F826273384" anchor-label="postProcessBeanFactory" id="1842259153%2FFunctions%2F826273384" data-filterable-set=":simbot-cores:simbot-core-spring-boot-starter:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":simbot-cores:simbot-core-spring-boot-starter:dokkaHtmlPartial/main" data-filterable-set=":simbot-cores:simbot-core-spring-boot-starter:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="post-process-bean-factory.html"><span>post</span><wbr><span>Process</span><wbr><span>Bean</span><wbr><span><span>Factory</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1842259153%2FFunctions%2F826273384"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-cores:simbot-core-spring-boot-starter:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="post-process-bean-factory.html"><span class="token function">postProcessBeanFactory</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">beanFactory<span class="token operator">: </span><a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/beans/factory/config/ConfigurableListableBeanFactory.html">ConfigurableListableBeanFactory</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="854998102%2FFunctions%2F826273384" anchor-label="processAheadOfTime" id="854998102%2FFunctions%2F826273384" data-filterable-set=":simbot-cores:simbot-core-spring-boot-starter:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":simbot-cores:simbot-core-spring-boot-starter:dokkaHtmlPartial/main" data-filterable-set=":simbot-cores:simbot-core-spring-boot-starter:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../love.forte.simbot.spring.configuration.listener/-simbot-event-listener-function-processor/index.html#1395542011%2FFunctions%2F826273384"><span>process</span><wbr><span>Ahead</span><wbr><span>Of</span><wbr><span><span>Time</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="854998102%2FFunctions%2F826273384"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-cores:simbot-core-spring-boot-starter:dokkaHtmlPartial/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/lang/Nullable.html"><span class="token annotation builtin">Nullable</span></a></div></div><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="../../love.forte.simbot.spring.configuration.listener/-simbot-event-listener-function-processor/index.html#1395542011%2FFunctions%2F826273384"><span class="token function">processAheadOfTime</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">beanFactory<span class="token operator">: </span><a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/beans/factory/config/ConfigurableListableBeanFactory.html">ConfigurableListableBeanFactory</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/beans/factory/aot/BeanFactoryInitializationAotContribution.html">BeanFactoryInitializationAotContribution</a></div><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/lang/Nullable.html"><span class="token annotation builtin">Nullable</span></a></div></div><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="../../love.forte.simbot.spring.configuration.listener/-simbot-event-listener-function-processor/index.html#-1995064217%2FFunctions%2F826273384"><span class="token function">processAheadOfTime</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">registeredBean<span class="token operator">: </span><a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/beans/factory/support/RegisteredBean.html">RegisteredBean</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/beans/factory/aot/BeanRegistrationAotContribution.html">BeanRegistrationAotContribution</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1626227312%2FFunctions%2F826273384" anchor-label="processConfigBeanDefinitions" id="1626227312%2FFunctions%2F826273384" data-filterable-set=":simbot-cores:simbot-core-spring-boot-starter:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":simbot-cores:simbot-core-spring-boot-starter:dokkaHtmlPartial/main" data-filterable-set=":simbot-cores:simbot-core-spring-boot-starter:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../love.forte.simbot.spring.configuration.listener/-simbot-event-listener-function-processor/index.html#1626227312%2FFunctions%2F826273384"><span>process</span><wbr><span>Config</span><wbr><span>Bean</span><wbr><span><span>Definitions</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1626227312%2FFunctions%2F826273384"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-cores:simbot-core-spring-boot-starter:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="../../love.forte.simbot.spring.configuration.listener/-simbot-event-listener-function-processor/index.html#1626227312%2FFunctions%2F826273384"><span class="token function">processConfigBeanDefinitions</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">registry<span class="token operator">: </span><a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/beans/factory/support/BeanDefinitionRegistry.html">BeanDefinitionRegistry</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-988833366%2FFunctions%2F826273384" anchor-label="resolveCandidate" id="-988833366%2FFunctions%2F826273384" data-filterable-set=":simbot-cores:simbot-core-spring-boot-starter:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":simbot-cores:simbot-core-spring-boot-starter:dokkaHtmlPartial/main" data-filterable-set=":simbot-cores:simbot-core-spring-boot-starter:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="resolve-candidate.html"><span>resolve</span><wbr><span><span>Candidate</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-988833366%2FFunctions%2F826273384"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-cores:simbot-core-spring-boot-starter:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">protected </span><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/beans/factory/config/ConfigurableListableBeanFactory.html">ConfigurableListableBeanFactory</a><span class="token punctuation">.</span><a href="resolve-candidate.html"><span class="token function">resolveCandidate</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">beanName<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">beanType<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html">Class</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">builder<span class="token operator">: </span><a href="-parameter-binder-manager-builder-impl/index.html">ResolveBinderManagerProcessor.ParameterBinderManagerBuilderImpl</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1380199727%2FFunctions%2F826273384" anchor-label="resolveConfigurer" id="1380199727%2FFunctions%2F826273384" data-filterable-set=":simbot-cores:simbot-core-spring-boot-starter:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":simbot-cores:simbot-core-spring-boot-starter:dokkaHtmlPartial/main" data-filterable-set=":simbot-cores:simbot-core-spring-boot-starter:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="resolve-configurer.html"><span>resolve</span><wbr><span><span>Configurer</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1380199727%2FFunctions%2F826273384"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-cores:simbot-core-spring-boot-starter:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">protected </span><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/beans/factory/config/ConfigurableListableBeanFactory.html">ConfigurableListableBeanFactory</a><span class="token punctuation">.</span><a href="resolve-configurer.html"><span class="token function">resolveConfigurer</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">beanName<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">beanType<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html">Class</a><span class="token operator">&lt;</span><span class="token keyword">out </span><a href="../-parameter-binder-manager-builder-configurer/index.html">ParameterBinderManagerBuilderConfigurer</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">builder<span class="token operator">: </span><a href="-parameter-binder-manager-builder-impl/index.html">ResolveBinderManagerProcessor.ParameterBinderManagerBuilderImpl</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1204037225%2FFunctions%2F826273384" anchor-label="resolveFactoryInstance" id="1204037225%2FFunctions%2F826273384" data-filterable-set=":simbot-cores:simbot-core-spring-boot-starter:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":simbot-cores:simbot-core-spring-boot-starter:dokkaHtmlPartial/main" data-filterable-set=":simbot-cores:simbot-core-spring-boot-starter:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="resolve-factory-instance.html"><span>resolve</span><wbr><span>Factory</span><wbr><span><span>Instance</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1204037225%2FFunctions%2F826273384"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-cores:simbot-core-spring-boot-starter:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">protected </span><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/beans/factory/config/ConfigurableListableBeanFactory.html">ConfigurableListableBeanFactory</a><span class="token punctuation">.</span><a href="resolve-factory-instance.html"><span class="token function">resolveFactoryInstance</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">beanName<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">beanType<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html">Class</a><span class="token operator">&lt;</span><span class="token keyword">out </span><a href="../../../../simbot-quantcat/simbot-quantcat-common/love.forte.simbot.quantcat.common.binder/-parameter-binder-factory/index.html">ParameterBinderFactory</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">builder<span class="token operator">: </span><a href="-parameter-binder-manager-builder-impl/index.html">ResolveBinderManagerProcessor.ParameterBinderManagerBuilderImpl</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1984191724%2FFunctions%2F826273384" anchor-label="resolveFactoryWithBinder" id="-1984191724%2FFunctions%2F826273384" data-filterable-set=":simbot-cores:simbot-core-spring-boot-starter:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":simbot-cores:simbot-core-spring-boot-starter:dokkaHtmlPartial/main" data-filterable-set=":simbot-cores:simbot-core-spring-boot-starter:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="resolve-factory-with-binder.html"><span>resolve</span><wbr><span>Factory</span><wbr><span>With</span><wbr><span><span>Binder</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1984191724%2FFunctions%2F826273384"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-cores:simbot-core-spring-boot-starter:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">protected </span><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="resolve-factory-with-binder.html"><span class="token function">resolveFactoryWithBinder</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">binder<span class="token operator">: </span><a href="../../../../simbot-quantcat/simbot-quantcat-annotations/love.forte.simbot.quantcat.annotations/-binder/index.html">Binder</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">beanName<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">factory<span class="token operator">: </span><a href="../../../../simbot-quantcat/simbot-quantcat-common/love.forte.simbot.quantcat.common.binder/-parameter-binder-factory/index.html">ParameterBinderFactory</a><span class="token punctuation">, </span></span><span class="parameter ">builder<span class="token operator">: </span><a href="-parameter-binder-manager-builder-impl/index.html">ResolveBinderManagerProcessor.ParameterBinderManagerBuilderImpl</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-970061989%2FFunctions%2F826273384" anchor-label="setApplicationStartup" id="-970061989%2FFunctions%2F826273384" data-filterable-set=":simbot-cores:simbot-core-spring-boot-starter:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":simbot-cores:simbot-core-spring-boot-starter:dokkaHtmlPartial/main" data-filterable-set=":simbot-cores:simbot-core-spring-boot-starter:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../love.forte.simbot.spring.configuration.listener/-simbot-event-listener-function-processor/index.html#-970061989%2FFunctions%2F826273384"><span>set</span><wbr><span>Application</span><wbr><span><span>Startup</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-970061989%2FFunctions%2F826273384"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-cores:simbot-core-spring-boot-starter:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="../../love.forte.simbot.spring.configuration.listener/-simbot-event-listener-function-processor/index.html#-970061989%2FFunctions%2F826273384"><span class="token function">setApplicationStartup</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">applicationStartup<span class="token operator">: </span><a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/core/metrics/ApplicationStartup.html">ApplicationStartup</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1753178944%2FFunctions%2F826273384" anchor-label="setBeanClassLoader" id="1753178944%2FFunctions%2F826273384" data-filterable-set=":simbot-cores:simbot-core-spring-boot-starter:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":simbot-cores:simbot-core-spring-boot-starter:dokkaHtmlPartial/main" data-filterable-set=":simbot-cores:simbot-core-spring-boot-starter:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../love.forte.simbot.spring.configuration.listener/-simbot-event-listener-function-processor/index.html#1753178944%2FFunctions%2F826273384"><span>set</span><wbr><span>Bean</span><wbr><span>Class</span><wbr><span><span>Loader</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1753178944%2FFunctions%2F826273384"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-cores:simbot-core-spring-boot-starter:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="../../love.forte.simbot.spring.configuration.listener/-simbot-event-listener-function-processor/index.html#1753178944%2FFunctions%2F826273384"><span class="token function">setBeanClassLoader</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">beanClassLoader<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/ClassLoader.html">ClassLoader</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-143808719%2FFunctions%2F826273384" anchor-label="setBeanNameGenerator" id="-143808719%2FFunctions%2F826273384" data-filterable-set=":simbot-cores:simbot-core-spring-boot-starter:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":simbot-cores:simbot-core-spring-boot-starter:dokkaHtmlPartial/main" data-filterable-set=":simbot-cores:simbot-core-spring-boot-starter:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../love.forte.simbot.spring.configuration.listener/-simbot-event-listener-function-processor/index.html#-143808719%2FFunctions%2F826273384"><span>set</span><wbr><span>Bean</span><wbr><span>Name</span><wbr><span><span>Generator</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-143808719%2FFunctions%2F826273384"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-cores:simbot-core-spring-boot-starter:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="../../love.forte.simbot.spring.configuration.listener/-simbot-event-listener-function-processor/index.html#-143808719%2FFunctions%2F826273384"><span class="token function">setBeanNameGenerator</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">beanNameGenerator<span class="token operator">: </span><a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/beans/factory/support/BeanNameGenerator.html">BeanNameGenerator</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1983500983%2FFunctions%2F826273384" anchor-label="setEnvironment" id="-1983500983%2FFunctions%2F826273384" data-filterable-set=":simbot-cores:simbot-core-spring-boot-starter:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":simbot-cores:simbot-core-spring-boot-starter:dokkaHtmlPartial/main" data-filterable-set=":simbot-cores:simbot-core-spring-boot-starter:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../love.forte.simbot.spring.configuration.listener/-simbot-event-listener-function-processor/index.html#-1983500983%2FFunctions%2F826273384"><span>set</span><wbr><span><span>Environment</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1983500983%2FFunctions%2F826273384"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-cores:simbot-core-spring-boot-starter:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="../../love.forte.simbot.spring.configuration.listener/-simbot-event-listener-function-processor/index.html#-1983500983%2FFunctions%2F826273384"><span class="token function">setEnvironment</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">environment<span class="token operator">: </span><a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/core/env/Environment.html">Environment</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="846569924%2FFunctions%2F826273384" anchor-label="setMetadataReaderFactory" id="846569924%2FFunctions%2F826273384" data-filterable-set=":simbot-cores:simbot-core-spring-boot-starter:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":simbot-cores:simbot-core-spring-boot-starter:dokkaHtmlPartial/main" data-filterable-set=":simbot-cores:simbot-core-spring-boot-starter:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../love.forte.simbot.spring.configuration.listener/-simbot-event-listener-function-processor/index.html#846569924%2FFunctions%2F826273384"><span>set</span><wbr><span>Metadata</span><wbr><span>Reader</span><wbr><span><span>Factory</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="846569924%2FFunctions%2F826273384"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-cores:simbot-core-spring-boot-starter:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="../../love.forte.simbot.spring.configuration.listener/-simbot-event-listener-function-processor/index.html#846569924%2FFunctions%2F826273384"><span class="token function">setMetadataReaderFactory</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">metadataReaderFactory<span class="token operator">: </span><a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/core/type/classreading/MetadataReaderFactory.html">MetadataReaderFactory</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1068995088%2FFunctions%2F826273384" anchor-label="setProblemReporter" id="-1068995088%2FFunctions%2F826273384" data-filterable-set=":simbot-cores:simbot-core-spring-boot-starter:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":simbot-cores:simbot-core-spring-boot-starter:dokkaHtmlPartial/main" data-filterable-set=":simbot-cores:simbot-core-spring-boot-starter:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../love.forte.simbot.spring.configuration.listener/-simbot-event-listener-function-processor/index.html#-1068995088%2FFunctions%2F826273384"><span>set</span><wbr><span>Problem</span><wbr><span><span>Reporter</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1068995088%2FFunctions%2F826273384"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-cores:simbot-core-spring-boot-starter:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="../../love.forte.simbot.spring.configuration.listener/-simbot-event-listener-function-processor/index.html#-1068995088%2FFunctions%2F826273384"><span class="token function">setProblemReporter</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span><span class="token annotation builtin">@</span><a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/lang/Nullable.html"><span class="token annotation builtin">Nullable</span></a>&nbsp;</span>problemReporter<span class="token operator">: </span><a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/beans/factory/parsing/ProblemReporter.html">ProblemReporter</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2030710738%2FFunctions%2F826273384" anchor-label="setResourceLoader" id="2030710738%2FFunctions%2F826273384" data-filterable-set=":simbot-cores:simbot-core-spring-boot-starter:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":simbot-cores:simbot-core-spring-boot-starter:dokkaHtmlPartial/main" data-filterable-set=":simbot-cores:simbot-core-spring-boot-starter:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../love.forte.simbot.spring.configuration.listener/-simbot-event-listener-function-processor/index.html#2030710738%2FFunctions%2F826273384"><span>set</span><wbr><span>Resource</span><wbr><span><span>Loader</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2030710738%2FFunctions%2F826273384"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-cores:simbot-core-spring-boot-starter:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="../../love.forte.simbot.spring.configuration.listener/-simbot-event-listener-function-processor/index.html#2030710738%2FFunctions%2F826273384"><span class="token function">setResourceLoader</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">resourceLoader<span class="token operator">: </span><a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/core/io/ResourceLoader.html">ResourceLoader</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1202397296%2FFunctions%2F826273384" anchor-label="setSourceExtractor" id="-1202397296%2FFunctions%2F826273384" data-filterable-set=":simbot-cores:simbot-core-spring-boot-starter:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":simbot-cores:simbot-core-spring-boot-starter:dokkaHtmlPartial/main" data-filterable-set=":simbot-cores:simbot-core-spring-boot-starter:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../love.forte.simbot.spring.configuration.listener/-simbot-event-listener-function-processor/index.html#-1202397296%2FFunctions%2F826273384"><span>set</span><wbr><span>Source</span><wbr><span><span>Extractor</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1202397296%2FFunctions%2F826273384"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-cores:simbot-core-spring-boot-starter:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="../../love.forte.simbot.spring.configuration.listener/-simbot-event-listener-function-processor/index.html#-1202397296%2FFunctions%2F826273384"><span class="token function">setSourceExtractor</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span><span class="token annotation builtin">@</span><a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/lang/Nullable.html"><span class="token annotation builtin">Nullable</span></a>&nbsp;</span>sourceExtractor<span class="token operator">: </span><a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/beans/factory/parsing/SourceExtractor.html">SourceExtractor</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2024 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
