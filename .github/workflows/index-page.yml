@@ -89,6 +89,17 @@ jobs:
           rm -rf kdoc/snapshots/main
         working-directory: ./public
 
+      # main v4 快照
+      - uses: actions/checkout@v3
+        with:
+          ref: 'kdoc-deploy/snapshots/main-v4'
+          path: 'public/kdoc/snapshots/main-v4'
+
+      - run: |
+          cp -r kdoc/snapshots/main-v4/* ./
+          rm -rf kdoc/snapshots/main-v4
+        working-directory: ./public
+
       # mirai快照
       - uses: actions/checkout@v3
         with:
