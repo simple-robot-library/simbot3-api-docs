@@ -1,0 +1,295 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>love.forte.simbot.common.async</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<body>
+    <div class="root">
+<nav class="navigation" id="navigation-wrapper">
+    <div class="navigation--inner">
+        <div class="navigation-title">
+            <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
+            <div class="library-name">
+<a class="library-name--link" href="../../../index.html">
+                            Simple Robot
+                    </a>            </div>
+            <div class="library-version">4.0.0-dev1
+            </div>
+        </div>
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":simbot-commons:simbot-common-core:dokkaHtmlPartial/commonMain">common</button>
+                <button class="platform-tag platform-selector js-like" data-active="" data-filter=":simbot-commons:simbot-common-core:dokkaHtmlPartial/jsMain">js</button>
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":simbot-commons:simbot-common-core:dokkaHtmlPartial/jvmMain">jvm</button>
+                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":simbot-commons:simbot-common-core:dokkaHtmlPartial/nativeMain">native</button>
+                <button class="platform-tag platform-selector wasm-like" data-active="" data-filter=":simbot-commons:simbot-common-core:dokkaHtmlPartial/wasmJsMain">wasmJs</button>
+        </div>
+    </div>
+    <div class="navigation-controls">
+        <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
+        <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
+    </div>
+</nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="sidebar--inner" id="sideMenu"></div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="package" id="content" pageids="simbot-common-core::love.forte.simbot.common.async////PointingToDeclaration//-2139804631">
+  <div class="breadcrumbs"><a href="../index.html">simbot-common-core</a><span class="delimiter">/</span><span class="current">love.forte.simbot.common.async</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Package-level</span></span> <span><span>declarations</span></span></h1>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="TYPE">Types</button><button class="section-tab" data-togglable="FUNCTION,EXTENSION_FUNCTION">Functions</button><button class="section-tab" data-togglable="PROPERTY,EXTENSION_PROPERTY">Properties</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="TYPE">
+        <h2 class="">Types</h2>
+        <div class="table"><a data-name="746846333%2FClasslikes%2F-2139804631" anchor-label="Async" id="746846333%2FClasslikes%2F-2139804631" data-filterable-set=":simbot-commons:simbot-common-core:dokkaHtmlPartial/commonMain,:simbot-commons:simbot-common-core:dokkaHtmlPartial/jsMain,:simbot-commons:simbot-common-core:dokkaHtmlPartial/jvmMain,:simbot-commons:simbot-common-core:dokkaHtmlPartial/nativeMain,:simbot-commons:simbot-common-core:dokkaHtmlPartial/wasmJsMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-commons:simbot-common-core:dokkaHtmlPartial/commonMain,:simbot-commons:simbot-common-core:dokkaHtmlPartial/jsMain,:simbot-commons:simbot-common-core:dokkaHtmlPartial/jvmMain,:simbot-commons:simbot-common-core:dokkaHtmlPartial/nativeMain,:simbot-commons:simbot-common-core:dokkaHtmlPartial/wasmJsMain" data-filterable-set=":simbot-commons:simbot-common-core:dokkaHtmlPartial/commonMain,:simbot-commons:simbot-common-core:dokkaHtmlPartial/jsMain,:simbot-commons:simbot-common-core:dokkaHtmlPartial/jvmMain,:simbot-commons:simbot-common-core:dokkaHtmlPartial/nativeMain,:simbot-commons:simbot-common-core:dokkaHtmlPartial/wasmJsMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-async/index.html"><span><span>Async</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="746846333%2FClasslikes%2F-2139804631"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":simbot-commons:simbot-common-core:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-commons:simbot-common-core:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":simbot-commons:simbot-common-core:dokkaHtmlPartial/commonMain">common</button><button class="platform-bookmark" data-filterable-current=":simbot-commons:simbot-common-core:dokkaHtmlPartial/jsMain" data-filterable-set=":simbot-commons:simbot-common-core:dokkaHtmlPartial/jsMain" data-toggle=":simbot-commons:simbot-common-core:dokkaHtmlPartial/jsMain">js</button><button class="platform-bookmark" data-filterable-current=":simbot-commons:simbot-common-core:dokkaHtmlPartial/jvmMain" data-filterable-set=":simbot-commons:simbot-common-core:dokkaHtmlPartial/jvmMain" data-toggle=":simbot-commons:simbot-common-core:dokkaHtmlPartial/jvmMain">jvm</button><button class="platform-bookmark" data-filterable-current=":simbot-commons:simbot-common-core:dokkaHtmlPartial/nativeMain" data-filterable-set=":simbot-commons:simbot-common-core:dokkaHtmlPartial/nativeMain" data-toggle=":simbot-commons:simbot-common-core:dokkaHtmlPartial/nativeMain">native</button><button class="platform-bookmark" data-filterable-current=":simbot-commons:simbot-common-core:dokkaHtmlPartial/wasmJsMain" data-filterable-set=":simbot-commons:simbot-common-core:dokkaHtmlPartial/wasmJsMain" data-toggle=":simbot-commons:simbot-common-core:dokkaHtmlPartial/wasmJsMain">wasmJs</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-commons:simbot-common-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword">class </span><a href="-async/index.html">Async</a><span class="token operator">&lt;</span><span class="token keyword">out </span><a href="-async/index.html">T</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">内含异步处理操作的类。</p></div></div><div class="content sourceset-dependent-content" data-togglable=":simbot-commons:simbot-common-core:dokkaHtmlPartial/jsMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">class </span><a href="-async/index.html">Async</a><span class="token operator">&lt;</span><span class="token keyword">out </span><a href="-async/index.html">T</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph"><a href="-async/index.html">Async</a> 类在 JS 平台的具体实现。</p></div></div><div class="content sourceset-dependent-content" data-togglable=":simbot-commons:simbot-common-core:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">class </span><a href="-async/index.html">Async</a><span class="token operator">&lt;</span><span class="token keyword">out </span><a href="-async/index.html">T</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph"><a href="-async/index.html">Async</a> 在 JVM 平台的具体实现。</p></div></div><div class="content sourceset-dependent-content" data-togglable=":simbot-commons:simbot-common-core:dokkaHtmlPartial/nativeMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">class </span><a href="-async/index.html">Async</a><span class="token operator">&lt;</span><span class="token keyword">out </span><a href="-async/index.html">T</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph"><a href="-async/index.html">Async</a> 类在 native 平台的具体实现。</p></div></div><div class="content sourceset-dependent-content" data-togglable=":simbot-commons:simbot-common-core:dokkaHtmlPartial/wasmJsMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">class </span><a href="-async/index.html">Async</a><span class="token operator">&lt;</span><span class="token keyword">out </span><a href="-async/index.html">T</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph"><a href="-async/index.html">Async</a> 类在 JS 平台的具体实现。</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-846308741%2FClasslikes%2F1624946002" anchor-label="AsyncHandler" id="-846308741%2FClasslikes%2F1624946002" data-filterable-set=":simbot-commons:simbot-common-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-commons:simbot-common-core:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-commons:simbot-common-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-async-handler/index.html"><span>Async</span><wbr><span><span>Handler</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-846308741%2FClasslikes%2F1624946002"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-commons:simbot-common-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><span class="token keyword">interface </span><a href="-async-handler/index.html">AsyncHandler</a></div><div class="brief "><p class="paragraph">异步处理接口。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-664737134%2FClasslikes%2F1624946002" anchor-label="CancellationHandler" id="-664737134%2FClasslikes%2F1624946002" data-filterable-set=":simbot-commons:simbot-common-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-commons:simbot-common-core:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-commons:simbot-common-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-cancellation-handler/index.html"><span>Cancellation</span><wbr><span><span>Handler</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-664737134%2FClasslikes%2F1624946002"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-commons:simbot-common-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><span class="token keyword">interface </span><a href="-cancellation-handler/index.html">CancellationHandler</a></div><div class="brief "><p class="paragraph">取消处理接口。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1814877035%2FClasslikes%2F1624946002" anchor-label="CompletionHandler" id="1814877035%2FClasslikes%2F1624946002" data-filterable-set=":simbot-commons:simbot-common-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-commons:simbot-common-core:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-commons:simbot-common-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-completion-handler/index.html"><span>Completion</span><wbr><span><span>Handler</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1814877035%2FClasslikes%2F1624946002"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-commons:simbot-common-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><span class="token keyword">interface </span><a href="-completion-handler/index.html">CompletionHandler</a><span class="token operator">&lt;</span><span class="token keyword">in </span><a href="-completion-handler/index.html">T</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">完成处理接口。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1959066119%2FClasslikes%2F1624946002" anchor-label="ErrorHandler" id="1959066119%2FClasslikes%2F1624946002" data-filterable-set=":simbot-commons:simbot-common-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-commons:simbot-common-core:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-commons:simbot-common-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-error-handler/index.html"><span>Error</span><wbr><span><span>Handler</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1959066119%2FClasslikes%2F1624946002"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-commons:simbot-common-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><span class="token keyword">interface </span><a href="-error-handler/index.html">ErrorHandler</a></div><div class="brief "><p class="paragraph">错误处理接口。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="EXTENSION_PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="1775871246%2FProperties%2F1624946002" anchor-label="onAwait" id="1775871246%2FProperties%2F1624946002" data-filterable-set=":simbot-commons:simbot-common-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_PROPERTY" data-filterable-current=":simbot-commons:simbot-common-core:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-commons:simbot-common-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-await.html"><span>on</span><wbr><span><span>Await</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1775871246%2FProperties%2F1624946002"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-commons:simbot-common-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="on-await.html">T</a><span class="token operator">&gt; </span><a href="-async/index.html">Async</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="on-await.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="on-await.html">onAwait</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.selects/-select-clause1/index.html">SelectClause1</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="on-await.html">T</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">获取一个表示此 <a href="-async/index.html">Async</a> 任务 await 操作的 <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.selects/-select-clause1/index.html">SelectClause1</a>。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1943397560%2FProperties%2F1624946002" anchor-label="onJoin" id="-1943397560%2FProperties%2F1624946002" data-filterable-set=":simbot-commons:simbot-common-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_PROPERTY" data-filterable-current=":simbot-commons:simbot-common-core:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-commons:simbot-common-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-join.html"><span>on</span><wbr><span><span>Join</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1943397560%2FProperties%2F1624946002"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-commons:simbot-common-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-async/index.html">Async</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="on-join.html">onJoin</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.selects/-select-clause0/index.html">SelectClause0</a></div><div class="brief "><p class="paragraph">获取一个表示此 <a href="-async/index.html">Async</a> 任务 join 操作的 <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.selects/-select-clause0/index.html">SelectClause0</a>。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="2057835531%2FFunctions%2F-2083221154" anchor-label="asAsync" id="2057835531%2FFunctions%2F-2083221154" data-filterable-set=":simbot-commons:simbot-common-core:dokkaHtmlPartial/jvmMain,:simbot-commons:simbot-common-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":simbot-commons:simbot-common-core:dokkaHtmlPartial/jvmMain,:simbot-commons:simbot-common-core:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-commons:simbot-common-core:dokkaHtmlPartial/jvmMain,:simbot-commons:simbot-common-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="as-async.html"><span>as</span><wbr><span><span>Async</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2057835531%2FFunctions%2F-2083221154"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":simbot-commons:simbot-common-core:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-commons:simbot-common-core:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":simbot-commons:simbot-common-core:dokkaHtmlPartial/commonMain">common</button><button class="platform-bookmark" data-filterable-current=":simbot-commons:simbot-common-core:dokkaHtmlPartial/jvmMain" data-filterable-set=":simbot-commons:simbot-common-core:dokkaHtmlPartial/jvmMain" data-toggle=":simbot-commons:simbot-common-core:dokkaHtmlPartial/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-togglable=":simbot-commons:simbot-common-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="as-async.html">T</a><span class="token operator">&gt; </span><a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-deferred/index.html">Deferred</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="as-async.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="as-async.html"><span class="token function">asAsync</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-async/index.html">Async</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="as-async.html">T</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">在 <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-coroutine-scope/index.html">CoroutineScope</a> 上下文中异步执行给定的 block， 并返回一个可以用于获取结果、取消任务或添加任务生命周期处理器的 <a href="-async/index.html">Async</a> 对象。</p></div></div><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-commons:simbot-common-core:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="as-async.html">T</a><span class="token operator">&gt; </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/CompletableFuture.html">CompletableFuture</a><span class="token operator">&lt;</span><span class="token keyword">out </span><a href="as-async.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="as-async.html"><span class="token function">asAsync</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-async/index.html">Async</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="as-async.html">T</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">将一个 <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/CompletableFuture.html">CompletableFuture</a> 转化为 <a href="-async/index.html">Async</a>.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1335363155%2FFunctions%2F1624946002" anchor-label="await" id="-1335363155%2FFunctions%2F1624946002" data-filterable-set=":simbot-commons:simbot-common-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":simbot-commons:simbot-common-core:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-commons:simbot-common-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="await.html"><span><span>await</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1335363155%2FFunctions%2F1624946002"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-commons:simbot-common-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="await.html">T</a><span class="token operator">&gt; </span><a href="-async/index.html">Async</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="await.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="await.html"><span class="token function">await</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="await.html">T</a></div><div class="brief "><p class="paragraph">在协程中等待此 <a href="-async/index.html">Async</a> 任务完成，并返回它的结果（如果任务成功完成）或抛出异步抛出的异常（如果任务失败）。 此函数会挂起协程直到任务完成。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-379792372%2FFunctions%2F1624946002" anchor-label="cancelBy" id="-379792372%2FFunctions%2F1624946002" data-filterable-set=":simbot-commons:simbot-common-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":simbot-commons:simbot-common-core:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-commons:simbot-common-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="cancel-by.html"><span>cancel</span><wbr><span><span>By</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-379792372%2FFunctions%2F1624946002"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-commons:simbot-common-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="cancel-by.html">T</a><span class="token operator">&gt; </span><a href="-async/index.html">Async</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="cancel-by.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="cancel-by.html"><span class="token function">cancelBy</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">message<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">cause<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html">Throwable</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">取消此 <a href="-async/index.html">Async</a> 任务，特别是将在任务中抛出一个 <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-cancellation-exception/index.html">CancellationException</a> 以终结任务。 如果 <a href="cancel-by.html">message</a> 或 <a href="cancel-by.html">cause</a> 指定了，则它们将被用于创建 <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-cancellation-exception/index.html">CancellationException</a>。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="245452633%2FFunctions%2F1624946002" anchor-label="completedAsync" id="245452633%2FFunctions%2F1624946002" data-filterable-set=":simbot-commons:simbot-common-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-commons:simbot-common-core:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-commons:simbot-common-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="completed-async.html"><span>completed</span><wbr><span><span>Async</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="245452633%2FFunctions%2F1624946002"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-commons:simbot-common-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="completed-async.html">T</a><span class="token operator">&gt; </span><a href="completed-async.html"><span class="token function">completedAsync</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">value<span class="token operator">: </span><a href="completed-async.html">T</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-async/index.html">Async</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="completed-async.html">T</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">将给定的值封装为一个已完成的 <code class="lang-kotlin">Async&lt;T&gt;</code> 对象。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="40607369%2FFunctions%2F1624946002" anchor-label="join" id="40607369%2FFunctions%2F1624946002" data-filterable-set=":simbot-commons:simbot-common-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":simbot-commons:simbot-common-core:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-commons:simbot-common-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="join.html"><span><span>join</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="40607369%2FFunctions%2F1624946002"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-commons:simbot-common-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="-async/index.html">Async</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="join.html"><span class="token function">join</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">在协程中等待此 <a href="-async/index.html">Async</a> 任务完成。 此函数挂起协程直到任务完成，但不获取任务结果，也不处理任务失败时的异常。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1187687905%2FFunctions%2F1624946002" anchor-label="toAsync" id="-1187687905%2FFunctions%2F1624946002" data-filterable-set=":simbot-commons:simbot-common-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":simbot-commons:simbot-common-core:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-commons:simbot-common-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="to-async.html"><span>to</span><wbr><span><span>Async</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1187687905%2FFunctions%2F1624946002"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-commons:simbot-common-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="to-async.html">T</a><span class="token operator">&gt; </span><a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-coroutine-scope/index.html">CoroutineScope</a><span class="token punctuation">.</span><a href="to-async.html"><span class="token function">toAsync</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">crossinline </span>block<span class="token operator">: </span><span class="token keyword">suspend </span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="to-async.html">T</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-async/index.html">Async</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="to-async.html">T</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">在 <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-coroutine-scope/index.html">CoroutineScope</a> 上下文中异步执行给定的 block， 并返回一个可以用于获取结果、取消任务或添加任务生命周期处理器的 <a href="-async/index.html">Async</a> 对象。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2024 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
