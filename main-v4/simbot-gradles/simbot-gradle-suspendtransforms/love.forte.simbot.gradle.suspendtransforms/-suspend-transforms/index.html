@@ -1,0 +1,250 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>SuspendTransforms</title>
+<link href="../../../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../../styles/style.css" rel="Stylesheet">
+<link href="../../../../styles/main.css" rel="Stylesheet">
+<link href="../../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<body>
+    <div class="root">
+<nav class="navigation" id="navigation-wrapper">
+    <div class="navigation--inner">
+        <div class="navigation-title">
+            <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
+            <div class="library-name">
+<a class="library-name--link" href="../../../../index.html">
+                            Simple Robot
+                    </a>            </div>
+            <div class="library-version">4.0.0-dev3
+            </div>
+        </div>
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":simbot-gradles:simbot-gradle-suspendtransforms:dokkaHtmlPartial/main">jvm</button>
+        </div>
+    </div>
+    <div class="navigation-controls">
+        <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
+        <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
+    </div>
+</nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="sidebar--inner" id="sideMenu"></div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="simbot-gradle-suspendtransforms::love.forte.simbot.gradle.suspendtransforms/SuspendTransforms///PointingToDeclaration//357906041">
+  <div class="breadcrumbs"><a href="../../index.html">simbot-gradle-suspendtransforms</a><span class="delimiter">/</span><a href="../index.html">love.forte.simbot.gradle.suspendtransforms</a><span class="delimiter">/</span><span class="current">SuspendTransforms</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Suspend</span><wbr><span><span>Transforms</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-gradles:simbot-gradle-suspendtransforms:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="index.html">SuspendTransforms</a><span class="clearfix"><span class="floating-right">(<a href="https://github.com/simple-robot/simpler-robot/tree/v4-dev/simbot-gradles/simbot-gradle-suspendtransforms/src//main/kotlin/love/forte/simbot/gradle/suspendtransforms/SuspendTransforms.kt#L92">source</a>)</span></span></div><p class="paragraph">添加至 gradle 项目的 <code class="lang-kotlin">buildSrc</code> 中，并在需要配置 <code class="lang-kotlin">suspendTransform</code> 的地方：</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">suspendTransform {<br>    includeRuntime = false<br>    includeAnnotation = false<br><br>    addJvmTransformers(<br>        // @JvmBlocking<br>        SuspendTransforms.jvmBlockingTransformer,<br>        // @JvmAsync<br>        SuspendTransforms.jvmAsyncTransformer,<br><br>        // @JvmSuspendTrans<br>        SuspendTransforms.suspendTransTransformerForJvmBlocking,<br>        SuspendTransforms.suspendTransTransformerForJvmAsync,<br>        SuspendTransforms.suspendTransTransformerForJvmReserve,<br><br>        // @JvmSuspendTransProperty<br>        SuspendTransforms.jvmSuspendTransPropTransformerForBlocking,<br>        SuspendTransforms.jvmSuspendTransPropTransformerForAsync,<br>        SuspendTransforms.jvmSuspendTransPropTransformerForReserve,<br>    )<br>}</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="2068424229%2FProperties%2F357906041" anchor-label="jsPromiseTransformer" id="2068424229%2FProperties%2F357906041" data-filterable-set=":simbot-gradles:simbot-gradle-suspendtransforms:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":simbot-gradles:simbot-gradle-suspendtransforms:dokkaHtmlPartial/main" data-filterable-set=":simbot-gradles:simbot-gradle-suspendtransforms:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="js-promise-transformer.html"><span>js</span><wbr><span>Promise</span><wbr><span><span>Transformer</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2068424229%2FProperties%2F357906041"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-gradles:simbot-gradle-suspendtransforms:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="js-promise-transformer.html">jsPromiseTransformer</a><span class="token operator">: </span><span data-unresolved-link="love.forte.plugin.suspendtrans/Transformer///PointingToDeclaration/">Transformer</span></div><div class="brief "><p class="paragraph">JsPromise</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-340506320%2FProperties%2F357906041" anchor-label="jvmAsyncTransformer" id="-340506320%2FProperties%2F357906041" data-filterable-set=":simbot-gradles:simbot-gradle-suspendtransforms:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":simbot-gradles:simbot-gradle-suspendtransforms:dokkaHtmlPartial/main" data-filterable-set=":simbot-gradles:simbot-gradle-suspendtransforms:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="jvm-async-transformer.html"><span>jvm</span><wbr><span>Async</span><wbr><span><span>Transformer</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-340506320%2FProperties%2F357906041"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-gradles:simbot-gradle-suspendtransforms:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="jvm-async-transformer.html">jvmAsyncTransformer</a><span class="token operator">: </span><span data-unresolved-link="love.forte.plugin.suspendtrans/Transformer///PointingToDeclaration/">Transformer</span></div><div class="brief "><p class="paragraph">JvmAsync</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-432070455%2FProperties%2F357906041" anchor-label="jvmBlockingTransformer" id="-432070455%2FProperties%2F357906041" data-filterable-set=":simbot-gradles:simbot-gradle-suspendtransforms:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":simbot-gradles:simbot-gradle-suspendtransforms:dokkaHtmlPartial/main" data-filterable-set=":simbot-gradles:simbot-gradle-suspendtransforms:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="jvm-blocking-transformer.html"><span>jvm</span><wbr><span>Blocking</span><wbr><span><span>Transformer</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-432070455%2FProperties%2F357906041"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-gradles:simbot-gradle-suspendtransforms:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="jvm-blocking-transformer.html">jvmBlockingTransformer</a><span class="token operator">: </span><span data-unresolved-link="love.forte.plugin.suspendtrans/Transformer///PointingToDeclaration/">Transformer</span></div><div class="brief "><p class="paragraph">JvmBlocking</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1681882992%2FProperties%2F357906041" anchor-label="jvmReserveTransformer" id="1681882992%2FProperties%2F357906041" data-filterable-set=":simbot-gradles:simbot-gradle-suspendtransforms:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":simbot-gradles:simbot-gradle-suspendtransforms:dokkaHtmlPartial/main" data-filterable-set=":simbot-gradles:simbot-gradle-suspendtransforms:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="jvm-reserve-transformer.html"><span>jvm</span><wbr><span>Reserve</span><wbr><span><span>Transformer</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1681882992%2FProperties%2F357906041"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-gradles:simbot-gradle-suspendtransforms:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="jvm-reserve-transformer.html">jvmReserveTransformer</a><span class="token operator">: </span><span data-unresolved-link="love.forte.plugin.suspendtrans/Transformer///PointingToDeclaration/">Transformer</span></div><div class="brief "><p class="paragraph">JvmReserve</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1981167888%2FProperties%2F357906041" anchor-label="jvmSuspendTransPropTransformerForAsync" id="-1981167888%2FProperties%2F357906041" data-filterable-set=":simbot-gradles:simbot-gradle-suspendtransforms:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":simbot-gradles:simbot-gradle-suspendtransforms:dokkaHtmlPartial/main" data-filterable-set=":simbot-gradles:simbot-gradle-suspendtransforms:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="jvm-suspend-trans-prop-transformer-for-async.html"><span>jvm</span><wbr><span>Suspend</span><wbr><span>Trans</span><wbr><span>Prop</span><wbr><span>Transformer</span><wbr><span>For</span><wbr><span><span>Async</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1981167888%2FProperties%2F357906041"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-gradles:simbot-gradle-suspendtransforms:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="jvm-suspend-trans-prop-transformer-for-async.html">jvmSuspendTransPropTransformerForAsync</a><span class="token operator">: </span><span data-unresolved-link="love.forte.plugin.suspendtrans/Transformer///PointingToDeclaration/">Transformer</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-737580903%2FProperties%2F357906041" anchor-label="jvmSuspendTransPropTransformerForBlocking" id="-737580903%2FProperties%2F357906041" data-filterable-set=":simbot-gradles:simbot-gradle-suspendtransforms:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":simbot-gradles:simbot-gradle-suspendtransforms:dokkaHtmlPartial/main" data-filterable-set=":simbot-gradles:simbot-gradle-suspendtransforms:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="jvm-suspend-trans-prop-transformer-for-blocking.html"><span>jvm</span><wbr><span>Suspend</span><wbr><span>Trans</span><wbr><span>Prop</span><wbr><span>Transformer</span><wbr><span>For</span><wbr><span><span>Blocking</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-737580903%2FProperties%2F357906041"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-gradles:simbot-gradle-suspendtransforms:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="jvm-suspend-trans-prop-transformer-for-blocking.html">jvmSuspendTransPropTransformerForBlocking</a><span class="token operator">: </span><span data-unresolved-link="love.forte.plugin.suspendtrans/Transformer///PointingToDeclaration/">Transformer</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2129065200%2FProperties%2F357906041" anchor-label="jvmSuspendTransPropTransformerForReserve" id="2129065200%2FProperties%2F357906041" data-filterable-set=":simbot-gradles:simbot-gradle-suspendtransforms:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":simbot-gradles:simbot-gradle-suspendtransforms:dokkaHtmlPartial/main" data-filterable-set=":simbot-gradles:simbot-gradle-suspendtransforms:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="jvm-suspend-trans-prop-transformer-for-reserve.html"><span>jvm</span><wbr><span>Suspend</span><wbr><span>Trans</span><wbr><span>Prop</span><wbr><span>Transformer</span><wbr><span>For</span><wbr><span><span>Reserve</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2129065200%2FProperties%2F357906041"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-gradles:simbot-gradle-suspendtransforms:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="jvm-suspend-trans-prop-transformer-for-reserve.html">jvmSuspendTransPropTransformerForReserve</a><span class="token operator">: </span><span data-unresolved-link="love.forte.plugin.suspendtrans/Transformer///PointingToDeclaration/">Transformer</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1057309400%2FProperties%2F357906041" anchor-label="suspendTransTransformerForJsPromise" id="1057309400%2FProperties%2F357906041" data-filterable-set=":simbot-gradles:simbot-gradle-suspendtransforms:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":simbot-gradles:simbot-gradle-suspendtransforms:dokkaHtmlPartial/main" data-filterable-set=":simbot-gradles:simbot-gradle-suspendtransforms:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="suspend-trans-transformer-for-js-promise.html"><span>suspend</span><wbr><span>Trans</span><wbr><span>Transformer</span><wbr><span>For</span><wbr><span>Js</span><wbr><span><span>Promise</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1057309400%2FProperties%2F357906041"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-gradles:simbot-gradle-suspendtransforms:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="suspend-trans-transformer-for-js-promise.html">suspendTransTransformerForJsPromise</a><span class="token operator">: </span><span data-unresolved-link="love.forte.plugin.suspendtrans/Transformer///PointingToDeclaration/">Transformer</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="270300597%2FProperties%2F357906041" anchor-label="suspendTransTransformerForJvmAsync" id="270300597%2FProperties%2F357906041" data-filterable-set=":simbot-gradles:simbot-gradle-suspendtransforms:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":simbot-gradles:simbot-gradle-suspendtransforms:dokkaHtmlPartial/main" data-filterable-set=":simbot-gradles:simbot-gradle-suspendtransforms:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="suspend-trans-transformer-for-jvm-async.html"><span>suspend</span><wbr><span>Trans</span><wbr><span>Transformer</span><wbr><span>For</span><wbr><span>Jvm</span><wbr><span><span>Async</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="270300597%2FProperties%2F357906041"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-gradles:simbot-gradle-suspendtransforms:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="suspend-trans-transformer-for-jvm-async.html">suspendTransTransformerForJvmAsync</a><span class="token operator">: </span><span data-unresolved-link="love.forte.plugin.suspendtrans/Transformer///PointingToDeclaration/">Transformer</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1744205900%2FProperties%2F357906041" anchor-label="suspendTransTransformerForJvmBlocking" id="-1744205900%2FProperties%2F357906041" data-filterable-set=":simbot-gradles:simbot-gradle-suspendtransforms:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":simbot-gradles:simbot-gradle-suspendtransforms:dokkaHtmlPartial/main" data-filterable-set=":simbot-gradles:simbot-gradle-suspendtransforms:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="suspend-trans-transformer-for-jvm-blocking.html"><span>suspend</span><wbr><span>Trans</span><wbr><span>Transformer</span><wbr><span>For</span><wbr><span>Jvm</span><wbr><span><span>Blocking</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1744205900%2FProperties%2F357906041"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-gradles:simbot-gradle-suspendtransforms:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="suspend-trans-transformer-for-jvm-blocking.html">suspendTransTransformerForJvmBlocking</a><span class="token operator">: </span><span data-unresolved-link="love.forte.plugin.suspendtrans/Transformer///PointingToDeclaration/">Transformer</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1126762101%2FProperties%2F357906041" anchor-label="suspendTransTransformerForJvmReserve" id="1126762101%2FProperties%2F357906041" data-filterable-set=":simbot-gradles:simbot-gradle-suspendtransforms:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":simbot-gradles:simbot-gradle-suspendtransforms:dokkaHtmlPartial/main" data-filterable-set=":simbot-gradles:simbot-gradle-suspendtransforms:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="suspend-trans-transformer-for-jvm-reserve.html"><span>suspend</span><wbr><span>Trans</span><wbr><span>Transformer</span><wbr><span>For</span><wbr><span>Jvm</span><wbr><span><span>Reserve</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1126762101%2FProperties%2F357906041"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-gradles:simbot-gradle-suspendtransforms:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="suspend-trans-transformer-for-jvm-reserve.html">suspendTransTransformerForJvmReserve</a><span class="token operator">: </span><span data-unresolved-link="love.forte.plugin.suspendtrans/Transformer///PointingToDeclaration/">Transformer</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2024 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
