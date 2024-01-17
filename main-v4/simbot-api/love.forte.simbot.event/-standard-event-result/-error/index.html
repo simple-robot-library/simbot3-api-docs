@@ -41,7 +41,7 @@
 <a class="library-name--link" href="../../../../index.html">
                             Simple Robot
                     </a>            </div>
-            <div class="library-version">4.0.0-dev5
+            <div class="library-version">4.0.0-dev6
             </div>
         </div>
         <div class="filter-section" id="filter-section">
@@ -62,7 +62,7 @@
   <div class="breadcrumbs"><a href="../../../index.html">simbot-api</a><span class="delimiter">/</span><a href="../../index.html">love.forte.simbot.event</a><span class="delimiter">/</span><a href="../index.html">StandardEventResult</a><span class="delimiter">/</span><span class="current">Error</span></div>
   <div class="cover ">
     <h1 class="cover"><span><span>Error</span></span></h1>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="index.html">Error</a> : <a href="../index.html">StandardEventResult</a><span class="clearfix"><span class="floating-right">(<a href="https://github.com/simple-robot/simpler-robot/tree/v4-dev/simbot-api/src//commonMain/kotlin/love/forte/simbot/event/EventResult.kt#L153">source</a>)</span></span></div><p class="paragraph">异常的结果。当事件调度过程中产生了未捕获异常，则此异常将会被包装到 <a href="content.html">Error.content</a> 中并被推送给下游。</p><p class="paragraph">通常用于在 <a href="../../-event-dispatcher/index.html">EventDispatcher</a> 中对对未捕获异常的处理，不过也可以选择主动构建此结果来向下游传递。</p><p class="paragraph">对异常结果的处理由下游自由决定。 例如可以通过 <code class="lang-kotlin">filter { it !is StandardEventResult.Error }</code> 来忽略掉所有的异常结果， 或者通过 <code class="lang-kotlin">takeWhile { it is StandardEventResult.Error }</code> 来在第一次出现异常时中断流的处理。</p></div></div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="index.html">Error</a> : <a href="../index.html">StandardEventResult</a><span class="clearfix"><span class="floating-right">(<a href="https://github.com/simple-robot/simpler-robot/tree/v4-dev/simbot-api/src//commonMain/kotlin/love/forte/simbot/event/EventResult.kt#L171">source</a>)</span></span></div><p class="paragraph">异常的结果。当事件调度过程中产生了未捕获异常，则此异常将会被包装到 <a href="content.html">Error.content</a> 中并被推送给下游。</p><p class="paragraph">通常用于在 <a href="../../-event-dispatcher/index.html">EventDispatcher</a> 中对对未捕获异常的处理，不过也可以选择主动构建此结果来向下游传递。</p><p class="paragraph">对异常结果的处理由下游自由决定。 例如可以通过 <code class="lang-kotlin">filter { it !is StandardEventResult.Error }</code> 来忽略掉所有的异常结果， 或者通过 <code class="lang-kotlin">takeWhile { it is StandardEventResult.Error }</code> 来在第一次出现异常时中断流的处理。</p></div></div>
   </div>
   <div class="tabbedcontent">
     <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button><button class="section-tab" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION,EXTENSION_PROPERTY,EXTENSION_FUNCTION">Members &amp; Extensions</button></div>
