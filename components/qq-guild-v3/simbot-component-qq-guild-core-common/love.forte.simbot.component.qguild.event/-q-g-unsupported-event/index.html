@@ -1,0 +1,218 @@
+<!doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>QGUnsupportedEvent</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../";</script>    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/jetbrains-mono.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<body>
+<div class="navigation-wrapper" id="navigation-wrapper">
+    <div id="leftToggler"><span class="icon-toggler"></span></div>
+    <div class="library-name">
+<a href="../../../index.html">
+<span>Simple Robot Component Tencent Guild</span>            </a>    </div>
+    <div>3.2.0.0
+    </div>
+    <div class="pull-right d-flex">
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":simbot-component-qq-guild-core-common:dokkaHtmlPartial/main">jvm</button>
+        </div>
+        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+    </div>
+</div>
+<div id="container">
+    <div id="leftColumn">
+        <div id="sideMenu"></div>
+    </div>
+    <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="simbot-component-qq-guild-core-common::love.forte.simbot.component.qguild.event/QGUnsupportedEvent///PointingToDeclaration//-1989238405">
+  <div class="breadcrumbs"><a href="../../index.html">simbot-component-qq-guild-core-common</a><span class="delimiter">/</span><a href="../index.html">love.forte.simbot.component.qguild.event</a><span class="delimiter">/</span><span class="current">QGUnsupportedEvent</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>QGUnsupported</span><wbr><span><span>Event</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq-guild-core-common:dokkaHtmlPartial/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://docs.simbot.forte.love/main/simbot-annotations/love.forte.simbot/-fragile-simbot-api/index.html"><span class="token annotation builtin">FragileSimbotApi</span></a></div></div><span class="token keyword">abstract </span><span class="token keyword">class </span><a href="index.html">QGUnsupportedEvent</a> : <a href="../-q-g-event/index.html">QGEvent</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../../simbot-component-qq-guild-api/love.forte.simbot.qguild.event/-signal/-dispatch/index.html">Signal.Dispatch</a><span class="token operator">&gt; </span><span class="clearfix"><span class="floating-right">(<a href="https://github.com/simple-robot/simbot-component-qq-guild/tree/main/simbot-component-qq-guild-core-common/src/main/kotlin/love/forte/simbot/component/qguild/event/QGUnsupportedEvent.kt#L51">source</a>)</span></span></div><p class="paragraph">尚未支持的QQ频道事件类型。</p><p class="paragraph">用于表示、推送所有标准库中已经存在、但是组件实现中暂无对应的具体事件类型。</p><h3 class=""> 仅限临时应用</h3><p class="paragraph"><a href="index.html">QGUnsupportedEvent</a> 用于对尚未支持的<strong>组件事件</strong>提供一个"捡漏"的方案， 但是使用 <a href="index.html">QGUnsupportedEvent</a> 应当只是临时的。当某个事件在某个更新中被支持后， 将不会再出现在 <a href="index.html">QGUnsupportedEvent</a> 中。</p><p class="paragraph">这很好理解。举个例子，在 <code class="lang-kotlin">v1.0</code> 版本中，<a href="index.html">QGUnsupportedEvent</a> 可以接收到 <code class="lang-kotlin">事件A</code> 和 <code class="lang-kotlin">事件B</code> —— 因为它们都没有自己独立的 <i>组件事件实现</i> 。但是到了 <code class="lang-kotlin">v1.1</code> 版本， <code class="lang-kotlin">事件A</code> 得到了独立事件类型的支持，而这个变化会直接导致使用 <a href="index.html">QGUnsupportedEvent</a> 永远无法再接收到 <a href="source-event-entity.html">sourceEventEntity</a> 类型为 <code class="lang-kotlin">事件A</code> 的事件了。</p><span class="kdoc-tag"><h4 class="">Author</h4><p class="paragraph">ForteScarlet</p></span></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,FUNCTION,PROPERTY">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="">Constructors</h2>
+        <div class="table"><a data-name="-1642686064%2FConstructors%2F-1989238405" anchor-label="QGUnsupportedEvent" id="-1642686064%2FConstructors%2F-1989238405" data-filterable-set=":simbot-component-qq-guild-core-common:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-togglable="CONSTRUCTOR" data-filterable-current=":simbot-component-qq-guild-core-common:dokkaHtmlPartial/main" data-filterable-set=":simbot-component-qq-guild-core-common:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-q-g-unsupported-event.html"><span>QGUnsupported</span><wbr><span><span>Event</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1642686064%2FConstructors%2F-1989238405"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq-guild-core-common:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="TYPE">
+        <h2 class="">Types</h2>
+        <div class="table"><a data-name="903391491%2FClasslikes%2F-1989238405" anchor-label="Key" id="903391491%2FClasslikes%2F-1989238405" data-filterable-set=":simbot-component-qq-guild-core-common:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-qq-guild-core-common:dokkaHtmlPartial/main" data-filterable-set=":simbot-component-qq-guild-core-common:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-key/index.html"><span><span>Key</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="903391491%2FClasslikes%2F-1989238405"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq-guild-core-common:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-key/index.html">Key</a> : <a href="https://docs.simbot.forte.love/main/simbot-api/love.forte.simbot.event/-base-event-key/index.html">BaseEventKey</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html">QGUnsupportedEvent</a><span class="token operator">&gt; </span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="-1325766685%2FProperties%2F-1989238405" anchor-label="bot" id="-1325766685%2FProperties%2F-1989238405" data-filterable-set=":simbot-component-qq-guild-core-common:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-qq-guild-core-common:dokkaHtmlPartial/main" data-filterable-set=":simbot-component-qq-guild-core-common:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-q-g-event/bot.html"><span><span>bot</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1325766685%2FProperties%2F-1989238405"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq-guild-core-common:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="../-q-g-event/bot.html">bot</a><span class="token operator">: </span><a href="../../love.forte.simbot.component.qguild/-q-g-bot/index.html">QGBot</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1500466840%2FProperties%2F-1989238405" anchor-label="component" id="1500466840%2FProperties%2F-1989238405" data-filterable-set=":simbot-component-qq-guild-core-common:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-qq-guild-core-common:dokkaHtmlPartial/main" data-filterable-set=":simbot-component-qq-guild-core-common:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#1500466840%2FProperties%2F-1989238405"><span><span>component</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1500466840%2FProperties%2F-1989238405"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq-guild-core-common:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="index.html#1500466840%2FProperties%2F-1989238405">component</a><span class="token operator">: </span><a href="https://docs.simbot.forte.love/main/simbot-annotations/love.forte.simbot/-component/index.html">Component</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1594662814%2FProperties%2F-1989238405" anchor-label="eventRaw" id="-1594662814%2FProperties%2F-1989238405" data-filterable-set=":simbot-component-qq-guild-core-common:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-qq-guild-core-common:dokkaHtmlPartial/main" data-filterable-set=":simbot-component-qq-guild-core-common:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-q-g-event/event-raw.html"><span>event</span><wbr><span><span>Raw</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1594662814%2FProperties%2F-1989238405"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq-guild-core-common:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="../-q-g-event/event-raw.html">eventRaw</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">接收到的事件的原始JSON字符串</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-672271344%2FProperties%2F-1989238405" anchor-label="id" id="-672271344%2FProperties%2F-1989238405" data-filterable-set=":simbot-component-qq-guild-core-common:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-qq-guild-core-common:dokkaHtmlPartial/main" data-filterable-set=":simbot-component-qq-guild-core-common:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="id.html"><span><span>id</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-672271344%2FProperties%2F-1989238405"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq-guild-core-common:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="id.html">id</a><span class="token operator">: </span><a href="https://docs.simbot.forte.love/main/simbot-annotations/love.forte.simbot/-i-d/index.html">ID</a></div><div class="brief "><p class="paragraph">事件ID。一个随机字符串。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1456027920%2FProperties%2F-1989238405" anchor-label="key" id="-1456027920%2FProperties%2F-1989238405" data-filterable-set=":simbot-component-qq-guild-core-common:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-qq-guild-core-common:dokkaHtmlPartial/main" data-filterable-set=":simbot-component-qq-guild-core-common:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="key.html"><span><span>key</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1456027920%2FProperties%2F-1989238405"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq-guild-core-common:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="key.html">key</a><span class="token operator">: </span><a href="https://docs.simbot.forte.love/main/simbot-api/love.forte.simbot.event/-event/-key/index.html">Event.Key</a><span class="token operator">&lt;</span><span class="token keyword">out </span><a href="../-q-g-event/index.html">QGEvent</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token operator">&gt;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-417580243%2FProperties%2F-1989238405" anchor-label="sourceEventEntity" id="-417580243%2FProperties%2F-1989238405" data-filterable-set=":simbot-component-qq-guild-core-common:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-qq-guild-core-common:dokkaHtmlPartial/main" data-filterable-set=":simbot-component-qq-guild-core-common:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="source-event-entity.html"><span>source</span><wbr><span>Event</span><wbr><span><span>Entity</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-417580243%2FProperties%2F-1989238405"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq-guild-core-common:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="source-event-entity.html">sourceEventEntity</a><span class="token operator">: </span><a href="../../../simbot-component-qq-guild-api/love.forte.simbot.qguild.event/-signal/-dispatch/index.html">Signal.Dispatch</a></div><div class="brief "><p class="paragraph">原始的标准库事件对象。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-527426919%2FProperties%2F-1989238405" anchor-label="timestamp" id="-527426919%2FProperties%2F-1989238405" data-filterable-set=":simbot-component-qq-guild-core-common:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-qq-guild-core-common:dokkaHtmlPartial/main" data-filterable-set=":simbot-component-qq-guild-core-common:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="timestamp.html"><span><span>timestamp</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-527426919%2FProperties%2F-1989238405"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq-guild-core-common:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="timestamp.html">timestamp</a><span class="token operator">: </span><a href="https://docs.simbot.forte.love/main/simbot-annotations/love.forte.simbot/-timestamp/index.html">Timestamp</a></div><div class="brief "><p class="paragraph">事件构建时间，即此对象被构建的时间</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2023 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+    </div>
+</div>
+</body>
+</html>
+

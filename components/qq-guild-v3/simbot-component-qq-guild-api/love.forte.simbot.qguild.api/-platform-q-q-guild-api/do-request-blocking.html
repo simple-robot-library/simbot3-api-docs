@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>doRequestBlocking</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../";</script>    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/jetbrains-mono.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<body>
+<div class="navigation-wrapper" id="navigation-wrapper">
+    <div id="leftToggler"><span class="icon-toggler"></span></div>
+    <div class="library-name">
+<a href="../../../index.html">
+<span>Simple Robot Component Tencent Guild</span>            </a>    </div>
+    <div>3.2.0.0
+    </div>
+    <div class="pull-right d-flex">
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":simbot-component-qq-guild-api:dokkaHtmlPartial/jvmMain">jvm</button>
+        </div>
+        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+    </div>
+</div>
+<div id="container">
+    <div id="leftColumn">
+        <div id="sideMenu"></div>
+    </div>
+    <div id="main">
+<div class="main-content" data-page-type="member" id="content" pageids="simbot-component-qq-guild-api::love.forte.simbot.qguild.api/PlatformQQGuildApi/doRequestBlocking/#io.ktor.client.HttpClient#io.ktor.http.Url#kotlin.String#kotlinx.serialization.StringFormat/PointingToDeclaration//-103648975">
+  <div class="breadcrumbs"><a href="../../index.html">simbot-component-qq-guild-api</a><span class="delimiter">/</span><a href="../index.html">love.forte.simbot.qguild.api</a><span class="delimiter">/</span><a href="index.html">PlatformQQGuildApi</a><span class="delimiter">/</span><span class="current">doRequestBlocking</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>do</span><wbr><span>Request</span><wbr><span><span>Blocking</span></span></h1>
+  </div>
+  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":simbot-component-qq-guild-api:dokkaHtmlPartial/jvmMain" data-filterable-set=":simbot-component-qq-guild-api:dokkaHtmlPartial/jvmMain" data-active="" data-toggle=":simbot-component-qq-guild-api:dokkaHtmlPartial/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq-guild-api:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../../simbot-component-qq-guild-api/love.forte.simbot.qguild/-api4-j/index.html"><span class="token annotation builtin">Api4J</span></a></div><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-overloads/index.html"><span class="token annotation builtin">JvmOverloads</span></a></div></div><span class="token keyword"></span><span class="token keyword">fun </span><a href="do-request-blocking.html"><span class="token function">doRequestBlocking</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">client<span class="token operator">: </span><a href="https://api.ktor.io/ktor-client-core/io.ktor.client/-http-client/index.html">HttpClient</a><span class="token operator"> = </span>QQGuildApi.DefaultHttpClient<span class="token punctuation">, </span></span><span class="parameter ">server<span class="token operator">: </span><a href="https://api.ktor.io/ktor-http/io.ktor.http/-url/index.html">Url</a><span class="token punctuation">, </span></span><span class="parameter ">token<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">decoder<span class="token operator">: </span><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-core/kotlinx.serialization/-string-format/index.html">StringFormat</a><span class="token operator"> = </span>Json</span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">R</a><span class="clearfix"><span class="floating-right">(<a href="https://github.com/simple-robot/simbot-component-qq-guild/tree/main/simbot-component-qq-guild-api/src/jvmMain/kotlin/love/forte/simbot/qguild/api/QQGuildApi.jvm.kt#L84">source</a>)</span></span></div><p class="paragraph">使用此api发起一次请求，并得到预期中的结果。</p><p class="paragraph">为Java服务的阻塞API，内部使用 <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/index.html">runBlocking</a> 阻塞并等待 <a href="do-request.html">doRequest</a> 的结果。 其中，阻塞代码块上下文的调度器为 <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-dispatchers/-i-o.html">Dispatchers.IO</a>。</p><h4 class="">See also</h4><div class="table"><div class="table-row" data-filterable-current=":simbot-component-qq-guild-api:dokkaHtmlPartial/jvmMain" data-filterable-set=":simbot-component-qq-guild-api:dokkaHtmlPartial/jvmMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../../../simbot-component-qq-guild-api/love.forte.simbot.qguild/-err-info/index.html"><span>Err</span><wbr><span><span>Info</span></span></a></div></span></div><div></div></div></div></div><h4 class="">Throws</h4><div class="table"><div class="table-row" data-filterable-current=":simbot-component-qq-guild-api:dokkaHtmlPartial/jvmMain" data-filterable-set=":simbot-component-qq-guild-api:dokkaHtmlPartial/jvmMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-exception/index.html"><span><span>Exception</span></span></a></div></span></div><div><div class="title"><p class="paragraph">see <a href="https://api.ktor.io/ktor-client-core/io.ktor.client.request/index.html">HttpClient.request</a>, 可能会抛出任何ktor请求过程中的异常。</p></div></div></div></div><div class="table-row" data-filterable-current=":simbot-component-qq-guild-api:dokkaHtmlPartial/jvmMain" data-filterable-set=":simbot-component-qq-guild-api:dokkaHtmlPartial/jvmMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../../../simbot-component-qq-guild-api/love.forte.simbot.qguild/-q-q-guild-api-exception/index.html"><span>QQGuild</span><wbr><span>Api</span><wbr><span><span>Exception</span></span></a></div></span></div><div><div class="title"><p class="paragraph">请求过程中出现了错误。</p></div></div></div></div></div></div>  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2023 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+    </div>
+</div>
+</body>
+</html>
+
