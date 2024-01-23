@@ -1,9 +1,11 @@
 <!doctype html>
-<html>
+<html class="no-js">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
     <title>love.forte.simbot.qguild.api.role</title>
-<link href="../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../";</script>    <script>const storage = localStorage.getItem("dokka-dark-mode")
+<link href="../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
     if (storage == null) {
         const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
         if (osDarkSchemePreferred === true) {
@@ -16,12 +18,13 @@
         }
     }
     </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
 <script type="text/javascript" src="../../scripts/sourceset_dependencies.js" async></script>
 <link href="../../styles/style.css" rel="Stylesheet">
-<link href="../../styles/jetbrains-mono.css" rel="Stylesheet">
 <link href="../../styles/main.css" rel="Stylesheet">
 <link href="../../styles/prism.css" rel="Stylesheet">
 <link href="../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../styles/font-jb-sans-auto.css" rel="Stylesheet">
 <script type="text/javascript" src="../../scripts/clipboard.js" async></script>
 <script type="text/javascript" src="../../scripts/navigation-loader.js" async></script>
 <script type="text/javascript" src="../../scripts/platform-content-handler.js" async></script>
@@ -29,26 +32,32 @@
 <script type="text/javascript" src="../../scripts/prism.js" async></script>
 <script type="text/javascript" src="../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
 <body>
-<div class="navigation-wrapper" id="navigation-wrapper">
-    <div id="leftToggler"><span class="icon-toggler"></span></div>
-    <div class="library-name">
-<a href="../../index.html">
-<span>Simple Robot Component Tencent Guild</span>            </a>    </div>
-    <div>3.2.0.0-SNAPSHOT
-    </div>
-    <div class="pull-right d-flex">
+    <div class="root">
+<nav class="navigation" id="navigation-wrapper">
+    <div class="navigation--inner">
+        <div class="navigation-title">
+            <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
+            <div class="library-name">
+<a class="library-name--link" href="../../index.html">
+                            Simple Robot Component | QQ Guild
+                    </a>            </div>
+            <div class="library-version">4.0.0-dev6-SNAPSHOT
+            </div>
+        </div>
         <div class="filter-section" id="filter-section">
                 <button class="platform-tag platform-selector common-like" data-active="" data-filter=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain">common</button>
         </div>
-        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
-        <div id="searchBar"></div>
     </div>
-</div>
-<div id="container">
-    <div id="leftColumn">
-        <div id="sideMenu"></div>
+    <div class="navigation-controls">
+        <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
+        <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
     </div>
-    <div id="main">
+</nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="sidebar--inner" id="sideMenu"></div>
+            </div>
+            <div id="main">
 <div class="main-content" data-page-type="package" id="content" pageids="simbot-component-qq-guild-api::love.forte.simbot.qguild.api.role////PointingToDeclaration//1533000741">
   <div class="breadcrumbs"><a href="../index.html">simbot-component-qq-guild-api</a><span class="delimiter">/</span><span class="current">love.forte.simbot.qguild.api.role</span></div>
   <div class="cover ">
@@ -69,7 +78,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-add-member-role-api/index.html">AddMemberRoleApi</a> : <a href="../love.forte.simbot.qguild.api/-q-q-guild-api-without-result/index.html">QQGuildApiWithoutResult</a></div><div class="brief "><p class="paragraph"><a href="https://bot.q.qq.com/wiki/develop/api/openapi/guild/put_guild_member_role.html">增加频道身份组成员</a></p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-add-member-role-api/index.html">AddMemberRoleApi</a> : <a href="../love.forte.simbot.qguild.api/-put-q-q-guild-api/index.html">PutQQGuildApi</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a><span class="token operator">&gt; </span>, <a href="../love.forte.simbot.qguild.api/-q-q-guild-api-without-result/index.html">QQGuildApiWithoutResult</a></div><div class="brief "><p class="paragraph"><a href="https://bot.q.qq.com/wiki/develop/api/openapi/guild/put_guild_member_role.html">增加频道身份组成员</a></p></div></div></div>
                 </div>
               </div>
             </div>
@@ -99,7 +108,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-delete-guild-role-api/index.html">DeleteGuildRoleApi</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">guildId<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">roleId<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span> : <a href="../love.forte.simbot.qguild.api/-q-q-guild-api-without-result/index.html">QQGuildApiWithoutResult</a></div><div class="brief "><p class="paragraph"><a href="https://bot.q.qq.com/wiki/develop/api/openapi/guild/delete_guild_role.html#%E5%88%A0%E9%99%A4%E9%A2%91%E9%81%93%E8%BA%AB%E4%BB%BD%E7%BB%84">删除频道身份组</a></p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-delete-guild-role-api/index.html">DeleteGuildRoleApi</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">guildId<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">roleId<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span> : <a href="../love.forte.simbot.qguild.api/-delete-q-q-guild-api/index.html">DeleteQQGuildApi</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a><span class="token operator">&gt; </span>, <a href="../love.forte.simbot.qguild.api/-q-q-guild-api-without-result/index.html">QQGuildApiWithoutResult</a></div><div class="brief "><p class="paragraph"><a href="https://bot.q.qq.com/wiki/develop/api/openapi/guild/delete_guild_role.html#%E5%88%A0%E9%99%A4%E9%A2%91%E9%81%93%E8%BA%AB%E4%BB%BD%E7%BB%84">删除频道身份组</a></p></div></div></div>
                 </div>
               </div>
             </div>
@@ -174,7 +183,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-modify-guild-role-api/index.html">ModifyGuildRoleApi</a> : <a href="../love.forte.simbot.qguild.api/-q-q-guild-api/index.html">QQGuildApi</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-guild-role-modified/index.html">GuildRoleModified</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph"><a href="https://bot.q.qq.com/wiki/develop/api/openapi/guild/patch_guild_role.html#%E4%BF%AE%E6%94%B9%E9%A2%91%E9%81%93%E8%BA%AB%E4%BB%BD%E7%BB%84">修改频道身份组</a></p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-modify-guild-role-api/index.html">ModifyGuildRoleApi</a> : <a href="../love.forte.simbot.qguild.api/-patch-q-q-guild-api/index.html">PatchQQGuildApi</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-guild-role-modified/index.html">GuildRoleModified</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph"><a href="https://bot.q.qq.com/wiki/develop/api/openapi/guild/patch_guild_role.html#%E4%BF%AE%E6%94%B9%E9%A2%91%E9%81%93%E8%BA%AB%E4%BB%BD%E7%BB%84">修改频道身份组</a></p></div></div></div>
                 </div>
               </div>
             </div>
@@ -189,7 +198,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-remove-member-role-api/index.html">RemoveMemberRoleApi</a> : <a href="../love.forte.simbot.qguild.api/-q-q-guild-api-without-result/index.html">QQGuildApiWithoutResult</a></div><div class="brief "><p class="paragraph"><a href="https://bot.q.qq.com/wiki/develop/api/openapi/guild/delete_guild_member_role.html">删除频道身份组成员</a></p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-remove-member-role-api/index.html">RemoveMemberRoleApi</a> : <a href="../love.forte.simbot.qguild.api/-delete-q-q-guild-api/index.html">DeleteQQGuildApi</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a><span class="token operator">&gt; </span>, <a href="../love.forte.simbot.qguild.api/-q-q-guild-api-without-result/index.html">QQGuildApiWithoutResult</a></div><div class="brief "><p class="paragraph"><a href="https://bot.q.qq.com/wiki/develop/api/openapi/guild/delete_guild_member_role.html">删除频道身份组成员</a></p></div></div></div>
                 </div>
               </div>
             </div>
@@ -200,10 +209,11 @@
   </div>
 </div>
       <div class="footer">
-        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2023 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2024 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
       </div>
+            </div>
+        </div>
     </div>
-</div>
 </body>
 </html>
 
