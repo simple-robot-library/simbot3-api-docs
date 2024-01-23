@@ -1,23 +1,23 @@
-name: Deploy QQ Guild Snapshots KDoc Pages
+name: Deploy QQ Guild V3 Snapshots KDoc Pages
 on:
   push:
-    branches: 'kdoc-deploy/snapshots/component-qq-guild'
+    branches: 'kdoc-deploy/snapshots/component-qq-guild-v3'
 
 jobs:
-  deploy-qq-guild-snapshots-kdoc-pages:
-    name: deploy-qq-guild-snapshots-kdoc-pages
+  deploy-qq-guild-v3-snapshots-kdoc-pages:
+    name: deploy-qq-guild-v3-snapshots-kdoc-pages
     runs-on: ubuntu-latest
     steps:
       # 检出仓库代码
       - uses: actions/checkout@v3
 
       # https://github.com/marketplace/actions/github-pages-action
-      - name: Deploy snapshots/components/qq-guild to doc repository
+      - name: Deploy snapshots/components/qq-guild-v3 to doc repository
         uses: peaceiris/actions-gh-pages@v3
         with:
           personal_token: ${{ secrets.PUSH_TOKEN }}
           publish_branch: gh-pages
           # 前缀为 snapshots
-          publish_dir: snapshots/components/qq-guild
-          destination_dir: snapshots/components/qq-guild
+          publish_dir: snapshots/components/qq-guild-v3
+          destination_dir: snapshots/components/qq-guild-v3
 
