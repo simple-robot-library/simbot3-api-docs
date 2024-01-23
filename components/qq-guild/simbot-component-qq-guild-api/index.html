@@ -1,9 +1,11 @@
 <!doctype html>
-<html>
+<html class="no-js">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
     <title>simbot-component-qq-guild-api</title>
-<link href="../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../";</script>    <script>const storage = localStorage.getItem("dokka-dark-mode")
+<link href="../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
     if (storage == null) {
         const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
         if (osDarkSchemePreferred === true) {
@@ -16,12 +18,13 @@
         }
     }
     </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
 <script type="text/javascript" src="../scripts/sourceset_dependencies.js" async></script>
 <link href="../styles/style.css" rel="Stylesheet">
-<link href="../styles/jetbrains-mono.css" rel="Stylesheet">
 <link href="../styles/main.css" rel="Stylesheet">
 <link href="../styles/prism.css" rel="Stylesheet">
 <link href="../styles/logo-styles.css" rel="Stylesheet">
+<link href="../styles/font-jb-sans-auto.css" rel="Stylesheet">
 <script type="text/javascript" src="../scripts/clipboard.js" async></script>
 <script type="text/javascript" src="../scripts/navigation-loader.js" async></script>
 <script type="text/javascript" src="../scripts/platform-content-handler.js" async></script>
@@ -29,29 +32,35 @@
 <script type="text/javascript" src="../scripts/prism.js" async></script>
 <script type="text/javascript" src="../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
 <body>
-<div class="navigation-wrapper" id="navigation-wrapper">
-    <div id="leftToggler"><span class="icon-toggler"></span></div>
-    <div class="library-name">
-<a href="../index.html">
-<span>Simple Robot Component Tencent Guild</span>            </a>    </div>
-    <div>3.2.0.0
-    </div>
-    <div class="pull-right d-flex">
+    <div class="root">
+<nav class="navigation" id="navigation-wrapper">
+    <div class="navigation--inner">
+        <div class="navigation-title">
+            <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
+            <div class="library-name">
+<a class="library-name--link" href="../index.html">
+                            Simple Robot Component | QQ Guild
+                    </a>            </div>
+            <div class="library-version">4.0.0-dev6
+            </div>
+        </div>
         <div class="filter-section" id="filter-section">
                 <button class="platform-tag platform-selector common-like" data-active="" data-filter=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain">common</button>
                 <button class="platform-tag platform-selector js-like" data-active="" data-filter=":simbot-component-qq-guild-api:dokkaHtmlPartial/jsMain">js</button>
                 <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":simbot-component-qq-guild-api:dokkaHtmlPartial/jvmMain">jvm</button>
                 <button class="platform-tag platform-selector common-like" data-active="" data-filter=":simbot-component-qq-guild-api:dokkaHtmlPartial/nativeMain">native</button>
         </div>
-        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
-        <div id="searchBar"></div>
     </div>
-</div>
-<div id="container">
-    <div id="leftColumn">
-        <div id="sideMenu"></div>
+    <div class="navigation-controls">
+        <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
+        <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
     </div>
-    <div id="main">
+</nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="sidebar--inner" id="sideMenu"></div>
+            </div>
+            <div id="main">
 <div class="main-content" id="content" pageids="simbot-component-qq-guild-api::////PointingToDeclaration//1609825014">
   <div class="breadcrumbs"></div>
   <div class="cover ">
@@ -81,25 +90,23 @@
           </span></div>
       </div>
     </div>
-<a data-name="-936125730%2FPackages%2F1609825014" anchor-label="love.forte.simbot.qguild.api" id="-936125730%2FPackages%2F1609825014" data-filterable-set=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain :simbot-component-qq-guild-api:dokkaHtmlPartial/jsMain :simbot-component-qq-guild-api:dokkaHtmlPartial/jvmMain :simbot-component-qq-guild-api:dokkaHtmlPartial/nativeMain"></a>
-    <div class="table-row" data-filterable-current=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain :simbot-component-qq-guild-api:dokkaHtmlPartial/jsMain :simbot-component-qq-guild-api:dokkaHtmlPartial/jvmMain :simbot-component-qq-guild-api:dokkaHtmlPartial/nativeMain" data-filterable-set=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain :simbot-component-qq-guild-api:dokkaHtmlPartial/jsMain :simbot-component-qq-guild-api:dokkaHtmlPartial/jvmMain :simbot-component-qq-guild-api:dokkaHtmlPartial/nativeMain">
+<a data-name="-936125730%2FPackages%2F-1858709576" anchor-label="love.forte.simbot.qguild.api" id="-936125730%2FPackages%2F-1858709576" data-filterable-set=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain,:simbot-component-qq-guild-api:dokkaHtmlPartial/jvmMain"></a>
+    <div class="table-row" data-filterable-current=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain,:simbot-component-qq-guild-api:dokkaHtmlPartial/jvmMain" data-filterable-set=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain,:simbot-component-qq-guild-api:dokkaHtmlPartial/jvmMain">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="love.forte.simbot.qguild.api/index.html">love.forte.simbot.qguild.api</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-936125730%2FPackages%2F1609825014"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-936125730%2FPackages%2F-1858709576"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div class="pull-right">
             <div class="platform-tags no-gutters">
               <div class="platform-tag common-like">common</div>
-              <div class="platform-tag js-like">js</div>
               <div class="platform-tag jvm-like">jvm</div>
-              <div class="platform-tag common-like">native</div>
             </div>
           </div>
         </div>
-        <div><span class="brief-comment"><a data-name="-936125730%2FPackages%2F1609825014" anchor-label="love.forte.simbot.qguild.api" id="-936125730%2FPackages%2F1609825014" data-filterable-set=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain :simbot-component-qq-guild-api:dokkaHtmlPartial/jsMain :simbot-component-qq-guild-api:dokkaHtmlPartial/jvmMain :simbot-component-qq-guild-api:dokkaHtmlPartial/nativeMain"></a>
+        <div><span class="brief-comment"><a data-name="-936125730%2FPackages%2F-1858709576" anchor-label="love.forte.simbot.qguild.api" id="-936125730%2FPackages%2F-1858709576" data-filterable-set=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain,:simbot-component-qq-guild-api:dokkaHtmlPartial/jvmMain"></a>
             <p class="paragraph">与<a href="https://bot.q.qq.com/wiki/develop/api/">QQ频道开发者文档</a>中定义的API进行对照实现的模块。</p>
           </span></div>
       </div>
@@ -284,8 +291,8 @@
         <div></div>
       </div>
     </div>
-<a data-name="785895863%2FPackages%2F1609825014" anchor-label="love.forte.simbot.qguild.api.message" id="785895863%2FPackages%2F1609825014" data-filterable-set=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain :simbot-component-qq-guild-api:dokkaHtmlPartial/jsMain :simbot-component-qq-guild-api:dokkaHtmlPartial/jvmMain :simbot-component-qq-guild-api:dokkaHtmlPartial/nativeMain"></a>
-    <div class="table-row" data-filterable-current=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain :simbot-component-qq-guild-api:dokkaHtmlPartial/jsMain :simbot-component-qq-guild-api:dokkaHtmlPartial/jvmMain :simbot-component-qq-guild-api:dokkaHtmlPartial/nativeMain" data-filterable-set=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain :simbot-component-qq-guild-api:dokkaHtmlPartial/jsMain :simbot-component-qq-guild-api:dokkaHtmlPartial/jvmMain :simbot-component-qq-guild-api:dokkaHtmlPartial/nativeMain">
+<a data-name="785895863%2FPackages%2F1609825014" anchor-label="love.forte.simbot.qguild.api.message" id="785895863%2FPackages%2F1609825014" data-filterable-set=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain,:simbot-component-qq-guild-api:dokkaHtmlPartial/jsMain,:simbot-component-qq-guild-api:dokkaHtmlPartial/jvmMain,:simbot-component-qq-guild-api:dokkaHtmlPartial/nativeMain"></a>
+    <div class="table-row" data-filterable-current=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain,:simbot-component-qq-guild-api:dokkaHtmlPartial/jsMain,:simbot-component-qq-guild-api:dokkaHtmlPartial/jvmMain,:simbot-component-qq-guild-api:dokkaHtmlPartial/nativeMain" data-filterable-set=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain,:simbot-component-qq-guild-api:dokkaHtmlPartial/jsMain,:simbot-component-qq-guild-api:dokkaHtmlPartial/jvmMain,:simbot-component-qq-guild-api:dokkaHtmlPartial/nativeMain">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
@@ -455,25 +462,22 @@
         <div></div>
       </div>
     </div>
-<a data-name="-2118726323%2FPackages%2F1609825014" anchor-label="love.forte.simbot.qguild.time" id="-2118726323%2FPackages%2F1609825014" data-filterable-set=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain :simbot-component-qq-guild-api:dokkaHtmlPartial/jsMain :simbot-component-qq-guild-api:dokkaHtmlPartial/jvmMain :simbot-component-qq-guild-api:dokkaHtmlPartial/nativeMain"></a>
-    <div class="table-row" data-filterable-current=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain :simbot-component-qq-guild-api:dokkaHtmlPartial/jsMain :simbot-component-qq-guild-api:dokkaHtmlPartial/jvmMain :simbot-component-qq-guild-api:dokkaHtmlPartial/nativeMain" data-filterable-set=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain :simbot-component-qq-guild-api:dokkaHtmlPartial/jsMain :simbot-component-qq-guild-api:dokkaHtmlPartial/jvmMain :simbot-component-qq-guild-api:dokkaHtmlPartial/nativeMain">
+<a data-name="-2118726323%2FPackages%2F1533000741" anchor-label="love.forte.simbot.qguild.time" id="-2118726323%2FPackages%2F1533000741" data-filterable-set=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain"></a>
+    <div class="table-row" data-filterable-current=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="love.forte.simbot.qguild.time/index.html">love.forte.simbot.qguild.time</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2118726323%2FPackages%2F1609825014"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2118726323%2FPackages%2F1533000741"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div class="pull-right">
             <div class="platform-tags no-gutters">
               <div class="platform-tag common-like">common</div>
-              <div class="platform-tag js-like">js</div>
-              <div class="platform-tag jvm-like">jvm</div>
-              <div class="platform-tag common-like">native</div>
             </div>
           </div>
         </div>
-        <div><span class="brief-comment"><a data-name="-2118726323%2FPackages%2F1609825014" anchor-label="love.forte.simbot.qguild.time" id="-2118726323%2FPackages%2F1609825014" data-filterable-set=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain :simbot-component-qq-guild-api:dokkaHtmlPartial/jsMain :simbot-component-qq-guild-api:dokkaHtmlPartial/jvmMain :simbot-component-qq-guild-api:dokkaHtmlPartial/nativeMain"></a>
+        <div><span class="brief-comment"><a data-name="-2118726323%2FPackages%2F1533000741" anchor-label="love.forte.simbot.qguild.time" id="-2118726323%2FPackages%2F1533000741" data-filterable-set=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain"></a>
             <p class="paragraph">用于兼容多平台的部分<strong>时间相关</strong>类型。</p>
           </span></div>
       </div>
@@ -481,10 +485,11 @@
   </div>
 </div>
       <div class="footer">
-        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2023 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2024 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
       </div>
+            </div>
+        </div>
     </div>
-</div>
 </body>
 </html>
 
