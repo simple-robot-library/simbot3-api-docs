@@ -21,8 +21,8 @@ const componentCards = [
       ], [
         {name: "V3 KDoc", href: "main", type: "primary"},
         {name: "V3 KDoc(快照)", href: "snapshots/main", type: "primary"},
-      ]
-          [{name: "🍀官网", href: "https://simbot.forte.love", type: "default"}],
+      ],
+      [{name: "🍀官网", href: "https://simbot.forte.love", type: "default"}],
     ]
   },
 
