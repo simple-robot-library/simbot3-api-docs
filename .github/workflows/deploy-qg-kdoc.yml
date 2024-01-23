@@ -1,22 +1,22 @@
-name: Deploy QQ Guild KDoc Pages
+name: Deploy QQ Guild V3 KDoc Pages
 on:
   push:
-    branches: 'kdoc-deploy/component-qq-guild'
+    branches: 'kdoc-deploy/component-qq-guild-v3'
 
 jobs:
-  deploy-qq-guild-kdoc-pages:
-    name: deploy-qq-guild-kdoc-pages
+  deploy-qq-guild-v3-kdoc-pages:
+    name: deploy-qq-guild-v3-kdoc-pages
     runs-on: ubuntu-latest
     steps:
       # 检出仓库代码
       - uses: actions/checkout@v3
 
       # https://github.com/marketplace/actions/github-pages-action
-      - name: Deploy component/qq-guild to doc repository
+      - name: Deploy component/qq-guild-v3 to doc repository
         uses: peaceiris/actions-gh-pages@v3
         with:
           personal_token: ${{ secrets.PUSH_TOKEN }}
           publish_branch: gh-pages
-          publish_dir: components/qq-guild
-          destination_dir: components/qq-guild
+          publish_dir: components/qq-guild-v3
+          destination_dir: components/qq-guild-v3
 
