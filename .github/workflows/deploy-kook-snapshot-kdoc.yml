@@ -1,22 +1,22 @@
-name: Deploy KOOK Snapshots KDoc Pages
+name: Deploy KOOK V3 Snapshots KDoc Pages
 on:
   push:
-    branches: 'kdoc-deploy/snapshots/component-kook'
+    branches: 'kdoc-deploy/snapshots/component-kook-v3'
 
 jobs:
-  deploy-kook-snapshots-kdoc-pages:
-    name: deploy-kook-snapshots-kdoc-pages
+  deploy-kook-v3-snapshots-kdoc-pages:
+    name: deploy-kook-v3-snapshots-kdoc-pages
     runs-on: ubuntu-latest
     steps:
       # 检出仓库代码
       - uses: actions/checkout@v3
 
       # https://github.com/marketplace/actions/github-pages-action
-      - name: Deploy snapshots/components/kook to doc repository
+      - name: Deploy snapshots/components/kook-v3 to doc repository
         uses: peaceiris/actions-gh-pages@v3
         with:
           personal_token: ${{ secrets.PUSH_TOKEN }}
           publish_branch: gh-pages
           # 前缀为 snapshots
-          publish_dir: snapshots/components/kook
-          destination_dir: snapshots/components/kook
+          publish_dir: snapshots/components/kook-v3
+          destination_dir: snapshots/components/kook-v3
