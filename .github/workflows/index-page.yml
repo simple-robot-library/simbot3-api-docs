@@ -53,6 +53,17 @@ jobs:
           rm -rf kdoc/cp-kook
         working-directory: ./public
 
+      # KOOK v3
+      - uses: actions/checkout@v3
+        with:
+          ref: 'kdoc-deploy/component-kook-v3'
+          path: 'public/kdoc/cp-kook-v3'
+
+      - run: |
+          cp -r kdoc/cp-kook-v3/* ./
+          rm -rf kdoc/cp-kook-v3
+        working-directory: ./public
+
       # QQ频道
       - uses: actions/checkout@v3
         with:
@@ -133,6 +144,17 @@ jobs:
       - run: |
           cp -r kdoc/snapshots/cp-kook/* ./
           rm -rf kdoc/snapshots/cp-kook
+        working-directory: ./public
+
+      # KOOK快照 v3
+      - uses: actions/checkout@v3
+        with:
+          ref: 'kdoc-deploy/snapshots/component-kook-v3'
+          path: 'public/kdoc/snapshots/cp-kook-v3'
+
+      - run: |
+          cp -r kdoc/snapshots/cp-kook-v3/* ./
+          rm -rf kdoc/snapshots/cp-kook-v3
         working-directory: ./public
 
       # QQ频道快照
