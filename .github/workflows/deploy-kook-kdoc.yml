@@ -1,11 +1,11 @@
-name: Deploy Kook KDoc Pages
+name: Deploy Kook V3 KDoc Pages
 on:
   push:
-    branches: 'kdoc-deploy/component-kook'
+    branches: 'kdoc-deploy/component-kook-v3'
 
 jobs:
-  deploy-kook-kdoc-pages:
-    name: deploy-kook-kdoc-pages
+  deploy-kook-v3-kdoc-pages:
+    name: deploy-kook-v3-kdoc-pages
     runs-on: ubuntu-latest
     steps:
       # 检出仓库代码
@@ -16,6 +16,6 @@ jobs:
         with:
           personal_token: ${{ secrets.PUSH_TOKEN }}
           publish_branch: gh-pages
-          publish_dir: components/kook
-          destination_dir: components/kook
+          publish_dir: components/kook-v3
+          destination_dir: components/kook-v3
 
