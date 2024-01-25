@@ -1,0 +1,228 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>Config</title>
+<link href="../../../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../../styles/style.css" rel="Stylesheet">
+<link href="../../../../styles/main.css" rel="Stylesheet">
+<link href="../../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<body>
+    <div class="root">
+<nav class="navigation" id="navigation-wrapper">
+    <div class="navigation--inner">
+        <div class="navigation-title">
+            <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
+            <div class="library-name">
+<a class="library-name--link" href="../../../../index.html">
+                            Simple Robot Component KOOK
+                    </a>            </div>
+            <div class="library-version">3.3.0.0-beta3-SNAPSHOT
+            </div>
+        </div>
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":simbot-component-kook-core:dokkaHtmlPartial/main">jvm</button>
+        </div>
+    </div>
+    <div class="navigation-controls">
+        <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
+        <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
+    </div>
+</nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="sidebar--inner" id="sideMenu"></div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="simbot-component-kook-core::love.forte.simbot.component.kook.bot/KookBotVerifyInfoConfiguration.Config///PointingToDeclaration//-1619185879">
+  <div class="breadcrumbs"><a href="../../../index.html">simbot-component-kook-core</a><span class="delimiter">/</span><a href="../../index.html">love.forte.simbot.component.kook.bot</a><span class="delimiter">/</span><a href="../index.html">KookBotVerifyInfoConfiguration</a><span class="delimiter">/</span><span class="current">Config</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Config</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook-core:dokkaHtmlPartial/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-core/kotlinx.serialization/-serializable/index.html"><span class="token annotation builtin">Serializable</span></a></div></div><span class="token keyword">data </span><span class="token keyword">class </span><a href="index.html">Config</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>isCompress<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>syncPeriods<span class="token operator">: </span><a href="../../-kook-bot-configuration/-sync-periods/index.html">KookBotConfiguration.SyncPeriods</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>clientEngineConfig<span class="token operator">: </span><a href="../../../../simbot-component-kook-api/love.forte.simbot.kook/-bot-configuration/-engine-configuration/index.html">BotConfiguration.EngineConfiguration</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>wsEngineConfig<span class="token operator">: </span><a href="../../../../simbot-component-kook-api/love.forte.simbot.kook/-bot-configuration/-engine-configuration/index.html">BotConfiguration.EngineConfiguration</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>timeout<span class="token operator">: </span><a href="../../../../simbot-component-kook-api/love.forte.simbot.kook/-bot-configuration/-timeout-configuration/index.html">BotConfiguration.TimeoutConfiguration</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>wsConnectTimeout<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>isNormalEventProcessAsync<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span><span class="clearfix"><span class="floating-right">(<a href="https://github.com/simple-robot/simbot-component-kook/tree/main/simbot-component-kook-core/src/main/kotlin/love/forte/simbot/component/kook/bot/KookBotVerifyInfoConfiguration.kt#L117">source</a>)</span></span></div><p class="paragraph">在 <a href="../index.html">KookBotVerifyInfoConfiguration</a> 中除了必须的bot信息以外的可选配置信息。</p></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="">Constructors</h2>
+        <div class="table"><a data-name="-1267543901%2FConstructors%2F-1619185879" anchor-label="Config" id="-1267543901%2FConstructors%2F-1619185879" data-filterable-set=":simbot-component-kook-core:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-togglable="CONSTRUCTOR" data-filterable-current=":simbot-component-kook-core:dokkaHtmlPartial/main" data-filterable-set=":simbot-component-kook-core:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-config.html"><span><span>Config</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1267543901%2FConstructors%2F-1619185879"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">isCompress<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">syncPeriods<span class="token operator">: </span><a href="../../-kook-bot-configuration/-sync-periods/index.html">KookBotConfiguration.SyncPeriods</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">clientEngineConfig<span class="token operator">: </span><a href="../../../../simbot-component-kook-api/love.forte.simbot.kook/-bot-configuration/-engine-configuration/index.html">BotConfiguration.EngineConfiguration</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">wsEngineConfig<span class="token operator">: </span><a href="../../../../simbot-component-kook-api/love.forte.simbot.kook/-bot-configuration/-engine-configuration/index.html">BotConfiguration.EngineConfiguration</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">timeout<span class="token operator">: </span><a href="../../../../simbot-component-kook-api/love.forte.simbot.kook/-bot-configuration/-timeout-configuration/index.html">BotConfiguration.TimeoutConfiguration</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">wsConnectTimeout<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">isNormalEventProcessAsync<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="TYPE">
+        <h2 class="">Types</h2>
+        <div class="table"><a data-name="-1642397918%2FClasslikes%2F-1619185879" anchor-label="Companion" id="-1642397918%2FClasslikes%2F-1619185879" data-filterable-set=":simbot-component-kook-core:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-kook-core:dokkaHtmlPartial/main" data-filterable-set=":simbot-component-kook-core:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-companion/index.html"><span><span>Companion</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1642397918%2FClasslikes%2F-1619185879"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-companion/index.html">Companion</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="1211746992%2FProperties%2F-1619185879" anchor-label="clientEngineConfig" id="1211746992%2FProperties%2F-1619185879" data-filterable-set=":simbot-component-kook-core:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-kook-core:dokkaHtmlPartial/main" data-filterable-set=":simbot-component-kook-core:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="client-engine-config.html"><span>client</span><wbr><span>Engine</span><wbr><span><span>Config</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1211746992%2FProperties%2F-1619185879"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="client-engine-config.html">clientEngineConfig</a><span class="token operator">: </span><a href="../../../../simbot-component-kook-api/love.forte.simbot.kook/-bot-configuration/-engine-configuration/index.html">BotConfiguration.EngineConfiguration</a><span class="token operator">?</span><span class="token operator"> = </span>null</div><div class="brief "><p class="paragraph">参考 <a href="../../../../simbot-component-kook-api/love.forte.simbot.kook/-bot-configuration/client-engine-config.html">BotConfiguration.clientEngineConfig</a></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-164699085%2FProperties%2F-1619185879" anchor-label="isCompress" id="-164699085%2FProperties%2F-1619185879" data-filterable-set=":simbot-component-kook-core:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-kook-core:dokkaHtmlPartial/main" data-filterable-set=":simbot-component-kook-core:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-compress.html"><span>is</span><wbr><span><span>Compress</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-164699085%2FProperties%2F-1619185879"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="is-compress.html">isCompress</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator">?</span><span class="token operator"> = </span>null</div><div class="brief "><p class="paragraph">是否压缩数据。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="764372037%2FProperties%2F-1619185879" anchor-label="isNormalEventProcessAsync" id="764372037%2FProperties%2F-1619185879" data-filterable-set=":simbot-component-kook-core:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-kook-core:dokkaHtmlPartial/main" data-filterable-set=":simbot-component-kook-core:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-normal-event-process-async.html"><span>is</span><wbr><span>Normal</span><wbr><span>Event</span><wbr><span>Process</span><wbr><span><span>Async</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="764372037%2FProperties%2F-1619185879"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="is-normal-event-process-async.html">isNormalEventProcessAsync</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator">?</span><span class="token operator"> = </span>null</div><div class="brief "><p class="paragraph"><a href="../../../../simbot-component-kook-api/love.forte.simbot.kook/-processor-type/-n-o-r-m-a-l/index.html">ProcessorType.NORMAL</a> 类型的事件处理器是否在异步中执行。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1315815804%2FProperties%2F-1619185879" anchor-label="syncPeriods" id="-1315815804%2FProperties%2F-1619185879" data-filterable-set=":simbot-component-kook-core:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-kook-core:dokkaHtmlPartial/main" data-filterable-set=":simbot-component-kook-core:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="sync-periods.html"><span>sync</span><wbr><span><span>Periods</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1315815804%2FProperties%2F-1619185879"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="sync-periods.html">syncPeriods</a><span class="token operator">: </span><a href="../../-kook-bot-configuration/-sync-periods/index.html">KookBotConfiguration.SyncPeriods</a><span class="token operator">?</span><span class="token operator"> = </span>null</div><div class="brief "><p class="paragraph">缓存对象信息的同步周期</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-840962278%2FProperties%2F-1619185879" anchor-label="timeout" id="-840962278%2FProperties%2F-1619185879" data-filterable-set=":simbot-component-kook-core:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-kook-core:dokkaHtmlPartial/main" data-filterable-set=":simbot-component-kook-core:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="timeout.html"><span><span>timeout</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-840962278%2FProperties%2F-1619185879"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="timeout.html">timeout</a><span class="token operator">: </span><a href="../../../../simbot-component-kook-api/love.forte.simbot.kook/-bot-configuration/-timeout-configuration/index.html">BotConfiguration.TimeoutConfiguration</a><span class="token operator">?</span><span class="token operator"> = </span>null</div><div class="brief "><p class="paragraph">参考 <a href="../../../../simbot-component-kook-api/love.forte.simbot.kook/-bot-configuration/timeout.html">BotConfiguration.timeout</a></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-818574292%2FProperties%2F-1619185879" anchor-label="wsConnectTimeout" id="-818574292%2FProperties%2F-1619185879" data-filterable-set=":simbot-component-kook-core:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-kook-core:dokkaHtmlPartial/main" data-filterable-set=":simbot-component-kook-core:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="ws-connect-timeout.html"><span>ws</span><wbr><span>Connect</span><wbr><span><span>Timeout</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-818574292%2FProperties%2F-1619185879"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="ws-connect-timeout.html">wsConnectTimeout</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a><span class="token operator">?</span><span class="token operator"> = </span>null</div><div class="brief "><p class="paragraph">ws连接超时时间，单位 ms 。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="701437759%2FProperties%2F-1619185879" anchor-label="wsEngineConfig" id="701437759%2FProperties%2F-1619185879" data-filterable-set=":simbot-component-kook-core:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-kook-core:dokkaHtmlPartial/main" data-filterable-set=":simbot-component-kook-core:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="ws-engine-config.html"><span>ws</span><wbr><span>Engine</span><wbr><span><span>Config</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="701437759%2FProperties%2F-1619185879"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="ws-engine-config.html">wsEngineConfig</a><span class="token operator">: </span><a href="../../../../simbot-component-kook-api/love.forte.simbot.kook/-bot-configuration/-engine-configuration/index.html">BotConfiguration.EngineConfiguration</a><span class="token operator">?</span><span class="token operator"> = </span>null</div><div class="brief "><p class="paragraph">参考 <a href="../../../../simbot-component-kook-api/love.forte.simbot.kook/-bot-configuration/ws-engine-config.html">BotConfiguration.wsEngineConfig</a></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2024 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
