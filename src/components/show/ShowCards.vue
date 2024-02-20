@@ -25,20 +25,20 @@ const componentCards = [
         [{name: "点击邀请法欧莉", href: "https://www.kookapp.cn/app/oauth2/authorize?id=10250&permissions=536870911&client_id=jqdlyHK85xe1i5Bo&redirect_uri=&scope=bot", type: "info"}]
     ]
   },
-  {
-    name: "大别野法欧莉",
-    tags: [{name: "大别野", type: "info"}, {name: "BOT实例", type: "info"}, {name: "法欧莉", type: "success"}],
-    description: `
-    <p>法欧莉，占领大别野！</p><p>快扫描下方的二维码添加大别野、寻找法欧莉并将她添加到你的大别野中吧~</p>
-    <p>当然，直接去机器人市场也可以遇到她喔！</p>
-`,
-    images: [
-      "img/villa-forliy-qrcode.png"
-    ],
-    links: [
-        [{name: "点击进入大别野", href: "https://dby.miyoushe.com/chat/6272/113235", type: "info"}]
-    ]
-  }
+//   {
+//     name: "大别野法欧莉",
+//     tags: [{name: "大别野", type: "info"}, {name: "BOT实例", type: "info"}, {name: "法欧莉", type: "success"}],
+//     description: `
+//     <p>法欧莉，占领大别野！</p><p>快扫描下方的二维码添加大别野、寻找法欧莉并将她添加到你的大别野中吧~</p>
+//     <p>当然，直接去机器人市场也可以遇到她喔！</p>
+// `,
+//     images: [
+//       "img/villa-forliy-qrcode.png"
+//     ],
+//     links: [
+//         [{name: "点击进入大别野", href: "https://dby.miyoushe.com/chat/6272/113235", type: "info"}]
+//     ]
+//   }
 ]
 </script>
 
