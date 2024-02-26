@@ -19,6 +19,17 @@ jobs:
           cache: npm
 
         # releases
+        
+      # main-v4
+      - uses: actions/checkout@v4
+        with:
+          ref: 'kdoc-deploy/main-v4'
+          path: 'public/kdoc/main-v4'
+
+      - run: |
+          cp -r kdoc/main-v4/* ./
+          rm -rf kdoc/main-v4
+        working-directory: ./public
 
       # main
       - uses: actions/checkout@v4
