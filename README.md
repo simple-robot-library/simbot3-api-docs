@@ -7,3 +7,5 @@
 本站主要作为针对 [Simple Robot核心库](https://github.com/simple-robot/simpler-robot) 及其组件库的文档链接引导，
 例如官网、KDoc文档等。
 
+> [!info]
+> 包括V3和V4的信息
