@@ -17,10 +17,9 @@
 
       <template #avatar>
         <n-avatar
-            src="/logo.png"
-            :style="{
-              backgroundColor: 'rgba(255,255,255,0)'
-            }"
+            :src="logoSvg"
+            color="FFFFFF00"
+            :img-props="{draggable: false}"
         />
       </template>
       <template #extra>
@@ -39,9 +38,11 @@
 </template>
 
 <script setup lang="ts">
+import {computed, h, reactive, ref} from "vue";
 import {MenuOption, NAvatar, NCard, NIcon, NMenu, NPageHeader, NSwitch, NText} from "naive-ui";
-import {Component, h, reactive, ref} from "vue";
 import {HomeSharp, LogoGithub} from "@vicons/ionicons5";
+import logo from '../assets/logo.svg';
+import darkLogo from '../assets/logo-dark.svg';
 
 const props = defineProps({
     initThemeActiveValue: Boolean
@@ -58,10 +59,11 @@ function onThemeActiveChange() {
   themeActive.value = changeTo
   emit('themeActiveChange', changeTo)
 }
+const logoSvg = computed(() => themeActive.value ? darkLogo : logo)
 
 // menu
 
-function renderIcon(icon: Component) {
+function renderIcon(icon: any) {
   return () => h(NIcon, null, {default: () => h(icon)})
 }
 
@@ -90,6 +92,3 @@ const menuOptions = reactive<MenuOption[]>([
 </script>
 
 
-<style scoped>
-
-</style>
