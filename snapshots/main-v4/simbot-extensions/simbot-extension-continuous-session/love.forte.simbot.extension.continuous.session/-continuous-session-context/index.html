@@ -1,0 +1,164 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>ContinuousSessionContext</title>
+<link href="../../../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../../styles/style.css" rel="Stylesheet">
+<link href="../../../../styles/main.css" rel="Stylesheet">
+<link href="../../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<body>
+    <div class="root">
+<nav class="navigation" id="navigation-wrapper">
+    <div class="navigation--inner">
+        <div class="navigation-title">
+            <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
+            <div class="library-name">
+<a class="library-name--link" href="../../../../index.html">
+                            Simple Robot
+                    </a>            </div>
+            <div class="library-version">4.0.0-beta1-SNAPSHOT
+            </div>
+        </div>
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":simbot-extensions:simbot-extension-continuous-session:dokkaHtmlPartial/commonMain">common</button>
+        </div>
+    </div>
+    <div class="navigation-controls">
+        <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
+        <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
+    </div>
+</nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="sidebar--inner" id="sideMenu"></div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="simbot-extension-continuous-session::love.forte.simbot.extension.continuous.session/ContinuousSessionContext///PointingToDeclaration//321610283">
+  <div class="breadcrumbs"><a href="../../index.html">simbot-extension-continuous-session</a><span class="delimiter">/</span><a href="../index.html">love.forte.simbot.extension.continuous.session</a><span class="delimiter">/</span><span class="current">ContinuousSessionContext</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Continuous</span><wbr><span>Session</span><wbr><span><span>Context</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-extensions:simbot-extension-continuous-session:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="index.html">ContinuousSessionContext</a><span class="token operator">&lt;</span><a href="index.html">T</a><span class="token punctuation">, </span><a href="index.html">R</a><span class="token operator">&gt;</span><span class="clearfix"><span class="floating-right">(<a href="https://github.com/simple-robot/simpler-robot/tree/v4-dev/simbot-extensions/simbot-extension-continuous-session/src//commonMain/kotlin/love/forte/simbot/extension/continuous/session/ContinuousSessionContext.kt#L118">source</a>)</span></span></div><p class="paragraph">持续会话(<code class="lang-kotlin">continuous session</code>)管理器， 用于承载一组 <a href="../-continuous-session-provider/index.html">ContinuousSessionProvider</a> 和 <a href="../-continuous-session-receiver/index.html">ContinuousSessionReceiver</a> 的上下文。用于构建与管理 <code class="lang-kotlin">ContinuousSession</code>。</p><h2 class="">持续会话</h2><p class="paragraph"><strong>持续会话(</strong><code class="strong lang-kotlin"><strong>continuous session</strong></code><strong>)</strong> 是一种用于解决在同一组逻辑中连续处理多个'事件 <a href="index.html">T</a>'、并响应 '结果 <a href="index.html">R</a>' 的解决方案。 <a href="index.html">ContinuousSessionContext</a> 本身可灵活定制这个所谓 '事件' 的类型， 其主要应用场景为借助子类型 <a href="../-event-continuous-session-context/index.html">EventContinuousSessionContext</a> 在 simbot 的事件调度中使用。</p><p class="paragraph">假如，有一个事件类型为 <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a>、响应结果为 <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a> 的一组持续会话:</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">// 假设这个 session context 的'事件'类型为 Int, '结果'类型为 String<br>val context = ContinuousSessionContext&lt;Int, String&gt; = ...<br>val session = context.session(Key()) { // this: ContinuousSessionReceiver<br>    // receiver 逻辑在异步中，等待外界的事件推送<br>    val next = await { it -&gt; it.toString() }<br>}        ↑                       |<br>         |-------------|         |<br>                       |         |<br>      |--------------- | --------|<br>      |                |<br>      ↓                |<br>val result = session.push(1) // 推送 '事件', 得到 '结果'<br><br>session.join() // session 内逻辑结束后便会正常终止<br>assertTrue(session.isCompleted)</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">在 simbot 的事件调度中的简单应用:</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">suspend fun handle(handleEvent: Event, sessionContext: EventContinuousSessionContext): EventResult {<br>   // event: 接收到的事件<br>   // sessionContext: 假设它是在 application 的 plugins 中获取到的. 可参见 `EventContinuousSessionContext` 的文档说明。<br><br>   val key = computeKey(handleEvent) // 根据 handleEvent, 分配一个与它的唯一会话对应的 key.<br>   val session = context.session(key, EXISTING) {<br>       // this: ContinuousSessionReceiver&lt;Event, EventResult&gt;<br>       // receiver 逻辑在异步中，等待外界的事件推送<br>       // 此处的逻辑：<br>       //   如果收到的事件 event 经过 check 的判断后符合要求，<br>       //   则返回 EventResult.empty(isTruncated = true), 代表此会话已经截取此事件，<br>       //   不要让事件再向后续的其他处理器传递；<br>       //   否则（即不符合你的业务逻辑判断的条件）则返回一个 EventResult.invalid(), 代表无效的结果。<br>       val next = await { event -&gt;<br>            ↑           if (check(event)) EventResult.empty(isTruncated = true)<br>            |           else EventResult.invalid()<br>            |     }<br>   }        |     \-----------------------------------------------------------/<br>            |                       |<br>            |-------------|         |<br>                          |         |<br>         |--------------- | --------|<br>         ↓                |<br>   return session.push(handleEvent) // 推送 '事件', 得到 '结果'<br>   // 直接返回这个结果<br>}</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><span class="kdoc-tag"><h4 class="">Author</h4><p class="paragraph">ForteScarlet</p></span><h4 class="">See also</h4><div class="table"><div class="table-row" data-filterable-current=":simbot-extensions:simbot-extension-continuous-session:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-extensions:simbot-extension-continuous-session:dokkaHtmlPartial/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../-event-continuous-session-context/index.html"><span>Event</span><wbr><span>Continuous</span><wbr><span>Session</span><wbr><span><span>Context</span></span></a></div></span></div><div></div></div></div></div><h4 class="">Inheritors</h4><div class="table"><div class="table-row" data-filterable-current=":simbot-extensions:simbot-extension-continuous-session:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-extensions:simbot-extension-continuous-session:dokkaHtmlPartial/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../-abstract-continuous-session-context/index.html">AbstractContinuousSessionContext</a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":simbot-extensions:simbot-extension-continuous-session:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-extensions:simbot-extension-continuous-session:dokkaHtmlPartial/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../-event-continuous-session-context/index.html">EventContinuousSessionContext</a></div></span></div><div></div></div></div></div></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="TYPE">
+        <h2 class="">Types</h2>
+        <div class="table"><a data-name="546657057%2FClasslikes%2F321610283" anchor-label="ConflictStrategy" id="546657057%2FClasslikes%2F321610283" data-filterable-set=":simbot-extensions:simbot-extension-continuous-session:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-extensions:simbot-extension-continuous-session:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-extensions:simbot-extension-continuous-session:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-conflict-strategy/index.html"><span>Conflict</span><wbr><span><span>Strategy</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="546657057%2FClasslikes%2F321610283"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-extensions:simbot-extension-continuous-session:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">enum </span><a href="-conflict-strategy/index.html">ConflictStrategy</a> : <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-enum/index.html">Enum</a><span class="token operator">&lt;</span><a href="-conflict-strategy/index.html">ContinuousSessionContext.ConflictStrategy</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">创建会话时的冲突策略</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="1763401459%2FFunctions%2F321610283" anchor-label="contains" id="1763401459%2FFunctions%2F321610283" data-filterable-set=":simbot-extensions:simbot-extension-continuous-session:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-extensions:simbot-extension-continuous-session:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-extensions:simbot-extension-continuous-session:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="contains.html"><span><span>contains</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1763401459%2FFunctions%2F321610283"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-extensions:simbot-extension-continuous-session:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">operator </span><span class="token keyword">fun </span><a href="contains.html"><span class="token function">contains</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">key<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">判断是否包含某个 <a href="contains.html">key</a> 对应的会话。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="260457460%2FFunctions%2F321610283" anchor-label="get" id="260457460%2FFunctions%2F321610283" data-filterable-set=":simbot-extensions:simbot-extension-continuous-session:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-extensions:simbot-extension-continuous-session:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-extensions:simbot-extension-continuous-session:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get.html"><span><span>get</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="260457460%2FFunctions%2F321610283"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-extensions:simbot-extension-continuous-session:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">operator </span><span class="token keyword">fun </span><a href="get.html"><span class="token function">get</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">key<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-continuous-session-provider/index.html">ContinuousSessionProvider</a><span class="token operator">&lt;</span><a href="index.html">T</a><span class="token punctuation">, </span><a href="index.html">R</a><span class="token operator">&gt;</span><span class="token operator">?</span></div><div class="brief "><p class="paragraph">根据 <a href="get.html">key</a> 获取指定的 <a href="../-continuous-session-provider/index.html">ContinuousSessionProvider</a> 并在找不到时返回 <code class="lang-kotlin">null</code>。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="684328814%2FFunctions%2F321610283" anchor-label="remove" id="684328814%2FFunctions%2F321610283" data-filterable-set=":simbot-extensions:simbot-extension-continuous-session:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-extensions:simbot-extension-continuous-session:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-extensions:simbot-extension-continuous-session:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="remove.html"><span><span>remove</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="684328814%2FFunctions%2F321610283"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-extensions:simbot-extension-continuous-session:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="remove.html"><span class="token function">remove</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">key<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-continuous-session-provider/index.html">ContinuousSessionProvider</a><span class="token operator">&lt;</span><a href="index.html">T</a><span class="token punctuation">, </span><a href="index.html">R</a><span class="token operator">&gt;</span><span class="token operator">?</span></div><div class="brief "><p class="paragraph">移除某个指定 <a href="remove.html">key</a> 的会话。 <a href="remove.html">remove</a> 仅会从记录中移除，不会使用 <a href="../-continuous-session-provider/cancel.html">ContinuousSessionProvider.cancel</a>， 需要由调用者主动使用。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1603886818%2FFunctions%2F321610283" anchor-label="session" id="-1603886818%2FFunctions%2F321610283" data-filterable-set=":simbot-extensions:simbot-extension-continuous-session:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-extensions:simbot-extension-continuous-session:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-extensions:simbot-extension-continuous-session:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="session.html"><span><span>session</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1603886818%2FFunctions%2F321610283"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-extensions:simbot-extension-continuous-session:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="session.html"><span class="token function">session</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">key<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token punctuation">, </span></span><span class="parameter ">inSession<span class="token operator">: </span><a href="../-in-session/index.html">InSession</a><span class="token operator">&lt;</span><a href="index.html">T</a><span class="token punctuation">, </span><a href="index.html">R</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-continuous-session-provider/index.html">ContinuousSessionProvider</a><span class="token operator">&lt;</span><a href="index.html">T</a><span class="token punctuation">, </span><a href="index.html">R</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">尝试创建一组 <code class="lang-kotlin">ContinuousSession</code>, 并在出现 <a href="session.html">key</a> 冲突时使用 <a href="-conflict-strategy/-f-a-i-l-u-r-e/index.html">ConflictStrategy.FAILURE</a> 作为冲突解决策略。</p></div><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="session.html"><span class="token function">session</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">key<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token punctuation">, </span></span><span class="parameter ">strategy<span class="token operator">: </span><a href="-conflict-strategy/index.html">ContinuousSessionContext.ConflictStrategy</a><span class="token operator"> = </span>ConflictStrategy.FAILURE<span class="token punctuation">, </span></span><span class="parameter ">inSession<span class="token operator">: </span><a href="../-in-session/index.html">InSession</a><span class="token operator">&lt;</span><a href="index.html">T</a><span class="token punctuation">, </span><a href="index.html">R</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-continuous-session-provider/index.html">ContinuousSessionProvider</a><span class="token operator">&lt;</span><a href="index.html">T</a><span class="token punctuation">, </span><a href="index.html">R</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">尝试创建一组 <code class="lang-kotlin">ContinuousSession</code> 并返回其中的 <a href="../-continuous-session-provider/index.html">ContinuousSessionProvider</a>。 在出现 <a href="session.html">key</a> 冲突时基于 <a href="session.html">strategy</a> 策略处理冲突。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2024 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
