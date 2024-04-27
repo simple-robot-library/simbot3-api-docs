@@ -98,19 +98,20 @@ jobs:
           cp -r kdoc/cp-qg-v3/* ./
           rm -rf kdoc/cp-qg-v3
         working-directory: ./public
+
         
-      # 大别野
+      # Telegram
       - uses: actions/checkout@v4
         with:
-          ref: 'kdoc-deploy/component-miyoushe-villa'
-          path: 'public/kdoc/cp-villa'
+          ref: 'kdoc-deploy/component-telegram'
+          path: 'public/kdoc/cp-tg'
 
       - run: |
-          mkdir -p kdoc/cp-villa
-          cp -r kdoc/cp-villa/* ./
-          rm -rf kdoc/cp-villa
+          mkdir -p kdoc/cp-tg
+          cp -r kdoc/cp-tg/* ./
+          rm -rf kdoc/cp-tg
         working-directory: ./public
-        
+
       # snapshots
 
       # main 快照
@@ -191,16 +192,17 @@ jobs:
           rm -rf kdoc/snapshots/cp-qg-v3
         working-directory: ./public
         
-      # 大别野快照
+      # TG快照
       - uses: actions/checkout@v4
         with:
-          ref: 'kdoc-deploy/snapshots/component-miyoushe-villa'
-          path: 'public/kdoc/snapshots/cp-villa'
+          ref: 'kdoc-deploy/snapshots/component-telegram'
+          path: 'public/kdoc/snapshots/cp-tg'
 
       - run: |
-          cp -r kdoc/snapshots/cp-villa/* ./
-          rm -rf kdoc/snapshots/cp-villa
+          cp -r kdoc/snapshots/cp-tg/* ./
+          rm -rf kdoc/snapshots/cp-tg
         working-directory: ./public
+      
 
       - run: |
           npm ci
