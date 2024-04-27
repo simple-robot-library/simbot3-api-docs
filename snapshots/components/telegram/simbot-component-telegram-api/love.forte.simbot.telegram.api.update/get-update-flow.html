@@ -1,0 +1,78 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>getUpdateFlow</title>
+<link href="../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../styles/style.css" rel="Stylesheet">
+<link href="../../styles/main.css" rel="Stylesheet">
+<link href="../../styles/prism.css" rel="Stylesheet">
+<link href="../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<script type="text/javascript" src="../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<body>
+    <div class="root">
+<nav class="navigation" id="navigation-wrapper">
+    <div class="navigation--inner">
+        <div class="navigation-title">
+            <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
+            <div class="library-name">
+<a class="library-name--link" href="../../index.html">
+                            Simple Robot 组件 | Telegram
+                    </a>            </div>
+            <div class="library-version">0.0.2-SNAPSHOT
+            </div>
+        </div>
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":simbot-component-telegram-api:dokkaHtmlPartial/commonMain">common</button>
+        </div>
+    </div>
+    <div class="navigation-controls">
+        <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
+        <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
+    </div>
+</nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="sidebar--inner" id="sideMenu"></div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="member" id="content" pageids="simbot-component-telegram-api::love.forte.simbot.telegram.api.update//getUpdateFlow/#kotlin.Int?#kotlin.Int?#kotlin.Int?#kotlin.collections.Collection[kotlin.String]?#kotlin.Function1[kotlin.collections.List[love.forte.simbot.telegram.api.update.Update],kotlin.collections.List[love.forte.simbot.telegram.api.update.Update]]#kotlin.Function1[kotlin.Throwable,kotlin.collections.List[love.forte.simbot.telegram.api.update.Update]]#kotlin.coroutines.SuspendFunction1[love.forte.simbot.telegram.api.update.GetUpdatesApi,kotlin.collections.List[love.forte.simbot.telegram.api.update.Update]]/PointingToDeclaration//-1564028790">
+  <div class="breadcrumbs"><a href="../index.html">simbot-component-telegram-api</a><span class="delimiter">/</span><a href="index.html">love.forte.simbot.telegram.api.update</a><span class="delimiter">/</span><span class="current">getUpdateFlow</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>get</span><wbr><span>Update</span><wbr><span><span>Flow</span></span></h1>
+  </div>
+  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-telegram-api:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><a href="get-update-flow.html"><span class="token function">getUpdateFlow</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">timeout<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">firstOffset<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">eachLimit<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">allowedUpdates<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-collection/index.html">Collection</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">crossinline </span>onEachResult<span class="token operator">: </span><span class="token punctuation">(</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="-update/index.html">Update</a><span class="token operator">&gt;</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="-update/index.html">Update</a><span class="token operator">&gt;</span><span class="token operator"> = </span>{ it }<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">crossinline </span>onError<span class="token operator">: </span><span class="token punctuation">(</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html">Throwable</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="-update/index.html">Update</a><span class="token operator">&gt;</span><span class="token operator"> = </span>{
+        if (it is HttpRequestTimeoutException) emptyList() else throw it
+    }<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">crossinline </span>requestor<span class="token operator">: </span><span class="token keyword">suspend </span><span class="token punctuation">(</span><a href="-get-updates-api/index.html">GetUpdatesApi</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="-update/index.html">Update</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.flow/-flow/index.html">Flow</a><span class="token operator">&lt;</span><a href="-update/index.html">Update</a><span class="token operator">&gt;</span><span class="clearfix"><span class="floating-right">(<a href="https://github.com/simple-robot/simbot-component-telegram/tree/dev/main/simbot-component-telegram-api/src//commonMain/kotlin/love/forte/simbot/telegram/api/update/GetUpdatesApi.kt#L148">source</a>)</span></span></div><p class="paragraph">Create a <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.flow/-flow/index.html">Flow</a> based on Long Polling with <a href="-get-updates-api/index.html">GetUpdatesApi</a>.</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">getUpdateFlow(...) { api -&gt;<br>    httpClient.requestData(token, server)<br>}</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><span class="kdoc-tag"><h4 class="">Receiver</h4><p class="paragraph">The <a href="https://api.ktor.io/ktor-client-core/io.ktor.client/-http-client/index.html">HttpClient</a> to call this <strong>long polling</strong>. It is recommended to configure a larger <code class="lang-kotlin">requestTimeoutMillis</code> value, at least larger than the milliseconds value corresponding to timeout. Otherwise, an <a href="https://api.ktor.io/ktor-client-core/io.ktor.client.plugins/-http-request-timeout-exception/index.html">HttpRequestTimeoutException</a> is likely to be thrown. (<a href="https://api.ktor.io/ktor-client-core/io.ktor.client.plugins/-http-request-timeout-exception/index.html">HttpRequestTimeoutException</a> will be caught by default <a href="get-update-flow.html">onError</a>.</p></span><h4 class="">Parameters</h4><div class="table"><div class="table-row" data-filterable-current=":simbot-component-telegram-api:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-telegram-api:dokkaHtmlPartial/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span><span>timeout</span></span></u></div></span></div><div><div class="title"><p class="paragraph">see <a href="-get-updates-api/-body/timeout.html">GetUpdatesApi.Body.timeout</a></p></div></div></div></div><div class="table-row" data-filterable-current=":simbot-component-telegram-api:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-telegram-api:dokkaHtmlPartial/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span>each</span><wbr><span><span>Limit</span></span></u></div></span></div><div><div class="title"><p class="paragraph">see <a href="-get-updates-api/-body/limit.html">GetUpdatesApi.Body.limit</a>. It is recommended to set a larger value, and its millis value should be smaller than the <code class="lang-kotlin">requestTimeoutMillis</code> of the <a href="https://api.ktor.io/ktor-client-core/io.ktor.client/-http-client/index.html">receiver client</a>.</p></div></div></div></div><div class="table-row" data-filterable-current=":simbot-component-telegram-api:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-telegram-api:dokkaHtmlPartial/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span>allowed</span><wbr><span><span>Updates</span></span></u></div></span></div><div><div class="title"><p class="paragraph">see <a href="-get-updates-api/-body/allowed-updates.html">GetUpdatesApi.Body.allowedUpdates</a></p></div></div></div></div><div class="table-row" data-filterable-current=":simbot-component-telegram-api:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-telegram-api:dokkaHtmlPartial/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span>on</span><wbr><span>Each</span><wbr><span><span>Result</span></span></u></div></span></div><div><div class="title"><p class="paragraph">Handle each API result. Default: <code class="lang-kotlin">{ it }</code>: return itself.</p></div></div></div></div><div class="table-row" data-filterable-current=":simbot-component-telegram-api:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-telegram-api:dokkaHtmlPartial/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span>on</span><wbr><span><span>Error</span></span></u></div></span></div><div><div class="title"><p class="paragraph">Handle exceptions during API requests. Default: <code class="lang-kotlin">{ if (it is HttpRequestTimeoutException) emptyList() else throw it }</code>: if it is <a href="https://api.ktor.io/ktor-client-core/io.ktor.client.plugins/-http-request-timeout-exception/index.html">HttpRequestTimeoutException</a>, ignore. Otherwise, throw it.</p></div></div></div></div></div></div></div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2024 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
