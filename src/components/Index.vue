@@ -5,9 +5,11 @@
         <n-layout-header bordered>
           <HomeHead @theme-active-change="onThemeActiveChange" :init-theme-active-value="initThemeActiveValue"/>
         </n-layout-header>
+
         <n-layout position="absolute" style="top: 150px; bottom: 64px" :native-scrollbar="false"
                   :content-style="layoutCenterContentStyle">
 
+          <HorizontalAdUnit />
           <n-collapse :default-expanded-names="[...collapseActions]" @item-header-click="handleItemHeaderClick">
             <n-card embedded :bordered="false">
               <n-collapse-item name="KDoc">
@@ -58,7 +60,6 @@
             </n-card>
           </n-collapse>
 
-
         </n-layout>
         <n-layout-footer
               bordered
@@ -95,6 +96,7 @@ import {BookOutline, HeartOutline} from '@vicons/ionicons5'
 import {Icon} from "@vicons/utils";
 import HomeFooter from "./HomeFooter.vue";
 import ShowCards from "./show/ShowCards.vue";
+import HorizontalAdUnit from "./ad/HorizontalAdUnit.vue";
 
 const layoutCenterContentStyle = reactive({
     'padding-left': '50px',
