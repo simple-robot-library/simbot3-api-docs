@@ -1,0 +1,69 @@
+name: Deploy Telegram KDoc Pages
+on:
+  push:
+    branches:
+      - kdoc-deploy/*
+      - kdoc-deploy/snapshots/*
+#      - kdoc-deploy/component-telegram
+
+jobs:
+  # TG
+  deploy-telegram-kdoc-pages:
+    if: github.ref == 'refs/heads/kdoc-deploy/component-telegram'
+    name: deploy-telegram-kdoc-pages
+    runs-on: ubuntu-latest
+    steps:
+      # 检出仓库代码
+      - uses: actions/checkout@v4
+
+      # https://github.com/marketplace/actions/github-pages-action
+      - name: Deploy component/telegram to doc repository
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          personal_token: ${{ secrets.PUSH_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: components/telegram
+          destination_dir: components/telegram
+
+  deploy-telegram-snapshots-kdoc-pages:
+    if: github.ref == 'refs/heads/kdoc-deploy/snapshots/component-telegram'
+    name: deploy-telegram-snapshots-kdoc-pages
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Deploy snapshots/component/telegram to doc repository
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          personal_token: ${{ secrets.PUSH_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: snapshots/components/telegram
+          destination_dir: snapshots/components/telegram
+
+  # OneBot
+  deploy-onebot-kdoc-pages:
+    if: github.ref == 'refs/heads/kdoc-deploy/component-onebot'
+    name: deploy-onebot-kdoc-pages
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Deploy component/onebot to doc repository
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          personal_token: ${{ secrets.PUSH_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: components/onebot
+          destination_dir: components/onebot
+
+  deploy-onebot-snapshots-kdoc-pages:
+    if: github.ref == 'refs/heads/kdoc-deploy/snapshots/component-onebot'
+    name: deploy-onebot-snapshots-kdoc-pages
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Deploy snapshots/component/onebot to doc repository
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          personal_token: ${{ secrets.PUSH_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: snapshots/components/onebot
+          destination_dir: snapshots/components/onebot

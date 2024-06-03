@@ -1,7 +1,8 @@
 name: Deploy Index Page
 on:
   push:
-    branches: 'doc-index'
+    branches:
+      - 'doc-index'
   # Specify to run a workflow manually from the Actions tab on GitHub
   workflow_dispatch:
 jobs:
@@ -112,6 +113,18 @@ jobs:
           rm -rf kdoc/cp-tg
         working-directory: ./public
 
+      # OneBot
+      - uses: actions/checkout@v4
+        with:
+          ref: 'kdoc-deploy/component-onebot'
+          path: 'public/kdoc/cp-ob'
+
+      - run: |
+          mkdir -p kdoc/cp-ob
+          cp -r kdoc/cp-ob/* ./
+          rm -rf kdoc/cp-ob
+        working-directory: ./public
+
       # snapshots
 
       # main 快照
@@ -203,6 +216,18 @@ jobs:
           rm -rf kdoc/snapshots/cp-tg
         working-directory: ./public
       
+
+      # OneBot快照
+      - uses: actions/checkout@v4
+        with:
+          ref: 'kdoc-deploy/snapshots/component-onebot'
+          path: 'public/kdoc/snapshots/cp-ob'
+
+      - run: |
+          cp -r kdoc/snapshots/cp-ob/* ./
+          rm -rf kdoc/snapshots/cp-ob
+        working-directory: ./public
+
 
       - run: |
           npm ci
