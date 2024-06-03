@@ -1,3 +1,0 @@
-# ONEBOT COMPONENT KDOC
-
-OK? ...
