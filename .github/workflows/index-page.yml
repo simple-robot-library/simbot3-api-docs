@@ -5,6 +5,11 @@ on:
       - 'doc-index'
   # Specify to run a workflow manually from the Actions tab on GitHub
   workflow_dispatch:
+
+concurrency:
+  group: "index-page-concurrency-group"
+  cancel-in-progress: true
+
 jobs:
   deploy-doc:
     name: deploy-index-page

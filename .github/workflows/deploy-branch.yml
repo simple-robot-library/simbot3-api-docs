@@ -6,6 +6,10 @@ on:
       - 'kdoc-deploy/snapshots/**'
 #      - kdoc-deploy/component-telegram
 
+concurrency:
+  group: concurrency-group-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   echo-ref:
     runs-on: ubuntu-latest
