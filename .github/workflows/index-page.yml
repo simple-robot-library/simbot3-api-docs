@@ -114,16 +114,17 @@ jobs:
         working-directory: ./public
 
       # OneBot
-      - uses: actions/checkout@v4
-        with:
-          ref: 'kdoc-deploy/component-onebot'
-          path: 'public/kdoc/cp-ob'
-
-      - run: |
-          mkdir -p kdoc/cp-ob
-          cp -r kdoc/cp-ob/* ./
-          rm -rf kdoc/cp-ob
-        working-directory: ./public
+      # TODO
+#      - uses: actions/checkout@v4
+#        with:
+#          ref: 'kdoc-deploy/component-onebot'
+#          path: 'public/kdoc/cp-ob'
+#
+#      - run: |
+#          mkdir -p kdoc/cp-ob
+#          cp -r kdoc/cp-ob/* ./
+#          rm -rf kdoc/cp-ob
+#        working-directory: ./public
 
       # snapshots
 
