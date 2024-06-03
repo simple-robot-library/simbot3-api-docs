@@ -2,11 +2,17 @@ name: Deploy branch KDoc pages
 on:
   push:
     branches:
-      - 'kdoc-deploy/*'
-      - 'kdoc-deploy/snapshots/*'
+      - 'kdoc-deploy/**'
+      - 'kdoc-deploy/snapshots/**'
 #      - kdoc-deploy/component-telegram
 
 jobs:
+  echo-ref:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "github.ref is ${{ github.ref }}"
+      - run: echo "github.ref_name is ${{ github.ref_name }}"
+
   # TG
   deploy-telegram-kdoc-pages:
     if: github.ref == 'refs/heads/kdoc-deploy/component-telegram'
