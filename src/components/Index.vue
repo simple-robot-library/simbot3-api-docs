@@ -27,7 +27,7 @@
                         </n-divider>
                         <n-divider title-placement="center">
                           <n-collapse-transition :show="!collapseActions.has('KDoc')">
-                            <n-text italic depth="3" style="user-select: none; font-size: 6px">点击展开</n-text>
+                            <n-text italic depth="3" style="user-select: none; font-size: 18px">点击展开</n-text>
                           </n-collapse-transition>
                         </n-divider>
                         <n-divider title-placement="right">
@@ -51,7 +51,7 @@
                         </n-divider>
                         <n-divider title-placement="center">
                           <n-collapse-transition :show="!collapseActions.has('作品展示')">
-                            <n-text italic depth="3" style="user-select: none; font-size: 6px">点击展开</n-text>
+                            <n-text italic depth="3" style="user-select: none; font-size: 18px">点击展开</n-text>
                           </n-collapse-transition>
                         </n-divider>
                         <n-divider title-placement="right">
@@ -69,6 +69,7 @@
           </n-grid>
 
         </n-layout>
+
         <n-layout-footer
               bordered
               position="absolute"

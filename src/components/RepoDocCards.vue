@@ -1,6 +1,6 @@
 <template>
   <div>
-    <n-grid x-gap="12" y-gap="14" cols="1 s:2 m:3 l:4 xl:5 2xl:6" responsive="screen">
+    <n-grid x-gap="12" y-gap="14" cols="1 s:2 m:2 l:3 xl:4 2xl:5" responsive="screen">
       <n-gi v-for="card in componentCards">
         <n-card :title="card.name" hoverable :content-style="{'min-height': '160px'}">
 
@@ -14,7 +14,7 @@
             <component v-for="{ component, props } in card.tags"
                        v-bind="props"
                        :is="component"
-                       v-text="props.name" />
+                       v-html="props.name" />
           </n-space>
 
 
@@ -66,9 +66,9 @@ function Shield(props) {
 const officialTag = Tag({ name: 'Official', type: 'info' })
 const coreTag = Tag({ name: '核心', type: 'info' })
 const componentTag = Tag({name: "组件", type: "success"})
-const WIPTag = Tag({ name: 'WIP🚧', type: 'warning' })
-const helpWanted = Tag({ name: '期待协助🤝', type: 'success' })
-const deadTag = Tag({ name: '阵亡💀', type: 'error' })
+const WIPTag = Tag({ name: '<b>WIP🚧</b>', type: 'warning' })
+const helpWanted = Tag({ name: '<b>期待协助🤝</b>', type: 'success' })
+const deadTag = Tag({ name: '<b>阵亡💀</b>', type: 'error' })
 
 const componentCards = [
   {
@@ -81,11 +81,8 @@ const componentCards = [
     links: [
       [{name: "前往仓库", href: "https://github.com/simple-robot/simpler-robot", type: "info"}],
       [
-        {name: "V4 KDoc", href: "main-v4", type: "primary"},
-        {name: "V4 KDoc(快照)", href: "snapshots/main-v4", type: "primary"},
-      ], [
-        {name: "V3 KDoc", href: "main", type: "primary"},
-        {name: "V3 KDoc(快照)", href: "snapshots/main", type: "primary"},
+        {name: "API Doc", href: "main-v4", type: "primary"},
+        {name: "API Doc(快照)", href: "snapshots/main-v4", type: "primary"},
       ],
       [{name: "🍀官网", href: "https://simbot.forte.love", type: "default"}],
     ]
@@ -96,7 +93,7 @@ const componentCards = [
     tags: [officialTag, componentTag],
     shields: [
       Shield({
-        src: "https://img.shields.io/maven-central/v/love.forte.simbot.component/simbot-component-kook-core?&label=version",
+        src: "https://img.shields.io/github/v/release/simple-robot/simbot-component-kook?label=version",
         alt: "KOOK组件"
       }),
     ],
@@ -105,8 +102,8 @@ const componentCards = [
     links: [
       [{name: "前往仓库", href: "https://github.com/simple-robot/simbot-component-kook", type: "info"}],
       [
-        {name: "KDoc", href: "components/kook", type: "primary"},
-        {name: "KDoc(快照)", href: "snapshots/components/kook", type: "primary"},
+        {name: "API Doc", href: "components/kook", type: "primary"},
+        {name: "API Doc(快照)", href: "snapshots/components/kook", type: "primary"},
       ],
       [{name: "前往手册", href: "https://component-kook.simbot.forte.love/", type: "default"}],
     ]
@@ -116,7 +113,7 @@ const componentCards = [
     tags: [officialTag, componentTag],
     shields: [
       Shield({
-        src: "https://img.shields.io/maven-central/v/love.forte.simbot.component/simbot-component-qq-guild-core?&label=version",
+        src: "https://img.shields.io/github/v/release/simple-robot/simbot-component-qq-guild?label=version",
         alt: "QQ频道组件"
       }),
     ],
@@ -124,14 +121,30 @@ const componentCards = [
     links: [
       [{name: "前往仓库", href: "https://github.com/simple-robot/simbot-component-qq-guild", type: "info"}],
       [
-        {name: "V4 KDoc", href: "components/qq-guild", type: "primary"},
-        {name: "V4 KDoc(快照)", href: "snapshots/components/qq-guild", type: "primary"}
-      ],
-      [
-        {name: "V3 KDoc", href: "components/qq-guild-v3", type: "primary"},
-        {name: "V3 KDoc(快照)", href: "snapshots/components/qq-guild-v3", type: "primary"}
+        {name: "API Doc", href: "components/qq-guild", type: "primary"},
+        {name: "API Doc(快照)", href: "snapshots/components/qq-guild", type: "primary"}
       ],
       [{name: "前往手册", href: "http://component-qqguild.simbot.forte.love/", type: "default"}],
+    ]
+  },
+  {
+    name: "OneBot组件",
+    tags: [WIPTag, helpWanted, officialTag, componentTag],
+    shields: [
+      Shield({
+        src: "https://img.shields.io/github/v/release/simple-robot/simbot-component-onebot-core?label=version",
+        alt: "OneBot组件"
+      }),
+    ],
+    description: "OneBot组件基于核心库对 <a href='https://github.com/botuniverse/onebot-11'>OneBot11协议</a> 进行实现，提供强大的OneBot客户端功能。",
+    links: [
+      [{name: "前往仓库", href: "https://github.com/simple-robot/simbot-component-onebot", type: "info"}],
+      [
+        {name: "API Doc", href: "components/onebot", type: "primary"},
+        {name: "API Doc(快照)", href: "snapshots/components/onebot", type: "primary"}
+      ],
+        // TODO OB手册
+      // [{name: "前往手册", href: "https://simple-robot.github.io/simbot-component-onebot", type: "default"}],
     ]
   },
   {
@@ -139,7 +152,7 @@ const componentCards = [
     tags: [WIPTag, helpWanted, officialTag, componentTag],
     shields: [
       Shield({
-        src: "https://img.shields.io/maven-central/v/love.forte.simbot.component/simbot-component-telegram-core?&label=version",
+        src: "https://img.shields.io/github/v/release/simple-robot/simbot-component-telegram?label=version",
         alt: "Telegram组件"
       }),
     ],
@@ -147,8 +160,8 @@ const componentCards = [
     links: [
       [{name: "前往仓库", href: "https://github.com/simple-robot/simbot-component-telegram", type: "info"}],
       [
-        {name: "KDoc", href: "components/telegram", type: "primary"},
-        {name: "KDoc(快照)", href: "snapshots/components/telegram", type: "primary"}
+        {name: "API Doc", href: "components/telegram", type: "primary"},
+        {name: "API Doc(快照)", href: "snapshots/components/telegram", type: "primary"}
       ],
       [{name: "前往手册", href: "https://simple-robot.github.io/simbot-component-telegram", type: "default"}],
     ]
@@ -158,7 +171,7 @@ const componentCards = [
     tags: [WIPTag, helpWanted, officialTag, componentTag],
     shields: [
       Shield({
-        src: "https://img.shields.io/maven-central/v/love.forte.simbot.component/simbot-component-discord-core?&label=version",
+        src: "https://img.shields.io/github/v/release/simple-robot/simbot-component-discord?label=version",
         alt: "Discord组件"
       }),
     ],
@@ -166,8 +179,8 @@ const componentCards = [
     links: [
       [{name: "前往仓库", href: "https://github.com/simple-robot/simbot-component-discord", type: "info"}],
       [
-        {name: "KDoc", href: "components/discord", type: "primary"},
-        {name: "KDoc(快照)", href: "snapshots/components/discord", type: "primary"}
+        {name: "API Doc", href: "components/discord", type: "primary"},
+        {name: "API Doc(快照)", href: "snapshots/components/discord", type: "primary"}
       ],
       [{name: "前往手册", href: "https://simple-robot.github.io/simbot-component-discord", type: "default"}],
     ]
@@ -177,7 +190,8 @@ const componentCards = [
     tags: [Tag({ name: '濒死⚠', type: 'warning', round: false }), officialTag, componentTag],
     shields: [
       Shield({
-        src: "https://img.shields.io/maven-central/v/love.forte.simbot.component/simbot-component-mirai-core?&label=version",
+        // src: "https://img.shields.io/maven-central/v/love.forte.simbot.component/simbot-component-mirai-core?&label=version",
+        src: "https://img.shields.io/github/v/release/simple-robot/simbot-component-mirai?label=version",
         alt: "mirai组件"
       }),
     ],
@@ -185,8 +199,8 @@ const componentCards = [
     links: [
       [{name: "前往仓库", href: "https://github.com/simple-robot/simbot-component-mirai", type: "info"}],
       [
-        {name: "KDoc", href: "components/mirai", type: "primary"},
-        {name: "KDoc(快照)", href: "snapshots/components/mirai", type: "primary"},
+        {name: "API Doc", href: "components/mirai", type: "primary"},
+        {name: "API Doc(快照)", href: "snapshots/components/mirai", type: "primary"},
       ],
       [{name: "前往手册", href: "https://simple-robot.github.io/simbot-component-mirai", type: "default"}],
     ]
@@ -196,7 +210,7 @@ const componentCards = [
     tags: [deadTag, officialTag, componentTag],
     shields: [
       Shield({
-        src: "https://img.shields.io/maven-central/v/love.forte.simbot.component/simbot-component-miyoushe-villa-core?&label=version",
+        src: "https://img.shields.io/github/v/release/simple-robot/simbot-component-miyoushe-villa?label=version",
         alt: "米游社大别野组件"
       }),
     ],
@@ -204,8 +218,8 @@ const componentCards = [
     links: [
       [{name: "前往仓库", href: "https://github.com/simple-robot/simbot-component-miyoushe-villa", type: "info"}],
       [
-        {name: "KDoc", href: "components/miyoushe-villa", type: "primary"},
-        {name: "KDoc(快照)", href: "snapshots/components/miyoushe-villa", type: "primary"}
+        {name: "API Doc", href: "components/miyoushe-villa", type: "primary"},
+        {name: "API Doc(快照)", href: "snapshots/components/miyoushe-villa", type: "primary"}
       ],
       [{name: "前往手册", href: "https://simple-robot.github.io/simbot-component-miyoushe-villa/", type: "default"}],
     ]
