@@ -40,19 +40,20 @@ jobs:
           destination_dir: snapshots/components/telegram
 
   # OneBot
-  deploy-onebot-kdoc-pages:
-    if: github.ref == 'refs/heads/kdoc-deploy/component-onebot'
-    name: deploy-onebot-kdoc-pages
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: Deploy component/onebot to doc repository
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          personal_token: ${{ secrets.PUSH_TOKEN }}
-          publish_branch: gh-pages
-          publish_dir: components/onebot
-          destination_dir: components/onebot
+  # TODO
+#  deploy-onebot-kdoc-pages:
+#    if: github.ref == 'refs/heads/kdoc-deploy/component-onebot'
+#    name: deploy-onebot-kdoc-pages
+#    runs-on: ubuntu-latest
+#    steps:
+#      - uses: actions/checkout@v4
+#      - name: Deploy component/onebot to doc repository
+#        uses: peaceiris/actions-gh-pages@v3
+#        with:
+#          personal_token: ${{ secrets.PUSH_TOKEN }}
+#          publish_branch: gh-pages
+#          publish_dir: components/onebot
+#          destination_dir: components/onebot
 
   deploy-onebot-snapshots-kdoc-pages:
     if: github.ref == 'refs/heads/kdoc-deploy/snapshots/component-onebot'
