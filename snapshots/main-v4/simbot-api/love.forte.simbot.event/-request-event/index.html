@@ -62,7 +62,7 @@
   <div class="breadcrumbs"><a href="../../index.html">simbot-api</a><span class="delimiter">/</span><a href="../index.html">love.forte.simbot.event</a><span class="delimiter">/</span><span class="current">RequestEvent</span></div>
   <div class="cover ">
     <h1 class="cover"><span>Request</span><wbr><span><span>Event</span></span></h1>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="index.html">RequestEvent</a> : <a href="../-bot-event/index.html">BotEvent</a><span class="clearfix"><span class="floating-right">(<a href="https://github.com/simple-robot/simpler-robot/tree/v4-dev/simbot-api/src//commonMain/kotlin/love/forte/simbot/event/RequestEvent.kt#L41">source</a>)</span></span></div><p class="paragraph"><a href="../../love.forte.simbot.bot/-bot/index.html">Bot</a> 收到的某种与请求/申请有关的事件。</p><span class="kdoc-tag"><h4 class="">Author</h4><p class="paragraph">ForteScarlet</p></span><h4 class="">Inheritors</h4><div class="table"><div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-api:dokkaHtmlPartial/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../-organization-request-event/index.html">OrganizationRequestEvent</a></div></span></div><div></div></div></div></div></div></div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="index.html">RequestEvent</a> : <a href="../-bot-event/index.html">BotEvent</a>, <a href="../../love.forte.simbot.ability/-reject-support/index.html">RejectSupport</a>, <a href="../../love.forte.simbot.ability/-accept-support/index.html">AcceptSupport</a><span class="clearfix"><span class="floating-right">(<a href="https://github.com/simple-robot/simpler-robot/tree/v4-dev/simbot-api/src//commonMain/kotlin/love/forte/simbot/event/RequestEvent.kt#L43">source</a>)</span></span></div><p class="paragraph"><a href="../../love.forte.simbot.bot/-bot/index.html">Bot</a> 收到的某种与请求/申请有关的事件。</p><span class="kdoc-tag"><h4 class="">Author</h4><p class="paragraph">ForteScarlet</p></span><h4 class="">Inheritors</h4><div class="table"><div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-api:dokkaHtmlPartial/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../-organization-request-event/index.html">OrganizationRequestEvent</a></div></span></div><div></div></div></div></div></div></div>
   </div>
   <div class="tabbedcontent">
     <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
@@ -182,32 +182,32 @@
       </div>
       <div data-togglable="FUNCTION">
         <h2 class="">Functions</h2>
-        <div class="table"><a data-name="-209456364%2FFunctions%2F606787926" anchor-label="accept" id="-209456364%2FFunctions%2F606787926" data-filterable-set=":simbot-api:dokkaHtmlPartial/commonMain"></a>
+        <div class="table"><a data-name="-266852573%2FFunctions%2F606787926" anchor-label="accept" id="-266852573%2FFunctions%2F606787926" data-filterable-set=":simbot-api:dokkaHtmlPartial/commonMain"></a>
           <div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-api:dokkaHtmlPartial/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
-                  <div><a href="accept.html"><span><span>accept</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-209456364%2FFunctions%2F606787926"></span>
+                  <div><a href="../../love.forte.simbot.ability/-accept-support/accept.html"><span><span>accept</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-266852573%2FFunctions%2F606787926"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="accept.html"><span class="token function">accept</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">接受此请求。</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../../love.forte.simbot.ability/-accept-support/accept.html"><span class="token function">accept</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">vararg </span>options<span class="token operator">: </span><a href="../../love.forte.simbot.ability/-accept-option/index.html">AcceptOption</a></span></span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">suspend override </span><span class="token keyword">fun </span><a href="accept.html"><span class="token function">accept</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">接受此请求。</p></div></div></div>
                 </div>
               </div>
             </div>
           </div>
-<a data-name="-1872495523%2FFunctions%2F606787926" anchor-label="reject" id="-1872495523%2FFunctions%2F606787926" data-filterable-set=":simbot-api:dokkaHtmlPartial/commonMain"></a>
+<a data-name="290388949%2FFunctions%2F606787926" anchor-label="reject" id="290388949%2FFunctions%2F606787926" data-filterable-set=":simbot-api:dokkaHtmlPartial/commonMain"></a>
           <div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-api:dokkaHtmlPartial/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
-                  <div><a href="reject.html"><span><span>reject</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1872495523%2FFunctions%2F606787926"></span>
+                  <div><a href="../../love.forte.simbot.ability/-reject-support/reject.html"><span><span>reject</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="290388949%2FFunctions%2F606787926"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="reject.html"><span class="token function">reject</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">拒绝此请求。</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../../love.forte.simbot.ability/-reject-support/reject.html"><span class="token function">reject</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">vararg </span>options<span class="token operator">: </span><a href="../../love.forte.simbot.ability/-reject-option/index.html">RejectOption</a></span></span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">suspend override </span><span class="token keyword">fun </span><a href="reject.html"><span class="token function">reject</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">拒绝此请求。</p></div></div></div>
                 </div>
               </div>
             </div>
