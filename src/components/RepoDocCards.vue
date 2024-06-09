@@ -143,8 +143,7 @@ const componentCards = [
         {name: "API文档", href: "components/onebot", type: "primary"},
         {name: "API文档(快照)", href: "snapshots/components/onebot", type: "primary"}
       ],
-        // TODO OB手册
-      // [{name: "前往手册", href: "https://simple-robot.github.io/simbot-component-onebot", type: "default"}],
+      [{name: "前往手册", href: "https://simple-robot.github.io/simbot-component-onebot", type: "default"}],
     ]
   },
   {
