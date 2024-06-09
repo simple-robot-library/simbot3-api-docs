@@ -132,7 +132,7 @@ const componentCards = [
     tags: [WIPTag, helpWanted, officialTag, componentTag],
     shields: [
       Shield({
-        src: "https://img.shields.io/github/v/release/simple-robot/simbot-component-onebot-core?label=version",
+        src: "https://img.shields.io/github/v/release/simple-robot/simbot-component-onebot?label=version",
         alt: "OneBot组件"
       }),
     ],
