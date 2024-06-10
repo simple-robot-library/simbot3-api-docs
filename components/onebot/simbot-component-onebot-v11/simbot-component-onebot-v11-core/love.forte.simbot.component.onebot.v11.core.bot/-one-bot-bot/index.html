@@ -1,0 +1,419 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>OneBotBot</title>
+<link href="../../../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../../styles/style.css" rel="Stylesheet">
+<link href="../../../../styles/main.css" rel="Stylesheet">
+<link href="../../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<body>
+    <div class="root">
+<nav class="navigation" id="navigation-wrapper">
+    <div class="navigation--inner">
+        <div class="navigation-title">
+            <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
+            <div class="library-name">
+<a class="library-name--link" href="../../../../index.html">
+                            Simple Robot 组件 | OneBot
+                    </a>            </div>
+            <div class="library-version">0.1.0
+            </div>
+        </div>
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain">common</button>
+        </div>
+    </div>
+    <div class="navigation-controls">
+        <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
+        <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
+    </div>
+</nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="sidebar--inner" id="sideMenu"></div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="simbot-component-onebot-v11-core::love.forte.simbot.component.onebot.v11.core.bot/OneBotBot///PointingToDeclaration//542815419">
+  <div class="breadcrumbs"><a href="../../index.html">simbot-component-onebot-v11-core</a><span class="delimiter">/</span><a href="../index.html">love.forte.simbot.component.onebot.v11.core.bot</a><span class="delimiter">/</span><span class="current">OneBotBot</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>One</span><wbr><span>Bot</span><wbr><span><span>Bot</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="index.html">OneBotBot</a> : <a href="https://docs.simbot.forte.love/main/simbot-api/love.forte.simbot.bot/-bot/index.html">Bot</a><span class="clearfix"><span class="floating-right">(<a href="https://github.com/simple-robot/simbot-component-onebot/tree/dev/main/simbot-component-onebot-v11/simbot-component-onebot-v11-core/src//commonMain/kotlin/love/forte/simbot/component/onebot/v11/core/bot/OneBotBot.kt#L55">source</a>)</span></span></div><p class="paragraph">一个 OneBot协议的 <a href="https://docs.simbot.forte.love/main/simbot-api/love.forte.simbot.bot/-bot/index.html">Bot</a>。</p><h3 class="">Bot 的终止</h3><p class="paragraph">Bot的运行状态 (<a href="../../../../simbot-component-onebot-v11/simbot-component-onebot-v11-core/love.forte.simbot.component.onebot.v11.core.bot/-one-bot-bot/is-active.html">isActive</a>) 可能会因为一些原因被更改：</p><ul><li><p class="paragraph">手动终止 (使用 <a href="../../../../simbot-component-onebot-v11/simbot-component-onebot-v11-core/love.forte.simbot.component.onebot.v11.core.bot/-one-bot-bot/cancel.html">cancel</a>)。</p></li><li><p class="paragraph">父级Job或被关联的Job被终止 (可能来自 BotManager、Application等)。</p></li><li><p class="paragraph">会话连接失败且重试次数到达上限。比如 ws 的连接会话意外被中断， 且在重新连接的过程中始终失败并达到了重试次数上限，此时会话中的任务会被视为因异常结束， 并连带 <a href="index.html">OneBotBot</a> 的任务一同终结。</p></li></ul><span class="kdoc-tag"><h4 class="">Author</h4><p class="paragraph">ForteScarlet</p></span></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="1789194882%2FProperties%2F542815419" anchor-label="accessToken" id="1789194882%2FProperties%2F542815419" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="access-token.html"><span>access</span><wbr><span><span>Token</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1789194882%2FProperties%2F542815419"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">val </span><a href="access-token.html">accessToken</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph"><a href="../-one-bot-bot-configuration/index.html">OneBotBotConfiguration</a> 中配置的 accessToken。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="110249842%2FProperties%2F542815419" anchor-label="apiClient" id="110249842%2FProperties%2F542815419" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="api-client.html"><span>api</span><wbr><span><span>Client</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="110249842%2FProperties%2F542815419"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">val </span><a href="api-client.html">apiClient</a><span class="token operator">: </span><a href="https://api.ktor.io/ktor-client-core/io.ktor.client/-http-client/index.html">HttpClient</a></div><div class="brief "><p class="paragraph"><a href="index.html">OneBotBot</a> 用于请求API的 <a href="https://api.ktor.io/ktor-client-core/io.ktor.client/-http-client/index.html">HttpClient</a>。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1655377867%2FProperties%2F542815419" anchor-label="apiHost" id="-1655377867%2FProperties%2F542815419" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="api-host.html"><span>api</span><wbr><span><span>Host</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1655377867%2FProperties%2F542815419"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">val </span><a href="api-host.html">apiHost</a><span class="token operator">: </span><a href="https://api.ktor.io/ktor-http/io.ktor.http/-url/index.html">Url</a></div><div class="brief "><p class="paragraph"><a href="index.html">OneBotBot</a> 用于请求 API 的目标服务器地址</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-87050050%2FProperties%2F542815419" anchor-label="component" id="-87050050%2FProperties%2F542815419" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#-87050050%2FProperties%2F542815419"><span><span>component</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-87050050%2FProperties%2F542815419"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">val </span><a href="index.html#-87050050%2FProperties%2F542815419">component</a><span class="token operator">: </span><span data-unresolved-link="love.forte.simbot.component/Component///PointingToDeclaration/">Component</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1520059681%2FProperties%2F542815419" anchor-label="configuration" id="1520059681%2FProperties%2F542815419" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="configuration.html"><span><span>configuration</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1520059681%2FProperties%2F542815419"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">val </span><a href="configuration.html">configuration</a><span class="token operator">: </span><a href="../-one-bot-bot-configuration/index.html">OneBotBotConfiguration</a></div><div class="brief "><p class="paragraph">当前Bot的配置类。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1179169819%2FProperties%2F542815419" anchor-label="contactRelation" id="1179169819%2FProperties%2F542815419" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="contact-relation.html"><span>contact</span><wbr><span><span>Relation</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1179169819%2FProperties%2F542815419"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="contact-relation.html">contactRelation</a><span class="token operator">: </span><a href="../-one-bot-bot-friend-relation/index.html">OneBotBotFriendRelation</a></div><div class="brief "><p class="paragraph">联系人相关操作，即好友相关的关系操作。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1857719284%2FProperties%2F542815419" anchor-label="coroutineContext" id="-1857719284%2FProperties%2F542815419" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="coroutine-context.html"><span>coroutine</span><wbr><span><span>Context</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1857719284%2FProperties%2F542815419"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="coroutine-context.html">coroutineContext</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.coroutines/-coroutine-context/index.html">CoroutineContext</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-293476324%2FProperties%2F542815419" anchor-label="groupRelation" id="-293476324%2FProperties%2F542815419" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="group-relation.html"><span>group</span><wbr><span><span>Relation</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-293476324%2FProperties%2F542815419"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="group-relation.html">groupRelation</a><span class="token operator">: </span><a href="../-one-bot-bot-group-relation/index.html">OneBotBotGroupRelation</a></div><div class="brief "><p class="paragraph">与群聊相关的操作</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-186506968%2FProperties%2F542815419" anchor-label="guildRelation" id="-186506968%2FProperties%2F542815419" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="guild-relation.html"><span>guild</span><wbr><span><span>Relation</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-186506968%2FProperties%2F542815419"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="guild-relation.html">guildRelation</a><span class="token operator">: </span><a href="https://docs.simbot.forte.love/main/simbot-api/love.forte.simbot.bot/-guild-relation/index.html">GuildRelation</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">始终为 <code class="lang-kotlin">null</code>。 OB11协议主要为普通群聊设计。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2145402456%2FProperties%2F542815419" anchor-label="id" id="-2145402456%2FProperties%2F542815419" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="id.html"><span><span>id</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2145402456%2FProperties%2F542815419"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="id.html">id</a><span class="token operator">: </span><span data-unresolved-link="love.forte.simbot.common.id/ID///PointingToDeclaration/">ID</span></div><div class="brief "><p class="paragraph">当前Bot的唯一标识。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-885338811%2FProperties%2F542815419" anchor-label="isActive" id="-885338811%2FProperties%2F542815419" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-one-bot-bot-manager/index.html#-885338811%2FProperties%2F542815419"><span>is</span><wbr><span><span>Active</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-885338811%2FProperties%2F542815419"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">val </span><a href="../-one-bot-bot-manager/index.html#-885338811%2FProperties%2F542815419">isActive</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="330725188%2FProperties%2F542815419" anchor-label="isCompleted" id="330725188%2FProperties%2F542815419" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-one-bot-bot-manager/index.html#330725188%2FProperties%2F542815419"><span>is</span><wbr><span><span>Completed</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="330725188%2FProperties%2F542815419"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">val </span><a href="../-one-bot-bot-manager/index.html#330725188%2FProperties%2F542815419">isCompleted</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1984477956%2FProperties%2F542815419" anchor-label="isStarted" id="1984477956%2FProperties%2F542815419" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#1984477956%2FProperties%2F542815419"><span>is</span><wbr><span><span>Started</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1984477956%2FProperties%2F542815419"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">val </span><a href="index.html#1984477956%2FProperties%2F542815419">isStarted</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="753811640%2FProperties%2F542815419" anchor-label="name" id="753811640%2FProperties%2F542815419" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="name.html"><span><span>name</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="753811640%2FProperties%2F542815419"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="name.html">name</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">Bot的名称，来自 <a href="../../love.forte.simbot.component.onebot.v11.core.api/-get-login-info-api/index.html">GetLoginInfoApi</a> API. <a href="name.html">name</a> 是一个缓存值，不会实时查询或实时刷新。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1117021172%2FProperties%2F542815419" anchor-label="subContext" id="1117021172%2FProperties%2F542815419" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="sub-context.html"><span>sub</span><wbr><span><span>Context</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1117021172%2FProperties%2F542815419"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../../../simbot-component-onebot-common/love.forte.simbot.component.onebot.common.annotations/-internal-one-bot-a-p-i/index.html"><span class="token annotation builtin">InternalOneBotAPI</span></a></div></div><span class="token keyword">abstract </span><span class="token keyword">val </span><a href="sub-context.html">subContext</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.coroutines/-coroutine-context/index.html">CoroutineContext</a></div><div class="brief "><p class="paragraph">由 <a href="index.html">OneBotBot</a> 衍生出的 actor 使用的 <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.coroutines/-coroutine-context/index.html">CoroutineContext</a>。 源自 <a href="coroutine-context.html">coroutineContext</a>, 但是不包含 <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-job/index.html">Job</a>。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1633481693%2FProperties%2F542815419" anchor-label="userId" id="1633481693%2FProperties%2F542815419" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="user-id.html"><span>user</span><wbr><span><span>Id</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1633481693%2FProperties%2F542815419"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">val </span><a href="user-id.html">userId</a><span class="token operator">: </span><span data-unresolved-link="love.forte.simbot.common.id/ID///PointingToDeclaration/">ID</span></div><div class="brief "><p class="paragraph">Bot自身的 ID，来自事件或 <a href="../../love.forte.simbot.component.onebot.v11.core.api/-get-login-info-api/index.html">GetLoginInfoApi</a> API.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="972650474%2FFunctions%2F542815419" anchor-label="cancel" id="972650474%2FFunctions%2F542815419" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#2082157541%2FFunctions%2F542815419"><span><span>cancel</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="972650474%2FFunctions%2F542815419"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="index.html#2082157541%2FFunctions%2F542815419"><span class="token function">cancel</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="index.html#-1196263663%2FFunctions%2F542815419"><span class="token function">cancel</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">reason<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html">Throwable</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="693892200%2FFunctions%2F542815419" anchor-label="isMe" id="693892200%2FFunctions%2F542815419" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-me.html"><span>is</span><wbr><span><span>Me</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="693892200%2FFunctions%2F542815419"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">infix override </span><span class="token keyword">fun </span><a href="is-me.html"><span class="token function">isMe</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">id<span class="token operator">: </span><span data-unresolved-link="love.forte.simbot.common.id/ID///PointingToDeclaration/">ID</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">检测给定的 <a href="is-me.html">id</a> 是否与 <a href="id.html">OneBotBot.id</a> 或 <a href="user-id.html">userId</a> (如果已经初始化) 相同。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="255417269%2FFunctions%2F542815419" anchor-label="join" id="255417269%2FFunctions%2F542815419" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#255417269%2FFunctions%2F542815419"><span><span>join</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="255417269%2FFunctions%2F542815419"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="index.html#255417269%2FFunctions%2F542815419"><span class="token function">join</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-347799083%2FFunctions%2F542815419" anchor-label="onCompletion" id="-347799083%2FFunctions%2F542815419" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-one-bot-bot-manager/index.html#-347799083%2FFunctions%2F542815419"><span>on</span><wbr><span><span>Completion</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-347799083%2FFunctions%2F542815419"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-one-bot-bot-manager/index.html#-347799083%2FFunctions%2F542815419"><span class="token function">onCompletion</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">handle<span class="token operator">: </span><a href="https://docs.simbot.forte.love/main/simbot-api/love.forte.simbot.ability/-on-completion/index.html">OnCompletion</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1118233716%2FFunctions%2F542815419" anchor-label="queryLoginInfo" id="1118233716%2FFunctions%2F542815419" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="query-login-info.html"><span>query</span><wbr><span>Login</span><wbr><span><span>Info</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1118233716%2FFunctions%2F542815419"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="query-login-info.html"><span class="token function">queryLoginInfo</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../love.forte.simbot.component.onebot.v11.core.api/-get-login-info-result/index.html">GetLoginInfoResult</a></div><div class="brief "><p class="paragraph">通过 <a href="../../love.forte.simbot.component.onebot.v11.core.api/-get-login-info-api/index.html">GetLoginInfoApi</a> 查询当前Bot的信息， 并刷新 <a href="user-id.html">userId</a> 和 <a href="name.html">name</a> 的缓存值。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2085805771%2FFunctions%2F542815419" anchor-label="start" id="-2085805771%2FFunctions%2F542815419" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="start.html"><span><span>start</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2085805771%2FFunctions%2F542815419"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">suspend override </span><span class="token keyword">fun </span><a href="start.html"><span class="token function">start</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">启动Bot。 启动过程中会通过 <a href="../../love.forte.simbot.component.onebot.v11.core.api/-get-login-info-api/index.html">GetLoginInfoApi</a> 初始化当前账户信息， 并同时初始化 <a href="user-id.html">userId</a>。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2024 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
