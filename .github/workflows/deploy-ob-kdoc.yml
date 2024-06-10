@@ -1,0 +1,22 @@
+name: Deploy OneBot KDoc Pages
+on:
+  push:
+    branches:
+      - kdoc-deploy/component-onebot
+
+jobs:
+  deploy-onebot-kdoc-pages:
+    name: deploy-onebot-kdoc-pages
+    runs-on: ubuntu-latest
+    steps:
+      # 检出仓库代码
+      - uses: actions/checkout@v4
+
+      # https://github.com/marketplace/actions/github-pages-action
+      - name: Deploy component/onebot to doc repository
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          personal_token: ${{ secrets.PUSH_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: components/onebot
+          destination_dir: components/onebot
