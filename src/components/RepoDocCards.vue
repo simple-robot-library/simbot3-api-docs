@@ -66,9 +66,9 @@ function Shield(props) {
 const officialTag = Tag({ name: 'Official', type: 'info' })
 const coreTag = Tag({ name: '核心', type: 'info' })
 const componentTag = Tag({name: "组件", type: "success"})
-const WIPTag = Tag({ name: '<b>WIP🚧</b>', type: 'warning' })
-const helpWanted = Tag({ name: '<b>期待协助🤝</b>', type: 'success' })
-const deadTag = Tag({ name: '<b>阵亡💀</b>', type: 'error' })
+const WIPTag = Tag({ name: '<b>🚧WIP</b>', type: 'warning' })
+const helpWanted = Tag({ name: '<b>🤝期待协助</b>', type: 'success' })
+const deadTag = Tag({ name: '<b>💀阵亡</b>', type: 'error' })
 
 const componentCards = [
   {
@@ -129,7 +129,7 @@ const componentCards = [
   },
   {
     name: "OneBot组件",
-    tags: [WIPTag, helpWanted, officialTag, componentTag],
+    tags: [officialTag, componentTag],
     shields: [
       Shield({
         src: "https://img.shields.io/github/v/release/simple-robot/simbot-component-onebot?label=version",
@@ -186,7 +186,7 @@ const componentCards = [
   },
   {
     name: "mirai组件",
-    tags: [Tag({ name: '濒死⚠', type: 'warning', round: false }), officialTag, componentTag],
+    tags: [Tag({ name: '⚠濒死', type: 'warning', round: false }), officialTag, componentTag],
     shields: [
       Shield({
         // src: "https://img.shields.io/maven-central/v/love.forte.simbot.component/simbot-component-mirai-core?&label=version",

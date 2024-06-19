@@ -13,7 +13,6 @@
             <n-grid-item span="0 m:1 l:1 xl:2"></n-grid-item>
             <n-grid-item span="8 m:6 l:6 xl:4">
               <n-flex vertical>
-                <HorizontalAdUnit />
                 <n-collapse :default-expanded-names="[...collapseActions]" @item-header-click="handleItemHeaderClick">
                   <n-card embedded :bordered="false">
                     <n-collapse-item name="KDoc">
@@ -63,6 +62,7 @@
                     </n-collapse-item>
                   </n-card>
                 </n-collapse>
+                <HorizontalAdUnit />
               </n-flex>
             </n-grid-item>
             <n-grid-item span="0 m:1 l:1 xl:2"></n-grid-item>
