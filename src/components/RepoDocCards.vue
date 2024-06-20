@@ -2,7 +2,15 @@
   <div>
     <n-grid x-gap="12" y-gap="14" cols="1 s:2 m:2 l:3 xl:4 2xl:5" responsive="screen">
       <n-gi v-for="card in componentCards">
-        <n-card :title="card.name" hoverable :content-style="{'min-height': '160px'}">
+        <n-card hoverable :content-style="{'min-height': '160px'}">
+          <template #header>
+            <div v-if="card.deprecated">
+              <s><n-text class="title">{{ card.name }}</n-text></s>
+            </div>
+            <div v-else>
+              <n-text class="title">{{ card.name }}</n-text>
+            </div>
+          </template>
 
           <n-image-group>
             <n-space size="small">
@@ -186,6 +194,7 @@ const componentCards = [
   },
   {
     name: "mirai组件",
+    deprecated: true,
     tags: [Tag({ name: '⚠濒死', type: 'warning', round: false }), officialTag, componentTag],
     shields: [
       Shield({
@@ -207,6 +216,7 @@ const componentCards = [
   {
     name: "米游社大别野组件",
     tags: [deadTag, officialTag, componentTag],
+    deprecated: true,
     shields: [
       Shield({
         src: "https://img.shields.io/github/v/release/simple-robot/simbot-component-miyoushe-villa?label=version",

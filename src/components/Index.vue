@@ -15,23 +15,23 @@
               <n-flex vertical>
                 <n-collapse :default-expanded-names="[...collapseActions]" @item-header-click="handleItemHeaderClick">
                   <n-card embedded :bordered="false">
-                    <n-collapse-item name="KDoc">
+                    <n-collapse-item name="组件库">
                       <RepoDocCards/>
                       <template #header>
                         <n-divider title-placement="left" style="user-select: none">
                           <Icon>
                             <BookOutline/>
                           </Icon> &nbsp;
-                          <n-text strong style="font-size: 19px">KDoc</n-text>
+                          <n-text strong style="font-size: 19px" class="sub-text">组件库</n-text>
                         </n-divider>
                         <n-divider title-placement="center">
-                          <n-collapse-transition :show="!collapseActions.has('KDoc')">
-                            <n-text italic depth="3" style="user-select: none; font-size: 18px">点击展开</n-text>
+                          <n-collapse-transition :show="!collapseActions.has('组件库')">
+                            <n-text italic depth="3" style="user-select: none; font-size: 18px" class="sub-text">点击展开</n-text>
                           </n-collapse-transition>
                         </n-divider>
                         <n-divider title-placement="right">
-                          <n-collapse-transition :show="collapseActions.has('KDoc')">
-                            <n-text italic depth="3" style="user-select: none; font-size: 13px">Javadoc的好朋友</n-text>
+                          <n-collapse-transition :show="collapseActions.has('组件库')">
+                            <n-text italic depth="3" style="user-select: none; font-size: 13px"  class="sub-text">Javadoc的好朋友</n-text>
                           </n-collapse-transition>
                         </n-divider>
                       </template>
@@ -42,20 +42,19 @@
                       <ShowCards/>
                       <template #header>
                         <n-divider title-placement="left" style="user-select: none">
-                          <n-text strong style="font-size: 19px">作品展示</n-text>
-                          &nbsp;
+                          <n-text strong style="font-size: 19px" class="sub-text">作品展示</n-text>
                           <Icon>
                             <HeartOutline/>
                           </Icon>
                         </n-divider>
                         <n-divider title-placement="center">
                           <n-collapse-transition :show="!collapseActions.has('作品展示')">
-                            <n-text italic depth="3" style="user-select: none; font-size: 18px">点击展开</n-text>
+                            <n-text italic depth="3" style="user-select: none; font-size: 18px" class="sub-text">点击展开</n-text>
                           </n-collapse-transition>
                         </n-divider>
                         <n-divider title-placement="right">
                           <n-collapse-transition :show="collapseActions.has('作品展示')">
-                            <n-text italic depth="3" style="user-select: none; font-size: 13px">看看大家的好宝贝</n-text>
+                            <n-text italic depth="3" style="user-select: none; font-size: 13px"  class="sub-text">看看大家的好宝贝</n-text>
                           </n-collapse-transition>
                         </n-divider>
                       </template>
@@ -135,19 +134,19 @@ function onThemeActiveChange(value: boolean) {
 const initCollapseActionsStorage = localStorage.getItem("collapseActions_items")
 let initCollapseActions: Array<string>
 if (initCollapseActionsStorage == null) {
-    initCollapseActions = ["KDoc"]
+    initCollapseActions = ["组件库"]
 } else {
     try {
         const parsed = JSON.parse(initCollapseActionsStorage)
         if (!Array.isArray(parsed)) {
             localStorage.removeItem("collapseActions_items")
-            initCollapseActions = ["KDoc"]
+            initCollapseActions = ["组件库"]
         } else {
             initCollapseActions = parsed
         }
     } catch (e) {
         localStorage.removeItem("collapseActions_items")
-        initCollapseActions = ["KDoc"]
+        initCollapseActions = ["组件库"]
     }
 }
 

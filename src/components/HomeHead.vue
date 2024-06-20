@@ -3,7 +3,7 @@
           :bordered="false">
     <n-page-header subtitle="探寻你的梦中情档">
       <template #title>
-        <n-text>Simple Robot</n-text>
+        <n-text style="font-size: 24px;" class="title">Simple Robot</n-text>
       </template>
 
       <n-menu v-model:value="menuActiveKey"

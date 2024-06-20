@@ -46,7 +46,10 @@ const componentCards = [
   <div>
     <n-grid x-gap="24" y-gap="18" cols="1 s:2 m:2 l:2 xl:3 2xl:4" responsive="screen">
       <n-gi v-for="componentCard in componentCards">
-        <n-card :title="componentCard.name" hoverable :content-style="{'min-height': '160px'}">
+        <n-card hoverable :content-style="{'min-height': '160px'}">
+          <template #header>
+            <n-text class="title">{{ componentCard.name }}</n-text>
+          </template>
 
           <n-image-group>
             <n-space size="small">
