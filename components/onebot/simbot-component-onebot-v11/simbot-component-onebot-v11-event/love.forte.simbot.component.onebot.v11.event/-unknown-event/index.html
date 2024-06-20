@@ -41,7 +41,7 @@
 <a class="library-name--link" href="../../../../index.html">
                             Simple Robot 组件 | OneBot
                     </a>            </div>
-            <div class="library-version">0.6.0
+            <div class="library-version">0.7.0
             </div>
         </div>
         <div class="filter-section" id="filter-section">
@@ -62,24 +62,24 @@
   <div class="breadcrumbs"><a href="../../index.html">simbot-component-onebot-v11-event</a><span class="delimiter">/</span><a href="../index.html">love.forte.simbot.component.onebot.v11.event</a><span class="delimiter">/</span><span class="current">UnknownEvent</span></div>
   <div class="cover ">
     <h1 class="cover"><span>Unknown</span><wbr><span><span>Event</span></span></h1>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot-v11:simbot-component-onebot-v11-event:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="love.forte.simbot.annotations/FragileSimbotAPI///PointingToDeclaration/"><span class="token annotation builtin">FragileSimbotAPI</span></span></div></div><span class="token keyword">data </span><span class="token keyword">class </span><a href="index.html">UnknownEvent</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>time<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>selfId<span class="token operator">: </span><span data-unresolved-link="love.forte.simbot.common.id/LongID///PointingToDeclaration/">LongID</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>postType<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>raw<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span> : <a href="../-raw-event/index.html">RawEvent</a><span class="clearfix"><span class="floating-right">(<a href="https://github.com/simple-robot/simbot-component-onebot/tree/dev/main/simbot-component-onebot-v11/simbot-component-onebot-v11-event/src//commonMain/kotlin/love/forte/simbot/component/onebot/v11/event/UnknownEvent.kt#L40">source</a>)</span></span></div><p class="paragraph">用于“兜底”的 <a href="../-raw-event/index.html">RawEvent</a> 类型实现。 当出现了尚未支持或某种未知的事件体，无法对应到任何现有的已定义结构时， 则应当将其解析并包装为 <a href="index.html">UnknownEvent</a>。</p><p class="paragraph"><a href="index.html">UnknownEvent</a> 要求事件体必须包括 <a href="time.html">time</a>, <a href="self-id.html">selfId</a> 和 <a href="post-type.html">postType</a>。</p><h3 class="">FragileAPI</h3><p class="paragraph">这是一个具有<strong>特殊规则</strong>的事件类型。 随着版本地更新，<a href="index.html">UnknownEvent</a> 中可能出现的事件类型会越来越少。 因此此类型只适用于“兜底”，不应过度依赖。</p><span class="kdoc-tag"><h4 class="">Author</h4><p class="paragraph">ForteScarlet</p></span></div></div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot-v11:simbot-component-onebot-v11-event:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="love.forte.simbot.annotations/FragileSimbotAPI///PointingToDeclaration/"><span class="token annotation builtin">FragileSimbotAPI</span></span></div></div><span class="token keyword">class </span><a href="index.html">UnknownEvent</a>&nbsp;<span><span class="token annotation builtin">@</span><a href="../../../../simbot-component-onebot-common/love.forte.simbot.component.onebot.common.annotations/-internal-one-bot-a-p-i/index.html"><span class="token annotation builtin">InternalOneBotAPI</span></a>&nbsp;</span><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>time<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>selfId<span class="token operator">: </span><span data-unresolved-link="love.forte.simbot.common.id/LongID///PointingToDeclaration/">LongID</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>postType<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>raw<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>rawJson<span class="token operator">: </span><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-json/kotlinx.serialization.json/-json-object/index.html">JsonObject</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>reason<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html">Throwable</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span> : <a href="../-raw-event/index.html">RawEvent</a><span class="clearfix"><span class="floating-right">(<a href="https://github.com/simple-robot/simbot-component-onebot/tree/dev/main/simbot-component-onebot-v11/simbot-component-onebot-v11-event/src//commonMain/kotlin/love/forte/simbot/component/onebot/v11/event/UnknownEvent.kt#L51">source</a>)</span></span></div><p class="paragraph">用于“兜底”的 <a href="../-raw-event/index.html">RawEvent</a> 类型实现。 当出现了尚未支持或某种未知的事件体，无法对应到任何现有的已定义结构时， 则应当将其解析并包装为 <a href="index.html">UnknownEvent</a>。</p><p class="paragraph"><a href="index.html">UnknownEvent</a> 要求事件体必须包括 <a href="time.html">time</a>, <a href="self-id.html">selfId</a> 和 <a href="post-type.html">postType</a>。</p><p class="paragraph">如果 <a href="index.html">UnknownEvent</a> 是由于某些异常而产生（例如原本事件进行序列化但是失败了）， 那么失败的原因则会通过 <a href="reason.html">reason</a> 提供。</p><h3 class="">内部构造</h3><p class="paragraph"><a href="index.html">UnknownEvent</a> 应当始终由内部使用、构造， 不要在其他地方自行构造 <a href="index.html">UnknownEvent</a>， 它的构造函数不保证任何源码或二进制兼容。</p><h3 class="">FragileAPI</h3><p class="paragraph">这是一个具有<strong>特殊规则</strong>的事件类型。 随着版本地更新，<a href="index.html">UnknownEvent</a> 中可能出现的事件类型会越来越少。 因此此类型只适用于“兜底”，不应过度依赖。</p><span class="kdoc-tag"><h4 class="">Author</h4><p class="paragraph">ForteScarlet</p></span></div></div>
   </div>
   <div class="tabbedcontent">
     <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
     <div class="tabs-section-body">
       <div data-togglable="CONSTRUCTOR">
         <h2 class="">Constructors</h2>
-        <div class="table"><a data-name="-2133407580%2FConstructors%2F2047467268" anchor-label="UnknownEvent" id="-2133407580%2FConstructors%2F2047467268" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-event:dokkaHtmlPartial/commonMain"></a>
+        <div class="table"><a data-name="-796281370%2FConstructors%2F2047467268" anchor-label="UnknownEvent" id="-796281370%2FConstructors%2F2047467268" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-event:dokkaHtmlPartial/commonMain"></a>
           <div class="table-row" data-togglable="CONSTRUCTOR" data-filterable-current=":simbot-component-onebot-v11:simbot-component-onebot-v11-event:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-event:dokkaHtmlPartial/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="-unknown-event.html"><span>Unknown</span><wbr><span><span>Event</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2133407580%2FConstructors%2F2047467268"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-796281370%2FConstructors%2F2047467268"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot-v11:simbot-component-onebot-v11-event:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">time<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a><span class="token punctuation">, </span></span><span class="parameter ">selfId<span class="token operator">: </span><span data-unresolved-link="love.forte.simbot.common.id/LongID///PointingToDeclaration/">LongID</span><span class="token punctuation">, </span></span><span class="parameter ">postType<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">raw<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot-v11:simbot-component-onebot-v11-event:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../../../simbot-component-onebot-common/love.forte.simbot.component.onebot.common.annotations/-internal-one-bot-a-p-i/index.html"><span class="token annotation builtin">InternalOneBotAPI</span></a></div></div><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">time<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a><span class="token punctuation">, </span></span><span class="parameter ">selfId<span class="token operator">: </span><span data-unresolved-link="love.forte.simbot.common.id/LongID///PointingToDeclaration/">LongID</span><span class="token punctuation">, </span></span><span class="parameter ">postType<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">raw<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">rawJson<span class="token operator">: </span><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-json/kotlinx.serialization.json/-json-object/index.html">JsonObject</a><span class="token punctuation">, </span></span><span class="parameter ">reason<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html">Throwable</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span></div></div></div>
                 </div>
               </div>
             </div>
@@ -113,7 +113,37 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot-v11:simbot-component-onebot-v11-event:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="raw.html">raw</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">原始的JSON字符串</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot-v11:simbot-component-onebot-v11-event:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="raw.html">raw</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">原始的JSON字符串， 也是判断 <a href="index.html">UnknownEvent</a> 之间是否相同的<strong>唯一依据</strong>。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1014831249%2FProperties%2F2047467268" anchor-label="rawJson" id="1014831249%2FProperties%2F2047467268" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-event:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-onebot-v11:simbot-component-onebot-v11-event:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-event:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="raw-json.html"><span>raw</span><wbr><span><span>Json</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1014831249%2FProperties%2F2047467268"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot-v11:simbot-component-onebot-v11-event:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="raw-json.html">rawJson</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-json/kotlinx.serialization.json/-json-object/index.html">JsonObject</a></div><div class="brief "><p class="paragraph"><a href="raw.html">raw</a> 对应解析的 <a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-json/kotlinx.serialization.json/-json-object/index.html">JsonObject</a> 对象。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1081528693%2FProperties%2F2047467268" anchor-label="reason" id="1081528693%2FProperties%2F2047467268" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-event:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-onebot-v11:simbot-component-onebot-v11-event:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-event:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="reason.html"><span><span>reason</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1081528693%2FProperties%2F2047467268"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot-v11:simbot-component-onebot-v11-event:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="reason.html">reason</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html">Throwable</a><span class="token operator">?</span><span class="token operator"> = </span>null</div><div class="brief "><p class="paragraph">如果是由于异常而产生，则此处为异常的原因。 通常会是 <a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-core/kotlinx.serialization/-serialization-exception/index.html">SerializationException</a>。</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -144,6 +174,55 @@
               <div>
                 <div class="title">
                   <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot-v11:simbot-component-onebot-v11-event:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="time.html">time</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a></div><div class="brief "><p class="paragraph">事件发生的时间戳</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="-713327768%2FFunctions%2F2047467268" anchor-label="equals" id="-713327768%2FFunctions%2F2047467268" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-event:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-onebot-v11:simbot-component-onebot-v11-event:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-event:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="equals.html"><span><span>equals</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-713327768%2FFunctions%2F2047467268"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot-v11:simbot-component-onebot-v11-event:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">operator override </span><span class="token keyword">fun </span><a href="equals.html"><span class="token function">equals</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">other<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1889843326%2FFunctions%2F2047467268" anchor-label="hashCode" id="1889843326%2FFunctions%2F2047467268" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-event:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-onebot-v11:simbot-component-onebot-v11-event:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-event:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="hash-code.html"><span>hash</span><wbr><span><span>Code</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1889843326%2FFunctions%2F2047467268"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot-v11:simbot-component-onebot-v11-event:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="hash-code.html"><span class="token function">hashCode</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1711677261%2FFunctions%2F2047467268" anchor-label="toString" id="1711677261%2FFunctions%2F2047467268" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-event:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-onebot-v11:simbot-component-onebot-v11-event:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-event:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="to-string.html"><span>to</span><wbr><span><span>String</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1711677261%2FFunctions%2F2047467268"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot-v11:simbot-component-onebot-v11-event:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="to-string.html"><span class="token function">toString</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div></div></div>
                 </div>
               </div>
             </div>
