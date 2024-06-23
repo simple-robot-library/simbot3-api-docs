@@ -1,0 +1,125 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>TypedJNonBlockEventListener</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<body>
+    <div class="root">
+<nav class="navigation" id="navigation-wrapper">
+    <div class="navigation--inner">
+        <div class="navigation-title">
+            <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
+            <div class="library-name">
+<a class="library-name--link" href="../../../index.html">
+                            Simple Robot
+                    </a>            </div>
+            <div class="library-version">4.1.0
+            </div>
+        </div>
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":simbot-api:dokkaHtmlPartial/jvmMain">jvm</button>
+        </div>
+    </div>
+    <div class="navigation-controls">
+        <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
+        <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
+    </div>
+</nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="sidebar--inner" id="sideMenu"></div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="simbot-api::love.forte.simbot.event/TypedJNonBlockEventListener///PointingToDeclaration//163940576">
+  <div class="breadcrumbs"><a href="../../index.html">simbot-api</a><span class="delimiter">/</span><a href="../index.html">love.forte.simbot.event</a><span class="delimiter">/</span><span class="current">TypedJNonBlockEventListener</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Typed</span><wbr><span>JNon</span><wbr><span>Block</span><wbr><span>Event</span><wbr><span><span>Listener</span></span></h1>
+    <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+      <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":simbot-api:dokkaHtmlPartial/jvmMain" data-filterable-set=":simbot-api:dokkaHtmlPartial/jvmMain" data-active="" data-toggle=":simbot-api:dokkaHtmlPartial/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword">fun </span><span class="token keyword">interface </span><a href="index.html">TypedJNonBlockEventListener</a><span class="token operator">&lt;</span><a href="index.html">E</a><span class="token operator"> : </span><a href="../-event/index.html">Event</a><span class="token operator">&gt;</span><span class="clearfix"><span class="floating-right">(<a href="https://github.com/simple-robot/simpler-robot/tree/v4-dev/simbot-api/src//jvmMain/kotlin/love/forte/simbot/event/EventListener.jvm.kt#L534">source</a>)</span></span></div><p class="paragraph">一个事件 <a href="../-event/index.html">Event</a> 的非阻塞监听器。也可以称之为事件处理器。</p><p class="paragraph">是针对JVM平台的兼容类型，可以通过 <a href="-companion/to-listener.html">toListener</a> 转化为 <a href="../-event-listener/index.html">EventListener</a> 类型。</p><p class="paragraph">会针对指定的类型进行事件处理。如果类型不匹配则会返回 <a href="../-event-result/-companion/invalid.html">EventResult.invalid</a>。</p><p class="paragraph">与 <a href="../-typed-j-block-event-listener/index.html">TypedJBlockEventListener</a> 不同，<a href="index.html">TypedJNonBlockEventListener</a> 不会在执行 <a href="handle.html">handle</a> 的时候进行额外的处理（例如使用 <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/index.html">runInterruptible</a>、<a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-dispatchers/-i-o.html">Dispatchers.IO</a> 等）， 因此 <a href="index.html">TypedJNonBlockEventListener</a> 更适合用于返回那些<strong>非阻塞</strong>的结果。</p><p class="paragraph"><a href="handle.html">handle</a> 默认被视为非阻塞的，并将响应式结果 (或其他可收集结果) 放在 <a href="../-standard-event-result/-collectable-reactively-result/index.html">StandardEventResult.CollectableReactivelyResult</a> 类型的结果内。</p><div class="sample-container"><pre><code class="block lang-java" theme="idea">EventListeners.nonBlock(<br>    Event.class,<br>    (context, event) -&gt; {<br>        return EventResult.of(<br>            Mono.just("Hello.");<br>        );<br>    }<br>);</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><span class="kdoc-tag"><h4 class="">Since</h4><p class="paragraph">4.1.0</p></span><span class="kdoc-tag"><h4 class="">Author</h4><p class="paragraph">ForteScarlet</p></span><h4 class="">See also</h4><div class="table"><div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/jvmMain" data-filterable-set=":simbot-api:dokkaHtmlPartial/jvmMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../-event-listener/index.html"><span>Event</span><wbr><span><span>Listener</span></span></a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/jvmMain" data-filterable-set=":simbot-api:dokkaHtmlPartial/jvmMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="-companion/to-listener.html"><span>Typed</span><wbr><span>JNon</span><wbr><span>Block</span><wbr><span>Event</span><wbr><span>Listener.</span><wbr><span>Companion.</span><wbr><span>toListener</span></a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/jvmMain" data-filterable-set=":simbot-api:dokkaHtmlPartial/jvmMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../-standard-event-result/-collectable-reactively-result/index.html"><span>Standard</span><wbr><span>Event</span><wbr><span>Result.</span><wbr><span>Collectable</span><wbr><span>Reactively</span><wbr><span><span>Result</span></span></a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/jvmMain" data-filterable-set=":simbot-api:dokkaHtmlPartial/jvmMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../-standard-event-result/-simple/index.html"><span>Standard</span><wbr><span>Event</span><wbr><span>Result.</span><wbr><span>Simple</span></a></div></span></div><div></div></div></div></div></div>    </div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="TYPE">
+        <h2 class="">Types</h2>
+        <div class="table"><a data-name="1469778376%2FClasslikes%2F163940576" anchor-label="Companion" id="1469778376%2FClasslikes%2F163940576" data-filterable-set=":simbot-api:dokkaHtmlPartial/jvmMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/jvmMain" data-filterable-set=":simbot-api:dokkaHtmlPartial/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-companion/index.html"><span><span>Companion</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1469778376%2FClasslikes%2F163940576"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":simbot-api:dokkaHtmlPartial/jvmMain" data-filterable-set=":simbot-api:dokkaHtmlPartial/jvmMain" data-active="" data-toggle=":simbot-api:dokkaHtmlPartial/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword">object </span><a href="-companion/index.html">Companion</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="476002069%2FFunctions%2F163940576" anchor-label="handle" id="476002069%2FFunctions%2F163940576" data-filterable-set=":simbot-api:dokkaHtmlPartial/jvmMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/jvmMain" data-filterable-set=":simbot-api:dokkaHtmlPartial/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="handle.html"><span><span>handle</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="476002069%2FFunctions%2F163940576"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":simbot-api:dokkaHtmlPartial/jvmMain" data-filterable-set=":simbot-api:dokkaHtmlPartial/jvmMain" data-active="" data-toggle=":simbot-api:dokkaHtmlPartial/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="org.jetbrains.annotations/NonBlocking///PointingToDeclaration/"><span class="token annotation builtin">NonBlocking</span></span></div></div><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="handle.html"><span class="token function">handle</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">context<span class="token operator">: </span><a href="../-event-listener-context/index.html">EventListenerContext</a><span class="token punctuation">, </span></span><span class="parameter ">event<span class="token operator">: </span><a href="index.html">E</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-event-result/index.html">EventResult</a></div><div class="brief "><p class="paragraph">通过 <a href="handle.html">context</a> 处理事件并得到响应结果。</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2024 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
