@@ -89,8 +89,8 @@ const componentCards = [
     links: [
       [{name: "前往仓库", href: "https://github.com/simple-robot/simpler-robot", type: "info"}],
       [
-        {name: "API文档", href: "main-v4", type: "primary"},
-        {name: "API文档(快照)", href: "snapshots/main-v4", type: "primary"},
+        {name: "API文档", href: "main-v4/", type: "primary"},
+        {name: "API文档(快照)", href: "snapshots/main-v4/", type: "primary"},
       ],
       [{name: "🍀官网", href: "https://simbot.forte.love", type: "default"}],
     ]
@@ -110,10 +110,10 @@ const componentCards = [
     links: [
       [{name: "前往仓库", href: "https://github.com/simple-robot/simbot-component-kook", type: "info"}],
       [
-        {name: "API文档", href: "components/kook", type: "primary"},
-        {name: "API文档(快照)", href: "snapshots/components/kook", type: "primary"},
+        {name: "API文档", href: "components/kook/", type: "primary"},
+        {name: "API文档(快照)", href: "snapshots/components/kook/", type: "primary"},
       ],
-      [{name: "前往手册", href: "https://component-kook.simbot.forte.love/", type: "default"}],
+      [{name: "前往手册", href: "https://simple-robot.github.io/simbot-component-kook", type: "default"}],
     ]
   },
   {
@@ -129,10 +129,10 @@ const componentCards = [
     links: [
       [{name: "前往仓库", href: "https://github.com/simple-robot/simbot-component-qq-guild", type: "info"}],
       [
-        {name: "API文档", href: "components/qq-guild", type: "primary"},
-        {name: "API文档(快照)", href: "snapshots/components/qq-guild", type: "primary"}
+        {name: "API文档", href: "components/qq-guild/", type: "primary"},
+        {name: "API文档(快照)", href: "snapshots/components/qq-guild/", type: "primary"}
       ],
-      [{name: "前往手册", href: "http://component-qqguild.simbot.forte.love/", type: "default"}],
+      [{name: "前往手册", href: "https://simple-robot.github.io/simbot-component-qq-guild", type: "default"}],
     ]
   },
   {
@@ -148,8 +148,8 @@ const componentCards = [
     links: [
       [{name: "前往仓库", href: "https://github.com/simple-robot/simbot-component-onebot", type: "info"}],
       [
-        {name: "API文档", href: "components/onebot", type: "primary"},
-        {name: "API文档(快照)", href: "snapshots/components/onebot", type: "primary"}
+        {name: "API文档", href: "components/onebot/", type: "primary"},
+        {name: "API文档(快照)", href: "snapshots/components/onebot/", type: "primary"}
       ],
       [{name: "前往手册", href: "https://simple-robot.github.io/simbot-component-onebot", type: "default"}],
     ]
@@ -167,8 +167,8 @@ const componentCards = [
     links: [
       [{name: "前往仓库", href: "https://github.com/simple-robot/simbot-component-telegram", type: "info"}],
       [
-        {name: "API文档", href: "components/telegram", type: "primary"},
-        {name: "API文档(快照)", href: "snapshots/components/telegram", type: "primary"}
+        {name: "API文档", href: "components/telegram/", type: "primary"},
+        {name: "API文档(快照)", href: "snapshots/components/telegram/", type: "primary"}
       ],
       [{name: "前往手册", href: "https://simple-robot.github.io/simbot-component-telegram", type: "default"}],
     ]
@@ -186,8 +186,8 @@ const componentCards = [
     links: [
       [{name: "前往仓库", href: "https://github.com/simple-robot/simbot-component-discord", type: "info"}],
       [
-        {name: "API文档", href: "components/discord", type: "primary"},
-        {name: "API文档(快照)", href: "snapshots/components/discord", type: "primary"}
+        {name: "API文档", href: "components/discord/", type: "primary"},
+        {name: "API文档(快照)", href: "snapshots/components/discord/", type: "primary"}
       ],
       [{name: "前往手册", href: "https://simple-robot.github.io/simbot-component-discord", type: "default"}],
     ]
@@ -207,8 +207,8 @@ const componentCards = [
     links: [
       [{name: "前往仓库", href: "https://github.com/simple-robot/simbot-component-mirai", type: "info"}],
       [
-        {name: "API文档", href: "components/mirai", type: "primary"},
-        {name: "API文档(快照)", href: "snapshots/components/mirai", type: "primary"},
+        {name: "API文档", href: "components/mirai/", type: "primary"},
+        {name: "API文档(快照)", href: "snapshots/components/mirai/", type: "primary"},
       ],
       [{name: "前往手册", href: "https://simple-robot.github.io/simbot-component-mirai", type: "default"}],
     ]
@@ -227,8 +227,8 @@ const componentCards = [
     links: [
       [{name: "前往仓库", href: "https://github.com/simple-robot/simbot-component-miyoushe-villa", type: "info"}],
       [
-        {name: "API文档", href: "components/miyoushe-villa", type: "primary"},
-        {name: "API文档(快照)", href: "snapshots/components/miyoushe-villa", type: "primary"}
+        {name: "API文档", href: "components/miyoushe-villa/", type: "primary"},
+        {name: "API文档(快照)", href: "snapshots/components/miyoushe-villa/", type: "primary"}
       ],
       [{name: "前往手册", href: "https://simple-robot.github.io/simbot-component-miyoushe-villa/", type: "default"}],
     ]
