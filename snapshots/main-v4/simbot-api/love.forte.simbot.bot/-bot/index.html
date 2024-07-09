@@ -62,10 +62,10 @@
   <div class="breadcrumbs"><a href="../../index.html">simbot-api</a><span class="delimiter">/</span><a href="../index.html">love.forte.simbot.bot</a><span class="delimiter">/</span><span class="current">Bot</span></div>
   <div class="cover ">
     <h1 class="cover"><span><span>Bot</span></span></h1>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="index.html">Bot</a> : <a href="../../../simbot-commons/simbot-common-core/love.forte.simbot.common.id/-i-d-container/index.html">IDContainer</a>, <a href="../../love.forte.simbot.ability/-lifecycle-aware/index.html">LifecycleAware</a>, <a href="../../love.forte.simbot.ability/-completion-aware/index.html">CompletionAware</a>, <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-coroutine-scope/index.html">CoroutineScope</a>, <a href="../-bot-relations/index.html">BotRelations</a><span class="clearfix"><span class="floating-right">(<a href="https://github.com/simple-robot/simpler-robot/tree/v4-dev/simbot-api/src//commonMain/kotlin/love/forte/simbot/bot/Bot.kt#L52">source</a>)</span></span></div><p class="paragraph">一个 <code class="lang-kotlin">Bot</code>。</p><h2 class="">行为关系</h2><p class="paragraph"><a href="index.html">Bot</a> 实现 <a href="../-bot-relations/index.html">BotRelations</a> 并提供了部分基础的行为关系对象， 它们可以提供针对 <a href="../../love.forte.simbot.definition/-guild/index.html">Guild</a>、<a href="../../love.forte.simbot.definition/-chat-group/index.html">ChatGroup</a>、<a href="../../love.forte.simbot.definition/-contact/index.html">Contact</a> 等常见行为对象的操作。 <a href="index.html">Bot</a> 的实现者也许会根据不同的平台扩展这些行为类型或提供更多的行为类型。</p><span class="kdoc-tag"><h4 class="">Author</h4><p class="paragraph">ForteScarlet</p></span><h4 class="">Inheritors</h4><div class="table"><div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-api:dokkaHtmlPartial/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../-job-based-bot/index.html">JobBasedBot</a></div></span></div><div></div></div></div></div></div></div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="index.html">Bot</a> : <a href="../../../simbot-commons/simbot-common-core/love.forte.simbot.common.id/-i-d-container/index.html">IDContainer</a>, <a href="../../love.forte.simbot.ability/-lifecycle-aware/index.html">LifecycleAware</a>, <a href="../../love.forte.simbot.ability/-completion-aware/index.html">CompletionAware</a>, <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-coroutine-scope/index.html">CoroutineScope</a>, <a href="../-bot-relations/index.html">BotRelations</a><span class="clearfix"><span class="floating-right">(<a href="https://github.com/simple-robot/simpler-robot/tree/v4-dev/simbot-api/src//commonMain/kotlin/love/forte/simbot/bot/Bot.kt#L57">source</a>)</span></span></div><p class="paragraph">一个 <code class="lang-kotlin">Bot</code>。</p><h2 class="">行为关系</h2><p class="paragraph"><a href="index.html">Bot</a> 实现 <a href="../-bot-relations/index.html">BotRelations</a> 并提供了部分基础的行为关系对象， 它们可以提供针对 <a href="../../love.forte.simbot.definition/-guild/index.html">Guild</a>、<a href="../../love.forte.simbot.definition/-chat-group/index.html">ChatGroup</a>、<a href="../../love.forte.simbot.definition/-contact/index.html">Contact</a> 等常见行为对象的操作。 <a href="index.html">Bot</a> 的实现者也许会根据不同的平台扩展这些行为类型或提供更多的行为类型。</p><span class="kdoc-tag"><h4 class="">Author</h4><p class="paragraph">ForteScarlet</p></span><h4 class="">Inheritors</h4><div class="table"><div class="table-row" data-filterable-current=":simbot-api:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-api:dokkaHtmlPartial/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../-job-based-bot/index.html">JobBasedBot</a></div></span></div><div></div></div></div></div></div></div>
   </div>
   <div class="tabbedcontent">
-    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button><button class="section-tab" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION,EXTENSION_PROPERTY,EXTENSION_FUNCTION">Members &amp; Extensions</button></div>
     <div class="tabs-section-body">
       <div data-togglable="PROPERTY">
         <h2 class="">Properties</h2>
@@ -294,6 +294,36 @@
               <div>
                 <div class="title">
                   <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="start.html"><span class="token function">start</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">启动当前 <a href="index.html">Bot</a>。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1994336041%2FFunctions%2F606787926" anchor-label="startAndJoin" id="1994336041%2FFunctions%2F606787926" data-filterable-set=":simbot-api:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":simbot-api:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-api:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../start-and-join.html"><span>start</span><wbr><span>And</span><wbr><span><span>Join</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1994336041%2FFunctions%2F606787926"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="index.html">Bot</a><span class="token punctuation">.</span><a href="../start-and-join.html"><span class="token function">startAndJoin</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">启动当前 <a href="index.html">Bot</a> 后挂起。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="289584619%2FFunctions%2F606787926" anchor-label="startIn" id="289584619%2FFunctions%2F606787926" data-filterable-set=":simbot-api:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":simbot-api:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-api:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../start-in.html"><span>start</span><wbr><span><span>In</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="289584619%2FFunctions%2F606787926"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="index.html">Bot</a><span class="token punctuation">.</span><a href="../start-in.html"><span class="token function">startIn</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">scope<span class="token operator">: </span><a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-coroutine-scope/index.html">CoroutineScope</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-job/index.html">Job</a></div><div class="brief "><p class="paragraph">通过 <a href="../start-in.html">scope</a> 在异步中启动 <a href="index.html">Bot</a>。</p></div></div></div>
                 </div>
               </div>
             </div>
