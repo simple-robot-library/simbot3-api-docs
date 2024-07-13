@@ -113,7 +113,7 @@ const componentCards = [
         {name: "API文档", href: "components/kook/", type: "primary"},
         {name: "API文档(快照)", href: "snapshots/components/kook/", type: "primary"},
       ],
-      [{name: "前往手册", href: "https://simple-robot.github.io/simbot-component-kook", type: "default"}],
+      [{name: "前往手册", href: "https://simbot.forte.love/component-kook.html", type: "default"}],
     ]
   },
   {
@@ -132,7 +132,7 @@ const componentCards = [
         {name: "API文档", href: "components/qq-guild/", type: "primary"},
         {name: "API文档(快照)", href: "snapshots/components/qq-guild/", type: "primary"}
       ],
-      [{name: "前往手册", href: "https://simple-robot.github.io/simbot-component-qq-guild", type: "default"}],
+      [{name: "前往手册", href: "https://simbot.forte.love/component-qq-guild.html", type: "default"}],
     ]
   },
   {
@@ -171,7 +171,7 @@ const componentCards = [
         {name: "API文档", href: "components/telegram/", type: "primary"},
         {name: "API文档(快照)", href: "snapshots/components/telegram/", type: "primary"}
       ],
-      [{name: "前往手册", href: "https://simple-robot.github.io/simbot-component-telegram", type: "default"}],
+      [{name: "前往手册", href: "https://simbot.forte.love/component-telegram.html", type: "default"}],
     ]
   },
   {
@@ -190,7 +190,7 @@ const componentCards = [
         {name: "API文档", href: "components/discord/", type: "primary"},
         {name: "API文档(快照)", href: "snapshots/components/discord/", type: "primary"}
       ],
-      [{name: "前往手册", href: "https://simple-robot.github.io/simbot-component-discord", type: "default"}],
+      [{name: "前往手册", href: "https://simbot.forte.love/component-discord.html", type: "default"}],
     ]
   },
   {
