@@ -92,7 +92,7 @@ const componentCards = [
         {name: "API文档", href: "main-v4/", type: "primary"},
         {name: "API文档(快照)", href: "snapshots/main-v4/", type: "primary"},
       ],
-      [{name: "🍀官网", href: "https://simbot.forte.love", type: "default"}],
+      [{name: "🍀官网", href: "https://simbot.forte.love/", type: "default"}],
     ]
   },
 
@@ -151,7 +151,8 @@ const componentCards = [
         {name: "API文档", href: "components/onebot/", type: "primary"},
         {name: "API文档(快照)", href: "snapshots/components/onebot/", type: "primary"}
       ],
-      [{name: "前往手册", href: "https://simple-robot.github.io/simbot-component-onebot", type: "default"}],
+      // [{name: "前往手册", href: "https://simple-robot.github.io/simbot-component-onebot", type: "default"}],
+      [{name: "前往手册", href: "https://simbot.forte.love/component-onebot.html", type: "default"}],
     ]
   },
   {
