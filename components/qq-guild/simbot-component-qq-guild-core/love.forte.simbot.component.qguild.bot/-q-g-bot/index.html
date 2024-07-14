@@ -41,7 +41,7 @@
 <a class="library-name--link" href="../../../index.html">
                             Simple Robot 组件 | QQ Guild
                     </a>            </div>
-            <div class="library-version">4.0.0-beta5
+            <div class="library-version">4.0.0-beta6
             </div>
         </div>
         <div class="filter-section" id="filter-section">
@@ -62,7 +62,7 @@
   <div class="breadcrumbs"><a href="../../index.html">simbot-component-qq-guild-core</a><span class="delimiter">/</span><a href="../index.html">love.forte.simbot.component.qguild.bot</a><span class="delimiter">/</span><span class="current">QGBot</span></div>
   <div class="cover ">
     <h1 class="cover"><span><span>QGBot</span></span></h1>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq-guild-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="index.html">QGBot</a> : <a href="https://docs.simbot.forte.love/main/simbot-api/love.forte.simbot.bot/-bot/index.html">Bot</a><span class="clearfix"><span class="floating-right">(<a href="https://github.com/simple-robot/simbot-component-qq-guild/tree/main/simbot-component-qq-guild-core/src//commonMain/kotlin/love/forte/simbot/component/qguild/bot/QGBot.kt#L54">source</a>)</span></span></div><p class="paragraph">一个 <a href="../../../simbot-component-qq-guild-stdlib/love.forte.simbot.qguild.stdlib/-bot/index.html">QQ频道Bot</a> 的 simbot组件实现接口， 是一个具有功能的 QQ频道组件Bot。</p><h3 class="">AppID 与 用户ID</h3><p class="paragraph"><a href="index.html">QGBot</a> 的 <a href="id.html">id</a> 是用于连接服务器的 <code class="lang-kotlin">appId</code> 而并非系统用户ID。 如果希望获取bot的 <strong>用户ID</strong>, 至少执行过一次 <a href="start.html">QGBot.start</a> 后通过 <a href="user-id.html">userId</a> 获取， 或者通过 <a href="me.html">me</a> 实时查询。</p><p class="paragraph"><i>Note: QGBot仅由内部实现，对外不稳定</i></p><span class="kdoc-tag"><h4 class="">Author</h4><p class="paragraph">ForteScarlet</p></span></div></div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq-guild-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="index.html">QGBot</a> : <a href="https://docs.simbot.forte.love/main/simbot-api/love.forte.simbot.bot/-bot/index.html">Bot</a>, <a href="https://docs.simbot.forte.love/main/simbot-api/love.forte.simbot.ability/-event-mention-aware/index.html">EventMentionAware</a><span class="clearfix"><span class="floating-right">(<a href="https://github.com/simple-robot/simbot-component-qq-guild/tree/main/simbot-component-qq-guild-core/src//commonMain/kotlin/love/forte/simbot/component/qguild/bot/QGBot.kt#L63">source</a>)</span></span></div><p class="paragraph">一个 <a href="../../../simbot-component-qq-guild-stdlib/love.forte.simbot.qguild.stdlib/-bot/index.html">QQ频道Bot</a> 的 simbot组件实现接口， 是一个具有功能的 QQ频道组件Bot。</p><h3 class="">AppID 与 用户ID</h3><p class="paragraph"><a href="index.html">QGBot</a> 的 <a href="id.html">id</a> 是用于连接服务器的 <code class="lang-kotlin">appId</code> 而并非系统用户ID。 如果希望获取bot的 <strong>用户ID</strong>, 至少执行过一次 <a href="start.html">QGBot.start</a> 后通过 <a href="user-id.html">userId</a> 获取， 或者通过 <a href="me.html">me</a> 实时查询。</p><p class="paragraph"><i>Note: QGBot仅由内部实现，对外不稳定</i></p><span class="kdoc-tag"><h4 class="">Author</h4><p class="paragraph">ForteScarlet</p></span></div></div>
   </div>
   <div class="tabbedcontent">
     <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button><button class="section-tab" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION,EXTENSION_PROPERTY,EXTENSION_FUNCTION">Members &amp; Extensions</button></div>
@@ -109,7 +109,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq-guild-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="contact-relation.html">contactRelation</a><span class="token operator">: </span><a href="https://docs.simbot.forte.love/main/simbot-api/love.forte.simbot.bot/-contact-relation/index.html">ContactRelation</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">QQ频道BOT不存在'联系人'相关操作，始终得到 <code class="lang-kotlin">null</code>。</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq-guild-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="contact-relation.html">contactRelation</a><span class="token operator">: </span><a href="https://docs.simbot.forte.love/main/simbot-api/love.forte.simbot.bot/-contact-relation/index.html">ContactRelation</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">QQ好友、单聊相关内容没有能支持获取它们的API， 始终得到 <code class="lang-kotlin">null</code>。</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -139,7 +139,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq-guild-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="group-relation.html">groupRelation</a><span class="token operator">: </span><a href="https://docs.simbot.forte.love/main/simbot-api/love.forte.simbot.bot/-group-relation/index.html">GroupRelation</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">QQ频道BOT没有'群'概念，始终得到 <code class="lang-kotlin">null</code>。</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq-guild-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="group-relation.html">groupRelation</a><span class="token operator">: </span><a href="../../love.forte.simbot.component.qguild.group/-q-g-group-relation/index.html">QGGroupRelation</a></div><div class="brief "><p class="paragraph">QQ群相关内容的操作。</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -298,6 +298,21 @@
               </div>
             </div>
           </div>
+<a data-name="1947460410%2FFunctions%2F-2090008390" anchor-label="isMention" id="1947460410%2FFunctions%2F-2090008390" data-filterable-set=":simbot-component-qq-guild-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-qq-guild-core:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-qq-guild-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-mention.html"><span>is</span><wbr><span><span>Mention</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1947460410%2FFunctions%2F-2090008390"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq-guild-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="is-mention.html"><span class="token function">isMention</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">event<span class="token operator">: </span><a href="https://docs.simbot.forte.love/main/simbot-api/love.forte.simbot.event/-event/index.html">Event</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">如果事件类型为</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
 <a data-name="255417269%2FFunctions%2F-2090008390" anchor-label="join" id="255417269%2FFunctions%2F-2090008390" data-filterable-set=":simbot-component-qq-guild-core:dokkaHtmlPartial/commonMain"></a>
           <div class="table-row" data-filterable-current=":simbot-component-qq-guild-core:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-qq-guild-core:dokkaHtmlPartial/commonMain">
             <div class="main-subrow keyValue ">
@@ -343,6 +358,21 @@
               </div>
             </div>
           </div>
+<a data-name="-457225276%2FFunctions%2F-2090008390" anchor-label="sendGroupMessage" id="-457225276%2FFunctions%2F-2090008390" data-filterable-set=":simbot-component-qq-guild-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":simbot-component-qq-guild-core:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-qq-guild-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../love.forte.simbot.component.qguild.message/send-group-message.html"><span>send</span><wbr><span>Group</span><wbr><span><span>Message</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-457225276%2FFunctions%2F-2090008390"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq-guild-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../../simbot-component-qq-guild-api/love.forte.simbot.qguild/-q-g-internal-api/index.html"><span class="token annotation builtin">QGInternalApi</span></a></div></div><span class="token keyword">inline suspend </span><span class="token keyword">fun </span><a href="index.html">QGBot</a><span class="token punctuation">.</span><a href="../../love.forte.simbot.component.qguild.message/send-group-message.html"><span class="token function">sendGroupMessage</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">openid<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">messageContent<span class="token operator">: </span><a href="https://docs.simbot.forte.love/main/simbot-api/love.forte.simbot.message/-message-content/index.html">MessageContent</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">crossinline </span>onEachPre<span class="token operator">: </span><a href="../../../simbot-component-qq-guild-api/love.forte.simbot.qguild.api.message/-group-and-c2-c-send-body/index.html">GroupAndC2CSendBody</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a><span class="token operator"> = </span>{}<span class="token punctuation">, </span></span><span class="parameter ">onEachPost<span class="token operator">: </span><a href="../../../simbot-component-qq-guild-api/love.forte.simbot.qguild.api.message/-group-and-c2-c-send-body/index.html">GroupAndC2CSendBody</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a><span class="token operator"> = </span>{}</span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../love.forte.simbot.component.qguild.message/-q-g-message-receipt/index.html">QGMessageReceipt</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
 <a data-name="55408405%2FFunctions%2F-2090008390" anchor-label="sendMessage" id="55408405%2FFunctions%2F-2090008390" data-filterable-set=":simbot-component-qq-guild-core:dokkaHtmlPartial/commonMain"></a>
           <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":simbot-component-qq-guild-core:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-qq-guild-core:dokkaHtmlPartial/commonMain">
             <div class="main-subrow keyValue ">
@@ -373,6 +403,21 @@
               </div>
             </div>
           </div>
+<a data-name="-2023633452%2FFunctions%2F-2090008390" anchor-label="sendUserMessage" id="-2023633452%2FFunctions%2F-2090008390" data-filterable-set=":simbot-component-qq-guild-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":simbot-component-qq-guild-core:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-qq-guild-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../love.forte.simbot.component.qguild.message/send-user-message.html"><span>send</span><wbr><span>User</span><wbr><span><span>Message</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2023633452%2FFunctions%2F-2090008390"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq-guild-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../../simbot-component-qq-guild-api/love.forte.simbot.qguild/-q-g-internal-api/index.html"><span class="token annotation builtin">QGInternalApi</span></a></div></div><span class="token keyword">inline suspend </span><span class="token keyword">fun </span><a href="index.html">QGBot</a><span class="token punctuation">.</span><a href="../../love.forte.simbot.component.qguild.message/send-user-message.html"><span class="token function">sendUserMessage</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">openid<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">messageContent<span class="token operator">: </span><a href="https://docs.simbot.forte.love/main/simbot-api/love.forte.simbot.message/-message-content/index.html">MessageContent</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">crossinline </span>onEachPre<span class="token operator">: </span><a href="../../../simbot-component-qq-guild-api/love.forte.simbot.qguild.api.message/-group-and-c2-c-send-body/index.html">GroupAndC2CSendBody</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a><span class="token operator"> = </span>{}<span class="token punctuation">, </span></span><span class="parameter ">onEachPost<span class="token operator">: </span><a href="../../../simbot-component-qq-guild-api/love.forte.simbot.qguild.api.message/-group-and-c2-c-send-body/index.html">GroupAndC2CSendBody</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a><span class="token operator"> = </span>{}</span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../love.forte.simbot.component.qguild.message/-q-g-message-receipt/index.html">QGMessageReceipt</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
 <a data-name="1521182670%2FFunctions%2F-2090008390" anchor-label="start" id="1521182670%2FFunctions%2F-2090008390" data-filterable-set=":simbot-component-qq-guild-core:dokkaHtmlPartial/commonMain"></a>
           <div class="table-row" data-filterable-current=":simbot-component-qq-guild-core:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-qq-guild-core:dokkaHtmlPartial/commonMain">
             <div class="main-subrow keyValue ">
@@ -384,6 +429,36 @@
               <div>
                 <div class="title">
                   <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq-guild-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">suspend override </span><span class="token keyword">fun </span><a href="start.html"><span class="token function">start</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">启动当前bot, 并且初始化此bot的信息。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1455514221%2FFunctions%2F-2090008390" anchor-label="uploadGroupMedia" id="1455514221%2FFunctions%2F-2090008390" data-filterable-set=":simbot-component-qq-guild-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-qq-guild-core:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-qq-guild-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="upload-group-media.html"><span>upload</span><wbr><span>Group</span><wbr><span><span>Media</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1455514221%2FFunctions%2F-2090008390"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq-guild-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="upload-group-media.html"><span class="token function">uploadGroupMedia</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">target<span class="token operator">: </span><span data-unresolved-link="love.forte.simbot.common.id/ID///PointingToDeclaration/">ID</span><span class="token punctuation">, </span></span><span class="parameter ">url<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">type<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../love.forte.simbot.component.qguild.message/-q-g-media/index.html">QGMedia</a></div><div class="brief "><p class="paragraph">上传一个资源为用于向QQ群发送的 <a href="../../love.forte.simbot.component.qguild.message/-q-g-media/index.html">QGMedia</a>, 可用于后续的发送。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-737617543%2FFunctions%2F-2090008390" anchor-label="uploadUserMedia" id="-737617543%2FFunctions%2F-2090008390" data-filterable-set=":simbot-component-qq-guild-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-qq-guild-core:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-qq-guild-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="upload-user-media.html"><span>upload</span><wbr><span>User</span><wbr><span><span>Media</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-737617543%2FFunctions%2F-2090008390"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq-guild-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="upload-user-media.html"><span class="token function">uploadUserMedia</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">target<span class="token operator">: </span><span data-unresolved-link="love.forte.simbot.common.id/ID///PointingToDeclaration/">ID</span><span class="token punctuation">, </span></span><span class="parameter ">url<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">type<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../love.forte.simbot.component.qguild.message/-q-g-media/index.html">QGMedia</a></div><div class="brief "><p class="paragraph">上传一个资源为用于向QQ单聊发送的 <a href="../../love.forte.simbot.component.qguild.message/-q-g-media/index.html">QGMedia</a>, 可用于后续的发送。</p></div></div></div>
                 </div>
               </div>
             </div>
