@@ -3,7 +3,27 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
     <title>TelegramBot</title>
-<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../../";</script>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">    <!-- 百度统计 -->
+    <!--suppress ES6ConvertVarToLetConst -->
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            const hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?045f67a122223db9432c7856fc942fad";
+            const s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1JWL2DDTB4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-1JWL2DDTB4');
+    </script>
+    <script>var pathToRoot = "../../../";</script>
     <script>document.documentElement.classList.replace("no-js","js");</script>
     <script>const storage = localStorage.getItem("dokka-dark-mode")
     if (storage == null) {
@@ -30,7 +50,10 @@
 <script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
 <script type="text/javascript" src="../../../scripts/main.js" defer></script>
 <script type="text/javascript" src="../../../scripts/prism.js" async></script>
-<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script>
+<link href="../../../images/logo-icon.svg">
+<link href="../../../images/logo-icon-light.svg">
+<link href="../../../styles/kdoc-style.css" rel="Stylesheet"></head>
 <body>
     <div class="root">
 <nav class="navigation" id="navigation-wrapper">
@@ -41,7 +64,7 @@
 <a class="library-name--link" href="../../../index.html">
                             Simple Robot 组件 | Telegram
                     </a>            </div>
-            <div class="library-version">0.0.8
+            <div class="library-version">0.0.9
             </div>
         </div>
         <div class="filter-section" id="filter-section">
@@ -49,6 +72,7 @@
         </div>
     </div>
     <div class="navigation-controls">
+            <a class="navigation-controls--btn navigation-controls--homepage" id="homepage-link" href="https://github.com/simple-robot/simbot-component-telegram"></a>
         <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
         <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
     </div>
@@ -62,7 +86,7 @@
   <div class="breadcrumbs"><a href="../../index.html">simbot-component-telegram-core</a><span class="delimiter">/</span><a href="../index.html">love.forte.simbot.component.telegram.core.bot</a><span class="delimiter">/</span><span class="current">TelegramBot</span></div>
   <div class="cover ">
     <h1 class="cover"><span>Telegram</span><wbr><span><span>Bot</span></span></h1>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-telegram-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="index.html">TelegramBot</a> : <a href="https://docs.simbot.forte.love/main/simbot-api/love.forte.simbot.bot/-bot/index.html">Bot</a><span class="clearfix"><span class="floating-right">(<a href="https://github.com/simple-robot/simbot-component-telegram/tree/dev/main/simbot-component-telegram-core/src//commonMain/kotlin/love/forte/simbot/component/telegram/core/bot/TelegramBot.kt#L43">source</a>)</span></span></div><p class="paragraph">A Telegram Bot of this component.</p><span class="kdoc-tag"><h4 class="">Author</h4><p class="paragraph">ForteScarlet</p></span></div></div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-telegram-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="index.html">TelegramBot</a> : <a href="https://docs.simbot.forte.love/main-v4/simbot-api/love.forte.simbot.bot/-bot/index.html">Bot</a><span class="clearfix"><span class="floating-right">(<a href="https://github.com/simple-robot/simbot-component-telegram/tree/dev/main/simbot-component-telegram-core/src//commonMain/kotlin/love/forte/simbot/component/telegram/core/bot/TelegramBot.kt#L43">source</a>)</span></span></div><p class="paragraph">A Telegram Bot of this component.</p><span class="kdoc-tag"><h4 class="">Author</h4><p class="paragraph">ForteScarlet</p></span></div></div>
   </div>
   <div class="tabbedcontent">
     <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button><button class="section-tab" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION,EXTENSION_PROPERTY,EXTENSION_FUNCTION">Members &amp; Extensions</button></div>
@@ -109,7 +133,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-telegram-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="contact-relation.html">contactRelation</a><span class="token operator">: </span><a href="https://docs.simbot.forte.love/main/simbot-api/love.forte.simbot.bot/-contact-relation/index.html">ContactRelation</a><span class="token operator">?</span></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-telegram-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="contact-relation.html">contactRelation</a><span class="token operator">: </span><a href="https://docs.simbot.forte.love/main-v4/simbot-api/love.forte.simbot.bot/-contact-relation/index.html">ContactRelation</a><span class="token operator">?</span></div></div></div>
                 </div>
               </div>
             </div>
@@ -139,7 +163,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-telegram-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="group-relation.html">groupRelation</a><span class="token operator">: </span><a href="https://docs.simbot.forte.love/main/simbot-api/love.forte.simbot.bot/-group-relation/index.html">GroupRelation</a><span class="token operator">?</span></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-telegram-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="group-relation.html">groupRelation</a><span class="token operator">: </span><a href="https://docs.simbot.forte.love/main-v4/simbot-api/love.forte.simbot.bot/-group-relation/index.html">GroupRelation</a><span class="token operator">?</span></div></div></div>
                 </div>
               </div>
             </div>
@@ -154,7 +178,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-telegram-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="guild-relation.html">guildRelation</a><span class="token operator">: </span><a href="https://docs.simbot.forte.love/main/simbot-api/love.forte.simbot.bot/-guild-relation/index.html">GuildRelation</a><span class="token operator">?</span></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-telegram-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="guild-relation.html">guildRelation</a><span class="token operator">: </span><a href="https://docs.simbot.forte.love/main-v4/simbot-api/love.forte.simbot.bot/-guild-relation/index.html">GuildRelation</a><span class="token operator">?</span></div></div></div>
                 </div>
               </div>
             </div>
@@ -169,52 +193,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-telegram-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="id.html">id</a><span class="token operator">: </span><span data-unresolved-link="love.forte.simbot.common.id/ID///PointingToDeclaration/">ID</span></div><div class="brief "><p class="paragraph">The bot token configured.</p></div></div></div>
-                </div>
-              </div>
-            </div>
-          </div>
-<a data-name="-885338811%2FProperties%2F686323957" anchor-label="isActive" id="-885338811%2FProperties%2F686323957" data-filterable-set=":simbot-component-telegram-core:dokkaHtmlPartial/commonMain"></a>
-          <div class="table-row" data-filterable-current=":simbot-component-telegram-core:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-telegram-core:dokkaHtmlPartial/commonMain">
-            <div class="main-subrow keyValue ">
-              <div class=""><span class="inline-flex">
-                  <div><a href="../-telegram-bot-manager/index.html#-885338811%2FProperties%2F686323957"><span>is</span><wbr><span><span>Active</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-885338811%2FProperties%2F686323957"></span>
-                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                  </span></span></div>
-              <div>
-                <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-telegram-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">val </span><a href="../-telegram-bot-manager/index.html#-885338811%2FProperties%2F686323957">isActive</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
-                </div>
-              </div>
-            </div>
-          </div>
-<a data-name="330725188%2FProperties%2F686323957" anchor-label="isCompleted" id="330725188%2FProperties%2F686323957" data-filterable-set=":simbot-component-telegram-core:dokkaHtmlPartial/commonMain"></a>
-          <div class="table-row" data-filterable-current=":simbot-component-telegram-core:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-telegram-core:dokkaHtmlPartial/commonMain">
-            <div class="main-subrow keyValue ">
-              <div class=""><span class="inline-flex">
-                  <div><a href="../-telegram-bot-manager/index.html#330725188%2FProperties%2F686323957"><span>is</span><wbr><span><span>Completed</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="330725188%2FProperties%2F686323957"></span>
-                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                  </span></span></div>
-              <div>
-                <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-telegram-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">val </span><a href="../-telegram-bot-manager/index.html#330725188%2FProperties%2F686323957">isCompleted</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
-                </div>
-              </div>
-            </div>
-          </div>
-<a data-name="1984477956%2FProperties%2F686323957" anchor-label="isStarted" id="1984477956%2FProperties%2F686323957" data-filterable-set=":simbot-component-telegram-core:dokkaHtmlPartial/commonMain"></a>
-          <div class="table-row" data-filterable-current=":simbot-component-telegram-core:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-telegram-core:dokkaHtmlPartial/commonMain">
-            <div class="main-subrow keyValue ">
-              <div class=""><span class="inline-flex">
-                  <div><a href="index.html#1984477956%2FProperties%2F686323957"><span>is</span><wbr><span><span>Started</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1984477956%2FProperties%2F686323957"></span>
-                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                  </span></span></div>
-              <div>
-                <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-telegram-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">val </span><a href="index.html#1984477956%2FProperties%2F686323957">isStarted</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-telegram-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="id.html">id</a><span class="token operator">: </span><a href="https://docs.simbot.forte.love/main-v4/simbot-common-core/love.forte.simbot.common.id/-i-d/index.html">ID</a></div><div class="brief "><p class="paragraph">The bot token configured.</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -259,7 +238,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-telegram-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">val </span><a href="user-id.html">userId</a><span class="token operator">: </span><span data-unresolved-link="love.forte.simbot.common.id/ID///PointingToDeclaration/">ID</span></div><div class="brief "><p class="paragraph">The id of <a href="user-info.html">userInfo</a>.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-telegram-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">val </span><a href="user-id.html">userId</a><span class="token operator">: </span><a href="https://docs.simbot.forte.love/main-v4/simbot-common-core/love.forte.simbot.common.id/-i-d/index.html">ID</a></div><div class="brief "><p class="paragraph">The id of <a href="user-info.html">userInfo</a>.</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -281,24 +260,58 @@
           </div>
         </div>
       </div>
-      <div data-togglable="FUNCTION">
-        <h2 class="">Functions</h2>
-        <div class="table"><a data-name="972650474%2FFunctions%2F686323957" anchor-label="cancel" id="972650474%2FFunctions%2F686323957" data-filterable-set=":simbot-component-telegram-core:dokkaHtmlPartial/commonMain"></a>
+      <div data-togglable="PROPERTY">
+        <h2 class="">Inherited properties</h2>
+        <div class="table"><a data-name="-885338811%2FProperties%2F686323957" anchor-label="isActive" id="-885338811%2FProperties%2F686323957" data-filterable-set=":simbot-component-telegram-core:dokkaHtmlPartial/commonMain"></a>
           <div class="table-row" data-filterable-current=":simbot-component-telegram-core:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-telegram-core:dokkaHtmlPartial/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
-                  <div><a href="index.html#2082157541%2FFunctions%2F686323957"><span><span>cancel</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="972650474%2FFunctions%2F686323957"></span>
+                  <div><a href="../-telegram-bot-manager/index.html#-885338811%2FProperties%2F686323957"><span>is</span><wbr><span><span>Active</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-885338811%2FProperties%2F686323957"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-telegram-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="index.html#2082157541%2FFunctions%2F686323957"><span class="token function">cancel</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="index.html#-1196263663%2FFunctions%2F686323957"><span class="token function">cancel</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">reason<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html">Throwable</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-telegram-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">val </span><a href="../-telegram-bot-manager/index.html#-885338811%2FProperties%2F686323957">isActive</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
                 </div>
               </div>
             </div>
           </div>
-<a data-name="-1539151594%2FFunctions%2F686323957" anchor-label="commands" id="-1539151594%2FFunctions%2F686323957" data-filterable-set=":simbot-component-telegram-core:dokkaHtmlPartial/commonMain"></a>
+<a data-name="330725188%2FProperties%2F686323957" anchor-label="isCompleted" id="330725188%2FProperties%2F686323957" data-filterable-set=":simbot-component-telegram-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-telegram-core:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-telegram-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-telegram-bot-manager/index.html#330725188%2FProperties%2F686323957"><span>is</span><wbr><span><span>Completed</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="330725188%2FProperties%2F686323957"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-telegram-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">val </span><a href="../-telegram-bot-manager/index.html#330725188%2FProperties%2F686323957">isCompleted</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1984477956%2FProperties%2F686323957" anchor-label="isStarted" id="1984477956%2FProperties%2F686323957" data-filterable-set=":simbot-component-telegram-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-telegram-core:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-telegram-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#1984477956%2FProperties%2F686323957"><span>is</span><wbr><span><span>Started</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1984477956%2FProperties%2F686323957"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-telegram-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">val </span><a href="index.html#1984477956%2FProperties%2F686323957">isStarted</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="-1539151594%2FFunctions%2F686323957" anchor-label="commands" id="-1539151594%2FFunctions%2F686323957" data-filterable-set=":simbot-component-telegram-core:dokkaHtmlPartial/commonMain"></a>
           <div class="table-row" data-filterable-current=":simbot-component-telegram-core:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-telegram-core:dokkaHtmlPartial/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
@@ -309,51 +322,6 @@
               <div>
                 <div class="title">
                   <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-telegram-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="commands.html"><span class="token function">commands</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../love.forte.simbot.component.telegram.core.bot.command/-telegram-bot-commands/index.html">TelegramBotCommands</a></div><div class="brief "><p class="paragraph">Fetches a <a href="../../love.forte.simbot.component.telegram.core.bot.command/-telegram-bot-commands/index.html">TelegramBotCommands</a>.</p></div><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="commands.html"><span class="token function">commands</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">scope<span class="token operator">: </span><a href="../../../simbot-component-telegram-type/love.forte.simbot.telegram.type/-bot-command-scope/index.html">BotCommandScope</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">languageCode<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../love.forte.simbot.component.telegram.core.bot.command/-telegram-bot-commands/index.html">TelegramBotCommands</a></div><div class="brief "><p class="paragraph">Fetches a <a href="../../love.forte.simbot.component.telegram.core.bot.command/-telegram-bot-commands/index.html">TelegramBotCommands</a> with <a href="commands.html">scope</a> and <a href="commands.html">languageCode</a>.</p></div></div></div>
-                </div>
-              </div>
-            </div>
-          </div>
-<a data-name="-1642946524%2FFunctions%2F686323957" anchor-label="isMe" id="-1642946524%2FFunctions%2F686323957" data-filterable-set=":simbot-component-telegram-core:dokkaHtmlPartial/commonMain"></a>
-          <div class="table-row" data-filterable-current=":simbot-component-telegram-core:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-telegram-core:dokkaHtmlPartial/commonMain">
-            <div class="main-subrow keyValue ">
-              <div class=""><span class="inline-flex">
-                  <div><a href="index.html#-1642946524%2FFunctions%2F686323957"><span>is</span><wbr><span><span>Me</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1642946524%2FFunctions%2F686323957"></span>
-                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                  </span></span></div>
-              <div>
-                <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-telegram-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">infix </span><span class="token keyword">fun </span><a href="index.html#-1642946524%2FFunctions%2F686323957"><span class="token function">isMe</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">id<span class="token operator">: </span><span data-unresolved-link="love.forte.simbot.common.id/ID///PointingToDeclaration/">ID</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
-                </div>
-              </div>
-            </div>
-          </div>
-<a data-name="255417269%2FFunctions%2F686323957" anchor-label="join" id="255417269%2FFunctions%2F686323957" data-filterable-set=":simbot-component-telegram-core:dokkaHtmlPartial/commonMain"></a>
-          <div class="table-row" data-filterable-current=":simbot-component-telegram-core:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-telegram-core:dokkaHtmlPartial/commonMain">
-            <div class="main-subrow keyValue ">
-              <div class=""><span class="inline-flex">
-                  <div><a href="index.html#255417269%2FFunctions%2F686323957"><span><span>join</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="255417269%2FFunctions%2F686323957"></span>
-                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                  </span></span></div>
-              <div>
-                <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-telegram-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="index.html#255417269%2FFunctions%2F686323957"><span class="token function">join</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
-                </div>
-              </div>
-            </div>
-          </div>
-<a data-name="-347799083%2FFunctions%2F686323957" anchor-label="onCompletion" id="-347799083%2FFunctions%2F686323957" data-filterable-set=":simbot-component-telegram-core:dokkaHtmlPartial/commonMain"></a>
-          <div class="table-row" data-filterable-current=":simbot-component-telegram-core:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-telegram-core:dokkaHtmlPartial/commonMain">
-            <div class="main-subrow keyValue ">
-              <div class=""><span class="inline-flex">
-                  <div><a href="../-telegram-bot-manager/index.html#-347799083%2FFunctions%2F686323957"><span>on</span><wbr><span><span>Completion</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-347799083%2FFunctions%2F686323957"></span>
-                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                  </span></span></div>
-              <div>
-                <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-telegram-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-telegram-bot-manager/index.html#-347799083%2FFunctions%2F686323957"><span class="token function">onCompletion</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">handle<span class="token operator">: </span><a href="https://docs.simbot.forte.love/main/simbot-api/love.forte.simbot.ability/-on-completion/index.html">OnCompletion</a></span></span><span class="token punctuation">)</span></div></div></div>
                 </div>
               </div>
             </div>
@@ -384,6 +352,70 @@
               <div>
                 <div class="title">
                   <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-telegram-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="query-user-info.html"><span class="token function">queryUserInfo</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../../simbot-component-telegram-type/love.forte.simbot.telegram.type/-user/index.html">User</a></div><div class="brief "><p class="paragraph">Query user info of the current bot. And update the value of <a href="user-info.html">userInfo</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Inherited functions</h2>
+        <div class="table"><a data-name="972650474%2FFunctions%2F686323957" anchor-label="cancel" id="972650474%2FFunctions%2F686323957" data-filterable-set=":simbot-component-telegram-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-telegram-core:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-telegram-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#2082157541%2FFunctions%2F686323957"><span><span>cancel</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="972650474%2FFunctions%2F686323957"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-telegram-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="index.html#2082157541%2FFunctions%2F686323957"><span class="token function">cancel</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="index.html#-1196263663%2FFunctions%2F686323957"><span class="token function">cancel</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">reason<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html">Throwable</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1642946524%2FFunctions%2F686323957" anchor-label="isMe" id="-1642946524%2FFunctions%2F686323957" data-filterable-set=":simbot-component-telegram-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-telegram-core:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-telegram-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#-1642946524%2FFunctions%2F686323957"><span>is</span><wbr><span><span>Me</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1642946524%2FFunctions%2F686323957"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-telegram-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">infix </span><span class="token keyword">fun </span><a href="index.html#-1642946524%2FFunctions%2F686323957"><span class="token function">isMe</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">id<span class="token operator">: </span><a href="https://docs.simbot.forte.love/main-v4/simbot-common-core/love.forte.simbot.common.id/-i-d/index.html">ID</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="255417269%2FFunctions%2F686323957" anchor-label="join" id="255417269%2FFunctions%2F686323957" data-filterable-set=":simbot-component-telegram-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-telegram-core:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-telegram-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#255417269%2FFunctions%2F686323957"><span><span>join</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="255417269%2FFunctions%2F686323957"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-telegram-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="index.html#255417269%2FFunctions%2F686323957"><span class="token function">join</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-347799083%2FFunctions%2F686323957" anchor-label="onCompletion" id="-347799083%2FFunctions%2F686323957" data-filterable-set=":simbot-component-telegram-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-telegram-core:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-telegram-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-telegram-bot-manager/index.html#-347799083%2FFunctions%2F686323957"><span>on</span><wbr><span><span>Completion</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-347799083%2FFunctions%2F686323957"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-telegram-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-telegram-bot-manager/index.html#-347799083%2FFunctions%2F686323957"><span class="token function">onCompletion</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">handle<span class="token operator">: </span><a href="https://docs.simbot.forte.love/main-v4/simbot-api/love.forte.simbot.ability/-on-completion/index.html">OnCompletion</a></span></span><span class="token punctuation">)</span></div></div></div>
                 </div>
               </div>
             </div>
@@ -424,7 +456,7 @@
   </div>
 </div>
       <div class="footer">
-        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2024 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2023-2024 <a href="https://github.com/simple-robot">Simple Robot</a>. All rights reserved.</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
       </div>
             </div>
         </div>
