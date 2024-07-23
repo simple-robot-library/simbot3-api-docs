@@ -3,7 +3,27 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
     <title>requestData</title>
-<link href="../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../";</script>
+<link href="../../images/logo-icon.svg" rel="icon" type="image/svg">    <!-- 百度统计 -->
+    <!--suppress ES6ConvertVarToLetConst -->
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            const hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?045f67a122223db9432c7856fc942fad";
+            const s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1JWL2DDTB4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-1JWL2DDTB4');
+    </script>
+    <script>var pathToRoot = "../../";</script>
     <script>document.documentElement.classList.replace("no-js","js");</script>
     <script>const storage = localStorage.getItem("dokka-dark-mode")
     if (storage == null) {
@@ -30,7 +50,10 @@
 <script type="text/javascript" src="../../scripts/platform-content-handler.js" async></script>
 <script type="text/javascript" src="../../scripts/main.js" defer></script>
 <script type="text/javascript" src="../../scripts/prism.js" async></script>
-<script type="text/javascript" src="../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<script type="text/javascript" src="../../scripts/symbol-parameters-wrapper_deferred.js" defer></script>
+<link href="../../images/logo-icon.svg">
+<link href="../../images/logo-icon-light.svg">
+<link href="../../styles/kdoc-style.css" rel="Stylesheet"></head>
 <body>
     <div class="root">
 <nav class="navigation" id="navigation-wrapper">
@@ -49,6 +72,7 @@
         </div>
     </div>
     <div class="navigation-controls">
+            <a class="navigation-controls--btn navigation-controls--homepage" id="homepage-link" href="https://github.com/simple-robot/simbot-component-qq-guild"></a>
         <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
         <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
     </div>
@@ -66,7 +90,7 @@
   <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-overloads/index.html"><span class="token annotation builtin">JvmOverloads</span></a></div></div><span class="token keyword">suspend </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="request-data.html">R</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="-q-q-guild-api/index.html">QQGuildApi</a><span class="token operator">&lt;</span><a href="request-data.html">R</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="request-data.html"><span class="token function">requestData</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">client<span class="token operator">: </span><a href="https://api.ktor.io/ktor-client-core/io.ktor.client/-http-client/index.html">HttpClient</a><span class="token punctuation">, </span></span><span class="parameter ">token<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">server<span class="token operator">: </span><a href="https://api.ktor.io/ktor-http/io.ktor.http/-url/index.html">Url</a><span class="token operator">?</span><span class="token operator"> = </span>QQGuild.URL<span class="token punctuation">, </span></span><span class="parameter ">decoder<span class="token operator">: </span><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-json/kotlinx.serialization.json/-json/index.html">Json</a><span class="token operator"> = </span>QQGuild.DefaultJson<span class="token punctuation">, </span></span><span class="parameter ">appId<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="request-data.html">R</a><span class="clearfix"><span class="floating-right">(<a href="https://github.com/simple-robot/simbot-component-qq-guild/tree/main/simbot-component-qq-guild-api/src//commonMain/kotlin/love/forte/simbot/qguild/api/ApiRequests.kt#L197">source</a>)</span></span></div><p class="paragraph">使用此api发起一次请求，并得到预期中的结果。</p><h2 class="">Body序列化</h2><p class="paragraph">参数 <a href="request-data.html">client</a> 不强制要求必须安装 <a href="https://api.ktor.io/ktor-client-content-negotiation/io.ktor.client.plugins.contentnegotiation/-content-negotiation/index.html">ContentNegotiation</a> 插件， 如果未安装此插件且 API 的请求过程中存在 body，则内部会使用一个默认的序列化器 (不是 <a href="request-data.html">decoder</a>) 进行一个与此插件 <i>类似的</i> 逻辑去寻找 body 的序列化信息。此时要求 API 的 body 必须支持 Kotlinx 的序列化。</p><h4 class="">Parameters</h4><div class="table"><div class="table-row" data-filterable-current=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span><span>client</span></span></u></div></span></div><div><div class="title"><p class="paragraph">用于本次http请求的client。</p></div></div></div></div><div class="table-row" data-filterable-current=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span><span>server</span></span></u></div></span></div><div><div class="title"><p class="paragraph">请求目标服务器。See also: <a href="../love.forte.simbot.qguild/-q-q-guild/-u-r-l.html">QQGuild.URL</a>、<a href="../love.forte.simbot.qguild/-q-q-guild/-s-a-n-d-b-o-x_-u-r-l.html">QQGuild.SANDBOX_URL</a>。</p></div></div></div></div><div class="table-row" data-filterable-current=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span><span>token</span></span></u></div></span></div><div><div class="title"><p class="paragraph">用于本次请求鉴权的token。</p></div></div></div></div><div class="table-row" data-filterable-current=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span><span>decoder</span></span></u></div></span></div><div><div class="title"><p class="paragraph">用于本次请求结果的反序列化器。不出意外的话应该是 <a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-json/kotlinx.serialization.json/-json/index.html">Json</a> 序列化器，默认使用 <a href="../love.forte.simbot.qguild/-q-q-guild/-default-json.html">QQGuild.DefaultJson</a>。</p></div></div></div></div></div><h4 class="">See also</h4><div class="table"><div class="table-row" data-filterable-current=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../love.forte.simbot.qguild/-err-info/index.html"><span>Err</span><wbr><span><span>Info</span></span></a></div></span></div><div></div></div></div></div><h4 class="">Throws</h4><div class="table"><div class="table-row" data-filterable-current=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-exception/index.html"><span><span>Exception</span></span></a></div></span></div><div><div class="title"><p class="paragraph">see <a href="https://api.ktor.io/ktor-client-core/io.ktor.client.request/index.html">HttpClient.request</a>, 可能会抛出任何ktor请求过程中的异常。</p></div></div></div></div><div class="table-row" data-filterable-current=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../love.forte.simbot.qguild/-q-q-guild-api-exception/index.html"><span>QQGuild</span><wbr><span>Api</span><wbr><span><span>Exception</span></span></a></div></span></div><div><div class="title"><p class="paragraph">请求过程中出现了错误。</p></div></div></div></div></div></div></div>
 </div>
       <div class="footer">
-        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2024 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2022-2024 <a href="https://github.com/simple-robot">Simple Robot</a>. All rights reserved.</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
       </div>
             </div>
         </div>
