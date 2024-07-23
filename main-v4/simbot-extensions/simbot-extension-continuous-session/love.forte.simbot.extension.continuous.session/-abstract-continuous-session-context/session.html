@@ -3,7 +3,27 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
     <title>session</title>
-<link href="../../../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../../../";</script>
+<link href="../../../../images/logo-icon.svg" rel="icon" type="image/svg">    <!-- 百度统计 -->
+    <!--suppress ES6ConvertVarToLetConst -->
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            const hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?045f67a122223db9432c7856fc942fad";
+            const s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1JWL2DDTB4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-1JWL2DDTB4');
+    </script>
+    <script>var pathToRoot = "../../../../";</script>
     <script>document.documentElement.classList.replace("no-js","js");</script>
     <script>const storage = localStorage.getItem("dokka-dark-mode")
     if (storage == null) {
@@ -30,7 +50,10 @@
 <script type="text/javascript" src="../../../../scripts/platform-content-handler.js" async></script>
 <script type="text/javascript" src="../../../../scripts/main.js" defer></script>
 <script type="text/javascript" src="../../../../scripts/prism.js" async></script>
-<script type="text/javascript" src="../../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<script type="text/javascript" src="../../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script>
+<link href="../../../../images/logo-icon.svg">
+<link href="../../../../images/logo-icon-light.svg">
+<link href="../../../../styles/kdoc-style.css" rel="Stylesheet"></head>
 <body>
     <div class="root">
 <nav class="navigation" id="navigation-wrapper">
@@ -66,7 +89,7 @@
   <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-extensions:simbot-extension-continuous-session:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="session.html"><span class="token function">session</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">key<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token punctuation">, </span></span><span class="parameter ">strategy<span class="token operator">: </span><a href="../-continuous-session-context/-conflict-strategy/index.html">ContinuousSessionContext.ConflictStrategy</a><span class="token punctuation">, </span></span><span class="parameter ">inSession<span class="token operator">: </span><a href="../-in-session/index.html">InSession</a><span class="token operator">&lt;</span><a href="index.html">T</a><span class="token punctuation">, </span><a href="index.html">R</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-continuous-session-provider/index.html">ContinuousSessionProvider</a><span class="token operator">&lt;</span><a href="index.html">T</a><span class="token punctuation">, </span><a href="index.html">R</a><span class="token operator">&gt;</span><span class="clearfix"><span class="floating-right">(<a href="https://github.com/simple-robot/simpler-robot/tree/v4-dev/simbot-extensions/simbot-extension-continuous-session/src//commonMain/kotlin/love/forte/simbot/extension/continuous/session/AbstractContinuousSessionContext.kt#L61">source</a>)</span></span></div><p class="paragraph">尝试创建一组 <code class="lang-kotlin">ContinuousSession</code> 并返回其中的 <a href="../-continuous-session-provider/index.html">ContinuousSessionProvider</a>。 在出现 <a href="session.html">key</a> 冲突时基于 <a href="session.html">strategy</a> 策略处理冲突。</p><h4 class="">Parameters</h4><div class="table"><div class="table-row" data-filterable-current=":simbot-extensions:simbot-extension-continuous-session:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-extensions:simbot-extension-continuous-session:dokkaHtmlPartial/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span><span>key</span></span></u></div></span></div><div><div class="title"><p class="paragraph">session 会话的标识。<a href="session.html">key</a> 的类型应当是一个可以保证能够作为一个 hash key  的类型， 例如基础数据类型(例如 <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a>、<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>)、数据类类型(data class)、object 类型等。</p></div></div></div></div><div class="table-row" data-filterable-current=":simbot-extensions:simbot-extension-continuous-session:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-extensions:simbot-extension-continuous-session:dokkaHtmlPartial/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span><span>strategy</span></span></u></div></span></div><div><div class="title"><p class="paragraph">当 <a href="session.html">key</a> 出现冲突时的处理策略</p></div></div></div></div><div class="table-row" data-filterable-current=":simbot-extensions:simbot-extension-continuous-session:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-extensions:simbot-extension-continuous-session:dokkaHtmlPartial/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span>in</span><wbr><span><span>Session</span></span></u></div></span></div><div><div class="title"><p class="paragraph">在<strong>异步</strong>中进行会话逻辑的函数实例。 在 Java 中可使用 <code class="lang-kotlin">InSessions</code> 中提供的静态工厂函数构建实例， 例如 <code class="lang-kotlin">InSessions.async</code>、<code class="lang-kotlin">InSessions.mono</code> 等。 在 <code class="lang-kotlin">ContinuousSession</code> 中使用时，我们强烈建议使用非阻塞的 <a href="../-in-session/index.html">InSession</a> 实现， 或者为 <code class="lang-kotlin">ContinuousSession</code> 的调度器配置为 <strong>虚拟线程调度器</strong> 。</p></div></div></div></div></div><h4 class="">Throws</h4><div class="table"><div class="table-row" data-filterable-current=":simbot-extensions:simbot-extension-continuous-session:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-extensions:simbot-extension-continuous-session:dokkaHtmlPartial/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../-conflict-session-key-exception/index.html"><span>Conflict</span><wbr><span>Session</span><wbr><span>Key</span><wbr><span><span>Exception</span></span></a></div></span></div><div><div class="title"><p class="paragraph">如果 <a href="session.html">strategy</a> 为 ConflictStrategy.FAILURE 并且出现了冲突</p></div></div></div></div></div></div></div>
 </div>
       <div class="footer">
-        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2024 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2021-2024 <a href="https://github.com/simple-robot">Simple Robot</a>. All rights reserved.</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
       </div>
             </div>
         </div>

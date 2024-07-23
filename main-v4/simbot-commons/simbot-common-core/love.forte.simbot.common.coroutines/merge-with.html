@@ -3,7 +3,27 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
     <title>mergeWith</title>
-<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../../";</script>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">    <!-- 百度统计 -->
+    <!--suppress ES6ConvertVarToLetConst -->
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            const hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?045f67a122223db9432c7856fc942fad";
+            const s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1JWL2DDTB4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-1JWL2DDTB4');
+    </script>
+    <script>var pathToRoot = "../../../";</script>
     <script>document.documentElement.classList.replace("no-js","js");</script>
     <script>const storage = localStorage.getItem("dokka-dark-mode")
     if (storage == null) {
@@ -30,7 +50,10 @@
 <script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
 <script type="text/javascript" src="../../../scripts/main.js" defer></script>
 <script type="text/javascript" src="../../../scripts/prism.js" async></script>
-<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script>
+<link href="../../../images/logo-icon.svg">
+<link href="../../../images/logo-icon-light.svg">
+<link href="../../../styles/kdoc-style.css" rel="Stylesheet"></head>
 <body>
     <div class="root">
 <nav class="navigation" id="navigation-wrapper">
@@ -66,7 +89,7 @@
   <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-commons:simbot-common-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.coroutines/-coroutine-context/index.html">CoroutineContext</a><span class="token punctuation">.</span><a href="merge-with.html"><span class="token function">mergeWith</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">parentContext<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.coroutines/-coroutine-context/index.html">CoroutineContext</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.coroutines/-coroutine-context/index.html">CoroutineContext</a><span class="clearfix"><span class="floating-right">(<a href="https://github.com/simple-robot/simpler-robot/tree/v4-dev/simbot-commons/simbot-common-core/src//commonMain/kotlin/love/forte/simbot/common/coroutines/CoroutineContexts.kt#L53">source</a>)</span></span></div><p class="paragraph">以 <a href="merge-with.html">parentContext</a> 作为基准、以当前 <code class="lang-kotlin">receiver</code> 为主要结果合并两个 <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.coroutines/-coroutine-context/index.html">CoroutineContext</a>， （也就是使用当前 context 覆盖 <a href="merge-with.html">parentContext</a>）</p><p class="paragraph">例如：</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">CoroutineName("name1").mergeWith(CoroutineName("name2"))<br>// 结果：CoroutineName("name1")</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">在这过程中同样“合并”二者的 <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-job/index.html">Job</a>:</p><ul><li><p class="paragraph">如果都没有 <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-job/index.html">Job</a>，则创建一个 <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/index.html">SupervisorJob</a> 添加</p></li><li><p class="paragraph">如果 <a href="merge-with.html">parentContext</a> 中有 <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-job/index.html">Job</a>，则将其作为创建的 <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/index.html">SupervisorJob</a> 的 parent。</p></li><li><p class="paragraph">如果当前 <code class="lang-kotlin">receiver</code> 有 <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-job/index.html">Job</a>，则将其作为创建的 <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/index.html">SupervisorJob</a> 的 parent。</p></li><li><p class="paragraph">如果二者都有 <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-job/index.html">Job</a>，则将当前 <code class="lang-kotlin">receiver</code> 作为 parent，并通过 <a href="link-to.html">linkTo</a> 链接到 <a href="merge-with.html">parentContext</a> 中的 <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-job/index.html">Job</a> 上。</p></li></ul><h4 class="">See also</h4><div class="table"><div class="table-row" data-filterable-current=":simbot-commons:simbot-common-core:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-commons:simbot-common-core:dokkaHtmlPartial/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="link-to.html"><span>link</span><wbr><span><span>To</span></span></a></div></span></div><div></div></div></div></div></div></div>
 </div>
       <div class="footer">
-        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2024 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2021-2024 <a href="https://github.com/simple-robot">Simple Robot</a>. All rights reserved.</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
       </div>
             </div>
         </div>
