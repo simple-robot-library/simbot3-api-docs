@@ -214,26 +214,26 @@ const componentCards = [
   //     [{name: "前往手册", href: "https://simple-robot.github.io/simbot-component-mirai", type: "default"}],
   //   ]
   // },
-  {
-    name: "米游社大别野组件",
-    tags: [deadTag, officialTag, componentTag],
-    deprecated: true,
-    shields: [
-      Shield({
-        src: "https://img.shields.io/github/v/release/simple-robot/simbot-component-miyoushe-villa?label=version",
-        alt: "米游社大别野组件"
-      }),
-    ],
-    description: "米游社大别野组件基于核心库对 <a href='https://open.miyoushe.com/'>米游社大别野机器人</a> 进行实现，提供强大的米游社大别野机器人平台功能。",
-    links: [
-      [{name: "前往仓库", href: "https://github.com/simple-robot/simbot-component-miyoushe-villa", type: "info"}],
-      [
-        {name: "API文档", href: "components/miyoushe-villa/", type: "primary"},
-        {name: "API文档(快照)", href: "snapshots/components/miyoushe-villa/", type: "primary"}
-      ],
-      [{name: "前往手册", href: "https://simple-robot.github.io/simbot-component-miyoushe-villa/", type: "default"}],
-    ]
-  },
+  // {
+  //   name: "米游社大别野组件",
+  //   tags: [deadTag, officialTag, componentTag],
+  //   deprecated: true,
+  //   shields: [
+  //     Shield({
+  //       src: "https://img.shields.io/github/v/release/simple-robot/simbot-component-miyoushe-villa?label=version",
+  //       alt: "米游社大别野组件"
+  //     }),
+  //   ],
+  //   description: "米游社大别野组件基于核心库对 <a href='https://open.miyoushe.com/'>米游社大别野机器人</a> 进行实现，提供强大的米游社大别野机器人平台功能。",
+  //   links: [
+  //     [{name: "前往仓库", href: "https://github.com/simple-robot/simbot-component-miyoushe-villa", type: "info"}],
+  //     [
+  //       {name: "API文档", href: "components/miyoushe-villa/", type: "primary"},
+  //       {name: "API文档(快照)", href: "snapshots/components/miyoushe-villa/", type: "primary"}
+  //     ],
+  //     [{name: "前往手册", href: "https://simple-robot.github.io/simbot-component-miyoushe-villa/", type: "default"}],
+  //   ]
+  // },
 
 ]
 
