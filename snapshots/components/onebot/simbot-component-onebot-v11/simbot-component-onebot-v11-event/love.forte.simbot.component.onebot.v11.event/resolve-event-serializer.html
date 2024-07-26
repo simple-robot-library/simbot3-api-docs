@@ -3,7 +3,27 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
     <title>resolveEventSerializer</title>
-<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../../";</script>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">    <!-- 百度统计 -->
+    <!--suppress ES6ConvertVarToLetConst -->
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            const hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?045f67a122223db9432c7856fc942fad";
+            const s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1JWL2DDTB4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-1JWL2DDTB4');
+    </script>
+    <script>var pathToRoot = "../../../";</script>
     <script>document.documentElement.classList.replace("no-js","js");</script>
     <script>const storage = localStorage.getItem("dokka-dark-mode")
     if (storage == null) {
@@ -30,7 +50,10 @@
 <script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
 <script type="text/javascript" src="../../../scripts/main.js" defer></script>
 <script type="text/javascript" src="../../../scripts/prism.js" async></script>
-<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script>
+<link href="../../../images/logo-icon.svg">
+<link href="../../../images/logo-icon-light.svg">
+<link href="../../../styles/kdoc-style.css" rel="Stylesheet"></head>
 <body>
     <div class="root">
 <nav class="navigation" id="navigation-wrapper">
@@ -41,7 +64,7 @@
 <a class="library-name--link" href="../../../index.html">
                             Simple Robot 组件 | OneBot
                     </a>            </div>
-            <div class="library-version">1.0.0
+            <div class="library-version">1.0.1
             </div>
         </div>
         <div class="filter-section" id="filter-section">
@@ -49,6 +72,7 @@
         </div>
     </div>
     <div class="navigation-controls">
+            <a class="navigation-controls--btn navigation-controls--homepage" id="homepage-link" href="https://github.com/simple-robot/simbot-component-onebot"></a>
         <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
         <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
     </div>
@@ -66,7 +90,7 @@
   <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot-v11:simbot-component-onebot-v11-event:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../../simbot-component-onebot-common/love.forte.simbot.component.onebot.common.annotations/-internal-one-bot-a-p-i/index.html"><span class="token annotation builtin">InternalOneBotAPI</span></a></div></div><span class="token keyword">fun </span><a href="resolve-event-serializer.html"><span class="token function">resolveEventSerializer</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">postType<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">subType<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-core/kotlinx.serialization/-k-serializer/index.html">KSerializer</a><span class="token operator">&lt;</span><span class="token keyword">out </span><a href="-raw-event/index.html">RawEvent</a><span class="token operator">&gt;</span><span class="token operator">?</span></div><p class="paragraph">根据事件的主类型 <code class="lang-kotlin">postType</code> 和二级子类型获取到一个唯一的事件序列化器，如果找不到则得到 <code class="lang-kotlin">null</code>。</p><ul><li><p class="paragraph"><code class="lang-kotlin">"message"</code> (total: 2)</p></li><ul><li><p class="paragraph"><code class="lang-kotlin">"group"</code> -&gt;<a href="../love.forte.simbot.component.onebot.v11.event.message/-raw-group-message-event/index.html">RawGroupMessageEvent</a></p></li><li><p class="paragraph"><code class="lang-kotlin">"private"</code> -&gt;<a href="../love.forte.simbot.component.onebot.v11.event.message/-raw-private-message-event/index.html">RawPrivateMessageEvent</a></p></li></ul><li><p class="paragraph"><code class="lang-kotlin">"meta_event"</code> (total: 2)</p></li><ul><li><p class="paragraph"><code class="lang-kotlin">"heartbeat"</code> -&gt;<a href="../love.forte.simbot.component.onebot.v11.event.meta/-raw-heartbeat-event/index.html">RawHeartbeatEvent</a></p></li><li><p class="paragraph"><code class="lang-kotlin">"lifecycle"</code> -&gt;<a href="../love.forte.simbot.component.onebot.v11.event.meta/-raw-lifecycle-event/index.html">RawLifecycleEvent</a></p></li></ul><li><p class="paragraph"><code class="lang-kotlin">"notice"</code> (total: 9)</p></li><ul><li><p class="paragraph"><code class="lang-kotlin">"friend_add"</code> -&gt;<a href="../love.forte.simbot.component.onebot.v11.event.notice/-raw-friend-add-event/index.html">RawFriendAddEvent</a></p></li><li><p class="paragraph"><code class="lang-kotlin">"friend_recall"</code> -&gt;<a href="../love.forte.simbot.component.onebot.v11.event.notice/-raw-friend-recall-event/index.html">RawFriendRecallEvent</a></p></li><li><p class="paragraph"><code class="lang-kotlin">"group_admin"</code> -&gt;<a href="../love.forte.simbot.component.onebot.v11.event.notice/-raw-group-admin-event/index.html">RawGroupAdminEvent</a></p></li><li><p class="paragraph"><code class="lang-kotlin">"group_ban"</code> -&gt;<a href="../love.forte.simbot.component.onebot.v11.event.notice/-raw-group-ban-event/index.html">RawGroupBanEvent</a></p></li><li><p class="paragraph"><code class="lang-kotlin">"group_decrease"</code> -&gt;<a href="../love.forte.simbot.component.onebot.v11.event.notice/-raw-group-decrease-event/index.html">RawGroupDecreaseEvent</a></p></li><li><p class="paragraph"><code class="lang-kotlin">"group_increase"</code> -&gt;<a href="../love.forte.simbot.component.onebot.v11.event.notice/-raw-group-increase-event/index.html">RawGroupIncreaseEvent</a></p></li><li><p class="paragraph"><code class="lang-kotlin">"group_recall"</code> -&gt;<a href="../love.forte.simbot.component.onebot.v11.event.notice/-raw-group-recall-event/index.html">RawGroupRecallEvent</a></p></li><li><p class="paragraph"><code class="lang-kotlin">"group_upload"</code> -&gt;<a href="../love.forte.simbot.component.onebot.v11.event.notice/-raw-group-upload-event/index.html">RawGroupUploadEvent</a></p></li><li><p class="paragraph"><code class="lang-kotlin">"notify"</code> -&gt;<a href="../love.forte.simbot.component.onebot.v11.event.notice/-raw-notify-event/index.html">RawNotifyEvent</a></p></li></ul><li><p class="paragraph"><code class="lang-kotlin">"request"</code> (total: 2)</p></li><ul><li><p class="paragraph"><code class="lang-kotlin">"friend"</code> -&gt;<a href="../love.forte.simbot.component.onebot.v11.event.request/-raw-friend-request-event/index.html">RawFriendRequestEvent</a></p></li><li><p class="paragraph"><code class="lang-kotlin">"group"</code> -&gt;<a href="../love.forte.simbot.component.onebot.v11.event.request/-raw-group-request-event/index.html">RawGroupRequestEvent</a></p></li></ul></ul><hr><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../../simbot-component-onebot-common/love.forte.simbot.component.onebot.common.annotations/-internal-one-bot-a-p-i/index.html"><span class="token annotation builtin">InternalOneBotAPI</span></a></div></div><span class="token keyword">fun </span><a href="resolve-event-serializer.html"><span class="token function">resolveEventSerializer</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">event<span class="token operator">: </span><a href="-raw-event/index.html">RawEvent</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-core/kotlinx.serialization/-k-serializer/index.html">KSerializer</a><span class="token operator">&lt;</span><span class="token keyword">out </span><a href="-raw-event/index.html">RawEvent</a><span class="token operator">&gt;</span><span class="token operator">?</span></div><p class="paragraph">根据事件 <a href="resolve-event-serializer.html">event</a> 的类型分析得到对应的序列化器，如果找不到则得到 <code class="lang-kotlin">null</code>。 目前支持获取如下事件的子类型的序列化器：</p><ul><li><p class="paragraph"><a href="../love.forte.simbot.component.onebot.v11.event.message/-raw-message-event/index.html">RawMessageEvent</a></p></li><li><p class="paragraph"><a href="../love.forte.simbot.component.onebot.v11.event.meta/-raw-meta-event/index.html">RawMetaEvent</a></p></li><li><p class="paragraph"><a href="../love.forte.simbot.component.onebot.v11.event.notice/-raw-notice-event/index.html">RawNoticeEvent</a></p></li><li><p class="paragraph"><a href="../love.forte.simbot.component.onebot.v11.event.request/-raw-request-event/index.html">RawRequestEvent</a></p></li></ul></div></div>
 </div>
       <div class="footer">
-        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2024 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2024 <a href="https://github.com/simple-robot">Simple Robot</a>. All rights reserved.</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
       </div>
             </div>
         </div>
