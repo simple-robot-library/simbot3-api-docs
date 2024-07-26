@@ -193,27 +193,27 @@ const componentCards = [
       [{name: "前往手册", href: "https://simbot.forte.love/component-discord.html", type: "default"}],
     ]
   },
-  {
-    name: "mirai组件",
-    deprecated: true,
-    tags: [Tag({ name: '⚠濒死', type: 'warning', round: false }), officialTag, componentTag],
-    shields: [
-      Shield({
-        // src: "https://img.shields.io/maven-central/v/love.forte.simbot.component/simbot-component-mirai-core?&label=version",
-        src: "https://img.shields.io/github/v/release/simple-robot/simbot-component-mirai?label=version",
-        alt: "mirai组件"
-      }),
-    ],
-    description: "Mirai组件基于核心库对 <a href='https://github.com/mamoe/mirai'>mirai框架</a> 进行实现，提供强大的QQ机器人平台功能。",
-    links: [
-      [{name: "前往仓库", href: "https://github.com/simple-robot/simbot-component-mirai", type: "info"}],
-      [
-        {name: "API文档", href: "components/mirai/", type: "primary"},
-        {name: "API文档(快照)", href: "snapshots/components/mirai/", type: "primary"},
-      ],
-      [{name: "前往手册", href: "https://simple-robot.github.io/simbot-component-mirai", type: "default"}],
-    ]
-  },
+  // {
+  //   name: "mirai组件",
+  //   deprecated: true,
+  //   tags: [Tag({ name: '⚠濒死', type: 'warning', round: false }), officialTag, componentTag],
+  //   shields: [
+  //     Shield({
+  //       // src: "https://img.shields.io/maven-central/v/love.forte.simbot.component/simbot-component-mirai-core?&label=version",
+  //       src: "https://img.shields.io/github/v/release/simple-robot/simbot-component-mirai?label=version",
+  //       alt: "mirai组件"
+  //     }),
+  //   ],
+  //   description: "Mirai组件基于核心库对 <a href='https://github.com/mamoe/mirai'>mirai框架</a> 进行实现，提供强大的QQ机器人平台功能。",
+  //   links: [
+  //     [{name: "前往仓库", href: "https://github.com/simple-robot/simbot-component-mirai", type: "info"}],
+  //     [
+  //       {name: "API文档", href: "components/mirai/", type: "primary"},
+  //       {name: "API文档(快照)", href: "snapshots/components/mirai/", type: "primary"},
+  //     ],
+  //     [{name: "前往手册", href: "https://simple-robot.github.io/simbot-component-mirai", type: "default"}],
+  //   ]
+  // },
   {
     name: "米游社大别野组件",
     tags: [deadTag, officialTag, componentTag],

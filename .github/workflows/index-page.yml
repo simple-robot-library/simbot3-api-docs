@@ -48,16 +48,16 @@ jobs:
           rm -rf kdoc/main
         working-directory: ./public
 
-      # mirai
-      - uses: actions/checkout@v4
-        with:
-          ref: 'kdoc-deploy/component-mirai'
-          path: 'public/kdoc/cp-mirai'
-
-      - run: |
-          cp -r kdoc/cp-mirai/* ./
-          rm -rf kdoc/cp-mirai
-        working-directory: ./public
+#      # mirai
+#      - uses: actions/checkout@v4
+#        with:
+#          ref: 'kdoc-deploy/component-mirai'
+#          path: 'public/kdoc/cp-mirai'
+#
+#      - run: |
+#          cp -r kdoc/cp-mirai/* ./
+#          rm -rf kdoc/cp-mirai
+#        working-directory: ./public
 
       # KOOK
       - uses: actions/checkout@v4
@@ -154,16 +154,16 @@ jobs:
           rm -rf kdoc/snapshots/main-v4
         working-directory: ./public
 
-      # mirai快照
-      - uses: actions/checkout@v4
-        with:
-          ref: 'kdoc-deploy/snapshots/component-mirai'
-          path: 'public/kdoc/snapshots/cp-mirai'
-
-      - run: |
-          cp -r kdoc/snapshots/cp-mirai/* ./
-          rm -rf kdoc/snapshots/cp-mirai
-        working-directory: ./public
+#      # mirai快照
+#      - uses: actions/checkout@v4
+#        with:
+#          ref: 'kdoc-deploy/snapshots/component-mirai'
+#          path: 'public/kdoc/snapshots/cp-mirai'
+#
+#      - run: |
+#          cp -r kdoc/snapshots/cp-mirai/* ./
+#          rm -rf kdoc/snapshots/cp-mirai
+#        working-directory: ./public
 
       # KOOK快照
       - uses: actions/checkout@v4
