@@ -3,7 +3,27 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
     <title>TransmitCacheConfig</title>
-<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../../";</script>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">    <!-- 百度统计 -->
+    <!--suppress ES6ConvertVarToLetConst -->
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            const hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?045f67a122223db9432c7856fc942fad";
+            const s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1JWL2DDTB4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-1JWL2DDTB4');
+    </script>
+    <script>var pathToRoot = "../../../";</script>
     <script>document.documentElement.classList.replace("no-js","js");</script>
     <script>const storage = localStorage.getItem("dokka-dark-mode")
     if (storage == null) {
@@ -30,7 +50,10 @@
 <script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
 <script type="text/javascript" src="../../../scripts/main.js" defer></script>
 <script type="text/javascript" src="../../../scripts/prism.js" async></script>
-<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script>
+<link href="../../../images/logo-icon.svg">
+<link href="../../../images/logo-icon-light.svg">
+<link href="../../../styles/kdoc-style.css" rel="Stylesheet"></head>
 <body>
     <div class="root">
 <nav class="navigation" id="navigation-wrapper">
@@ -41,7 +64,7 @@
 <a class="library-name--link" href="../../../index.html">
                             Simple Robot 组件 | QQ Guild
                     </a>            </div>
-            <div class="library-version">4.0.0-beta9-SNAPSHOT
+            <div class="library-version">4.0.0-beta10-SNAPSHOT
             </div>
         </div>
         <div class="filter-section" id="filter-section">
@@ -49,6 +72,7 @@
         </div>
     </div>
     <div class="navigation-controls">
+            <a class="navigation-controls--btn navigation-controls--homepage" id="homepage-link" href="https://github.com/simple-robot/simbot-component-qq-guild"></a>
         <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
         <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
     </div>
@@ -62,7 +86,7 @@
   <div class="breadcrumbs"><a href="../../index.html">simbot-component-qq-guild-core</a><span class="delimiter">/</span><a href="../index.html">love.forte.simbot.component.qguild.bot.config</a><span class="delimiter">/</span><span class="current">TransmitCacheConfig</span></div>
   <div class="cover ">
     <h1 class="cover"><span>Transmit</span><wbr><span>Cache</span><wbr><span><span>Config</span></span></h1>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq-guild-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-core/kotlinx.serialization/-serializable/index.html"><span class="token annotation builtin">Serializable</span></a></div></div><span class="token keyword">data </span><span class="token keyword">class </span><a href="index.html">TransmitCacheConfig</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>enable<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">true</span></span></span><span class="token punctuation">)</span><span class="clearfix"><span class="floating-right">(<a href="https://github.com/simple-robot/simbot-component-qq-guild/tree/main/simbot-component-qq-guild-core/src//commonMain/kotlin/love/forte/simbot/component/qguild/bot/config/CacheStrategyConfig.kt#L115">source</a>)</span></span></div><p class="paragraph">'传递性' 缓存。</p><p class="paragraph">举个简单的例子：</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">bot.guild().channels.collect { channel -&gt; // 1<br>    val guild = channel.guild()           // 2<br>}</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">如上步骤：</p><ol><li><p class="paragraph">在一个 <code class="lang-kotlin">guild</code> 中获取所有的 <code class="lang-kotlin">channel</code></p></li><li><p class="paragraph">遍历所有的 <code class="lang-kotlin">channel</code> ，并在循环中再次获取 <code class="lang-kotlin">channel</code> 的所属 <code class="lang-kotlin">guild</code>。</p></li></ol><p class="paragraph">在这个过程中，步骤 <code class="lang-kotlin">2</code> 中获取的 <code class="lang-kotlin">guild</code> 已经确定为步骤 <code class="lang-kotlin">1</code> 中的 <code class="lang-kotlin">guild</code>， 因此如果不是为了 <code class="lang-kotlin">guild</code> 信息的绝对 <i>"实时"</i> ，它们的查询实际上并没有必要。</p><p class="paragraph">传递性缓存即用于处理此种情况，当一个存在从属关系的子信息可以使用其所属的来源信息时，则直接将其传递而非再次查询。</p><p class="paragraph">传递性缓存不会应用于任何序列/列表本身。因此无论何时而获取到的 <span data-unresolved-link="love.forte.simbot.common.collectable/Collectable///PointingToDeclaration/">Collectable</span> 类型始终都会是全新的类型。（不过其中的元素可能会携带可传递缓存）</p><p class="paragraph">传递性缓存涉及到 <code class="lang-kotlin">channel</code> 、<code class="lang-kotlin">channel category</code> 、 <code class="lang-kotlin">member</code> 、 <code class="lang-kotlin">role</code>， 一般来说传递的是 <code class="lang-kotlin">guild</code>，少部分API会传递其他内容，例如 <code class="lang-kotlin">memberRole</code> 可能会传递 <code class="lang-kotlin">channel</code> 。</p><p class="paragraph"><i>内部实际可能传递的信息并不固定，它可能会随着版本的更新不断完善或修改，因此无法在此处一一列举。</i></p></div></div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq-guild-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-core/kotlinx.serialization/-serializable/index.html"><span class="token annotation builtin">Serializable</span></a></div></div><span class="token keyword">data </span><span class="token keyword">class </span><a href="index.html">TransmitCacheConfig</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>enable<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">true</span></span></span><span class="token punctuation">)</span><span class="clearfix"><span class="floating-right">(<a href="https://github.com/simple-robot/simbot-component-qq-guild/tree/main/simbot-component-qq-guild-core/src//commonMain/kotlin/love/forte/simbot/component/qguild/bot/config/CacheStrategyConfig.kt#L115">source</a>)</span></span></div><p class="paragraph">'传递性' 缓存。</p><p class="paragraph">举个简单的例子：</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">bot.guild().channels.collect { channel -&gt; // 1<br>    val guild = channel.guild()           // 2<br>}</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">如上步骤：</p><ol><li><p class="paragraph">在一个 <code class="lang-kotlin">guild</code> 中获取所有的 <code class="lang-kotlin">channel</code></p></li><li><p class="paragraph">遍历所有的 <code class="lang-kotlin">channel</code> ，并在循环中再次获取 <code class="lang-kotlin">channel</code> 的所属 <code class="lang-kotlin">guild</code>。</p></li></ol><p class="paragraph">在这个过程中，步骤 <code class="lang-kotlin">2</code> 中获取的 <code class="lang-kotlin">guild</code> 已经确定为步骤 <code class="lang-kotlin">1</code> 中的 <code class="lang-kotlin">guild</code>， 因此如果不是为了 <code class="lang-kotlin">guild</code> 信息的绝对 <i>"实时"</i> ，它们的查询实际上并没有必要。</p><p class="paragraph">传递性缓存即用于处理此种情况，当一个存在从属关系的子信息可以使用其所属的来源信息时，则直接将其传递而非再次查询。</p><p class="paragraph">传递性缓存不会应用于任何序列/列表本身。因此无论何时而获取到的 <a href="https://docs.simbot.forte.love/main-v4/simbot-common-core/love.forte.simbot.common.collectable/-collectable/index.html">Collectable</a> 类型始终都会是全新的类型。（不过其中的元素可能会携带可传递缓存）</p><p class="paragraph">传递性缓存涉及到 <code class="lang-kotlin">channel</code> 、<code class="lang-kotlin">channel category</code> 、 <code class="lang-kotlin">member</code> 、 <code class="lang-kotlin">role</code>， 一般来说传递的是 <code class="lang-kotlin">guild</code>，少部分API会传递其他内容，例如 <code class="lang-kotlin">memberRole</code> 可能会传递 <code class="lang-kotlin">channel</code> 。</p><p class="paragraph"><i>内部实际可能传递的信息并不固定，它可能会随着版本的更新不断完善或修改，因此无法在此处一一列举。</i></p></div></div>
   </div>
   <div class="tabbedcontent">
     <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
@@ -109,7 +133,7 @@
   </div>
 </div>
       <div class="footer">
-        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2024 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2022-2024 <a href="https://github.com/simple-robot">Simple Robot</a>. All rights reserved.</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
       </div>
             </div>
         </div>
