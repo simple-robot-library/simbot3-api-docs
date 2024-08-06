@@ -3,7 +3,27 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
     <title>KookUserChat</title>
-<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../../";</script>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">    <!-- 百度统计 -->
+    <!--suppress ES6ConvertVarToLetConst -->
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            const hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?045f67a122223db9432c7856fc942fad";
+            const s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1JWL2DDTB4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-1JWL2DDTB4');
+    </script>
+    <script>var pathToRoot = "../../../";</script>
     <script>document.documentElement.classList.replace("no-js","js");</script>
     <script>const storage = localStorage.getItem("dokka-dark-mode")
     if (storage == null) {
@@ -30,7 +50,10 @@
 <script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
 <script type="text/javascript" src="../../../scripts/main.js" defer></script>
 <script type="text/javascript" src="../../../scripts/prism.js" async></script>
-<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script>
+<link href="../../../images/logo-icon.svg">
+<link href="../../../images/logo-icon-light.svg">
+<link href="../../../styles/kdoc-style.css" rel="Stylesheet"></head>
 <body>
     <div class="root">
 <nav class="navigation" id="navigation-wrapper">
@@ -41,7 +64,7 @@
 <a class="library-name--link" href="../../../index.html">
                             Simple Robot 组件 | KOOK
                     </a>            </div>
-            <div class="library-version">4.0.0-SNAPSHOT
+            <div class="library-version">4.0.0-beta6-SNAPSHOT
             </div>
         </div>
         <div class="filter-section" id="filter-section">
@@ -49,6 +72,7 @@
         </div>
     </div>
     <div class="navigation-controls">
+            <a class="navigation-controls--btn navigation-controls--homepage" id="homepage-link" href="https://github.com/simple-robot/simbot-component-kook"></a>
         <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
         <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
     </div>
@@ -62,7 +86,7 @@
   <div class="breadcrumbs"><a href="../../index.html">simbot-component-kook-core</a><span class="delimiter">/</span><a href="../index.html">love.forte.simbot.component.kook</a><span class="delimiter">/</span><span class="current">KookUserChat</span></div>
   <div class="cover ">
     <h1 class="cover"><span>Kook</span><wbr><span>User</span><wbr><span><span>Chat</span></span></h1>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="index.html">KookUserChat</a> : <a href="https://docs.simbot.forte.love/main/simbot-api/love.forte.simbot.definition/-contact/index.html">Contact</a>, <a href="https://docs.simbot.forte.love/main/simbot-api/love.forte.simbot.ability/-delete-support/index.html">DeleteSupport</a><span class="clearfix"><span class="floating-right">(<a href="https://github.com/simple-robot/simbot-component-kook/tree/main/simbot-component-kook-core/src//commonMain/kotlin/love/forte/simbot/component/kook/KookUserChat.kt#L48">source</a>)</span></span></div><p class="paragraph">KOOK 的 <a href="https://developer.kaiheila.cn/doc/http/user-chat">user-chat 私聊会话</a>。</p><p class="paragraph">KOOK 组件会将 <a href="index.html">私聊会话</a> 视为 <a href="https://docs.simbot.forte.love/main/simbot-api/love.forte.simbot.definition/-contact/index.html">Contact</a> 处理，同时实现 <a href="https://docs.simbot.forte.love/main/simbot-api/love.forte.simbot.definition/-contact/index.html">Contact</a> 来提供可交流的联系人能力。</p><h2 class="">可删除的</h2><p class="paragraph">KOOK 中的聊天会话是可以通过 <a href="../../../simbot-component-kook-api/love.forte.simbot.kook.api.userchat/-delete-user-chat-api/index.html">DeleteUserChatApi</a> 进行删除的。因此 <a href="index.html">KookUserChat</a> 实现了 <a href="https://docs.simbot.forte.love/main/simbot-api/love.forte.simbot.ability/-delete-support/index.html">DeleteSupport</a> 来支持 <a href="delete.html">删除操作</a>。</p><span class="kdoc-tag"><h4 class="">Author</h4><p class="paragraph">ForteScarlet</p></span></div></div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="index.html">KookUserChat</a> : <a href="https://docs.simbot.forte.love/main-v4/simbot-api/love.forte.simbot.definition/-contact/index.html">Contact</a>, <a href="https://docs.simbot.forte.love/main-v4/simbot-api/love.forte.simbot.ability/-delete-support/index.html">DeleteSupport</a><span class="clearfix"><span class="floating-right">(<a href="https://github.com/simple-robot/simbot-component-kook/tree/main/simbot-component-kook-core/src//commonMain/kotlin/love/forte/simbot/component/kook/KookUserChat.kt#L48">source</a>)</span></span></div><p class="paragraph">KOOK 的 <a href="https://developer.kaiheila.cn/doc/http/user-chat">user-chat 私聊会话</a>。</p><p class="paragraph">KOOK 组件会将 <a href="index.html">私聊会话</a> 视为 <a href="https://docs.simbot.forte.love/main-v4/simbot-api/love.forte.simbot.definition/-contact/index.html">Contact</a> 处理，同时实现 <a href="https://docs.simbot.forte.love/main-v4/simbot-api/love.forte.simbot.definition/-contact/index.html">Contact</a> 来提供可交流的联系人能力。</p><h2 class="">可删除的</h2><p class="paragraph">KOOK 中的聊天会话是可以通过 <a href="../../../simbot-component-kook-api/love.forte.simbot.kook.api.userchat/-delete-user-chat-api/index.html">DeleteUserChatApi</a> 进行删除的。因此 <a href="index.html">KookUserChat</a> 实现了 <a href="https://docs.simbot.forte.love/main-v4/simbot-api/love.forte.simbot.ability/-delete-support/index.html">DeleteSupport</a> 来支持 <a href="delete.html">删除操作</a>。</p><span class="kdoc-tag"><h4 class="">Author</h4><p class="paragraph">ForteScarlet</p></span></div></div>
   </div>
   <div class="tabbedcontent">
     <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
@@ -99,21 +123,6 @@
               </div>
             </div>
           </div>
-<a data-name="-1654120400%2FProperties%2F1361891444" anchor-label="coroutineContext" id="-1654120400%2FProperties%2F1361891444" data-filterable-set=":simbot-component-kook-core:dokkaHtmlPartial/commonMain"></a>
-          <div class="table-row" data-filterable-current=":simbot-component-kook-core:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-kook-core:dokkaHtmlPartial/commonMain">
-            <div class="main-subrow keyValue ">
-              <div class=""><span class="inline-flex">
-                  <div><a href="index.html#-1654120400%2FProperties%2F1361891444"><span>coroutine</span><wbr><span><span>Context</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1654120400%2FProperties%2F1361891444"></span>
-                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                  </span></span></div>
-              <div>
-                <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">val </span><a href="index.html#-1654120400%2FProperties%2F1361891444">coroutineContext</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.coroutines/-coroutine-context/index.html">CoroutineContext</a></div></div></div>
-                </div>
-              </div>
-            </div>
-          </div>
 <a data-name="1633375494%2FProperties%2F1361891444" anchor-label="id" id="1633375494%2FProperties%2F1361891444" data-filterable-set=":simbot-component-kook-core:dokkaHtmlPartial/commonMain"></a>
           <div class="table-row" data-filterable-current=":simbot-component-kook-core:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-kook-core:dokkaHtmlPartial/commonMain">
             <div class="main-subrow keyValue ">
@@ -124,7 +133,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="id.html">id</a><span class="token operator">: </span><span data-unresolved-link="love.forte.simbot.common.id/ID///PointingToDeclaration/">ID</span></div><div class="brief "><p class="paragraph">私聊会话对应用户的用户ID，同 <a href="../../../simbot-component-kook-api/love.forte.simbot.kook.api.userchat/-target-info/id.html">source.targetInfo.id</a> 。</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="id.html">id</a><span class="token operator">: </span><a href="https://docs.simbot.forte.love/main-v4/simbot-common-core/love.forte.simbot.common.id/-i-d/index.html">ID</a></div><div class="brief "><p class="paragraph">私聊会话对应用户的用户ID，同 <a href="../../../simbot-component-kook-api/love.forte.simbot.kook.api.userchat/-target-info/id.html">source.targetInfo.id</a> 。</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -161,6 +170,25 @@
           </div>
         </div>
       </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="">Inherited properties</h2>
+        <div class="table"><a data-name="-1654120400%2FProperties%2F1361891444" anchor-label="coroutineContext" id="-1654120400%2FProperties%2F1361891444" data-filterable-set=":simbot-component-kook-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-kook-core:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-kook-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#-1654120400%2FProperties%2F1361891444"><span>coroutine</span><wbr><span><span>Context</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1654120400%2FProperties%2F1361891444"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">val </span><a href="index.html#-1654120400%2FProperties%2F1361891444">coroutineContext</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.coroutines/-coroutine-context/index.html">CoroutineContext</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div data-togglable="FUNCTION">
         <h2 class="">Functions</h2>
         <div class="table"><a data-name="-907716838%2FFunctions%2F1361891444" anchor-label="delete" id="-907716838%2FFunctions%2F1361891444" data-filterable-set=":simbot-component-kook-core:dokkaHtmlPartial/commonMain"></a>
@@ -173,7 +201,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">suspend override </span><span class="token keyword">fun </span><a href="delete.html"><span class="token function">delete</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">vararg </span>options<span class="token operator">: </span><a href="https://docs.simbot.forte.love/main/simbot-api/love.forte.simbot.ability/-delete-option/index.html">DeleteOption</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">删除当前 <a href="index.html">聊天会话</a>.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">suspend override </span><span class="token keyword">fun </span><a href="delete.html"><span class="token function">delete</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">vararg </span>options<span class="token operator">: </span><a href="https://docs.simbot.forte.love/main-v4/simbot-api/love.forte.simbot.ability/-delete-option/index.html">DeleteOption</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">删除当前 <a href="index.html">聊天会话</a>.</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -188,7 +216,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">suspend override </span><span class="token keyword">fun </span><a href="send.html"><span class="token function">send</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">text<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../love.forte.simbot.component.kook.message/-kook-message-created-receipt/index.html">KookMessageCreatedReceipt</a></div><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">suspend override </span><span class="token keyword">fun </span><a href="send.html"><span class="token function">send</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">message<span class="token operator">: </span><a href="https://docs.simbot.forte.love/main/simbot-api/love.forte.simbot.message/-message/index.html">Message</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../love.forte.simbot.component.kook.message/-kook-message-receipt/index.html">KookMessageReceipt</a></div><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">suspend override </span><span class="token keyword">fun </span><a href="send.html"><span class="token function">send</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">messageContent<span class="token operator">: </span><a href="https://docs.simbot.forte.love/main/simbot-api/love.forte.simbot.message/-message-content/index.html">MessageContent</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../love.forte.simbot.component.kook.message/-kook-message-receipt/index.html">KookMessageReceipt</a></div><div class="brief "><p class="paragraph">向当前好友（私聊会话）发送消息。</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">suspend override </span><span class="token keyword">fun </span><a href="send.html"><span class="token function">send</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">text<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../love.forte.simbot.component.kook.message/-kook-message-created-receipt/index.html">KookMessageCreatedReceipt</a></div><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">suspend override </span><span class="token keyword">fun </span><a href="send.html"><span class="token function">send</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">message<span class="token operator">: </span><a href="https://docs.simbot.forte.love/main-v4/simbot-api/love.forte.simbot.message/-message/index.html">Message</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../love.forte.simbot.component.kook.message/-kook-message-receipt/index.html">KookMessageReceipt</a></div><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">suspend override </span><span class="token keyword">fun </span><a href="send.html"><span class="token function">send</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">messageContent<span class="token operator">: </span><a href="https://docs.simbot.forte.love/main-v4/simbot-api/love.forte.simbot.message/-message-content/index.html">MessageContent</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../love.forte.simbot.component.kook.message/-kook-message-receipt/index.html">KookMessageReceipt</a></div><div class="brief "><p class="paragraph">向当前好友（私聊会话）发送消息。</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -199,7 +227,7 @@
   </div>
 </div>
       <div class="footer">
-        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2024 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2021-2024 <a href="https://github.com/simple-robot">Simple Robot</a>. All rights reserved.</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
       </div>
             </div>
         </div>
