@@ -3,7 +3,27 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
     <title>parseData</title>
-<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../../";</script>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">    <!-- 百度统计 -->
+    <!--suppress ES6ConvertVarToLetConst -->
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            const hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?045f67a122223db9432c7856fc942fad";
+            const s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1JWL2DDTB4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-1JWL2DDTB4');
+    </script>
+    <script>var pathToRoot = "../../../";</script>
     <script>document.documentElement.classList.replace("no-js","js");</script>
     <script>const storage = localStorage.getItem("dokka-dark-mode")
     if (storage == null) {
@@ -30,7 +50,10 @@
 <script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
 <script type="text/javascript" src="../../../scripts/main.js" defer></script>
 <script type="text/javascript" src="../../../scripts/prism.js" async></script>
-<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script>
+<link href="../../../images/logo-icon.svg">
+<link href="../../../images/logo-icon-light.svg">
+<link href="../../../styles/kdoc-style.css" rel="Stylesheet"></head>
 <body>
     <div class="root">
 <nav class="navigation" id="navigation-wrapper">
@@ -41,7 +64,7 @@
 <a class="library-name--link" href="../../../index.html">
                             Simple Robot 组件 | KOOK
                     </a>            </div>
-            <div class="library-version">4.0.0-SNAPSHOT
+            <div class="library-version">4.0.0-beta6-SNAPSHOT
             </div>
         </div>
         <div class="filter-section" id="filter-section">
@@ -49,6 +72,7 @@
         </div>
     </div>
     <div class="navigation-controls">
+            <a class="navigation-controls--btn navigation-controls--homepage" id="homepage-link" href="https://github.com/simple-robot/simbot-component-kook"></a>
         <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
         <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
     </div>
@@ -66,7 +90,7 @@
   <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook-api:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-overloads/index.html"><span class="token annotation builtin">JvmOverloads</span></a></div></div><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="parse-data.html">T</a><span class="token operator">&gt; </span><a href="parse-data.html"><span class="token function">parseData</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">json<span class="token operator">: </span><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-json/kotlinx.serialization.json/-json/index.html">Json</a><span class="token operator"> = </span>KookApi.DEFAULT_JSON<span class="token punctuation">, </span></span><span class="parameter ">deserializationStrategy<span class="token operator">: </span><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-core/kotlinx.serialization/-deserialization-strategy/index.html">DeserializationStrategy</a><span class="token operator">&lt;</span><a href="parse-data.html">T</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="parse-data.html">T</a><span class="clearfix"><span class="floating-right">(<a href="https://github.com/simple-robot/simbot-component-kook/tree/main/simbot-component-kook-api/src//commonMain/kotlin/love/forte/simbot/kook/api/ApiResult.kt#L226">source</a>)</span></span></div><p class="paragraph">提供解析参数来使用当前result中的data内容解析为目标结果。 不会有任何判断，</p><h4 class="">Parameters</h4><div class="table"><div class="table-row" data-filterable-current=":simbot-component-kook-api:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span><span>json</span></span></u></div></span></div><div><div class="title"><p class="paragraph">用于解析 <a href="data.html">data</a> 的json反序列化器</p></div></div></div></div><div class="table-row" data-filterable-current=":simbot-component-kook-api:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span>deserialization</span><wbr><span><span>Strategy</span></span></u></div></span></div><div><div class="title"><p class="paragraph">解析目标的反序列化策略，参考 <a href="../-kook-api/result-deserialization-strategy.html">KookApi.resultDeserializationStrategy</a></p></div></div></div></div></div><h4 class="">Throws</h4><div class="table"><div class="table-row" data-filterable-current=":simbot-component-kook-api:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-kook-api:dokkaHtmlPartial/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-core/kotlinx.serialization/-serialization-exception/index.html"><span>Serialization</span><wbr><span><span>Exception</span></span></a></div></span></div><div><div class="title"><p class="paragraph">see <a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-json/kotlinx.serialization.json/-json/decode-from-json-element.html">Json.decodeFromJsonElement</a>.</p></div></div></div></div></div></div></div>
 </div>
       <div class="footer">
-        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2024 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2021-2024 <a href="https://github.com/simple-robot">Simple Robot</a>. All rights reserved.</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
       </div>
             </div>
         </div>
