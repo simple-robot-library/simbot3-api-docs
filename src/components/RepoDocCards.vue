@@ -97,26 +97,6 @@ const componentCards = [
   },
 
   {
-    name: "KOOK组件",
-    tags: [officialTag, componentTag],
-    shields: [
-      Shield({
-        src: "https://img.shields.io/github/v/release/simple-robot/simbot-component-kook?label=version",
-        alt: "KOOK组件"
-      }),
-    ],
-
-    description: "KOOK组件基于核心库对 <a href='https://developer.kookapp.cn/doc/reference'>KOOK机器人</a> 进行实现，提供强大的KOOK机器人平台功能。",
-    links: [
-      [{name: "前往仓库", href: "https://github.com/simple-robot/simbot-component-kook", type: "info"}],
-      [
-        {name: "API文档", href: "components/kook/", type: "primary"},
-        {name: "API文档(快照)", href: "snapshots/components/kook/", type: "primary"},
-      ],
-      [{name: "前往手册", href: "https://simbot.forte.love/component-kook.html", type: "default"}],
-    ]
-  },
-  {
     name: "QQ机器人组件",
     tags: [officialTag, componentTag],
     shields: [
@@ -153,6 +133,26 @@ const componentCards = [
       ],
       // [{name: "前往手册", href: "https://simple-robot.github.io/simbot-component-onebot", type: "default"}],
       [{name: "前往手册", href: "https://simbot.forte.love/component-onebot.html", type: "default"}],
+    ]
+  },
+  {
+    name: "KOOK组件",
+    tags: [officialTag, componentTag],
+    shields: [
+      Shield({
+        src: "https://img.shields.io/github/v/release/simple-robot/simbot-component-kook?label=version",
+        alt: "KOOK组件"
+      }),
+    ],
+
+    description: "KOOK组件基于核心库对 <a href='https://developer.kookapp.cn/doc/reference'>KOOK机器人</a> 进行实现，提供强大的KOOK机器人平台功能。",
+    links: [
+      [{name: "前往仓库", href: "https://github.com/simple-robot/simbot-component-kook", type: "info"}],
+      [
+        {name: "API文档", href: "components/kook/", type: "primary"},
+        {name: "API文档(快照)", href: "snapshots/components/kook/", type: "primary"},
+      ],
+      [{name: "前往手册", href: "https://simbot.forte.love/component-kook.html", type: "default"}],
     ]
   },
   {
