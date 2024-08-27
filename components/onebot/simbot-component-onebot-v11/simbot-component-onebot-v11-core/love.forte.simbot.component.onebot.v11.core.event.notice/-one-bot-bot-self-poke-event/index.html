@@ -64,7 +64,7 @@
 <a class="library-name--link" href="../../../../index.html">
                             Simple Robot 组件 | OneBot
                     </a>            </div>
-            <div class="library-version">1.3.0
+            <div class="library-version">1.4.0
             </div>
         </div>
         <div class="filter-section" id="filter-section">
@@ -86,7 +86,7 @@
   <div class="breadcrumbs"><a href="../../index.html">simbot-component-onebot-v11-core</a><span class="delimiter">/</span><a href="../index.html">love.forte.simbot.component.onebot.v11.core.event.notice</a><span class="delimiter">/</span><span class="current">OneBotBotSelfPokeEvent</span></div>
   <div class="cover ">
     <h1 class="cover"><span>One</span><wbr><span>Bot</span><wbr><span>Bot</span><wbr><span>Self</span><wbr><span>Poke</span><wbr><span><span>Event</span></span></h1>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="index.html">OneBotBotSelfPokeEvent</a> : <a href="../-one-bot-poke-event/index.html">OneBotPokeEvent</a><span class="clearfix"><span class="floating-right">(<a href="https://github.com/simple-robot/simbot-component-onebot/tree/dev/main/simbot-component-onebot-v11/simbot-component-onebot-v11-core/src//commonMain/kotlin/love/forte/simbot/component/onebot/v11/core/event/notice/OneBotNotifyEvent.kt#L124">source</a>)</span></span></div><p class="paragraph">群里Bot被戳一戳事件，即 <a href="../../../../simbot-component-onebot-v11/simbot-component-onebot-v11-core/love.forte.simbot.component.onebot.v11.core.event.notice/-one-bot-bot-self-poke-event/target-id.html">targetId</a> == <a href="../../../../simbot-component-onebot-v11/simbot-component-onebot-v11-core/love.forte.simbot.component.onebot.v11.core.event.notice/-one-bot-bot-self-poke-event/self-id.html">selfId</a>。</p></div></div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="index.html">OneBotBotSelfPokeEvent</a> : <a href="../-one-bot-poke-event/index.html">OneBotPokeEvent</a>, <a href="../-one-bot-group-notify-event/index.html">OneBotGroupNotifyEvent</a><span class="clearfix"><span class="floating-right">(<a href="https://github.com/simple-robot/simbot-component-onebot/tree/dev/main/simbot-component-onebot-v11/simbot-component-onebot-v11-core/src//commonMain/kotlin/love/forte/simbot/component/onebot/v11/core/event/notice/OneBotNotifyEvent.kt#L138">source</a>)</span></span></div><p class="paragraph">群里Bot被戳一戳事件，即 <a href="../../../../simbot-component-onebot-v11/simbot-component-onebot-v11-core/love.forte.simbot.component.onebot.v11.core.event.notice/-one-bot-bot-self-poke-event/target-id.html">targetId</a> == <a href="../../../../simbot-component-onebot-v11/simbot-component-onebot-v11-core/love.forte.simbot.component.onebot.v11.core.event.notice/-one-bot-bot-self-poke-event/self-id.html">selfId</a>。</p></div></div>
   </div>
   <div class="tabbedcontent">
     <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
@@ -133,7 +133,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">val </span><a href="../-one-bot-notify-event/group-id.html">groupId</a><span class="token operator">: </span><a href="https://docs.simbot.forte.love/main-v4/simbot-common-core/love.forte.simbot.common.id/-long-i-d/index.html">LongID</a></div><div class="brief "><p class="paragraph">群号</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">val </span><a href="../-one-bot-notify-event/group-id.html">groupId</a><span class="token operator">: </span><a href="https://docs.simbot.forte.love/main-v4/simbot-common-core/love.forte.simbot.common.id/-long-i-d/index.html">LongID</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">群号。如果是代表私聊相关的事件（例如私聊戳一戳）则为 <code class="lang-kotlin">null</code>。</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -277,32 +277,32 @@
       </div>
       <div data-togglable="FUNCTION">
         <h2 class="">Inherited functions</h2>
-        <div class="table"><a data-name="15825213%2FFunctions%2F542815419" anchor-label="content" id="15825213%2FFunctions%2F542815419" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain"></a>
+        <div class="table"><a data-name="-350804602%2FFunctions%2F542815419" anchor-label="content" id="-350804602%2FFunctions%2F542815419" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain"></a>
           <div class="table-row" data-filterable-current=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
-                  <div><a href="../-one-bot-notify-event/content.html"><span><span>content</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="15825213%2FFunctions%2F542815419"></span>
+                  <div><a href="../-one-bot-group-notify-event/content.html"><span><span>content</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-350804602%2FFunctions%2F542815419"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">suspend override </span><span class="token keyword">fun </span><a href="../-one-bot-notify-event/content.html"><span class="token function">content</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../love.forte.simbot.component.onebot.v11.core.actor/-one-bot-member/index.html">OneBotMember</a></div><div class="brief "><p class="paragraph">群成员</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">suspend override </span><span class="token keyword">fun </span><a href="../-one-bot-group-notify-event/content.html"><span class="token function">content</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../love.forte.simbot.component.onebot.v11.core.actor/-one-bot-member/index.html">OneBotMember</a></div><div class="brief "><p class="paragraph">群成员</p></div></div></div>
                 </div>
               </div>
             </div>
           </div>
-<a data-name="1516101897%2FFunctions%2F542815419" anchor-label="source" id="1516101897%2FFunctions%2F542815419" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain"></a>
+<a data-name="672991136%2FFunctions%2F542815419" anchor-label="source" id="672991136%2FFunctions%2F542815419" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain"></a>
           <div class="table-row" data-filterable-current=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
-                  <div><a href="../-one-bot-notify-event/source.html"><span><span>source</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1516101897%2FFunctions%2F542815419"></span>
+                  <div><a href="../-one-bot-group-notify-event/source.html"><span><span>source</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="672991136%2FFunctions%2F542815419"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">suspend override </span><span class="token keyword">fun </span><a href="../-one-bot-notify-event/source.html"><span class="token function">source</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../love.forte.simbot.component.onebot.v11.core.actor/-one-bot-group/index.html">OneBotGroup</a></div><div class="brief "><p class="paragraph">群</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">suspend override </span><span class="token keyword">fun </span><a href="../-one-bot-group-notify-event/source.html"><span class="token function">source</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../love.forte.simbot.component.onebot.v11.core.actor/-one-bot-group/index.html">OneBotGroup</a></div><div class="brief "><p class="paragraph">群</p></div></div></div>
                 </div>
               </div>
             </div>
