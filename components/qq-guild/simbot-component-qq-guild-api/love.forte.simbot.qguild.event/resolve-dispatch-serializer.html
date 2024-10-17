@@ -1,0 +1,100 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>resolveDispatchSerializer</title>
+<link href="../../images/logo-icon.svg" rel="icon" type="image/svg">    <!-- 百度统计 -->
+    <!--suppress ES6ConvertVarToLetConst -->
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            const hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?045f67a122223db9432c7856fc942fad";
+            const s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1JWL2DDTB4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-1JWL2DDTB4');
+    </script>
+    <script>var pathToRoot = "../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../styles/style.css" rel="Stylesheet">
+<link href="../../styles/main.css" rel="Stylesheet">
+<link href="../../styles/prism.css" rel="Stylesheet">
+<link href="../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<script type="text/javascript" src="../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../scripts/symbol-parameters-wrapper_deferred.js" defer></script>
+<link href="../../images/logo-icon.svg">
+<link href="../../images/logo-icon-light.svg">
+<link href="../../styles/kdoc-style.css" rel="Stylesheet"></head>
+<body>
+    <div class="root">
+<nav class="navigation" id="navigation-wrapper">
+    <div class="navigation--inner">
+        <div class="navigation-title">
+            <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
+            <div class="library-name">
+<a class="library-name--link" href="../../index.html">
+                            Simple Robot 组件 | QQ Guild
+                    </a>            </div>
+            <div class="library-version">4.1.0
+            </div>
+        </div>
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain">common</button>
+        </div>
+    </div>
+    <div class="navigation-controls">
+            <a class="navigation-controls--btn navigation-controls--homepage" id="homepage-link" href="https://github.com/simple-robot/simbot-component-qq-guild"></a>
+        <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
+        <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
+    </div>
+</nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="sidebar--inner" id="sideMenu"></div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="member" id="content" pageids="simbot-component-qq-guild-api::love.forte.simbot.qguild.event//resolveDispatchSerializer/#kotlin.String/PointingToDeclaration//1533000741">
+  <div class="breadcrumbs"><a href="../index.html">simbot-component-qq-guild-api</a><span class="delimiter">/</span><a href="index.html">love.forte.simbot.qguild.event</a><span class="delimiter">/</span><span class="current">resolveDispatchSerializer</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>resolve</span><wbr><span>Dispatch</span><wbr><span><span>Serializer</span></span></h1>
+  </div>
+  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../love.forte.simbot.qguild/-generated/index.html"><span class="token annotation builtin">Generated</span></a></div></div><span class="token keyword">fun </span><a href="resolve-dispatch-serializer.html"><span class="token function">resolveDispatchSerializer</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">eventName<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-core/kotlinx.serialization/-k-serializer/index.html">KSerializer</a><span class="token operator">&lt;</span><span class="token keyword">out </span><a href="-signal/-dispatch/index.html">Signal.Dispatch</a><span class="token operator">&gt;</span><span class="token operator">?</span></div><table><thead><tr><th>event name</th><th>target</th></tr></thead><tbody><tr><td><code class="org.jetbrains.dokka.pages.commenttable@69ba6ddf lang-kotlin">"AT_MESSAGE_CREATE"</code></td><td><a href="-at-message-create/index.html">AtMessageCreate</a></td></tr><tr><td><code class="org.jetbrains.dokka.pages.commenttable@69ba6ddf lang-kotlin">"C2C_MESSAGE_CREATE"</code></td><td><a href="-c2-c-message-create/index.html">C2CMessageCreate</a></td></tr><tr><td><code class="org.jetbrains.dokka.pages.commenttable@69ba6ddf lang-kotlin">"C2C_MSG_RECEIVE"</code></td><td><a href="-c2-c-msg-receive/index.html">C2CMsgReceive</a></td></tr><tr><td><code class="org.jetbrains.dokka.pages.commenttable@69ba6ddf lang-kotlin">"C2C_MSG_REJECT"</code></td><td><a href="-c2-c-msg-reject/index.html">C2CMsgReject</a></td></tr><tr><td><code class="org.jetbrains.dokka.pages.commenttable@69ba6ddf lang-kotlin">"CHANNEL_CREATE"</code></td><td><a href="-channel-create/index.html">ChannelCreate</a></td></tr><tr><td><code class="org.jetbrains.dokka.pages.commenttable@69ba6ddf lang-kotlin">"CHANNEL_DELETE"</code></td><td><a href="-channel-delete/index.html">ChannelDelete</a></td></tr><tr><td><code class="org.jetbrains.dokka.pages.commenttable@69ba6ddf lang-kotlin">"CHANNEL_UPDATE"</code></td><td><a href="-channel-update/index.html">ChannelUpdate</a></td></tr><tr><td><code class="org.jetbrains.dokka.pages.commenttable@69ba6ddf lang-kotlin">"DIRECT_MESSAGE_CREATE"</code></td><td><a href="-direct-message-create/index.html">DirectMessageCreate</a></td></tr><tr><td><code class="org.jetbrains.dokka.pages.commenttable@69ba6ddf lang-kotlin">"FORUM_POST_CREATE"</code></td><td><a href="-forum-post-create/index.html">ForumPostCreate</a></td></tr><tr><td><code class="org.jetbrains.dokka.pages.commenttable@69ba6ddf lang-kotlin">"FORUM_POST_DELETE"</code></td><td><a href="-forum-post-delete/index.html">ForumPostDelete</a></td></tr><tr><td><code class="org.jetbrains.dokka.pages.commenttable@69ba6ddf lang-kotlin">"FORUM_PUBLISH_AUDIT_RESULT"</code></td><td><a href="-forum-publish-audit-result/index.html">ForumPublishAuditResult</a></td></tr><tr><td><code class="org.jetbrains.dokka.pages.commenttable@69ba6ddf lang-kotlin">"FORUM_REPLY_CREATE"</code></td><td><a href="-forum-reply-create/index.html">ForumReplyCreate</a></td></tr><tr><td><code class="org.jetbrains.dokka.pages.commenttable@69ba6ddf lang-kotlin">"FORUM_REPLY_DELETE"</code></td><td><a href="-forum-reply-delete/index.html">ForumReplyDelete</a></td></tr><tr><td><code class="org.jetbrains.dokka.pages.commenttable@69ba6ddf lang-kotlin">"FORUM_THREAD_CREATE"</code></td><td><a href="-forum-thread-create/index.html">ForumThreadCreate</a></td></tr><tr><td><code class="org.jetbrains.dokka.pages.commenttable@69ba6ddf lang-kotlin">"FORUM_THREAD_DELETE"</code></td><td><a href="-forum-thread-delete/index.html">ForumThreadDelete</a></td></tr><tr><td><code class="org.jetbrains.dokka.pages.commenttable@69ba6ddf lang-kotlin">"FORUM_THREAD_UPDATE"</code></td><td><a href="-forum-thread-update/index.html">ForumThreadUpdate</a></td></tr><tr><td><code class="org.jetbrains.dokka.pages.commenttable@69ba6ddf lang-kotlin">"FRIEND_ADD"</code></td><td><a href="-friend-add/index.html">FriendAdd</a></td></tr><tr><td><code class="org.jetbrains.dokka.pages.commenttable@69ba6ddf lang-kotlin">"FRIEND_DEL"</code></td><td><a href="-friend-del/index.html">FriendDel</a></td></tr><tr><td><code class="org.jetbrains.dokka.pages.commenttable@69ba6ddf lang-kotlin">"GROUP_ADD_ROBOT"</code></td><td><a href="-group-add-robot/index.html">GroupAddRobot</a></td></tr><tr><td><code class="org.jetbrains.dokka.pages.commenttable@69ba6ddf lang-kotlin">"GROUP_AT_MESSAGE_CREATE"</code></td><td><a href="-group-at-message-create/index.html">GroupAtMessageCreate</a></td></tr><tr><td><code class="org.jetbrains.dokka.pages.commenttable@69ba6ddf lang-kotlin">"GROUP_DEL_ROBOT"</code></td><td><a href="-group-del-robot/index.html">GroupDelRobot</a></td></tr><tr><td><code class="org.jetbrains.dokka.pages.commenttable@69ba6ddf lang-kotlin">"GROUP_MSG_RECEIVE"</code></td><td><a href="-group-msg-receive/index.html">GroupMsgReceive</a></td></tr><tr><td><code class="org.jetbrains.dokka.pages.commenttable@69ba6ddf lang-kotlin">"GROUP_MSG_REJECT"</code></td><td><a href="-group-msg-reject/index.html">GroupMsgReject</a></td></tr><tr><td><code class="org.jetbrains.dokka.pages.commenttable@69ba6ddf lang-kotlin">"GUILD_CREATE"</code></td><td><a href="-guild-create/index.html">GuildCreate</a></td></tr><tr><td><code class="org.jetbrains.dokka.pages.commenttable@69ba6ddf lang-kotlin">"GUILD_DELETE"</code></td><td><a href="-guild-delete/index.html">GuildDelete</a></td></tr><tr><td><code class="org.jetbrains.dokka.pages.commenttable@69ba6ddf lang-kotlin">"GUILD_MEMBER_ADD"</code></td><td><a href="-guild-member-add/index.html">GuildMemberAdd</a></td></tr><tr><td><code class="org.jetbrains.dokka.pages.commenttable@69ba6ddf lang-kotlin">"GUILD_MEMBER_REMOVE"</code></td><td><a href="-guild-member-remove/index.html">GuildMemberRemove</a></td></tr><tr><td><code class="org.jetbrains.dokka.pages.commenttable@69ba6ddf lang-kotlin">"GUILD_MEMBER_UPDATE"</code></td><td><a href="-guild-member-update/index.html">GuildMemberUpdate</a></td></tr><tr><td><code class="org.jetbrains.dokka.pages.commenttable@69ba6ddf lang-kotlin">"GUILD_UPDATE"</code></td><td><a href="-guild-update/index.html">GuildUpdate</a></td></tr><tr><td><code class="org.jetbrains.dokka.pages.commenttable@69ba6ddf lang-kotlin">"MESSAGE_AUDIT_PASS"</code></td><td><a href="-message-audit-pass/index.html">MessageAuditPass</a></td></tr><tr><td><code class="org.jetbrains.dokka.pages.commenttable@69ba6ddf lang-kotlin">"MESSAGE_AUDIT_REJECT"</code></td><td><a href="-message-audit-reject/index.html">MessageAuditReject</a></td></tr><tr><td><code class="org.jetbrains.dokka.pages.commenttable@69ba6ddf lang-kotlin">"MESSAGE_CREATE"</code></td><td><a href="-message-create/index.html">MessageCreate</a></td></tr><tr><td><code class="org.jetbrains.dokka.pages.commenttable@69ba6ddf lang-kotlin">"MESSAGE_DELETE"</code></td><td><a href="-message-delete/index.html">MessageDelete</a></td></tr><tr><td><code class="org.jetbrains.dokka.pages.commenttable@69ba6ddf lang-kotlin">"OPEN_FORUM_POST_CREATE"</code></td><td><a href="-open-forum-post-create/index.html">OpenForumPostCreate</a></td></tr><tr><td><code class="org.jetbrains.dokka.pages.commenttable@69ba6ddf lang-kotlin">"OPEN_FORUM_POST_DELETE"</code></td><td><a href="-open-forum-post-delete/index.html">OpenForumPostDelete</a></td></tr><tr><td><code class="org.jetbrains.dokka.pages.commenttable@69ba6ddf lang-kotlin">"OPEN_FORUM_REPLY_CREATE"</code></td><td><a href="-open-forum-reply-create/index.html">OpenForumReplyCreate</a></td></tr><tr><td><code class="org.jetbrains.dokka.pages.commenttable@69ba6ddf lang-kotlin">"OPEN_FORUM_REPLY_DELETE"</code></td><td><a href="-open-forum-reply-delete/index.html">OpenForumReplyDelete</a></td></tr><tr><td><code class="org.jetbrains.dokka.pages.commenttable@69ba6ddf lang-kotlin">"OPEN_FORUM_THREAD_CREATE"</code></td><td><a href="-open-forum-thread-create/index.html">OpenForumThreadCreate</a></td></tr><tr><td><code class="org.jetbrains.dokka.pages.commenttable@69ba6ddf lang-kotlin">"OPEN_FORUM_THREAD_DELETE"</code></td><td><a href="-open-forum-thread-delete/index.html">OpenForumThreadDelete</a></td></tr><tr><td><code class="org.jetbrains.dokka.pages.commenttable@69ba6ddf lang-kotlin">"OPEN_FORUM_THREAD_UPDATE"</code></td><td><a href="-open-forum-thread-update/index.html">OpenForumThreadUpdate</a></td></tr><tr><td><code class="org.jetbrains.dokka.pages.commenttable@69ba6ddf lang-kotlin">"PUBLIC_MESSAGE_DELETE"</code></td><td><a href="-public-message-delete-create/index.html">PublicMessageDeleteCreate</a></td></tr><tr><td><code class="org.jetbrains.dokka.pages.commenttable@69ba6ddf lang-kotlin">"READY"</code></td><td><a href="-ready/index.html">Ready</a></td></tr><tr><td><code class="org.jetbrains.dokka.pages.commenttable@69ba6ddf lang-kotlin">"RESUMED"</code></td><td><a href="-resumed/index.html">Resumed</a></td></tr></tbody></table><span class="kdoc-tag"><h4 class="">Since</h4><p class="paragraph">4.1.0</p></span><hr><div class="symbol monospace"><span class="token keyword">fun </span><a href="resolve-dispatch-serializer.html"><span class="token function">resolveDispatchSerializer</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">json<span class="token operator">: </span><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-json/kotlinx.serialization.json/-json-object/index.html">JsonObject</a><span class="token punctuation">, </span></span><span class="parameter ">allowNameMissing<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-core/kotlinx.serialization/-k-serializer/index.html">KSerializer</a><span class="token operator">&lt;</span><span class="token keyword">out </span><a href="-signal/-dispatch/index.html">Signal.Dispatch</a><span class="token operator">&gt;</span><span class="token operator">?</span><span class="clearfix"><span class="floating-right">(<a href="https://github.com/simple-robot/simbot-component-qq-guild/tree/main/simbot-component-qq-guild-api/src//commonMain/kotlin/love/forte/simbot/qguild/event/Signal.kt#L360">source</a>)</span></span></div><p class="paragraph">解析 <a href="resolve-dispatch-serializer.html">json</a> 并寻找匹配的 <a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-core/kotlinx.serialization/-k-serializer/index.html">KSerializer</a><out><a href="-signal/-dispatch/index.html">Signal.Dispatch</a>&gt;, 如果找不到则得到 <code class="lang-kotlin">null</code>。</out></p><h4 class="">See also</h4><div class="table"><div class="table-row" data-filterable-current=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="resolve-dispatch-serializer.html"><span>resolve</span><wbr><span>Dispatch</span><wbr><span><span>Serializer</span></span></a></div></span></div><div></div></div></div></div></div></div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2022-2024 <a href="https://github.com/simple-robot">Simple Robot</a>. All rights reserved.</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
