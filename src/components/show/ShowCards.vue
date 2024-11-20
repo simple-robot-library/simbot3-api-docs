@@ -1,6 +1,6 @@
 <script setup>
 
-import {NA, NButton, NCard, NGi, NGrid, NImage, NImageGroup, NP, NSpace, NTag} from "naive-ui";
+import {NA, NButton, NCard, NGi, NGrid, NImage, NImageGroup, NP, NSpace, NTag, NCarousel} from "naive-ui";
 // import qgfolqrcode from "@/assets/qq-guild-forliy-qrcode.jpg";
 
 const componentCards = [
@@ -14,6 +14,22 @@ const componentCards = [
     links: [
       [{name: "点击邀请法欧莉", href: "https://qun.qq.com/qunpro/robot/share?robot_appid=101986850", type: "info"}],
     ]
+  }, {
+    name: "QQ法欧莉二号机！",
+    tags: [
+      {name: "QQ群", type: "info"},
+      {name: "QQ频道", type: "info"},
+      {name: "BOT实例", type: "info"},
+      {name: "法欧莉", type: "success"}],
+    description: "<p>法欧莉，占领QQ群和频道！</p><p>快使用QQ扫描下面的图片把法欧莉添加到你的QQ群或者频道中吧~</p>",
+    images: [
+      "img/qq-guild-forliy-mk2-qrcode.png",
+      "img/qq-group-forliy-mk2-qrcode.png",
+    ],
+    links: [
+      [{name: "点击邀请法欧莉到QQ群", href: "https://bot.q.qq.com/s/16jtuq1vh?id=102145654", type: "info"}],
+      [{name: "点击邀请法欧莉到QQ频道", href: "https://qun.qq.com/qunpro/robot/share?robot_appid=102145654", type: "info"}],
+    ]
   },
   {
     name: "KOOK法欧莉",
@@ -22,7 +38,11 @@ const componentCards = [
     <p>法欧莉，占领KOOK！</p>
     <p>快点击下方的按钮把法欧莉添加到你的KOOK中吧~</p>`,
     links: [
-        [{name: "点击邀请法欧莉", href: "https://www.kookapp.cn/app/oauth2/authorize?id=10250&permissions=536870911&client_id=jqdlyHK85xe1i5Bo&redirect_uri=&scope=bot", type: "info"}]
+      [{
+        name: "点击邀请法欧莉",
+        href: "https://www.kookapp.cn/app/oauth2/authorize?id=10250&permissions=536870911&client_id=jqdlyHK85xe1i5Bo&redirect_uri=&scope=bot",
+        type: "info"
+      }]
     ]
   },
 //   {
@@ -65,9 +85,17 @@ const componentCards = [
 
           <n-p v-html="componentCard.description"></n-p>
 
-          <n-image-group show-toolbar-tooltip show-toolbar>
+          <n-image-group show-toolbar-tooltip show-toolbar title="123">
             <n-space size="small" align="center">
-              <n-image lazy :preview-src="img" width="200" v-for="img in componentCard.images" :src="img"/>
+              <n-carousel autoplay
+                          :show-arrow="true"
+                          :dot-type="'dot'"
+                          :dot-placement="'bottom'"
+                          centered-slides
+                          draggable
+              >
+                <n-image class="carousel-img" lazy :preview-src="img" width="200" v-for="img in componentCard.images" :src="img"/>
+              </n-carousel>
             </n-space>
           </n-image-group>
 
