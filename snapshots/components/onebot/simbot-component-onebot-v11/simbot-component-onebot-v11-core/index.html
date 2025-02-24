@@ -45,57 +45,96 @@
 <link href="../../styles/prism.css" rel="Stylesheet">
 <link href="../../styles/logo-styles.css" rel="Stylesheet">
 <link href="../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<link href="../../ui-kit/ui-kit.min.css" rel="Stylesheet">
 <script type="text/javascript" src="../../scripts/clipboard.js" async></script>
 <script type="text/javascript" src="../../scripts/navigation-loader.js" async></script>
 <script type="text/javascript" src="../../scripts/platform-content-handler.js" async></script>
 <script type="text/javascript" src="../../scripts/main.js" defer></script>
 <script type="text/javascript" src="../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../ui-kit/ui-kit.min.js" defer></script>
 <script type="text/javascript" src="../../scripts/symbol-parameters-wrapper_deferred.js" defer></script>
 <link href="../../images/logo-icon.svg">
 <link href="../../images/logo-icon-light.svg">
 <link href="../../styles/kdoc-style.css" rel="Stylesheet"></head>
 <body>
     <div class="root">
-<nav class="navigation" id="navigation-wrapper">
-    <div class="navigation--inner">
-        <div class="navigation-title">
-            <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
-            <div class="library-name">
+    <nav class="navigation theme-dark" id="navigation-wrapper">
 <a class="library-name--link" href="../../index.html">
-                            Simple Robot 组件 | OneBot
-                    </a>            </div>
-            <div class="library-version">1.5.0
+                    Simple Robot 组件 | OneBot
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">1.5.0
+        </div>
+        <div class="navigation-controls">
+        <div class="filter-section filter-section_loading" id="filter-section">
+                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain">common</button>
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":simbot-component-onebot-v11:simbot-component-onebot-v11-core/jvmMain">jvm</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox">
+                    <div class="dropdown--header"><span>Platform filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close platform filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option common-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain" data-filter=":simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain">
+                                <span class="checkbox--icon"></span>
+                                common
+                            </label>
+                        </li>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":simbot-component-onebot-v11:simbot-component-onebot-v11-core/jvmMain" data-filter=":simbot-component-onebot-v11:simbot-component-onebot-v11-core/jvmMain">
+                                <span class="checkbox--icon"></span>
+                                jvm
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
             </div>
         </div>
-        <div class="filter-section" id="filter-section">
-                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain">common</button>
-                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/jvmMain">jvm</button>
+                <a class="navigation-controls--btn navigation-controls--btn_homepage" id="homepage-link" href="https://github.com/simple-robot/simbot-component-onebot"></a>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
         </div>
-    </div>
-    <div class="navigation-controls">
-            <a class="navigation-controls--btn navigation-controls--homepage" id="homepage-link" href="https://github.com/simple-robot/simbot-component-onebot"></a>
-        <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
-        <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
-    </div>
-</nav>
+    </nav>
         <div id="container">
             <div class="sidebar" id="leftColumn">
-                <div class="sidebar--inner" id="sideMenu"></div>
+                <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                    <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox">
+                        <div class="dropdown--header">
+                            <span>
+                                    Simple Robot 组件 | OneBot
+                            </span>
+                            <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                                <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                            </button>
+                        </div>
+                        <div class="sidebar--inner" id="sideMenu"></div>
+                    </ul>
+                    <div class="dropdown--overlay"></div>
+                </div>
             </div>
             <div id="main">
-<div class="main-content" id="content" pageids="simbot-component-onebot-v11-core::////PointingToDeclaration//-717474550">
+<div class="main-content" id="content" pageids="simbot-component-onebot-v11-core::////PointingToDeclaration//1949677692">
   <div class="breadcrumbs"></div>
   <div class="cover ">
     <h1 class="cover"><span><span>simbot-component-onebot-v11-core</span></span></h1>
   </div>
   <h2 class="">Packages</h2>
-  <div class="table"><a data-name="527020647%2FPackages%2F542815419" anchor-label="love.forte.simbot.component.onebot.v11.core" id="527020647%2FPackages%2F542815419" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain"></a>
-    <div class="table-row" data-filterable-current=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain">
+  <div class="table"><a data-name="527020647%2FPackages%2F1398750435" anchor-label="love.forte.simbot.component.onebot.v11.core" id="527020647%2FPackages%2F1398750435" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"></a>
+    <div class="table-row" data-filterable-current=":simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="love.forte.simbot.component.onebot.v11.core/index.html">love.forte.simbot.component.onebot.v11.core</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="527020647%2FPackages%2F542815419"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="527020647%2FPackages%2F1398750435"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div class="pull-right">
@@ -107,13 +146,13 @@
         <div></div>
       </div>
     </div>
-<a data-name="1352967790%2FPackages%2F542815419" anchor-label="love.forte.simbot.component.onebot.v11.core.actor" id="1352967790%2FPackages%2F542815419" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain"></a>
-    <div class="table-row" data-filterable-current=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain">
+<a data-name="1352967790%2FPackages%2F1398750435" anchor-label="love.forte.simbot.component.onebot.v11.core.actor" id="1352967790%2FPackages%2F1398750435" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"></a>
+    <div class="table-row" data-filterable-current=":simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="love.forte.simbot.component.onebot.v11.core.actor/index.html">love.forte.simbot.component.onebot.v11.core.actor</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1352967790%2FPackages%2F542815419"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1352967790%2FPackages%2F1398750435"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div class="pull-right">
@@ -125,13 +164,13 @@
         <div></div>
       </div>
     </div>
-<a data-name="914811923%2FPackages%2F-717474550" anchor-label="love.forte.simbot.component.onebot.v11.core.api" id="914811923%2FPackages%2F-717474550" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain,:simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/jvmMain"></a>
-    <div class="table-row" data-filterable-current=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain,:simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/jvmMain" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain,:simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/jvmMain">
+<a data-name="914811923%2FPackages%2F1949677692" anchor-label="love.forte.simbot.component.onebot.v11.core.api" id="914811923%2FPackages%2F1949677692" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain,:simbot-component-onebot-v11:simbot-component-onebot-v11-core/jvmMain"></a>
+    <div class="table-row" data-filterable-current=":simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain,:simbot-component-onebot-v11:simbot-component-onebot-v11-core/jvmMain" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain,:simbot-component-onebot-v11:simbot-component-onebot-v11-core/jvmMain">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="love.forte.simbot.component.onebot.v11.core.api/index.html">love.forte.simbot.component.onebot.v11.core.api</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="914811923%2FPackages%2F-717474550"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="914811923%2FPackages%2F1949677692"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div class="pull-right">
@@ -144,13 +183,13 @@
         <div></div>
       </div>
     </div>
-<a data-name="-444497536%2FPackages%2F-717474550" anchor-label="love.forte.simbot.component.onebot.v11.core.bot" id="-444497536%2FPackages%2F-717474550" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain,:simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/jvmMain"></a>
-    <div class="table-row" data-filterable-current=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain,:simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/jvmMain" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain,:simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/jvmMain">
+<a data-name="-444497536%2FPackages%2F1949677692" anchor-label="love.forte.simbot.component.onebot.v11.core.bot" id="-444497536%2FPackages%2F1949677692" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain,:simbot-component-onebot-v11:simbot-component-onebot-v11-core/jvmMain"></a>
+    <div class="table-row" data-filterable-current=":simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain,:simbot-component-onebot-v11:simbot-component-onebot-v11-core/jvmMain" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain,:simbot-component-onebot-v11:simbot-component-onebot-v11-core/jvmMain">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="love.forte.simbot.component.onebot.v11.core.bot/index.html">love.forte.simbot.component.onebot.v11.core.bot</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-444497536%2FPackages%2F-717474550"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-444497536%2FPackages%2F1949677692"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div class="pull-right">
@@ -163,13 +202,13 @@
         <div></div>
       </div>
     </div>
-<a data-name="-1836246026%2FPackages%2F542815419" anchor-label="love.forte.simbot.component.onebot.v11.core.component" id="-1836246026%2FPackages%2F542815419" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain"></a>
-    <div class="table-row" data-filterable-current=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain">
+<a data-name="-1836246026%2FPackages%2F1398750435" anchor-label="love.forte.simbot.component.onebot.v11.core.component" id="-1836246026%2FPackages%2F1398750435" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"></a>
+    <div class="table-row" data-filterable-current=":simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="love.forte.simbot.component.onebot.v11.core.component/index.html">love.forte.simbot.component.onebot.v11.core.component</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1836246026%2FPackages%2F542815419"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1836246026%2FPackages%2F1398750435"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div class="pull-right">
@@ -181,13 +220,13 @@
         <div></div>
       </div>
     </div>
-<a data-name="-952419629%2FPackages%2F542815419" anchor-label="love.forte.simbot.component.onebot.v11.core.event" id="-952419629%2FPackages%2F542815419" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain"></a>
-    <div class="table-row" data-filterable-current=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain">
+<a data-name="-952419629%2FPackages%2F1398750435" anchor-label="love.forte.simbot.component.onebot.v11.core.event" id="-952419629%2FPackages%2F1398750435" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"></a>
+    <div class="table-row" data-filterable-current=":simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="love.forte.simbot.component.onebot.v11.core.event/index.html">love.forte.simbot.component.onebot.v11.core.event</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-952419629%2FPackages%2F542815419"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-952419629%2FPackages%2F1398750435"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div class="pull-right">
@@ -199,13 +238,13 @@
         <div></div>
       </div>
     </div>
-<a data-name="-2121372500%2FPackages%2F542815419" anchor-label="love.forte.simbot.component.onebot.v11.core.event.message" id="-2121372500%2FPackages%2F542815419" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain"></a>
-    <div class="table-row" data-filterable-current=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain">
+<a data-name="-2121372500%2FPackages%2F1398750435" anchor-label="love.forte.simbot.component.onebot.v11.core.event.message" id="-2121372500%2FPackages%2F1398750435" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"></a>
+    <div class="table-row" data-filterable-current=":simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="love.forte.simbot.component.onebot.v11.core.event.message/index.html">love.forte.simbot.component.onebot.v11.core.event.message</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2121372500%2FPackages%2F542815419"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2121372500%2FPackages%2F1398750435"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div class="pull-right">
@@ -217,13 +256,13 @@
         <div></div>
       </div>
     </div>
-<a data-name="1114598148%2FPackages%2F542815419" anchor-label="love.forte.simbot.component.onebot.v11.core.event.meta" id="1114598148%2FPackages%2F542815419" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain"></a>
-    <div class="table-row" data-filterable-current=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain">
+<a data-name="1114598148%2FPackages%2F1398750435" anchor-label="love.forte.simbot.component.onebot.v11.core.event.meta" id="1114598148%2FPackages%2F1398750435" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"></a>
+    <div class="table-row" data-filterable-current=":simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="love.forte.simbot.component.onebot.v11.core.event.meta/index.html">love.forte.simbot.component.onebot.v11.core.event.meta</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1114598148%2FPackages%2F542815419"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1114598148%2FPackages%2F1398750435"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div class="pull-right">
@@ -235,13 +274,13 @@
         <div></div>
       </div>
     </div>
-<a data-name="-1214507305%2FPackages%2F542815419" anchor-label="love.forte.simbot.component.onebot.v11.core.event.notice" id="-1214507305%2FPackages%2F542815419" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain"></a>
-    <div class="table-row" data-filterable-current=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain">
+<a data-name="-1214507305%2FPackages%2F1398750435" anchor-label="love.forte.simbot.component.onebot.v11.core.event.notice" id="-1214507305%2FPackages%2F1398750435" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"></a>
+    <div class="table-row" data-filterable-current=":simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="love.forte.simbot.component.onebot.v11.core.event.notice/index.html">love.forte.simbot.component.onebot.v11.core.event.notice</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1214507305%2FPackages%2F542815419"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1214507305%2FPackages%2F1398750435"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div class="pull-right">
@@ -253,13 +292,13 @@
         <div></div>
       </div>
     </div>
-<a data-name="421053748%2FPackages%2F542815419" anchor-label="love.forte.simbot.component.onebot.v11.core.event.request" id="421053748%2FPackages%2F542815419" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain"></a>
-    <div class="table-row" data-filterable-current=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain">
+<a data-name="421053748%2FPackages%2F1398750435" anchor-label="love.forte.simbot.component.onebot.v11.core.event.request" id="421053748%2FPackages%2F1398750435" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"></a>
+    <div class="table-row" data-filterable-current=":simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="love.forte.simbot.component.onebot.v11.core.event.request/index.html">love.forte.simbot.component.onebot.v11.core.event.request</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="421053748%2FPackages%2F542815419"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="421053748%2FPackages%2F1398750435"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div class="pull-right">
@@ -271,13 +310,13 @@
         <div></div>
       </div>
     </div>
-<a data-name="-1148019293%2FPackages%2F542815419" anchor-label="love.forte.simbot.component.onebot.v11.core.event.stage" id="-1148019293%2FPackages%2F542815419" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain"></a>
-    <div class="table-row" data-filterable-current=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain">
+<a data-name="-1148019293%2FPackages%2F1398750435" anchor-label="love.forte.simbot.component.onebot.v11.core.event.stage" id="-1148019293%2FPackages%2F1398750435" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"></a>
+    <div class="table-row" data-filterable-current=":simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="love.forte.simbot.component.onebot.v11.core.event.stage/index.html">love.forte.simbot.component.onebot.v11.core.event.stage</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1148019293%2FPackages%2F542815419"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1148019293%2FPackages%2F1398750435"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div class="pull-right">
@@ -289,13 +328,13 @@
         <div></div>
       </div>
     </div>
-<a data-name="1390809152%2FPackages%2F-717474550" anchor-label="love.forte.simbot.component.onebot.v11.core.message" id="1390809152%2FPackages%2F-717474550" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain,:simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/jvmMain"></a>
-    <div class="table-row" data-filterable-current=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain,:simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/jvmMain" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain,:simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/jvmMain">
+<a data-name="1390809152%2FPackages%2F1949677692" anchor-label="love.forte.simbot.component.onebot.v11.core.message" id="1390809152%2FPackages%2F1949677692" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain,:simbot-component-onebot-v11:simbot-component-onebot-v11-core/jvmMain"></a>
+    <div class="table-row" data-filterable-current=":simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain,:simbot-component-onebot-v11:simbot-component-onebot-v11-core/jvmMain" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain,:simbot-component-onebot-v11:simbot-component-onebot-v11-core/jvmMain">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="love.forte.simbot.component.onebot.v11.core.message/index.html">love.forte.simbot.component.onebot.v11.core.message</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1390809152%2FPackages%2F-717474550"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1390809152%2FPackages%2F1949677692"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div class="pull-right">
@@ -308,13 +347,13 @@
         <div></div>
       </div>
     </div>
-<a data-name="-1631921622%2FPackages%2F542815419" anchor-label="love.forte.simbot.component.onebot.v11.core.utils" id="-1631921622%2FPackages%2F542815419" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain"></a>
-    <div class="table-row" data-filterable-current=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-core:dokkaHtmlPartial/commonMain">
+<a data-name="-1631921622%2FPackages%2F1398750435" anchor-label="love.forte.simbot.component.onebot.v11.core.utils" id="-1631921622%2FPackages%2F1398750435" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"></a>
+    <div class="table-row" data-filterable-current=":simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain" data-filterable-set=":simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="love.forte.simbot.component.onebot.v11.core.utils/index.html">love.forte.simbot.component.onebot.v11.core.utils</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1631921622%2FPackages%2F542815419"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1631921622%2FPackages%2F1398750435"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div class="pull-right">
@@ -328,12 +367,18 @@
     </div>
   </div>
 </div>
-      <div class="footer">
-        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2024-2025 <a href="https://github.com/simple-robot">Simple Robot</a>. All rights reserved.</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
-      </div>
+    <div class="footer">
+        <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+        <span>© 2024-2025 <a href="https://github.com/simple-robot">Simple Robot</a>. All rights reserved.</span>
+        <span class="pull-right">
+            <span>Generated by </span>
+            <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                <span>dokka</span>
+            </a>
+        </span>
+    </div>
             </div>
         </div>
     </div>
 </body>
 </html>
-
