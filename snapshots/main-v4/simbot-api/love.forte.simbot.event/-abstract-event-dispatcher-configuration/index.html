@@ -118,7 +118,7 @@
   <div class="breadcrumbs"><a href="../../index.html">simbot-api</a><span class="delimiter">/</span><a href="../index.html">love.forte.simbot.event</a><span class="delimiter">/</span><span class="current">AbstractEventDispatcherConfiguration</span></div>
   <div class="cover ">
     <h1 class="cover"><span>Abstract</span><wbr><span>Event</span><wbr><span>Dispatcher</span><wbr><span><span>Configuration</span></span></h1>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">class </span><a href="index.html">AbstractEventDispatcherConfiguration</a> : <a href="../-event-dispatcher-configuration/index.html">EventDispatcherConfiguration</a><span class="clearfix"><span class="floating-right">(<a href="https://github.com/simple-robot/simpler-robot/tree/v4-dev/simbot-api/src/commonMain/kotlin/love/forte/simbot/event/EventDispatcher.kt#L124">source</a>)</span></span></div><p class="paragraph"><a href="../-event-dispatcher-configuration/index.html">EventDispatcherConfiguration</a> 的基础抽象类，提供 <a href="../-event-dispatcher-configuration/index.html">EventDispatcherConfiguration</a> 中基本能力的部分实现或抽象。</p><h4 class="">See also</h4><div class="table"><div class="table-row" data-filterable-current=":simbot-api/commonMain" data-filterable-set=":simbot-api/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../-event-dispatcher-configuration/index.html"><span>Event</span><wbr><span>Dispatcher</span><wbr><span><span>Configuration</span></span></a></div></span></div><div></div></div></div></div></div></div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">class </span><a href="index.html">AbstractEventDispatcherConfiguration</a> : <a href="../-event-dispatcher-configuration/index.html">EventDispatcherConfiguration</a><span class="clearfix"><span class="floating-right">(<a href="https://github.com/simple-robot/simpler-robot/tree/dev/main/simbot-api/src/commonMain/kotlin/love/forte/simbot/event/EventDispatcher.kt#L124">source</a>)</span></span></div><p class="paragraph"><a href="../-event-dispatcher-configuration/index.html">EventDispatcherConfiguration</a> 的基础抽象类，提供 <a href="../-event-dispatcher-configuration/index.html">EventDispatcherConfiguration</a> 中基本能力的部分实现或抽象。</p><h4 class="">See also</h4><div class="table"><div class="table-row" data-filterable-current=":simbot-api/commonMain" data-filterable-set=":simbot-api/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../-event-dispatcher-configuration/index.html"><span>Event</span><wbr><span>Dispatcher</span><wbr><span><span>Configuration</span></span></a></div></span></div><div></div></div></div></div></div></div>
   </div>
   <div class="tabbedcontent">
     <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
@@ -155,6 +155,36 @@
               <div>
                 <div class="title">
                   <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">var </span><a href="coroutine-context.html">coroutineContext</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.coroutines/-coroutine-context/index.html">CoroutineContext</a></div><div class="brief "><p class="paragraph">用于 <a href="../-event-dispatcher/index.html">EventDispatcher</a> 中进行事件调度的协程上下文。每一次事件处理都会被切换至此上下文中。 <a href="coroutine-context.html">coroutineContext</a> 会作为调度事件时候使用的调度器， 事件在处理的时候会被切换至此上下文中（例如使用其中的调度器等）。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="684965088%2FProperties%2F-1602927896" anchor-label="dispatchInterceptors" id="684965088%2FProperties%2F-1602927896" data-filterable-set=":simbot-api/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-api/commonMain" data-filterable-set=":simbot-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="dispatch-interceptors.html"><span>dispatch</span><wbr><span><span>Interceptors</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="684965088%2FProperties%2F-1602927896"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api/commonMain"><div class="symbol monospace"><span class="token keyword">protected </span><span class="token keyword">open </span><span class="token keyword">val </span><a href="dispatch-interceptors.html">dispatchInterceptors</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-mutable-list/index.html">MutableList</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-pair/index.html">Pair</a><span class="token operator">&lt;</span><a href="../-event-dispatch-interceptor/index.html">EventDispatchInterceptor</a><span class="token punctuation">, </span><a href="../../../simbot-commons/simbot-common-core/love.forte.simbot.common.function/-configurer-function/index.html">ConfigurerFunction</a><span class="token operator">&lt;</span><a href="../-event-dispatch-interceptor-registration-properties/index.html">EventDispatchInterceptorRegistrationProperties</a><span class="token operator">&gt;</span><span class="token operator">?</span><span class="token operator">&gt;</span><span class="token operator">&gt;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-723310534%2FProperties%2F-1602927896" anchor-label="interceptors" id="-723310534%2FProperties%2F-1602927896" data-filterable-set=":simbot-api/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-api/commonMain" data-filterable-set=":simbot-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="interceptors.html"><span><span>interceptors</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-723310534%2FProperties%2F-1602927896"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api/commonMain"><div class="symbol monospace"><span class="token keyword">protected </span><span class="token keyword">open </span><span class="token keyword">val </span><a href="interceptors.html">interceptors</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-mutable-list/index.html">MutableList</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-pair/index.html">Pair</a><span class="token operator">&lt;</span><a href="../-event-interceptor/index.html">EventInterceptor</a><span class="token punctuation">, </span><a href="../../../simbot-commons/simbot-common-core/love.forte.simbot.common.function/-configurer-function/index.html">ConfigurerFunction</a><span class="token operator">&lt;</span><a href="../-event-interceptor-registration-properties/index.html">EventInterceptorRegistrationProperties</a><span class="token operator">&gt;</span><span class="token operator">?</span><span class="token operator">&gt;</span><span class="token operator">&gt;</span></div></div></div>
                 </div>
               </div>
             </div>
@@ -234,7 +264,7 @@
 </div>
     <div class="footer">
         <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
-        <span>© 2021-2025 <a href="https://github.com/simple-robot">Simple Robot</a>. All rights reserved.</span>
+        <span>© 2024-2025 <a href="https://github.com/simple-robot">Simple Robot</a>. All rights reserved.</span>
         <span class="pull-right">
             <span>Generated by </span>
             <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
