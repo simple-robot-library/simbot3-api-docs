@@ -3,7 +3,27 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
     <title>Bot</title>
-<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../../";</script>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">    <!-- 百度统计 -->
+    <!--suppress ES6ConvertVarToLetConst -->
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            const hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?045f67a122223db9432c7856fc942fad";
+            const s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1JWL2DDTB4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-1JWL2DDTB4');
+    </script>
+    <script>var pathToRoot = "../../../";</script>
     <script>document.documentElement.classList.replace("no-js","js");</script>
     <script>const storage = localStorage.getItem("dokka-dark-mode")
     if (storage == null) {
@@ -32,7 +52,10 @@
 <script type="text/javascript" src="../../../scripts/main.js" defer></script>
 <script type="text/javascript" src="../../../scripts/prism.js" async></script>
 <script type="text/javascript" src="../../../ui-kit/ui-kit.min.js" defer></script>
-<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script>
+<link href="../../../images/logo-icon.svg">
+<link href="../../../images/logo-icon-light.svg">
+<link href="../../../styles/kdoc-style.css" rel="Stylesheet"></head>
 <body>
     <div class="root">
     <nav class="navigation theme-dark" id="navigation-wrapper">
@@ -41,7 +64,7 @@
             </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
         </button>
         <div class="navigation-controls--break ui-kit_mobile-only"></div>
-        <div class="library-version" id="library-version">4.11.0
+        <div class="library-version" id="library-version">4.11.1
         </div>
         <div class="navigation-controls">
         <div class="filter-section filter-section_loading" id="filter-section">
@@ -65,6 +88,7 @@
                 <div class="dropdown--overlay"></div>
             </div>
         </div>
+                <a class="navigation-controls--btn navigation-controls--btn_homepage" id="homepage-link" href="https://github.com/simple-robot/simpler-robot"></a>
             <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
             </button>
             <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
@@ -94,7 +118,7 @@
   <div class="breadcrumbs"><a href="../../index.html">simbot-api</a><span class="delimiter">/</span><a href="../index.html">love.forte.simbot.bot</a><span class="delimiter">/</span><span class="current">Bot</span></div>
   <div class="cover ">
     <h1 class="cover"><span><span>Bot</span></span></h1>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="index.html">Bot</a> : <a href="../../../simbot-commons/simbot-common-core/love.forte.simbot.common.id/-i-d-container/index.html">IDContainer</a>, <a href="../../love.forte.simbot.ability/-lifecycle-aware/index.html">LifecycleAware</a>, <a href="../../love.forte.simbot.ability/-completion-aware/index.html">CompletionAware</a>, <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-coroutine-scope/index.html">CoroutineScope</a>, <a href="../-bot-relations/index.html">BotRelations</a><span class="clearfix"><span class="floating-right">(<a href="https://github.com/simple-robot/simpler-robot/tree/v4-dev/simbot-api/src/commonMain/kotlin/love/forte/simbot/bot/Bot.kt#L60">source</a>)</span></span></div><p class="paragraph">一个 <code class="lang-kotlin">Bot</code>。</p><h2 class="">行为关系</h2><p class="paragraph"><a href="index.html">Bot</a> 实现 <a href="../-bot-relations/index.html">BotRelations</a> 并提供了部分基础的行为关系对象， 它们可以提供针对 <a href="../../love.forte.simbot.definition/-guild/index.html">Guild</a>、<a href="../../love.forte.simbot.definition/-chat-group/index.html">ChatGroup</a>、<a href="../../love.forte.simbot.definition/-contact/index.html">Contact</a> 等常见行为对象的操作。 <a href="index.html">Bot</a> 的实现者也许会根据不同的平台扩展这些行为类型或提供更多的行为类型。</p><span class="kdoc-tag"><h4 class="">Author</h4><p class="paragraph">ForteScarlet</p></span><h4 class="">Inheritors</h4><div class="table"><div class="table-row" data-filterable-current=":simbot-api/commonMain" data-filterable-set=":simbot-api/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../-job-based-bot/index.html">JobBasedBot</a></div></span></div><div></div></div></div></div></div></div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="index.html">Bot</a> : <a href="../../../simbot-commons/simbot-common-core/love.forte.simbot.common.id/-i-d-container/index.html">IDContainer</a>, <a href="../../love.forte.simbot.ability/-lifecycle-aware/index.html">LifecycleAware</a>, <a href="../../love.forte.simbot.ability/-completion-aware/index.html">CompletionAware</a>, <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-coroutine-scope/index.html">CoroutineScope</a>, <a href="../-bot-relations/index.html">BotRelations</a><span class="clearfix"><span class="floating-right">(<a href="https://github.com/simple-robot/simpler-robot/tree/dev/main/simbot-api/src/commonMain/kotlin/love/forte/simbot/bot/Bot.kt#L60">source</a>)</span></span></div><p class="paragraph">一个 <code class="lang-kotlin">Bot</code>。</p><h2 class="">行为关系</h2><p class="paragraph"><a href="index.html">Bot</a> 实现 <a href="../-bot-relations/index.html">BotRelations</a> 并提供了部分基础的行为关系对象， 它们可以提供针对 <a href="../../love.forte.simbot.definition/-guild/index.html">Guild</a>、<a href="../../love.forte.simbot.definition/-chat-group/index.html">ChatGroup</a>、<a href="../../love.forte.simbot.definition/-contact/index.html">Contact</a> 等常见行为对象的操作。 <a href="index.html">Bot</a> 的实现者也许会根据不同的平台扩展这些行为类型或提供更多的行为类型。</p><span class="kdoc-tag"><h4 class="">Author</h4><p class="paragraph">ForteScarlet</p></span><h4 class="">Inheritors</h4><div class="table"><div class="table-row" data-filterable-current=":simbot-api/commonMain" data-filterable-set=":simbot-api/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../-job-based-bot/index.html">JobBasedBot</a></div></span></div><div></div></div></div></div></div></div>
   </div>
   <div class="tabbedcontent">
     <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button><button class="section-tab" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION,EXTENSION_PROPERTY,EXTENSION_FUNCTION">Members &amp; Extensions</button></div>
@@ -116,7 +140,56 @@
               </div>
             </div>
           </div>
-<a data-name="434358122%2FProperties%2F-1602927896" anchor-label="contactRelation" id="434358122%2FProperties%2F-1602927896" data-filterable-set=":simbot-api/commonMain"></a>
+<a data-name="-1147904668%2FProperties%2F-1602927896" anchor-label="id" id="-1147904668%2FProperties%2F-1602927896" data-filterable-set=":simbot-api/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-api/commonMain" data-filterable-set=":simbot-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="id.html"><span><span>id</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1147904668%2FProperties%2F-1602927896"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="id.html">id</a><span class="token operator">: </span><a href="../../../simbot-commons/simbot-common-core/love.forte.simbot.common.id/-i-d/index.html">ID</a></div><div class="brief "><p class="paragraph">当前bot的标识。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1984477956%2FProperties%2F-1602927896" anchor-label="isStarted" id="1984477956%2FProperties%2F-1602927896" data-filterable-set=":simbot-api/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-api/commonMain" data-filterable-set=":simbot-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-started.html"><span>is</span><wbr><span><span>Started</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1984477956%2FProperties%2F-1602927896"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">val </span><a href="is-started.html">isStarted</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">是否 <strong>启动过</strong>。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1571478900%2FProperties%2F-1602927896" anchor-label="name" id="1571478900%2FProperties%2F-1602927896" data-filterable-set=":simbot-api/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-api/commonMain" data-filterable-set=":simbot-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="name.html"><span><span>name</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1571478900%2FProperties%2F-1602927896"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">val </span><a href="name.html">name</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">当前 <a href="index.html">Bot</a> 作为用户的名称。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="">Inherited properties</h2>
+        <div class="table"><a data-name="434358122%2FProperties%2F-1602927896" anchor-label="contactRelation" id="434358122%2FProperties%2F-1602927896" data-filterable-set=":simbot-api/commonMain"></a>
           <div class="table-row" data-filterable-current=":simbot-api/commonMain" data-filterable-set=":simbot-api/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
@@ -176,21 +249,6 @@
               </div>
             </div>
           </div>
-<a data-name="-1147904668%2FProperties%2F-1602927896" anchor-label="id" id="-1147904668%2FProperties%2F-1602927896" data-filterable-set=":simbot-api/commonMain"></a>
-          <div class="table-row" data-filterable-current=":simbot-api/commonMain" data-filterable-set=":simbot-api/commonMain">
-            <div class="main-subrow keyValue ">
-              <div class=""><span class="inline-flex">
-                  <div><a href="id.html"><span><span>id</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1147904668%2FProperties%2F-1602927896"></span>
-                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                  </span></span></div>
-              <div>
-                <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="id.html">id</a><span class="token operator">: </span><a href="../../../simbot-commons/simbot-common-core/love.forte.simbot.common.id/-i-d/index.html">ID</a></div><div class="brief "><p class="paragraph">当前bot的标识。</p></div></div></div>
-                </div>
-              </div>
-            </div>
-          </div>
 <a data-name="-885338811%2FProperties%2F-1602927896" anchor-label="isActive" id="-885338811%2FProperties%2F-1602927896" data-filterable-set=":simbot-api/commonMain"></a>
           <div class="table-row" data-filterable-current=":simbot-api/commonMain" data-filterable-set=":simbot-api/commonMain">
             <div class="main-subrow keyValue ">
@@ -217,36 +275,6 @@
               <div>
                 <div class="title">
                   <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">val </span><a href="../../love.forte.simbot.ability/-lifecycle-aware/is-completed.html">isCompleted</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">当前是否已经完成、已经结束。</p></div></div></div>
-                </div>
-              </div>
-            </div>
-          </div>
-<a data-name="1984477956%2FProperties%2F-1602927896" anchor-label="isStarted" id="1984477956%2FProperties%2F-1602927896" data-filterable-set=":simbot-api/commonMain"></a>
-          <div class="table-row" data-filterable-current=":simbot-api/commonMain" data-filterable-set=":simbot-api/commonMain">
-            <div class="main-subrow keyValue ">
-              <div class=""><span class="inline-flex">
-                  <div><a href="is-started.html"><span>is</span><wbr><span><span>Started</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1984477956%2FProperties%2F-1602927896"></span>
-                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                  </span></span></div>
-              <div>
-                <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">val </span><a href="is-started.html">isStarted</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">是否 <strong>启动过</strong>。</p></div></div></div>
-                </div>
-              </div>
-            </div>
-          </div>
-<a data-name="1571478900%2FProperties%2F-1602927896" anchor-label="name" id="1571478900%2FProperties%2F-1602927896" data-filterable-set=":simbot-api/commonMain"></a>
-          <div class="table-row" data-filterable-current=":simbot-api/commonMain" data-filterable-set=":simbot-api/commonMain">
-            <div class="main-subrow keyValue ">
-              <div class=""><span class="inline-flex">
-                  <div><a href="name.html"><span><span>name</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1571478900%2FProperties%2F-1602927896"></span>
-                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                  </span></span></div>
-              <div>
-                <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">val </span><a href="name.html">name</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">当前 <a href="index.html">Bot</a> 作为用户的名称。</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -330,21 +358,6 @@
               </div>
             </div>
           </div>
-<a data-name="-347799083%2FFunctions%2F-1602927896" anchor-label="onCompletion" id="-347799083%2FFunctions%2F-1602927896" data-filterable-set=":simbot-api/commonMain"></a>
-          <div class="table-row" data-filterable-current=":simbot-api/commonMain" data-filterable-set=":simbot-api/commonMain">
-            <div class="main-subrow keyValue ">
-              <div class=""><span class="inline-flex">
-                  <div><a href="../../love.forte.simbot.ability/-completion-aware/on-completion.html"><span>on</span><wbr><span><span>Completion</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-347799083%2FFunctions%2F-1602927896"></span>
-                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                  </span></span></div>
-              <div>
-                <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../../love.forte.simbot.ability/-completion-aware/on-completion.html"><span class="token function">onCompletion</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">handle<span class="token operator">: </span><a href="../../love.forte.simbot.ability/-on-completion/index.html">OnCompletion</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">当目标完成时执行注册的回调函数。</p></div></div></div>
-                </div>
-              </div>
-            </div>
-          </div>
 <a data-name="1787042809%2FFunctions%2F-1602927896" anchor-label="start" id="1787042809%2FFunctions%2F-1602927896" data-filterable-set=":simbot-api/commonMain"></a>
           <div class="table-row" data-filterable-current=":simbot-api/commonMain" data-filterable-set=":simbot-api/commonMain">
             <div class="main-subrow keyValue ">
@@ -356,6 +369,25 @@
               <div>
                 <div class="title">
                   <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="start.html"><span class="token function">start</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">启动当前 <a href="index.html">Bot</a>。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Inherited functions</h2>
+        <div class="table"><a data-name="-347799083%2FFunctions%2F-1602927896" anchor-label="onCompletion" id="-347799083%2FFunctions%2F-1602927896" data-filterable-set=":simbot-api/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-api/commonMain" data-filterable-set=":simbot-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../love.forte.simbot.ability/-completion-aware/on-completion.html"><span>on</span><wbr><span><span>Completion</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-347799083%2FFunctions%2F-1602927896"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../../love.forte.simbot.ability/-completion-aware/on-completion.html"><span class="token function">onCompletion</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">handle<span class="token operator">: </span><a href="../../love.forte.simbot.ability/-on-completion/index.html">OnCompletion</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">当目标完成时执行注册的回调函数。</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -397,7 +429,7 @@
 </div>
     <div class="footer">
         <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
-        <span>© 2025 Copyright</span>
+        <span>© 2024-2025 <a href="https://github.com/simple-robot">Simple Robot</a>. All rights reserved.</span>
         <span class="pull-right">
             <span>Generated by </span>
             <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">

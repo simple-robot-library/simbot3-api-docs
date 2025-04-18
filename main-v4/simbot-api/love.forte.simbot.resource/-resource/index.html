@@ -3,7 +3,27 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
     <title>Resource</title>
-<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../../";</script>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">    <!-- 百度统计 -->
+    <!--suppress ES6ConvertVarToLetConst -->
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            const hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?045f67a122223db9432c7856fc942fad";
+            const s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1JWL2DDTB4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-1JWL2DDTB4');
+    </script>
+    <script>var pathToRoot = "../../../";</script>
     <script>document.documentElement.classList.replace("no-js","js");</script>
     <script>const storage = localStorage.getItem("dokka-dark-mode")
     if (storage == null) {
@@ -32,7 +52,10 @@
 <script type="text/javascript" src="../../../scripts/main.js" defer></script>
 <script type="text/javascript" src="../../../scripts/prism.js" async></script>
 <script type="text/javascript" src="../../../ui-kit/ui-kit.min.js" defer></script>
-<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script>
+<link href="../../../images/logo-icon.svg">
+<link href="../../../images/logo-icon-light.svg">
+<link href="../../../styles/kdoc-style.css" rel="Stylesheet"></head>
 <body>
     <div class="root">
     <nav class="navigation theme-dark" id="navigation-wrapper">
@@ -41,7 +64,7 @@
             </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
         </button>
         <div class="navigation-controls--break ui-kit_mobile-only"></div>
-        <div class="library-version" id="library-version">4.11.0
+        <div class="library-version" id="library-version">4.11.1
         </div>
         <div class="navigation-controls">
         <div class="filter-section filter-section_loading" id="filter-section">
@@ -97,6 +120,7 @@
                 <div class="dropdown--overlay"></div>
             </div>
         </div>
+                <a class="navigation-controls--btn navigation-controls--btn_homepage" id="homepage-link" href="https://github.com/simple-robot/simpler-robot"></a>
             <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
             </button>
             <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
@@ -126,7 +150,7 @@
   <div class="breadcrumbs"><a href="../../index.html">simbot-api</a><span class="delimiter">/</span><a href="../index.html">love.forte.simbot.resource</a><span class="delimiter">/</span><span class="current">Resource</span></div>
   <div class="cover ">
     <h1 class="cover"><span><span>Resource</span></span></h1>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api/commonMain"><div class="symbol monospace"><span class="token keyword">sealed </span><span class="token keyword">interface </span><a href="index.html">Resource</a><span class="clearfix"><span class="floating-right">(<a href="https://github.com/simple-robot/simpler-robot/tree/v4-dev/simbot-api/src/commonMain/kotlin/love/forte/simbot/resource/Resource.kt#L76">source</a>)</span></span></div><p class="paragraph">一个<strong>资源</strong>。</p><p class="paragraph">用于描述一个可以被读取字节数据（<a href="data.html">data</a>）的资源。 <a href="index.html">Resource</a> 用于代表一些二进制数据或<strong>本地</strong>文件资源。</p><p class="paragraph">JVM 中的部分扩展、辅助API通过静态类 <code class="lang-kotlin">Resources</code> 提供， 例如 <code class="lang-kotlin">Resources.valueOf(...)</code>。</p><h2 class="">有限范围</h2><p class="paragraph">从 <code class="lang-kotlin">v4.10.0</code> 开始，<a href="index.html">Resource</a> 接口转为 <code class="lang-kotlin">sealed</code> 并有两个明确的子类型分支：</p><ul><li><p class="paragraph"><a href="../-byte-array-resource/index.html">ByteArrayResource</a></p></li><li><p class="paragraph"><a href="../-source-resource/index.html">SourceResource</a></p></li></ul><p class="paragraph"><a href="../-byte-array-resource/index.html">ByteArrayResource</a> 代表一个可以<strong>直接</strong>使用 <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-byte-array/index.html">ByteArray</a> 进行表示的资源，它也同样可以表示为 <a href="../-source-resource/index.html">SourceResource</a>。</p><p class="paragraph">其中，<a href="../-source-resource/index.html">SourceResource</a> 借助 <code class="lang-kotlin">kotlinx-io</code> 库所提供的能力统一多平台的IO相关API（例如文件系统相关）。 如果你想要基于文件系统或其他与IO相关的内容构建一个 <a href="index.html">Resource</a>，则参考 <a href="../-source-resource/index.html">SourceResource</a>。</p><h2 class="">序列化</h2><p class="paragraph"><a href="index.html">Resource</a> 提供了一个基于 <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.io.encoding/-base64/index.html">Base64</a> 进行序列化操作的 <a href="../-resource-base64-serializer/index.html">ResourceBase64Serializer</a>。</p><h2 class="">第三方实现不稳定</h2><p class="paragraph"><a href="index.html">Resource</a> 主要由内部实现，不保证对第三方实现的稳定与兼容。 参考 <a href="../-resource-implementation/index.html">ResourceImplementation</a>。</p><span class="kdoc-tag"><h4 class="">Author</h4><p class="paragraph">ForteScarlet</p></span><h4 class="">See also</h4><div class="table"><div class="table-row" data-filterable-current=":simbot-api/commonMain" data-filterable-set=":simbot-api/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../-byte-array-resource/index.html"><span>Byte</span><wbr><span>Array</span><wbr><span><span>Resource</span></span></a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":simbot-api/commonMain" data-filterable-set=":simbot-api/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../-source-resource/index.html"><span>Source</span><wbr><span><span>Resource</span></span></a></div></span></div><div></div></div></div></div><h4 class="">Inheritors</h4><div class="table"><div class="table-row" data-filterable-current=":simbot-api/commonMain" data-filterable-set=":simbot-api/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../-byte-array-resource/index.html">ByteArrayResource</a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":simbot-api/commonMain" data-filterable-set=":simbot-api/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../-source-resource/index.html">SourceResource</a></div></span></div><div></div></div></div></div></div></div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api/commonMain"><div class="symbol monospace"><span class="token keyword">sealed </span><span class="token keyword">interface </span><a href="index.html">Resource</a><span class="clearfix"><span class="floating-right">(<a href="https://github.com/simple-robot/simpler-robot/tree/dev/main/simbot-api/src/commonMain/kotlin/love/forte/simbot/resource/Resource.kt#L76">source</a>)</span></span></div><p class="paragraph">一个<strong>资源</strong>。</p><p class="paragraph">用于描述一个可以被读取字节数据（<a href="data.html">data</a>）的资源。 <a href="index.html">Resource</a> 用于代表一些二进制数据或<strong>本地</strong>文件资源。</p><p class="paragraph">JVM 中的部分扩展、辅助API通过静态类 <code class="lang-kotlin">Resources</code> 提供， 例如 <code class="lang-kotlin">Resources.valueOf(...)</code>。</p><h2 class="">有限范围</h2><p class="paragraph">从 <code class="lang-kotlin">v4.10.0</code> 开始，<a href="index.html">Resource</a> 接口转为 <code class="lang-kotlin">sealed</code> 并有两个明确的子类型分支：</p><ul><li><p class="paragraph"><a href="../-byte-array-resource/index.html">ByteArrayResource</a></p></li><li><p class="paragraph"><a href="../-source-resource/index.html">SourceResource</a></p></li></ul><p class="paragraph"><a href="../-byte-array-resource/index.html">ByteArrayResource</a> 代表一个可以<strong>直接</strong>使用 <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-byte-array/index.html">ByteArray</a> 进行表示的资源，它也同样可以表示为 <a href="../-source-resource/index.html">SourceResource</a>。</p><p class="paragraph">其中，<a href="../-source-resource/index.html">SourceResource</a> 借助 <code class="lang-kotlin">kotlinx-io</code> 库所提供的能力统一多平台的IO相关API（例如文件系统相关）。 如果你想要基于文件系统或其他与IO相关的内容构建一个 <a href="index.html">Resource</a>，则参考 <a href="../-source-resource/index.html">SourceResource</a>。</p><h2 class="">序列化</h2><p class="paragraph"><a href="index.html">Resource</a> 提供了一个基于 <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.io.encoding/-base64/index.html">Base64</a> 进行序列化操作的 <a href="../-resource-base64-serializer/index.html">ResourceBase64Serializer</a>。</p><h2 class="">第三方实现不稳定</h2><p class="paragraph"><a href="index.html">Resource</a> 主要由内部实现，不保证对第三方实现的稳定与兼容。 参考 <a href="../-resource-implementation/index.html">ResourceImplementation</a>。</p><span class="kdoc-tag"><h4 class="">Author</h4><p class="paragraph">ForteScarlet</p></span><h4 class="">See also</h4><div class="table"><div class="table-row" data-filterable-current=":simbot-api/commonMain" data-filterable-set=":simbot-api/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../-byte-array-resource/index.html"><span>Byte</span><wbr><span>Array</span><wbr><span><span>Resource</span></span></a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":simbot-api/commonMain" data-filterable-set=":simbot-api/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../-source-resource/index.html"><span>Source</span><wbr><span><span>Resource</span></span></a></div></span></div><div></div></div></div></div><h4 class="">Inheritors</h4><div class="table"><div class="table-row" data-filterable-current=":simbot-api/commonMain" data-filterable-set=":simbot-api/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../-byte-array-resource/index.html">ByteArrayResource</a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":simbot-api/commonMain" data-filterable-set=":simbot-api/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../-source-resource/index.html">SourceResource</a></div></span></div><div></div></div></div></div></div></div>
   </div>
   <div class="tabbedcontent">
     <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button><button class="section-tab" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION,EXTENSION_PROPERTY,EXTENSION_FUNCTION">Members &amp; Extensions</button></div>
@@ -148,8 +172,12 @@
               </div>
             </div>
           </div>
-<a data-name="1052957909%2FFunctions%2F-1602927896" anchor-label="toOfflineImage" id="1052957909%2FFunctions%2F-1602927896" data-filterable-set=":simbot-api/commonMain"></a>
-          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":simbot-api/commonMain" data-filterable-set=":simbot-api/commonMain">
+        </div>
+      </div>
+      <div data-togglable="EXTENSION_FUNCTION">
+        <h2 class="">Inherited functions</h2>
+        <div class="table"><a data-name="1052957909%2FFunctions%2F-1602927896" anchor-label="toOfflineImage" id="1052957909%2FFunctions%2F-1602927896" data-filterable-set=":simbot-api/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-api/commonMain" data-filterable-set=":simbot-api/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../../love.forte.simbot.message/-offline-image/-companion/to-offline-image.html"><span>to</span><wbr><span>Offline</span><wbr><span><span>Image</span></span></a></div>
@@ -164,7 +192,7 @@
             </div>
           </div>
 <a data-name="559660157%2FFunctions%2F2020429523" anchor-label="toOfflineResourceImage" id="559660157%2FFunctions%2F2020429523" data-filterable-set=":simbot-api/commonMain,:simbot-api/jsMain,:simbot-api/jvmMain,:simbot-api/nativeMain,:simbot-api/wasmJsMain"></a>
-          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":simbot-api/commonMain,:simbot-api/jsMain,:simbot-api/jvmMain,:simbot-api/nativeMain,:simbot-api/wasmJsMain" data-filterable-set=":simbot-api/commonMain,:simbot-api/jsMain,:simbot-api/jvmMain,:simbot-api/nativeMain,:simbot-api/wasmJsMain">
+          <div class="table-row" data-filterable-current=":simbot-api/commonMain,:simbot-api/jsMain,:simbot-api/jvmMain,:simbot-api/nativeMain,:simbot-api/wasmJsMain" data-filterable-set=":simbot-api/commonMain,:simbot-api/jsMain,:simbot-api/jvmMain,:simbot-api/nativeMain,:simbot-api/wasmJsMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../../love.forte.simbot.message/to-offline-resource-image.html"><span>to</span><wbr><span>Offline</span><wbr><span>Resource</span><wbr><span><span>Image</span></span></a></div>
@@ -187,7 +215,7 @@
 </div>
     <div class="footer">
         <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
-        <span>© 2025 Copyright</span>
+        <span>© 2024-2025 <a href="https://github.com/simple-robot">Simple Robot</a>. All rights reserved.</span>
         <span class="pull-right">
             <span>Generated by </span>
             <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">

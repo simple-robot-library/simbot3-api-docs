@@ -3,7 +3,27 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
     <title>AbstractApplicationFactoryConfigurer</title>
-<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../../";</script>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">    <!-- 百度统计 -->
+    <!--suppress ES6ConvertVarToLetConst -->
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            const hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?045f67a122223db9432c7856fc942fad";
+            const s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1JWL2DDTB4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-1JWL2DDTB4');
+    </script>
+    <script>var pathToRoot = "../../../";</script>
     <script>document.documentElement.classList.replace("no-js","js");</script>
     <script>const storage = localStorage.getItem("dokka-dark-mode")
     if (storage == null) {
@@ -32,7 +52,10 @@
 <script type="text/javascript" src="../../../scripts/main.js" defer></script>
 <script type="text/javascript" src="../../../scripts/prism.js" async></script>
 <script type="text/javascript" src="../../../ui-kit/ui-kit.min.js" defer></script>
-<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script>
+<link href="../../../images/logo-icon.svg">
+<link href="../../../images/logo-icon-light.svg">
+<link href="../../../styles/kdoc-style.css" rel="Stylesheet"></head>
 <body>
     <div class="root">
     <nav class="navigation theme-dark" id="navigation-wrapper">
@@ -41,7 +64,7 @@
             </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
         </button>
         <div class="navigation-controls--break ui-kit_mobile-only"></div>
-        <div class="library-version" id="library-version">4.11.0
+        <div class="library-version" id="library-version">4.11.1
         </div>
         <div class="navigation-controls">
         <div class="filter-section filter-section_loading" id="filter-section">
@@ -65,6 +88,7 @@
                 <div class="dropdown--overlay"></div>
             </div>
         </div>
+                <a class="navigation-controls--btn navigation-controls--btn_homepage" id="homepage-link" href="https://github.com/simple-robot/simpler-robot"></a>
             <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
             </button>
             <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
@@ -94,7 +118,7 @@
   <div class="breadcrumbs"><a href="../../index.html">simbot-api</a><span class="delimiter">/</span><a href="../index.html">love.forte.simbot.application</a><span class="delimiter">/</span><span class="current">AbstractApplicationFactoryConfigurer</span></div>
   <div class="cover ">
     <h1 class="cover"><span>Abstract</span><wbr><span>Application</span><wbr><span>Factory</span><wbr><span><span>Configurer</span></span></h1>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">class </span><a href="index.html">AbstractApplicationFactoryConfigurer</a><span class="token operator">&lt;</span><a href="index.html">C</a><span class="token operator"> : </span><a href="../-application-builder/index.html">ApplicationBuilder</a><span class="token punctuation">, </span><a href="index.html">AER</a><span class="token operator"> : </span><a href="../-application-event-registrar/index.html">ApplicationEventRegistrar</a><span class="token punctuation">, </span><a href="index.html">DC</a><span class="token operator"> : </span><a href="../../love.forte.simbot.event/-event-dispatcher-configuration/index.html">EventDispatcherConfiguration</a><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">configConfigurers<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-mutable-list/index.html">MutableList</a><span class="token operator">&lt;</span><a href="../../../simbot-commons/simbot-common-core/love.forte.simbot.common.function/-configurer-function/index.html">ConfigurerFunction</a><span class="token operator">&lt;</span><a href="index.html">C</a><span class="token operator">&gt;</span><span class="token operator">&gt;</span><span class="token operator"> = </span>mutableListOf()<span class="token punctuation">, </span></span><span class="parameter ">applicationEventRegistrarConfigurations<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-mutable-list/index.html">MutableList</a><span class="token operator">&lt;</span><a href="../../../simbot-commons/simbot-common-core/love.forte.simbot.common.function/-configurer-function/index.html">ConfigurerFunction</a><span class="token operator">&lt;</span><a href="index.html">AER</a><span class="token operator">&gt;</span><span class="token operator">&gt;</span><span class="token operator"> = </span>mutableListOf()<span class="token punctuation">, </span></span><span class="parameter ">eventDispatcherConfigurers<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-mutable-list/index.html">MutableList</a><span class="token operator">&lt;</span><a href="../../../simbot-commons/simbot-common-core/love.forte.simbot.common.function/-configurer-function/index.html">ConfigurerFunction</a><span class="token operator">&lt;</span><a href="index.html">DC</a><span class="token operator">&gt;</span><span class="token operator">&gt;</span><span class="token operator"> = </span>mutableListOf()<span class="token punctuation">, </span></span><span class="parameter ">componentFactoriesConfigurator<span class="token operator">: </span><a href="../../love.forte.simbot.component/-component-factories-configurator/index.html">ComponentFactoriesConfigurator</a><span class="token operator"> = </span>ComponentFactoriesConfigurator()<span class="token punctuation">, </span></span><span class="parameter ">pluginFactoriesConfigurator<span class="token operator">: </span><a href="../../love.forte.simbot.plugin/-plugin-factories-configurator/index.html">PluginFactoriesConfigurator</a><span class="token operator"> = </span>PluginFactoriesConfigurator()</span></span><span class="token punctuation">)</span> : <a href="../-application-factory-configurer/index.html">ApplicationFactoryConfigurer</a><span class="token operator">&lt;</span><a href="index.html">C</a><span class="token punctuation">, </span><a href="index.html">AER</a><span class="token punctuation">, </span><a href="index.html">DC</a><span class="token operator">&gt; </span><span class="clearfix"><span class="floating-right">(<a href="https://github.com/simple-robot/simpler-robot/tree/v4-dev/simbot-api/src/commonMain/kotlin/love/forte/simbot/application/ApplicationFactory.kt#L172">source</a>)</span></span></div><p class="paragraph"><a href="../-application-factory-configurer/index.html">ApplicationFactoryConfigurer</a> 的基础抽象实现，提供大部分DSL配置能力的简单实现。</p><h4 class="">See also</h4><div class="table"><div class="table-row" data-filterable-current=":simbot-api/commonMain" data-filterable-set=":simbot-api/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../-application-factory-configurer/index.html"><span>Application</span><wbr><span>Factory</span><wbr><span><span>Configurer</span></span></a></div></span></div><div></div></div></div></div></div></div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">class </span><a href="index.html">AbstractApplicationFactoryConfigurer</a><span class="token operator">&lt;</span><a href="index.html">C</a><span class="token operator"> : </span><a href="../-application-builder/index.html">ApplicationBuilder</a><span class="token punctuation">, </span><a href="index.html">AER</a><span class="token operator"> : </span><a href="../-application-event-registrar/index.html">ApplicationEventRegistrar</a><span class="token punctuation">, </span><a href="index.html">DC</a><span class="token operator"> : </span><a href="../../love.forte.simbot.event/-event-dispatcher-configuration/index.html">EventDispatcherConfiguration</a><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>configConfigurers<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-mutable-list/index.html">MutableList</a><span class="token operator">&lt;</span><a href="../../../simbot-commons/simbot-common-core/love.forte.simbot.common.function/-configurer-function/index.html">ConfigurerFunction</a><span class="token operator">&lt;</span><a href="index.html">C</a><span class="token operator">&gt;</span><span class="token operator">&gt;</span><span class="token operator"> = </span>mutableListOf()<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>applicationEventRegistrarConfigurations<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-mutable-list/index.html">MutableList</a><span class="token operator">&lt;</span><a href="../../../simbot-commons/simbot-common-core/love.forte.simbot.common.function/-configurer-function/index.html">ConfigurerFunction</a><span class="token operator">&lt;</span><a href="index.html">AER</a><span class="token operator">&gt;</span><span class="token operator">&gt;</span><span class="token operator"> = </span>mutableListOf()<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>eventDispatcherConfigurers<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-mutable-list/index.html">MutableList</a><span class="token operator">&lt;</span><a href="../../../simbot-commons/simbot-common-core/love.forte.simbot.common.function/-configurer-function/index.html">ConfigurerFunction</a><span class="token operator">&lt;</span><a href="index.html">DC</a><span class="token operator">&gt;</span><span class="token operator">&gt;</span><span class="token operator"> = </span>mutableListOf()<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>componentFactoriesConfigurator<span class="token operator">: </span><a href="../../love.forte.simbot.component/-component-factories-configurator/index.html">ComponentFactoriesConfigurator</a><span class="token operator"> = </span>ComponentFactoriesConfigurator()<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>pluginFactoriesConfigurator<span class="token operator">: </span><a href="../../love.forte.simbot.plugin/-plugin-factories-configurator/index.html">PluginFactoriesConfigurator</a><span class="token operator"> = </span>PluginFactoriesConfigurator()</span></span><span class="token punctuation">)</span> : <a href="../-application-factory-configurer/index.html">ApplicationFactoryConfigurer</a><span class="token operator">&lt;</span><a href="index.html">C</a><span class="token punctuation">, </span><a href="index.html">AER</a><span class="token punctuation">, </span><a href="index.html">DC</a><span class="token operator">&gt; </span><span class="clearfix"><span class="floating-right">(<a href="https://github.com/simple-robot/simpler-robot/tree/dev/main/simbot-api/src/commonMain/kotlin/love/forte/simbot/application/ApplicationFactory.kt#L172">source</a>)</span></span></div><p class="paragraph"><a href="../-application-factory-configurer/index.html">ApplicationFactoryConfigurer</a> 的基础抽象实现，提供大部分DSL配置能力的简单实现。</p><h4 class="">See also</h4><div class="table"><div class="table-row" data-filterable-current=":simbot-api/commonMain" data-filterable-set=":simbot-api/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../-application-factory-configurer/index.html"><span>Application</span><wbr><span>Factory</span><wbr><span><span>Configurer</span></span></a></div></span></div><div></div></div></div></div></div></div>
   </div>
   <div class="tabbedcontent">
     <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button><button class="section-tab" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION,EXTENSION_PROPERTY,EXTENSION_FUNCTION">Members &amp; Extensions</button></div>
@@ -118,6 +142,85 @@
           </div>
         </div>
       </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="534638615%2FProperties%2F-1602927896" anchor-label="applicationEventRegistrarConfigurations" id="534638615%2FProperties%2F-1602927896" data-filterable-set=":simbot-api/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-api/commonMain" data-filterable-set=":simbot-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="application-event-registrar-configurations.html"><span>application</span><wbr><span>Event</span><wbr><span>Registrar</span><wbr><span><span>Configurations</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="534638615%2FProperties%2F-1602927896"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api/commonMain"><div class="symbol monospace"><span class="token keyword">protected </span><span class="token keyword">open </span><span class="token keyword">val </span><a href="application-event-registrar-configurations.html">applicationEventRegistrarConfigurations</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-mutable-list/index.html">MutableList</a><span class="token operator">&lt;</span><a href="../../../simbot-commons/simbot-common-core/love.forte.simbot.common.function/-configurer-function/index.html">ConfigurerFunction</a><span class="token operator">&lt;</span><a href="index.html">AER</a><span class="token operator">&gt;</span><span class="token operator">&gt;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-231449949%2FProperties%2F-1602927896" anchor-label="componentFactoriesConfigurator" id="-231449949%2FProperties%2F-1602927896" data-filterable-set=":simbot-api/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-api/commonMain" data-filterable-set=":simbot-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="component-factories-configurator.html"><span>component</span><wbr><span>Factories</span><wbr><span><span>Configurator</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-231449949%2FProperties%2F-1602927896"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api/commonMain"><div class="symbol monospace"><span class="token keyword">protected </span><span class="token keyword">open </span><span class="token keyword">val </span><a href="component-factories-configurator.html">componentFactoriesConfigurator</a><span class="token operator">: </span><a href="../../love.forte.simbot.component/-component-factories-configurator/index.html">ComponentFactoriesConfigurator</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-780174798%2FProperties%2F-1602927896" anchor-label="configConfigurers" id="-780174798%2FProperties%2F-1602927896" data-filterable-set=":simbot-api/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-api/commonMain" data-filterable-set=":simbot-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="config-configurers.html"><span>config</span><wbr><span><span>Configurers</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-780174798%2FProperties%2F-1602927896"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api/commonMain"><div class="symbol monospace"><span class="token keyword">protected </span><span class="token keyword">open </span><span class="token keyword">val </span><a href="config-configurers.html">configConfigurers</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-mutable-list/index.html">MutableList</a><span class="token operator">&lt;</span><a href="../../../simbot-commons/simbot-common-core/love.forte.simbot.common.function/-configurer-function/index.html">ConfigurerFunction</a><span class="token operator">&lt;</span><a href="index.html">C</a><span class="token operator">&gt;</span><span class="token operator">&gt;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1188634077%2FProperties%2F-1602927896" anchor-label="eventDispatcherConfigurers" id="1188634077%2FProperties%2F-1602927896" data-filterable-set=":simbot-api/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-api/commonMain" data-filterable-set=":simbot-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="event-dispatcher-configurers.html"><span>event</span><wbr><span>Dispatcher</span><wbr><span><span>Configurers</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1188634077%2FProperties%2F-1602927896"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api/commonMain"><div class="symbol monospace"><span class="token keyword">protected </span><span class="token keyword">open </span><span class="token keyword">val </span><a href="event-dispatcher-configurers.html">eventDispatcherConfigurers</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-mutable-list/index.html">MutableList</a><span class="token operator">&lt;</span><a href="../../../simbot-commons/simbot-common-core/love.forte.simbot.common.function/-configurer-function/index.html">ConfigurerFunction</a><span class="token operator">&lt;</span><a href="index.html">DC</a><span class="token operator">&gt;</span><span class="token operator">&gt;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="939753293%2FProperties%2F-1602927896" anchor-label="pluginFactoriesConfigurator" id="939753293%2FProperties%2F-1602927896" data-filterable-set=":simbot-api/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-api/commonMain" data-filterable-set=":simbot-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="plugin-factories-configurator.html"><span>plugin</span><wbr><span>Factories</span><wbr><span><span>Configurator</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="939753293%2FProperties%2F-1602927896"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api/commonMain"><div class="symbol monospace"><span class="token keyword">protected </span><span class="token keyword">open </span><span class="token keyword">val </span><a href="plugin-factories-configurator.html">pluginFactoriesConfigurator</a><span class="token operator">: </span><a href="../../love.forte.simbot.plugin/-plugin-factories-configurator/index.html">PluginFactoriesConfigurator</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div data-togglable="FUNCTION">
         <h2 class="">Functions</h2>
         <div class="table"><a data-name="322454053%2FFunctions%2F-1602927896" anchor-label="config" id="322454053%2FFunctions%2F-1602927896" data-filterable-set=":simbot-api/commonMain"></a>
@@ -131,6 +234,51 @@
               <div>
                 <div class="title">
                   <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="config.html"><span class="token function">config</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">configurer<span class="token operator">: </span><a href="../../../simbot-commons/simbot-common-core/love.forte.simbot.common.function/-configurer-function/index.html">ConfigurerFunction</a><span class="token operator">&lt;</span><a href="index.html">C</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">配置 <a href="../-application/index.html">Application</a> 配置阶段的一些配置信息。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2053247327%2FFunctions%2F-1602927896" anchor-label="createAllComponents" id="2053247327%2FFunctions%2F-1602927896" data-filterable-set=":simbot-api/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-api/commonMain" data-filterable-set=":simbot-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="create-all-components.html"><span>create</span><wbr><span>All</span><wbr><span><span>Components</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2053247327%2FFunctions%2F-1602927896"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api/commonMain"><div class="symbol monospace"><span class="token keyword">protected </span><span class="token keyword">open </span><span class="token keyword">fun </span><a href="create-all-components.html"><span class="token function">createAllComponents</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">context<span class="token operator">: </span><a href="../../love.forte.simbot.component/-component-configure-context/index.html">ComponentConfigureContext</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="../../love.forte.simbot.component/-component/index.html">Component</a><span class="token operator">&gt;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1129095183%2FFunctions%2F-1602927896" anchor-label="createAllPlugins" id="-1129095183%2FFunctions%2F-1602927896" data-filterable-set=":simbot-api/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-api/commonMain" data-filterable-set=":simbot-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="create-all-plugins.html"><span>create</span><wbr><span>All</span><wbr><span><span>Plugins</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1129095183%2FFunctions%2F-1602927896"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api/commonMain"><div class="symbol monospace"><span class="token keyword">protected </span><span class="token keyword">open </span><span class="token keyword">fun </span><a href="create-all-plugins.html"><span class="token function">createAllPlugins</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">context<span class="token operator">: </span><a href="../../love.forte.simbot.plugin/-plugin-configure-context/index.html">PluginConfigureContext</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="../../love.forte.simbot.plugin/-plugin/index.html">Plugin</a><span class="token operator">&gt;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1032071640%2FFunctions%2F-1602927896" anchor-label="createConfig" id="1032071640%2FFunctions%2F-1602927896" data-filterable-set=":simbot-api/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-api/commonMain" data-filterable-set=":simbot-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="create-config.html"><span>create</span><wbr><span><span>Config</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1032071640%2FFunctions%2F-1602927896"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api/commonMain"><div class="symbol monospace"><span class="token keyword">protected </span><span class="token keyword">inline </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="create-config.html">AC</a><span class="token operator"> : </span><a href="../-application-configuration/index.html">ApplicationConfiguration</a><span class="token operator">&gt; </span><a href="create-config.html"><span class="token function">createConfig</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">configBuilder<span class="token operator">: </span><a href="index.html">C</a><span class="token punctuation">, </span></span><span class="parameter ">afterConfig<span class="token operator">: </span><span class="token punctuation">(</span><a href="index.html">C</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="create-config.html">AC</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="create-config.html">AC</a></div></div></div>
                 </div>
               </div>
             </div>
@@ -150,7 +298,41 @@
               </div>
             </div>
           </div>
-<a data-name="-1250285023%2FFunctions%2F-1602927896" anchor-label="findAndInstallAllComponents" id="-1250285023%2FFunctions%2F-1602927896" data-filterable-set=":simbot-api/commonMain"></a>
+<a data-name="-1926889868%2FFunctions%2F-1602927896" anchor-label="install" id="-1926889868%2FFunctions%2F-1602927896" data-filterable-set=":simbot-api/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-api/commonMain" data-filterable-set=":simbot-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="install.html"><span><span>install</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1926889868%2FFunctions%2F-1602927896"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="install.html">COM</a><span class="token operator"> : </span><a href="../../love.forte.simbot.component/-component/index.html">Component</a><span class="token punctuation">, </span><a href="install.html">CONF</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="install.html"><span class="token function">install</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">componentFactory<span class="token operator">: </span><a href="../../love.forte.simbot.component/-component-factory/index.html">ComponentFactory</a><span class="token operator">&lt;</span><a href="install.html">COM</a><span class="token punctuation">, </span><a href="install.html">CONF</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">configurer<span class="token operator">: </span><a href="../../../simbot-commons/simbot-common-core/love.forte.simbot.common.function/-configurer-function/index.html">ConfigurerFunction</a><span class="token operator">&lt;</span><a href="install.html">CONF</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">注册安装一个组件类型，并为其添加对应的配置。</p></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="install.html">P</a><span class="token operator"> : </span><a href="../../love.forte.simbot.plugin/-plugin/index.html">Plugin</a><span class="token punctuation">, </span><a href="install.html">CONF</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="install.html"><span class="token function">install</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">pluginFactory<span class="token operator">: </span><a href="../../love.forte.simbot.plugin/-plugin-factory/index.html">PluginFactory</a><span class="token operator">&lt;</span><a href="install.html">P</a><span class="token punctuation">, </span><a href="install.html">CONF</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">configurer<span class="token operator">: </span><a href="../../../simbot-commons/simbot-common-core/love.forte.simbot.common.function/-configurer-function/index.html">ConfigurerFunction</a><span class="token operator">&lt;</span><a href="install.html">CONF</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">注册安装一个插件 <a href="../../love.forte.simbot.plugin/-plugin/index.html">Plugin</a> 类型，并为其添加一个对应的配置。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="242018026%2FFunctions%2F-1602927896" anchor-label="stageEvents" id="242018026%2FFunctions%2F-1602927896" data-filterable-set=":simbot-api/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-api/commonMain" data-filterable-set=":simbot-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="stage-events.html"><span>stage</span><wbr><span><span>Events</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="242018026%2FFunctions%2F-1602927896"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="stage-events.html"><span class="token function">stageEvents</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">configurer<span class="token operator">: </span><a href="../../../simbot-commons/simbot-common-core/love.forte.simbot.common.function/-configurer-function/index.html">ConfigurerFunction</a><span class="token operator">&lt;</span><a href="index.html">AER</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">配置 <a href="../-application/index.html">Application</a> 的阶段事件。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Inherited functions</h2>
+        <div class="table"><a data-name="-1250285023%2FFunctions%2F-1602927896" anchor-label="findAndInstallAllComponents" id="-1250285023%2FFunctions%2F-1602927896" data-filterable-set=":simbot-api/commonMain"></a>
           <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":simbot-api/commonMain" data-filterable-set=":simbot-api/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
@@ -180,32 +362,17 @@
               </div>
             </div>
           </div>
-<a data-name="1905134036%2FFunctions%2F-1602927896" anchor-label="install" id="1905134036%2FFunctions%2F-1602927896" data-filterable-set=":simbot-api/commonMain"></a>
+<a data-name="308488940%2FFunctions%2F-1602927896" anchor-label="install" id="308488940%2FFunctions%2F-1602927896" data-filterable-set=":simbot-api/commonMain"></a>
           <div class="table-row" data-filterable-current=":simbot-api/commonMain" data-filterable-set=":simbot-api/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
-                  <div><a href="install.html"><span><span>install</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1905134036%2FFunctions%2F-1602927896"></span>
+                  <div><a href="../-application-factory-configurer/install.html"><span><span>install</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="308488940%2FFunctions%2F-1602927896"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="install.html">COM</a><span class="token operator"> : </span><a href="../../love.forte.simbot.component/-component/index.html">Component</a><span class="token punctuation">, </span><a href="install.html">CONF</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="install.html"><span class="token function">install</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">componentFactory<span class="token operator">: </span><a href="../../love.forte.simbot.component/-component-factory/index.html">ComponentFactory</a><span class="token operator">&lt;</span><a href="install.html">COM</a><span class="token punctuation">, </span><a href="install.html">CONF</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">configurer<span class="token operator">: </span><a href="../../../simbot-commons/simbot-common-core/love.forte.simbot.common.function/-configurer-function/index.html">ConfigurerFunction</a><span class="token operator">&lt;</span><a href="install.html">CONF</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">注册安装一个组件类型，并为其添加对应的配置。</p></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="install.html">P</a><span class="token operator"> : </span><a href="../../love.forte.simbot.plugin/-plugin/index.html">Plugin</a><span class="token punctuation">, </span><a href="install.html">CONF</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="install.html"><span class="token function">install</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">pluginFactory<span class="token operator">: </span><a href="../../love.forte.simbot.plugin/-plugin-factory/index.html">PluginFactory</a><span class="token operator">&lt;</span><a href="install.html">P</a><span class="token punctuation">, </span><a href="install.html">CONF</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">configurer<span class="token operator">: </span><a href="../../../simbot-commons/simbot-common-core/love.forte.simbot.common.function/-configurer-function/index.html">ConfigurerFunction</a><span class="token operator">&lt;</span><a href="install.html">CONF</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">注册安装一个插件 <a href="../../love.forte.simbot.plugin/-plugin/index.html">Plugin</a> 类型，并为其添加一个对应的配置。</p></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="../-application-factory-configurer/install.html">COM</a><span class="token operator"> : </span><a href="../../love.forte.simbot.component/-component/index.html">Component</a><span class="token punctuation">, </span><a href="../-application-factory-configurer/install.html">CONF</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="../-application-factory-configurer/install.html"><span class="token function">install</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">componentFactory<span class="token operator">: </span><a href="../../love.forte.simbot.component/-component-factory/index.html">ComponentFactory</a><span class="token operator">&lt;</span><a href="../-application-factory-configurer/install.html">COM</a><span class="token punctuation">, </span><a href="../-application-factory-configurer/install.html">CONF</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">注册安装一个组件类型。</p></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="../-application-factory-configurer/install.html">P</a><span class="token operator"> : </span><a href="../../love.forte.simbot.plugin/-plugin/index.html">Plugin</a><span class="token punctuation">, </span><a href="../-application-factory-configurer/install.html">CONF</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="../-application-factory-configurer/install.html"><span class="token function">install</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">pluginFactory<span class="token operator">: </span><a href="../../love.forte.simbot.plugin/-plugin-factory/index.html">PluginFactory</a><span class="token operator">&lt;</span><a href="../-application-factory-configurer/install.html">P</a><span class="token punctuation">, </span><a href="../-application-factory-configurer/install.html">CONF</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">注册安装一个插件 <a href="../../love.forte.simbot.plugin/-plugin/index.html">Plugin</a> 类型。</p></div></div></div>
-                </div>
-              </div>
-            </div>
-          </div>
-<a data-name="242018026%2FFunctions%2F-1602927896" anchor-label="stageEvents" id="242018026%2FFunctions%2F-1602927896" data-filterable-set=":simbot-api/commonMain"></a>
-          <div class="table-row" data-filterable-current=":simbot-api/commonMain" data-filterable-set=":simbot-api/commonMain">
-            <div class="main-subrow keyValue ">
-              <div class=""><span class="inline-flex">
-                  <div><a href="stage-events.html"><span>stage</span><wbr><span><span>Events</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="242018026%2FFunctions%2F-1602927896"></span>
-                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                  </span></span></div>
-              <div>
-                <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="stage-events.html"><span class="token function">stageEvents</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">configurer<span class="token operator">: </span><a href="../../../simbot-commons/simbot-common-core/love.forte.simbot.common.function/-configurer-function/index.html">ConfigurerFunction</a><span class="token operator">&lt;</span><a href="index.html">AER</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">配置 <a href="../-application/index.html">Application</a> 的阶段事件。</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="../-application-factory-configurer/install.html">COM</a><span class="token operator"> : </span><a href="../../love.forte.simbot.component/-component/index.html">Component</a><span class="token punctuation">, </span><a href="../-application-factory-configurer/install.html">CONF</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="../-application-factory-configurer/install.html"><span class="token function">install</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">componentFactory<span class="token operator">: </span><a href="../../love.forte.simbot.component/-component-factory/index.html">ComponentFactory</a><span class="token operator">&lt;</span><a href="../-application-factory-configurer/install.html">COM</a><span class="token punctuation">, </span><a href="../-application-factory-configurer/install.html">CONF</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">注册安装一个组件类型。</p></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="../-application-factory-configurer/install.html">P</a><span class="token operator"> : </span><a href="../../love.forte.simbot.plugin/-plugin/index.html">Plugin</a><span class="token punctuation">, </span><a href="../-application-factory-configurer/install.html">CONF</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="../-application-factory-configurer/install.html"><span class="token function">install</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">pluginFactory<span class="token operator">: </span><a href="../../love.forte.simbot.plugin/-plugin-factory/index.html">PluginFactory</a><span class="token operator">&lt;</span><a href="../-application-factory-configurer/install.html">P</a><span class="token punctuation">, </span><a href="../-application-factory-configurer/install.html">CONF</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">注册安装一个插件 <a href="../../love.forte.simbot.plugin/-plugin/index.html">Plugin</a> 类型。</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -217,7 +384,7 @@
 </div>
     <div class="footer">
         <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
-        <span>© 2025 Copyright</span>
+        <span>© 2024-2025 <a href="https://github.com/simple-robot">Simple Robot</a>. All rights reserved.</span>
         <span class="pull-right">
             <span>Generated by </span>
             <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">

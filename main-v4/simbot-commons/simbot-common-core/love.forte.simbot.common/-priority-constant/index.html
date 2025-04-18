@@ -3,7 +3,27 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
     <title>PriorityConstant</title>
-<link href="../../../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../../../";</script>
+<link href="../../../../images/logo-icon.svg" rel="icon" type="image/svg">    <!-- 百度统计 -->
+    <!--suppress ES6ConvertVarToLetConst -->
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            const hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?045f67a122223db9432c7856fc942fad";
+            const s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1JWL2DDTB4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-1JWL2DDTB4');
+    </script>
+    <script>var pathToRoot = "../../../../";</script>
     <script>document.documentElement.classList.replace("no-js","js");</script>
     <script>const storage = localStorage.getItem("dokka-dark-mode")
     if (storage == null) {
@@ -32,7 +52,10 @@
 <script type="text/javascript" src="../../../../scripts/main.js" defer></script>
 <script type="text/javascript" src="../../../../scripts/prism.js" async></script>
 <script type="text/javascript" src="../../../../ui-kit/ui-kit.min.js" defer></script>
-<script type="text/javascript" src="../../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<script type="text/javascript" src="../../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script>
+<link href="../../../../images/logo-icon.svg">
+<link href="../../../../images/logo-icon-light.svg">
+<link href="../../../../styles/kdoc-style.css" rel="Stylesheet"></head>
 <body>
     <div class="root">
     <nav class="navigation theme-dark" id="navigation-wrapper">
@@ -41,7 +64,7 @@
             </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
         </button>
         <div class="navigation-controls--break ui-kit_mobile-only"></div>
-        <div class="library-version" id="library-version">4.11.0
+        <div class="library-version" id="library-version">4.11.1
         </div>
         <div class="navigation-controls">
         <div class="filter-section filter-section_loading" id="filter-section">
@@ -65,6 +88,7 @@
                 <div class="dropdown--overlay"></div>
             </div>
         </div>
+                <a class="navigation-controls--btn navigation-controls--btn_homepage" id="homepage-link" href="https://github.com/simple-robot/simpler-robot"></a>
             <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
             </button>
             <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
@@ -94,7 +118,7 @@
   <div class="breadcrumbs"><a href="../../index.html">simbot-common-core</a><span class="delimiter">/</span><a href="../index.html">love.forte.simbot.common</a><span class="delimiter">/</span><span class="current">PriorityConstant</span></div>
   <div class="cover ">
     <h1 class="cover"><span>Priority</span><wbr><span><span>Constant</span></span></h1>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-commons:simbot-common-core/commonMain"><div class="symbol monospace"><span class="token keyword">object </span><a href="index.html">PriorityConstant</a><span class="clearfix"><span class="floating-right">(<a href="https://github.com/simple-robot/simpler-robot/tree/v4-dev/simbot-commons/simbot-common-core/src/commonMain/kotlin/love/forte/simbot/common/PriorityConstant.kt#L58">source</a>)</span></span></div><p class="paragraph">优先级常量类。</p><p class="paragraph">优先级以 <code class="lang-kotlin">0</code> 为中心向两侧扩张， 负数值越小越趋近于 “最优先”，直到达到 <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/-companion/-m-i-n_-v-a-l-u-e.html">Int.MIN_VALUE</a>; 正数值越大越趋近于 “最滞后”，直到达到 <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/-companion/-m-a-x_-v-a-l-u-e.html">Int.MAX_VALUE</a>。</p><p class="paragraph">分别提供正负9个“较为优先/滞后”的值，各自从 <code class="lang-kotlin">100</code>/<code class="lang-kotlin">-100</code>向正/负延伸。</p><p class="paragraph">默认的优先级为 <a href="-d-e-f-a-u-l-t.html">DEFAULT</a> 也就是 <code class="lang-kotlin">0</code>。</p><p class="paragraph">优先级次序为：</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">                  &lt;&lt;&lt;&lt;---- 更优先<br>    Int.MIN_VALUE<br>    -&gt; ...<br>      -&gt; PRIORITIZE_1<br>        -&gt; PRIORITIZE_2<br>          -&gt; ...<br>            -&gt; PRIORITIZE_9<br>              -&gt; DEFAULT<br>                -&gt; DE_PRIORITIZE_1<br>                  -&gt; DE_PRIORITIZE_2<br>                    -&gt; ...<br>                      -&gt; DE_PRIORITIZE_9<br>                        -&gt; ...<br>                          -&gt; Int.MAX_VALUE<br>           更滞后 ----&gt;&gt;&gt;&gt;</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-commons:simbot-common-core/commonMain"><div class="symbol monospace"><span class="token keyword">object </span><a href="index.html">PriorityConstant</a><span class="clearfix"><span class="floating-right">(<a href="https://github.com/simple-robot/simpler-robot/tree/dev/main/simbot-commons/simbot-common-core/src/commonMain/kotlin/love/forte/simbot/common/PriorityConstant.kt#L58">source</a>)</span></span></div><p class="paragraph">优先级常量类。</p><p class="paragraph">优先级以 <code class="lang-kotlin">0</code> 为中心向两侧扩张， 负数值越小越趋近于 “最优先”，直到达到 <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/-companion/-m-i-n_-v-a-l-u-e.html">Int.MIN_VALUE</a>; 正数值越大越趋近于 “最滞后”，直到达到 <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/-companion/-m-a-x_-v-a-l-u-e.html">Int.MAX_VALUE</a>。</p><p class="paragraph">分别提供正负9个“较为优先/滞后”的值，各自从 <code class="lang-kotlin">100</code>/<code class="lang-kotlin">-100</code>向正/负延伸。</p><p class="paragraph">默认的优先级为 <a href="-d-e-f-a-u-l-t.html">DEFAULT</a> 也就是 <code class="lang-kotlin">0</code>。</p><p class="paragraph">优先级次序为：</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">                  &lt;&lt;&lt;&lt;---- 更优先<br>    Int.MIN_VALUE<br>    -&gt; ...<br>      -&gt; PRIORITIZE_1<br>        -&gt; PRIORITIZE_2<br>          -&gt; ...<br>            -&gt; PRIORITIZE_9<br>              -&gt; DEFAULT<br>                -&gt; DE_PRIORITIZE_1<br>                  -&gt; DE_PRIORITIZE_2<br>                    -&gt; ...<br>                      -&gt; DE_PRIORITIZE_9<br>                        -&gt; ...<br>                          -&gt; Int.MAX_VALUE<br>           更滞后 ----&gt;&gt;&gt;&gt;</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
   </div>
   <div class="tabbedcontent">
     <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
@@ -393,7 +417,7 @@
 </div>
     <div class="footer">
         <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
-        <span>© 2025 Copyright</span>
+        <span>© 2024-2025 <a href="https://github.com/simple-robot">Simple Robot</a>. All rights reserved.</span>
         <span class="pull-right">
             <span>Generated by </span>
             <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">

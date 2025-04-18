@@ -3,7 +3,27 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
     <title>BotManager</title>
-<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../../";</script>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">    <!-- 百度统计 -->
+    <!--suppress ES6ConvertVarToLetConst -->
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            const hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?045f67a122223db9432c7856fc942fad";
+            const s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1JWL2DDTB4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-1JWL2DDTB4');
+    </script>
+    <script>var pathToRoot = "../../../";</script>
     <script>document.documentElement.classList.replace("no-js","js");</script>
     <script>const storage = localStorage.getItem("dokka-dark-mode")
     if (storage == null) {
@@ -32,7 +52,10 @@
 <script type="text/javascript" src="../../../scripts/main.js" defer></script>
 <script type="text/javascript" src="../../../scripts/prism.js" async></script>
 <script type="text/javascript" src="../../../ui-kit/ui-kit.min.js" defer></script>
-<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script>
+<link href="../../../images/logo-icon.svg">
+<link href="../../../images/logo-icon-light.svg">
+<link href="../../../styles/kdoc-style.css" rel="Stylesheet"></head>
 <body>
     <div class="root">
     <nav class="navigation theme-dark" id="navigation-wrapper">
@@ -41,7 +64,7 @@
             </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
         </button>
         <div class="navigation-controls--break ui-kit_mobile-only"></div>
-        <div class="library-version" id="library-version">4.11.0
+        <div class="library-version" id="library-version">4.11.1
         </div>
         <div class="navigation-controls">
         <div class="filter-section filter-section_loading" id="filter-section">
@@ -65,6 +88,7 @@
                 <div class="dropdown--overlay"></div>
             </div>
         </div>
+                <a class="navigation-controls--btn navigation-controls--btn_homepage" id="homepage-link" href="https://github.com/simple-robot/simpler-robot"></a>
             <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
             </button>
             <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
@@ -94,13 +118,13 @@
   <div class="breadcrumbs"><a href="../../index.html">simbot-api</a><span class="delimiter">/</span><a href="../index.html">love.forte.simbot.bot</a><span class="delimiter">/</span><span class="current">BotManager</span></div>
   <div class="cover ">
     <h1 class="cover"><span>Bot</span><wbr><span><span>Manager</span></span></h1>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="index.html">BotManager</a> : <a href="../-auto-configurable-bot-plugin/index.html">AutoConfigurableBotPlugin</a>, <a href="../../love.forte.simbot.ability/-lifecycle-aware/index.html">LifecycleAware</a>, <a href="../../love.forte.simbot.ability/-completion-aware/index.html">CompletionAware</a><span class="clearfix"><span class="floating-right">(<a href="https://github.com/simple-robot/simpler-robot/tree/v4-dev/simbot-api/src/commonMain/kotlin/love/forte/simbot/bot/BotManager.kt#L50">source</a>)</span></span></div><p class="paragraph"><a href="../-bot/index.html">Bot</a> 的管理器。</p><h2 class="">生命周期</h2><p class="paragraph"><a href="index.html">BotManager</a> 持有一个会影响诞生自它的所有 <a href="../-bot/index.html">Bot</a> 的生命周期的 <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-job/index.html">Job</a>。 当 <a href="index.html">BotManager</a> 被执行了 <a href="cancel.html">BotManager.cancel</a>，除了影响 <a href="index.html">BotManager</a> 自身的生命周期以外， 也会同样影响到所有由它产生的 <a href="../-bot/index.html">Bot</a>。</p><p class="paragraph"><a href="index.html">BotManager</a> 实现 <a href="../-auto-configurable-bot-plugin/index.html">AutoConfigurableBotPlugin</a> 以允许其在 <code class="lang-kotlin">quantcat</code> 相关模块中有更好的表现。</p><span class="kdoc-tag"><h4 class="">Author</h4><p class="paragraph">ForteScarlet</p></span><h4 class="">See also</h4><div class="table"><div class="table-row" data-filterable-current=":simbot-api/commonMain" data-filterable-set=":simbot-api/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../-bot-plugin/index.html"><span>Bot</span><wbr><span><span>Plugin</span></span></a></div></span></div><div></div></div></div></div><h4 class="">Inheritors</h4><div class="table"><div class="table-row" data-filterable-current=":simbot-api/commonMain" data-filterable-set=":simbot-api/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../-job-based-bot-manager/index.html">JobBasedBotManager</a></div></span></div><div></div></div></div></div></div></div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="index.html">BotManager</a> : <a href="../-auto-configurable-bot-plugin/index.html">AutoConfigurableBotPlugin</a>, <a href="../../love.forte.simbot.ability/-lifecycle-aware/index.html">LifecycleAware</a>, <a href="../../love.forte.simbot.ability/-completion-aware/index.html">CompletionAware</a><span class="clearfix"><span class="floating-right">(<a href="https://github.com/simple-robot/simpler-robot/tree/dev/main/simbot-api/src/commonMain/kotlin/love/forte/simbot/bot/BotManager.kt#L50">source</a>)</span></span></div><p class="paragraph"><a href="../-bot/index.html">Bot</a> 的管理器。</p><h2 class="">生命周期</h2><p class="paragraph"><a href="index.html">BotManager</a> 持有一个会影响诞生自它的所有 <a href="../-bot/index.html">Bot</a> 的生命周期的 <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-job/index.html">Job</a>。 当 <a href="index.html">BotManager</a> 被执行了 <a href="cancel.html">BotManager.cancel</a>，除了影响 <a href="index.html">BotManager</a> 自身的生命周期以外， 也会同样影响到所有由它产生的 <a href="../-bot/index.html">Bot</a>。</p><p class="paragraph"><a href="index.html">BotManager</a> 实现 <a href="../-auto-configurable-bot-plugin/index.html">AutoConfigurableBotPlugin</a> 以允许其在 <code class="lang-kotlin">quantcat</code> 相关模块中有更好的表现。</p><span class="kdoc-tag"><h4 class="">Author</h4><p class="paragraph">ForteScarlet</p></span><h4 class="">See also</h4><div class="table"><div class="table-row" data-filterable-current=":simbot-api/commonMain" data-filterable-set=":simbot-api/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../-bot-plugin/index.html"><span>Bot</span><wbr><span><span>Plugin</span></span></a></div></span></div><div></div></div></div></div><h4 class="">Inheritors</h4><div class="table"><div class="table-row" data-filterable-current=":simbot-api/commonMain" data-filterable-set=":simbot-api/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../-job-based-bot-manager/index.html">JobBasedBotManager</a></div></span></div><div></div></div></div></div></div></div>
   </div>
   <div class="tabbedcontent">
     <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button><button class="section-tab" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION,EXTENSION_PROPERTY,EXTENSION_FUNCTION">Members &amp; Extensions</button></div>
     <div class="tabs-section-body">
       <div data-togglable="PROPERTY">
-        <h2 class="">Properties</h2>
+        <h2 class="">Inherited properties</h2>
         <div class="table"><a data-name="-885338811%2FProperties%2F-1602927896" anchor-label="isActive" id="-885338811%2FProperties%2F-1602927896" data-filterable-set=":simbot-api/commonMain"></a>
           <div class="table-row" data-filterable-current=":simbot-api/commonMain" data-filterable-set=":simbot-api/commonMain">
             <div class="main-subrow keyValue ">
@@ -195,21 +219,6 @@
               </div>
             </div>
           </div>
-<a data-name="-1593421522%2FFunctions%2F-1602927896" anchor-label="configurable" id="-1593421522%2FFunctions%2F-1602927896" data-filterable-set=":simbot-api/commonMain"></a>
-          <div class="table-row" data-filterable-current=":simbot-api/commonMain" data-filterable-set=":simbot-api/commonMain">
-            <div class="main-subrow keyValue ">
-              <div class=""><span class="inline-flex">
-                  <div><a href="../-auto-configurable-bot-plugin/configurable.html"><span><span>configurable</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1593421522%2FFunctions%2F-1602927896"></span>
-                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                  </span></span></div>
-              <div>
-                <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-auto-configurable-bot-plugin/configurable.html"><span class="token function">configurable</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">configuration<span class="token operator">: </span><a href="../-serializable-bot-configuration/index.html">SerializableBotConfiguration</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">检测提供的 <a href="../-auto-configurable-bot-plugin/configurable.html">configuration</a> 是否能够应用于 <a href="../-auto-configurable-bot-plugin/register.html">register</a> 中。通常是一种类型检测。 如果 <a href="../-auto-configurable-bot-plugin/configurable.html">configurable</a> 结果为 <code class="lang-kotlin">true</code>，则使用此 <a href="../-auto-configurable-bot-plugin/configurable.html">configuration</a> 执行 <a href="../-auto-configurable-bot-plugin/register.html">register</a> 时不应出现 <a href="../-unsupported-bot-configuration-exception/index.html">UnsupportedBotConfigurationException</a> 异常。</p></div></div></div>
-                </div>
-              </div>
-            </div>
-          </div>
 <a data-name="480611832%2FFunctions%2F-1602927896" anchor-label="find" id="480611832%2FFunctions%2F-1602927896" data-filterable-set=":simbot-api/commonMain"></a>
           <div class="table-row" data-filterable-current=":simbot-api/commonMain" data-filterable-set=":simbot-api/commonMain">
             <div class="main-subrow keyValue ">
@@ -251,6 +260,25 @@
               <div>
                 <div class="title">
                   <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="join.html"><span class="token function">join</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">挂起直到被 <a href="cancel.html">cancel</a>。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Inherited functions</h2>
+        <div class="table"><a data-name="-1593421522%2FFunctions%2F-1602927896" anchor-label="configurable" id="-1593421522%2FFunctions%2F-1602927896" data-filterable-set=":simbot-api/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-api/commonMain" data-filterable-set=":simbot-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-auto-configurable-bot-plugin/configurable.html"><span><span>configurable</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1593421522%2FFunctions%2F-1602927896"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-auto-configurable-bot-plugin/configurable.html"><span class="token function">configurable</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">configuration<span class="token operator">: </span><a href="../-serializable-bot-configuration/index.html">SerializableBotConfiguration</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">检测提供的 <a href="../-auto-configurable-bot-plugin/configurable.html">configuration</a> 是否能够应用于 <a href="../-auto-configurable-bot-plugin/register.html">register</a> 中。通常是一种类型检测。 如果 <a href="../-auto-configurable-bot-plugin/configurable.html">configurable</a> 结果为 <code class="lang-kotlin">true</code>，则使用此 <a href="../-auto-configurable-bot-plugin/configurable.html">configuration</a> 执行 <a href="../-auto-configurable-bot-plugin/register.html">register</a> 时不应出现 <a href="../-unsupported-bot-configuration-exception/index.html">UnsupportedBotConfigurationException</a> 异常。</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -307,7 +335,7 @@
 </div>
     <div class="footer">
         <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
-        <span>© 2025 Copyright</span>
+        <span>© 2024-2025 <a href="https://github.com/simple-robot">Simple Robot</a>. All rights reserved.</span>
         <span class="pull-right">
             <span>Generated by </span>
             <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
