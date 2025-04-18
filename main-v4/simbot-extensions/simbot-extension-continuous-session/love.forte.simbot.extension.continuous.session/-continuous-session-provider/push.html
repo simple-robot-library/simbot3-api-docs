@@ -3,7 +3,27 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
     <title>push</title>
-<link href="../../../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../../../";</script>
+<link href="../../../../images/logo-icon.svg" rel="icon" type="image/svg">    <!-- 百度统计 -->
+    <!--suppress ES6ConvertVarToLetConst -->
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            const hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?045f67a122223db9432c7856fc942fad";
+            const s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1JWL2DDTB4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-1JWL2DDTB4');
+    </script>
+    <script>var pathToRoot = "../../../../";</script>
     <script>document.documentElement.classList.replace("no-js","js");</script>
     <script>const storage = localStorage.getItem("dokka-dark-mode")
     if (storage == null) {
@@ -32,7 +52,10 @@
 <script type="text/javascript" src="../../../../scripts/main.js" defer></script>
 <script type="text/javascript" src="../../../../scripts/prism.js" async></script>
 <script type="text/javascript" src="../../../../ui-kit/ui-kit.min.js" defer></script>
-<script type="text/javascript" src="../../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<script type="text/javascript" src="../../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script>
+<link href="../../../../images/logo-icon.svg">
+<link href="../../../../images/logo-icon-light.svg">
+<link href="../../../../styles/kdoc-style.css" rel="Stylesheet"></head>
 <body>
     <div class="root">
     <nav class="navigation theme-dark" id="navigation-wrapper">
@@ -41,7 +64,7 @@
             </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
         </button>
         <div class="navigation-controls--break ui-kit_mobile-only"></div>
-        <div class="library-version" id="library-version">4.11.0
+        <div class="library-version" id="library-version">4.11.1
         </div>
         <div class="navigation-controls">
         <div class="filter-section filter-section_loading" id="filter-section">
@@ -65,6 +88,7 @@
                 <div class="dropdown--overlay"></div>
             </div>
         </div>
+                <a class="navigation-controls--btn navigation-controls--btn_homepage" id="homepage-link" href="https://github.com/simple-robot/simpler-robot"></a>
             <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
             </button>
             <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
@@ -95,11 +119,11 @@
   <div class="cover ">
     <h1 class="cover"><span><span>push</span></span></h1>
   </div>
-  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-extensions:simbot-extension-continuous-session/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="push.html"><span class="token function">push</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">value<span class="token operator">: </span><a href="index.html">T</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">R</a><span class="clearfix"><span class="floating-right">(<a href="https://github.com/simple-robot/simpler-robot/tree/v4-dev/simbot-extensions/simbot-extension-continuous-session/src/commonMain/kotlin/love/forte/simbot/extension/continuous/session/ContinuousSession.kt#L70">source</a>)</span></span></div><p class="paragraph">推送一个事件到对应的 <a href="../-continuous-session-receiver/index.html">ContinuousSessionReceiver</a> 中并挂起直到将其 <a href="../-continuous-session-receiver/await.html">消费</a> 或被关闭。</p><h4 class="">Throws</h4><div class="table"><div class="table-row" data-filterable-current=":simbot-extensions:simbot-extension-continuous-session/commonMain" data-filterable-set=":simbot-extensions:simbot-extension-continuous-session/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-cancellation-exception/index.html"><span>Cancellation</span><wbr><span><span>Exception</span></span></a></div></span></div><div><div class="title"><p class="paragraph">如果会话已经结束或关闭</p></div></div></div></div><div class="table-row" data-filterable-current=":simbot-extensions:simbot-extension-continuous-session/commonMain" data-filterable-set=":simbot-extensions:simbot-extension-continuous-session/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../-session-push-on-failure-exception/index.html"><span>Session</span><wbr><span>Push</span><wbr><span>On</span><wbr><span>Failure</span><wbr><span><span>Exception</span></span></a></div></span></div><div><div class="title"><p class="paragraph">如果推送行为本身失败，例如会话已经结束或关闭</p></div></div></div></div><div class="table-row" data-filterable-current=":simbot-extensions:simbot-extension-continuous-session/commonMain" data-filterable-set=":simbot-extensions:simbot-extension-continuous-session/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../-session-await-on-failure-exception/index.html"><span>Session</span><wbr><span>Await</span><wbr><span>On</span><wbr><span>Failure</span><wbr><span><span>Exception</span></span></a></div></span></div><div><div class="title"><p class="paragraph">如果推送行为成功、 但是在 <a href="../-continuous-session-receiver/await.html">ContinuousSessionReceiver.await</a> 时出现了异常（例如构造响应结果时出现异常）</p></div></div></div></div><div class="table-row" data-filterable-current=":simbot-extensions:simbot-extension-continuous-session/commonMain" data-filterable-set=":simbot-extensions:simbot-extension-continuous-session/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-throwable/index.html"><span><span>Throwable</span></span></a></div></span></div><div><div class="title"><p class="paragraph">任何由 <a href="../-session-continuation/resume-with-exception.html">SessionContinuation.resumeWithException</a> 直接 resume 的异常本身</p></div></div></div></div></div></div></div>
+  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-extensions:simbot-extension-continuous-session/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="push.html"><span class="token function">push</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">value<span class="token operator">: </span><a href="index.html">T</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">R</a><span class="clearfix"><span class="floating-right">(<a href="https://github.com/simple-robot/simpler-robot/tree/dev/main/simbot-extensions/simbot-extension-continuous-session/src/commonMain/kotlin/love/forte/simbot/extension/continuous/session/ContinuousSession.kt#L70">source</a>)</span></span></div><p class="paragraph">推送一个事件到对应的 <a href="../-continuous-session-receiver/index.html">ContinuousSessionReceiver</a> 中并挂起直到将其 <a href="../-continuous-session-receiver/await.html">消费</a> 或被关闭。</p><h4 class="">Throws</h4><div class="table"><div class="table-row" data-filterable-current=":simbot-extensions:simbot-extension-continuous-session/commonMain" data-filterable-set=":simbot-extensions:simbot-extension-continuous-session/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-cancellation-exception/index.html"><span>Cancellation</span><wbr><span><span>Exception</span></span></a></div></span></div><div><div class="title"><p class="paragraph">如果会话已经结束或关闭</p></div></div></div></div><div class="table-row" data-filterable-current=":simbot-extensions:simbot-extension-continuous-session/commonMain" data-filterable-set=":simbot-extensions:simbot-extension-continuous-session/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../-session-push-on-failure-exception/index.html"><span>Session</span><wbr><span>Push</span><wbr><span>On</span><wbr><span>Failure</span><wbr><span><span>Exception</span></span></a></div></span></div><div><div class="title"><p class="paragraph">如果推送行为本身失败，例如会话已经结束或关闭</p></div></div></div></div><div class="table-row" data-filterable-current=":simbot-extensions:simbot-extension-continuous-session/commonMain" data-filterable-set=":simbot-extensions:simbot-extension-continuous-session/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../-session-await-on-failure-exception/index.html"><span>Session</span><wbr><span>Await</span><wbr><span>On</span><wbr><span>Failure</span><wbr><span><span>Exception</span></span></a></div></span></div><div><div class="title"><p class="paragraph">如果推送行为成功、 但是在 <a href="../-continuous-session-receiver/await.html">ContinuousSessionReceiver.await</a> 时出现了异常（例如构造响应结果时出现异常）</p></div></div></div></div><div class="table-row" data-filterable-current=":simbot-extensions:simbot-extension-continuous-session/commonMain" data-filterable-set=":simbot-extensions:simbot-extension-continuous-session/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-throwable/index.html"><span><span>Throwable</span></span></a></div></span></div><div><div class="title"><p class="paragraph">任何由 <a href="../-session-continuation/resume-with-exception.html">SessionContinuation.resumeWithException</a> 直接 resume 的异常本身</p></div></div></div></div></div></div></div>
 </div>
     <div class="footer">
         <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
-        <span>© 2025 Copyright</span>
+        <span>© 2024-2025 <a href="https://github.com/simple-robot">Simple Robot</a>. All rights reserved.</span>
         <span class="pull-right">
             <span>Generated by </span>
             <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">

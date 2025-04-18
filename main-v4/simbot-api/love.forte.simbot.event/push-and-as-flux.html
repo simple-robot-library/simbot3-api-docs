@@ -3,7 +3,27 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
     <title>pushAndAsFlux</title>
-<link href="../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../";</script>
+<link href="../../images/logo-icon.svg" rel="icon" type="image/svg">    <!-- 百度统计 -->
+    <!--suppress ES6ConvertVarToLetConst -->
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            const hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?045f67a122223db9432c7856fc942fad";
+            const s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1JWL2DDTB4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-1JWL2DDTB4');
+    </script>
+    <script>var pathToRoot = "../../";</script>
     <script>document.documentElement.classList.replace("no-js","js");</script>
     <script>const storage = localStorage.getItem("dokka-dark-mode")
     if (storage == null) {
@@ -32,7 +52,10 @@
 <script type="text/javascript" src="../../scripts/main.js" defer></script>
 <script type="text/javascript" src="../../scripts/prism.js" async></script>
 <script type="text/javascript" src="../../ui-kit/ui-kit.min.js" defer></script>
-<script type="text/javascript" src="../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<script type="text/javascript" src="../../scripts/symbol-parameters-wrapper_deferred.js" defer></script>
+<link href="../../images/logo-icon.svg">
+<link href="../../images/logo-icon-light.svg">
+<link href="../../styles/kdoc-style.css" rel="Stylesheet"></head>
 <body>
     <div class="root">
     <nav class="navigation theme-dark" id="navigation-wrapper">
@@ -41,7 +64,7 @@
             </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
         </button>
         <div class="navigation-controls--break ui-kit_mobile-only"></div>
-        <div class="library-version" id="library-version">4.11.0
+        <div class="library-version" id="library-version">4.11.1
         </div>
         <div class="navigation-controls">
         <div class="filter-section filter-section_loading" id="filter-section">
@@ -65,6 +88,7 @@
                 <div class="dropdown--overlay"></div>
             </div>
         </div>
+                <a class="navigation-controls--btn navigation-controls--btn_homepage" id="homepage-link" href="https://github.com/simple-robot/simpler-robot"></a>
             <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
             </button>
             <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
@@ -97,11 +121,11 @@
   </div>
   <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
     <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":simbot-api/jvmMain" data-filterable-set=":simbot-api/jvmMain" data-active="" data-toggle=":simbot-api/jvmMain">jvm</button></div>
-<div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api/jvmMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="-event-processor/index.html">EventProcessor</a><span class="token punctuation">.</span><a href="push-and-as-flux.html"><span class="token function">pushAndAsFlux</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">event<span class="token operator">: </span><a href="-event/index.html">Event</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="reactor.core.publisher/Flux///PointingToDeclaration/">Flux</span><span class="token operator">&lt;</span><a href="-event-result/index.html">EventResult</a><span class="token operator">&gt;</span><span class="clearfix"><span class="floating-right">(<a href="https://github.com/simple-robot/simpler-robot/tree/v4-dev/simbot-api/src/jvmMain/kotlin/love/forte/simbot/event/EventProcessor.jvm.kt#L53">source</a>)</span></span></div><p class="paragraph">推送事件并将结果转化为 <span data-unresolved-link="reactor.core.publisher/Flux///PointingToDeclaration/">Flux</span>. 需要项目环境中存在 <a href="https://github.com/Kotlin/kotlinx.coroutines/tree/master/reactive"><code class="lang-kotlin">kotlinx-coroutines-reactor</code></a> 依赖。</p></div>  </div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api/jvmMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="-event-processor/index.html">EventProcessor</a><span class="token punctuation">.</span><a href="push-and-as-flux.html"><span class="token function">pushAndAsFlux</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">event<span class="token operator">: </span><a href="-event/index.html">Event</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="reactor.core.publisher/Flux///PointingToDeclaration/">Flux</span><span class="token operator">&lt;</span><a href="-event-result/index.html">EventResult</a><span class="token operator">&gt;</span><span class="clearfix"><span class="floating-right">(<a href="https://github.com/simple-robot/simpler-robot/tree/dev/main/simbot-api/src/jvmMain/kotlin/love/forte/simbot/event/EventProcessor.jvm.kt#L53">source</a>)</span></span></div><p class="paragraph">推送事件并将结果转化为 <span data-unresolved-link="reactor.core.publisher/Flux///PointingToDeclaration/">Flux</span>. 需要项目环境中存在 <a href="https://github.com/Kotlin/kotlinx.coroutines/tree/master/reactive"><code class="lang-kotlin">kotlinx-coroutines-reactor</code></a> 依赖。</p></div>  </div>
 </div>
     <div class="footer">
         <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
-        <span>© 2025 Copyright</span>
+        <span>© 2024-2025 <a href="https://github.com/simple-robot">Simple Robot</a>. All rights reserved.</span>
         <span class="pull-right">
             <span>Generated by </span>
             <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
