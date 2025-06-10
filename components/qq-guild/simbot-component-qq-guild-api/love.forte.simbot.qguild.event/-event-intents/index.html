@@ -45,65 +45,97 @@
 <link href="../../../styles/prism.css" rel="Stylesheet">
 <link href="../../../styles/logo-styles.css" rel="Stylesheet">
 <link href="../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<link href="../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
 <script type="text/javascript" src="../../../scripts/clipboard.js" async></script>
 <script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
 <script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
 <script type="text/javascript" src="../../../scripts/main.js" defer></script>
 <script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../ui-kit/ui-kit.min.js" defer></script>
 <script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script>
 <link href="../../../images/logo-icon.svg">
 <link href="../../../images/logo-icon-light.svg">
 <link href="../../../styles/kdoc-style.css" rel="Stylesheet"></head>
 <body>
     <div class="root">
-<nav class="navigation" id="navigation-wrapper">
-    <div class="navigation--inner">
-        <div class="navigation-title">
-            <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
-            <div class="library-name">
+    <nav class="navigation theme-dark" id="navigation-wrapper">
 <a class="library-name--link" href="../../../index.html">
-                            Simple Robot 组件 | QQ Guild
-                    </a>            </div>
-            <div class="library-version">4.1.4
+                    Simple Robot 组件 | QQ
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">4.2.0
+        </div>
+        <div class="navigation-controls">
+        <div class="filter-section filter-section_loading" id="filter-section">
+                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":simbot-component-qq-guild-api/commonMain">common</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox">
+                    <div class="dropdown--header"><span>Platform filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close platform filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option common-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":simbot-component-qq-guild-api/commonMain" data-filter=":simbot-component-qq-guild-api/commonMain">
+                                <span class="checkbox--icon"></span>
+                                common
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
             </div>
         </div>
-        <div class="filter-section" id="filter-section">
-                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain">common</button>
+                <a class="navigation-controls--btn navigation-controls--btn_homepage" id="homepage-link" href="https://github.com/simple-robot/simbot-component-qq-guild"></a>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
         </div>
-    </div>
-    <div class="navigation-controls">
-            <a class="navigation-controls--btn navigation-controls--homepage" id="homepage-link" href="https://github.com/simple-robot/simbot-component-qq-guild"></a>
-        <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
-        <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
-    </div>
-</nav>
+    </nav>
         <div id="container">
             <div class="sidebar" id="leftColumn">
-                <div class="sidebar--inner" id="sideMenu"></div>
+                <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                    <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox">
+                        <div class="dropdown--header">
+                            <span>
+                                    Simple Robot 组件 | QQ
+                            </span>
+                            <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                                <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                            </button>
+                        </div>
+                        <div class="sidebar--inner" id="sideMenu"></div>
+                    </ul>
+                    <div class="dropdown--overlay"></div>
+                </div>
             </div>
             <div id="main">
-<div class="main-content" data-page-type="classlike" id="content" pageids="simbot-component-qq-guild-api::love.forte.simbot.qguild.event/EventIntents///PointingToDeclaration//1533000741">
+<div class="main-content" data-page-type="classlike" id="content" pageids="simbot-component-qq-guild-api::love.forte.simbot.qguild.event/EventIntents///PointingToDeclaration//162794553">
   <div class="breadcrumbs"><a href="../../index.html">simbot-component-qq-guild-api</a><span class="delimiter">/</span><a href="../index.html">love.forte.simbot.qguild.event</a><span class="delimiter">/</span><span class="current">EventIntents</span></div>
   <div class="cover ">
     <h1 class="cover"><span>Event</span><wbr><span><span>Intents</span></span></h1>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">sealed </span><span class="token keyword">class </span><a href="index.html">EventIntents</a><span class="clearfix"><span class="floating-right">(<a href="https://github.com/simple-robot/simbot-component-qq-guild/tree/main/simbot-component-qq-guild-api/src//commonMain/kotlin/love/forte/simbot/qguild/event/EventIntents.kt#L100">source</a>)</span></span></div><p class="paragraph">各事件的 <a href="../-intents/index.html"><code class="lang-kotlin">intents</code></a> 和类型常量。</p><h2 class="">权限</h2><p class="paragraph">事件类型的订阅，是有权限控制的，除了 <a href="-guilds/index.html"><code class="lang-kotlin">GUILDS</code></a>，<a href="-public-guild-messages/index.html"><code class="lang-kotlin">PUBLIC_GUILD_MESSAGES</code></a>，<a href="-guild-members/index.html"><code class="lang-kotlin">GUILD_MEMBERS</code></a> 事件是基础的事件， 默认有权限订阅之外，其他的特殊事件，都需要经过申请才能够使用，如果在 鉴权的时候传递了无权限的 intents，websocket 会报错，并直接关闭连接。 请开发者注意订阅事件的范围需要控制在自己所需要的范围之内。</p><p class="paragraph">如果拥有的某个特殊事件类型的权限被取消，则在当前连接上不会报错，但是将不会收到对应的事件类型， 如果重新连接，则报错，所以如果开发者的事件类型权限被取消， 请及时调整监听事件代码，避免报错导致的无法连接。</p><p class="paragraph">更多参考<a href="https://bot.q.qq.com/wiki/develop/api/gateway/intents.html">文档</a></p><h4 class="">See also</h4><div class="table"><div class="table-row" data-filterable-current=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../-event-intents-aggregation/index.html"><span>Event</span><wbr><span>Intents</span><wbr><span><span>Aggregation</span></span></a></div></span></div><div></div></div></div></div><h4 class="">Inheritors</h4><div class="table"><div class="table-row" data-filterable-current=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="-guilds/index.html">Guilds</a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="-guild-members/index.html">GuildMembers</a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="-guild-messages/index.html">GuildMessages</a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="-guild-message-reactions/index.html">GuildMessageReactions</a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="-direct-message/index.html">DirectMessage</a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="-open-forums-event/index.html">OpenForumsEvent</a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="-audio-or-live-channel-member/index.html">AudioOrLiveChannelMember</a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="-group-and-c2-c-event/index.html">GroupAndC2CEvent</a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="-interaction/index.html">Interaction</a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="-message-audit/index.html">MessageAudit</a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="-forums-event/index.html">ForumsEvent</a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="-audio-action/index.html">AudioAction</a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="-public-guild-messages/index.html">PublicGuildMessages</a></div></span></div><div></div></div></div></div></div></div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq-guild-api/commonMain"><div class="symbol monospace"><span class="token keyword">sealed </span><span class="token keyword">class </span><a href="index.html">EventIntents</a><span class="clearfix"><span class="floating-right">(<a href="https://github.com/simple-robot/simbot-component-qq-guild/tree/dev/main/simbot-component-qq-guild-api/src/commonMain/kotlin/love/forte/simbot/qguild/event/EventIntents.kt#L100">source</a>)</span></span></div><p class="paragraph">各事件的 <a href="../-intents/index.html"><code class="lang-kotlin">intents</code></a> 和类型常量。</p><h2 class="">权限</h2><p class="paragraph">事件类型的订阅，是有权限控制的，除了 <a href="-guilds/index.html"><code class="lang-kotlin">GUILDS</code></a>，<a href="-public-guild-messages/index.html"><code class="lang-kotlin">PUBLIC_GUILD_MESSAGES</code></a>，<a href="-guild-members/index.html"><code class="lang-kotlin">GUILD_MEMBERS</code></a> 事件是基础的事件， 默认有权限订阅之外，其他的特殊事件，都需要经过申请才能够使用，如果在 鉴权的时候传递了无权限的 intents，websocket 会报错，并直接关闭连接。 请开发者注意订阅事件的范围需要控制在自己所需要的范围之内。</p><p class="paragraph">如果拥有的某个特殊事件类型的权限被取消，则在当前连接上不会报错，但是将不会收到对应的事件类型， 如果重新连接，则报错，所以如果开发者的事件类型权限被取消， 请及时调整监听事件代码，避免报错导致的无法连接。</p><p class="paragraph">更多参考<a href="https://bot.q.qq.com/wiki/develop/api/gateway/intents.html">文档</a></p><h4 class="">See also</h4><div class="table"><div class="table-row" data-filterable-current=":simbot-component-qq-guild-api/commonMain" data-filterable-set=":simbot-component-qq-guild-api/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../-event-intents-aggregation/index.html"><span>Event</span><wbr><span>Intents</span><wbr><span><span>Aggregation</span></span></a></div></span></div><div></div></div></div></div><h4 class="">Inheritors</h4><div class="table"><div class="table-row" data-filterable-current=":simbot-component-qq-guild-api/commonMain" data-filterable-set=":simbot-component-qq-guild-api/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="-guilds/index.html">Guilds</a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":simbot-component-qq-guild-api/commonMain" data-filterable-set=":simbot-component-qq-guild-api/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="-guild-members/index.html">GuildMembers</a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":simbot-component-qq-guild-api/commonMain" data-filterable-set=":simbot-component-qq-guild-api/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="-guild-messages/index.html">GuildMessages</a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":simbot-component-qq-guild-api/commonMain" data-filterable-set=":simbot-component-qq-guild-api/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="-guild-message-reactions/index.html">GuildMessageReactions</a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":simbot-component-qq-guild-api/commonMain" data-filterable-set=":simbot-component-qq-guild-api/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="-direct-message/index.html">DirectMessage</a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":simbot-component-qq-guild-api/commonMain" data-filterable-set=":simbot-component-qq-guild-api/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="-open-forums-event/index.html">OpenForumsEvent</a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":simbot-component-qq-guild-api/commonMain" data-filterable-set=":simbot-component-qq-guild-api/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="-audio-or-live-channel-member/index.html">AudioOrLiveChannelMember</a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":simbot-component-qq-guild-api/commonMain" data-filterable-set=":simbot-component-qq-guild-api/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="-group-and-c2-c-event/index.html">GroupAndC2CEvent</a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":simbot-component-qq-guild-api/commonMain" data-filterable-set=":simbot-component-qq-guild-api/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="-interaction/index.html">Interaction</a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":simbot-component-qq-guild-api/commonMain" data-filterable-set=":simbot-component-qq-guild-api/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="-message-audit/index.html">MessageAudit</a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":simbot-component-qq-guild-api/commonMain" data-filterable-set=":simbot-component-qq-guild-api/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="-forums-event/index.html">ForumsEvent</a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":simbot-component-qq-guild-api/commonMain" data-filterable-set=":simbot-component-qq-guild-api/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="-audio-action/index.html">AudioAction</a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":simbot-component-qq-guild-api/commonMain" data-filterable-set=":simbot-component-qq-guild-api/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="-public-guild-messages/index.html">PublicGuildMessages</a></div></span></div><div></div></div></div></div></div></div>
   </div>
   <div class="tabbedcontent">
     <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
     <div class="tabs-section-body">
       <div data-togglable="CONSTRUCTOR">
         <h2 class="">Constructors</h2>
-        <div class="table"><a data-name="-1824000575%2FConstructors%2F1533000741" anchor-label="EventIntents" id="-1824000575%2FConstructors%2F1533000741" data-filterable-set=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain"></a>
-          <div class="table-row" data-togglable="CONSTRUCTOR" data-filterable-current=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain">
+        <div class="table"><a data-name="-1824000575%2FConstructors%2F162794553" anchor-label="EventIntents" id="-1824000575%2FConstructors%2F162794553" data-filterable-set=":simbot-component-qq-guild-api/commonMain"></a>
+          <div class="table-row" data-togglable="CONSTRUCTOR" data-filterable-current=":simbot-component-qq-guild-api/commonMain" data-filterable-set=":simbot-component-qq-guild-api/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="-event-intents.html"><span>Event</span><wbr><span><span>Intents</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1824000575%2FConstructors%2F1533000741"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1824000575%2FConstructors%2F162794553"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">protected </span><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq-guild-api/commonMain"><div class="symbol monospace"><span class="token keyword">protected </span><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
                 </div>
               </div>
             </div>
@@ -112,212 +144,212 @@
       </div>
       <div data-togglable="TYPE">
         <h2 class="">Types</h2>
-        <div class="table"><a data-name="-96890461%2FClasslikes%2F1533000741" anchor-label="AudioAction" id="-96890461%2FClasslikes%2F1533000741" data-filterable-set=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain"></a>
-          <div class="table-row" data-filterable-current=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain">
+        <div class="table"><a data-name="-96890461%2FClasslikes%2F162794553" anchor-label="AudioAction" id="-96890461%2FClasslikes%2F162794553" data-filterable-set=":simbot-component-qq-guild-api/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-qq-guild-api/commonMain" data-filterable-set=":simbot-component-qq-guild-api/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="-audio-action/index.html"><span>Audio</span><wbr><span><span>Action</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-96890461%2FClasslikes%2F1533000741"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-96890461%2FClasslikes%2F162794553"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../love.forte.simbot.qguild/-private-domain-only/index.html"><span class="token annotation builtin">PrivateDomainOnly</span></a></div></div><span class="token keyword">data </span><span class="token keyword">object </span><a href="-audio-action/index.html">AudioAction</a> : <a href="index.html">EventIntents</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq-guild-api/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../love.forte.simbot.qguild/-private-domain-only/index.html"><span class="token annotation builtin">PrivateDomainOnly</span></a></div></div><span class="token keyword">data </span><span class="token keyword">object </span><a href="-audio-action/index.html">AudioAction</a> : <a href="index.html">EventIntents</a></div></div></div>
                 </div>
               </div>
             </div>
           </div>
-<a data-name="1776572859%2FClasslikes%2F1533000741" anchor-label="AudioOrLiveChannelMember" id="1776572859%2FClasslikes%2F1533000741" data-filterable-set=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain"></a>
-          <div class="table-row" data-filterable-current=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain">
+<a data-name="1776572859%2FClasslikes%2F162794553" anchor-label="AudioOrLiveChannelMember" id="1776572859%2FClasslikes%2F162794553" data-filterable-set=":simbot-component-qq-guild-api/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-qq-guild-api/commonMain" data-filterable-set=":simbot-component-qq-guild-api/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="-audio-or-live-channel-member/index.html"><span>Audio</span><wbr><span>Or</span><wbr><span>Live</span><wbr><span>Channel</span><wbr><span><span>Member</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1776572859%2FClasslikes%2F1533000741"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1776572859%2FClasslikes%2F162794553"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">object </span><a href="-audio-or-live-channel-member/index.html">AudioOrLiveChannelMember</a> : <a href="index.html">EventIntents</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq-guild-api/commonMain"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">object </span><a href="-audio-or-live-channel-member/index.html">AudioOrLiveChannelMember</a> : <a href="index.html">EventIntents</a></div></div></div>
                 </div>
               </div>
             </div>
           </div>
-<a data-name="-1172105277%2FClasslikes%2F1533000741" anchor-label="Companion" id="-1172105277%2FClasslikes%2F1533000741" data-filterable-set=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain"></a>
-          <div class="table-row" data-filterable-current=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain">
+<a data-name="-1172105277%2FClasslikes%2F162794553" anchor-label="Companion" id="-1172105277%2FClasslikes%2F162794553" data-filterable-set=":simbot-component-qq-guild-api/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-qq-guild-api/commonMain" data-filterable-set=":simbot-component-qq-guild-api/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="-companion/index.html"><span><span>Companion</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1172105277%2FClasslikes%2F1533000741"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1172105277%2FClasslikes%2F162794553"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">object </span><a href="-companion/index.html">Companion</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq-guild-api/commonMain"><div class="symbol monospace"><span class="token keyword">object </span><a href="-companion/index.html">Companion</a></div></div></div>
                 </div>
               </div>
             </div>
           </div>
-<a data-name="-1644890063%2FClasslikes%2F1533000741" anchor-label="DirectMessage" id="-1644890063%2FClasslikes%2F1533000741" data-filterable-set=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain"></a>
-          <div class="table-row" data-filterable-current=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain">
+<a data-name="-1644890063%2FClasslikes%2F162794553" anchor-label="DirectMessage" id="-1644890063%2FClasslikes%2F162794553" data-filterable-set=":simbot-component-qq-guild-api/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-qq-guild-api/commonMain" data-filterable-set=":simbot-component-qq-guild-api/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="-direct-message/index.html"><span>Direct</span><wbr><span><span>Message</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1644890063%2FClasslikes%2F1533000741"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1644890063%2FClasslikes%2F162794553"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">object </span><a href="-direct-message/index.html">DirectMessage</a> : <a href="index.html">EventIntents</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq-guild-api/commonMain"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">object </span><a href="-direct-message/index.html">DirectMessage</a> : <a href="index.html">EventIntents</a></div></div></div>
                 </div>
               </div>
             </div>
           </div>
-<a data-name="1714930823%2FClasslikes%2F1533000741" anchor-label="ForumsEvent" id="1714930823%2FClasslikes%2F1533000741" data-filterable-set=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain"></a>
-          <div class="table-row" data-filterable-current=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain">
+<a data-name="1714930823%2FClasslikes%2F162794553" anchor-label="ForumsEvent" id="1714930823%2FClasslikes%2F162794553" data-filterable-set=":simbot-component-qq-guild-api/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-qq-guild-api/commonMain" data-filterable-set=":simbot-component-qq-guild-api/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="-forums-event/index.html"><span>Forums</span><wbr><span><span>Event</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1714930823%2FClasslikes%2F1533000741"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1714930823%2FClasslikes%2F162794553"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../love.forte.simbot.qguild/-private-domain-only/index.html"><span class="token annotation builtin">PrivateDomainOnly</span></a></div></div><span class="token keyword">data </span><span class="token keyword">object </span><a href="-forums-event/index.html">ForumsEvent</a> : <a href="index.html">EventIntents</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq-guild-api/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../love.forte.simbot.qguild/-private-domain-only/index.html"><span class="token annotation builtin">PrivateDomainOnly</span></a></div></div><span class="token keyword">data </span><span class="token keyword">object </span><a href="-forums-event/index.html">ForumsEvent</a> : <a href="index.html">EventIntents</a></div></div></div>
                 </div>
               </div>
             </div>
           </div>
-<a data-name="-398262507%2FClasslikes%2F1533000741" anchor-label="GroupAndC2CEvent" id="-398262507%2FClasslikes%2F1533000741" data-filterable-set=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain"></a>
-          <div class="table-row" data-filterable-current=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain">
+<a data-name="-398262507%2FClasslikes%2F162794553" anchor-label="GroupAndC2CEvent" id="-398262507%2FClasslikes%2F162794553" data-filterable-set=":simbot-component-qq-guild-api/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-qq-guild-api/commonMain" data-filterable-set=":simbot-component-qq-guild-api/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="-group-and-c2-c-event/index.html"><span>Group</span><wbr><span>And</span><wbr><span><span>C2CEvent</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-398262507%2FClasslikes%2F1533000741"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-398262507%2FClasslikes%2F162794553"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">object </span><a href="-group-and-c2-c-event/index.html">GroupAndC2CEvent</a> : <a href="index.html">EventIntents</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq-guild-api/commonMain"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">object </span><a href="-group-and-c2-c-event/index.html">GroupAndC2CEvent</a> : <a href="index.html">EventIntents</a></div></div></div>
                 </div>
               </div>
             </div>
           </div>
-<a data-name="-223452307%2FClasslikes%2F1533000741" anchor-label="GuildMembers" id="-223452307%2FClasslikes%2F1533000741" data-filterable-set=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain"></a>
-          <div class="table-row" data-filterable-current=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain">
+<a data-name="-223452307%2FClasslikes%2F162794553" anchor-label="GuildMembers" id="-223452307%2FClasslikes%2F162794553" data-filterable-set=":simbot-component-qq-guild-api/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-qq-guild-api/commonMain" data-filterable-set=":simbot-component-qq-guild-api/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="-guild-members/index.html"><span>Guild</span><wbr><span><span>Members</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-223452307%2FClasslikes%2F1533000741"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-223452307%2FClasslikes%2F162794553"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">object </span><a href="-guild-members/index.html">GuildMembers</a> : <a href="index.html">EventIntents</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq-guild-api/commonMain"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">object </span><a href="-guild-members/index.html">GuildMembers</a> : <a href="index.html">EventIntents</a></div></div></div>
                 </div>
               </div>
             </div>
           </div>
-<a data-name="1402880985%2FClasslikes%2F1533000741" anchor-label="GuildMessageReactions" id="1402880985%2FClasslikes%2F1533000741" data-filterable-set=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain"></a>
-          <div class="table-row" data-filterable-current=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain">
+<a data-name="1402880985%2FClasslikes%2F162794553" anchor-label="GuildMessageReactions" id="1402880985%2FClasslikes%2F162794553" data-filterable-set=":simbot-component-qq-guild-api/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-qq-guild-api/commonMain" data-filterable-set=":simbot-component-qq-guild-api/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="-guild-message-reactions/index.html"><span>Guild</span><wbr><span>Message</span><wbr><span><span>Reactions</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1402880985%2FClasslikes%2F1533000741"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1402880985%2FClasslikes%2F162794553"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">object </span><a href="-guild-message-reactions/index.html">GuildMessageReactions</a> : <a href="index.html">EventIntents</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq-guild-api/commonMain"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">object </span><a href="-guild-message-reactions/index.html">GuildMessageReactions</a> : <a href="index.html">EventIntents</a></div></div></div>
                 </div>
               </div>
             </div>
           </div>
-<a data-name="-963997488%2FClasslikes%2F1533000741" anchor-label="GuildMessages" id="-963997488%2FClasslikes%2F1533000741" data-filterable-set=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain"></a>
-          <div class="table-row" data-filterable-current=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain">
+<a data-name="-963997488%2FClasslikes%2F162794553" anchor-label="GuildMessages" id="-963997488%2FClasslikes%2F162794553" data-filterable-set=":simbot-component-qq-guild-api/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-qq-guild-api/commonMain" data-filterable-set=":simbot-component-qq-guild-api/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="-guild-messages/index.html"><span>Guild</span><wbr><span><span>Messages</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-963997488%2FClasslikes%2F1533000741"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-963997488%2FClasslikes%2F162794553"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../love.forte.simbot.qguild/-private-domain-only/index.html"><span class="token annotation builtin">PrivateDomainOnly</span></a></div></div><span class="token keyword">data </span><span class="token keyword">object </span><a href="-guild-messages/index.html">GuildMessages</a> : <a href="index.html">EventIntents</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq-guild-api/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../love.forte.simbot.qguild/-private-domain-only/index.html"><span class="token annotation builtin">PrivateDomainOnly</span></a></div></div><span class="token keyword">data </span><span class="token keyword">object </span><a href="-guild-messages/index.html">GuildMessages</a> : <a href="index.html">EventIntents</a></div></div></div>
                 </div>
               </div>
             </div>
           </div>
-<a data-name="1411003635%2FClasslikes%2F1533000741" anchor-label="Guilds" id="1411003635%2FClasslikes%2F1533000741" data-filterable-set=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain"></a>
-          <div class="table-row" data-filterable-current=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain">
+<a data-name="1411003635%2FClasslikes%2F162794553" anchor-label="Guilds" id="1411003635%2FClasslikes%2F162794553" data-filterable-set=":simbot-component-qq-guild-api/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-qq-guild-api/commonMain" data-filterable-set=":simbot-component-qq-guild-api/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="-guilds/index.html"><span><span>Guilds</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1411003635%2FClasslikes%2F1533000741"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1411003635%2FClasslikes%2F162794553"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">object </span><a href="-guilds/index.html">Guilds</a> : <a href="index.html">EventIntents</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq-guild-api/commonMain"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">object </span><a href="-guilds/index.html">Guilds</a> : <a href="index.html">EventIntents</a></div></div></div>
                 </div>
               </div>
             </div>
           </div>
-<a data-name="-594726915%2FClasslikes%2F1533000741" anchor-label="Interaction" id="-594726915%2FClasslikes%2F1533000741" data-filterable-set=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain"></a>
-          <div class="table-row" data-filterable-current=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain">
+<a data-name="-594726915%2FClasslikes%2F162794553" anchor-label="Interaction" id="-594726915%2FClasslikes%2F162794553" data-filterable-set=":simbot-component-qq-guild-api/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-qq-guild-api/commonMain" data-filterable-set=":simbot-component-qq-guild-api/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="-interaction/index.html"><span><span>Interaction</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-594726915%2FClasslikes%2F1533000741"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-594726915%2FClasslikes%2F162794553"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">object </span><a href="-interaction/index.html">Interaction</a> : <a href="index.html">EventIntents</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq-guild-api/commonMain"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">object </span><a href="-interaction/index.html">Interaction</a> : <a href="index.html">EventIntents</a></div></div></div>
                 </div>
               </div>
             </div>
           </div>
-<a data-name="818815167%2FClasslikes%2F1533000741" anchor-label="MessageAudit" id="818815167%2FClasslikes%2F1533000741" data-filterable-set=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain"></a>
-          <div class="table-row" data-filterable-current=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain">
+<a data-name="818815167%2FClasslikes%2F162794553" anchor-label="MessageAudit" id="818815167%2FClasslikes%2F162794553" data-filterable-set=":simbot-component-qq-guild-api/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-qq-guild-api/commonMain" data-filterable-set=":simbot-component-qq-guild-api/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="-message-audit/index.html"><span>Message</span><wbr><span><span>Audit</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="818815167%2FClasslikes%2F1533000741"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="818815167%2FClasslikes%2F162794553"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">object </span><a href="-message-audit/index.html">MessageAudit</a> : <a href="index.html">EventIntents</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq-guild-api/commonMain"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">object </span><a href="-message-audit/index.html">MessageAudit</a> : <a href="index.html">EventIntents</a></div></div></div>
                 </div>
               </div>
             </div>
           </div>
-<a data-name="-411041039%2FClasslikes%2F1533000741" anchor-label="OpenForumsEvent" id="-411041039%2FClasslikes%2F1533000741" data-filterable-set=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain"></a>
-          <div class="table-row" data-filterable-current=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain">
+<a data-name="-411041039%2FClasslikes%2F162794553" anchor-label="OpenForumsEvent" id="-411041039%2FClasslikes%2F162794553" data-filterable-set=":simbot-component-qq-guild-api/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-qq-guild-api/commonMain" data-filterable-set=":simbot-component-qq-guild-api/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="-open-forums-event/index.html"><span>Open</span><wbr><span>Forums</span><wbr><span><span>Event</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-411041039%2FClasslikes%2F1533000741"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-411041039%2FClasslikes%2F162794553"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">object </span><a href="-open-forums-event/index.html">OpenForumsEvent</a> : <a href="index.html">EventIntents</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq-guild-api/commonMain"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">object </span><a href="-open-forums-event/index.html">OpenForumsEvent</a> : <a href="index.html">EventIntents</a></div></div></div>
                 </div>
               </div>
             </div>
           </div>
-<a data-name="-863532519%2FClasslikes%2F1533000741" anchor-label="PublicGuildMessages" id="-863532519%2FClasslikes%2F1533000741" data-filterable-set=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain"></a>
-          <div class="table-row" data-filterable-current=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain">
+<a data-name="-863532519%2FClasslikes%2F162794553" anchor-label="PublicGuildMessages" id="-863532519%2FClasslikes%2F162794553" data-filterable-set=":simbot-component-qq-guild-api/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-qq-guild-api/commonMain" data-filterable-set=":simbot-component-qq-guild-api/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="-public-guild-messages/index.html"><span>Public</span><wbr><span>Guild</span><wbr><span><span>Messages</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-863532519%2FClasslikes%2F1533000741"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-863532519%2FClasslikes%2F162794553"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../love.forte.simbot.qguild/-private-domain-only/index.html"><span class="token annotation builtin">PrivateDomainOnly</span></a></div></div><span class="token keyword">data </span><span class="token keyword">object </span><a href="-public-guild-messages/index.html">PublicGuildMessages</a> : <a href="index.html">EventIntents</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq-guild-api/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../love.forte.simbot.qguild/-private-domain-only/index.html"><span class="token annotation builtin">PrivateDomainOnly</span></a></div></div><span class="token keyword">data </span><span class="token keyword">object </span><a href="-public-guild-messages/index.html">PublicGuildMessages</a> : <a href="index.html">EventIntents</a></div></div></div>
                 </div>
               </div>
             </div>
@@ -326,17 +358,17 @@
       </div>
       <div data-togglable="PROPERTY">
         <h2 class="">Properties</h2>
-        <div class="table"><a data-name="1868974980%2FProperties%2F1533000741" anchor-label="intentsValue" id="1868974980%2FProperties%2F1533000741" data-filterable-set=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain"></a>
-          <div class="table-row" data-filterable-current=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain" data-filterable-set=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain">
+        <div class="table"><a data-name="1868974980%2FProperties%2F162794553" anchor-label="intentsValue" id="1868974980%2FProperties%2F162794553" data-filterable-set=":simbot-component-qq-guild-api/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-qq-guild-api/commonMain" data-filterable-set=":simbot-component-qq-guild-api/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="intents-value.html"><span>intents</span><wbr><span><span>Value</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1868974980%2FProperties%2F1533000741"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1868974980%2FProperties%2F162794553"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq-guild-api:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">val </span><a href="intents-value.html">intentsValue</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-int/index.html">Int</a></div><div class="brief "><p class="paragraph">获取事件类型对应的标记为值。</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq-guild-api/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">val </span><a href="intents-value.html">intentsValue</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div><div class="brief "><p class="paragraph">获取事件类型对应的标记为值。</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -346,12 +378,18 @@
     </div>
   </div>
 </div>
-      <div class="footer">
-        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2022-2025 <a href="https://github.com/simple-robot">Simple Robot</a>. All rights reserved.</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
-      </div>
+    <div class="footer">
+        <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+        <span>© 2024-2025 <a href="https://github.com/simple-robot">Simple Robot</a>. All rights reserved.</span>
+        <span class="pull-right">
+            <span>Generated by </span>
+            <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                <span>dokka</span>
+            </a>
+        </span>
+    </div>
             </div>
         </div>
     </div>
 </body>
 </html>
-
