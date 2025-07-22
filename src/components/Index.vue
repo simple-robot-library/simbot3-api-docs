@@ -39,7 +39,7 @@
                   </n-card>
                   <n-card embedded :bordered="false">
                     <n-collapse-item name="作品展示">
-                      <ShowCards :theme="theme" />
+                      <ShowCards :theme="theme !== null" />
                       <template #header>
                         <n-divider title-placement="left" style="user-select: none">
                           <n-text strong style="font-size: 19px" class="sub-text">作品展示</n-text>

@@ -13,6 +13,9 @@ import {NA, NButton, NCard, NGi, NGrid, NImage, NImageGroup, NP, NSpace} from "n
 // 统一标签组件导入
 import UnifiedTag from "../common/UnifiedTag.vue";
 
+// 数据导入
+import showCardsData from "../../data/show-cards.json";
+
 // ==================== 组件属性定义 ====================
 
 /**
@@ -78,109 +81,32 @@ interface ThemeImages {
  * 展示卡片数据接口
  */
 interface ShowCard {
+  id: string;
   name: string;
   tags: TagConfig[];
   description: string;
   images?: (string | ThemeImages)[];
   links: LinkConfig[][];
+  deprecated?: boolean;
+  deprecatedReason?: string;
 }
 
 // ==================== 展示案例数据 ====================
 
 /**
  * 机器人实例展示数据
- * 包含各平台上运行的法欧莉机器人实例
+ * 从外部JSON文件加载，支持主题切换和灵活配置
  */
-const componentCards: ShowCard[] = [
-  {
-    name: "QQ频道法欧莉",
-    tags: [
-      {name: "QQ频道", type: "info"},
-      {name: "BOT实例", type: "info"},
-      {name: "法欧莉", type: "success"}
-    ],
-    description: "<p>法欧莉，占领QQ频道！</p><p>快使用QQ扫描下面的图片把法欧莉添加到你的频道中吧~</p>",
-    images: [
-      {
-        light: "img/fol_mk2_guild_light.jpg",
-        dark: "img/fol_mk2_guild_dark.jpg"
-      }
-    ],
-    links: [
-      [{
-        name: "点击邀请法欧莉",
-        href: "https://qun.qq.com/qunpro/robot/share?robot_appid=102145654",
-        type: "info"
-      }],
-    ]
-  },
-  {
-    name: "QQ群法欧莉",
-    tags: [
-      {name: "QQ群", type: "info"},
-      {name: "BOT实例", type: "info"},
-      {name: "法欧莉", type: "success"}
-    ],
-    description: "<p>法欧莉，占领QQ群！</p><p>快使用QQ扫描下面的图片把法欧莉添加到你的群中吧~</p>",
-    images: [
-      {
-        light: "img/fol_mk2_qq_light.jpg",
-        dark: "img/fol_mk2_qq_dark.jpg"
-      }
-    ],
-    links: [
-      [{
-        name: "点击邀请法欧莉",
-        href: "https://bot.q.qq.com/s/16jtuq1vh?id=102145654",
-        type: "info"
-      }],
-    ]
-  },
-  {
-    name: "KOOK法欧莉",
-    tags: [
-      {name: "KOOK", type: "info"},
-      {name: "BOT实例", type: "info"},
-      {name: "法欧莉", type: "success"}
-    ],
-    description: `
-      <p>法欧莉，占领KOOK！</p>
-      <p>快点击下方的按钮把法欧莉添加到你的KOOK中吧~</p>
-    `,
-    links: [
-      [{
-        name: "点击邀请法欧莉",
-        href: "https://www.kookapp.cn/app/oauth2/authorize?id=10250&permissions=536870911&client_id=jqdlyHK85xe1i5Bo&redirect_uri=&scope=bot",
-        type: "info"
-      }]
-    ]
-  },
-
-  // 注释掉的大别野法欧莉实例（已停用）
-  // {
-  //   name: "大别野法欧莉",
-  //   tags: [
-  //     { name: "大别野", type: "info" }, 
-  //     { name: "BOT实例", type: "info" }, 
-  //     { name: "法欧莉", type: "success" }
-  //   ],
-  //   description: `
-  //     <p>法欧莉，占领大别野！</p>
-  //     <p>快扫描下方的二维码添加大别野、寻找法欧莉并将她添加到你的大别野中吧~</p>
-  //     <p>当然，直接去机器人市场也可以遇到她喔！</p>
-  //   `,
-  //   images: [
-  //     "img/villa-forliy-qrcode.png"
-  //   ],
-  //   links: [
-  //     [{ 
-  //       name: "点击进入大别野", 
-  //       href: "https://dby.miyoushe.com/chat/6272/113235", 
-  //       type: "info" 
-  //     }]
-  //   ]
-  // }
-];
+const componentCards = computed<ShowCard[]>(() => {
+  // 合并活跃卡片和已废弃卡片（如果需要显示的话）
+  const allCards = [...showCardsData.cards];
+  
+  // 可以根据需要决定是否显示已废弃的卡片
+  // 目前只显示活跃的卡片，如需显示废弃卡片可以取消下面的注释
+  // allCards.push(...showCardsData.deprecatedCards);
+  
+  return allCards as ShowCard[];
+});
 
 </script>
 
