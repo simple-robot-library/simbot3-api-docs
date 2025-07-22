@@ -125,6 +125,7 @@ function Shield(props: ShieldConfig) {
     component: NImage,
     props: {
       previewDisabled: props.previewDisabled ?? true,
+      lazy: true,
       ...props,
     }
   };
