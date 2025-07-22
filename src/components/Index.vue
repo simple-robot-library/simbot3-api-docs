@@ -1,6 +1,6 @@
 <template>
   <n-config-provider :theme="theme">
-    <div id="center-body">
+    <div id="center-body" :data-theme="theme ? 'dark' : 'light'">
       <n-layout position="absolute">
         <n-layout-header bordered>
           <HomeHead @theme-active-change="onThemeActiveChange" :init-theme-active-value="initThemeActiveValue"/>
@@ -39,7 +39,7 @@
                   </n-card>
                   <n-card embedded :bordered="false">
                     <n-collapse-item name="作品展示">
-                      <ShowCards/>
+                      <ShowCards :theme="theme" />
                       <template #header>
                         <n-divider title-placement="left" style="user-select: none">
                           <n-text strong style="font-size: 19px" class="sub-text">作品展示</n-text>

@@ -19,10 +19,13 @@
           </n-image-group>
 
           <n-space size="small">
-            <component v-for="{ component, props } in card.tags"
-                       v-bind="props"
-                       :is="component"
-                       v-html="props.name" />
+            <UnifiedTag 
+              v-for="tag in card.tags" 
+              :key="tag.name"
+              :name="tag.name"
+              :type="tag.type"
+              :allow-html="true"
+            />
           </n-space>
 
 
@@ -54,7 +57,10 @@
  */
 
 // Naive UI 组件导入
-import {NA, NButton, NCard, NGi, NGrid, NImage, NImageGroup, NP, NSpace, NTag} from "naive-ui";
+import {NA, NButton, NCard, NGi, NGrid, NImage, NImageGroup, NP, NSpace} from "naive-ui";
+
+// 统一标签组件导入
+import UnifiedTag from "./common/UnifiedTag.vue";
 
 // ==================== 类型定义 ====================
 
@@ -91,7 +97,7 @@ interface LinkConfig {
  */
 interface ComponentCard {
   name: string;
-  tags: ReturnType<typeof Tag>[];
+  tags: TagConfig[];
   shields: ReturnType<typeof Shield>[];
   description: string;
   links: LinkConfig[][];
@@ -100,21 +106,6 @@ interface ComponentCard {
 
 // ==================== 辅助函数 ====================
 
-/**
- * 创建标签组件配置
- * @param props - 标签属性配置
- * @returns 标签组件配置对象
- */
-function Tag(props: TagConfig) {
-  return {
-    component: NTag,
-    props: {
-      round: props.round ?? true,
-      size: props.size ?? 'small',
-      ...props
-    }
-  };
-}
 
 /**
  * 创建徽章组件配置
@@ -134,22 +125,22 @@ function Shield(props: ShieldConfig) {
 // ==================== 预定义标签 ====================
 
 /** 官方标签 - 标识官方维护的组件 */
-const officialTag = Tag({ name: 'Official', type: 'info' });
+const officialTag: TagConfig = { name: 'Official', type: 'info' };
 
 /** 核心标签 - 标识核心库组件 */
-const coreTag = Tag({ name: '核心', type: 'info' });
+const coreTag: TagConfig = { name: '核心', type: 'info' };
 
 /** 组件标签 - 标识组件库类型 */
-const componentTag = Tag({ name: "组件", type: "success" });
+const componentTag: TagConfig = { name: "组件", type: "success" };
 
 /** 开发中标签 - 标识正在开发的组件 */
-const WIPTag = Tag({ name: '<b>🚧WIP</b>', type: 'warning' });
+const WIPTag: TagConfig = { name: '<b>🚧WIP</b>', type: 'warning' };
 
 /** 期待协助标签 - 标识需要社区帮助的组件 */
-const helpWanted = Tag({ name: '<b>🤝期待协助</b>', type: 'success' });
+const helpWanted: TagConfig = { name: '<b>🤝期待协助</b>', type: 'success' };
 
 /** 已废弃标签 - 标识不再维护的组件 */
-const deadTag = Tag({ name: '<b>💀阵亡</b>', type: 'error' });
+const deadTag: TagConfig = { name: '<b>💀阵亡</b>', type: 'error' };
 
 const componentCards: ComponentCard[] = [
   {

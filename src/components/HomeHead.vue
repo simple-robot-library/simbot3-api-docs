@@ -1,9 +1,9 @@
 <template>
   <n-card embedded
           :bordered="false">
-    <n-page-header subtitle="探寻你的梦中情档">
+    <n-page-header subtitle="探寻你的梦中情档" style="user-select: none;">
       <template #title>
-        <n-text style="font-size: 24px;" class="title">Simple Robot</n-text>
+        <n-text style="font-size: 24px; user-select: none;" class="title">Simple Robot</n-text>
       </template>
 
       <n-menu v-model:value="menuActiveKey"
@@ -20,6 +20,7 @@
             :src="logoSvg"
             color="FFFFFF00"
             :img-props="{draggable: false}"
+            style="user-select: none;"
         />
       </template>
       <template #extra>

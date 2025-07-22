@@ -4,8 +4,48 @@
  * 展示基于Simple Robot框架开发的实际机器人应用案例
  */
 
+// Vue 核心功能导入
+import {computed} from "vue";
+
 // Naive UI 组件导入
-import {NA, NButton, NCard, NGi, NGrid, NImage, NImageGroup, NP, NSpace, NTag} from "naive-ui";
+import {NA, NButton, NCard, NGi, NGrid, NImage, NImageGroup, NP, NSpace} from "naive-ui";
+
+// 统一标签组件导入
+import UnifiedTag from "../common/UnifiedTag.vue";
+
+// ==================== 组件属性定义 ====================
+
+/**
+ * 组件属性接口
+ */
+interface Props {
+  theme?: boolean;
+}
+
+/**
+ * 组件属性定义
+ */
+const props = withDefaults(defineProps<Props>(), {
+  theme: false
+});
+
+/**
+ * 当前主题激活状态
+ * 响应式引用，用于跟踪当前主题状态
+ */
+const themeActive = computed(() => props.theme);
+
+/**
+ * 根据主题状态解析图片路径
+ * @param image - 图片配置，可以是字符串或主题图片对象
+ * @returns 解析后的图片路径
+ */
+function resolveImage(image: string | ThemeImages): string {
+  if (typeof image === 'string') {
+    return image;
+  }
+  return themeActive.value ? image.dark : image.light;
+}
 
 // ==================== 类型定义 ====================
 
@@ -27,13 +67,21 @@ interface LinkConfig {
 }
 
 /**
+ * 主题图片配置接口
+ */
+interface ThemeImages {
+  light: string;
+  dark: string;
+}
+
+/**
  * 展示卡片数据接口
  */
 interface ShowCard {
   name: string;
   tags: TagConfig[];
   description: string;
-  images?: string[];
+  images?: (string | ThemeImages)[];
   links: LinkConfig[][];
 }
 
@@ -47,42 +95,67 @@ const componentCards: ShowCard[] = [
   {
     name: "QQ频道法欧莉",
     tags: [
-      { name: "QQ频道", type: "info" }, 
-      { name: "BOT实例", type: "info" }, 
-      { name: "法欧莉", type: "success" }
+      {name: "QQ频道", type: "info"},
+      {name: "BOT实例", type: "info"},
+      {name: "法欧莉", type: "success"}
     ],
     description: "<p>法欧莉，占领QQ频道！</p><p>快使用QQ扫描下面的图片把法欧莉添加到你的频道中吧~</p>",
     images: [
-      "img/qq-guild-forliy-qrcode.jpg"
+      {
+        light: "img/fol_mk2_guild_light.jpg",
+        dark: "img/fol_mk2_guild_dark.jpg"
+      }
     ],
     links: [
-      [{ 
-        name: "点击邀请法欧莉", 
-        href: "https://qun.qq.com/qunpro/robot/share?robot_appid=101986850", 
-        type: "info" 
+      [{
+        name: "点击邀请法欧莉",
+        href: "https://qun.qq.com/qunpro/robot/share?robot_appid=102145654",
+        type: "info"
+      }],
+    ]
+  },
+  {
+    name: "QQ群法欧莉",
+    tags: [
+      {name: "QQ群", type: "info"},
+      {name: "BOT实例", type: "info"},
+      {name: "法欧莉", type: "success"}
+    ],
+    description: "<p>法欧莉，占领QQ群！</p><p>快使用QQ扫描下面的图片把法欧莉添加到你的群中吧~</p>",
+    images: [
+      {
+        light: "img/fol_mk2_qq_light.jpg",
+        dark: "img/fol_mk2_qq_dark.jpg"
+      }
+    ],
+    links: [
+      [{
+        name: "点击邀请法欧莉",
+        href: "https://bot.q.qq.com/s/16jtuq1vh?id=102145654",
+        type: "info"
       }],
     ]
   },
   {
     name: "KOOK法欧莉",
     tags: [
-      { name: "KOOK", type: "info" }, 
-      { name: "BOT实例", type: "info" }, 
-      { name: "法欧莉", type: "success" }
+      {name: "KOOK", type: "info"},
+      {name: "BOT实例", type: "info"},
+      {name: "法欧莉", type: "success"}
     ],
     description: `
       <p>法欧莉，占领KOOK！</p>
       <p>快点击下方的按钮把法欧莉添加到你的KOOK中吧~</p>
     `,
     links: [
-      [{ 
-        name: "点击邀请法欧莉", 
-        href: "https://www.kookapp.cn/app/oauth2/authorize?id=10250&permissions=536870911&client_id=jqdlyHK85xe1i5Bo&redirect_uri=&scope=bot", 
-        type: "info" 
+      [{
+        name: "点击邀请法欧莉",
+        href: "https://www.kookapp.cn/app/oauth2/authorize?id=10250&permissions=536870911&client_id=jqdlyHK85xe1i5Bo&redirect_uri=&scope=bot",
+        type: "info"
       }]
     ]
   },
-  
+
   // 注释掉的大别野法欧莉实例（已停用）
   // {
   //   name: "大别野法欧莉",
@@ -122,16 +195,20 @@ const componentCards: ShowCard[] = [
 
 
           <n-space size="small">
-            <n-tag v-for="componentTag in componentCard.tags" :type="componentTag.type" size="small" round>
-              {{ componentTag.name }}
-            </n-tag>
+            <UnifiedTag
+                v-for="componentTag in componentCard.tags"
+                :key="componentTag.name"
+                :name="componentTag.name"
+                :type="componentTag.type"
+            />
           </n-space>
 
           <n-p v-html="componentCard.description"></n-p>
 
           <n-image-group show-toolbar-tooltip show-toolbar>
             <n-space size="small" align="center">
-              <n-image lazy :preview-src="img" width="200" v-for="img in componentCard.images" :src="img"/>
+              <n-image lazy :preview-src="resolveImage(img)" width="200" v-for="img in componentCard.images"
+                       :src="resolveImage(img)"/>
             </n-space>
           </n-image-group>
 
@@ -405,34 +482,34 @@ const componentCards: ShowCard[] = [
   .show-cards-container {
     padding: var(--spacing-sm);
   }
-  
+
   :deep(.n-grid) {
     gap: var(--spacing-md);
   }
-  
+
   :deep(.n-card .n-card-header) {
     padding: var(--spacing-lg);
   }
-  
+
   :deep(.n-card .n-card__content) {
     padding: var(--spacing-lg);
     gap: var(--spacing-md);
     min-height: 160px;
   }
-  
+
   :deep(.n-card .n-card__action) {
     padding: var(--spacing-md) var(--spacing-lg);
   }
-  
+
   :deep(.n-card .n-card-header .title) {
     font-size: 1.2em;
   }
-  
+
   :deep(.n-button) {
     font-size: 1em;
     padding: var(--spacing-sm) var(--spacing-lg);
   }
-  
+
   :deep(.n-image) {
     max-width: 100%;
   }
@@ -446,7 +523,7 @@ const componentCards: ShowCard[] = [
   :deep(.n-card:hover) {
     transform: translateY(-4px) scale(1.01);
   }
-  
+
   :deep(.n-card .n-card-header .title) {
     font-size: 1.3em;
   }
@@ -460,11 +537,11 @@ const componentCards: ShowCard[] = [
   :deep(.n-card:hover) {
     transform: translateY(-8px) scale(1.03);
   }
-  
+
   :deep(.n-card .n-card-header .title) {
     font-size: 1.5em;
   }
-  
+
   :deep(.n-button) {
     font-size: 1.1em;
   }
@@ -481,9 +558,17 @@ const componentCards: ShowCard[] = [
   animation-fill-mode: both;
 }
 
-:deep(.n-grid-item:nth-child(1)) { animation-delay: 0.2s; }
-:deep(.n-grid-item:nth-child(2)) { animation-delay: 0.4s; }
-:deep(.n-grid-item:nth-child(3)) { animation-delay: 0.6s; }
+:deep(.n-grid-item:nth-child(1)) {
+  animation-delay: 0.2s;
+}
+
+:deep(.n-grid-item:nth-child(2)) {
+  animation-delay: 0.4s;
+}
+
+:deep(.n-grid-item:nth-child(3)) {
+  animation-delay: 0.6s;
+}
 
 @keyframes fadeInScale {
   from {
@@ -505,9 +590,17 @@ const componentCards: ShowCard[] = [
   animation-fill-mode: both;
 }
 
-:deep(.n-tag:nth-child(1)) { animation-delay: 0.1s; }
-:deep(.n-tag:nth-child(2)) { animation-delay: 0.2s; }
-:deep(.n-tag:nth-child(3)) { animation-delay: 0.3s; }
+:deep(.n-tag:nth-child(1)) {
+  animation-delay: 0.1s;
+}
+
+:deep(.n-tag:nth-child(2)) {
+  animation-delay: 0.2s;
+}
+
+:deep(.n-tag:nth-child(3)) {
+  animation-delay: 0.3s;
+}
 
 @keyframes slideInRight {
   from {
@@ -535,7 +628,7 @@ const componentCards: ShowCard[] = [
     transition: none !important;
     animation: none !important;
   }
-  
+
   :deep(.n-card:hover),
   :deep(.n-button:hover),
   :deep(.n-image:hover),
