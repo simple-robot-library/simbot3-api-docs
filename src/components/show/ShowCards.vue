@@ -133,8 +133,29 @@ const componentCards = computed<ShowCard[]>(() => {
 
           <n-image-group show-toolbar-tooltip show-toolbar>
             <n-space size="small" align="center">
-              <n-image lazy :preview-src="resolveImage(img)" width="200" v-for="img in componentCard.images"
-                       :src="resolveImage(img)"/>
+              <div v-for="img in componentCard.images" class="theme-image-container" :key="typeof img === 'string' ? img : img.light">
+                <!-- 如果是字符串图片（无主题变化），直接显示 -->
+                <n-image v-if="typeof img === 'string'" lazy :preview-src="img" width="200" :src="img"/>
+                <!-- 如果是主题图片对象，显示带过渡效果的双图片 -->
+                <div v-else class="theme-image-wrapper">
+                  <n-image 
+                    lazy 
+                    :preview-src="img.light" 
+                    width="200" 
+                    :src="img.light"
+                    class="theme-image light-image"
+                    :class="{ 'active': !themeActive }"
+                  />
+                  <n-image 
+                    lazy 
+                    :preview-src="img.dark" 
+                    width="200" 
+                    :src="img.dark"
+                    class="theme-image dark-image"
+                    :class="{ 'active': themeActive }"
+                  />
+                </div>
+              </div>
             </n-space>
           </n-image-group>
 
@@ -346,7 +367,7 @@ const componentCards = computed<ShowCard[]>(() => {
 
 :deep(.n-image img) {
   border-radius: var(--border-radius-lg);
-  transition: transform var(--transition-normal);
+  transition: transform var(--transition-normal), opacity var(--transition-normal);
 }
 
 /* ==================== 按钮样式 ==================== */
@@ -593,5 +614,56 @@ const componentCards = computed<ShowCard[]>(() => {
   100% {
     background-position: 200% 0;
   }
+}
+
+/* ==================== 主题图片过渡效果 ==================== */
+
+/**
+ * 主题图片容器样式
+ * 支持主题切换的图片容器
+ */
+.theme-image-container {
+  display: inline-block;
+  position: relative;
+}
+
+/**
+ * 主题图片包装器样式
+ * 用于叠加显示明暗主题图片
+ */
+.theme-image-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 200px;
+  height: auto;
+}
+
+/**
+ * 主题图片样式
+ * 明暗主题图片的基础样式和过渡效果
+ */
+:deep(.theme-image) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
+  width: 100%;
+  height: 100%;
+}
+
+/**
+ * 第一个主题图片（用于确定容器尺寸）
+ */
+:deep(.theme-image:first-child) {
+  position: relative;
+}
+
+/**
+ * 激活状态的主题图片
+ * 显示当前主题对应的图片
+ */
+:deep(.theme-image.active) {
+  opacity: 1;
 }
 </style>
