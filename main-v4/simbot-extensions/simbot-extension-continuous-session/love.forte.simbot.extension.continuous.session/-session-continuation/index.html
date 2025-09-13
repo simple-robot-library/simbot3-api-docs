@@ -64,7 +64,7 @@
             </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
         </button>
         <div class="navigation-controls--break ui-kit_mobile-only"></div>
-        <div class="library-version" id="library-version">4.13.0
+        <div class="library-version" id="library-version">4.14.0
         </div>
         <div class="navigation-controls">
         <div class="filter-section filter-section_loading" id="filter-section">
@@ -118,14 +118,74 @@
   <div class="breadcrumbs"><a href="../../index.html">simbot-extension-continuous-session</a><span class="delimiter">/</span><a href="../index.html">love.forte.simbot.extension.continuous.session</a><span class="delimiter">/</span><span class="current">SessionContinuation</span></div>
   <div class="cover ">
     <h1 class="cover"><span>Session</span><wbr><span><span>Continuation</span></span></h1>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-extensions:simbot-extension-continuous-session/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="index.html">SessionContinuation</a><span class="token operator">&lt;</span><span class="token keyword">out </span><a href="index.html">T</a><span class="token punctuation">, </span><span class="token keyword">in </span><a href="index.html">R</a><span class="token operator">&gt;</span><span class="clearfix"><span class="floating-right">(<a href="https://github.com/simple-robot/simpler-robot/tree/dev/main/simbot-extensions/simbot-extension-continuous-session/src/commonMain/kotlin/love/forte/simbot/extension/continuous/session/ContinuousSession.kt#L232">source</a>)</span></span></div><p class="paragraph"><a href="../-continuous-session-receiver/await.html">ContinuousSessionReceiver.await</a> 的返回值类型， 可用来获取到本次等待到的 <a href="../-continuous-session-provider/push.html">推送</a> 结果， 并向其恢复一个结果或异常。</p><p class="paragraph"><a href="index.html">SessionContinuation</a> 的使用方式类似 <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.coroutines/-continuation/index.html">Continuation</a>，在收到 <a href="index.html">SessionContinuation</a> 时， 应当尽可能快速地通过 <a href="resume.html">resume</a> 或 <a href="resume-with-exception.html">resumeWithException</a> 来恢复 <a href="../-continuous-session-provider/push.html">推送</a> 处， 并应当尽可能保证能够调用 <a href="resume.html">resume</a> 或 <a href="resume-with-exception.html">resumeWithException</a> 一次。</p></div></div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-extensions:simbot-extension-continuous-session/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="index.html">SessionContinuation</a><span class="token operator">&lt;</span><a href="index.html">C</a><span class="token punctuation">, </span><span class="token keyword">out </span><a href="index.html">T</a><span class="token punctuation">, </span><span class="token keyword">in </span><a href="index.html">R</a><span class="token operator">&gt;</span> : <a href="../-continuous-session-receiver/-received/index.html">ContinuousSessionReceiver.Received</a><span class="token operator">&lt;</span><a href="index.html">C</a><span class="token punctuation">, </span><a href="index.html">T</a><span class="token operator">&gt; </span><span class="clearfix"><span class="floating-right">(<a href="https://github.com/simple-robot/simpler-robot/tree/dev/main/simbot-extensions/simbot-extension-continuous-session/src/commonMain/kotlin/love/forte/simbot/extension/continuous/session/ContinuousSession.kt#L339">source</a>)</span></span></div><p class="paragraph"><a href="../-continuous-session-receiver/await.html">ContinuousSessionReceiver.await</a> 的返回值类型， 可用来获取到本次等待到的 <a href="../-continuous-session-provider/push.html">推送</a> 结果， 并向其恢复一个结果或异常。</p><p class="paragraph"><a href="index.html">SessionContinuation</a> 的使用方式类似 <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.coroutines/-continuation/index.html">Continuation</a>，在收到 <a href="index.html">SessionContinuation</a> 时， 应当尽可能快速地通过 <a href="resume.html">resume</a> 或 <a href="resume-with-exception.html">resumeWithException</a> 来恢复 <a href="../-continuous-session-provider/push.html">推送</a> 处， 并应当尽可能保证能够调用 <a href="resume.html">resume</a> 或 <a href="resume-with-exception.html">resumeWithException</a> 一次。</p></div></div>
   </div>
   <div class="tabbedcontent">
     <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
     <div class="tabs-section-body">
       <div data-togglable="PROPERTY">
         <h2 class="">Properties</h2>
-        <div class="table"><a data-name="-1244623383%2FProperties%2F-586792589" anchor-label="value" id="-1244623383%2FProperties%2F-586792589" data-filterable-set=":simbot-extensions:simbot-extension-continuous-session/commonMain"></a>
+        <div class="table"><a data-name="820502571%2FProperties%2F-586792589" anchor-label="context" id="820502571%2FProperties%2F-586792589" data-filterable-set=":simbot-extensions:simbot-extension-continuous-session/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-extensions:simbot-extension-continuous-session/commonMain" data-filterable-set=":simbot-extensions:simbot-extension-continuous-session/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="context.html"><span><span>context</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="820502571%2FProperties%2F-586792589"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-extensions:simbot-extension-continuous-session/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="context.html">context</a><span class="token operator">: </span><a href="index.html">C</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1292543312%2FProperties%2F-586792589" anchor-label="isActive" id="1292543312%2FProperties%2F-586792589" data-filterable-set=":simbot-extensions:simbot-extension-continuous-session/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-extensions:simbot-extension-continuous-session/commonMain" data-filterable-set=":simbot-extensions:simbot-extension-continuous-session/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-active.html"><span>is</span><wbr><span><span>Active</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1292543312%2FProperties%2F-586792589"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-extensions:simbot-extension-continuous-session/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">val </span><a href="is-active.html">isActive</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1707294957%2FProperties%2F-586792589" anchor-label="isCancelled" id="-1707294957%2FProperties%2F-586792589" data-filterable-set=":simbot-extensions:simbot-extension-continuous-session/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-extensions:simbot-extension-continuous-session/commonMain" data-filterable-set=":simbot-extensions:simbot-extension-continuous-session/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-cancelled.html"><span>is</span><wbr><span><span>Cancelled</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1707294957%2FProperties%2F-586792589"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-extensions:simbot-extension-continuous-session/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">val </span><a href="is-cancelled.html">isCancelled</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1841078105%2FProperties%2F-586792589" anchor-label="isCompleted" id="1841078105%2FProperties%2F-586792589" data-filterable-set=":simbot-extensions:simbot-extension-continuous-session/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-extensions:simbot-extension-continuous-session/commonMain" data-filterable-set=":simbot-extensions:simbot-extension-continuous-session/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-completed.html"><span>is</span><wbr><span><span>Completed</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1841078105%2FProperties%2F-586792589"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-extensions:simbot-extension-continuous-session/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">val </span><a href="is-completed.html">isCompleted</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1244623383%2FProperties%2F-586792589" anchor-label="value" id="-1244623383%2FProperties%2F-586792589" data-filterable-set=":simbot-extensions:simbot-extension-continuous-session/commonMain"></a>
           <div class="table-row" data-filterable-current=":simbot-extensions:simbot-extension-continuous-session/commonMain" data-filterable-set=":simbot-extensions:simbot-extension-continuous-session/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
@@ -135,7 +195,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-extensions:simbot-extension-continuous-session/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">val </span><a href="value.html">value</a><span class="token operator">: </span><a href="index.html">T</a></div><div class="brief "><p class="paragraph">获取本次接收到的 <a href="../-continuous-session-provider/push.html">ContinuousSessionProvider.push</a> 结果。</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-extensions:simbot-extension-continuous-session/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="value.html">value</a><span class="token operator">: </span><a href="index.html">T</a></div><div class="brief "><p class="paragraph">获取本次接收到的 <a href="../-continuous-session-provider/push.html">ContinuousSessionProvider.push</a> 结果。</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -170,6 +230,40 @@
               <div>
                 <div class="title">
                   <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-extensions:simbot-extension-continuous-session/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="resume-with-exception.html"><span class="token function">resumeWithException</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">cause<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-throwable/index.html">Throwable</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">响应恢复异常 <a href="resume-with-exception.html">cause</a> 到本次接收到的 <a href="../-continuous-session-provider/push.html">ContinuousSessionProvider.push</a>。 类似于 <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.coroutines/index.html">Continuation.resumeWithException</a>。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Inherited functions</h2>
+        <div class="table"><a data-name="307283534%2FFunctions%2F-586792589" anchor-label="component1" id="307283534%2FFunctions%2F-586792589" data-filterable-set=":simbot-extensions:simbot-extension-continuous-session/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-extensions:simbot-extension-continuous-session/commonMain" data-filterable-set=":simbot-extensions:simbot-extension-continuous-session/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-continuous-session-receiver/-received/component1.html"><span><span>component1</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="307283534%2FFunctions%2F-586792589"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-extensions:simbot-extension-continuous-session/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">operator </span><span class="token keyword">fun </span><a href="../-continuous-session-receiver/-received/component1.html"><span class="token function">component1</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">C</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="338303341%2FFunctions%2F-586792589" anchor-label="component2" id="338303341%2FFunctions%2F-586792589" data-filterable-set=":simbot-extensions:simbot-extension-continuous-session/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-extensions:simbot-extension-continuous-session/commonMain" data-filterable-set=":simbot-extensions:simbot-extension-continuous-session/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-continuous-session-receiver/-received/component2.html"><span><span>component2</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="338303341%2FFunctions%2F-586792589"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-extensions:simbot-extension-continuous-session/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">operator </span><span class="token keyword">fun </span><a href="../-continuous-session-receiver/-received/component2.html"><span class="token function">component2</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">T</a></div></div></div>
                 </div>
               </div>
             </div>
