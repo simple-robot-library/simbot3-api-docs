@@ -1,0 +1,144 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>loop</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">    <!-- 百度统计 -->
+    <!--suppress ES6ConvertVarToLetConst -->
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            const hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?045f67a122223db9432c7856fc942fad";
+            const s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1JWL2DDTB4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-1JWL2DDTB4');
+    </script>
+<script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+      if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      } else {
+        const savedDarkMode = JSON.parse(storage)
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/safe-local-storage_blocking.js"></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../ui-kit/ui-kit.min.js" defer></script>
+<link href="../../../images/logo-icon.svg">
+<link href="../../../images/logo-icon-light.svg">
+<link href="../../../styles/kdoc-style.css" rel="Stylesheet"></head>
+<body>
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+<a class="library-name--link" href="../../../index.html" tabindex="1">
+                    Simple Robot
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">5.0.0-Preview1-SNAPSHOT
+        </div>
+        <div class="navigation-controls">
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector common-like" data-active="" aria-pressed="true" data-filter=":simbot-commons:simbot-common-stage-loop/commonMain">common</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option common-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":simbot-commons:simbot-common-stage-loop/commonMain" data-filter=":simbot-commons:simbot-common-stage-loop/commonMain">
+                                <span class="checkbox--icon"></span>
+                                common
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </ul>
+                <a class="navigation-controls--btn navigation-controls--btn_homepage" id="homepage-link" href="https://github.com/simple-robot/simpler-robot"></a>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config="{&quot;defaultSize&quot;: 280, &quot;minSize&quot;: 200, &quot;maxSize&quot;: 400}">
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
+                            <span>
+                                    Simple Robot
+                            </span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
+<div class="main-content" data-page-type="member" id="content" pageids="simbot-common-stage-loop::love.forte.simbot.common.stageloop//loop/love.forte.simbot.common.stageloop.StageLoop[TypeParam(bounds=[love.forte.simbot.common.stageloop.Stage[^]])]#kotlin.Function1[TypeParam(bounds=[love.forte.simbot.common.stageloop.Stage[^]])?,kotlin.Boolean]#kotlin.Function1[kotlin.Throwable,kotlin.Unit]/PointingToDeclaration//-2084117088">
+  <div class="breadcrumbs"><a href="../index.html">simbot-common-stage-loop</a><span class="delimiter">/</span><a href="index.html">love.forte.simbot.common.stageloop</a><span class="delimiter">/</span><span class="current">loop</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>loop</span></span></h1>
+  </div>
+  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-commons:simbot-common-stage-loop/commonMain"><div class="symbol monospace"><span class="token keyword">inline suspend </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="loop.html">S</a><span class="token operator"> : </span><a href="-stage/index.html">Stage</a><span class="token operator">&lt;</span><a href="loop.html">S</a><span class="token operator">&gt;</span><span class="token operator">&gt; </span><a href="-stage-loop/index.html">StageLoop</a><span class="token operator">&lt;</span><a href="loop.html">S</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="loop.html"><span class="token function">loop</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">crossinline </span>condition<span class="token operator">: </span><span class="token punctuation">(</span>next<span class="token operator">: </span><a href="loop.html">S</a><span class="token operator">?</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span>{ next -&gt; next != null }<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">crossinline </span>exceptionHandle<span class="token operator">: </span><span class="token punctuation">(</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-throwable/index.html">Throwable</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a><span class="token operator"> = </span>{ e -&gt;
+        throw e
+    }</span></span><span class="token punctuation">)</span><span class="source-link-wrapper"><span class="source-link" data-element-type="source-link">(<a href="https://github.com/simple-robot/simpler-robot/tree/dev/main/simbot-commons/simbot-common-stage-loop/src/commonMain/kotlin/love/forte/simbot/common/stageloop/StageLoops.kt#L39">source</a>)</span></span></div><p class="paragraph">通过提供的 <a href="-stage-loop/index.html">StageLoop</a> 进行循环。</p><h4 class="tableheader">Parameters</h4><div class="table"><div class="table-row table-row_content" data-filterable-current=":simbot-commons:simbot-common-stage-loop/commonMain" data-filterable-set=":simbot-commons:simbot-common-stage-loop/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span><span>condition</span></span></u></div></span></div><div><div class="title"><p class="paragraph">每次循环时的条件判断。默认为 <code class="lang-kotlin">next != null</code>。 可以配合其他条件实现声明周期控制，例如 <code class="lang-kotlin">Job</code></p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">val job: Job = ...<br>stageLoop.loop(condition = { next -&gt; job.isActive &amp;&amp; next != null })</code></pre><span class="copy-tooltip"><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div><span class="copy-icon"></span></span></div></div></div></div></div><div class="table-row table-row_content" data-filterable-current=":simbot-commons:simbot-common-stage-loop/commonMain" data-filterable-set=":simbot-commons:simbot-common-stage-loop/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span>exception</span><wbr><span><span>Handle</span></span></u></div></span></div><div><div class="title"><p class="paragraph">每个阶段循环到并执行时的异常处理器</p></div></div></div></div></div><hr><div class="symbol monospace"><span class="token keyword">inline suspend </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="loop.html">S</a><span class="token operator"> : </span><a href="-state/index.html">State</a><span class="token operator">&lt;</span><a href="loop.html">S</a><span class="token operator">&gt;</span><span class="token operator">&gt; </span><a href="loop.html">S</a><span class="token punctuation">.</span><a href="loop.html"><span class="token function">loop</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">onEach<span class="token operator">: </span><span class="token punctuation">(</span><a href="loop.html">S</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span>{ true }<span class="token punctuation">, </span></span><span class="parameter ">onNext<span class="token operator">: </span><span class="token punctuation">(</span><a href="loop.html">S</a><span class="token operator">?</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="loop.html">S</a><span class="token operator">?</span><span class="token operator"> = </span>{ it }</span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="loop.html">S</a><span class="source-link-wrapper"><span class="source-link" data-element-type="source-link">(<a href="https://github.com/simple-robot/simpler-robot/tree/dev/main/simbot-commons/simbot-common-stage-loop/src/commonMain/kotlin/love/forte/simbot/common/stageloop/States.kt#L46">source</a>)</span></span></div><p class="paragraph">通过指定的 <a href="-state/index.html">State</a> 开启状态循环并直到状态消失。</p><span class="kdoc-tag"><h4 class="">Return</h4><p class="paragraph">当循环结束时的最后一个有效状态，如果没有任何新的状态产生则得到 receiver 自身。</p></span><span class="kdoc-tag"><h4 class="">Author</h4><p class="paragraph">ForteScarlet</p></span><h4 class="tableheader">Parameters</h4><div class="table"><div class="table-row table-row_content" data-filterable-current=":simbot-commons:simbot-common-stage-loop/commonMain" data-filterable-set=":simbot-commons:simbot-common-stage-loop/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span>on</span><wbr><span><span>Each</span></span></u></div></span></div><div><div class="title"><p class="paragraph">每一次循环的状态控制，如果手动中断则 <a href="loop.html">loop</a> 的返回值即为此函数用于判断的参数值。</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">var state = ...<br>while(onEach(state)) {<br>    ...<br>}<br><br>return state</code></pre><span class="copy-tooltip"><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div><span class="copy-icon"></span></span></div><p class="paragraph">默认永远为 <code class="lang-kotlin">true</code> 。</p></div></div></div></div><div class="table-row table-row_content" data-filterable-current=":simbot-commons:simbot-common-stage-loop/commonMain" data-filterable-set=":simbot-commons:simbot-common-stage-loop/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span>on</span><wbr><span><span>Next</span></span></u></div></span></div><div><div class="title"><p class="paragraph">对中间每一次的新状态拦截处理，默认返回被拦截的结果自身。</p></div></div></div></div></div></div></div>
+</div>
+    <div class="footer">
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>© 2024-2026 <a href="https://github.com/simple-robot">Simple Robot</a>. All rights reserved.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
