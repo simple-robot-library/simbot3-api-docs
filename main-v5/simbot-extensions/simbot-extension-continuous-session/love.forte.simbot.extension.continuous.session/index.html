@@ -1,0 +1,628 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>love.forte.simbot.extension.continuous.session</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">    <!-- 百度统计 -->
+    <!--suppress ES6ConvertVarToLetConst -->
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            const hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?045f67a122223db9432c7856fc942fad";
+            const s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1JWL2DDTB4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-1JWL2DDTB4');
+    </script>
+<script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+      if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      } else {
+        const savedDarkMode = JSON.parse(storage)
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/safe-local-storage_blocking.js"></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../ui-kit/ui-kit.min.js" defer></script>
+<link href="../../../images/logo-icon.svg">
+<link href="../../../images/logo-icon-light.svg">
+<link href="../../../styles/kdoc-style.css" rel="Stylesheet"></head>
+<body>
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+<a class="library-name--link" href="../../../index.html" tabindex="1">
+                    Simple Robot
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">5.0.0-Preview1
+        </div>
+        <div class="navigation-controls">
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector common-like" data-active="" aria-pressed="true" data-filter=":simbot-extensions:simbot-extension-continuous-session/commonMain">common</button>
+                <button class="platform-tag platform-selector jvm-like" data-active="" aria-pressed="true" data-filter=":simbot-extensions:simbot-extension-continuous-session/jvmMain">jvm</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option common-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":simbot-extensions:simbot-extension-continuous-session/commonMain" data-filter=":simbot-extensions:simbot-extension-continuous-session/commonMain">
+                                <span class="checkbox--icon"></span>
+                                common
+                            </label>
+                        </li>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":simbot-extensions:simbot-extension-continuous-session/jvmMain" data-filter=":simbot-extensions:simbot-extension-continuous-session/jvmMain">
+                                <span class="checkbox--icon"></span>
+                                jvm
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </ul>
+                <a class="navigation-controls--btn navigation-controls--btn_homepage" id="homepage-link" href="https://github.com/simple-robot/simpler-robot"></a>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config="{&quot;defaultSize&quot;: 280, &quot;minSize&quot;: 200, &quot;maxSize&quot;: 400}">
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
+                            <span>
+                                    Simple Robot
+                            </span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
+<div class="main-content" data-page-type="package" id="content" pageids="simbot-extension-continuous-session::love.forte.simbot.extension.continuous.session////PointingToDeclaration//830487306">
+  <div class="breadcrumbs"><a href="../index.html">simbot-extension-continuous-session</a><span class="delimiter">/</span><span class="current">love.forte.simbot.extension.continuous.session</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Package-level</span></span> <span><span>declarations</span></span></h1>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="TYPE">Types</button><button class="section-tab" data-togglable="FUNCTION,EXTENSION_FUNCTION">Functions</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="TYPE">
+        <h2 class="tableheader">Types</h2>
+        <div class="table"><a data-name="1214029708%2FClasslikes%2F-586792589" anchor-label="AbstractContinuousSessionContext" id="1214029708%2FClasslikes%2F-586792589" data-filterable-set=":simbot-extensions:simbot-extension-continuous-session/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-extensions:simbot-extension-continuous-session/commonMain" data-filterable-set=":simbot-extensions:simbot-extension-continuous-session/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-abstract-continuous-session-context/index.html"><span>Abstract</span><wbr><span>Continuous</span><wbr><span>Session</span><wbr><span><span>Context</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1214029708%2FClasslikes%2F-586792589"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-extensions:simbot-extension-continuous-session/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">class </span><a href="-abstract-continuous-session-context/index.html">AbstractContinuousSessionContext</a><span class="token operator">&lt;</span><a href="-abstract-continuous-session-context/index.html">T</a><span class="token punctuation">, </span><a href="-abstract-continuous-session-context/index.html">R</a><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">coroutineContext<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.coroutines/-coroutine-context/index.html">CoroutineContext</a></span></span><span class="token punctuation">)</span> : <a href="-continuous-session-context/index.html">ContinuousSessionContext</a><span class="token operator">&lt;</span><a href="-abstract-continuous-session-context/index.html">T</a><span class="token punctuation">, </span><a href="-abstract-continuous-session-context/index.html">R</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">针对 <a href="-continuous-session-context/index.html">ContinuousSessionContext</a> 的基础抽象实现类。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="135899137%2FClasslikes%2F-1336402909" anchor-label="AsyncInSession" id="135899137%2FClasslikes%2F-1336402909" data-filterable-set=":simbot-extensions:simbot-extension-continuous-session/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-extensions:simbot-extension-continuous-session/jvmMain" data-filterable-set=":simbot-extensions:simbot-extension-continuous-session/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-async-in-session/index.html"><span>Async</span><wbr><span>In</span><wbr><span><span>Session</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="135899137%2FClasslikes%2F-1336402909"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":simbot-extensions:simbot-extension-continuous-session/jvmMain" data-filterable-set=":simbot-extensions:simbot-extension-continuous-session/jvmMain" data-active="" data-toggle=":simbot-extensions:simbot-extension-continuous-session/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-extensions:simbot-extension-continuous-session/jvmMain"><div class="symbol monospace"><span class="token keyword">fun </span><span class="token keyword">interface </span><a href="-async-in-session/index.html">AsyncInSession</a><span class="token operator">&lt;</span><a href="-async-in-session/index.html">C</a><span class="token punctuation">, </span><a href="-async-in-session/index.html">T</a><span class="token punctuation">, </span><a href="-async-in-session/index.html">R</a><span class="token operator">&gt;</span> : <a href="-in-session/index.html">InSession</a><span class="token operator">&lt;</span><a href="-async-in-session/index.html">C</a><span class="token punctuation">, </span><a href="-async-in-session/index.html">T</a><span class="token punctuation">, </span><a href="-async-in-session/index.html">R</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">以异步的API构造 <a href="-in-session/index.html">InSession</a> 实例。 可通过 <a href="async-in-session.html">InSessions.async</a> 构造。</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1688689198%2FClasslikes%2F-1336402909" anchor-label="BlockInSession" id="-1688689198%2FClasslikes%2F-1336402909" data-filterable-set=":simbot-extensions:simbot-extension-continuous-session/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-extensions:simbot-extension-continuous-session/jvmMain" data-filterable-set=":simbot-extensions:simbot-extension-continuous-session/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-block-in-session/index.html"><span>Block</span><wbr><span>In</span><wbr><span><span>Session</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1688689198%2FClasslikes%2F-1336402909"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":simbot-extensions:simbot-extension-continuous-session/jvmMain" data-filterable-set=":simbot-extensions:simbot-extension-continuous-session/jvmMain" data-active="" data-toggle=":simbot-extensions:simbot-extension-continuous-session/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-extensions:simbot-extension-continuous-session/jvmMain"><div class="symbol monospace"><span class="token keyword">fun </span><span class="token keyword">interface </span><a href="-block-in-session/index.html">BlockInSession</a><span class="token operator">&lt;</span><a href="-block-in-session/index.html">C</a><span class="token punctuation">, </span><a href="-block-in-session/index.html">T</a><span class="token punctuation">, </span><a href="-block-in-session/index.html">R</a><span class="token operator">&gt;</span> : <a href="-in-session/index.html">InSession</a><span class="token operator">&lt;</span><a href="-block-in-session/index.html">C</a><span class="token punctuation">, </span><a href="-block-in-session/index.html">T</a><span class="token punctuation">, </span><a href="-block-in-session/index.html">R</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">以阻塞的API构造 <a href="-in-session/index.html">InSession</a> 实例。 可通过 <a href="block-in-session.html">InSessions.block</a> 构造。</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1235137752%2FClasslikes%2F-586792589" anchor-label="ConflictSessionKeyException" id="1235137752%2FClasslikes%2F-586792589" data-filterable-set=":simbot-extensions:simbot-extension-continuous-session/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-extensions:simbot-extension-continuous-session/commonMain" data-filterable-set=":simbot-extensions:simbot-extension-continuous-session/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-conflict-session-key-exception/index.html"><span>Conflict</span><wbr><span>Session</span><wbr><span>Key</span><wbr><span><span>Exception</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1235137752%2FClasslikes%2F-586792589"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-extensions:simbot-extension-continuous-session/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-conflict-session-key-exception/index.html">ConflictSessionKeyException</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">message<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span> : <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-illegal-argument-exception/index.html">IllegalArgumentException</a></div><div class="brief "><p class="paragraph">冲突的 session key.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="873082533%2FClasslikes%2F-586792589" anchor-label="ContinuousSession" id="873082533%2FClasslikes%2F-586792589" data-filterable-set=":simbot-extensions:simbot-extension-continuous-session/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-extensions:simbot-extension-continuous-session/commonMain" data-filterable-set=":simbot-extensions:simbot-extension-continuous-session/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-continuous-session/index.html"><span>Continuous</span><wbr><span><span>Session</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="873082533%2FClasslikes%2F-586792589"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-extensions:simbot-extension-continuous-session/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-continuous-session/index.html">ContinuousSession</a><span class="token operator">&lt;</span><a href="-continuous-session/index.html">C</a><span class="token punctuation">, </span><a href="-continuous-session/index.html">T</a><span class="token punctuation">, </span><a href="-continuous-session/index.html">R</a><span class="token operator">&gt;</span> : <a href="-continuous-session-provider/index.html">ContinuousSessionProvider</a><span class="token operator">&lt;</span><a href="-continuous-session/index.html">C</a><span class="token punctuation">, </span><a href="-continuous-session/index.html">T</a><span class="token punctuation">, </span><a href="-continuous-session/index.html">R</a><span class="token operator">&gt; </span>, <a href="-continuous-session-receiver/index.html">ContinuousSessionReceiver</a><span class="token operator">&lt;</span><a href="-continuous-session/index.html">C</a><span class="token punctuation">, </span><a href="-continuous-session/index.html">T</a><span class="token punctuation">, </span><a href="-continuous-session/index.html">R</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">组合 <a href="-continuous-session-provider/index.html">ContinuousSessionProvider</a> 和 <a href="-continuous-session-receiver/index.html">ContinuousSessionReceiver</a> 的 <code class="lang-kotlin">session</code> 类型。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-575269746%2FClasslikes%2F-586792589" anchor-label="ContinuousSessionContext" id="-575269746%2FClasslikes%2F-586792589" data-filterable-set=":simbot-extensions:simbot-extension-continuous-session/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-extensions:simbot-extension-continuous-session/commonMain" data-filterable-set=":simbot-extensions:simbot-extension-continuous-session/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-continuous-session-context/index.html"><span>Continuous</span><wbr><span>Session</span><wbr><span><span>Context</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-575269746%2FClasslikes%2F-586792589"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-extensions:simbot-extension-continuous-session/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-continuous-session-context/index.html">ContinuousSessionContext</a><span class="token operator">&lt;</span><a href="-continuous-session-context/index.html">T</a><span class="token punctuation">, </span><a href="-continuous-session-context/index.html">R</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">持续会话(<code class="lang-kotlin">continuous session</code>)管理器， 用于承载一组 <a href="-continuous-session-provider/index.html">ContinuousSessionProvider</a> 和 <a href="-continuous-session-receiver/index.html">ContinuousSessionReceiver</a> 的上下文。用于构建与管理 <code class="lang-kotlin">ContinuousSession</code>。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1942046686%2FClasslikes%2F-586792589" anchor-label="ContinuousSessionKey" id="1942046686%2FClasslikes%2F-586792589" data-filterable-set=":simbot-extensions:simbot-extension-continuous-session/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-extensions:simbot-extension-continuous-session/commonMain" data-filterable-set=":simbot-extensions:simbot-extension-continuous-session/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-continuous-session-key/index.html"><span>Continuous</span><wbr><span>Session</span><wbr><span><span>Key</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1942046686%2FClasslikes%2F-586792589"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-extensions:simbot-extension-continuous-session/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-continuous-session-key/index.html">ContinuousSessionKey</a><span class="token operator">&lt;</span><a href="-continuous-session-key/index.html">C</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">A Key for <a href="-continuous-session/index.html">ContinuousSession</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1582290356%2FClasslikes%2F-586792589" anchor-label="ContinuousSessionProvider" id="1582290356%2FClasslikes%2F-586792589" data-filterable-set=":simbot-extensions:simbot-extension-continuous-session/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-extensions:simbot-extension-continuous-session/commonMain" data-filterable-set=":simbot-extensions:simbot-extension-continuous-session/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-continuous-session-provider/index.html"><span>Continuous</span><wbr><span>Session</span><wbr><span><span>Provider</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1582290356%2FClasslikes%2F-586792589"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-extensions:simbot-extension-continuous-session/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-continuous-session-provider/index.html">ContinuousSessionProvider</a><span class="token operator">&lt;</span><a href="-continuous-session-provider/index.html">C</a><span class="token punctuation">, </span><span class="token keyword">in </span><a href="-continuous-session-provider/index.html">T</a><span class="token punctuation">, </span><span class="token keyword">out </span><a href="-continuous-session-provider/index.html">R</a><span class="token operator">&gt;</span> : <a href="../../../simbot-api/love.forte.simbot.ability/-completion-aware/index.html">CompletionAware</a></div><div class="brief "><p class="paragraph">一组 <code class="lang-kotlin">Session</code> 的元素之一， 用来向 <a href="-continuous-session-receiver/index.html">ContinuousSessionReceiver</a> 推送事件 <a href="-continuous-session-provider/index.html">T</a> 并获悉结果 <a href="-continuous-session-provider/index.html">R</a> 的“供应者”。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1474153334%2FClasslikes%2F-586792589" anchor-label="ContinuousSessionReceiver" id="1474153334%2FClasslikes%2F-586792589" data-filterable-set=":simbot-extensions:simbot-extension-continuous-session/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-extensions:simbot-extension-continuous-session/commonMain" data-filterable-set=":simbot-extensions:simbot-extension-continuous-session/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-continuous-session-receiver/index.html"><span>Continuous</span><wbr><span>Session</span><wbr><span><span>Receiver</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1474153334%2FClasslikes%2F-586792589"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-extensions:simbot-extension-continuous-session/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-continuous-session-receiver/index.html">ContinuousSessionReceiver</a><span class="token operator">&lt;</span><a href="-continuous-session-receiver/index.html">C</a><span class="token punctuation">, </span><span class="token keyword">out </span><a href="-continuous-session-receiver/index.html">T</a><span class="token punctuation">, </span><a href="-continuous-session-receiver/index.html">R</a><span class="token operator">&gt;</span> : <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-coroutine-scope/index.html">CoroutineScope</a></div><div class="brief "><p class="paragraph">一组 <code class="lang-kotlin">Session</code> 的元素之一， 用来在异步中接收 <a href="-continuous-session-provider/index.html">ContinuousSessionProvider</a> 推送的事件 <a href="-continuous-session-receiver/index.html">T</a> 并根据此事件为其返回结果 <a href="-continuous-session-receiver/index.html">R</a>。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2071296810%2FClasslikes%2F-586792589" anchor-label="EventContinuousSessionContext" id="2071296810%2FClasslikes%2F-586792589" data-filterable-set=":simbot-extensions:simbot-extension-continuous-session/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-extensions:simbot-extension-continuous-session/commonMain" data-filterable-set=":simbot-extensions:simbot-extension-continuous-session/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-event-continuous-session-context/index.html"><span>Event</span><wbr><span>Continuous</span><wbr><span>Session</span><wbr><span><span>Context</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2071296810%2FClasslikes%2F-586792589"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-extensions:simbot-extension-continuous-session/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-event-continuous-session-context/index.html">EventContinuousSessionContext</a> : <a href="-continuous-session-context/index.html">ContinuousSessionContext</a><span class="token operator">&lt;</span><a href="../../../simbot-api/love.forte.simbot.event/-event/index.html">Event</a><span class="token punctuation">, </span><a href="../../../simbot-api/love.forte.simbot.event/-event-result/index.html">EventResult</a><span class="token operator">&gt; </span>, <a href="../../../simbot-api/love.forte.simbot.plugin/-plugin/index.html">Plugin</a></div><div class="brief "><p class="paragraph">以事件为中心的 <a href="-continuous-session-context/index.html">ContinuousSessionContext</a> 子类型。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1974216130%2FClasslikes%2F-586792589" anchor-label="EventContinuousSessionContextConfiguration" id="1974216130%2FClasslikes%2F-586792589" data-filterable-set=":simbot-extensions:simbot-extension-continuous-session/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-extensions:simbot-extension-continuous-session/commonMain" data-filterable-set=":simbot-extensions:simbot-extension-continuous-session/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-event-continuous-session-context-configuration/index.html"><span>Event</span><wbr><span>Continuous</span><wbr><span>Session</span><wbr><span>Context</span><wbr><span><span>Configuration</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1974216130%2FClasslikes%2F-586792589"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-extensions:simbot-extension-continuous-session/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-event-continuous-session-context-configuration/index.html">EventContinuousSessionContextConfiguration</a></div><div class="brief "><p class="paragraph"><a href="-event-continuous-session-context/-factory/index.html">EventContinuousSessionContext.Factory</a> 使用的配置类。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1646417147%2FClasslikes%2F-586792589" anchor-label="ExperimentalContinuousSessionAPI" id="1646417147%2FClasslikes%2F-586792589" data-filterable-set=":simbot-extensions:simbot-extension-continuous-session/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-extensions:simbot-extension-continuous-session/commonMain" data-filterable-set=":simbot-extensions:simbot-extension-continuous-session/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-experimental-continuous-session-a-p-i/index.html"><span>Experimental</span><wbr><span>Continuous</span><wbr><span>Session</span><wbr><span><span>API</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1646417147%2FClasslikes%2F-586792589"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-extensions:simbot-extension-continuous-session/commonMain"><div class="symbol monospace"><span class="token keyword">annotation class </span><a href="-experimental-continuous-session-a-p-i/index.html">ExperimentalContinuousSessionAPI</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-762192965%2FClasslikes%2F-586792589" anchor-label="InSession" id="-762192965%2FClasslikes%2F-586792589" data-filterable-set=":simbot-extensions:simbot-extension-continuous-session/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-extensions:simbot-extension-continuous-session/commonMain" data-filterable-set=":simbot-extensions:simbot-extension-continuous-session/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-in-session/index.html"><span>In</span><wbr><span><span>Session</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-762192965%2FClasslikes%2F-586792589"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-extensions:simbot-extension-continuous-session/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><span class="token keyword">interface </span><a href="-in-session/index.html">InSession</a><span class="token operator">&lt;</span><a href="-in-session/index.html">C</a><span class="token punctuation">, </span><a href="-in-session/index.html">T</a><span class="token punctuation">, </span><a href="-in-session/index.html">R</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">使用于 <a href="-continuous-session-context/session.html">ContinuousSessionContext.session</a> 中的 <code class="lang-kotlin">receiver</code> 逻辑函数。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1557238910%2FClasslikes%2F-1336402909" anchor-label="MonoInSession" id="1557238910%2FClasslikes%2F-1336402909" data-filterable-set=":simbot-extensions:simbot-extension-continuous-session/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-extensions:simbot-extension-continuous-session/jvmMain" data-filterable-set=":simbot-extensions:simbot-extension-continuous-session/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-mono-in-session/index.html"><span>Mono</span><wbr><span>In</span><wbr><span><span>Session</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1557238910%2FClasslikes%2F-1336402909"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":simbot-extensions:simbot-extension-continuous-session/jvmMain" data-filterable-set=":simbot-extensions:simbot-extension-continuous-session/jvmMain" data-active="" data-toggle=":simbot-extensions:simbot-extension-continuous-session/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-extensions:simbot-extension-continuous-session/jvmMain"><div class="symbol monospace"><span class="token keyword">fun </span><span class="token keyword">interface </span><a href="-mono-in-session/index.html">MonoInSession</a><span class="token operator">&lt;</span><a href="-mono-in-session/index.html">C</a><span class="token punctuation">, </span><a href="-mono-in-session/index.html">T</a><span class="token punctuation">, </span><a href="-mono-in-session/index.html">R</a><span class="token operator">&gt;</span> : <a href="-in-session/index.html">InSession</a><span class="token operator">&lt;</span><a href="-mono-in-session/index.html">C</a><span class="token punctuation">, </span><a href="-mono-in-session/index.html">T</a><span class="token punctuation">, </span><a href="-mono-in-session/index.html">R</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">以响应式风格 (<span data-unresolved-link="reactor.core.publisher/Mono///PointingToDeclaration/">Mono</span>) 的API构造 <a href="-in-session/index.html">InSession</a> 实例。 可通过 <a href="mono-in-session.html">InSessions.mono</a> 构造。</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-607990007%2FClasslikes%2F-586792589" anchor-label="MultipleAwaitResult" id="-607990007%2FClasslikes%2F-586792589" data-filterable-set=":simbot-extensions:simbot-extension-continuous-session/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-extensions:simbot-extension-continuous-session/commonMain" data-filterable-set=":simbot-extensions:simbot-extension-continuous-session/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-multiple-await-result/index.html"><span>Multiple</span><wbr><span>Await</span><wbr><span><span>Result</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-607990007%2FClasslikes%2F-586792589"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-extensions:simbot-extension-continuous-session/commonMain"><div class="symbol monospace"><span class="token keyword">sealed </span><span class="token keyword">class </span><a href="-multiple-await-result/index.html">MultipleAwaitResult</a><span class="token operator">&lt;</span><a href="-multiple-await-result/index.html">T</a><span class="token operator">&gt;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-790741169%2FClasslikes%2F-586792589" anchor-label="ReplacedBecauseOfConflictSessionKeyException" id="-790741169%2FClasslikes%2F-586792589" data-filterable-set=":simbot-extensions:simbot-extension-continuous-session/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-extensions:simbot-extension-continuous-session/commonMain" data-filterable-set=":simbot-extensions:simbot-extension-continuous-session/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-replaced-because-of-conflict-session-key-exception/index.html"><span>Replaced</span><wbr><span>Because</span><wbr><span>Of</span><wbr><span>Conflict</span><wbr><span>Session</span><wbr><span>Key</span><wbr><span><span>Exception</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-790741169%2FClasslikes%2F-586792589"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-extensions:simbot-extension-continuous-session/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-replaced-because-of-conflict-session-key-exception/index.html">ReplacedBecauseOfConflictSessionKeyException</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">message<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span> : <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-illegal-state-exception/index.html">IllegalStateException</a></div><div class="brief "><p class="paragraph">因出现冲突的 session key 而被替换</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2018770670%2FClasslikes%2F-586792589" anchor-label="SessionAwaitOnFailureException" id="-2018770670%2FClasslikes%2F-586792589" data-filterable-set=":simbot-extensions:simbot-extension-continuous-session/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-extensions:simbot-extension-continuous-session/commonMain" data-filterable-set=":simbot-extensions:simbot-extension-continuous-session/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-session-await-on-failure-exception/index.html"><span>Session</span><wbr><span>Await</span><wbr><span>On</span><wbr><span>Failure</span><wbr><span><span>Exception</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2018770670%2FClasslikes%2F-586792589"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-extensions:simbot-extension-continuous-session/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-session-await-on-failure-exception/index.html">SessionAwaitOnFailureException</a> : <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-illegal-state-exception/index.html">IllegalStateException</a></div><div class="brief "><p class="paragraph">当使用 <a href="-continuous-session-provider/push.html">ContinuousSessionProvider.push</a> 推送成功、 但是在 <a href="-continuous-session-receiver/await.html">ContinuousSessionReceiver.await</a> 过程中出现异常时（例如构造返回给 <code class="lang-kotlin">push</code> 的结果时出现异常） 则此异常会使用 <a href="-session-await-on-failure-exception/index.html">SessionAwaitOnFailureException</a> 进行包装。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1270152857%2FClasslikes%2F-586792589" anchor-label="SessionCompletedWithoutResumeException" id="-1270152857%2FClasslikes%2F-586792589" data-filterable-set=":simbot-extensions:simbot-extension-continuous-session/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-extensions:simbot-extension-continuous-session/commonMain" data-filterable-set=":simbot-extensions:simbot-extension-continuous-session/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-session-completed-without-resume-exception/index.html"><span>Session</span><wbr><span>Completed</span><wbr><span>Without</span><wbr><span>Resume</span><wbr><span><span>Exception</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1270152857%2FClasslikes%2F-586792589"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-extensions:simbot-extension-continuous-session/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-session-completed-without-resume-exception/index.html">SessionCompletedWithoutResumeException</a> : <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-illegal-state-exception/index.html">IllegalStateException</a></div><div class="brief "><p class="paragraph">当 Session 已经结束、但是某个 continuation 并未被恢复时，使用此异常恢复它。 如果 session 的结束伴随着异常，此异常会记录在 <a href="-session-await-on-failure-exception/index.html#-654012527%2FProperties%2F-586792589">cause</a> 中。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="355188543%2FClasslikes%2F-586792589" anchor-label="SessionContinuation" id="355188543%2FClasslikes%2F-586792589" data-filterable-set=":simbot-extensions:simbot-extension-continuous-session/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-extensions:simbot-extension-continuous-session/commonMain" data-filterable-set=":simbot-extensions:simbot-extension-continuous-session/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-session-continuation/index.html"><span>Session</span><wbr><span><span>Continuation</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="355188543%2FClasslikes%2F-586792589"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-extensions:simbot-extension-continuous-session/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-session-continuation/index.html">SessionContinuation</a><span class="token operator">&lt;</span><a href="-session-continuation/index.html">C</a><span class="token punctuation">, </span><span class="token keyword">out </span><a href="-session-continuation/index.html">T</a><span class="token punctuation">, </span><span class="token keyword">in </span><a href="-session-continuation/index.html">R</a><span class="token operator">&gt;</span> : <a href="-continuous-session-receiver/-received/index.html">ContinuousSessionReceiver.Received</a><span class="token operator">&lt;</span><a href="-session-continuation/index.html">C</a><span class="token punctuation">, </span><a href="-session-continuation/index.html">T</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph"><a href="-continuous-session-receiver/await.html">ContinuousSessionReceiver.await</a> 的返回值类型， 可用来获取到本次等待到的 <a href="-continuous-session-provider/push.html">推送</a> 结果， 并向其恢复一个结果或异常。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-313506184%2FClasslikes%2F-586792589" anchor-label="SessionPushOnFailureException" id="-313506184%2FClasslikes%2F-586792589" data-filterable-set=":simbot-extensions:simbot-extension-continuous-session/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-extensions:simbot-extension-continuous-session/commonMain" data-filterable-set=":simbot-extensions:simbot-extension-continuous-session/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-session-push-on-failure-exception/index.html"><span>Session</span><wbr><span>Push</span><wbr><span>On</span><wbr><span>Failure</span><wbr><span><span>Exception</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-313506184%2FClasslikes%2F-586792589"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-extensions:simbot-extension-continuous-session/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-session-push-on-failure-exception/index.html">SessionPushOnFailureException</a> : <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-illegal-state-exception/index.html">IllegalStateException</a></div><div class="brief "><p class="paragraph">当使用 <a href="-continuous-session-provider/push.html">ContinuousSessionProvider.push</a> 推送失败时， 会将异常包装在 <a href="-session-await-on-failure-exception/index.html#-654012527%2FProperties%2F-586792589">SessionPushOnFailureException.cause</a> 中。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-37438918%2FClasslikes%2F-586792589" anchor-label="UnitContinuousSessionKey" id="-37438918%2FClasslikes%2F-586792589" data-filterable-set=":simbot-extensions:simbot-extension-continuous-session/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-extensions:simbot-extension-continuous-session/commonMain" data-filterable-set=":simbot-extensions:simbot-extension-continuous-session/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-unit-continuous-session-key/index.html"><span>Unit</span><wbr><span>Continuous</span><wbr><span>Session</span><wbr><span><span>Key</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-37438918%2FClasslikes%2F-586792589"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-extensions:simbot-extension-continuous-session/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-unit-continuous-session-key/index.html">UnitContinuousSessionKey</a> : <a href="-continuous-session-key/index.html">ContinuousSessionKey</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">A <a href="-continuous-session-key/index.html">ContinuousSessionKey</a> for <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="tableheader">Functions</h2>
+        <div class="table"><a data-name="-1688781985%2FFunctions%2F-1336402909" anchor-label="asyncInSession" id="-1688781985%2FFunctions%2F-1336402909" data-filterable-set=":simbot-extensions:simbot-extension-continuous-session/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-extensions:simbot-extension-continuous-session/jvmMain" data-filterable-set=":simbot-extensions:simbot-extension-continuous-session/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="async-in-session.html"><span>async</span><wbr><span>In</span><wbr><span><span>Session</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1688781985%2FFunctions%2F-1336402909"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":simbot-extensions:simbot-extension-continuous-session/jvmMain" data-filterable-set=":simbot-extensions:simbot-extension-continuous-session/jvmMain" data-active="" data-toggle=":simbot-extensions:simbot-extension-continuous-session/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-extensions:simbot-extension-continuous-session/jvmMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-jvm-name/index.html"><span class="token annotation builtin">JvmName</span></a><span class="token punctuation">(</span><span>name<span class="token operator"> = </span><span class="breakable-word"><span class="token string">"async"</span></span></span><wbr><span class="token punctuation">)</span></div><div class="block"><span class="token annotation builtin">@</span><a href="../../../simbot-commons/simbot-common-annotations/love.forte.simbot.annotations/-api4-j/index.html"><span class="token annotation builtin">Api4J</span></a></div></div><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="async-in-session.html">C</a><span class="token punctuation">, </span><a href="async-in-session.html">T</a><span class="token punctuation">, </span><a href="async-in-session.html">R</a><span class="token operator">&gt; </span><a href="async-in-session.html"><span class="token function">asyncInSession</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">function<span class="token operator">: </span><a href="-async-in-session/index.html">AsyncInSession</a><span class="token operator">&lt;</span><a href="async-in-session.html">C</a><span class="token punctuation">, </span><a href="async-in-session.html">T</a><span class="token punctuation">, </span><a href="async-in-session.html">R</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-in-session/index.html">InSession</a><span class="token operator">&lt;</span><a href="async-in-session.html">C</a><span class="token punctuation">, </span><a href="async-in-session.html">T</a><span class="token punctuation">, </span><a href="async-in-session.html">R</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Java 友好 API，用于构造一个异步风格的 <a href="-in-session/index.html">InSession</a> 实例。</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="965464126%2FFunctions%2F-1336402909" anchor-label="blockInSession" id="965464126%2FFunctions%2F-1336402909" data-filterable-set=":simbot-extensions:simbot-extension-continuous-session/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-extensions:simbot-extension-continuous-session/jvmMain" data-filterable-set=":simbot-extensions:simbot-extension-continuous-session/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="block-in-session.html"><span>block</span><wbr><span>In</span><wbr><span><span>Session</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="965464126%2FFunctions%2F-1336402909"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":simbot-extensions:simbot-extension-continuous-session/jvmMain" data-filterable-set=":simbot-extensions:simbot-extension-continuous-session/jvmMain" data-active="" data-toggle=":simbot-extensions:simbot-extension-continuous-session/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-extensions:simbot-extension-continuous-session/jvmMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-jvm-name/index.html"><span class="token annotation builtin">JvmName</span></a><span class="token punctuation">(</span><span>name<span class="token operator"> = </span><span class="breakable-word"><span class="token string">"block"</span></span></span><wbr><span class="token punctuation">)</span></div><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-jvm-overloads/index.html"><span class="token annotation builtin">JvmOverloads</span></a></div><div class="block"><span class="token annotation builtin">@</span><a href="../../../simbot-commons/simbot-common-annotations/love.forte.simbot.annotations/-api4-j/index.html"><span class="token annotation builtin">Api4J</span></a></div></div><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="block-in-session.html">C</a><span class="token punctuation">, </span><a href="block-in-session.html">T</a><span class="token punctuation">, </span><a href="block-in-session.html">R</a><span class="token operator">&gt; </span><a href="block-in-session.html"><span class="token function">blockInSession</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">context<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.coroutines/-coroutine-context/index.html">CoroutineContext</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">function<span class="token operator">: </span><a href="-block-in-session/index.html">BlockInSession</a><span class="token operator">&lt;</span><a href="block-in-session.html">C</a><span class="token punctuation">, </span><a href="block-in-session.html">T</a><span class="token punctuation">, </span><a href="block-in-session.html">R</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-in-session/index.html">InSession</a><span class="token operator">&lt;</span><a href="block-in-session.html">C</a><span class="token punctuation">, </span><a href="block-in-session.html">T</a><span class="token punctuation">, </span><a href="block-in-session.html">R</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Java 友好 API，用于构造一个阻塞风格的 <a href="-in-session/index.html">InSession</a> 实例。</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-720083164%2FFunctions%2F-586792589" anchor-label="ContinuousSessionContext" id="-720083164%2FFunctions%2F-586792589" data-filterable-set=":simbot-extensions:simbot-extension-continuous-session/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-extensions:simbot-extension-continuous-session/commonMain" data-filterable-set=":simbot-extensions:simbot-extension-continuous-session/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-continuous-session-context.html"><span>Continuous</span><wbr><span>Session</span><wbr><span><span>Context</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-720083164%2FFunctions%2F-586792589"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-extensions:simbot-extension-continuous-session/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-jvm-name/index.html"><span class="token annotation builtin">JvmName</span></a><span class="token punctuation">(</span><span>name<span class="token operator"> = </span><span class="breakable-word"><span class="token string">"createContinuousSessionContext"</span></span></span><wbr><span class="token punctuation">)</span></div></div><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="-continuous-session-context.html">T</a><span class="token punctuation">, </span><a href="-continuous-session-context.html">R</a><span class="token operator">&gt; </span><a href="-continuous-session-context.html"><span class="token function">ContinuousSessionContext</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">coroutineContext<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.coroutines/-coroutine-context/index.html">CoroutineContext</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-continuous-session-context/index.html">ContinuousSessionContext</a><span class="token operator">&lt;</span><a href="-continuous-session-context.html">T</a><span class="token punctuation">, </span><a href="-continuous-session-context.html">R</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">创建一个 <a href="-continuous-session-context.html">ContinuousSessionContext</a> 的基础实现类型。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1667903011%2FFunctions%2F-586792589" anchor-label="createSimpleSessionContinuation" id="1667903011%2FFunctions%2F-586792589" data-filterable-set=":simbot-extensions:simbot-extension-continuous-session/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-extensions:simbot-extension-continuous-session/commonMain" data-filterable-set=":simbot-extensions:simbot-extension-continuous-session/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="create-simple-session-continuation.html"><span>create</span><wbr><span>Simple</span><wbr><span>Session</span><wbr><span><span>Continuation</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1667903011%2FFunctions%2F-586792589"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-extensions:simbot-extension-continuous-session/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="create-simple-session-continuation.html">C</a><span class="token punctuation">, </span><a href="create-simple-session-continuation.html">T</a><span class="token punctuation">, </span><a href="create-simple-session-continuation.html">R</a><span class="token operator">&gt; </span><a href="create-simple-session-continuation.html"><span class="token function">createSimpleSessionContinuation</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">context<span class="token operator">: </span><a href="create-simple-session-continuation.html">C</a><span class="token punctuation">, </span></span><span class="parameter ">value<span class="token operator">: </span><a href="create-simple-session-continuation.html">T</a><span class="token punctuation">, </span></span><span class="parameter ">continuation<span class="token operator">: </span><a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-cancellable-continuation/index.html">CancellableContinuation</a><span class="token operator">&lt;</span><a href="create-simple-session-continuation.html">R</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">handle<span class="token operator">: </span><a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-disposable-handle/index.html">DisposableHandle</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-session-continuation/index.html">SessionContinuation</a><span class="token operator">&lt;</span><a href="create-simple-session-continuation.html">C</a><span class="token punctuation">, </span><a href="create-simple-session-continuation.html">T</a><span class="token punctuation">, </span><a href="create-simple-session-continuation.html">R</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">构建一个基于 <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-cancellable-continuation/index.html">CancellableContinuation</a> 实现的 <a href="-session-continuation/index.html">SessionContinuation</a> 实例。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-42754097%2FFunctions%2F-1336402909" anchor-label="monoInSession" id="-42754097%2FFunctions%2F-1336402909" data-filterable-set=":simbot-extensions:simbot-extension-continuous-session/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-extensions:simbot-extension-continuous-session/jvmMain" data-filterable-set=":simbot-extensions:simbot-extension-continuous-session/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="mono-in-session.html"><span>mono</span><wbr><span>In</span><wbr><span><span>Session</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-42754097%2FFunctions%2F-1336402909"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":simbot-extensions:simbot-extension-continuous-session/jvmMain" data-filterable-set=":simbot-extensions:simbot-extension-continuous-session/jvmMain" data-active="" data-toggle=":simbot-extensions:simbot-extension-continuous-session/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-extensions:simbot-extension-continuous-session/jvmMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-jvm-name/index.html"><span class="token annotation builtin">JvmName</span></a><span class="token punctuation">(</span><span>name<span class="token operator"> = </span><span class="breakable-word"><span class="token string">"mono"</span></span></span><wbr><span class="token punctuation">)</span></div><div class="block"><span class="token annotation builtin">@</span><a href="../../../simbot-commons/simbot-common-annotations/love.forte.simbot.annotations/-api4-j/index.html"><span class="token annotation builtin">Api4J</span></a></div></div><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="mono-in-session.html">C</a><span class="token punctuation">, </span><a href="mono-in-session.html">T</a><span class="token punctuation">, </span><a href="mono-in-session.html">R</a><span class="token operator">&gt; </span><a href="mono-in-session.html"><span class="token function">monoInSession</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">function<span class="token operator">: </span><a href="-mono-in-session/index.html">MonoInSession</a><span class="token operator">&lt;</span><a href="mono-in-session.html">C</a><span class="token punctuation">, </span><a href="mono-in-session.html">T</a><span class="token punctuation">, </span><a href="mono-in-session.html">R</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-in-session/index.html">InSession</a><span class="token operator">&lt;</span><a href="mono-in-session.html">C</a><span class="token punctuation">, </span><a href="mono-in-session.html">T</a><span class="token punctuation">, </span><a href="mono-in-session.html">R</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Java 友好 API，用于构造一个响应式风格 (<span data-unresolved-link="reactor.core.publisher/Mono///PointingToDeclaration/">Mono</span>) 的 <a href="-in-session/index.html">InSession</a> 实例。</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="EXTENSION_FUNCTION">
+        <h2 class="tableheader">Inherited functions</h2>
+        <div class="table"><a data-name="-1392339995%2FFunctions%2F-586792589" anchor-label="awaitValue" id="-1392339995%2FFunctions%2F-586792589" data-filterable-set=":simbot-extensions:simbot-extension-continuous-session/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-extensions:simbot-extension-continuous-session/commonMain" data-filterable-set=":simbot-extensions:simbot-extension-continuous-session/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="await-value.html"><span>await</span><wbr><span><span>Value</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1392339995%2FFunctions%2F-586792589"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-extensions:simbot-extension-continuous-session/commonMain"><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="await-value.html">C</a><span class="token punctuation">, </span><a href="await-value.html">T</a><span class="token punctuation">, </span><a href="await-value.html">R</a><span class="token operator">&gt; </span><a href="-continuous-session-receiver/index.html">ContinuousSessionReceiver</a><span class="token operator">&lt;</span><a href="await-value.html">C</a><span class="token punctuation">, </span><a href="await-value.html">T</a><span class="token punctuation">, </span><a href="await-value.html">R</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="await-value.html"><span class="token function">awaitValue</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">result<span class="token operator">: </span><a href="await-value.html">R</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="await-value.html">T</a></div><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="await-value.html">C</a><span class="token punctuation">, </span><a href="await-value.html">T</a><span class="token punctuation">, </span><a href="await-value.html">R</a><span class="token operator">&gt; </span><a href="-continuous-session-receiver/index.html">ContinuousSessionReceiver</a><span class="token operator">&lt;</span><a href="await-value.html">C</a><span class="token punctuation">, </span><a href="await-value.html">T</a><span class="token punctuation">, </span><a href="await-value.html">R</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="await-value.html"><span class="token function">awaitValue</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">result<span class="token operator">: </span><span class="token punctuation">(</span><a href="-continuous-session-receiver/-received/index.html">ContinuousSessionReceiver.Received</a><span class="token operator">&lt;</span><a href="await-value.html">C</a><span class="token punctuation">, </span><a href="await-value.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="await-value.html">R</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="await-value.html">T</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1549539908%2FFunctions%2F-586792589" anchor-label="awaitWith" id="-1549539908%2FFunctions%2F-586792589" data-filterable-set=":simbot-extensions:simbot-extension-continuous-session/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-extensions:simbot-extension-continuous-session/commonMain" data-filterable-set=":simbot-extensions:simbot-extension-continuous-session/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="await-with.html"><span>await</span><wbr><span><span>With</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1549539908%2FFunctions%2F-586792589"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-extensions:simbot-extension-continuous-session/commonMain"><div class="symbol monospace"><span class="token keyword">inline suspend </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="await-with.html">C</a><span class="token punctuation">, </span><a href="await-with.html">T</a><span class="token punctuation">, </span><a href="await-with.html">R</a><span class="token operator">&gt; </span><a href="-continuous-session-receiver/index.html">ContinuousSessionReceiver</a><span class="token operator">&lt;</span><a href="await-with.html">C</a><span class="token punctuation">, </span><a href="await-with.html">T</a><span class="token punctuation">, </span><a href="await-with.html">R</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="await-with.html"><span class="token function">awaitWith</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">block<span class="token operator">: </span><span class="token punctuation">(</span><a href="await-with.html">C</a><span class="token punctuation">, </span><a href="await-with.html">T</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="await-with.html">R</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1930901283%2FFunctions%2F-586792589" anchor-label="multipleAwaitWith" id="1930901283%2FFunctions%2F-586792589" data-filterable-set=":simbot-extensions:simbot-extension-continuous-session/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-extensions:simbot-extension-continuous-session/commonMain" data-filterable-set=":simbot-extensions:simbot-extension-continuous-session/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="multiple-await-with.html"><span>multiple</span><wbr><span>Await</span><wbr><span><span>With</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1930901283%2FFunctions%2F-586792589"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-extensions:simbot-extension-continuous-session/commonMain"><div class="symbol monospace"><span class="token keyword">inline suspend </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="multiple-await-with.html">C</a><span class="token punctuation">, </span><a href="multiple-await-with.html">T</a><span class="token punctuation">, </span><a href="multiple-await-with.html">R</a><span class="token operator">&gt; </span><a href="-continuous-session-receiver/index.html">ContinuousSessionReceiver</a><span class="token operator">&lt;</span><a href="multiple-await-with.html">C</a><span class="token punctuation">, </span><a href="multiple-await-with.html">T</a><span class="token punctuation">, </span><a href="multiple-await-with.html">R</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="multiple-await-with.html"><span class="token function">multipleAwaitWith</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">block<span class="token operator">: </span><a href="-multiple-await-result/-factory/index.html">MultipleAwaitResult.Factory</a><span class="token punctuation">.</span><span class="token punctuation">(</span><a href="multiple-await-with.html">C</a><span class="token punctuation">, </span><a href="multiple-await-with.html">T</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="-multiple-await-result/index.html">MultipleAwaitResult</a><span class="token operator">&lt;</span><a href="multiple-await-with.html">R</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="multiple-await-with.html">R</a></div><div class="brief "><p class="paragraph">进行多轮次处理。如果 <a href="multiple-await-with.html">block</a> 的返回值类型不是 <a href="-multiple-await-result/-valid/index.html">MultipleAwaitResult.Valid</a>, 则 <a href="multiple-await-with.html">multipleAwaitWith</a> 会继续 await 直到得到 <a href="-multiple-await-result/-valid/index.html">MultipleAwaitResult.Valid</a> 结果或产生了异常。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="636379544%2FFunctions%2F-586792589" anchor-label="push" id="636379544%2FFunctions%2F-586792589" data-filterable-set=":simbot-extensions:simbot-extension-continuous-session/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-extensions:simbot-extension-continuous-session/commonMain" data-filterable-set=":simbot-extensions:simbot-extension-continuous-session/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="push.html"><span><span>push</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="636379544%2FFunctions%2F-586792589"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-extensions:simbot-extension-continuous-session/commonMain"><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="push.html">T</a><span class="token punctuation">, </span><a href="push.html">R</a><span class="token operator">&gt; </span><a href="-continuous-session-provider/index.html">ContinuousSessionProvider</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a><span class="token punctuation">, </span><a href="push.html">T</a><span class="token punctuation">, </span><a href="push.html">R</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="push.html"><span class="token function">push</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">value<span class="token operator">: </span><a href="push.html">T</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="push.html">R</a></div><div class="brief "><p class="paragraph">推送一个事件到对应的 <a href="-continuous-session-receiver/index.html">ContinuousSessionReceiver</a> 中并挂起直到将其 <a href="-continuous-session-receiver/await.html">消费</a> 或被关闭。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>© 2024-2026 <a href="https://github.com/simple-robot">Simple Robot</a>. All rights reserved.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
