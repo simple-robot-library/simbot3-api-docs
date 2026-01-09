@@ -1,0 +1,1091 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>love.forte.simbot.message</title>
+<link href="../../images/logo-icon.svg" rel="icon" type="image/svg">    <!-- 百度统计 -->
+    <!--suppress ES6ConvertVarToLetConst -->
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            const hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?045f67a122223db9432c7856fc942fad";
+            const s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1JWL2DDTB4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-1JWL2DDTB4');
+    </script>
+<script>var pathToRoot = "../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+      if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      } else {
+        const savedDarkMode = JSON.parse(storage)
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../styles/style.css" rel="Stylesheet">
+<link href="../../styles/main.css" rel="Stylesheet">
+<link href="../../styles/prism.css" rel="Stylesheet">
+<link href="../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../scripts/safe-local-storage_blocking.js"></script>
+<script type="text/javascript" src="../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../ui-kit/ui-kit.min.js" defer></script>
+<link href="../../images/logo-icon.svg">
+<link href="../../images/logo-icon-light.svg">
+<link href="../../styles/kdoc-style.css" rel="Stylesheet"></head>
+<body>
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+<a class="library-name--link" href="../../index.html" tabindex="1">
+                    Simple Robot
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">5.0.0-Preview1
+        </div>
+        <div class="navigation-controls">
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector common-like" data-active="" aria-pressed="true" data-filter=":simbot-api/commonMain">common</button>
+                <button class="platform-tag platform-selector js-like" data-active="" aria-pressed="true" data-filter=":simbot-api/jsMain">js</button>
+                <button class="platform-tag platform-selector jvm-like" data-active="" aria-pressed="true" data-filter=":simbot-api/jvmMain">jvm</button>
+                <button class="platform-tag platform-selector common-like" data-active="" aria-pressed="true" data-filter=":simbot-api/nativeMain">native</button>
+                <button class="platform-tag platform-selector wasm-like" data-active="" aria-pressed="true" data-filter=":simbot-api/wasmJsMain">wasmJs</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option common-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":simbot-api/commonMain" data-filter=":simbot-api/commonMain">
+                                <span class="checkbox--icon"></span>
+                                common
+                            </label>
+                        </li>
+                        <li role="option" class="dropdown--option platform-selector-option js-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":simbot-api/jsMain" data-filter=":simbot-api/jsMain">
+                                <span class="checkbox--icon"></span>
+                                js
+                            </label>
+                        </li>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":simbot-api/jvmMain" data-filter=":simbot-api/jvmMain">
+                                <span class="checkbox--icon"></span>
+                                jvm
+                            </label>
+                        </li>
+                        <li role="option" class="dropdown--option platform-selector-option common-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":simbot-api/nativeMain" data-filter=":simbot-api/nativeMain">
+                                <span class="checkbox--icon"></span>
+                                native
+                            </label>
+                        </li>
+                        <li role="option" class="dropdown--option platform-selector-option wasm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":simbot-api/wasmJsMain" data-filter=":simbot-api/wasmJsMain">
+                                <span class="checkbox--icon"></span>
+                                wasmJs
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </ul>
+                <a class="navigation-controls--btn navigation-controls--btn_homepage" id="homepage-link" href="https://github.com/simple-robot/simpler-robot"></a>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config="{&quot;defaultSize&quot;: 280, &quot;minSize&quot;: 200, &quot;maxSize&quot;: 400}">
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
+                            <span>
+                                    Simple Robot
+                            </span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
+<div class="main-content" data-page-type="package" id="content" pageids="simbot-api::love.forte.simbot.message////PointingToDeclaration//2020429523">
+  <div class="breadcrumbs"><a href="../index.html">simbot-api</a><span class="delimiter">/</span><span class="current">love.forte.simbot.message</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Package-level</span></span> <span><span>declarations</span></span></h1>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="TYPE">Types</button><button class="section-tab" data-togglable="FUNCTION,EXTENSION_FUNCTION">Functions</button><button class="section-tab" data-togglable="PROPERTY,EXTENSION_PROPERTY">Properties</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="TYPE">
+        <h2 class="tableheader">Types</h2>
+        <div class="table"><a data-name="-1569363387%2FClasslikes%2F-1602927896" anchor-label="AggregatedMessageReceipt" id="-1569363387%2FClasslikes%2F-1602927896" data-filterable-set=":simbot-api/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-api/commonMain" data-filterable-set=":simbot-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-aggregated-message-receipt/index.html"><span>Aggregated</span><wbr><span>Message</span><wbr><span><span>Receipt</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1569363387%2FClasslikes%2F-1602927896"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">class </span><a href="-aggregated-message-receipt/index.html">AggregatedMessageReceipt</a> : <a href="-standard-message-receipt/index.html">StandardMessageReceipt</a>, <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-iterable/index.html">Iterable</a><span class="token operator">&lt;</span><a href="-single-message-receipt/index.html">SingleMessageReceipt</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">聚合消息回执，代表多个 <a href="-single-message-receipt/index.html">SingleMessageReceipt</a> 的聚合体。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2101743032%2FClasslikes%2F-1602927896" anchor-label="At" id="-2101743032%2FClasslikes%2F-1602927896" data-filterable-set=":simbot-api/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-api/commonMain" data-filterable-set=":simbot-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-at/index.html"><span><span>At</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2101743032%2FClasslikes%2F-1602927896"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-core/kotlinx.serialization/-serializable/index.html"><span class="token annotation builtin">Serializable</span></a></div><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-core/kotlinx.serialization/-serial-name/index.html"><span class="token annotation builtin">SerialName</span></a><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">"m.std.at"</span></span></span><wbr><span class="token punctuation">)</span></div></div><span class="token keyword">data </span><span class="token keyword">class </span><a href="-at/index.html">At</a>&nbsp;<span><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-jvm-overloads/index.html"><span class="token annotation builtin">JvmOverloads</span></a>&nbsp;</span><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>target<span class="token operator">: </span><a href="../../simbot-commons/simbot-common-core/love.forte.simbot.common.id/-i-d/index.html">ID</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>type<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span>DEFAULT_AT_TYPE<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>originContent<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span><span class="token string">"@"</span></span></span><span class="token punctuation">)</span> : <a href="-mention-message/index.html">MentionMessage</a></div><div class="brief "><p class="paragraph">一个艾特消息。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1554296921%2FClasslikes%2F-1602927896" anchor-label="AtAll" id="1554296921%2FClasslikes%2F-1602927896" data-filterable-set=":simbot-api/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-api/commonMain" data-filterable-set=":simbot-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-at-all/index.html"><span>At</span><wbr><span><span>All</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1554296921%2FClasslikes%2F-1602927896"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-core/kotlinx.serialization/-serializable/index.html"><span class="token annotation builtin">Serializable</span></a></div><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-core/kotlinx.serialization/-serial-name/index.html"><span class="token annotation builtin">SerialName</span></a><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">"m.std.atAll"</span></span></span><wbr><span class="token punctuation">)</span></div></div><span class="token keyword">data </span><span class="token keyword">object </span><a href="-at-all/index.html">AtAll</a> : <a href="-mention-message/index.html">MentionMessage</a></div><div class="brief "><p class="paragraph">一个“通知所有”的消息。 如果在同一组件环境下的 “通知所有” 有多种表现形式，可考虑扩展更多消息元素类型。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="132935143%2FClasslikes%2F-1602927896" anchor-label="BinaryDataAwareMessage" id="132935143%2FClasslikes%2F-1602927896" data-filterable-set=":simbot-api/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-api/commonMain" data-filterable-set=":simbot-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-binary-data-aware-message/index.html"><span>Binary</span><wbr><span>Data</span><wbr><span>Aware</span><wbr><span><span>Message</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="132935143%2FClasslikes%2F-1602927896"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-binary-data-aware-message/index.html">BinaryDataAwareMessage</a></div><div class="brief "><p class="paragraph">表示一个可以获取到其二进制数据的消息元素， 例如某种图片消息或文件消息。 应当由某个 <a href="-message/-element/index.html">Message.Element</a> 的子类型实现。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="193550209%2FClasslikes%2F-1602927896" anchor-label="Emoji" id="193550209%2FClasslikes%2F-1602927896" data-filterable-set=":simbot-api/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-api/commonMain" data-filterable-set=":simbot-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-emoji/index.html"><span><span>Emoji</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="193550209%2FClasslikes%2F-1602927896"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-core/kotlinx.serialization/-serializable/index.html"><span class="token annotation builtin">Serializable</span></a></div><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-core/kotlinx.serialization/-serial-name/index.html"><span class="token annotation builtin">SerialName</span></a><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">"m.std.emoji"</span></span></span><wbr><span class="token punctuation">)</span></div></div><span class="token keyword">data </span><span class="token keyword">class </span><a href="-emoji/index.html">Emoji</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>id<span class="token operator">: </span><a href="../../simbot-commons/simbot-common-core/love.forte.simbot.common.id/-i-d/index.html">ID</a></span></span><span class="token punctuation">)</span> : <a href="-standard-message/index.html">StandardMessage</a>, <a href="-emoticon-message/index.html">EmoticonMessage</a></div><div class="brief "><p class="paragraph">一个 <code class="lang-kotlin">emoji</code> 表情。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1999337990%2FClasslikes%2F-1602927896" anchor-label="EmoticonMessage" id="1999337990%2FClasslikes%2F-1602927896" data-filterable-set=":simbot-api/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-api/commonMain" data-filterable-set=":simbot-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-emoticon-message/index.html"><span>Emoticon</span><wbr><span><span>Message</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1999337990%2FClasslikes%2F-1602927896"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-emoticon-message/index.html">EmoticonMessage</a> : <a href="-standard-message/index.html">StandardMessage</a></div><div class="brief "><p class="paragraph">表示某种表情符号的消息元素类型。 常见表现形式有某平台的系统表情或一定范围内的 <code class="lang-kotlin">emoji</code> 表情。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1634105566%2FClasslikes%2F-1602927896" anchor-label="Face" id="1634105566%2FClasslikes%2F-1602927896" data-filterable-set=":simbot-api/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-api/commonMain" data-filterable-set=":simbot-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-face/index.html"><span><span>Face</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1634105566%2FClasslikes%2F-1602927896"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-core/kotlinx.serialization/-serializable/index.html"><span class="token annotation builtin">Serializable</span></a></div><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-core/kotlinx.serialization/-serial-name/index.html"><span class="token annotation builtin">SerialName</span></a><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">"m.std.face"</span></span></span><wbr><span class="token punctuation">)</span></div></div><span class="token keyword">data </span><span class="token keyword">class </span><a href="-face/index.html">Face</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>id<span class="token operator">: </span><a href="../../simbot-commons/simbot-common-core/love.forte.simbot.common.id/-i-d/index.html">ID</a></span></span><span class="token punctuation">)</span> : <a href="-standard-message/index.html">StandardMessage</a>, <a href="-emoticon-message/index.html">EmoticonMessage</a></div><div class="brief "><p class="paragraph">一个表情。一般代表平台提供的自带系统表情。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2021251933%2FClasslikes%2F-1602927896" anchor-label="IDAwareImage" id="-2021251933%2FClasslikes%2F-1602927896" data-filterable-set=":simbot-api/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-api/commonMain" data-filterable-set=":simbot-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-i-d-aware-image/index.html"><span>IDAware</span><wbr><span><span>Image</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2021251933%2FClasslikes%2F-1602927896"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-i-d-aware-image/index.html">IDAwareImage</a> : <a href="-image/index.html">Image</a></div><div class="brief "><p class="paragraph">一个可以感知到 <a href="../../simbot-commons/simbot-common-core/love.forte.simbot.common.id/-i-d/index.html">ID</a> 信息的 <a href="-image/index.html">Image</a>。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="796205068%2FClasslikes%2F-1602927896" anchor-label="Image" id="796205068%2FClasslikes%2F-1602927896" data-filterable-set=":simbot-api/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-api/commonMain" data-filterable-set=":simbot-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-image/index.html"><span><span>Image</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="796205068%2FClasslikes%2F-1602927896"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-image/index.html">Image</a> : <a href="-standard-message/index.html">StandardMessage</a>, <a href="-rich-media-message/index.html">RichMediaMessage</a></div><div class="brief "><p class="paragraph">一个图片消息元素类型， 最常见的 <a href="-rich-media-message/index.html">RichMediaMessage</a> 类型之一。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-892316472%2FClasslikes%2F-786648306" anchor-label="JvmOfflineImageResolver" id="-892316472%2FClasslikes%2F-786648306" data-filterable-set=":simbot-api/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-api/jvmMain" data-filterable-set=":simbot-api/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-jvm-offline-image-resolver/index.html"><span>Jvm</span><wbr><span>Offline</span><wbr><span>Image</span><wbr><span><span>Resolver</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-892316472%2FClasslikes%2F-786648306"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":simbot-api/jvmMain" data-filterable-set=":simbot-api/jvmMain" data-active="" data-toggle=":simbot-api/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api/jvmMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="-scheduled-deprecated-offline-image-resolver-api/index.html"><span class="token annotation builtin">ScheduledDeprecatedOfflineImageResolverApi</span></a></div></div><span class="token keyword">interface </span><a href="-jvm-offline-image-resolver/index.html">JvmOfflineImageResolver</a><span class="token operator">&lt;</span><a href="-jvm-offline-image-resolver/index.html">C</a><span class="token operator">&gt;</span> : <a href="-offline-image-resolver/index.html">OfflineImageResolver</a><span class="token operator">&lt;</span><a href="-jvm-offline-image-resolver/index.html">C</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">JVM 平台下的 <a href="-offline-image-resolver/index.html">OfflineImageResolver</a> 扩展类型。</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="572966845%2FClasslikes%2F-786648306" anchor-label="JvmOfflineImageValueResolver" id="572966845%2FClasslikes%2F-786648306" data-filterable-set=":simbot-api/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-api/jvmMain" data-filterable-set=":simbot-api/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-jvm-offline-image-value-resolver/index.html"><span>Jvm</span><wbr><span>Offline</span><wbr><span>Image</span><wbr><span>Value</span><wbr><span><span>Resolver</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="572966845%2FClasslikes%2F-786648306"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":simbot-api/jvmMain" data-filterable-set=":simbot-api/jvmMain" data-active="" data-toggle=":simbot-api/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api/jvmMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../love.forte.simbot.resource/-scheduled-deprecated-resource-api/index.html"><span class="token annotation builtin">ScheduledDeprecatedResourceApi</span></a></div><div class="block"><span class="token annotation builtin">@</span><a href="-scheduled-deprecated-offline-image-resolver-api/index.html"><span class="token annotation builtin">ScheduledDeprecatedOfflineImageResolverApi</span></a></div></div><span class="token keyword">abstract </span><span class="token keyword">class </span><a href="-jvm-offline-image-value-resolver/index.html">JvmOfflineImageValueResolver</a><span class="token operator">&lt;</span><a href="-jvm-offline-image-value-resolver/index.html">C</a><span class="token operator">&gt;</span> : <a href="-offline-image-value-resolver/index.html">OfflineImageValueResolver</a><span class="token operator">&lt;</span><a href="-jvm-offline-image-value-resolver/index.html">C</a><span class="token operator">&gt; </span>, <a href="-jvm-offline-image-resolver/index.html">JvmOfflineImageResolver</a><span class="token operator">&lt;</span><a href="-jvm-offline-image-value-resolver/index.html">C</a><span class="token operator">&gt; </span>, <a href="../love.forte.simbot.resource/-jvm-resource-resolver/index.html">JvmResourceResolver</a><span class="token operator">&lt;</span><a href="-jvm-offline-image-value-resolver/index.html">C</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">实现 <a href="-jvm-offline-image-resolver/index.html">JvmOfflineImageResolver</a> 和 <a href="../love.forte.simbot.resource/-jvm-resource-resolver/index.html">JvmResourceResolver</a>， 对其中可能出现的实际内容物（例如 <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/File.html">File</a> 或 <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/nio/file/Path.html">Path</a>）进行处理。</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1079369730%2FClasslikes%2F-1602927896" anchor-label="MentionMessage" id="-1079369730%2FClasslikes%2F-1602927896" data-filterable-set=":simbot-api/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-api/commonMain" data-filterable-set=":simbot-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-mention-message/index.html"><span>Mention</span><wbr><span><span>Message</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1079369730%2FClasslikes%2F-1602927896"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-mention-message/index.html">MentionMessage</a> : <a href="-standard-message/index.html">StandardMessage</a></div><div class="brief "><p class="paragraph">代表一个描述“提及”的消息。常见表现形式即为 <a href="-at/index.html">At</a>。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1952384352%2FClasslikes%2F-1602927896" anchor-label="Message" id="1952384352%2FClasslikes%2F-1602927896" data-filterable-set=":simbot-api/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-api/commonMain" data-filterable-set=":simbot-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-message/index.html"><span><span>Message</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1952384352%2FClasslikes%2F-1602927896"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api/commonMain"><div class="symbol monospace"><span class="token keyword">sealed </span><span class="token keyword">interface </span><a href="-message/index.html">Message</a></div><div class="brief "><p class="paragraph">一个 <strong>消息</strong>。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="917872105%2FClasslikes%2F-1602927896" anchor-label="MessageContent" id="917872105%2FClasslikes%2F-1602927896" data-filterable-set=":simbot-api/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-api/commonMain" data-filterable-set=":simbot-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-message-content/index.html"><span>Message</span><wbr><span><span>Content</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="917872105%2FClasslikes%2F-1602927896"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-message-content/index.html">MessageContent</a> : <a href="../love.forte.simbot.ability/-delete-support/index.html">DeleteSupport</a></div><div class="brief "><p class="paragraph">一个消息本体内容。通常是通过一个事件接收到的消息本体。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2130832046%2FClasslikes%2F-1602927896" anchor-label="MessageIdReference" id="-2130832046%2FClasslikes%2F-1602927896" data-filterable-set=":simbot-api/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-api/commonMain" data-filterable-set=":simbot-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-message-id-reference/index.html"><span>Message</span><wbr><span>Id</span><wbr><span><span>Reference</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2130832046%2FClasslikes%2F-1602927896"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-core/kotlinx.serialization/-serializable/index.html"><span class="token annotation builtin">Serializable</span></a></div><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-core/kotlinx.serialization/-serial-name/index.html"><span class="token annotation builtin">SerialName</span></a><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">"m.std.messageReference.id"</span></span></span><wbr><span class="token punctuation">)</span></div></div><span class="token keyword">data </span><span class="token keyword">class </span><a href="-message-id-reference/index.html">MessageIdReference</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>id<span class="token operator">: </span><a href="../../simbot-commons/simbot-common-core/love.forte.simbot.common.id/-i-d/index.html">ID</a></span></span><span class="token punctuation">)</span> : <a href="-message-reference/index.html">MessageReference</a></div><div class="brief "><p class="paragraph">一个仅实现 <a href="../../simbot-api/love.forte.simbot.message/-message-id-reference/--root--.html">id</a> 的 <a href="-message-reference/index.html">MessageReference</a> 简单实现。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="591267082%2FClasslikes%2F-1602927896" anchor-label="MessageReceipt" id="591267082%2FClasslikes%2F-1602927896" data-filterable-set=":simbot-api/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-api/commonMain" data-filterable-set=":simbot-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-message-receipt/index.html"><span>Message</span><wbr><span><span>Receipt</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="591267082%2FClasslikes%2F-1602927896"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-message-receipt/index.html">MessageReceipt</a> : <a href="../love.forte.simbot.ability/-delete-support/index.html">DeleteSupport</a></div><div class="brief "><p class="paragraph">通过 <a href="../love.forte.simbot.ability/-send-support/send.html">SendSupport.send</a> 发送消息后得到的发送回执。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="896713495%2FClasslikes%2F-1602927896" anchor-label="MessageReference" id="896713495%2FClasslikes%2F-1602927896" data-filterable-set=":simbot-api/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-api/commonMain" data-filterable-set=":simbot-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-message-reference/index.html"><span>Message</span><wbr><span><span>Reference</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="896713495%2FClasslikes%2F-1602927896"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-message-reference/index.html">MessageReference</a> : <a href="-standard-message/index.html">StandardMessage</a></div><div class="brief "><p class="paragraph">一个消息引用元素，用来表示对另一个消息元素的引用。 可用于发送或接收，是否能应用取决于具体地实现。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="313254863%2FClasslikes%2F-1602927896" anchor-label="Messages" id="313254863%2FClasslikes%2F-1602927896" data-filterable-set=":simbot-api/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-api/commonMain" data-filterable-set=":simbot-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-messages/index.html"><span><span>Messages</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="313254863%2FClasslikes%2F-1602927896"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api/commonMain"><div class="symbol monospace"><span class="token keyword">sealed </span><span class="token keyword">interface </span><a href="-messages/index.html">Messages</a> : <a href="-message/index.html">Message</a>, <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-iterable/index.html">Iterable</a><span class="token operator">&lt;</span><a href="-message/-element/index.html">Message.Element</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">一个 <strong>消息链</strong>。 消息链 <a href="-messages/index.html">Messages</a> 是一组 <a href="-message/-element/index.html">Message.Element</a> 的表现。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="194419160%2FClasslikes%2F-1602927896" anchor-label="MessagesAddable" id="194419160%2FClasslikes%2F-1602927896" data-filterable-set=":simbot-api/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-api/commonMain" data-filterable-set=":simbot-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-messages-addable/index.html"><span>Messages</span><wbr><span><span>Addable</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="194419160%2FClasslikes%2F-1602927896"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-messages-addable/index.html">MessagesAddable</a><span class="token operator">&lt;</span><a href="-messages-addable/index.html">T</a><span class="token operator"> : </span><a href="-messages-addable/index.html">MessagesAddable</a><span class="token operator">&lt;</span><a href="-messages-addable/index.html">T</a><span class="token operator">&gt;</span><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">一个可以追加 <a href="-message/-element/index.html">Message.Element</a> 的类型接口。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="696132536%2FClasslikes%2F-1602927896" anchor-label="MessagesBuilder" id="696132536%2FClasslikes%2F-1602927896" data-filterable-set=":simbot-api/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-api/commonMain" data-filterable-set=":simbot-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-messages-builder/index.html"><span>Messages</span><wbr><span><span>Builder</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="696132536%2FClasslikes%2F-1602927896"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-messages-builder/index.html">MessagesBuilder</a> : <a href="-messages-addable/index.html">MessagesAddable</a><span class="token operator">&lt;</span><a href="-messages-builder/index.html">MessagesBuilder</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">一个用于动态构建 <a href="-messages/index.html">Messages</a> 的构建器。 使用 <a href="-messages-builder/-companion/create.html">create</a> 构建。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1987816371%2FClasslikes%2F-1602927896" anchor-label="MessagesBuilderDsl" id="-1987816371%2FClasslikes%2F-1602927896" data-filterable-set=":simbot-api/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-api/commonMain" data-filterable-set=":simbot-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-messages-builder-dsl/index.html"><span>Messages</span><wbr><span>Builder</span><wbr><span><span>Dsl</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1987816371%2FClasslikes%2F-1602927896"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-dsl-marker/index.html"><span class="token annotation builtin">DslMarker</span></a></div></div><span class="token keyword">annotation class </span><a href="-messages-builder-dsl/index.html">MessagesBuilderDsl</a></div><div class="brief "><p class="paragraph"><a href="-messages-builder/index.html">MessagesBuilder</a>'s dsl marker.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-784295110%2FClasslikes%2F-1602927896" anchor-label="OfflineByteArrayImage" id="-784295110%2FClasslikes%2F-1602927896" data-filterable-set=":simbot-api/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-api/commonMain" data-filterable-set=":simbot-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-offline-byte-array-image/index.html"><span>Offline</span><wbr><span>Byte</span><wbr><span>Array</span><wbr><span><span>Image</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-784295110%2FClasslikes%2F-1602927896"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-core/kotlinx.serialization/-serializable/index.html"><span class="token annotation builtin">Serializable</span></a></div><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-core/kotlinx.serialization/-serial-name/index.html"><span class="token annotation builtin">SerialName</span></a><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">"m.std.img.offline.bytes"</span></span></span><wbr><span class="token punctuation">)</span></div></div><span class="token keyword">data </span><span class="token keyword">class </span><a href="-offline-byte-array-image/index.html">OfflineByteArrayImage</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">data<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-byte-array/index.html">ByteArray</a></span></span><span class="token punctuation">)</span> : <a href="-offline-image/index.html">OfflineImage</a></div><div class="brief "><p class="paragraph">直接针对一个 <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-byte-array/index.html">ByteArray</a> 进行包装的 <a href="-offline-image/index.html">OfflineImage</a> 实现。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1224924545%2FClasslikes%2F-786648306" anchor-label="OfflineFileImage" id="-1224924545%2FClasslikes%2F-786648306" data-filterable-set=":simbot-api/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-api/jvmMain" data-filterable-set=":simbot-api/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-offline-file-image/index.html"><span>Offline</span><wbr><span>File</span><wbr><span><span>Image</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1224924545%2FClasslikes%2F-786648306"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":simbot-api/jvmMain" data-filterable-set=":simbot-api/jvmMain" data-active="" data-toggle=":simbot-api/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api/jvmMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-core/kotlinx.serialization/-serializable/index.html"><span class="token annotation builtin">Serializable</span></a></div><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-core/kotlinx.serialization/-serial-name/index.html"><span class="token annotation builtin">SerialName</span></a><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">"m.std.img.offline.file"</span></span></span><wbr><span class="token punctuation">)</span></div></div><span class="token keyword">class </span><a href="-offline-file-image/index.html">OfflineFileImage</a> : <a href="-offline-resource-image/index.html">OfflineResourceImage</a></div><div class="brief "><p class="paragraph">基于 <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/File.html">File</a> 的 <a href="-offline-image/index.html">OfflineImage</a> 实现。</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2026750051%2FClasslikes%2F-1602927896" anchor-label="OfflineImage" id="2026750051%2FClasslikes%2F-1602927896" data-filterable-set=":simbot-api/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-api/commonMain" data-filterable-set=":simbot-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-offline-image/index.html"><span>Offline</span><wbr><span><span>Image</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2026750051%2FClasslikes%2F-1602927896"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api/commonMain"><div class="symbol monospace"><span class="token keyword">sealed </span><span class="token keyword">interface </span><a href="-offline-image/index.html">OfflineImage</a> : <a href="-image/index.html">Image</a></div><div class="brief "><p class="paragraph">一个离线图片消息元素类型。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1623942831%2FClasslikes%2F-1602927896" anchor-label="OfflineImageImplementation" id="-1623942831%2FClasslikes%2F-1602927896" data-filterable-set=":simbot-api/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-api/commonMain" data-filterable-set=":simbot-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-offline-image-implementation/index.html"><span>Offline</span><wbr><span>Image</span><wbr><span><span>Implementation</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1623942831%2FClasslikes%2F-1602927896"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.annotation/-target/index.html"><span class="token annotation builtin">Target</span></a><span class="token punctuation">(</span><span>allowedTargets<span class="token operator"> = </span><span class="token punctuation">[</span><span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.annotation/-annotation-target/-c-l-a-s-s/index.html">AnnotationTarget.CLASS</a><span class="token punctuation">, </span></span><wbr><span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.annotation/-annotation-target/-a-n-n-o-t-a-t-i-o-n_-c-l-a-s-s/index.html">AnnotationTarget.ANNOTATION_CLASS</a></span><wbr><span class="token punctuation">]</span></span><wbr><span class="token punctuation">)</span></div></div><span class="token keyword">annotation class </span><a href="-offline-image-implementation/index.html">OfflineImageImplementation</a></div><div class="brief "><p class="paragraph"><a href="-offline-image/index.html">OfflineImage</a> 的外部实现是不稳定的， <a href="-offline-image/index.html">OfflineImage</a> 的实现应该是内部的，目前 <a href="-offline-image/index.html">OfflineImage</a> 不保证第三方实现未来的稳定与兼容。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-930765571%2FClasslikes%2F-1602927896" anchor-label="OfflineImageResolver" id="-930765571%2FClasslikes%2F-1602927896" data-filterable-set=":simbot-api/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-api/commonMain" data-filterable-set=":simbot-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-offline-image-resolver/index.html"><span>Offline</span><wbr><span>Image</span><wbr><span><span>Resolver</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-930765571%2FClasslikes%2F-1602927896"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="-scheduled-deprecated-offline-image-resolver-api/index.html"><span class="token annotation builtin">ScheduledDeprecatedOfflineImageResolverApi</span></a></div></div><span class="token keyword">interface </span><a href="-offline-image-resolver/index.html">OfflineImageResolver</a><span class="token operator">&lt;</span><a href="-offline-image-resolver/index.html">C</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">使用 <a href="-offline-image-resolver/index.html">OfflineImageResolver</a> 分析处理一个 <a href="-offline-image/index.html">OfflineImage</a>. 类似于 <code class="lang-kotlin">visitor</code> 的用法，与常见地访问器区别于通常情况下只会有一个 <code class="lang-kotlin">resolve*</code> 会最终执行。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1270108328%2FClasslikes%2F-1602927896" anchor-label="OfflineImageValueResolver" id="1270108328%2FClasslikes%2F-1602927896" data-filterable-set=":simbot-api/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-api/commonMain" data-filterable-set=":simbot-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-offline-image-value-resolver/index.html"><span>Offline</span><wbr><span>Image</span><wbr><span>Value</span><wbr><span><span>Resolver</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1270108328%2FClasslikes%2F-1602927896"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../love.forte.simbot.resource/-scheduled-deprecated-resource-api/index.html"><span class="token annotation builtin">ScheduledDeprecatedResourceApi</span></a></div><div class="block"><span class="token annotation builtin">@</span><a href="-scheduled-deprecated-offline-image-resolver-api/index.html"><span class="token annotation builtin">ScheduledDeprecatedOfflineImageResolverApi</span></a></div></div><span class="token keyword">interface </span><a href="-offline-image-value-resolver/index.html">OfflineImageValueResolver</a><span class="token operator">&lt;</span><a href="-offline-image-value-resolver/index.html">C</a><span class="token operator">&gt;</span> : <a href="-offline-image-resolver/index.html">OfflineImageResolver</a><span class="token operator">&lt;</span><a href="-offline-image-value-resolver/index.html">C</a><span class="token operator">&gt; </span>, <a href="../love.forte.simbot.resource/-resource-resolver/index.html">ResourceResolver</a><span class="token operator">&lt;</span><a href="-offline-image-value-resolver/index.html">C</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">继承 <a href="-offline-image-resolver/index.html">OfflineImageResolver</a> 和 <a href="../love.forte.simbot.resource/-resource-resolver/index.html">ResourceResolver</a>， 对其中可能出现的实际内容物（例如 <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-byte-array/index.html">ByteArray</a> 或 <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a>）进行处理。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1413921944%2FClasslikes%2F-786648306" anchor-label="OfflinePathImage" id="-1413921944%2FClasslikes%2F-786648306" data-filterable-set=":simbot-api/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-api/jvmMain" data-filterable-set=":simbot-api/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-offline-path-image/index.html"><span>Offline</span><wbr><span>Path</span><wbr><span><span>Image</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1413921944%2FClasslikes%2F-786648306"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":simbot-api/jvmMain" data-filterable-set=":simbot-api/jvmMain" data-active="" data-toggle=":simbot-api/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api/jvmMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-core/kotlinx.serialization/-serializable/index.html"><span class="token annotation builtin">Serializable</span></a></div><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-core/kotlinx.serialization/-serial-name/index.html"><span class="token annotation builtin">SerialName</span></a><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">"m.std.img.offline.path"</span></span></span><wbr><span class="token punctuation">)</span></div></div><span class="token keyword">data </span><span class="token keyword">class </span><a href="-offline-path-image/index.html">OfflinePathImage</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>path<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/nio/file/Path.html">Path</a></span></span><span class="token punctuation">)</span> : <a href="-offline-resource-image/index.html">OfflineResourceImage</a></div><div class="brief "><p class="paragraph">基于 <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/nio/file/Path.html">Path</a> 的 <a href="-offline-image/index.html">OfflineImage</a> 实现。</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-77560047%2FClasslikes%2F-1602927896" anchor-label="OfflineResourceImage" id="-77560047%2FClasslikes%2F-1602927896" data-filterable-set=":simbot-api/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-api/commonMain" data-filterable-set=":simbot-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-offline-resource-image/index.html"><span>Offline</span><wbr><span>Resource</span><wbr><span><span>Image</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-77560047%2FClasslikes%2F-1602927896"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-offline-resource-image/index.html">OfflineResourceImage</a> : <a href="-offline-image/index.html">OfflineImage</a></div><div class="brief "><p class="paragraph">一个基于 <a href="../love.forte.simbot.resource/-resource/index.html">Resource</a> 的 <a href="-offline-image/index.html">OfflineImage</a> 实现。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1601376117%2FClasslikes%2F-786648306" anchor-label="OfflineURIImage" id="1601376117%2FClasslikes%2F-786648306" data-filterable-set=":simbot-api/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-api/jvmMain" data-filterable-set=":simbot-api/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-offline-u-r-i-image/index.html"><span>Offline</span><wbr><span><span>URIImage</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1601376117%2FClasslikes%2F-786648306"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":simbot-api/jvmMain" data-filterable-set=":simbot-api/jvmMain" data-active="" data-toggle=":simbot-api/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api/jvmMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-core/kotlinx.serialization/-serializable/index.html"><span class="token annotation builtin">Serializable</span></a></div><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-core/kotlinx.serialization/-serial-name/index.html"><span class="token annotation builtin">SerialName</span></a><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">"m.std.img.offline.uri"</span></span></span><wbr><span class="token punctuation">)</span></div></div><span class="token keyword">data </span><span class="token keyword">class </span><a href="-offline-u-r-i-image/index.html">OfflineURIImage</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>uri<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/net/URI.html">URI</a></span></span><span class="token punctuation">)</span> : <a href="-offline-resource-image/index.html">OfflineResourceImage</a></div><div class="brief "><p class="paragraph">基于 <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/net/URI.html">URI</a> 的 <a href="-offline-image/index.html">OfflineImage</a> 实现。</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="436820944%2FClasslikes%2F-1602927896" anchor-label="PlainText" id="436820944%2FClasslikes%2F-1602927896" data-filterable-set=":simbot-api/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-api/commonMain" data-filterable-set=":simbot-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-plain-text/index.html"><span>Plain</span><wbr><span><span>Text</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="436820944%2FClasslikes%2F-1602927896"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-plain-text/index.html">PlainText</a> : <a href="-standard-message/index.html">StandardMessage</a></div><div class="brief "><p class="paragraph">纯文本消息。代表一段只存在<a href="-plain-text/text.html">文本</a>的消息。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2146319949%2FClasslikes%2F-1602927896" anchor-label="RemoteIDImage" id="2146319949%2FClasslikes%2F-1602927896" data-filterable-set=":simbot-api/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-api/commonMain" data-filterable-set=":simbot-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-remote-i-d-image/index.html"><span>Remote</span><wbr><span><span>IDImage</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2146319949%2FClasslikes%2F-1602927896"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-core/kotlinx.serialization/-serializable/index.html"><span class="token annotation builtin">Serializable</span></a></div><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-core/kotlinx.serialization/-serial-name/index.html"><span class="token annotation builtin">SerialName</span></a><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">"m.std.img.remote.id"</span></span></span><wbr><span class="token punctuation">)</span></div></div><span class="token keyword">data </span><span class="token keyword">class </span><a href="-remote-i-d-image/index.html">RemoteIDImage</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>id<span class="token operator">: </span><a href="../../simbot-commons/simbot-common-core/love.forte.simbot.common.id/-i-d/index.html">ID</a></span></span><span class="token punctuation">)</span> : <a href="-remote-image/index.html">RemoteImage</a></div><div class="brief "><p class="paragraph">一个仅基于 <a href="../../simbot-commons/simbot-common-core/love.forte.simbot.common.id/-i-d/index.html">ID</a> 的 <a href="-remote-image/index.html">RemoteImage</a> 基础实现。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="496528754%2FClasslikes%2F-1602927896" anchor-label="RemoteImage" id="496528754%2FClasslikes%2F-1602927896" data-filterable-set=":simbot-api/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-api/commonMain" data-filterable-set=":simbot-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-remote-image/index.html"><span>Remote</span><wbr><span><span>Image</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="496528754%2FClasslikes%2F-1602927896"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-remote-image/index.html">RemoteImage</a> : <a href="-image/index.html">Image</a>, <a href="-i-d-aware-image/index.html">IDAwareImage</a></div><div class="brief "><p class="paragraph">一个远程图片消息元素类型。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1178528895%2FClasslikes%2F-1602927896" anchor-label="RemoteUrlAwareImage" id="-1178528895%2FClasslikes%2F-1602927896" data-filterable-set=":simbot-api/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-api/commonMain" data-filterable-set=":simbot-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-remote-url-aware-image/index.html"><span>Remote</span><wbr><span>Url</span><wbr><span>Aware</span><wbr><span><span>Image</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1178528895%2FClasslikes%2F-1602927896"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-remote-url-aware-image/index.html">RemoteUrlAwareImage</a> : <a href="-remote-image/index.html">RemoteImage</a>, <a href="-url-aware-image/index.html">UrlAwareImage</a></div><div class="brief "><p class="paragraph">一个可以感知或查询到图片链接的远程图片消息元素类型。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-512559108%2FClasslikes%2F-1602927896" anchor-label="RichMediaMessage" id="-512559108%2FClasslikes%2F-1602927896" data-filterable-set=":simbot-api/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-api/commonMain" data-filterable-set=":simbot-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-rich-media-message/index.html"><span>Rich</span><wbr><span>Media</span><wbr><span><span>Message</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-512559108%2FClasslikes%2F-1602927896"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-rich-media-message/index.html">RichMediaMessage</a> : <a href="-standard-message/index.html">StandardMessage</a></div><div class="brief "><p class="paragraph">一个可以表示富媒体的消息元素类型， 即一个与二进制数据（例如文件、音频等）相关的非文字消息元素。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="219958047%2FClasslikes%2F-1602927896" anchor-label="ScheduledDeprecatedOfflineImageResolverApi" id="219958047%2FClasslikes%2F-1602927896" data-filterable-set=":simbot-api/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-api/commonMain" data-filterable-set=":simbot-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-scheduled-deprecated-offline-image-resolver-api/index.html"><span>Scheduled</span><wbr><span>Deprecated</span><wbr><span>Offline</span><wbr><span>Image</span><wbr><span>Resolver</span><wbr><span><span>Api</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="219958047%2FClasslikes%2F-1602927896"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.annotation/-target/index.html"><span class="token annotation builtin">Target</span></a><span class="token punctuation">(</span><span>allowedTargets<span class="token operator"> = </span><span class="token punctuation">[</span><span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.annotation/-annotation-target/-c-l-a-s-s/index.html">AnnotationTarget.CLASS</a><span class="token punctuation">, </span></span><wbr><span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.annotation/-annotation-target/-f-u-n-c-t-i-o-n/index.html">AnnotationTarget.FUNCTION</a></span><wbr><span class="token punctuation">]</span></span><wbr><span class="token punctuation">)</span></div></div><span class="token keyword">annotation class </span><a href="-scheduled-deprecated-offline-image-resolver-api/index.html">ScheduledDeprecatedOfflineImageResolverApi</a></div><div class="brief "><p class="paragraph">计划被废弃的与 <a href="-offline-image-resolver/index.html">OfflineImageResolver</a> 相关的API</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-85776641%2FClasslikes%2F-1602927896" anchor-label="SimpleOfflineResourceImage" id="-85776641%2FClasslikes%2F-1602927896" data-filterable-set=":simbot-api/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-api/commonMain" data-filterable-set=":simbot-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-simple-offline-resource-image/index.html"><span>Simple</span><wbr><span>Offline</span><wbr><span>Resource</span><wbr><span><span>Image</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-85776641%2FClasslikes%2F-1602927896"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-core/kotlinx.serialization/-serializable/index.html"><span class="token annotation builtin">Serializable</span></a></div><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-core/kotlinx.serialization/-serial-name/index.html"><span class="token annotation builtin">SerialName</span></a><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">"m.std.img.offline.resource"</span></span></span><wbr><span class="token punctuation">)</span></div></div><span class="token keyword">data </span><span class="token keyword">class </span><a href="-simple-offline-resource-image/index.html">SimpleOfflineResourceImage</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>resource<span class="token operator">: </span><a href="../love.forte.simbot.resource/-resource/index.html">Resource</a></span></span><span class="token punctuation">)</span> : <a href="-offline-resource-image/index.html">OfflineResourceImage</a></div><div class="brief "><p class="paragraph">最基础的、基于 <a href="../love.forte.simbot.resource/-resource/index.html">Resource</a> 实现的 <a href="-offline-resource-image/index.html">OfflineResourceImage</a>。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1003667422%2FClasslikes%2F-1602927896" anchor-label="SingleMessageReceipt" id="-1003667422%2FClasslikes%2F-1602927896" data-filterable-set=":simbot-api/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-api/commonMain" data-filterable-set=":simbot-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-single-message-receipt/index.html"><span>Single</span><wbr><span>Message</span><wbr><span><span>Receipt</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1003667422%2FClasslikes%2F-1602927896"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">class </span><a href="-single-message-receipt/index.html">SingleMessageReceipt</a> : <a href="-standard-message-receipt/index.html">StandardMessageReceipt</a></div><div class="brief "><p class="paragraph">明确代表为一个或零个（发送失败时）具体消息的消息回执，可以作为 <a href="-aggregated-message-receipt/index.html">AggregatedMessageReceipt</a> 的元素进行聚合。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1419362755%2FClasslikes%2F-1602927896" anchor-label="StandardMessage" id="-1419362755%2FClasslikes%2F-1602927896" data-filterable-set=":simbot-api/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-api/commonMain" data-filterable-set=":simbot-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-standard-message/index.html"><span>Standard</span><wbr><span><span>Message</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1419362755%2FClasslikes%2F-1602927896"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api/commonMain"><div class="symbol monospace"><span class="token keyword">sealed </span><span class="token keyword">interface </span><a href="-standard-message/index.html">StandardMessage</a> : <a href="-message/-element/index.html">Message.Element</a></div><div class="brief "><p class="paragraph">一些由核心提供的标准 <a href="-message/-element/index.html">Message.Element</a> 类型。 标准消息中，仅提供如下实现：</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="898337165%2FClasslikes%2F-1602927896" anchor-label="StandardMessageReceipt" id="898337165%2FClasslikes%2F-1602927896" data-filterable-set=":simbot-api/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-api/commonMain" data-filterable-set=":simbot-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-standard-message-receipt/index.html"><span>Standard</span><wbr><span>Message</span><wbr><span><span>Receipt</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="898337165%2FClasslikes%2F-1602927896"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api/commonMain"><div class="symbol monospace"><span class="token keyword">sealed </span><span class="token keyword">interface </span><a href="-standard-message-receipt/index.html">StandardMessageReceipt</a> : <a href="-message-receipt/index.html">MessageReceipt</a></div><div class="brief "><p class="paragraph">由 <a href="-message-receipt/index.html">MessageReceipt</a> 衍生的标准消息回执类型, 提供用于表示独立元素回执的 <a href="-single-message-receipt/index.html">SingleMessageReceipt</a> 和复合回执的 <a href="-aggregated-message-receipt/index.html">AggregatedMessageReceipt</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="913003534%2FClasslikes%2F-1602927896" anchor-label="Text" id="913003534%2FClasslikes%2F-1602927896" data-filterable-set=":simbot-api/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-api/commonMain" data-filterable-set=":simbot-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-text/index.html"><span><span>Text</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="913003534%2FClasslikes%2F-1602927896"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-core/kotlinx.serialization/-serializable/index.html"><span class="token annotation builtin">Serializable</span></a></div><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-core/kotlinx.serialization/-serial-name/index.html"><span class="token annotation builtin">SerialName</span></a><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">"m.std.text"</span></span></span><wbr><span class="token punctuation">)</span></div></div><span class="token keyword">class </span><a href="-text/index.html">Text</a> : <a href="-plain-text/index.html">PlainText</a></div><div class="brief "><p class="paragraph">一个文本消息 <a href="-text/index.html">Text</a>。<a href="-text/index.html">Text</a> 是 <a href="-plain-text/index.html">PlainText</a> 基础实现类型。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-168391653%2FClasslikes%2F-1602927896" anchor-label="UrlAwareImage" id="-168391653%2FClasslikes%2F-1602927896" data-filterable-set=":simbot-api/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-api/commonMain" data-filterable-set=":simbot-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-url-aware-image/index.html"><span>Url</span><wbr><span>Aware</span><wbr><span><span>Image</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-168391653%2FClasslikes%2F-1602927896"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-url-aware-image/index.html">UrlAwareImage</a> : <a href="-image/index.html">Image</a>, <a href="-url-aware-message/index.html">UrlAwareMessage</a></div><div class="brief "><p class="paragraph">一个可以感知或获取到 url 信息的 <a href="-image/index.html">Image</a>。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1607095889%2FClasslikes%2F-1602927896" anchor-label="UrlAwareMessage" id="-1607095889%2FClasslikes%2F-1602927896" data-filterable-set=":simbot-api/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-api/commonMain" data-filterable-set=":simbot-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-url-aware-message/index.html"><span>Url</span><wbr><span>Aware</span><wbr><span><span>Message</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1607095889%2FClasslikes%2F-1602927896"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-url-aware-message/index.html">UrlAwareMessage</a></div><div class="brief "><p class="paragraph">表示为一个可以得知 URL 地址的消息元素， 例如 <a href="-url-aware-image/index.html">UrlAwareImage</a>。 应当由某个 <a href="-message/-element/index.html">Message.Element</a> 的子类型实现。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="EXTENSION_PROPERTY">
+        <h2 class="tableheader">Inherited properties</h2>
+        <div class="table"><a data-name="920314099%2FProperties%2F-1602927896" anchor-label="safePlainText" id="920314099%2FProperties%2F-1602927896" data-filterable-set=":simbot-api/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-api/commonMain" data-filterable-set=":simbot-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="safe-plain-text.html"><span>safe</span><wbr><span>Plain</span><wbr><span><span>Text</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="920314099%2FProperties%2F-1602927896"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-message-content/index.html">MessageContent</a><span class="token punctuation">.</span><a href="safe-plain-text.html">safePlainText</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">如果 <a href="-message-content/plain-text.html">MessageContent.plainText</a> 为 <code class="lang-kotlin">null</code>，则以空字符串 <code class="lang-kotlin">""</code> 替代之。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="tableheader">Functions</h2>
+        <div class="table"><a data-name="-155969950%2FFunctions%2F-1602927896" anchor-label="buildMessages" id="-155969950%2FFunctions%2F-1602927896" data-filterable-set=":simbot-api/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-api/commonMain" data-filterable-set=":simbot-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="build-messages.html"><span>build</span><wbr><span><span>Messages</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-155969950%2FFunctions%2F-1602927896"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api/commonMain"><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><a href="build-messages.html"><span class="token function">buildMessages</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">container<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-mutable-list/index.html">MutableList</a><span class="token operator">&lt;</span><a href="-message/-element/index.html">Message.Element</a><span class="token operator">&gt;</span><span class="token operator"> = </span>mutableListOf()<span class="token punctuation">, </span></span><span class="parameter ">block<span class="token operator">: </span><a href="-messages-builder/index.html">MessagesBuilder</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-messages/index.html">Messages</a></div><div class="brief "><p class="paragraph">Builds a list of Messages using the provided container and block.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1616764701%2FFunctions%2F-1602927896" anchor-label="emptyMessages" id="1616764701%2FFunctions%2F-1602927896" data-filterable-set=":simbot-api/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-api/commonMain" data-filterable-set=":simbot-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="empty-messages.html"><span>empty</span><wbr><span><span>Messages</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1616764701%2FFunctions%2F-1602927896"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="empty-messages.html"><span class="token function">emptyMessages</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-messages/index.html">Messages</a></div><div class="brief "><p class="paragraph">返回一个空的 <a href="-messages/index.html">Messages</a> 对象</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1366023263%2FFunctions%2F-1602927896" anchor-label="messagesOf" id="-1366023263%2FFunctions%2F-1602927896" data-filterable-set=":simbot-api/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-api/commonMain" data-filterable-set=":simbot-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="messages-of.html"><span>messages</span><wbr><span><span>Of</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1366023263%2FFunctions%2F-1602927896"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="messages-of.html"><span class="token function">messagesOf</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">element<span class="token operator">: </span><a href="-message/-element/index.html">Message.Element</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-messages/index.html">Messages</a></div><div class="brief "><p class="paragraph">创建一个单元素的 <a href="-messages/index.html">Messages</a> 对象</p></div><div class="symbol monospace"><span class="token keyword">fun </span><a href="messages-of.html"><span class="token function">messagesOf</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">vararg </span>elements<span class="token operator">: </span><a href="-message/-element/index.html">Message.Element</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-messages/index.html">Messages</a></div><div class="brief "><p class="paragraph">根据输入的消息元素数组创建 <a href="-messages/index.html">Messages</a> 对象</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1443843313%2FFunctions%2F-1602927896" anchor-label="Text" id="1443843313%2FFunctions%2F-1602927896" data-filterable-set=":simbot-api/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-api/commonMain" data-filterable-set=":simbot-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-text.html"><span><span>Text</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1443843313%2FFunctions%2F-1602927896"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="-text.html"><span class="token function">Text</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-text/index.html">Text</a></div><div class="brief "><p class="paragraph">得到一个空的 <a href="-text.html">Text</a>.</p></div><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><a href="-text.html"><span class="token function">Text</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">block<span class="token operator">: </span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-text/index.html">Text</a></div><div class="brief "><p class="paragraph">构建一个 <a href="-text.html">Text</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="EXTENSION_FUNCTION">
+        <h2 class="tableheader">Inherited functions</h2>
+        <div class="table"><a data-name="1296099836%2FFunctions%2F-1602927896" anchor-label="aggregation" id="1296099836%2FFunctions%2F-1602927896" data-filterable-set=":simbot-api/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-api/commonMain" data-filterable-set=":simbot-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="aggregation.html"><span><span>aggregation</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1296099836%2FFunctions%2F-1602927896"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-collection/index.html">Collection</a><span class="token operator">&lt;</span><a href="-single-message-receipt/index.html">SingleMessageReceipt</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="aggregation.html"><span class="token function">aggregation</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-aggregated-message-receipt/index.html">AggregatedMessageReceipt</a></div><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-iterable/index.html">Iterable</a><span class="token operator">&lt;</span><a href="-single-message-receipt/index.html">SingleMessageReceipt</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="aggregation.html"><span class="token function">aggregation</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-aggregated-message-receipt/index.html">AggregatedMessageReceipt</a></div><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="-single-message-receipt/index.html">SingleMessageReceipt</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="aggregation.html"><span class="token function">aggregation</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-aggregated-message-receipt/index.html">AggregatedMessageReceipt</a></div><div class="brief "><p class="paragraph">将多个 <a href="-single-message-receipt/index.html">SingleMessageReceipt</a> 聚合为 <a href="-aggregated-message-receipt/index.html">AggregatedMessageReceipt</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-481272104%2FFunctions%2F-1602927896" anchor-label="decodeMessagesFromString" id="-481272104%2FFunctions%2F-1602927896" data-filterable-set=":simbot-api/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-api/commonMain" data-filterable-set=":simbot-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="decode-messages-from-string.html"><span>decode</span><wbr><span>Messages</span><wbr><span>From</span><wbr><span><span>String</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-481272104%2FFunctions%2F-1602927896"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-core/kotlinx.serialization/-string-format/index.html">StringFormat</a><span class="token punctuation">.</span><a href="decode-messages-from-string.html"><span class="token function">decodeMessagesFromString</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">string<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-messages/index.html">Messages</a></div><div class="brief "><p class="paragraph">Decodes a string representation of Messages using the provided StringFormat.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-487202700%2FFunctions%2F-1602927896" anchor-label="deleteAllSafely" id="-487202700%2FFunctions%2F-1602927896" data-filterable-set=":simbot-api/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-api/commonMain" data-filterable-set=":simbot-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="delete-all-safely.html"><span>delete</span><wbr><span>All</span><wbr><span><span>Safely</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-487202700%2FFunctions%2F-1602927896"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api/commonMain"><div class="symbol monospace"><span class="token keyword">inline suspend </span><span class="token keyword">fun </span><a href="-aggregated-message-receipt/index.html">AggregatedMessageReceipt</a><span class="token punctuation">.</span><a href="delete-all-safely.html"><span class="token function">deleteAllSafely</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">vararg </span>options<span class="token operator">: </span><a href="../love.forte.simbot.ability/-delete-option/index.html">DeleteOption</a><span class="token punctuation">, </span></span><span class="parameter ">onResult<span class="token operator">: </span><span class="token punctuation">(</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-result/index.html">Result</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a><span class="token operator">&gt;</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a><span class="token operator"> = </span>{ /* Ignore it. */ }</span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">尝试删除其所代表的所有消息回执。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1216760878%2FFunctions%2F-1602927896" anchor-label="encodeMessagesToString" id="-1216760878%2FFunctions%2F-1602927896" data-filterable-set=":simbot-api/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-api/commonMain" data-filterable-set=":simbot-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="encode-messages-to-string.html"><span>encode</span><wbr><span>Messages</span><wbr><span>To</span><wbr><span><span>String</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1216760878%2FFunctions%2F-1602927896"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-core/kotlinx.serialization/-string-format/index.html">StringFormat</a><span class="token punctuation">.</span><a href="encode-messages-to-string.html"><span class="token function">encodeMessagesToString</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">messages<span class="token operator">: </span><a href="-messages/index.html">Messages</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">Encodes the given <a href="encode-messages-to-string.html">messages</a> object to a String representation using the StringFormat.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-502625151%2FFunctions%2F-1602927896" anchor-label="isNotEmpty" id="-502625151%2FFunctions%2F-1602927896" data-filterable-set=":simbot-api/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-api/commonMain" data-filterable-set=":simbot-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-not-empty.html"><span>is</span><wbr><span>Not</span><wbr><span><span>Empty</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-502625151%2FFunctions%2F-1602927896"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="-messages/index.html">Messages</a><span class="token punctuation">.</span><a href="is-not-empty.html"><span class="token function">isNotEmpty</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">判断 <a href="-messages/index.html">Messages</a> 中是否存在任何元素。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-16991585%2FFunctions%2F-1602927896" anchor-label="messageElementPolymorphic" id="-16991585%2FFunctions%2F-1602927896" data-filterable-set=":simbot-api/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-api/commonMain" data-filterable-set=":simbot-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="message-element-polymorphic.html"><span>message</span><wbr><span>Element</span><wbr><span><span>Polymorphic</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-16991585%2FFunctions%2F-1602927896"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api/commonMain"><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-core/kotlinx.serialization.modules/-serializers-module-builder/index.html">SerializersModuleBuilder</a><span class="token punctuation">.</span><a href="message-element-polymorphic.html"><span class="token function">messageElementPolymorphic</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">block<span class="token operator">: </span><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-core/kotlinx.serialization.modules/-polymorphic-module-builder/index.html">PolymorphicModuleBuilder</a><span class="token operator">&lt;</span><a href="-message/-element/index.html">Message.Element</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Configure polymorphic for <a href="-message/-element/index.html">Message.Element</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="851110348%2FFunctions%2F-1602927896" anchor-label="plus" id="851110348%2FFunctions%2F-1602927896" data-filterable-set=":simbot-api/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-api/commonMain" data-filterable-set=":simbot-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="plus.html"><span><span>plus</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="851110348%2FFunctions%2F-1602927896"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api/commonMain"><div class="symbol monospace"><span class="token keyword">operator </span><span class="token keyword">fun </span><a href="-message/index.html">Message</a><span class="token punctuation">.</span><a href="plus.html"><span class="token function">plus</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">other<span class="token operator">: </span><a href="-message/index.html">Message</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-messages/index.html">Messages</a></div><div class="brief "><p class="paragraph">合并两个 <a href="-message/index.html">Message</a> 为 <a href="-messages/index.html">Messages</a>。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1400801575%2FFunctions%2F-1602927896" anchor-label="plusAssign" id="1400801575%2FFunctions%2F-1602927896" data-filterable-set=":simbot-api/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-api/commonMain" data-filterable-set=":simbot-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="plus-assign.html"><span>plus</span><wbr><span><span>Assign</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1400801575%2FFunctions%2F-1602927896"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api/commonMain"><div class="symbol monospace"><span class="token keyword">operator </span><span class="token keyword">fun </span><a href="-messages-addable/index.html">MessagesAddable</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="plus-assign.html"><span class="token function">plusAssign</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">text<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">使用 <code class="lang-kotlin">+=</code> operator 添加 <a href="plus-assign.html">text</a>。</p></div><div class="symbol monospace"><span class="token keyword">operator </span><span class="token keyword">fun </span><a href="-messages-addable/index.html">MessagesAddable</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="plus-assign.html"><span class="token function">plusAssign</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">messages<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-iterable/index.html">Iterable</a><span class="token operator">&lt;</span><a href="-message/-element/index.html">Message.Element</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">使用 <code class="lang-kotlin">+=</code> operator 添加 <a href="plus-assign.html">messages</a>。</p></div><div class="symbol monospace"><span class="token keyword">operator </span><span class="token keyword">fun </span><a href="-messages-addable/index.html">MessagesAddable</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="plus-assign.html"><span class="token function">plusAssign</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">element<span class="token operator">: </span><a href="-message/-element/index.html">Message.Element</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">使用 <code class="lang-kotlin">+=</code> operator 添加 <a href="plus-assign.html">element</a>。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1241844605%2FFunctions%2F-1602927896" anchor-label="toMessages" id="1241844605%2FFunctions%2F-1602927896" data-filterable-set=":simbot-api/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-api/commonMain" data-filterable-set=":simbot-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="to-messages.html"><span>to</span><wbr><span><span>Messages</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1241844605%2FFunctions%2F-1602927896"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-iterable/index.html">Iterable</a><span class="token operator">&lt;</span><a href="-message/-element/index.html">Message.Element</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="to-messages.html"><span class="token function">toMessages</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-messages/index.html">Messages</a></div><div class="brief "><p class="paragraph">将元素集转换为 <a href="-messages/index.html">Messages</a> 对象</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="559660157%2FFunctions%2F2020429523" anchor-label="toOfflineResourceImage" id="559660157%2FFunctions%2F2020429523" data-filterable-set=":simbot-api/commonMain,:simbot-api/jsMain,:simbot-api/jvmMain,:simbot-api/nativeMain,:simbot-api/wasmJsMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-api/commonMain,:simbot-api/jsMain,:simbot-api/jvmMain,:simbot-api/nativeMain,:simbot-api/wasmJsMain" data-filterable-set=":simbot-api/commonMain,:simbot-api/jsMain,:simbot-api/jvmMain,:simbot-api/nativeMain,:simbot-api/wasmJsMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="to-offline-resource-image.html"><span>to</span><wbr><span>Offline</span><wbr><span>Resource</span><wbr><span><span>Image</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="559660157%2FFunctions%2F2020429523"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":simbot-api/commonMain" data-filterable-set=":simbot-api/commonMain" data-active="" data-toggle=":simbot-api/commonMain">common</button><button class="platform-bookmark" data-filterable-current=":simbot-api/jsMain" data-filterable-set=":simbot-api/jsMain" data-toggle=":simbot-api/jsMain">js</button><button class="platform-bookmark" data-filterable-current=":simbot-api/jvmMain" data-filterable-set=":simbot-api/jvmMain" data-toggle=":simbot-api/jvmMain">jvm</button><button class="platform-bookmark" data-filterable-current=":simbot-api/nativeMain" data-filterable-set=":simbot-api/nativeMain" data-toggle=":simbot-api/nativeMain">native</button><button class="platform-bookmark" data-filterable-current=":simbot-api/wasmJsMain" data-filterable-set=":simbot-api/wasmJsMain" data-toggle=":simbot-api/wasmJsMain">wasmJs</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api/commonMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword">fun </span><a href="../love.forte.simbot.resource/-resource/index.html">Resource</a><span class="token punctuation">.</span><a href="to-offline-resource-image.html"><span class="token function">toOfflineResourceImage</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-offline-resource-image/index.html">OfflineResourceImage</a></div><div class="brief "><p class="paragraph">将 <a href="../love.forte.simbot.resource/-resource/index.html">Resource</a> 转化为 <a href="-offline-resource-image/index.html">OfflineResourceImage</a>。</p></div></div><div class="content sourceset-dependent-content" data-togglable=":simbot-api/jsMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">fun </span><a href="../love.forte.simbot.resource/-resource/index.html#1592758448%2FMain%2F905258634">Resource</a><span class="token punctuation">.</span><a href="to-offline-resource-image.html"><span class="token function">toOfflineResourceImage</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../simbot-api/love.forte.simbot.message/-offline-resource-image/index.html">OfflineResourceImage</a></div><div class="brief "><p class="paragraph">将 <a href="../love.forte.simbot.resource/-resource/index.html#1592758448%2FMain%2F905258634">Resource</a> 转化为 <a href="../../simbot-api/love.forte.simbot.message/-offline-resource-image/index.html">OfflineResourceImage</a>。</p></div></div><div class="content sourceset-dependent-content" data-togglable=":simbot-api/jvmMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">fun </span><a href="../love.forte.simbot.resource/-resource/index.html">Resource</a><span class="token punctuation">.</span><a href="to-offline-resource-image.html"><span class="token function">toOfflineResourceImage</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-offline-resource-image/index.html">OfflineResourceImage</a></div><div class="brief "><p class="paragraph">将 <a href="../love.forte.simbot.resource/-resource/index.html">Resource</a> 转化为 <a href="-offline-resource-image/index.html">OfflineResourceImage</a>。</p></div></div><div class="content sourceset-dependent-content" data-togglable=":simbot-api/nativeMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">fun </span><a href="../love.forte.simbot.resource/-resource/index.html">Resource</a><span class="token punctuation">.</span><a href="to-offline-resource-image.html"><span class="token function">toOfflineResourceImage</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-offline-resource-image/index.html">OfflineResourceImage</a></div><div class="brief "><p class="paragraph">将 <a href="../love.forte.simbot.resource/-resource/index.html">Resource</a> 转化为 <a href="-offline-resource-image/index.html">OfflineResourceImage</a>。</p></div></div><div class="content sourceset-dependent-content" data-togglable=":simbot-api/wasmJsMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">fun </span><a href="../love.forte.simbot.resource/-resource/index.html#1592758448%2FMain%2F-46295921">Resource</a><span class="token punctuation">.</span><a href="to-offline-resource-image.html"><span class="token function">toOfflineResourceImage</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../simbot-api/love.forte.simbot.message/-offline-resource-image/index.html">OfflineResourceImage</a></div><div class="brief "><p class="paragraph">将 <a href="../love.forte.simbot.resource/-resource/index.html#1592758448%2FMain%2F-46295921">Resource</a> 转化为 <a href="../../simbot-api/love.forte.simbot.message/-offline-resource-image/index.html">OfflineResourceImage</a>。</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1886297602%2FFunctions%2F-1602927896" anchor-label="toText" id="-1886297602%2FFunctions%2F-1602927896" data-filterable-set=":simbot-api/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-api/commonMain" data-filterable-set=":simbot-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="to-text.html"><span>to</span><wbr><span><span>Text</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1886297602%2FFunctions%2F-1602927896"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">.</span><a href="to-text.html"><span class="token function">toText</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-text/index.html">Text</a></div><div class="brief "><p class="paragraph">将一个字符串转化为 <a href="-text/index.html">Text</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>© 2024-2026 <a href="https://github.com/simple-robot">Simple Robot</a>. All rights reserved.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

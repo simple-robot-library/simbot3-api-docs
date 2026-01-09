@@ -1,0 +1,701 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>love.forte.simbot.component.kook.util</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">    <!-- 百度统计 -->
+    <!--suppress ES6ConvertVarToLetConst -->
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            const hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?045f67a122223db9432c7856fc942fad";
+            const s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1JWL2DDTB4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-1JWL2DDTB4');
+    </script>
+<script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+      if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      } else {
+        const savedDarkMode = JSON.parse(storage)
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/safe-local-storage_blocking.js"></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../ui-kit/ui-kit.min.js" defer></script>
+<link href="../../../images/logo-icon.svg">
+<link href="../../../images/logo-icon-light.svg">
+<link href="../../../styles/kdoc-style.css" rel="Stylesheet"></head>
+<body>
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+<a class="library-name--link" href="../../../index.html" tabindex="1">
+                    Simple Robot
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">5.0.0-Preview1
+        </div>
+        <div class="navigation-controls">
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector common-like" data-active="" aria-pressed="true" data-filter=":simbot-component-kook:simbot-component-kook-core/commonMain">common</button>
+                <button class="platform-tag platform-selector jvm-like" data-active="" aria-pressed="true" data-filter=":simbot-component-kook:simbot-component-kook-core/jvmMain">jvm</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option common-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":simbot-component-kook:simbot-component-kook-core/commonMain" data-filter=":simbot-component-kook:simbot-component-kook-core/commonMain">
+                                <span class="checkbox--icon"></span>
+                                common
+                            </label>
+                        </li>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":simbot-component-kook:simbot-component-kook-core/jvmMain" data-filter=":simbot-component-kook:simbot-component-kook-core/jvmMain">
+                                <span class="checkbox--icon"></span>
+                                jvm
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </ul>
+                <a class="navigation-controls--btn navigation-controls--btn_homepage" id="homepage-link" href="https://github.com/simple-robot/simpler-robot"></a>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config="{&quot;defaultSize&quot;: 280, &quot;minSize&quot;: 200, &quot;maxSize&quot;: 400}">
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
+                            <span>
+                                    Simple Robot
+                            </span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
+<div class="main-content" data-page-type="package" id="content" pageids="simbot-component-kook-core::love.forte.simbot.component.kook.util////PointingToDeclaration//878186452">
+  <div class="breadcrumbs"><a href="../index.html">simbot-component-kook-core</a><span class="delimiter">/</span><span class="current">love.forte.simbot.component.kook.util</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Package-level</span></span> <span><span>declarations</span></span></h1>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="FUNCTION,EXTENSION_FUNCTION">Functions</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="EXTENSION_FUNCTION">
+        <h2 class="tableheader">Inherited functions</h2>
+        <div class="table"><a data-name="1843811338%2FFunctions%2F1206321271" anchor-label="request" id="1843811338%2FFunctions%2F1206321271" data-filterable-set=":simbot-component-kook:simbot-component-kook-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-kook:simbot-component-kook-core/commonMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="request.html"><span><span>request</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1843811338%2FFunctions%2F1206321271"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook:simbot-component-kook-core/commonMain"><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../love.forte.simbot.component.kook.bot/-kook-bot/index.html">KookBot</a><span class="token punctuation">.</span><a href="request.html"><span class="token function">request</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">api<span class="token operator">: </span><a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.api/-kook-api/index.html">KookApi</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://api.ktor.io/ktor-client-core/io.ktor.client.statement/-http-response/index.html">HttpResponse</a></div><div class="brief "><p class="paragraph">使用 <a href="../love.forte.simbot.component.kook.bot/-kook-bot/index.html">KookBot</a> 对 <a href="request.html">api</a> 发起请求。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-590321110%2FFunctions%2F-1345869665" anchor-label="requestAsync" id="-590321110%2FFunctions%2F-1345869665" data-filterable-set=":simbot-component-kook:simbot-component-kook-core/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-kook:simbot-component-kook-core/jvmMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-core/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="request-async.html"><span>request</span><wbr><span><span>Async</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-590321110%2FFunctions%2F-1345869665"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":simbot-component-kook:simbot-component-kook-core/jvmMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-core/jvmMain" data-active="" data-toggle=":simbot-component-kook:simbot-component-kook-core/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook:simbot-component-kook-core/jvmMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../../simbot-commons/simbot-common-annotations/love.forte.simbot.annotations/-api4-j/index.html"><span class="token annotation builtin">Api4J</span></a></div></div><span class="token keyword">fun </span><a href="../love.forte.simbot.component.kook.bot/-kook-bot/index.html">KookBot</a><span class="token punctuation">.</span><a href="request-async.html"><span class="token function">requestAsync</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">api<span class="token operator">: </span><a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.api/-kook-api/index.html">KookApi</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/CompletableFuture.html">CompletableFuture</a><span class="token operator">&lt;</span><span class="token keyword">out </span><a href="https://api.ktor.io/ktor-client-core/io.ktor.client.statement/-http-response/index.html">HttpResponse</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">使用 <a href="../love.forte.simbot.component.kook.bot/-kook-bot/index.html">KookBot</a> 对 <a href="request-async.html">api</a> 发起请求。</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1564075039%2FFunctions%2F-1345869665" anchor-label="requestBlocking" id="1564075039%2FFunctions%2F-1345869665" data-filterable-set=":simbot-component-kook:simbot-component-kook-core/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-kook:simbot-component-kook-core/jvmMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-core/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="request-blocking.html"><span>request</span><wbr><span><span>Blocking</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1564075039%2FFunctions%2F-1345869665"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":simbot-component-kook:simbot-component-kook-core/jvmMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-core/jvmMain" data-active="" data-toggle=":simbot-component-kook:simbot-component-kook-core/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook:simbot-component-kook-core/jvmMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../../simbot-commons/simbot-common-annotations/love.forte.simbot.annotations/-api4-j/index.html"><span class="token annotation builtin">Api4J</span></a></div></div><span class="token keyword">fun </span><a href="../love.forte.simbot.component.kook.bot/-kook-bot/index.html">KookBot</a><span class="token punctuation">.</span><a href="request-blocking.html"><span class="token function">requestBlocking</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">api<span class="token operator">: </span><a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.api/-kook-api/index.html">KookApi</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://api.ktor.io/ktor-client-core/io.ktor.client.statement/-http-response/index.html">HttpResponse</a></div><div class="brief "><p class="paragraph">使用 <a href="../love.forte.simbot.component.kook.bot/-kook-bot/index.html">KookBot</a> 对 <a href="request-blocking.html">api</a> 发起请求。</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-659397653%2FFunctions%2F1206321271" anchor-label="requestBy" id="-659397653%2FFunctions%2F1206321271" data-filterable-set=":simbot-component-kook:simbot-component-kook-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-kook:simbot-component-kook-core/commonMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="request-by.html"><span>request</span><wbr><span><span>By</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-659397653%2FFunctions%2F1206321271"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook:simbot-component-kook-core/commonMain"><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.api/-kook-api/index.html">KookApi</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="request-by.html"><span class="token function">requestBy</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">bot<span class="token operator">: </span><a href="../love.forte.simbot.component.kook.bot/-kook-bot/index.html">KookBot</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://api.ktor.io/ktor-client-core/io.ktor.client.statement/-http-response/index.html">HttpResponse</a></div><div class="brief "><p class="paragraph">使用 <a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.api/-kook-api/index.html">KookApi</a> 通过 <a href="request-by.html">bot</a> 发起请求。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-186582019%2FFunctions%2F-1345869665" anchor-label="requestByAsync" id="-186582019%2FFunctions%2F-1345869665" data-filterable-set=":simbot-component-kook:simbot-component-kook-core/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-kook:simbot-component-kook-core/jvmMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-core/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="request-by-async.html"><span>request</span><wbr><span>By</span><wbr><span><span>Async</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-186582019%2FFunctions%2F-1345869665"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":simbot-component-kook:simbot-component-kook-core/jvmMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-core/jvmMain" data-active="" data-toggle=":simbot-component-kook:simbot-component-kook-core/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook:simbot-component-kook-core/jvmMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../../simbot-commons/simbot-common-annotations/love.forte.simbot.annotations/-api4-j/index.html"><span class="token annotation builtin">Api4J</span></a></div></div><span class="token keyword">fun </span><a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.api/-kook-api/index.html">KookApi</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="request-by-async.html"><span class="token function">requestByAsync</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">bot<span class="token operator">: </span><a href="../love.forte.simbot.component.kook.bot/-kook-bot/index.html">KookBot</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/CompletableFuture.html">CompletableFuture</a><span class="token operator">&lt;</span><span class="token keyword">out </span><a href="https://api.ktor.io/ktor-client-core/io.ktor.client.statement/-http-response/index.html">HttpResponse</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">使用 <a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.api/-kook-api/index.html">KookApi</a> 通过 <a href="request-by-async.html">bot</a> 发起请求。</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1070215936%2FFunctions%2F-1345869665" anchor-label="requestByBlocking" id="-1070215936%2FFunctions%2F-1345869665" data-filterable-set=":simbot-component-kook:simbot-component-kook-core/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-kook:simbot-component-kook-core/jvmMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-core/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="request-by-blocking.html"><span>request</span><wbr><span>By</span><wbr><span><span>Blocking</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1070215936%2FFunctions%2F-1345869665"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":simbot-component-kook:simbot-component-kook-core/jvmMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-core/jvmMain" data-active="" data-toggle=":simbot-component-kook:simbot-component-kook-core/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook:simbot-component-kook-core/jvmMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../../simbot-commons/simbot-common-annotations/love.forte.simbot.annotations/-api4-j/index.html"><span class="token annotation builtin">Api4J</span></a></div></div><span class="token keyword">fun </span><a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.api/-kook-api/index.html">KookApi</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="request-by-blocking.html"><span class="token function">requestByBlocking</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">bot<span class="token operator">: </span><a href="../love.forte.simbot.component.kook.bot/-kook-bot/index.html">KookBot</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://api.ktor.io/ktor-client-core/io.ktor.client.statement/-http-response/index.html">HttpResponse</a></div><div class="brief "><p class="paragraph">使用 <a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.api/-kook-api/index.html">KookApi</a> 通过 <a href="request-by-blocking.html">bot</a> 发起请求。</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1707880317%2FFunctions%2F-1345869665" anchor-label="requestByReserve" id="1707880317%2FFunctions%2F-1345869665" data-filterable-set=":simbot-component-kook:simbot-component-kook-core/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-kook:simbot-component-kook-core/jvmMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-core/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="request-by-reserve.html"><span>request</span><wbr><span>By</span><wbr><span><span>Reserve</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1707880317%2FFunctions%2F-1345869665"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":simbot-component-kook:simbot-component-kook-core/jvmMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-core/jvmMain" data-active="" data-toggle=":simbot-component-kook:simbot-component-kook-core/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook:simbot-component-kook-core/jvmMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../../simbot-commons/simbot-common-annotations/love.forte.simbot.annotations/-api4-j/index.html"><span class="token annotation builtin">Api4J</span></a></div></div><span class="token keyword">fun </span><a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.api/-kook-api/index.html">KookApi</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="request-by-reserve.html"><span class="token function">requestByReserve</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">bot<span class="token operator">: </span><a href="../love.forte.simbot.component.kook.bot/-kook-bot/index.html">KookBot</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../../simbot-commons/simbot-common-suspend-runner/love.forte.simbot.suspendrunner.reserve/-suspend-reserve/index.html">SuspendReserve</a><span class="token operator">&lt;</span><a href="https://api.ktor.io/ktor-client-core/io.ktor.client.statement/-http-response/index.html">HttpResponse</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">使用 <a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.api/-kook-api/index.html">KookApi</a> 通过 <a href="request-by-reserve.html">bot</a> 发起请求。</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1969407793%2FFunctions%2F1206321271" anchor-label="requestData" id="1969407793%2FFunctions%2F1206321271" data-filterable-set=":simbot-component-kook:simbot-component-kook-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-kook:simbot-component-kook-core/commonMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="request-data.html"><span>request</span><wbr><span><span>Data</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1969407793%2FFunctions%2F1206321271"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook:simbot-component-kook-core/commonMain"><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="request-data.html">T</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="../love.forte.simbot.component.kook.bot/-kook-bot/index.html">KookBot</a><span class="token punctuation">.</span><a href="request-data.html"><span class="token function">requestData</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">api<span class="token operator">: </span><a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.api/-kook-api/index.html">KookApi</a><span class="token operator">&lt;</span><a href="request-data.html">T</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="request-data.html">T</a></div><div class="brief "><p class="paragraph">使用 <a href="../love.forte.simbot.component.kook.bot/-kook-bot/index.html">KookBot</a> 对 <a href="request-data.html">api</a> 发起请求。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1565902565%2FFunctions%2F-1345869665" anchor-label="requestDataAsync" id="1565902565%2FFunctions%2F-1345869665" data-filterable-set=":simbot-component-kook:simbot-component-kook-core/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-kook:simbot-component-kook-core/jvmMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-core/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="request-data-async.html"><span>request</span><wbr><span>Data</span><wbr><span><span>Async</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1565902565%2FFunctions%2F-1345869665"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":simbot-component-kook:simbot-component-kook-core/jvmMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-core/jvmMain" data-active="" data-toggle=":simbot-component-kook:simbot-component-kook-core/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook:simbot-component-kook-core/jvmMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../../simbot-commons/simbot-common-annotations/love.forte.simbot.annotations/-api4-j/index.html"><span class="token annotation builtin">Api4J</span></a></div></div><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="request-data-async.html">T</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="../love.forte.simbot.component.kook.bot/-kook-bot/index.html">KookBot</a><span class="token punctuation">.</span><a href="request-data-async.html"><span class="token function">requestDataAsync</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">api<span class="token operator">: </span><a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.api/-kook-api/index.html">KookApi</a><span class="token operator">&lt;</span><a href="request-data-async.html">T</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/CompletableFuture.html">CompletableFuture</a><span class="token operator">&lt;</span><span class="token keyword">out </span><a href="request-data-async.html">T</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">使用 <a href="../love.forte.simbot.component.kook.bot/-kook-bot/index.html">KookBot</a> 对 <a href="request-data-async.html">api</a> 发起请求。</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1113393860%2FFunctions%2F-1345869665" anchor-label="requestDataBlocking" id="-1113393860%2FFunctions%2F-1345869665" data-filterable-set=":simbot-component-kook:simbot-component-kook-core/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-kook:simbot-component-kook-core/jvmMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-core/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="request-data-blocking.html"><span>request</span><wbr><span>Data</span><wbr><span><span>Blocking</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1113393860%2FFunctions%2F-1345869665"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":simbot-component-kook:simbot-component-kook-core/jvmMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-core/jvmMain" data-active="" data-toggle=":simbot-component-kook:simbot-component-kook-core/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook:simbot-component-kook-core/jvmMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../../simbot-commons/simbot-common-annotations/love.forte.simbot.annotations/-api4-j/index.html"><span class="token annotation builtin">Api4J</span></a></div></div><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="request-data-blocking.html">T</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="../love.forte.simbot.component.kook.bot/-kook-bot/index.html">KookBot</a><span class="token punctuation">.</span><a href="request-data-blocking.html"><span class="token function">requestDataBlocking</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">api<span class="token operator">: </span><a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.api/-kook-api/index.html">KookApi</a><span class="token operator">&lt;</span><a href="request-data-blocking.html">T</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="request-data-blocking.html">T</a></div><div class="brief "><p class="paragraph">使用 <a href="../love.forte.simbot.component.kook.bot/-kook-bot/index.html">KookBot</a> 对 <a href="request-data-blocking.html">api</a> 发起请求。</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1509483614%2FFunctions%2F1206321271" anchor-label="requestDataBy" id="-1509483614%2FFunctions%2F1206321271" data-filterable-set=":simbot-component-kook:simbot-component-kook-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-kook:simbot-component-kook-core/commonMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="request-data-by.html"><span>request</span><wbr><span>Data</span><wbr><span><span>By</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1509483614%2FFunctions%2F1206321271"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook:simbot-component-kook-core/commonMain"><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="request-data-by.html">T</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.api/-kook-api/index.html">KookApi</a><span class="token operator">&lt;</span><a href="request-data-by.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="request-data-by.html"><span class="token function">requestDataBy</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">bot<span class="token operator">: </span><a href="../love.forte.simbot.component.kook.bot/-kook-bot/index.html">KookBot</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="request-data-by.html">T</a></div><div class="brief "><p class="paragraph">使用 <a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.api/-kook-api/index.html">KookApi</a> 通过 <a href="request-data-by.html">bot</a> 发起请求。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-897953372%2FFunctions%2F-1345869665" anchor-label="requestDataByAsync" id="-897953372%2FFunctions%2F-1345869665" data-filterable-set=":simbot-component-kook:simbot-component-kook-core/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-kook:simbot-component-kook-core/jvmMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-core/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="request-data-by-async.html"><span>request</span><wbr><span>Data</span><wbr><span>By</span><wbr><span><span>Async</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-897953372%2FFunctions%2F-1345869665"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":simbot-component-kook:simbot-component-kook-core/jvmMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-core/jvmMain" data-active="" data-toggle=":simbot-component-kook:simbot-component-kook-core/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook:simbot-component-kook-core/jvmMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../../simbot-commons/simbot-common-annotations/love.forte.simbot.annotations/-api4-j/index.html"><span class="token annotation builtin">Api4J</span></a></div></div><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="request-data-by-async.html">T</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.api/-kook-api/index.html">KookApi</a><span class="token operator">&lt;</span><a href="request-data-by-async.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="request-data-by-async.html"><span class="token function">requestDataByAsync</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">bot<span class="token operator">: </span><a href="../love.forte.simbot.component.kook.bot/-kook-bot/index.html">KookBot</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/CompletableFuture.html">CompletableFuture</a><span class="token operator">&lt;</span><span class="token keyword">out </span><a href="request-data-by-async.html">T</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">使用 <a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.api/-kook-api/index.html">KookApi</a> 通过 <a href="request-data-by-async.html">bot</a> 发起请求。</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-726691667%2FFunctions%2F-1345869665" anchor-label="requestDataByBlocking" id="-726691667%2FFunctions%2F-1345869665" data-filterable-set=":simbot-component-kook:simbot-component-kook-core/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-kook:simbot-component-kook-core/jvmMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-core/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="request-data-by-blocking.html"><span>request</span><wbr><span>Data</span><wbr><span>By</span><wbr><span><span>Blocking</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-726691667%2FFunctions%2F-1345869665"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":simbot-component-kook:simbot-component-kook-core/jvmMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-core/jvmMain" data-active="" data-toggle=":simbot-component-kook:simbot-component-kook-core/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook:simbot-component-kook-core/jvmMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../../simbot-commons/simbot-common-annotations/love.forte.simbot.annotations/-api4-j/index.html"><span class="token annotation builtin">Api4J</span></a></div></div><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="request-data-by-blocking.html">T</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.api/-kook-api/index.html">KookApi</a><span class="token operator">&lt;</span><a href="request-data-by-blocking.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="request-data-by-blocking.html"><span class="token function">requestDataByBlocking</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">bot<span class="token operator">: </span><a href="../love.forte.simbot.component.kook.bot/-kook-bot/index.html">KookBot</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="request-data-by-blocking.html">T</a></div><div class="brief "><p class="paragraph">使用 <a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.api/-kook-api/index.html">KookApi</a> 通过 <a href="request-data-by-blocking.html">bot</a> 发起请求。</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1840784292%2FFunctions%2F-1345869665" anchor-label="requestDataByReserve" id="1840784292%2FFunctions%2F-1345869665" data-filterable-set=":simbot-component-kook:simbot-component-kook-core/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-kook:simbot-component-kook-core/jvmMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-core/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="request-data-by-reserve.html"><span>request</span><wbr><span>Data</span><wbr><span>By</span><wbr><span><span>Reserve</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1840784292%2FFunctions%2F-1345869665"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":simbot-component-kook:simbot-component-kook-core/jvmMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-core/jvmMain" data-active="" data-toggle=":simbot-component-kook:simbot-component-kook-core/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook:simbot-component-kook-core/jvmMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../../simbot-commons/simbot-common-annotations/love.forte.simbot.annotations/-api4-j/index.html"><span class="token annotation builtin">Api4J</span></a></div></div><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="request-data-by-reserve.html">T</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.api/-kook-api/index.html">KookApi</a><span class="token operator">&lt;</span><a href="request-data-by-reserve.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="request-data-by-reserve.html"><span class="token function">requestDataByReserve</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">bot<span class="token operator">: </span><a href="../love.forte.simbot.component.kook.bot/-kook-bot/index.html">KookBot</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../../simbot-commons/simbot-common-suspend-runner/love.forte.simbot.suspendrunner.reserve/-suspend-reserve/index.html">SuspendReserve</a><span class="token operator">&lt;</span><a href="request-data-by-reserve.html">T</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">使用 <a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.api/-kook-api/index.html">KookApi</a> 通过 <a href="request-data-by-reserve.html">bot</a> 发起请求。</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1838237019%2FFunctions%2F-1345869665" anchor-label="requestDataReserve" id="-1838237019%2FFunctions%2F-1345869665" data-filterable-set=":simbot-component-kook:simbot-component-kook-core/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-kook:simbot-component-kook-core/jvmMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-core/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="request-data-reserve.html"><span>request</span><wbr><span>Data</span><wbr><span><span>Reserve</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1838237019%2FFunctions%2F-1345869665"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":simbot-component-kook:simbot-component-kook-core/jvmMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-core/jvmMain" data-active="" data-toggle=":simbot-component-kook:simbot-component-kook-core/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook:simbot-component-kook-core/jvmMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../../simbot-commons/simbot-common-annotations/love.forte.simbot.annotations/-api4-j/index.html"><span class="token annotation builtin">Api4J</span></a></div></div><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="request-data-reserve.html">T</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="../love.forte.simbot.component.kook.bot/-kook-bot/index.html">KookBot</a><span class="token punctuation">.</span><a href="request-data-reserve.html"><span class="token function">requestDataReserve</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">api<span class="token operator">: </span><a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.api/-kook-api/index.html">KookApi</a><span class="token operator">&lt;</span><a href="request-data-reserve.html">T</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../../simbot-commons/simbot-common-suspend-runner/love.forte.simbot.suspendrunner.reserve/-suspend-reserve/index.html">SuspendReserve</a><span class="token operator">&lt;</span><a href="request-data-reserve.html">T</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">使用 <a href="../love.forte.simbot.component.kook.bot/-kook-bot/index.html">KookBot</a> 对 <a href="request-data-reserve.html">api</a> 发起请求。</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-808156182%2FFunctions%2F-1345869665" anchor-label="requestReserve" id="-808156182%2FFunctions%2F-1345869665" data-filterable-set=":simbot-component-kook:simbot-component-kook-core/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-kook:simbot-component-kook-core/jvmMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-core/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="request-reserve.html"><span>request</span><wbr><span><span>Reserve</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-808156182%2FFunctions%2F-1345869665"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":simbot-component-kook:simbot-component-kook-core/jvmMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-core/jvmMain" data-active="" data-toggle=":simbot-component-kook:simbot-component-kook-core/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook:simbot-component-kook-core/jvmMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../../simbot-commons/simbot-common-annotations/love.forte.simbot.annotations/-api4-j/index.html"><span class="token annotation builtin">Api4J</span></a></div></div><span class="token keyword">fun </span><a href="../love.forte.simbot.component.kook.bot/-kook-bot/index.html">KookBot</a><span class="token punctuation">.</span><a href="request-reserve.html"><span class="token function">requestReserve</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">api<span class="token operator">: </span><a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.api/-kook-api/index.html">KookApi</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../../simbot-commons/simbot-common-suspend-runner/love.forte.simbot.suspendrunner.reserve/-suspend-reserve/index.html">SuspendReserve</a><span class="token operator">&lt;</span><a href="https://api.ktor.io/ktor-client-core/io.ktor.client.statement/-http-response/index.html">HttpResponse</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">使用 <a href="../love.forte.simbot.component.kook.bot/-kook-bot/index.html">KookBot</a> 对 <a href="request-reserve.html">api</a> 发起请求。</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1304399239%2FFunctions%2F1206321271" anchor-label="requestResult" id="1304399239%2FFunctions%2F1206321271" data-filterable-set=":simbot-component-kook:simbot-component-kook-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-kook:simbot-component-kook-core/commonMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="request-result.html"><span>request</span><wbr><span><span>Result</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1304399239%2FFunctions%2F1206321271"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook:simbot-component-kook-core/commonMain"><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../love.forte.simbot.component.kook.bot/-kook-bot/index.html">KookBot</a><span class="token punctuation">.</span><a href="request-result.html"><span class="token function">requestResult</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">api<span class="token operator">: </span><a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.api/-kook-api/index.html">KookApi</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.api/-api-result/index.html">ApiResult</a></div><div class="brief "><p class="paragraph">使用 <a href="../love.forte.simbot.component.kook.bot/-kook-bot/index.html">KookBot</a> 对 <a href="request-result.html">api</a> 发起请求。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="371234509%2FFunctions%2F-1345869665" anchor-label="requestResultAsync" id="371234509%2FFunctions%2F-1345869665" data-filterable-set=":simbot-component-kook:simbot-component-kook-core/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-kook:simbot-component-kook-core/jvmMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-core/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="request-result-async.html"><span>request</span><wbr><span>Result</span><wbr><span><span>Async</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="371234509%2FFunctions%2F-1345869665"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":simbot-component-kook:simbot-component-kook-core/jvmMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-core/jvmMain" data-active="" data-toggle=":simbot-component-kook:simbot-component-kook-core/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook:simbot-component-kook-core/jvmMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../../simbot-commons/simbot-common-annotations/love.forte.simbot.annotations/-api4-j/index.html"><span class="token annotation builtin">Api4J</span></a></div></div><span class="token keyword">fun </span><a href="../love.forte.simbot.component.kook.bot/-kook-bot/index.html">KookBot</a><span class="token punctuation">.</span><a href="request-result-async.html"><span class="token function">requestResultAsync</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">api<span class="token operator">: </span><a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.api/-kook-api/index.html">KookApi</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/CompletableFuture.html">CompletableFuture</a><span class="token operator">&lt;</span><span class="token keyword">out </span><a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.api/-api-result/index.html">ApiResult</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">使用 <a href="../love.forte.simbot.component.kook.bot/-kook-bot/index.html">KookBot</a> 对 <a href="request-result-async.html">api</a> 发起请求。</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-164343652%2FFunctions%2F-1345869665" anchor-label="requestResultBlocking" id="-164343652%2FFunctions%2F-1345869665" data-filterable-set=":simbot-component-kook:simbot-component-kook-core/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-kook:simbot-component-kook-core/jvmMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-core/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="request-result-blocking.html"><span>request</span><wbr><span>Result</span><wbr><span><span>Blocking</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-164343652%2FFunctions%2F-1345869665"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":simbot-component-kook:simbot-component-kook-core/jvmMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-core/jvmMain" data-active="" data-toggle=":simbot-component-kook:simbot-component-kook-core/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook:simbot-component-kook-core/jvmMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../../simbot-commons/simbot-common-annotations/love.forte.simbot.annotations/-api4-j/index.html"><span class="token annotation builtin">Api4J</span></a></div></div><span class="token keyword">fun </span><a href="../love.forte.simbot.component.kook.bot/-kook-bot/index.html">KookBot</a><span class="token punctuation">.</span><a href="request-result-blocking.html"><span class="token function">requestResultBlocking</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">api<span class="token operator">: </span><a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.api/-kook-api/index.html">KookApi</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.api/-api-result/index.html">ApiResult</a></div><div class="brief "><p class="paragraph">使用 <a href="../love.forte.simbot.component.kook.bot/-kook-bot/index.html">KookBot</a> 对 <a href="request-result-blocking.html">api</a> 发起请求。</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="656618024%2FFunctions%2F1206321271" anchor-label="requestResultBy" id="656618024%2FFunctions%2F1206321271" data-filterable-set=":simbot-component-kook:simbot-component-kook-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-kook:simbot-component-kook-core/commonMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="request-result-by.html"><span>request</span><wbr><span>Result</span><wbr><span><span>By</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="656618024%2FFunctions%2F1206321271"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook:simbot-component-kook-core/commonMain"><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.api/-kook-api/index.html">KookApi</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="request-result-by.html"><span class="token function">requestResultBy</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">bot<span class="token operator">: </span><a href="../love.forte.simbot.component.kook.bot/-kook-bot/index.html">KookBot</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.api/-api-result/index.html">ApiResult</a></div><div class="brief "><p class="paragraph">使用 <a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.api/-kook-api/index.html">KookApi</a> 通过 <a href="request-result-by.html">bot</a> 发起请求。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="450399200%2FFunctions%2F-1345869665" anchor-label="requestResultByAsync" id="450399200%2FFunctions%2F-1345869665" data-filterable-set=":simbot-component-kook:simbot-component-kook-core/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-kook:simbot-component-kook-core/jvmMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-core/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="request-result-by-async.html"><span>request</span><wbr><span>Result</span><wbr><span>By</span><wbr><span><span>Async</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="450399200%2FFunctions%2F-1345869665"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":simbot-component-kook:simbot-component-kook-core/jvmMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-core/jvmMain" data-active="" data-toggle=":simbot-component-kook:simbot-component-kook-core/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook:simbot-component-kook-core/jvmMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../../simbot-commons/simbot-common-annotations/love.forte.simbot.annotations/-api4-j/index.html"><span class="token annotation builtin">Api4J</span></a></div></div><span class="token keyword">fun </span><a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.api/-kook-api/index.html">KookApi</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="request-result-by-async.html"><span class="token function">requestResultByAsync</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">bot<span class="token operator">: </span><a href="../love.forte.simbot.component.kook.bot/-kook-bot/index.html">KookBot</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/CompletableFuture.html">CompletableFuture</a><span class="token operator">&lt;</span><span class="token keyword">out </span><a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.api/-api-result/index.html">ApiResult</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">使用 <a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.api/-kook-api/index.html">KookApi</a> 通过 <a href="request-result-by-async.html">bot</a> 发起请求。</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="71765565%2FFunctions%2F-1345869665" anchor-label="requestResultByBlocking" id="71765565%2FFunctions%2F-1345869665" data-filterable-set=":simbot-component-kook:simbot-component-kook-core/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-kook:simbot-component-kook-core/jvmMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-core/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="request-result-by-blocking.html"><span>request</span><wbr><span>Result</span><wbr><span>By</span><wbr><span><span>Blocking</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="71765565%2FFunctions%2F-1345869665"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":simbot-component-kook:simbot-component-kook-core/jvmMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-core/jvmMain" data-active="" data-toggle=":simbot-component-kook:simbot-component-kook-core/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook:simbot-component-kook-core/jvmMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../../simbot-commons/simbot-common-annotations/love.forte.simbot.annotations/-api4-j/index.html"><span class="token annotation builtin">Api4J</span></a></div></div><span class="token keyword">fun </span><a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.api/-kook-api/index.html">KookApi</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="request-result-by-blocking.html"><span class="token function">requestResultByBlocking</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">bot<span class="token operator">: </span><a href="../love.forte.simbot.component.kook.bot/-kook-bot/index.html">KookBot</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.api/-api-result/index.html">ApiResult</a></div><div class="brief "><p class="paragraph">使用 <a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.api/-kook-api/index.html">KookApi</a> 通过 <a href="request-result-by-blocking.html">bot</a> 发起请求。</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-333491552%2FFunctions%2F-1345869665" anchor-label="requestResultByReserve" id="-333491552%2FFunctions%2F-1345869665" data-filterable-set=":simbot-component-kook:simbot-component-kook-core/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-kook:simbot-component-kook-core/jvmMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-core/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="request-result-by-reserve.html"><span>request</span><wbr><span>Result</span><wbr><span>By</span><wbr><span><span>Reserve</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-333491552%2FFunctions%2F-1345869665"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":simbot-component-kook:simbot-component-kook-core/jvmMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-core/jvmMain" data-active="" data-toggle=":simbot-component-kook:simbot-component-kook-core/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook:simbot-component-kook-core/jvmMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../../simbot-commons/simbot-common-annotations/love.forte.simbot.annotations/-api4-j/index.html"><span class="token annotation builtin">Api4J</span></a></div></div><span class="token keyword">fun </span><a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.api/-kook-api/index.html">KookApi</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="request-result-by-reserve.html"><span class="token function">requestResultByReserve</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">bot<span class="token operator">: </span><a href="../love.forte.simbot.component.kook.bot/-kook-bot/index.html">KookBot</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../../simbot-commons/simbot-common-suspend-runner/love.forte.simbot.suspendrunner.reserve/-suspend-reserve/index.html">SuspendReserve</a><span class="token operator">&lt;</span><a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.api/-api-result/index.html">ApiResult</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">使用 <a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.api/-kook-api/index.html">KookApi</a> 通过 <a href="request-result-by-reserve.html">bot</a> 发起请求。</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-171174963%2FFunctions%2F-1345869665" anchor-label="requestResultReserve" id="-171174963%2FFunctions%2F-1345869665" data-filterable-set=":simbot-component-kook:simbot-component-kook-core/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-kook:simbot-component-kook-core/jvmMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-core/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="request-result-reserve.html"><span>request</span><wbr><span>Result</span><wbr><span><span>Reserve</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-171174963%2FFunctions%2F-1345869665"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":simbot-component-kook:simbot-component-kook-core/jvmMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-core/jvmMain" data-active="" data-toggle=":simbot-component-kook:simbot-component-kook-core/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook:simbot-component-kook-core/jvmMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../../simbot-commons/simbot-common-annotations/love.forte.simbot.annotations/-api4-j/index.html"><span class="token annotation builtin">Api4J</span></a></div></div><span class="token keyword">fun </span><a href="../love.forte.simbot.component.kook.bot/-kook-bot/index.html">KookBot</a><span class="token punctuation">.</span><a href="request-result-reserve.html"><span class="token function">requestResultReserve</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">api<span class="token operator">: </span><a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.api/-kook-api/index.html">KookApi</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../../simbot-commons/simbot-common-suspend-runner/love.forte.simbot.suspendrunner.reserve/-suspend-reserve/index.html">SuspendReserve</a><span class="token operator">&lt;</span><a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.api/-api-result/index.html">ApiResult</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">使用 <a href="../love.forte.simbot.component.kook.bot/-kook-bot/index.html">KookBot</a> 对 <a href="request-result-reserve.html">api</a> 发起请求。</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-93583849%2FFunctions%2F1206321271" anchor-label="requestText" id="-93583849%2FFunctions%2F1206321271" data-filterable-set=":simbot-component-kook:simbot-component-kook-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-kook:simbot-component-kook-core/commonMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="request-text.html"><span>request</span><wbr><span><span>Text</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-93583849%2FFunctions%2F1206321271"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook:simbot-component-kook-core/commonMain"><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../love.forte.simbot.component.kook.bot/-kook-bot/index.html">KookBot</a><span class="token punctuation">.</span><a href="request-text.html"><span class="token function">requestText</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">api<span class="token operator">: </span><a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.api/-kook-api/index.html">KookApi</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">使用 <a href="../love.forte.simbot.component.kook.bot/-kook-bot/index.html">KookBot</a> 对 <a href="request-text.html">api</a> 发起请求。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="809039933%2FFunctions%2F-1345869665" anchor-label="requestTextAsync" id="809039933%2FFunctions%2F-1345869665" data-filterable-set=":simbot-component-kook:simbot-component-kook-core/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-kook:simbot-component-kook-core/jvmMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-core/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="request-text-async.html"><span>request</span><wbr><span>Text</span><wbr><span><span>Async</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="809039933%2FFunctions%2F-1345869665"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":simbot-component-kook:simbot-component-kook-core/jvmMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-core/jvmMain" data-active="" data-toggle=":simbot-component-kook:simbot-component-kook-core/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook:simbot-component-kook-core/jvmMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../../simbot-commons/simbot-common-annotations/love.forte.simbot.annotations/-api4-j/index.html"><span class="token annotation builtin">Api4J</span></a></div></div><span class="token keyword">fun </span><a href="../love.forte.simbot.component.kook.bot/-kook-bot/index.html">KookBot</a><span class="token punctuation">.</span><a href="request-text-async.html"><span class="token function">requestTextAsync</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">api<span class="token operator">: </span><a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.api/-kook-api/index.html">KookApi</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/CompletableFuture.html">CompletableFuture</a><span class="token operator">&lt;</span><span class="token keyword">out </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">使用 <a href="../love.forte.simbot.component.kook.bot/-kook-bot/index.html">KookBot</a> 对 <a href="request-text-async.html">api</a> 发起请求。</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1318635220%2FFunctions%2F-1345869665" anchor-label="requestTextBlocking" id="-1318635220%2FFunctions%2F-1345869665" data-filterable-set=":simbot-component-kook:simbot-component-kook-core/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-kook:simbot-component-kook-core/jvmMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-core/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="request-text-blocking.html"><span>request</span><wbr><span>Text</span><wbr><span><span>Blocking</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1318635220%2FFunctions%2F-1345869665"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":simbot-component-kook:simbot-component-kook-core/jvmMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-core/jvmMain" data-active="" data-toggle=":simbot-component-kook:simbot-component-kook-core/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook:simbot-component-kook-core/jvmMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../../simbot-commons/simbot-common-annotations/love.forte.simbot.annotations/-api4-j/index.html"><span class="token annotation builtin">Api4J</span></a></div></div><span class="token keyword">fun </span><a href="../love.forte.simbot.component.kook.bot/-kook-bot/index.html">KookBot</a><span class="token punctuation">.</span><a href="request-text-blocking.html"><span class="token function">requestTextBlocking</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">api<span class="token operator">: </span><a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.api/-kook-api/index.html">KookApi</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">使用 <a href="../love.forte.simbot.component.kook.bot/-kook-bot/index.html">KookBot</a> 对 <a href="request-text-blocking.html">api</a> 发起请求。</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1519634104%2FFunctions%2F1206321271" anchor-label="requestTextBy" id="1519634104%2FFunctions%2F1206321271" data-filterable-set=":simbot-component-kook:simbot-component-kook-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-kook:simbot-component-kook-core/commonMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="request-text-by.html"><span>request</span><wbr><span>Text</span><wbr><span><span>By</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1519634104%2FFunctions%2F1206321271"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook:simbot-component-kook-core/commonMain"><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.api/-kook-api/index.html">KookApi</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="request-text-by.html"><span class="token function">requestTextBy</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">bot<span class="token operator">: </span><a href="../love.forte.simbot.component.kook.bot/-kook-bot/index.html">KookBot</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">使用 <a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.api/-kook-api/index.html">KookApi</a> 通过 <a href="request-text-by.html">bot</a> 发起请求。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="274616656%2FFunctions%2F-1345869665" anchor-label="requestTextByAsync" id="274616656%2FFunctions%2F-1345869665" data-filterable-set=":simbot-component-kook:simbot-component-kook-core/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-kook:simbot-component-kook-core/jvmMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-core/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="request-text-by-async.html"><span>request</span><wbr><span>Text</span><wbr><span>By</span><wbr><span><span>Async</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="274616656%2FFunctions%2F-1345869665"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":simbot-component-kook:simbot-component-kook-core/jvmMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-core/jvmMain" data-active="" data-toggle=":simbot-component-kook:simbot-component-kook-core/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook:simbot-component-kook-core/jvmMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../../simbot-commons/simbot-common-annotations/love.forte.simbot.annotations/-api4-j/index.html"><span class="token annotation builtin">Api4J</span></a></div></div><span class="token keyword">fun </span><a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.api/-kook-api/index.html">KookApi</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="request-text-by-async.html"><span class="token function">requestTextByAsync</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">bot<span class="token operator">: </span><a href="../love.forte.simbot.component.kook.bot/-kook-bot/index.html">KookBot</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/CompletableFuture.html">CompletableFuture</a><span class="token operator">&lt;</span><span class="token keyword">out </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">使用 <a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.api/-kook-api/index.html">KookApi</a> 通过 <a href="request-text-by-async.html">bot</a> 发起请求。</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1100868915%2FFunctions%2F-1345869665" anchor-label="requestTextByBlocking" id="-1100868915%2FFunctions%2F-1345869665" data-filterable-set=":simbot-component-kook:simbot-component-kook-core/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-kook:simbot-component-kook-core/jvmMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-core/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="request-text-by-blocking.html"><span>request</span><wbr><span>Text</span><wbr><span>By</span><wbr><span><span>Blocking</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1100868915%2FFunctions%2F-1345869665"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":simbot-component-kook:simbot-component-kook-core/jvmMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-core/jvmMain" data-active="" data-toggle=":simbot-component-kook:simbot-component-kook-core/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook:simbot-component-kook-core/jvmMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../../simbot-commons/simbot-common-annotations/love.forte.simbot.annotations/-api4-j/index.html"><span class="token annotation builtin">Api4J</span></a></div></div><span class="token keyword">fun </span><a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.api/-kook-api/index.html">KookApi</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="request-text-by-blocking.html"><span class="token function">requestTextByBlocking</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">bot<span class="token operator">: </span><a href="../love.forte.simbot.component.kook.bot/-kook-bot/index.html">KookBot</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">使用 <a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.api/-kook-api/index.html">KookApi</a> 通过 <a href="request-text-by-blocking.html">bot</a> 发起请求。</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1756791792%2FFunctions%2F-1345869665" anchor-label="requestTextByReserve" id="-1756791792%2FFunctions%2F-1345869665" data-filterable-set=":simbot-component-kook:simbot-component-kook-core/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-kook:simbot-component-kook-core/jvmMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-core/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="request-text-by-reserve.html"><span>request</span><wbr><span>Text</span><wbr><span>By</span><wbr><span><span>Reserve</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1756791792%2FFunctions%2F-1345869665"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":simbot-component-kook:simbot-component-kook-core/jvmMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-core/jvmMain" data-active="" data-toggle=":simbot-component-kook:simbot-component-kook-core/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook:simbot-component-kook-core/jvmMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../../simbot-commons/simbot-common-annotations/love.forte.simbot.annotations/-api4-j/index.html"><span class="token annotation builtin">Api4J</span></a></div></div><span class="token keyword">fun </span><a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.api/-kook-api/index.html">KookApi</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="request-text-by-reserve.html"><span class="token function">requestTextByReserve</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">bot<span class="token operator">: </span><a href="../love.forte.simbot.component.kook.bot/-kook-bot/index.html">KookBot</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../../simbot-commons/simbot-common-suspend-runner/love.forte.simbot.suspendrunner.reserve/-suspend-reserve/index.html">SuspendReserve</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">使用 <a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.api/-kook-api/index.html">KookApi</a> 通过 <a href="request-text-by-reserve.html">bot</a> 发起请求。</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-346957507%2FFunctions%2F-1345869665" anchor-label="requestTextReserve" id="-346957507%2FFunctions%2F-1345869665" data-filterable-set=":simbot-component-kook:simbot-component-kook-core/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-kook:simbot-component-kook-core/jvmMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-core/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="request-text-reserve.html"><span>request</span><wbr><span>Text</span><wbr><span><span>Reserve</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-346957507%2FFunctions%2F-1345869665"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":simbot-component-kook:simbot-component-kook-core/jvmMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-core/jvmMain" data-active="" data-toggle=":simbot-component-kook:simbot-component-kook-core/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook:simbot-component-kook-core/jvmMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../../simbot-commons/simbot-common-annotations/love.forte.simbot.annotations/-api4-j/index.html"><span class="token annotation builtin">Api4J</span></a></div></div><span class="token keyword">fun </span><a href="../love.forte.simbot.component.kook.bot/-kook-bot/index.html">KookBot</a><span class="token punctuation">.</span><a href="request-text-reserve.html"><span class="token function">requestTextReserve</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">api<span class="token operator">: </span><a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.api/-kook-api/index.html">KookApi</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../../simbot-commons/simbot-common-suspend-runner/love.forte.simbot.suspendrunner.reserve/-suspend-reserve/index.html">SuspendReserve</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">使用 <a href="../love.forte.simbot.component.kook.bot/-kook-bot/index.html">KookBot</a> 对 <a href="request-text-reserve.html">api</a> 发起请求。</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1500207742%2FFunctions%2F1206321271" anchor-label="walk" id="1500207742%2FFunctions%2F1206321271" data-filterable-set=":simbot-component-kook:simbot-component-kook-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-kook:simbot-component-kook-core/commonMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="walk.html"><span><span>walk</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1500207742%2FFunctions%2F1206321271"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook:simbot-component-kook-core/commonMain"><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.text/-regex/index.html">Regex</a><span class="token punctuation">.</span><a href="walk.html"><span class="token function">walk</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">input<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">onOther<span class="token operator">: </span><span class="token punctuation">(</span>input<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span>start<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span>end<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a><span class="token punctuation">, </span></span><span class="parameter ">onMatch<span class="token operator">: </span><span class="token punctuation">(</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.text/-match-result/index.html">MatchResult</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>© 2024-2026 <a href="https://github.com/simple-robot">Simple Robot</a>. All rights reserved.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
