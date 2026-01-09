@@ -1,0 +1,331 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>SuspendTransforms</title>
+<link href="../../../../images/logo-icon.svg" rel="icon" type="image/svg">    <!-- 百度统计 -->
+    <!--suppress ES6ConvertVarToLetConst -->
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            const hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?045f67a122223db9432c7856fc942fad";
+            const s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1JWL2DDTB4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-1JWL2DDTB4');
+    </script>
+<script>var pathToRoot = "../../../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+      if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      } else {
+        const savedDarkMode = JSON.parse(storage)
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../../styles/style.css" rel="Stylesheet">
+<link href="../../../../styles/main.css" rel="Stylesheet">
+<link href="../../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../../scripts/safe-local-storage_blocking.js"></script>
+<script type="text/javascript" src="../../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../../ui-kit/ui-kit.min.js" defer></script>
+<link href="../../../../images/logo-icon.svg">
+<link href="../../../../images/logo-icon-light.svg">
+<link href="../../../../styles/kdoc-style.css" rel="Stylesheet"></head>
+<body>
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+<a class="library-name--link" href="../../../../index.html" tabindex="1">
+                    Simple Robot
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">5.0.0-Preview1-SNAPSHOT
+        </div>
+        <div class="navigation-controls">
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector jvm-like" data-active="" aria-pressed="true" data-filter=":simbot-gradles:simbot-gradle-suspendtransforms/main">jvm</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":simbot-gradles:simbot-gradle-suspendtransforms/main" data-filter=":simbot-gradles:simbot-gradle-suspendtransforms/main">
+                                <span class="checkbox--icon"></span>
+                                jvm
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </ul>
+                <a class="navigation-controls--btn navigation-controls--btn_homepage" id="homepage-link" href="https://github.com/simple-robot/simpler-robot"></a>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config="{&quot;defaultSize&quot;: 280, &quot;minSize&quot;: 200, &quot;maxSize&quot;: 400}">
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
+                            <span>
+                                    Simple Robot
+                            </span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="simbot-gradle-suspendtransforms::love.forte.simbot.gradle.suspendtransforms/SuspendTransforms///PointingToDeclaration//2126066287">
+  <div class="breadcrumbs"><a href="../../index.html">simbot-gradle-suspendtransforms</a><span class="delimiter">/</span><a href="../index.html">love.forte.simbot.gradle.suspendtransforms</a><span class="delimiter">/</span><span class="current">SuspendTransforms</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Suspend</span><wbr><span><span>Transforms</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-gradles:simbot-gradle-suspendtransforms/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="index.html"><strike>SuspendTransforms</strike></a><span class="source-link-wrapper"><span class="source-link" data-element-type="source-link">(<a href="https://github.com/simple-robot/simpler-robot/tree/dev/main/simbot-gradles/simbot-gradle-suspendtransforms/src/main/kotlin/love/forte/simbot/gradle/suspendtransforms/SuspendTransforms.kt#L59">source</a>)</span></span></div><div class="deprecation-content"><h3 class="">Deprecated</h3><p class="paragraph">Deprecated extensions, use SuspendTransformPlugins plz.</p></div><p class="paragraph">添加至 gradle 项目的 <code class="lang-kotlin">buildSrc</code> 中，并在需要配置 <code class="lang-kotlin">suspendTransform</code> 的地方：</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">suspendTransform {<br>    includeRuntime = false<br>    includeAnnotation = false<br><br>    addJvmTransformers(<br>        // @JvmBlocking<br>        SuspendTransforms.jvmBlockingTransformer,<br>        // @JvmAsync<br>        SuspendTransforms.jvmAsyncTransformer,<br><br>        // @JvmSuspendTrans<br>        SuspendTransforms.suspendTransTransformerForJvmBlocking,<br>        SuspendTransforms.suspendTransTransformerForJvmAsync,<br>        SuspendTransforms.suspendTransTransformerForJvmReserve,<br><br>        // @JvmSuspendTransProperty<br>        SuspendTransforms.jvmSuspendTransPropTransformerForBlocking,<br>        SuspendTransforms.jvmSuspendTransPropTransformerForAsync,<br>        SuspendTransforms.jvmSuspendTransPropTransformerForReserve,<br>    )<br>}</code></pre><span class="copy-tooltip"><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div><span class="copy-icon"></span></span></div></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="PROPERTY">
+        <h2 class="tableheader">Properties</h2>
+        <div class="table"><a data-name="2068424229%2FProperties%2F2126066287" anchor-label="jsPromiseTransformer" id="2068424229%2FProperties%2F2126066287" data-filterable-set=":simbot-gradles:simbot-gradle-suspendtransforms/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-gradles:simbot-gradle-suspendtransforms/main" data-filterable-set=":simbot-gradles:simbot-gradle-suspendtransforms/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="js-promise-transformer.html"><span>js</span><wbr><span>Promise</span><wbr><span><span>Transformer</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2068424229%2FProperties%2F2126066287"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-gradles:simbot-gradle-suspendtransforms/main"><div class="symbol monospace"><span class="token keyword">val </span><a href="js-promise-transformer.html">jsPromiseTransformer</a><span class="token operator">: </span><span data-unresolved-link="love.forte.plugin.suspendtrans/Transformer///PointingToDeclaration/">Transformer</span></div><div class="brief "><p class="paragraph">JsPromise</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-340506320%2FProperties%2F2126066287" anchor-label="jvmAsyncTransformer" id="-340506320%2FProperties%2F2126066287" data-filterable-set=":simbot-gradles:simbot-gradle-suspendtransforms/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-gradles:simbot-gradle-suspendtransforms/main" data-filterable-set=":simbot-gradles:simbot-gradle-suspendtransforms/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="jvm-async-transformer.html"><span>jvm</span><wbr><span>Async</span><wbr><span><span>Transformer</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-340506320%2FProperties%2F2126066287"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-gradles:simbot-gradle-suspendtransforms/main"><div class="symbol monospace"><span class="token keyword">val </span><a href="jvm-async-transformer.html">jvmAsyncTransformer</a><span class="token operator">: </span><span data-unresolved-link="love.forte.plugin.suspendtrans/Transformer///PointingToDeclaration/">Transformer</span></div><div class="brief "><p class="paragraph">JvmAsync</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-432070455%2FProperties%2F2126066287" anchor-label="jvmBlockingTransformer" id="-432070455%2FProperties%2F2126066287" data-filterable-set=":simbot-gradles:simbot-gradle-suspendtransforms/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-gradles:simbot-gradle-suspendtransforms/main" data-filterable-set=":simbot-gradles:simbot-gradle-suspendtransforms/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="jvm-blocking-transformer.html"><span>jvm</span><wbr><span>Blocking</span><wbr><span><span>Transformer</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-432070455%2FProperties%2F2126066287"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-gradles:simbot-gradle-suspendtransforms/main"><div class="symbol monospace"><span class="token keyword">val </span><a href="jvm-blocking-transformer.html">jvmBlockingTransformer</a><span class="token operator">: </span><span data-unresolved-link="love.forte.plugin.suspendtrans/Transformer///PointingToDeclaration/">Transformer</span></div><div class="brief "><p class="paragraph">JvmBlocking</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1681882992%2FProperties%2F2126066287" anchor-label="jvmReserveTransformer" id="1681882992%2FProperties%2F2126066287" data-filterable-set=":simbot-gradles:simbot-gradle-suspendtransforms/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-gradles:simbot-gradle-suspendtransforms/main" data-filterable-set=":simbot-gradles:simbot-gradle-suspendtransforms/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="jvm-reserve-transformer.html"><span>jvm</span><wbr><span>Reserve</span><wbr><span><span>Transformer</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1681882992%2FProperties%2F2126066287"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-gradles:simbot-gradle-suspendtransforms/main"><div class="symbol monospace"><span class="token keyword">val </span><a href="jvm-reserve-transformer.html">jvmReserveTransformer</a><span class="token operator">: </span><span data-unresolved-link="love.forte.plugin.suspendtrans/Transformer///PointingToDeclaration/">Transformer</span></div><div class="brief "><p class="paragraph">JvmReserve</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1981167888%2FProperties%2F2126066287" anchor-label="jvmSuspendTransPropTransformerForAsync" id="-1981167888%2FProperties%2F2126066287" data-filterable-set=":simbot-gradles:simbot-gradle-suspendtransforms/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-gradles:simbot-gradle-suspendtransforms/main" data-filterable-set=":simbot-gradles:simbot-gradle-suspendtransforms/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="jvm-suspend-trans-prop-transformer-for-async.html"><span>jvm</span><wbr><span>Suspend</span><wbr><span>Trans</span><wbr><span>Prop</span><wbr><span>Transformer</span><wbr><span>For</span><wbr><span><span>Async</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1981167888%2FProperties%2F2126066287"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-gradles:simbot-gradle-suspendtransforms/main"><div class="symbol monospace"><span class="token keyword">val </span><a href="jvm-suspend-trans-prop-transformer-for-async.html">jvmSuspendTransPropTransformerForAsync</a><span class="token operator">: </span><span data-unresolved-link="love.forte.plugin.suspendtrans/Transformer///PointingToDeclaration/">Transformer</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-737580903%2FProperties%2F2126066287" anchor-label="jvmSuspendTransPropTransformerForBlocking" id="-737580903%2FProperties%2F2126066287" data-filterable-set=":simbot-gradles:simbot-gradle-suspendtransforms/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-gradles:simbot-gradle-suspendtransforms/main" data-filterable-set=":simbot-gradles:simbot-gradle-suspendtransforms/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="jvm-suspend-trans-prop-transformer-for-blocking.html"><span>jvm</span><wbr><span>Suspend</span><wbr><span>Trans</span><wbr><span>Prop</span><wbr><span>Transformer</span><wbr><span>For</span><wbr><span><span>Blocking</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-737580903%2FProperties%2F2126066287"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-gradles:simbot-gradle-suspendtransforms/main"><div class="symbol monospace"><span class="token keyword">val </span><a href="jvm-suspend-trans-prop-transformer-for-blocking.html">jvmSuspendTransPropTransformerForBlocking</a><span class="token operator">: </span><span data-unresolved-link="love.forte.plugin.suspendtrans/Transformer///PointingToDeclaration/">Transformer</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2129065200%2FProperties%2F2126066287" anchor-label="jvmSuspendTransPropTransformerForReserve" id="2129065200%2FProperties%2F2126066287" data-filterable-set=":simbot-gradles:simbot-gradle-suspendtransforms/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-gradles:simbot-gradle-suspendtransforms/main" data-filterable-set=":simbot-gradles:simbot-gradle-suspendtransforms/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="jvm-suspend-trans-prop-transformer-for-reserve.html"><span>jvm</span><wbr><span>Suspend</span><wbr><span>Trans</span><wbr><span>Prop</span><wbr><span>Transformer</span><wbr><span>For</span><wbr><span><span>Reserve</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2129065200%2FProperties%2F2126066287"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-gradles:simbot-gradle-suspendtransforms/main"><div class="symbol monospace"><span class="token keyword">val </span><a href="jvm-suspend-trans-prop-transformer-for-reserve.html">jvmSuspendTransPropTransformerForReserve</a><span class="token operator">: </span><span data-unresolved-link="love.forte.plugin.suspendtrans/Transformer///PointingToDeclaration/">Transformer</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1057309400%2FProperties%2F2126066287" anchor-label="suspendTransTransformerForJsPromise" id="1057309400%2FProperties%2F2126066287" data-filterable-set=":simbot-gradles:simbot-gradle-suspendtransforms/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-gradles:simbot-gradle-suspendtransforms/main" data-filterable-set=":simbot-gradles:simbot-gradle-suspendtransforms/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="suspend-trans-transformer-for-js-promise.html"><span>suspend</span><wbr><span>Trans</span><wbr><span>Transformer</span><wbr><span>For</span><wbr><span>Js</span><wbr><span><span>Promise</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1057309400%2FProperties%2F2126066287"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-gradles:simbot-gradle-suspendtransforms/main"><div class="symbol monospace"><span class="token keyword">val </span><a href="suspend-trans-transformer-for-js-promise.html">suspendTransTransformerForJsPromise</a><span class="token operator">: </span><span data-unresolved-link="love.forte.plugin.suspendtrans/Transformer///PointingToDeclaration/">Transformer</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="270300597%2FProperties%2F2126066287" anchor-label="suspendTransTransformerForJvmAsync" id="270300597%2FProperties%2F2126066287" data-filterable-set=":simbot-gradles:simbot-gradle-suspendtransforms/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-gradles:simbot-gradle-suspendtransforms/main" data-filterable-set=":simbot-gradles:simbot-gradle-suspendtransforms/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="suspend-trans-transformer-for-jvm-async.html"><span>suspend</span><wbr><span>Trans</span><wbr><span>Transformer</span><wbr><span>For</span><wbr><span>Jvm</span><wbr><span><span>Async</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="270300597%2FProperties%2F2126066287"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-gradles:simbot-gradle-suspendtransforms/main"><div class="symbol monospace"><span class="token keyword">val </span><a href="suspend-trans-transformer-for-jvm-async.html">suspendTransTransformerForJvmAsync</a><span class="token operator">: </span><span data-unresolved-link="love.forte.plugin.suspendtrans/Transformer///PointingToDeclaration/">Transformer</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1744205900%2FProperties%2F2126066287" anchor-label="suspendTransTransformerForJvmBlocking" id="-1744205900%2FProperties%2F2126066287" data-filterable-set=":simbot-gradles:simbot-gradle-suspendtransforms/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-gradles:simbot-gradle-suspendtransforms/main" data-filterable-set=":simbot-gradles:simbot-gradle-suspendtransforms/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="suspend-trans-transformer-for-jvm-blocking.html"><span>suspend</span><wbr><span>Trans</span><wbr><span>Transformer</span><wbr><span>For</span><wbr><span>Jvm</span><wbr><span><span>Blocking</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1744205900%2FProperties%2F2126066287"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-gradles:simbot-gradle-suspendtransforms/main"><div class="symbol monospace"><span class="token keyword">val </span><a href="suspend-trans-transformer-for-jvm-blocking.html">suspendTransTransformerForJvmBlocking</a><span class="token operator">: </span><span data-unresolved-link="love.forte.plugin.suspendtrans/Transformer///PointingToDeclaration/">Transformer</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1126762101%2FProperties%2F2126066287" anchor-label="suspendTransTransformerForJvmReserve" id="1126762101%2FProperties%2F2126066287" data-filterable-set=":simbot-gradles:simbot-gradle-suspendtransforms/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-gradles:simbot-gradle-suspendtransforms/main" data-filterable-set=":simbot-gradles:simbot-gradle-suspendtransforms/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="suspend-trans-transformer-for-jvm-reserve.html"><span>suspend</span><wbr><span>Trans</span><wbr><span>Transformer</span><wbr><span>For</span><wbr><span>Jvm</span><wbr><span><span>Reserve</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1126762101%2FProperties%2F2126066287"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-gradles:simbot-gradle-suspendtransforms/main"><div class="symbol monospace"><span class="token keyword">val </span><a href="suspend-trans-transformer-for-jvm-reserve.html">suspendTransTransformerForJvmReserve</a><span class="token operator">: </span><span data-unresolved-link="love.forte.plugin.suspendtrans/Transformer///PointingToDeclaration/">Transformer</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-40360287%2FProperties%2F2126066287" anchor-label="targetMarker" id="-40360287%2FProperties%2F2126066287" data-filterable-set=":simbot-gradles:simbot-gradle-suspendtransforms/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-gradles:simbot-gradle-suspendtransforms/main" data-filterable-set=":simbot-gradles:simbot-gradle-suspendtransforms/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="target-marker.html"><span>target</span><wbr><span><span>Marker</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-40360287%2FProperties%2F2126066287"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-gradles:simbot-gradle-suspendtransforms/main"><div class="symbol monospace"><span class="token keyword">val </span><a href="target-marker.html">targetMarker</a><span class="token operator">: </span><span data-unresolved-link="love.forte.plugin.suspendtrans/ClassInfo///PointingToDeclaration/">ClassInfo</span></div><div class="brief "><p class="paragraph">see <code class="lang-kotlin">love.forte.simbot.suspendrunner.SuspendMarker</code></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>© 2024-2026 <a href="https://github.com/simple-robot">Simple Robot</a>. All rights reserved.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

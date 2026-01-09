@@ -1,0 +1,750 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>love.forte.simbot.component.onebot.v11.core.event.messageinteraction</title>
+<link href="../../../../images/logo-icon.svg" rel="icon" type="image/svg">    <!-- 百度统计 -->
+    <!--suppress ES6ConvertVarToLetConst -->
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            const hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?045f67a122223db9432c7856fc942fad";
+            const s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1JWL2DDTB4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-1JWL2DDTB4');
+    </script>
+<script>var pathToRoot = "../../../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+      if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      } else {
+        const savedDarkMode = JSON.parse(storage)
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../../styles/style.css" rel="Stylesheet">
+<link href="../../../../styles/main.css" rel="Stylesheet">
+<link href="../../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../../scripts/safe-local-storage_blocking.js"></script>
+<script type="text/javascript" src="../../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../../ui-kit/ui-kit.min.js" defer></script>
+<link href="../../../../images/logo-icon.svg">
+<link href="../../../../images/logo-icon-light.svg">
+<link href="../../../../styles/kdoc-style.css" rel="Stylesheet"></head>
+<body>
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+<a class="library-name--link" href="../../../../index.html" tabindex="1">
+                    Simple Robot
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">5.0.0-Preview1-SNAPSHOT
+        </div>
+        <div class="navigation-controls">
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector common-like" data-active="" aria-pressed="true" data-filter=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain">common</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option common-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain" data-filter=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain">
+                                <span class="checkbox--icon"></span>
+                                common
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </ul>
+                <a class="navigation-controls--btn navigation-controls--btn_homepage" id="homepage-link" href="https://github.com/simple-robot/simpler-robot"></a>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config="{&quot;defaultSize&quot;: 280, &quot;minSize&quot;: 200, &quot;maxSize&quot;: 400}">
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
+                            <span>
+                                    Simple Robot
+                            </span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
+<div class="main-content" data-page-type="package" id="content" pageids="simbot-component-onebot-v11-core::love.forte.simbot.component.onebot.v11.core.event.messageinteraction////PointingToDeclaration//-1060603697">
+  <div class="breadcrumbs"><a href="../index.html">simbot-component-onebot-v11-core</a><span class="delimiter">/</span><span class="current">love.forte.simbot.component.onebot.v11.core.event.messageinteraction</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Package-level</span></span> <span><span>declarations</span></span></h1>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="TYPE">Types</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="TYPE">
+        <h2 class="tableheader">Types</h2>
+        <div class="table"><a data-name="1454671836%2FClasslikes%2F-1060603697" anchor-label="OneBotAnonymousGroupMessageEventInteractionEvent" id="1454671836%2FClasslikes%2F-1060603697" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-one-bot-anonymous-group-message-event-interaction-event/index.html"><span>One</span><wbr><span>Bot</span><wbr><span>Anonymous</span><wbr><span>Group</span><wbr><span>Message</span><wbr><span>Event</span><wbr><span>Interaction</span><wbr><span><span>Event</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1454671836%2FClasslikes%2F-1060603697"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-one-bot-anonymous-group-message-event-interaction-event/index.html">OneBotAnonymousGroupMessageEventInteractionEvent</a> : <a href="-one-bot-group-message-event-interaction-event/index.html">OneBotGroupMessageEventInteractionEvent</a>, <a href="../../../../simbot-api/love.forte.simbot.event/-chat-group-message-event-interaction-event/index.html">ChatGroupMessageEventInteractionEvent</a></div><div class="brief "><p class="paragraph">OneBot组件中针对 <a href="../love.forte.simbot.component.onebot.v11.core.event.message/-one-bot-anonymous-group-message-event/index.html">OneBotAnonymousGroupMessageEvent</a> 的拦截或通知事件。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-214931788%2FClasslikes%2F-1060603697" anchor-label="OneBotAnonymousGroupMessageEventPostReplyEvent" id="-214931788%2FClasslikes%2F-1060603697" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-one-bot-anonymous-group-message-event-post-reply-event/index.html"><span>One</span><wbr><span>Bot</span><wbr><span>Anonymous</span><wbr><span>Group</span><wbr><span>Message</span><wbr><span>Event</span><wbr><span>Post</span><wbr><span>Reply</span><wbr><span><span>Event</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-214931788%2FClasslikes%2F-1060603697"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-one-bot-anonymous-group-message-event-post-reply-event/index.html">OneBotAnonymousGroupMessageEventPostReplyEvent</a> : <a href="-one-bot-anonymous-group-message-event-interaction-event/index.html">OneBotAnonymousGroupMessageEventInteractionEvent</a>, <a href="-one-bot-group-message-event-post-reply-event/index.html">OneBotGroupMessageEventPostReplyEvent</a></div><div class="brief "><p class="paragraph">OneBot组件中针对 <a href="../../../../simbot-component-onebot/simbot-component-onebot-v11/simbot-component-onebot-v11-core/love.forte.simbot.component.onebot.v11.core.event.message/-one-bot-anonymous-group-message-event/reply.html">OneBotAnonymousGroupMessageEvent.reply</a> 的通知事件。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1627286859%2FClasslikes%2F-1060603697" anchor-label="OneBotAnonymousGroupMessageEventPreReplyEvent" id="1627286859%2FClasslikes%2F-1060603697" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-one-bot-anonymous-group-message-event-pre-reply-event/index.html"><span>One</span><wbr><span>Bot</span><wbr><span>Anonymous</span><wbr><span>Group</span><wbr><span>Message</span><wbr><span>Event</span><wbr><span>Pre</span><wbr><span>Reply</span><wbr><span><span>Event</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1627286859%2FClasslikes%2F-1060603697"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-one-bot-anonymous-group-message-event-pre-reply-event/index.html">OneBotAnonymousGroupMessageEventPreReplyEvent</a> : <a href="-one-bot-anonymous-group-message-event-interaction-event/index.html">OneBotAnonymousGroupMessageEventInteractionEvent</a>, <a href="-one-bot-group-message-event-pre-reply-event/index.html">OneBotGroupMessageEventPreReplyEvent</a></div><div class="brief "><p class="paragraph">OneBot组件中针对 <a href="../../../../simbot-component-onebot/simbot-component-onebot-v11/simbot-component-onebot-v11-core/love.forte.simbot.component.onebot.v11.core.event.message/-one-bot-anonymous-group-message-event/reply.html">OneBotAnonymousGroupMessageEvent.reply</a> 的拦截事件。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-326623389%2FClasslikes%2F-1060603697" anchor-label="OneBotFriendInteractionEvent" id="-326623389%2FClasslikes%2F-1060603697" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-one-bot-friend-interaction-event/index.html"><span>One</span><wbr><span>Bot</span><wbr><span>Friend</span><wbr><span>Interaction</span><wbr><span><span>Event</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-326623389%2FClasslikes%2F-1060603697"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-one-bot-friend-interaction-event/index.html">OneBotFriendInteractionEvent</a> : <a href="-one-bot-send-support-interaction-event/index.html">OneBotSendSupportInteractionEvent</a>, <a href="../../../../simbot-api/love.forte.simbot.event/-contact-interaction-event/index.html">ContactInteractionEvent</a></div><div class="brief "><p class="paragraph">OneBot组件针对 <a href="../love.forte.simbot.component.onebot.v11.core.actor/-one-bot-friend/index.html">OneBotFriend</a> 的交互事件。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1133387056%2FClasslikes%2F-1060603697" anchor-label="OneBotFriendMessageEventInteractionEvent" id="-1133387056%2FClasslikes%2F-1060603697" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-one-bot-friend-message-event-interaction-event/index.html"><span>One</span><wbr><span>Bot</span><wbr><span>Friend</span><wbr><span>Message</span><wbr><span>Event</span><wbr><span>Interaction</span><wbr><span><span>Event</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1133387056%2FClasslikes%2F-1060603697"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-one-bot-friend-message-event-interaction-event/index.html">OneBotFriendMessageEventInteractionEvent</a> : <a href="-one-bot-private-message-event-interaction-event/index.html">OneBotPrivateMessageEventInteractionEvent</a></div><div class="brief "><p class="paragraph">OneBot组件中针对 <a href="../love.forte.simbot.component.onebot.v11.core.event.message/-one-bot-friend-message-event/index.html">OneBotFriendMessageEvent</a> 的拦截或通知事件。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="984608424%2FClasslikes%2F-1060603697" anchor-label="OneBotFriendMessageEventPostReplyEvent" id="984608424%2FClasslikes%2F-1060603697" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-one-bot-friend-message-event-post-reply-event/index.html"><span>One</span><wbr><span>Bot</span><wbr><span>Friend</span><wbr><span>Message</span><wbr><span>Event</span><wbr><span>Post</span><wbr><span>Reply</span><wbr><span><span>Event</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="984608424%2FClasslikes%2F-1060603697"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-one-bot-friend-message-event-post-reply-event/index.html">OneBotFriendMessageEventPostReplyEvent</a> : <a href="-one-bot-friend-message-event-interaction-event/index.html">OneBotFriendMessageEventInteractionEvent</a>, <a href="-one-bot-private-message-event-post-reply-event/index.html">OneBotPrivateMessageEventPostReplyEvent</a></div><div class="brief "><p class="paragraph">OneBot组件中针对 <a href="../../../../simbot-component-onebot/simbot-component-onebot-v11/simbot-component-onebot-v11-core/love.forte.simbot.component.onebot.v11.core.event.message/-one-bot-friend-message-event/reply.html">OneBotFriendMessageEvent.reply</a> 的通知事件。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="3413719%2FClasslikes%2F-1060603697" anchor-label="OneBotFriendMessageEventPreReplyEvent" id="3413719%2FClasslikes%2F-1060603697" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-one-bot-friend-message-event-pre-reply-event/index.html"><span>One</span><wbr><span>Bot</span><wbr><span>Friend</span><wbr><span>Message</span><wbr><span>Event</span><wbr><span>Pre</span><wbr><span>Reply</span><wbr><span><span>Event</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="3413719%2FClasslikes%2F-1060603697"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-one-bot-friend-message-event-pre-reply-event/index.html">OneBotFriendMessageEventPreReplyEvent</a> : <a href="-one-bot-friend-message-event-interaction-event/index.html">OneBotFriendMessageEventInteractionEvent</a>, <a href="-one-bot-private-message-event-pre-reply-event/index.html">OneBotPrivateMessageEventPreReplyEvent</a></div><div class="brief "><p class="paragraph">OneBot组件中针对 <a href="../../../../simbot-component-onebot/simbot-component-onebot-v11/simbot-component-onebot-v11-core/love.forte.simbot.component.onebot.v11.core.event.message/-one-bot-friend-message-event/reply.html">OneBotFriendMessageEvent.reply</a> 的拦截事件。 可以对其中的参数进行修改。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="158900645%2FClasslikes%2F-1060603697" anchor-label="OneBotFriendPostSendEvent" id="158900645%2FClasslikes%2F-1060603697" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-one-bot-friend-post-send-event/index.html"><span>One</span><wbr><span>Bot</span><wbr><span>Friend</span><wbr><span>Post</span><wbr><span>Send</span><wbr><span><span>Event</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="158900645%2FClasslikes%2F-1060603697"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-one-bot-friend-post-send-event/index.html">OneBotFriendPostSendEvent</a> : <a href="-one-bot-send-support-post-send-event/index.html">OneBotSendSupportPostSendEvent</a>, <a href="-one-bot-friend-interaction-event/index.html">OneBotFriendInteractionEvent</a>, <a href="../../../../simbot-api/love.forte.simbot.event/-contact-post-send-event/index.html">ContactPostSendEvent</a></div><div class="brief "><p class="paragraph">OneBot组件针对 <a href="../love.forte.simbot.component.onebot.v11.core.actor/-one-bot-friend/send.html">OneBotFriend.send</a> 的通知事件。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="378171740%2FClasslikes%2F-1060603697" anchor-label="OneBotFriendPreSendEvent" id="378171740%2FClasslikes%2F-1060603697" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-one-bot-friend-pre-send-event/index.html"><span>One</span><wbr><span>Bot</span><wbr><span>Friend</span><wbr><span>Pre</span><wbr><span>Send</span><wbr><span><span>Event</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="378171740%2FClasslikes%2F-1060603697"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-one-bot-friend-pre-send-event/index.html">OneBotFriendPreSendEvent</a> : <a href="-one-bot-send-support-pre-send-event/index.html">OneBotSendSupportPreSendEvent</a>, <a href="-one-bot-friend-interaction-event/index.html">OneBotFriendInteractionEvent</a>, <a href="../../../../simbot-api/love.forte.simbot.event/-contact-pre-send-event/index.html">ContactPreSendEvent</a></div><div class="brief "><p class="paragraph">OneBot组件针对 <a href="../love.forte.simbot.component.onebot.v11.core.actor/-one-bot-friend/send.html">OneBotFriend.send</a> 的拦截事件。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1826918414%2FClasslikes%2F-1060603697" anchor-label="OneBotGroupInteractionEvent" id="-1826918414%2FClasslikes%2F-1060603697" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-one-bot-group-interaction-event/index.html"><span>One</span><wbr><span>Bot</span><wbr><span>Group</span><wbr><span>Interaction</span><wbr><span><span>Event</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1826918414%2FClasslikes%2F-1060603697"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-one-bot-group-interaction-event/index.html">OneBotGroupInteractionEvent</a> : <a href="-one-bot-send-support-interaction-event/index.html">OneBotSendSupportInteractionEvent</a>, <a href="../../../../simbot-api/love.forte.simbot.event/-chat-group-interaction-event/index.html">ChatGroupInteractionEvent</a></div><div class="brief "><p class="paragraph">OneBot组件针对 <a href="../love.forte.simbot.component.onebot.v11.core.actor/-one-bot-group/index.html">OneBotGroup</a> 的交互事件。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1270731999%2FClasslikes%2F-1060603697" anchor-label="OneBotGroupMessageEventInteractionEvent" id="1270731999%2FClasslikes%2F-1060603697" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-one-bot-group-message-event-interaction-event/index.html"><span>One</span><wbr><span>Bot</span><wbr><span>Group</span><wbr><span>Message</span><wbr><span>Event</span><wbr><span>Interaction</span><wbr><span><span>Event</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1270731999%2FClasslikes%2F-1060603697"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-one-bot-group-message-event-interaction-event/index.html">OneBotGroupMessageEventInteractionEvent</a> : <a href="-one-bot-message-event-interaction-event/index.html">OneBotMessageEventInteractionEvent</a></div><div class="brief "><p class="paragraph">OneBot组件中针对 <a href="../../../../simbot-api/love.forte.simbot.event/-chat-group-message-event/index.html">ChatGroupMessageEvent</a> 的拦截或通知事件。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1457579913%2FClasslikes%2F-1060603697" anchor-label="OneBotGroupMessageEventPostReplyEvent" id="-1457579913%2FClasslikes%2F-1060603697" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-one-bot-group-message-event-post-reply-event/index.html"><span>One</span><wbr><span>Bot</span><wbr><span>Group</span><wbr><span>Message</span><wbr><span>Event</span><wbr><span>Post</span><wbr><span>Reply</span><wbr><span><span>Event</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1457579913%2FClasslikes%2F-1060603697"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-one-bot-group-message-event-post-reply-event/index.html">OneBotGroupMessageEventPostReplyEvent</a> : <a href="-one-bot-group-message-event-interaction-event/index.html">OneBotGroupMessageEventInteractionEvent</a>, <a href="-one-bot-message-event-post-reply-event/index.html">OneBotMessageEventPostReplyEvent</a></div><div class="brief "><p class="paragraph">OneBot组件中针对 <a href="../../../../simbot-api/love.forte.simbot.ability/-reply-support/reply.html">ChatGroupMessageEvent.reply</a> 的通知事件。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2002843432%2FClasslikes%2F-1060603697" anchor-label="OneBotGroupMessageEventPreReplyEvent" id="2002843432%2FClasslikes%2F-1060603697" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-one-bot-group-message-event-pre-reply-event/index.html"><span>One</span><wbr><span>Bot</span><wbr><span>Group</span><wbr><span>Message</span><wbr><span>Event</span><wbr><span>Pre</span><wbr><span>Reply</span><wbr><span><span>Event</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2002843432%2FClasslikes%2F-1060603697"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-one-bot-group-message-event-pre-reply-event/index.html">OneBotGroupMessageEventPreReplyEvent</a> : <a href="-one-bot-group-message-event-interaction-event/index.html">OneBotGroupMessageEventInteractionEvent</a>, <a href="-one-bot-message-event-pre-reply-event/index.html">OneBotMessageEventPreReplyEvent</a></div><div class="brief "><p class="paragraph">OneBot组件中针对 <a href="../../../../simbot-api/love.forte.simbot.ability/-reply-support/reply.html">ChatGroupMessageEvent.reply</a> 的拦截事件。 可以对其中的参数进行修改。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1925270666%2FClasslikes%2F-1060603697" anchor-label="OneBotGroupPostSendEvent" id="-1925270666%2FClasslikes%2F-1060603697" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-one-bot-group-post-send-event/index.html"><span>One</span><wbr><span>Bot</span><wbr><span>Group</span><wbr><span>Post</span><wbr><span>Send</span><wbr><span><span>Event</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1925270666%2FClasslikes%2F-1060603697"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-one-bot-group-post-send-event/index.html">OneBotGroupPostSendEvent</a> : <a href="-one-bot-send-support-post-send-event/index.html">OneBotSendSupportPostSendEvent</a>, <a href="-one-bot-group-interaction-event/index.html">OneBotGroupInteractionEvent</a>, <a href="../../../../simbot-api/love.forte.simbot.event/-chat-group-post-send-event/index.html">ChatGroupPostSendEvent</a></div><div class="brief "><p class="paragraph">OneBot组件针对 <a href="../love.forte.simbot.component.onebot.v11.core.actor/-one-bot-group/send.html">OneBotGroup.send</a> 的通知事件。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-104701589%2FClasslikes%2F-1060603697" anchor-label="OneBotGroupPreSendEvent" id="-104701589%2FClasslikes%2F-1060603697" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-one-bot-group-pre-send-event/index.html"><span>One</span><wbr><span>Bot</span><wbr><span>Group</span><wbr><span>Pre</span><wbr><span>Send</span><wbr><span><span>Event</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-104701589%2FClasslikes%2F-1060603697"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-one-bot-group-pre-send-event/index.html">OneBotGroupPreSendEvent</a> : <a href="-one-bot-send-support-pre-send-event/index.html">OneBotSendSupportPreSendEvent</a>, <a href="-one-bot-group-interaction-event/index.html">OneBotGroupInteractionEvent</a>, <a href="../../../../simbot-api/love.forte.simbot.event/-chat-group-pre-send-event/index.html">ChatGroupPreSendEvent</a></div><div class="brief "><p class="paragraph">OneBot组件针对 <a href="../love.forte.simbot.component.onebot.v11.core.actor/-one-bot-group/send.html">OneBotGroup.send</a> 的拦截事件。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1220774614%2FClasslikes%2F-1060603697" anchor-label="OneBotGroupPrivateMessageEventInteractionEvent" id="-1220774614%2FClasslikes%2F-1060603697" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-one-bot-group-private-message-event-interaction-event/index.html"><span>One</span><wbr><span>Bot</span><wbr><span>Group</span><wbr><span>Private</span><wbr><span>Message</span><wbr><span>Event</span><wbr><span>Interaction</span><wbr><span><span>Event</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1220774614%2FClasslikes%2F-1060603697"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-one-bot-group-private-message-event-interaction-event/index.html">OneBotGroupPrivateMessageEventInteractionEvent</a> : <a href="-one-bot-private-message-event-interaction-event/index.html">OneBotPrivateMessageEventInteractionEvent</a></div><div class="brief "><p class="paragraph">OneBot组件中针对 <a href="../love.forte.simbot.component.onebot.v11.core.event.message/-one-bot-private-message-event/index.html">OneBotPrivateMessageEvent</a> 的拦截或通知事件。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-3190910%2FClasslikes%2F-1060603697" anchor-label="OneBotGroupPrivateMessageEventPostReplyEvent" id="-3190910%2FClasslikes%2F-1060603697" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-one-bot-group-private-message-event-post-reply-event/index.html"><span>One</span><wbr><span>Bot</span><wbr><span>Group</span><wbr><span>Private</span><wbr><span>Message</span><wbr><span>Event</span><wbr><span>Post</span><wbr><span>Reply</span><wbr><span><span>Event</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-3190910%2FClasslikes%2F-1060603697"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-one-bot-group-private-message-event-post-reply-event/index.html">OneBotGroupPrivateMessageEventPostReplyEvent</a> : <a href="-one-bot-group-private-message-event-interaction-event/index.html">OneBotGroupPrivateMessageEventInteractionEvent</a>, <a href="-one-bot-private-message-event-post-reply-event/index.html">OneBotPrivateMessageEventPostReplyEvent</a></div><div class="brief "><p class="paragraph">OneBot组件中针对 <a href="../love.forte.simbot.component.onebot.v11.core.event.message/-one-bot-message-event/reply.html">OneBotPrivateMessageEvent.reply</a> 的通知事件。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="664285885%2FClasslikes%2F-1060603697" anchor-label="OneBotGroupPrivateMessageEventPreReplyEvent" id="664285885%2FClasslikes%2F-1060603697" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-one-bot-group-private-message-event-pre-reply-event/index.html"><span>One</span><wbr><span>Bot</span><wbr><span>Group</span><wbr><span>Private</span><wbr><span>Message</span><wbr><span>Event</span><wbr><span>Pre</span><wbr><span>Reply</span><wbr><span><span>Event</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="664285885%2FClasslikes%2F-1060603697"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-one-bot-group-private-message-event-pre-reply-event/index.html">OneBotGroupPrivateMessageEventPreReplyEvent</a> : <a href="-one-bot-group-private-message-event-interaction-event/index.html">OneBotGroupPrivateMessageEventInteractionEvent</a>, <a href="-one-bot-private-message-event-pre-reply-event/index.html">OneBotPrivateMessageEventPreReplyEvent</a></div><div class="brief "><p class="paragraph">OneBot组件中针对 <a href="../love.forte.simbot.component.onebot.v11.core.event.message/-one-bot-message-event/reply.html">OneBotPrivateMessageEvent.reply</a> 的拦截事件。 可以对其中的参数进行修改。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1563421255%2FClasslikes%2F-1060603697" anchor-label="OneBotInternalMessageInteractionEvent" id="1563421255%2FClasslikes%2F-1060603697" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-one-bot-internal-message-interaction-event/index.html"><span>One</span><wbr><span>Bot</span><wbr><span>Internal</span><wbr><span>Message</span><wbr><span>Interaction</span><wbr><span><span>Event</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1563421255%2FClasslikes%2F-1060603697"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-one-bot-internal-message-interaction-event/index.html">OneBotInternalMessageInteractionEvent</a> : <a href="../love.forte.simbot.component.onebot.v11.core.event/-one-bot-internal-event/index.html">OneBotInternalEvent</a>, <a href="../../../../simbot-api/love.forte.simbot.event/-internal-message-interaction-event/index.html">InternalMessageInteractionEvent</a></div><div class="brief "><p class="paragraph">OneBot 组件中与 <a href="../../../../simbot-api/love.forte.simbot.message/-message/index.html">Message</a> 交互有关的事件。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="179003713%2FClasslikes%2F-1060603697" anchor-label="OneBotInternalMessagePostSendEvent" id="179003713%2FClasslikes%2F-1060603697" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-one-bot-internal-message-post-send-event/index.html"><span>One</span><wbr><span>Bot</span><wbr><span>Internal</span><wbr><span>Message</span><wbr><span>Post</span><wbr><span>Send</span><wbr><span><span>Event</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="179003713%2FClasslikes%2F-1060603697"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-one-bot-internal-message-post-send-event/index.html">OneBotInternalMessagePostSendEvent</a> : <a href="-one-bot-internal-message-interaction-event/index.html">OneBotInternalMessageInteractionEvent</a>, <a href="../../../../simbot-api/love.forte.simbot.event/-internal-message-post-send-event/index.html">InternalMessagePostSendEvent</a></div><div class="brief "><p class="paragraph">OneBot 组件针对消息发送后的通知事件。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1837937088%2FClasslikes%2F-1060603697" anchor-label="OneBotInternalMessagePreSendEvent" id="-1837937088%2FClasslikes%2F-1060603697" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-one-bot-internal-message-pre-send-event/index.html"><span>One</span><wbr><span>Bot</span><wbr><span>Internal</span><wbr><span>Message</span><wbr><span>Pre</span><wbr><span>Send</span><wbr><span><span>Event</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1837937088%2FClasslikes%2F-1060603697"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-one-bot-internal-message-pre-send-event/index.html">OneBotInternalMessagePreSendEvent</a> : <a href="-one-bot-internal-message-interaction-event/index.html">OneBotInternalMessageInteractionEvent</a>, <a href="../../../../simbot-api/love.forte.simbot.event/-internal-message-pre-send-event/index.html">InternalMessagePreSendEvent</a></div><div class="brief "><p class="paragraph">OneBot 组件针对消息发送前的拦截事件。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="835111655%2FClasslikes%2F-1060603697" anchor-label="OneBotMemberInteractionEvent" id="835111655%2FClasslikes%2F-1060603697" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-one-bot-member-interaction-event/index.html"><span>One</span><wbr><span>Bot</span><wbr><span>Member</span><wbr><span>Interaction</span><wbr><span><span>Event</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="835111655%2FClasslikes%2F-1060603697"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-one-bot-member-interaction-event/index.html">OneBotMemberInteractionEvent</a> : <a href="-one-bot-send-support-interaction-event/index.html">OneBotSendSupportInteractionEvent</a>, <a href="../../../../simbot-api/love.forte.simbot.event/-member-interaction-event/index.html">MemberInteractionEvent</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="525419681%2FClasslikes%2F-1060603697" anchor-label="OneBotMemberPostSendEvent" id="525419681%2FClasslikes%2F-1060603697" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-one-bot-member-post-send-event/index.html"><span>One</span><wbr><span>Bot</span><wbr><span>Member</span><wbr><span>Post</span><wbr><span>Send</span><wbr><span><span>Event</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="525419681%2FClasslikes%2F-1060603697"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-one-bot-member-post-send-event/index.html">OneBotMemberPostSendEvent</a> : <a href="-one-bot-send-support-post-send-event/index.html">OneBotSendSupportPostSendEvent</a>, <a href="-one-bot-member-interaction-event/index.html">OneBotMemberInteractionEvent</a>, <a href="../../../../simbot-api/love.forte.simbot.event/-member-post-send-event/index.html">MemberPostSendEvent</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1775468256%2FClasslikes%2F-1060603697" anchor-label="OneBotMemberPreSendEvent" id="1775468256%2FClasslikes%2F-1060603697" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-one-bot-member-pre-send-event/index.html"><span>One</span><wbr><span>Bot</span><wbr><span>Member</span><wbr><span>Pre</span><wbr><span>Send</span><wbr><span><span>Event</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1775468256%2FClasslikes%2F-1060603697"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-one-bot-member-pre-send-event/index.html">OneBotMemberPreSendEvent</a> : <a href="-one-bot-send-support-pre-send-event/index.html">OneBotSendSupportPreSendEvent</a>, <a href="-one-bot-member-interaction-event/index.html">OneBotMemberInteractionEvent</a>, <a href="../../../../simbot-api/love.forte.simbot.event/-member-pre-send-event/index.html">MemberPreSendEvent</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1360607438%2FClasslikes%2F-1060603697" anchor-label="OneBotMessageEventInteractionEvent" id="1360607438%2FClasslikes%2F-1060603697" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-one-bot-message-event-interaction-event/index.html"><span>One</span><wbr><span>Bot</span><wbr><span>Message</span><wbr><span>Event</span><wbr><span>Interaction</span><wbr><span><span>Event</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1360607438%2FClasslikes%2F-1060603697"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-one-bot-message-event-interaction-event/index.html">OneBotMessageEventInteractionEvent</a> : <a href="../../../../simbot-api/love.forte.simbot.event/-message-event-interaction-event/index.html">MessageEventInteractionEvent</a>, <a href="-one-bot-internal-message-interaction-event/index.html">OneBotInternalMessageInteractionEvent</a></div><div class="brief "><p class="paragraph">OneBot组件中针对 <a href="../../../../simbot-api/love.forte.simbot.event/-message-event/index.html">MessageEvent</a> 的拦截或通知事件。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-997151706%2FClasslikes%2F-1060603697" anchor-label="OneBotMessageEventPostReplyEvent" id="-997151706%2FClasslikes%2F-1060603697" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-one-bot-message-event-post-reply-event/index.html"><span>One</span><wbr><span>Bot</span><wbr><span>Message</span><wbr><span>Event</span><wbr><span>Post</span><wbr><span>Reply</span><wbr><span><span>Event</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-997151706%2FClasslikes%2F-1060603697"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-one-bot-message-event-post-reply-event/index.html">OneBotMessageEventPostReplyEvent</a> : <a href="-one-bot-message-event-interaction-event/index.html">OneBotMessageEventInteractionEvent</a>, <a href="../../../../simbot-api/love.forte.simbot.event/-message-event-post-reply-event/index.html">MessageEventPostReplyEvent</a></div><div class="brief "><p class="paragraph">OneBot组件中针对 <a href="../../../../simbot-api/love.forte.simbot.ability/-reply-support/reply.html">MessageEvent.reply</a> 的通知事件。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="78033305%2FClasslikes%2F-1060603697" anchor-label="OneBotMessageEventPreReplyEvent" id="78033305%2FClasslikes%2F-1060603697" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-one-bot-message-event-pre-reply-event/index.html"><span>One</span><wbr><span>Bot</span><wbr><span>Message</span><wbr><span>Event</span><wbr><span>Pre</span><wbr><span>Reply</span><wbr><span><span>Event</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="78033305%2FClasslikes%2F-1060603697"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-one-bot-message-event-pre-reply-event/index.html">OneBotMessageEventPreReplyEvent</a> : <a href="-one-bot-message-event-interaction-event/index.html">OneBotMessageEventInteractionEvent</a>, <a href="../../../../simbot-api/love.forte.simbot.event/-message-event-pre-reply-event/index.html">MessageEventPreReplyEvent</a></div><div class="brief "><p class="paragraph">OneBot组件中针对 <a href="../../../../simbot-api/love.forte.simbot.ability/-reply-support/reply.html">MessageEvent.reply</a> 的拦截事件。 可以对其中的参数进行修改。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1403080410%2FClasslikes%2F-1060603697" anchor-label="OneBotNormalGroupMessageEventInteractionEvent" id="-1403080410%2FClasslikes%2F-1060603697" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-one-bot-normal-group-message-event-interaction-event/index.html"><span>One</span><wbr><span>Bot</span><wbr><span>Normal</span><wbr><span>Group</span><wbr><span>Message</span><wbr><span>Event</span><wbr><span>Interaction</span><wbr><span><span>Event</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1403080410%2FClasslikes%2F-1060603697"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-one-bot-normal-group-message-event-interaction-event/index.html">OneBotNormalGroupMessageEventInteractionEvent</a> : <a href="-one-bot-group-message-event-interaction-event/index.html">OneBotGroupMessageEventInteractionEvent</a>, <a href="../../../../simbot-api/love.forte.simbot.event/-chat-group-message-event-interaction-event/index.html">ChatGroupMessageEventInteractionEvent</a></div><div class="brief "><p class="paragraph">OneBot组件中针对 <a href="../love.forte.simbot.component.onebot.v11.core.event.message/-one-bot-normal-group-message-event/index.html">OneBotNormalGroupMessageEvent</a> 的拦截或通知事件。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-553100674%2FClasslikes%2F-1060603697" anchor-label="OneBotNormalGroupMessageEventPostReplyEvent" id="-553100674%2FClasslikes%2F-1060603697" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-one-bot-normal-group-message-event-post-reply-event/index.html"><span>One</span><wbr><span>Bot</span><wbr><span>Normal</span><wbr><span>Group</span><wbr><span>Message</span><wbr><span>Event</span><wbr><span>Post</span><wbr><span>Reply</span><wbr><span><span>Event</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-553100674%2FClasslikes%2F-1060603697"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-one-bot-normal-group-message-event-post-reply-event/index.html">OneBotNormalGroupMessageEventPostReplyEvent</a> : <a href="-one-bot-normal-group-message-event-interaction-event/index.html">OneBotNormalGroupMessageEventInteractionEvent</a>, <a href="-one-bot-group-message-event-post-reply-event/index.html">OneBotGroupMessageEventPostReplyEvent</a></div><div class="brief "><p class="paragraph">OneBot组件中针对 <a href="../../../../simbot-component-onebot/simbot-component-onebot-v11/simbot-component-onebot-v11-core/love.forte.simbot.component.onebot.v11.core.event.message/-one-bot-normal-group-message-event/reply.html">OneBotNormalGroupMessageEvent.reply</a> 的通知事件。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1339283521%2FClasslikes%2F-1060603697" anchor-label="OneBotNormalGroupMessageEventPreReplyEvent" id="1339283521%2FClasslikes%2F-1060603697" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-one-bot-normal-group-message-event-pre-reply-event/index.html"><span>One</span><wbr><span>Bot</span><wbr><span>Normal</span><wbr><span>Group</span><wbr><span>Message</span><wbr><span>Event</span><wbr><span>Pre</span><wbr><span>Reply</span><wbr><span><span>Event</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1339283521%2FClasslikes%2F-1060603697"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-one-bot-normal-group-message-event-pre-reply-event/index.html">OneBotNormalGroupMessageEventPreReplyEvent</a> : <a href="-one-bot-normal-group-message-event-interaction-event/index.html">OneBotNormalGroupMessageEventInteractionEvent</a>, <a href="-one-bot-group-message-event-pre-reply-event/index.html">OneBotGroupMessageEventPreReplyEvent</a></div><div class="brief "><p class="paragraph">OneBot组件中针对 <a href="../../../../simbot-component-onebot/simbot-component-onebot-v11/simbot-component-onebot-v11-core/love.forte.simbot.component.onebot.v11.core.event.message/-one-bot-normal-group-message-event/reply.html">OneBotNormalGroupMessageEvent.reply</a> 的拦截事件。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2112615465%2FClasslikes%2F-1060603697" anchor-label="OneBotNoticeGroupMessageEventInteractionEvent" id="-2112615465%2FClasslikes%2F-1060603697" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-one-bot-notice-group-message-event-interaction-event/index.html"><span>One</span><wbr><span>Bot</span><wbr><span>Notice</span><wbr><span>Group</span><wbr><span>Message</span><wbr><span>Event</span><wbr><span>Interaction</span><wbr><span><span>Event</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2112615465%2FClasslikes%2F-1060603697"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-one-bot-notice-group-message-event-interaction-event/index.html">OneBotNoticeGroupMessageEventInteractionEvent</a> : <a href="-one-bot-group-message-event-interaction-event/index.html">OneBotGroupMessageEventInteractionEvent</a></div><div class="brief "><p class="paragraph">OneBot组件中针对 <a href="../love.forte.simbot.component.onebot.v11.core.event.message/-one-bot-notice-group-message-event/index.html">OneBotNoticeGroupMessageEvent</a> 的拦截或通知事件。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1157190289%2FClasslikes%2F-1060603697" anchor-label="OneBotNoticeGroupMessageEventPostReplyEvent" id="-1157190289%2FClasslikes%2F-1060603697" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-one-bot-notice-group-message-event-post-reply-event/index.html"><span>One</span><wbr><span>Bot</span><wbr><span>Notice</span><wbr><span>Group</span><wbr><span>Message</span><wbr><span>Event</span><wbr><span>Post</span><wbr><span>Reply</span><wbr><span><span>Event</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1157190289%2FClasslikes%2F-1060603697"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-one-bot-notice-group-message-event-post-reply-event/index.html">OneBotNoticeGroupMessageEventPostReplyEvent</a> : <a href="-one-bot-notice-group-message-event-interaction-event/index.html">OneBotNoticeGroupMessageEventInteractionEvent</a>, <a href="-one-bot-group-message-event-post-reply-event/index.html">OneBotGroupMessageEventPostReplyEvent</a></div><div class="brief "><p class="paragraph">OneBot组件中针对 <a href="../love.forte.simbot.component.onebot.v11.core.event.message/-one-bot-message-event/reply.html">OneBotNoticeGroupMessageEvent.reply</a> 的通知事件。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2143886544%2FClasslikes%2F-1060603697" anchor-label="OneBotNoticeGroupMessageEventPreReplyEvent" id="-2143886544%2FClasslikes%2F-1060603697" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-one-bot-notice-group-message-event-pre-reply-event/index.html"><span>One</span><wbr><span>Bot</span><wbr><span>Notice</span><wbr><span>Group</span><wbr><span>Message</span><wbr><span>Event</span><wbr><span>Pre</span><wbr><span>Reply</span><wbr><span><span>Event</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2143886544%2FClasslikes%2F-1060603697"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-one-bot-notice-group-message-event-pre-reply-event/index.html">OneBotNoticeGroupMessageEventPreReplyEvent</a> : <a href="-one-bot-notice-group-message-event-interaction-event/index.html">OneBotNoticeGroupMessageEventInteractionEvent</a>, <a href="-one-bot-group-message-event-pre-reply-event/index.html">OneBotGroupMessageEventPreReplyEvent</a></div><div class="brief "><p class="paragraph">OneBot组件中针对 <a href="../love.forte.simbot.component.onebot.v11.core.event.message/-one-bot-message-event/reply.html">OneBotNoticeGroupMessageEvent.reply</a> 的拦截事件。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="353670747%2FClasslikes%2F-1060603697" anchor-label="OneBotPrivateMessageEventInteractionEvent" id="353670747%2FClasslikes%2F-1060603697" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-one-bot-private-message-event-interaction-event/index.html"><span>One</span><wbr><span>Bot</span><wbr><span>Private</span><wbr><span>Message</span><wbr><span>Event</span><wbr><span>Interaction</span><wbr><span><span>Event</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="353670747%2FClasslikes%2F-1060603697"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-one-bot-private-message-event-interaction-event/index.html">OneBotPrivateMessageEventInteractionEvent</a> : <a href="-one-bot-message-event-interaction-event/index.html">OneBotMessageEventInteractionEvent</a></div><div class="brief "><p class="paragraph">OneBot组件中针对 <a href="../love.forte.simbot.component.onebot.v11.core.event.message/-one-bot-private-message-event/index.html">OneBotPrivateMessageEvent</a> 的拦截或通知事件。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1561327373%2FClasslikes%2F-1060603697" anchor-label="OneBotPrivateMessageEventPostReplyEvent" id="-1561327373%2FClasslikes%2F-1060603697" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-one-bot-private-message-event-post-reply-event/index.html"><span>One</span><wbr><span>Bot</span><wbr><span>Private</span><wbr><span>Message</span><wbr><span>Event</span><wbr><span>Post</span><wbr><span>Reply</span><wbr><span><span>Event</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1561327373%2FClasslikes%2F-1060603697"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-one-bot-private-message-event-post-reply-event/index.html">OneBotPrivateMessageEventPostReplyEvent</a> : <a href="-one-bot-private-message-event-interaction-event/index.html">OneBotPrivateMessageEventInteractionEvent</a>, <a href="-one-bot-message-event-post-reply-event/index.html">OneBotMessageEventPostReplyEvent</a></div><div class="brief "><p class="paragraph">OneBot组件中针对 <a href="../love.forte.simbot.component.onebot.v11.core.event.message/-one-bot-message-event/reply.html">OneBotPrivateMessageEvent.reply</a> 的通知事件。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2018375892%2FClasslikes%2F-1060603697" anchor-label="OneBotPrivateMessageEventPreReplyEvent" id="-2018375892%2FClasslikes%2F-1060603697" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-one-bot-private-message-event-pre-reply-event/index.html"><span>One</span><wbr><span>Bot</span><wbr><span>Private</span><wbr><span>Message</span><wbr><span>Event</span><wbr><span>Pre</span><wbr><span>Reply</span><wbr><span><span>Event</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2018375892%2FClasslikes%2F-1060603697"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-one-bot-private-message-event-pre-reply-event/index.html">OneBotPrivateMessageEventPreReplyEvent</a> : <a href="-one-bot-private-message-event-interaction-event/index.html">OneBotPrivateMessageEventInteractionEvent</a>, <a href="-one-bot-message-event-pre-reply-event/index.html">OneBotMessageEventPreReplyEvent</a></div><div class="brief "><p class="paragraph">OneBot组件中针对 <a href="../love.forte.simbot.component.onebot.v11.core.event.message/-one-bot-message-event/reply.html">OneBotPrivateMessageEvent.reply</a> 的拦截事件。 可以对其中的参数进行修改。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="113328980%2FClasslikes%2F-1060603697" anchor-label="OneBotSegmentsInteractionMessage" id="113328980%2FClasslikes%2F-1060603697" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-one-bot-segments-interaction-message/index.html"><span>One</span><wbr><span>Bot</span><wbr><span>Segments</span><wbr><span>Interaction</span><wbr><span><span>Message</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="113328980%2FClasslikes%2F-1060603697"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-one-bot-segments-interaction-message/index.html">OneBotSegmentsInteractionMessage</a> : <a href="../../../../simbot-api/love.forte.simbot.event/-interaction-message/-extension/index.html">InteractionMessage.Extension</a></div><div class="brief "><p class="paragraph">OneBot组件中同时存在源 <a href="../../../../simbot-api/love.forte.simbot.event/-interaction-message/-message/index.html">Message</a> 和 <a href="../../../../simbot-component-onebot/simbot-component-onebot-v11/simbot-component-onebot-v11-message/love.forte.simbot.component.onebot.v11.message.segment/-one-bot-message-segment/index.html">OneBotMessageSegment</a> 列表的 <a href="../../../../simbot-api/love.forte.simbot.event/-interaction-message/index.html">InteractionMessage</a> 扩展类型。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="962676298%2FClasslikes%2F-1060603697" anchor-label="OneBotSendSupportInteractionEvent" id="962676298%2FClasslikes%2F-1060603697" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-one-bot-send-support-interaction-event/index.html"><span>One</span><wbr><span>Bot</span><wbr><span>Send</span><wbr><span>Support</span><wbr><span>Interaction</span><wbr><span><span>Event</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="962676298%2FClasslikes%2F-1060603697"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-one-bot-send-support-interaction-event/index.html">OneBotSendSupportInteractionEvent</a> : <a href="../../../../simbot-api/love.forte.simbot.event/-send-support-interaction-event/index.html">SendSupportInteractionEvent</a>, <a href="-one-bot-internal-message-interaction-event/index.html">OneBotInternalMessageInteractionEvent</a></div><div class="brief "><p class="paragraph">OneBot组件中针对 <a href="../../../../simbot-api/love.forte.simbot.ability/-send-support/index.html">SendSupport</a> 的拦截或通知事件。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1853373470%2FClasslikes%2F-1060603697" anchor-label="OneBotSendSupportPostSendEvent" id="1853373470%2FClasslikes%2F-1060603697" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-one-bot-send-support-post-send-event/index.html"><span>One</span><wbr><span>Bot</span><wbr><span>Send</span><wbr><span>Support</span><wbr><span>Post</span><wbr><span>Send</span><wbr><span><span>Event</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1853373470%2FClasslikes%2F-1060603697"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-one-bot-send-support-post-send-event/index.html">OneBotSendSupportPostSendEvent</a> : <a href="../../../../simbot-api/love.forte.simbot.event/-send-support-post-send-event/index.html">SendSupportPostSendEvent</a>, <a href="-one-bot-internal-message-post-send-event/index.html">OneBotInternalMessagePostSendEvent</a>, <a href="-one-bot-send-support-interaction-event/index.html">OneBotSendSupportInteractionEvent</a></div><div class="brief "><p class="paragraph">OneBot组件中针对 <a href="../../../../simbot-api/love.forte.simbot.ability/-send-support/send.html">SendSupport.send</a> 的通知事件。 会在 <a href="../../../../simbot-api/love.forte.simbot.ability/-send-support/send.html">SendSupport.send</a> 执行成功后带着它的相关结果进行异步通知。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1818305475%2FClasslikes%2F-1060603697" anchor-label="OneBotSendSupportPreSendEvent" id="1818305475%2FClasslikes%2F-1060603697" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-one-bot-send-support-pre-send-event/index.html"><span>One</span><wbr><span>Bot</span><wbr><span>Send</span><wbr><span>Support</span><wbr><span>Pre</span><wbr><span>Send</span><wbr><span><span>Event</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1818305475%2FClasslikes%2F-1060603697"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-one-bot-send-support-pre-send-event/index.html">OneBotSendSupportPreSendEvent</a> : <a href="../../../../simbot-api/love.forte.simbot.event/-send-support-pre-send-event/index.html">SendSupportPreSendEvent</a>, <a href="-one-bot-internal-message-pre-send-event/index.html">OneBotInternalMessagePreSendEvent</a>, <a href="-one-bot-send-support-interaction-event/index.html">OneBotSendSupportInteractionEvent</a></div><div class="brief "><p class="paragraph">OneBot组件中针对 <a href="../../../../simbot-api/love.forte.simbot.ability/-send-support/send.html">SendSupport.send</a> 的拦截事件。 可以对其中的参数进行修改。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>© 2024-2026 <a href="https://github.com/simple-robot">Simple Robot</a>. All rights reserved.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
