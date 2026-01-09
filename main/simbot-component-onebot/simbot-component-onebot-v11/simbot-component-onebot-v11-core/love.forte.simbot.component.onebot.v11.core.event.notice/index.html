@@ -1,0 +1,470 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>love.forte.simbot.component.onebot.v11.core.event.notice</title>
+<link href="../../../../images/logo-icon.svg" rel="icon" type="image/svg">    <!-- 百度统计 -->
+    <!--suppress ES6ConvertVarToLetConst -->
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            const hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?045f67a122223db9432c7856fc942fad";
+            const s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1JWL2DDTB4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-1JWL2DDTB4');
+    </script>
+<script>var pathToRoot = "../../../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+      if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      } else {
+        const savedDarkMode = JSON.parse(storage)
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../../styles/style.css" rel="Stylesheet">
+<link href="../../../../styles/main.css" rel="Stylesheet">
+<link href="../../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../../scripts/safe-local-storage_blocking.js"></script>
+<script type="text/javascript" src="../../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../../ui-kit/ui-kit.min.js" defer></script>
+<link href="../../../../images/logo-icon.svg">
+<link href="../../../../images/logo-icon-light.svg">
+<link href="../../../../styles/kdoc-style.css" rel="Stylesheet"></head>
+<body>
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+<a class="library-name--link" href="../../../../index.html" tabindex="1">
+                    Simple Robot
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">5.0.0-Preview1
+        </div>
+        <div class="navigation-controls">
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector common-like" data-active="" aria-pressed="true" data-filter=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain">common</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option common-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain" data-filter=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain">
+                                <span class="checkbox--icon"></span>
+                                common
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </ul>
+                <a class="navigation-controls--btn navigation-controls--btn_homepage" id="homepage-link" href="https://github.com/simple-robot/simpler-robot"></a>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config="{&quot;defaultSize&quot;: 280, &quot;minSize&quot;: 200, &quot;maxSize&quot;: 400}">
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
+                            <span>
+                                    Simple Robot
+                            </span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
+<div class="main-content" data-page-type="package" id="content" pageids="simbot-component-onebot-v11-core::love.forte.simbot.component.onebot.v11.core.event.notice////PointingToDeclaration//-1060603697">
+  <div class="breadcrumbs"><a href="../index.html">simbot-component-onebot-v11-core</a><span class="delimiter">/</span><span class="current">love.forte.simbot.component.onebot.v11.core.event.notice</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Package-level</span></span> <span><span>declarations</span></span></h1>
+    <div class="platform-hinted UnderCoverText" data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"><p class="paragraph">通知事件定义。</p></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="TYPE">Types</button><button class="section-tab" data-togglable="PROPERTY,EXTENSION_PROPERTY">Properties</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="TYPE">
+        <h2 class="tableheader">Types</h2>
+        <div class="table"><a data-name="721220456%2FClasslikes%2F-1060603697" anchor-label="OneBotBotSelfPokeEvent" id="721220456%2FClasslikes%2F-1060603697" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-one-bot-bot-self-poke-event/index.html"><span>One</span><wbr><span>Bot</span><wbr><span>Bot</span><wbr><span>Self</span><wbr><span>Poke</span><wbr><span><span>Event</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="721220456%2FClasslikes%2F-1060603697"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-one-bot-bot-self-poke-event/index.html">OneBotBotSelfPokeEvent</a> : <a href="-one-bot-poke-event/index.html">OneBotPokeEvent</a>, <a href="-one-bot-group-notify-event/index.html">OneBotGroupNotifyEvent</a></div><div class="brief "><p class="paragraph">群里Bot被戳一戳事件，即 <a href="-one-bot-poke-event/target-id.html">targetId</a> == <a href="../love.forte.simbot.component.onebot.v11.core.event/-one-bot-event/self-id.html">selfId</a>。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1872387999%2FClasslikes%2F-1060603697" anchor-label="OneBotFriendAddEvent" id="1872387999%2FClasslikes%2F-1060603697" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-one-bot-friend-add-event/index.html"><span>One</span><wbr><span>Bot</span><wbr><span>Friend</span><wbr><span>Add</span><wbr><span><span>Event</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1872387999%2FClasslikes%2F-1060603697"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-one-bot-friend-add-event/index.html">OneBotFriendAddEvent</a> : <a href="-one-bot-notice-event/index.html">OneBotNoticeEvent</a></div><div class="brief "><p class="paragraph">好友新增事件。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1900152097%2FClasslikes%2F-1060603697" anchor-label="OneBotFriendRecallEvent" id="1900152097%2FClasslikes%2F-1060603697" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-one-bot-friend-recall-event/index.html"><span>One</span><wbr><span>Bot</span><wbr><span>Friend</span><wbr><span>Recall</span><wbr><span><span>Event</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1900152097%2FClasslikes%2F-1060603697"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-one-bot-friend-recall-event/index.html">OneBotFriendRecallEvent</a> : <a href="-one-bot-notice-event/index.html">OneBotNoticeEvent</a>, <a href="../../../../simbot-api/love.forte.simbot.event/-contact-event/index.html">ContactEvent</a></div><div class="brief "><p class="paragraph">好友消息撤回事件</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-884695838%2FClasslikes%2F-1060603697" anchor-label="OneBotGroupAdminEvent" id="-884695838%2FClasslikes%2F-1060603697" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-one-bot-group-admin-event/index.html"><span>One</span><wbr><span>Bot</span><wbr><span>Group</span><wbr><span>Admin</span><wbr><span><span>Event</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-884695838%2FClasslikes%2F-1060603697"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-one-bot-group-admin-event/index.html">OneBotGroupAdminEvent</a> : <a href="-one-bot-notice-event/index.html">OneBotNoticeEvent</a>, <a href="../../../../simbot-api/love.forte.simbot.event/-member-event/index.html">MemberEvent</a></div><div class="brief "><p class="paragraph">群管理员变动事件</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1474442078%2FClasslikes%2F-1060603697" anchor-label="OneBotGroupBanEvent" id="-1474442078%2FClasslikes%2F-1060603697" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-one-bot-group-ban-event/index.html"><span>One</span><wbr><span>Bot</span><wbr><span>Group</span><wbr><span>Ban</span><wbr><span><span>Event</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1474442078%2FClasslikes%2F-1060603697"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-one-bot-group-ban-event/index.html">OneBotGroupBanEvent</a> : <a href="-one-bot-notice-event/index.html">OneBotNoticeEvent</a>, <a href="../../../../simbot-api/love.forte.simbot.event/-member-event/index.html">MemberEvent</a></div><div class="brief "><p class="paragraph">群禁言事件</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1740009291%2FClasslikes%2F-1060603697" anchor-label="OneBotGroupChangeEvent" id="1740009291%2FClasslikes%2F-1060603697" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-one-bot-group-change-event/index.html"><span>One</span><wbr><span>Bot</span><wbr><span>Group</span><wbr><span>Change</span><wbr><span><span>Event</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1740009291%2FClasslikes%2F-1060603697"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-one-bot-group-change-event/index.html">OneBotGroupChangeEvent</a> : <a href="-one-bot-notice-event/index.html">OneBotNoticeEvent</a>, <a href="../../../../simbot-api/love.forte.simbot.event/-member-increase-or-decrease-event/index.html">MemberIncreaseOrDecreaseEvent</a></div><div class="brief "><p class="paragraph">群成员增加或减少事件</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="217865971%2FClasslikes%2F-1060603697" anchor-label="OneBotGroupMemberDecreaseEvent" id="217865971%2FClasslikes%2F-1060603697" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-one-bot-group-member-decrease-event/index.html"><span>One</span><wbr><span>Bot</span><wbr><span>Group</span><wbr><span>Member</span><wbr><span>Decrease</span><wbr><span><span>Event</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="217865971%2FClasslikes%2F-1060603697"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-one-bot-group-member-decrease-event/index.html">OneBotGroupMemberDecreaseEvent</a> : <a href="-one-bot-group-change-event/index.html">OneBotGroupChangeEvent</a>, <a href="../../../../simbot-api/love.forte.simbot.event/-member-decrease-event/index.html">MemberDecreaseEvent</a></div><div class="brief "><p class="paragraph">群成员减少事件</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1535124073%2FClasslikes%2F-1060603697" anchor-label="OneBotGroupMemberIncreaseEvent" id="-1535124073%2FClasslikes%2F-1060603697" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-one-bot-group-member-increase-event/index.html"><span>One</span><wbr><span>Bot</span><wbr><span>Group</span><wbr><span>Member</span><wbr><span>Increase</span><wbr><span><span>Event</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1535124073%2FClasslikes%2F-1060603697"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-one-bot-group-member-increase-event/index.html">OneBotGroupMemberIncreaseEvent</a> : <a href="-one-bot-group-change-event/index.html">OneBotGroupChangeEvent</a>, <a href="../../../../simbot-api/love.forte.simbot.event/-member-increase-event/index.html">MemberIncreaseEvent</a></div><div class="brief "><p class="paragraph">群成员增加事件</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1686069540%2FClasslikes%2F-1060603697" anchor-label="OneBotGroupNotifyEvent" id="1686069540%2FClasslikes%2F-1060603697" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-one-bot-group-notify-event/index.html"><span>One</span><wbr><span>Bot</span><wbr><span>Group</span><wbr><span>Notify</span><wbr><span><span>Event</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1686069540%2FClasslikes%2F-1060603697"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-one-bot-group-notify-event/index.html">OneBotGroupNotifyEvent</a> : <a href="-one-bot-notify-event/index.html">OneBotNotifyEvent</a>, <a href="../../../../simbot-api/love.forte.simbot.event/-member-event/index.html">MemberEvent</a></div><div class="brief "><p class="paragraph">群成员荣誉变更事件、红包人气王事件或戳一戳事件。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1417294572%2FClasslikes%2F-1060603697" anchor-label="OneBotGroupRecallEvent" id="1417294572%2FClasslikes%2F-1060603697" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-one-bot-group-recall-event/index.html"><span>One</span><wbr><span>Bot</span><wbr><span>Group</span><wbr><span>Recall</span><wbr><span><span>Event</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1417294572%2FClasslikes%2F-1060603697"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-one-bot-group-recall-event/index.html">OneBotGroupRecallEvent</a> : <a href="-one-bot-notice-event/index.html">OneBotNoticeEvent</a>, <a href="../../../../simbot-api/love.forte.simbot.event/-chat-group-event/index.html">ChatGroupEvent</a></div><div class="brief "><p class="paragraph">群消息撤回事件</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1558624804%2FClasslikes%2F-1060603697" anchor-label="OneBotGroupUploadEvent" id="-1558624804%2FClasslikes%2F-1060603697" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-one-bot-group-upload-event/index.html"><span>One</span><wbr><span>Bot</span><wbr><span>Group</span><wbr><span>Upload</span><wbr><span><span>Event</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1558624804%2FClasslikes%2F-1060603697"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-one-bot-group-upload-event/index.html">OneBotGroupUploadEvent</a> : <a href="-one-bot-notice-event/index.html">OneBotNoticeEvent</a>, <a href="../../../../simbot-api/love.forte.simbot.event/-chat-group-event/index.html">ChatGroupEvent</a></div><div class="brief "><p class="paragraph">群文件上传事件</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-439552218%2FClasslikes%2F-1060603697" anchor-label="OneBotHonorEvent" id="-439552218%2FClasslikes%2F-1060603697" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-one-bot-honor-event/index.html"><span>One</span><wbr><span>Bot</span><wbr><span>Honor</span><wbr><span><span>Event</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-439552218%2FClasslikes%2F-1060603697"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-one-bot-honor-event/index.html">OneBotHonorEvent</a> : <a href="-one-bot-group-notify-event/index.html">OneBotGroupNotifyEvent</a></div><div class="brief "><p class="paragraph">群成员荣誉变更事件</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="984394779%2FClasslikes%2F-1060603697" anchor-label="OneBotLuckyKingEvent" id="984394779%2FClasslikes%2F-1060603697" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-one-bot-lucky-king-event/index.html"><span>One</span><wbr><span>Bot</span><wbr><span>Lucky</span><wbr><span>King</span><wbr><span><span>Event</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="984394779%2FClasslikes%2F-1060603697"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-one-bot-lucky-king-event/index.html">OneBotLuckyKingEvent</a> : <a href="-one-bot-group-notify-event/index.html">OneBotGroupNotifyEvent</a></div><div class="brief "><p class="paragraph">群红包运气王事件</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1560499483%2FClasslikes%2F-1060603697" anchor-label="OneBotMemberPokeEvent" id="-1560499483%2FClasslikes%2F-1060603697" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-one-bot-member-poke-event/index.html"><span>One</span><wbr><span>Bot</span><wbr><span>Member</span><wbr><span>Poke</span><wbr><span><span>Event</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1560499483%2FClasslikes%2F-1060603697"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-one-bot-member-poke-event/index.html">OneBotMemberPokeEvent</a> : <a href="-one-bot-poke-event/index.html">OneBotPokeEvent</a>, <a href="-one-bot-group-notify-event/index.html">OneBotGroupNotifyEvent</a></div><div class="brief "><p class="paragraph">群里Bot以外的群成员被戳一戳事件</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1984427818%2FClasslikes%2F-1060603697" anchor-label="OneBotNoticeEvent" id="1984427818%2FClasslikes%2F-1060603697" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-one-bot-notice-event/index.html"><span>One</span><wbr><span>Bot</span><wbr><span>Notice</span><wbr><span><span>Event</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1984427818%2FClasslikes%2F-1060603697"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-one-bot-notice-event/index.html">OneBotNoticeEvent</a> : <a href="../love.forte.simbot.component.onebot.v11.core.event/-one-bot-bot-event/index.html">OneBotBotEvent</a></div><div class="brief "><p class="paragraph">通知事件</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1324852261%2FClasslikes%2F-1060603697" anchor-label="OneBotNotifyEvent" id="-1324852261%2FClasslikes%2F-1060603697" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-one-bot-notify-event/index.html"><span>One</span><wbr><span>Bot</span><wbr><span>Notify</span><wbr><span><span>Event</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1324852261%2FClasslikes%2F-1060603697"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-one-bot-notify-event/index.html">OneBotNotifyEvent</a> : <a href="-one-bot-notice-event/index.html">OneBotNoticeEvent</a></div><div class="brief "><p class="paragraph">群成员荣誉变更事件、红包人气王事件或戳一戳事件。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1641581291%2FClasslikes%2F-1060603697" anchor-label="OneBotPokeEvent" id="1641581291%2FClasslikes%2F-1060603697" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-one-bot-poke-event/index.html"><span>One</span><wbr><span>Bot</span><wbr><span>Poke</span><wbr><span><span>Event</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1641581291%2FClasslikes%2F-1060603697"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-one-bot-poke-event/index.html">OneBotPokeEvent</a> : <a href="-one-bot-notify-event/index.html">OneBotNotifyEvent</a></div><div class="brief "><p class="paragraph">戳一戳事件</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2027659064%2FClasslikes%2F-1060603697" anchor-label="OneBotPrivatePokeEvent" id="2027659064%2FClasslikes%2F-1060603697" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-one-bot-private-poke-event/index.html"><span>One</span><wbr><span>Bot</span><wbr><span>Private</span><wbr><span>Poke</span><wbr><span><span>Event</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2027659064%2FClasslikes%2F-1060603697"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-one-bot-private-poke-event/index.html">OneBotPrivatePokeEvent</a> : <a href="-one-bot-poke-event/index.html">OneBotPokeEvent</a></div><div class="brief "><p class="paragraph">私聊里的戳一戳事件，<a href="-one-bot-notify-event/group-id.html">groupId</a> == <code class="lang-kotlin">null</code>。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="EXTENSION_PROPERTY">
+        <h2 class="tableheader">Inherited properties</h2>
+        <div class="table"><a data-name="-149367420%2FProperties%2F-1060603697" anchor-label="duration" id="-149367420%2FProperties%2F-1060603697" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="duration.html"><span><span>duration</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-149367420%2FProperties%2F-1060603697"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-one-bot-group-ban-event/index.html">OneBotGroupBanEvent</a><span class="token punctuation">.</span><a href="duration.html">duration</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.time/-duration/index.html">Duration</a></div><div class="brief "><p class="paragraph">禁言时长</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-187857372%2FProperties%2F-1060603697" anchor-label="isLeftBan" id="-187857372%2FProperties%2F-1060603697" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-left-ban.html"><span>is</span><wbr><span>Left</span><wbr><span><span>Ban</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-187857372%2FProperties%2F-1060603697"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-one-bot-group-ban-event/index.html">OneBotGroupBanEvent</a><span class="token punctuation">.</span><a href="is-left-ban.html">isLeftBan</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">是否为解除禁言。 即 <a href="-one-bot-group-ban-event/is-ban.html">OneBotGroupBanEvent.isBan</a> == <code class="lang-kotlin">false</code></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1485886239%2FProperties%2F-1060603697" anchor-label="isNotSet" id="1485886239%2FProperties%2F-1060603697" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-not-set.html"><span>is</span><wbr><span>Not</span><wbr><span><span>Set</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1485886239%2FProperties%2F-1060603697"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-one-bot-group-admin-event/index.html">OneBotGroupAdminEvent</a><span class="token punctuation">.</span><a href="is-not-set.html">isNotSet</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">是被 <i>免职</i> ， 即 <a href="-one-bot-group-admin-event/is-set.html">OneBotGroupAdminEvent.isSet</a> == <code class="lang-kotlin">false</code>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>© 2024-2026 <a href="https://github.com/simple-robot">Simple Robot</a>. All rights reserved.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

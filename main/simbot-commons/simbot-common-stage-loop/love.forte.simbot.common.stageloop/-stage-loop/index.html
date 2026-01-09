@@ -1,0 +1,236 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>StageLoop</title>
+<link href="../../../../images/logo-icon.svg" rel="icon" type="image/svg">    <!-- 百度统计 -->
+    <!--suppress ES6ConvertVarToLetConst -->
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            const hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?045f67a122223db9432c7856fc942fad";
+            const s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1JWL2DDTB4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-1JWL2DDTB4');
+    </script>
+<script>var pathToRoot = "../../../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+      if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      } else {
+        const savedDarkMode = JSON.parse(storage)
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../../styles/style.css" rel="Stylesheet">
+<link href="../../../../styles/main.css" rel="Stylesheet">
+<link href="../../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../../scripts/safe-local-storage_blocking.js"></script>
+<script type="text/javascript" src="../../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../../ui-kit/ui-kit.min.js" defer></script>
+<link href="../../../../images/logo-icon.svg">
+<link href="../../../../images/logo-icon-light.svg">
+<link href="../../../../styles/kdoc-style.css" rel="Stylesheet"></head>
+<body>
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+<a class="library-name--link" href="../../../../index.html" tabindex="1">
+                    Simple Robot
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">5.0.0-Preview1
+        </div>
+        <div class="navigation-controls">
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector common-like" data-active="" aria-pressed="true" data-filter=":simbot-commons:simbot-common-stage-loop/commonMain">common</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option common-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":simbot-commons:simbot-common-stage-loop/commonMain" data-filter=":simbot-commons:simbot-common-stage-loop/commonMain">
+                                <span class="checkbox--icon"></span>
+                                common
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </ul>
+                <a class="navigation-controls--btn navigation-controls--btn_homepage" id="homepage-link" href="https://github.com/simple-robot/simpler-robot"></a>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config="{&quot;defaultSize&quot;: 280, &quot;minSize&quot;: 200, &quot;maxSize&quot;: 400}">
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
+                            <span>
+                                    Simple Robot
+                            </span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="simbot-common-stage-loop::love.forte.simbot.common.stageloop/StageLoop///PointingToDeclaration//-2084117088">
+  <div class="breadcrumbs"><a href="../../index.html">simbot-common-stage-loop</a><span class="delimiter">/</span><a href="../index.html">love.forte.simbot.common.stageloop</a><span class="delimiter">/</span><span class="current">StageLoop</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Stage</span><wbr><span><span>Loop</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-commons:simbot-common-stage-loop/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="index.html">StageLoop</a><span class="token operator">&lt;</span><a href="index.html">S</a><span class="token operator"> : </span><a href="../-stage/index.html">Stage</a><span class="token operator">&lt;</span><a href="index.html">S</a><span class="token operator">&gt;</span><span class="token operator">&gt;</span><span class="source-link-wrapper"><span class="source-link" data-element-type="source-link">(<a href="https://github.com/simple-robot/simpler-robot/tree/dev/main/simbot-commons/simbot-common-stage-loop/src/commonMain/kotlin/love/forte/simbot/common/stageloop/StageLoop.kt#L49">source</a>)</span></span></div><p class="paragraph">可挂起的事件循环器。</p><p class="paragraph"><a href="index.html">StageLoop</a> 内部持有可变状态，一个 <a href="index.html">StageLoop</a> 实例建议同时只进行一个循环任务。</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">sealed FooStage : Stage&lt;FooStage&gt;() {<br>    object Start : FooStage() { ... }<br>    // ...<br>}<br><br>val stageLoop = ...<br>stageLoop.appendStage(FooStage.Start)<br><br>stageLoop.loop()</code></pre><span class="copy-tooltip"><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div><span class="copy-icon"></span></span></div><span class="kdoc-tag"><h4 class="">Author</h4><p class="paragraph">ForteScarlet</p></span><h4 class="tableheader">Parameters</h4><div class="table"><div class="table-row table-row_content" data-filterable-current=":simbot-commons:simbot-common-stage-loop/commonMain" data-filterable-set=":simbot-commons:simbot-common-stage-loop/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span><span>S</span></span></u></div></span></div><div><div class="title"><p class="paragraph">用于界定一定范围内的状态</p></div></div></div></div></div><h4 class="tableheader">See also</h4><div class="table"><div class="table-row table-row_content" data-filterable-current=":simbot-commons:simbot-common-stage-loop/commonMain" data-filterable-set=":simbot-commons:simbot-common-stage-loop/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../loop.html"><span><span>loop</span></span></a></div></span></div><div></div></div></div></div></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button><button class="section-tab" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION,EXTENSION_PROPERTY,EXTENSION_FUNCTION">Members &amp; Extensions</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="PROPERTY">
+        <h2 class="tableheader">Properties</h2>
+        <div class="table"><a data-name="1163089705%2FProperties%2F-2084117088" anchor-label="currentStage" id="1163089705%2FProperties%2F-2084117088" data-filterable-set=":simbot-commons:simbot-common-stage-loop/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-commons:simbot-common-stage-loop/commonMain" data-filterable-set=":simbot-commons:simbot-common-stage-loop/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="current-stage.html"><span>current</span><wbr><span><span>Stage</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1163089705%2FProperties%2F-2084117088"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-commons:simbot-common-stage-loop/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">val </span><a href="current-stage.html">currentStage</a><span class="token operator">: </span><a href="index.html">S</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">在 <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/index.html">run</a> 中<strong>正在执行</strong>的状态实例。 如果为null则代表没有循环在进行。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="tableheader">Functions</h2>
+        <div class="table"><a data-name="-766938855%2FFunctions%2F-2084117088" anchor-label="appendStage" id="-766938855%2FFunctions%2F-2084117088" data-filterable-set=":simbot-commons:simbot-common-stage-loop/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-commons:simbot-common-stage-loop/commonMain" data-filterable-set=":simbot-commons:simbot-common-stage-loop/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="append-stage.html"><span>append</span><wbr><span><span>Stage</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-766938855%2FFunctions%2F-2084117088"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-commons:simbot-common-stage-loop/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="append-stage.html"><span class="token function">appendStage</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">stage<span class="token operator">: </span><a href="index.html">S</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">向事件队列尾部追加事件。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1581173624%2FFunctions%2F-2084117088" anchor-label="invoke" id="1581173624%2FFunctions%2F-2084117088" data-filterable-set=":simbot-commons:simbot-common-stage-loop/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-commons:simbot-common-stage-loop/commonMain" data-filterable-set=":simbot-commons:simbot-common-stage-loop/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="invoke.html"><span><span>invoke</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1581173624%2FFunctions%2F-2084117088"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-commons:simbot-common-stage-loop/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">suspend operator </span><span class="token keyword">fun </span><a href="invoke.html"><span class="token function">invoke</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">stage<span class="token operator">: </span><a href="index.html">S</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">根据提供的 <a href="invoke.html">stage</a> 变更 <a href="current-stage.html">currentStage</a> 的状态并执行它（如果不为null的话）</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-710811985%2FFunctions%2F-2084117088" anchor-label="poll" id="-710811985%2FFunctions%2F-2084117088" data-filterable-set=":simbot-commons:simbot-common-stage-loop/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-commons:simbot-common-stage-loop/commonMain" data-filterable-set=":simbot-commons:simbot-common-stage-loop/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="poll.html"><span><span>poll</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-710811985%2FFunctions%2F-2084117088"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-commons:simbot-common-stage-loop/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="poll.html"><span class="token function">poll</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">S</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">取出下一个需要执行的状态。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="EXTENSION_FUNCTION">
+        <h2 class="tableheader">Inherited functions</h2>
+        <div class="table"><a data-name="-2126044688%2FFunctions%2F-2084117088" anchor-label="loop" id="-2126044688%2FFunctions%2F-2084117088" data-filterable-set=":simbot-commons:simbot-common-stage-loop/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-commons:simbot-common-stage-loop/commonMain" data-filterable-set=":simbot-commons:simbot-common-stage-loop/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../loop.html"><span><span>loop</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2126044688%2FFunctions%2F-2084117088"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-commons:simbot-common-stage-loop/commonMain"><div class="symbol monospace"><span class="token keyword">inline suspend </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="../loop.html">S</a><span class="token operator"> : </span><a href="../-stage/index.html">Stage</a><span class="token operator">&lt;</span><a href="../loop.html">S</a><span class="token operator">&gt;</span><span class="token operator">&gt; </span><a href="index.html">StageLoop</a><span class="token operator">&lt;</span><a href="../loop.html">S</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="../loop.html"><span class="token function">loop</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">crossinline </span>condition<span class="token operator">: </span><span class="token punctuation">(</span>next<span class="token operator">: </span><a href="../loop.html">S</a><span class="token operator">?</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span>{ next -&gt; next != null }<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">crossinline </span>exceptionHandle<span class="token operator">: </span><span class="token punctuation">(</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-throwable/index.html">Throwable</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a><span class="token operator"> = </span>{ e -&gt;
+        throw e
+    }</span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">通过提供的 <a href="index.html">StageLoop</a> 进行循环。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>© 2024-2026 <a href="https://github.com/simple-robot">Simple Robot</a>. All rights reserved.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

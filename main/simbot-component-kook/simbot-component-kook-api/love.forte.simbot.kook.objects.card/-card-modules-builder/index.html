@@ -1,0 +1,440 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>CardModulesBuilder</title>
+<link href="../../../../images/logo-icon.svg" rel="icon" type="image/svg">    <!-- 百度统计 -->
+    <!--suppress ES6ConvertVarToLetConst -->
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            const hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?045f67a122223db9432c7856fc942fad";
+            const s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1JWL2DDTB4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-1JWL2DDTB4');
+    </script>
+<script>var pathToRoot = "../../../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+      if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      } else {
+        const savedDarkMode = JSON.parse(storage)
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../../styles/style.css" rel="Stylesheet">
+<link href="../../../../styles/main.css" rel="Stylesheet">
+<link href="../../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../../scripts/safe-local-storage_blocking.js"></script>
+<script type="text/javascript" src="../../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../../ui-kit/ui-kit.min.js" defer></script>
+<link href="../../../../images/logo-icon.svg">
+<link href="../../../../images/logo-icon-light.svg">
+<link href="../../../../styles/kdoc-style.css" rel="Stylesheet"></head>
+<body>
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+<a class="library-name--link" href="../../../../index.html" tabindex="1">
+                    Simple Robot
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">5.0.0-Preview1
+        </div>
+        <div class="navigation-controls">
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector common-like" data-active="" aria-pressed="true" data-filter=":simbot-component-kook:simbot-component-kook-api/commonMain">common</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option common-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":simbot-component-kook:simbot-component-kook-api/commonMain" data-filter=":simbot-component-kook:simbot-component-kook-api/commonMain">
+                                <span class="checkbox--icon"></span>
+                                common
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </ul>
+                <a class="navigation-controls--btn navigation-controls--btn_homepage" id="homepage-link" href="https://github.com/simple-robot/simpler-robot"></a>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config="{&quot;defaultSize&quot;: 280, &quot;minSize&quot;: 200, &quot;maxSize&quot;: 400}">
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
+                            <span>
+                                    Simple Robot
+                            </span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="simbot-component-kook-api::love.forte.simbot.kook.objects.card/CardModulesBuilder///PointingToDeclaration//-283449242">
+  <div class="breadcrumbs"><a href="../../index.html">simbot-component-kook-api</a><span class="delimiter">/</span><a href="../index.html">love.forte.simbot.kook.objects.card</a><span class="delimiter">/</span><span class="current">CardModulesBuilder</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Card</span><wbr><span>Modules</span><wbr><span><span>Builder</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook:simbot-component-kook-api/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="index.html">CardModulesBuilder</a>&nbsp;<span><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-jvm-overloads/index.html"><span class="token annotation builtin">JvmOverloads</span></a>&nbsp;</span><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">collect<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-mutable-collection/index.html">MutableCollection</a><span class="token operator">&lt;</span><a href="../-card-module/index.html">CardModule</a><span class="token operator">&gt;</span><span class="token operator"> = </span>mutableListOf()</span></span><span class="token punctuation">)</span><span class="source-link-wrapper"><span class="source-link" data-element-type="source-link">(<a href="https://github.com/simple-robot/simpler-robot/tree/dev/main/simbot-component-kook/simbot-component-kook-api/src/commonMain/kotlin/love/forte/simbot/kook/objects/card/CardMessageBuilder.kt#L175">source</a>)</span></span></div><p class="paragraph">针对 <a href="../-card-module/index.html">CardModule</a> 的集合的构建器。</p></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="tableheader">Constructors</h2>
+        <div class="table"><a data-name="-2132180589%2FConstructors%2F-283449242" anchor-label="CardModulesBuilder" id="-2132180589%2FConstructors%2F-283449242" data-filterable-set=":simbot-component-kook:simbot-component-kook-api/commonMain"></a>
+          <div class="table-row table-row_content" data-togglable="CONSTRUCTOR" data-filterable-current=":simbot-component-kook:simbot-component-kook-api/commonMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-card-modules-builder.html"><span>Card</span><wbr><span>Modules</span><wbr><span><span>Builder</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2132180589%2FConstructors%2F-283449242"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook:simbot-component-kook-api/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-jvm-overloads/index.html"><span class="token annotation builtin">JvmOverloads</span></a></div></div><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">collect<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-mutable-collection/index.html">MutableCollection</a><span class="token operator">&lt;</span><a href="../-card-module/index.html">CardModule</a><span class="token operator">&gt;</span><span class="token operator"> = </span>mutableListOf()</span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="tableheader">Functions</h2>
+        <div class="table"><a data-name="1811665588%2FFunctions%2F-283449242" anchor-label="actionGroup" id="1811665588%2FFunctions%2F-283449242" data-filterable-set=":simbot-component-kook:simbot-component-kook-api/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-kook:simbot-component-kook-api/commonMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="action-group.html"><span>action</span><wbr><span><span>Group</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1811665588%2FFunctions%2F-283449242"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook:simbot-component-kook-api/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="action-group.html"><span class="token function">actionGroup</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">elements<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="../-card-element/-button/index.html">CardElement.Button</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">CardModulesBuilder</a></div><div class="symbol monospace"><span class="token keyword">fun </span><a href="action-group.html"><span class="token function">actionGroup</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">vararg </span>elements<span class="token operator">: </span><a href="../-card-element/-button/index.html">CardElement.Button</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">CardModulesBuilder</a></div><div class="brief "><p class="paragraph">添加一个<a href="../-card-module/-action-group/index.html">CardModule.ActionGroup</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1093845665%2FFunctions%2F-283449242" anchor-label="audio" id="1093845665%2FFunctions%2F-283449242" data-filterable-set=":simbot-component-kook:simbot-component-kook-api/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-kook:simbot-component-kook-api/commonMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="audio.html"><span><span>audio</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1093845665%2FFunctions%2F-283449242"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook:simbot-component-kook-api/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="audio.html"><span class="token function">audio</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">src<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">title<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">cover<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">CardModulesBuilder</a></div><div class="brief "><p class="paragraph">添加一个 <a href="../-card-module/-files/-audio/index.html">CardModule.Files.Audio</a></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1224495221%2FFunctions%2F-283449242" anchor-label="build" id="1224495221%2FFunctions%2F-283449242" data-filterable-set=":simbot-component-kook:simbot-component-kook-api/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-kook:simbot-component-kook-api/commonMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="build.html"><span><span>build</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1224495221%2FFunctions%2F-283449242"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook:simbot-component-kook-api/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="build.html"><span class="token function">build</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="../-card-module/index.html">CardModule</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">得到当前收集的所有 <a href="../-card-module/index.html">CardModule</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1241732746%2FFunctions%2F-283449242" anchor-label="clear" id="-1241732746%2FFunctions%2F-283449242" data-filterable-set=":simbot-component-kook:simbot-component-kook-api/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-kook:simbot-component-kook-api/commonMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="clear.html"><span><span>clear</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1241732746%2FFunctions%2F-283449242"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook:simbot-component-kook-api/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="clear.html"><span class="token function">clear</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">清理当前收集的所有 <a href="../-card-module/index.html">CardModule</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1520694050%2FFunctions%2F-283449242" anchor-label="container" id="1520694050%2FFunctions%2F-283449242" data-filterable-set=":simbot-component-kook:simbot-component-kook-api/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-kook:simbot-component-kook-api/commonMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="container.html"><span><span>container</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1520694050%2FFunctions%2F-283449242"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook:simbot-component-kook-api/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="container.html"><span class="token function">container</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">elements<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="../-card-element/-image/index.html">CardElement.Image</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">CardModulesBuilder</a></div><div class="symbol monospace"><span class="token keyword">fun </span><a href="container.html"><span class="token function">container</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">vararg </span>elements<span class="token operator">: </span><a href="../-card-element/-image/index.html">CardElement.Image</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">CardModulesBuilder</a></div><div class="brief "><p class="paragraph">添加一个 <a href="../-card-module/-container/index.html">CardModule.Container</a></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="163247426%2FFunctions%2F-283449242" anchor-label="context" id="163247426%2FFunctions%2F-283449242" data-filterable-set=":simbot-component-kook:simbot-component-kook-api/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-kook:simbot-component-kook-api/commonMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="context.html"><span><span>context</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="163247426%2FFunctions%2F-283449242"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook:simbot-component-kook-api/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="context.html"><span class="token function">context</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">elements<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="../-card-element/index.html">CardElement</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">CardModulesBuilder</a></div><div class="symbol monospace"><span class="token keyword">fun </span><a href="context.html"><span class="token function">context</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">vararg </span>elements<span class="token operator">: </span><a href="../-card-element/index.html">CardElement</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">CardModulesBuilder</a></div><div class="brief "><p class="paragraph">添加一个 <a href="../-card-module/-context/index.html">CardModule.Context</a></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1584843063%2FFunctions%2F-283449242" anchor-label="countdown" id="1584843063%2FFunctions%2F-283449242" data-filterable-set=":simbot-component-kook:simbot-component-kook-api/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-kook:simbot-component-kook-api/commonMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="countdown.html"><span><span>countdown</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1584843063%2FFunctions%2F-283449242"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook:simbot-component-kook-api/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="countdown.html"><span class="token function">countdown</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">mode<span class="token operator">: </span><a href="../-card-module/-countdown-mode/index.html">CardModule.CountdownMode</a><span class="token punctuation">, </span></span><span class="parameter ">startTime<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-long/index.html">Long</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">endTime<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-long/index.html">Long</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">CardModulesBuilder</a></div><div class="brief "><p class="paragraph">添加一个 <a href="../-card-module/-countdown/index.html">CardModule.Countdown</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-473686163%2FFunctions%2F-283449242" anchor-label="countdownDay" id="-473686163%2FFunctions%2F-283449242" data-filterable-set=":simbot-component-kook:simbot-component-kook-api/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-kook:simbot-component-kook-api/commonMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="countdown-day.html"><span>countdown</span><wbr><span><span>Day</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-473686163%2FFunctions%2F-283449242"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook:simbot-component-kook-api/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="countdown-day.html"><span class="token function">countdownDay</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">endTime<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-long/index.html">Long</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">CardModulesBuilder</a></div><div class="brief "><p class="paragraph">添加一个 <a href="../-card-module/-countdown/index.html">CardModule.Countdown</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1436104853%2FFunctions%2F-283449242" anchor-label="countdownHour" id="-1436104853%2FFunctions%2F-283449242" data-filterable-set=":simbot-component-kook:simbot-component-kook-api/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-kook:simbot-component-kook-api/commonMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="countdown-hour.html"><span>countdown</span><wbr><span><span>Hour</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1436104853%2FFunctions%2F-283449242"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook:simbot-component-kook-api/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="countdown-hour.html"><span class="token function">countdownHour</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">endTime<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-long/index.html">Long</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">CardModulesBuilder</a></div><div class="brief "><p class="paragraph">添加一个 <a href="../-card-module/-countdown/index.html">CardModule.Countdown</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-798630379%2FFunctions%2F-283449242" anchor-label="countdownSecond" id="-798630379%2FFunctions%2F-283449242" data-filterable-set=":simbot-component-kook:simbot-component-kook-api/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-kook:simbot-component-kook-api/commonMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="countdown-second.html"><span>countdown</span><wbr><span><span>Second</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-798630379%2FFunctions%2F-283449242"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook:simbot-component-kook-api/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="countdown-second.html"><span class="token function">countdownSecond</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">startTime<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-long/index.html">Long</a><span class="token punctuation">, </span></span><span class="parameter ">endTime<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-long/index.html">Long</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">CardModulesBuilder</a></div><div class="brief "><p class="paragraph">添加一个 <a href="../-card-module/-countdown/index.html">CardModule.Countdown</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="613599402%2FFunctions%2F-283449242" anchor-label="divider" id="613599402%2FFunctions%2F-283449242" data-filterable-set=":simbot-component-kook:simbot-component-kook-api/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-kook:simbot-component-kook-api/commonMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="divider.html"><span><span>divider</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="613599402%2FFunctions%2F-283449242"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook:simbot-component-kook-api/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="divider.html"><span class="token function">divider</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">CardModulesBuilder</a></div><div class="brief "><p class="paragraph">添加一个 <a href="../-card-module/-divider/index.html">CardModule.Divider</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="208251091%2FFunctions%2F-283449242" anchor-label="file" id="208251091%2FFunctions%2F-283449242" data-filterable-set=":simbot-component-kook:simbot-component-kook-api/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-kook:simbot-component-kook-api/commonMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="file.html"><span><span>file</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="208251091%2FFunctions%2F-283449242"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook:simbot-component-kook-api/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="file.html"><span class="token function">file</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">src<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">title<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">cover<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">CardModulesBuilder</a></div><div class="brief "><p class="paragraph">添加一个 <a href="../-card-module/-files/-file/index.html">CardModule.Files.File</a></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="357506373%2FFunctions%2F-283449242" anchor-label="header" id="357506373%2FFunctions%2F-283449242" data-filterable-set=":simbot-component-kook:simbot-component-kook-api/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-kook:simbot-component-kook-api/commonMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="header.html"><span><span>header</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="357506373%2FFunctions%2F-283449242"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook:simbot-component-kook-api/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="header.html"><span class="token function">header</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">text<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">CardModulesBuilder</a></div><div class="symbol monospace"><span class="token keyword">fun </span><a href="header.html"><span class="token function">header</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">text<span class="token operator">: </span><a href="../-card-element/-text/index.html">CardElement.Text</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">CardModulesBuilder</a></div><div class="brief "><p class="paragraph">增加一个 <a href="../-card-module/-header/index.html">CardModule.Header</a>。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-228656206%2FFunctions%2F-283449242" anchor-label="imageGroup" id="-228656206%2FFunctions%2F-283449242" data-filterable-set=":simbot-component-kook:simbot-component-kook-api/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-kook:simbot-component-kook-api/commonMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="image-group.html"><span>image</span><wbr><span><span>Group</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-228656206%2FFunctions%2F-283449242"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook:simbot-component-kook-api/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="image-group.html"><span class="token function">imageGroup</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">elements<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="../-card-element/-image/index.html">CardElement.Image</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">CardModulesBuilder</a></div><div class="symbol monospace"><span class="token keyword">fun </span><a href="image-group.html"><span class="token function">imageGroup</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">vararg </span>elements<span class="token operator">: </span><a href="../-card-element/-image/index.html">CardElement.Image</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">CardModulesBuilder</a></div><div class="brief "><p class="paragraph">添加一个 <a href="../-card-module/-image-group/index.html">CardModule.ImageGroup</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1160763798%2FFunctions%2F-283449242" anchor-label="invite" id="1160763798%2FFunctions%2F-283449242" data-filterable-set=":simbot-component-kook:simbot-component-kook-api/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-kook:simbot-component-kook-api/commonMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="invite.html"><span><span>invite</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1160763798%2FFunctions%2F-283449242"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook:simbot-component-kook-api/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="invite.html"><span class="token function">invite</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">code<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">CardModulesBuilder</a></div><div class="brief "><p class="paragraph">添加一个 <a href="../-card-module/-invite/index.html">CardModule.Invite</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1321582999%2FFunctions%2F-283449242" anchor-label="section" id="-1321582999%2FFunctions%2F-283449242" data-filterable-set=":simbot-component-kook:simbot-component-kook-api/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-kook:simbot-component-kook-api/commonMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="section.html"><span><span>section</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1321582999%2FFunctions%2F-283449242"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook:simbot-component-kook-api/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-jvm-overloads/index.html"><span class="token annotation builtin">JvmOverloads</span></a></div></div><span class="token keyword">fun </span><a href="section.html"><span class="token function">section</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">mode<span class="token operator">: </span><a href="../-card-module/-section-mode/index.html">CardModule.SectionMode</a><span class="token operator"> = </span>CardModule.SectionMode.LEFT<span class="token punctuation">, </span></span><span class="parameter ">text<span class="token operator">: </span><a href="../-card-element/index.html">CardElement</a><span class="token punctuation">, </span></span><span class="parameter ">accessory<span class="token operator">: </span><a href="../-card-element/index.html">CardElement</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">CardModulesBuilder</a></div><div class="brief "><p class="paragraph">添加一个 <a href="../-card-module/-section/index.html">CardModule.Section</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1890071078%2FFunctions%2F-283449242" anchor-label="unaryPlus" id="-1890071078%2FFunctions%2F-283449242" data-filterable-set=":simbot-component-kook:simbot-component-kook-api/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-kook:simbot-component-kook-api/commonMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="unary-plus.html"><span>unary</span><wbr><span><span>Plus</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1890071078%2FFunctions%2F-283449242"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook:simbot-component-kook-api/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-jvm-name/index.html"><span class="token annotation builtin">JvmName</span></a><span class="token punctuation">(</span><span>name<span class="token operator"> = </span><span class="breakable-word"><span class="token string">"module"</span></span></span><wbr><span class="token punctuation">)</span></div></div><span class="token keyword">operator </span><span class="token keyword">fun </span><a href="../-card-module/index.html">CardModule</a><span class="token punctuation">.</span><a href="unary-plus.html"><span class="token function">unaryPlus</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">CardModulesBuilder</a></div><div class="brief "><p class="paragraph">直接增加一个 card module 实例。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-947126778%2FFunctions%2F-283449242" anchor-label="video" id="-947126778%2FFunctions%2F-283449242" data-filterable-set=":simbot-component-kook:simbot-component-kook-api/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-kook:simbot-component-kook-api/commonMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="video.html"><span><span>video</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-947126778%2FFunctions%2F-283449242"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook:simbot-component-kook-api/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="video.html"><span class="token function">video</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">src<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">title<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">cover<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">CardModulesBuilder</a></div><div class="brief "><p class="paragraph">添加一个 <a href="../-card-module/-files/-video/index.html">CardModule.Files.Video</a></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>© 2024-2026 <a href="https://github.com/simple-robot">Simple Robot</a>. All rights reserved.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
