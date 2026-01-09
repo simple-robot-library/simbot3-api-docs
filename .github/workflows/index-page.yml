@@ -37,6 +37,17 @@ jobs:
           rm -rf kdoc/main-v4
         working-directory: ./public
 
+      # main-v5
+      - uses: actions/checkout@v4
+        with:
+          ref: 'kdoc-deploy/main-v5'
+          path: 'public/kdoc/main-v5'
+
+      - run: |
+          cp -r kdoc/main-v5/* ./
+          rm -rf kdoc/main-v5
+        working-directory: ./public
+
       # main
       - uses: actions/checkout@v4
         with:
