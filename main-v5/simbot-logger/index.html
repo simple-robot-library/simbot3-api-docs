@@ -62,15 +62,14 @@
             </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
         </button>
         <div class="navigation-controls--break ui-kit_mobile-only"></div>
-        <div class="library-version" id="library-version">5.0.0-Preview1
+        <div class="library-version" id="library-version">5.0.0-Preview2
         </div>
         <div class="navigation-controls">
         <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
                 <button class="platform-tag platform-selector common-like" data-active="" aria-pressed="true" data-filter=":simbot-logger/commonMain">common</button>
-                <button class="platform-tag platform-selector js-like" data-active="" aria-pressed="true" data-filter=":simbot-logger/jsMain">js</button>
                 <button class="platform-tag platform-selector jvm-like" data-active="" aria-pressed="true" data-filter=":simbot-logger/jvmMain">jvm</button>
                 <button class="platform-tag platform-selector common-like" data-active="" aria-pressed="true" data-filter=":simbot-logger/nativeMain">native</button>
-                <button class="platform-tag platform-selector wasm-like" data-active="" aria-pressed="true" data-filter=":simbot-logger/wasmJsMain">wasmJs</button>
+                <button class="platform-tag platform-selector common-like" data-active="" aria-pressed="true" data-filter=":simbot-logger/webMain">web</button>
             <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
                 <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
                 <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
@@ -84,13 +83,6 @@
                                 <input type="checkbox" class="checkbox--input" id=":simbot-logger/commonMain" data-filter=":simbot-logger/commonMain">
                                 <span class="checkbox--icon"></span>
                                 common
-                            </label>
-                        </li>
-                        <li role="option" class="dropdown--option platform-selector-option js-like" tabindex="0">
-                            <label class="checkbox">
-                                <input type="checkbox" class="checkbox--input" id=":simbot-logger/jsMain" data-filter=":simbot-logger/jsMain">
-                                <span class="checkbox--icon"></span>
-                                js
                             </label>
                         </li>
                         <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
@@ -107,11 +99,11 @@
                                 native
                             </label>
                         </li>
-                        <li role="option" class="dropdown--option platform-selector-option wasm-like" tabindex="0">
+                        <li role="option" class="dropdown--option platform-selector-option common-like" tabindex="0">
                             <label class="checkbox">
-                                <input type="checkbox" class="checkbox--input" id=":simbot-logger/wasmJsMain" data-filter=":simbot-logger/wasmJsMain">
+                                <input type="checkbox" class="checkbox--input" id=":simbot-logger/webMain" data-filter=":simbot-logger/webMain">
                                 <span class="checkbox--icon"></span>
-                                wasmJs
+                                web
                             </label>
                         </li>
                 </ul>
@@ -146,35 +138,34 @@
         </nav>
         <div id="resizer" class="resizer" data-item-type="BAR"></div>
         <div id="main" data-item-type="SECTION" role="main">
-<div class="main-content" id="content" pageids="simbot-logger::////PointingToDeclaration//1749518553">
+<div class="main-content" id="content" pageids="simbot-logger::////PointingToDeclaration//78373600">
   <div class="breadcrumbs"></div>
   <div class="cover ">
     <h1 class="cover"><span><span>simbot-logger</span></span></h1>
     <div class="platform-hinted UnderCoverText with-platform-tabs" data-platform-hinted="data-platform-hinted">
-      <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":simbot-logger/commonMain" data-filterable-set=":simbot-logger/commonMain" data-active="" data-toggle=":simbot-logger/commonMain">common</button><button class="platform-bookmark" data-filterable-current=":simbot-logger/jsMain" data-filterable-set=":simbot-logger/jsMain" data-toggle=":simbot-logger/jsMain">js</button><button class="platform-bookmark" data-filterable-current=":simbot-logger/jvmMain" data-filterable-set=":simbot-logger/jvmMain" data-toggle=":simbot-logger/jvmMain">jvm</button><button class="platform-bookmark" data-filterable-current=":simbot-logger/nativeMain" data-filterable-set=":simbot-logger/nativeMain" data-toggle=":simbot-logger/nativeMain">native</button><button class="platform-bookmark" data-filterable-current=":simbot-logger/wasmJsMain" data-filterable-set=":simbot-logger/wasmJsMain" data-toggle=":simbot-logger/wasmJsMain">wasmJs</button></div>
-<div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-logger/commonMain"><p class="paragraph">跨平台日志抽象。</p></div><div class="content sourceset-dependent-content" data-togglable=":simbot-logger/jsMain"><p class="paragraph">跨平台日志抽象。</p></div><div class="content sourceset-dependent-content" data-togglable=":simbot-logger/jvmMain"><p class="paragraph">跨平台日志抽象。</p></div><div class="content sourceset-dependent-content" data-togglable=":simbot-logger/nativeMain"><p class="paragraph">跨平台日志抽象。</p></div><div class="content sourceset-dependent-content" data-togglable=":simbot-logger/wasmJsMain"><p class="paragraph">跨平台日志抽象。</p></div>    </div>
+      <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":simbot-logger/commonMain" data-filterable-set=":simbot-logger/commonMain" data-active="" data-toggle=":simbot-logger/commonMain">common</button><button class="platform-bookmark" data-filterable-current=":simbot-logger/jvmMain" data-filterable-set=":simbot-logger/jvmMain" data-toggle=":simbot-logger/jvmMain">jvm</button><button class="platform-bookmark" data-filterable-current=":simbot-logger/nativeMain" data-filterable-set=":simbot-logger/nativeMain" data-toggle=":simbot-logger/nativeMain">native</button><button class="platform-bookmark" data-filterable-current=":simbot-logger/webMain" data-filterable-set=":simbot-logger/webMain" data-toggle=":simbot-logger/webMain">web</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-logger/commonMain"><p class="paragraph">跨平台日志抽象。</p></div><div class="content sourceset-dependent-content" data-togglable=":simbot-logger/jvmMain"><p class="paragraph">跨平台日志抽象。</p></div><div class="content sourceset-dependent-content" data-togglable=":simbot-logger/nativeMain"><p class="paragraph">跨平台日志抽象。</p></div><div class="content sourceset-dependent-content" data-togglable=":simbot-logger/webMain"><p class="paragraph">跨平台日志抽象。</p></div>    </div>
   </div>
   <h2 class="">Packages</h2>
-  <div class="table"><a data-name="1003965600%2FPackages%2F1749518553" anchor-label="love.forte.simbot.logger" id="1003965600%2FPackages%2F1749518553" data-filterable-set=":simbot-logger/commonMain,:simbot-logger/jsMain,:simbot-logger/nativeMain,:simbot-logger/wasmJsMain,:simbot-logger/jvmMain"></a>
-    <div class="table-row table-row_platform-tagged" data-filterable-current=":simbot-logger/commonMain,:simbot-logger/jsMain,:simbot-logger/nativeMain,:simbot-logger/wasmJsMain,:simbot-logger/jvmMain" data-filterable-set=":simbot-logger/commonMain,:simbot-logger/jsMain,:simbot-logger/nativeMain,:simbot-logger/wasmJsMain,:simbot-logger/jvmMain">
+  <div class="table"><a data-name="1003965600%2FPackages%2F78373600" anchor-label="love.forte.simbot.logger" id="1003965600%2FPackages%2F78373600" data-filterable-set=":simbot-logger/commonMain,:simbot-logger/nativeMain,:simbot-logger/webMain,:simbot-logger/jvmMain"></a>
+    <div class="table-row table-row_platform-tagged" data-filterable-current=":simbot-logger/commonMain,:simbot-logger/nativeMain,:simbot-logger/webMain,:simbot-logger/jvmMain" data-filterable-set=":simbot-logger/commonMain,:simbot-logger/nativeMain,:simbot-logger/webMain,:simbot-logger/jvmMain">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="love.forte.simbot.logger/index.html">love.forte.simbot.logger</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1003965600%2FPackages%2F1749518553"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1003965600%2FPackages%2F78373600"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div class="pull-right platform-tags--wrapper">
             <div class="platform-tags no-gutters">
               <div class="platform-tag common-like">common</div>
-              <div class="platform-tag js-like">js</div>
               <div class="platform-tag jvm-like">jvm</div>
               <div class="platform-tag common-like">native</div>
-              <div class="platform-tag wasm-like">wasmJs</div>
+              <div class="platform-tag common-like">web</div>
             </div>
           </div>
         </div>
-        <div><span class="brief-comment"><a data-name="1003965600%2FPackages%2F1749518553" anchor-label="love.forte.simbot.logger" id="1003965600%2FPackages%2F1749518553" data-filterable-set=":simbot-logger/commonMain,:simbot-logger/jsMain,:simbot-logger/nativeMain,:simbot-logger/wasmJsMain,:simbot-logger/jvmMain"></a>
+        <div><span class="brief-comment"><a data-name="1003965600%2FPackages%2F78373600" anchor-label="love.forte.simbot.logger" id="1003965600%2FPackages%2F78373600" data-filterable-set=":simbot-logger/commonMain,:simbot-logger/nativeMain,:simbot-logger/webMain,:simbot-logger/jvmMain"></a>
             <p class="paragraph">Logger 与 LoggerFactory 定义。</p>
           </span></div>
       </div>

@@ -62,7 +62,7 @@
             </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
         </button>
         <div class="navigation-controls--break ui-kit_mobile-only"></div>
-        <div class="library-version" id="library-version">5.0.0-Preview1
+        <div class="library-version" id="library-version">5.0.0-Preview2
         </div>
         <div class="navigation-controls">
         <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
@@ -119,7 +119,7 @@
   <div class="cover ">
     <h1 class="cover"><span><span>id</span></span></h1>
   </div>
-  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="id.html">id</a><span class="token operator">: </span><a href="../../../simbot-commons/simbot-common-core/love.forte.simbot.common.id/-i-d/index.html">ID</a><span class="source-link-wrapper"><span class="source-link" data-element-type="source-link">(<a href="https://github.com/simple-robot/simpler-robot/tree/dev/main/simbot-api/src/commonMain/kotlin/love/forte/simbot/bot/Bot.kt#L83">source</a>)</span></span></div><p class="paragraph">当前bot的标识。</p><p class="paragraph">此标识可能是 bot 在系统中的 id （例如某种用户ID）， 也可能只是注册此 bot 时使用一种标识 （比如向平台申请并下发的某种 <code class="lang-kotlin">bot_id</code> 或者 <code class="lang-kotlin">token</code> ）。</p><p class="paragraph">通常情况下，它会是注册bot时候使用的某种唯一标识。 它只能作为 simbot application 中的唯一表示， 无法确保其代表某种 <i>用户ID</i> 。 对于不同的平台可能会视情况提供额外的属性来获取其用户ID。</p></div></div>
+  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="id.html">id</a><span class="token operator">: </span><a href="../../../simbot-commons/simbot-common-core/love.forte.simbot.common.id/-i-d/index.html">ID</a><span class="source-link-wrapper"><span class="source-link" data-element-type="source-link">(<a href="https://github.com/simple-robot/simpler-robot/tree/dev/main/simbot-api/src/commonMain/kotlin/love/forte/simbot/bot/Bot.kt#L83">source</a>)</span></span></div><p class="paragraph">当前bot的标识。</p><p class="paragraph">此标识是 bot 在 BotManager/组件范围中的 唯一标识id，通常是某种用户 ID ， 也可能只是注册此 bot 时使用的唯一标识 （比如向平台申请并下发的某种 <code class="lang-kotlin">bot_id</code> 或者 <code class="lang-kotlin">token</code> ）。</p><p class="paragraph">它应是注册bot时候使用的唯一标识，它被作为 simbot application 中的唯一表示， 但无法确保其代表某种 <i>用户ID</i> 因为有些系统或平台中，Bot 或者账号的真正的所谓“用户ID”需要通过调用接口获取。 对于不同的平台可能会视情况提供额外的属性来获取其真正的“用户ID”。</p></div></div>
 </div>
     <div class="footer">
         <div class="footer--container">
