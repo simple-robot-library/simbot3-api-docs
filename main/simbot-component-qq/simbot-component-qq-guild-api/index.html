@@ -62,14 +62,14 @@
             </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
         </button>
         <div class="navigation-controls--break ui-kit_mobile-only"></div>
-        <div class="library-version" id="library-version">5.0.0-Preview1
+        <div class="library-version" id="library-version">5.0.0-Preview2
         </div>
         <div class="navigation-controls">
         <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
                 <button class="platform-tag platform-selector common-like" data-active="" aria-pressed="true" data-filter=":simbot-component-qq:simbot-component-qq-guild-api/commonMain">common</button>
-                <button class="platform-tag platform-selector js-like" data-active="" aria-pressed="true" data-filter=":simbot-component-qq:simbot-component-qq-guild-api/jsMain">js</button>
                 <button class="platform-tag platform-selector jvm-like" data-active="" aria-pressed="true" data-filter=":simbot-component-qq:simbot-component-qq-guild-api/jvmMain">jvm</button>
                 <button class="platform-tag platform-selector common-like" data-active="" aria-pressed="true" data-filter=":simbot-component-qq:simbot-component-qq-guild-api/nativeMain">native</button>
+                <button class="platform-tag platform-selector common-like" data-active="" aria-pressed="true" data-filter=":simbot-component-qq:simbot-component-qq-guild-api/webMain">web</button>
             <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
                 <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
                 <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
@@ -85,13 +85,6 @@
                                 common
                             </label>
                         </li>
-                        <li role="option" class="dropdown--option platform-selector-option js-like" tabindex="0">
-                            <label class="checkbox">
-                                <input type="checkbox" class="checkbox--input" id=":simbot-component-qq:simbot-component-qq-guild-api/jsMain" data-filter=":simbot-component-qq:simbot-component-qq-guild-api/jsMain">
-                                <span class="checkbox--icon"></span>
-                                js
-                            </label>
-                        </li>
                         <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
                             <label class="checkbox">
                                 <input type="checkbox" class="checkbox--input" id=":simbot-component-qq:simbot-component-qq-guild-api/jvmMain" data-filter=":simbot-component-qq:simbot-component-qq-guild-api/jvmMain">
@@ -104,6 +97,13 @@
                                 <input type="checkbox" class="checkbox--input" id=":simbot-component-qq:simbot-component-qq-guild-api/nativeMain" data-filter=":simbot-component-qq:simbot-component-qq-guild-api/nativeMain">
                                 <span class="checkbox--icon"></span>
                                 native
+                            </label>
+                        </li>
+                        <li role="option" class="dropdown--option platform-selector-option common-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":simbot-component-qq:simbot-component-qq-guild-api/webMain" data-filter=":simbot-component-qq:simbot-component-qq-guild-api/webMain">
+                                <span class="checkbox--icon"></span>
+                                web
                             </label>
                         </li>
                 </ul>
@@ -138,13 +138,13 @@
         </nav>
         <div id="resizer" class="resizer" data-item-type="BAR"></div>
         <div id="main" data-item-type="SECTION" role="main">
-<div class="main-content" id="content" pageids="simbot-component-qq-guild-api::////PointingToDeclaration//1294647052">
+<div class="main-content" id="content" pageids="simbot-component-qq-guild-api::////PointingToDeclaration//801410272">
   <div class="breadcrumbs"></div>
   <div class="cover ">
     <h1 class="cover"><span><span>simbot-component-qq-guild-api</span></span></h1>
     <div class="platform-hinted UnderCoverText with-platform-tabs" data-platform-hinted="data-platform-hinted">
-      <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":simbot-component-qq:simbot-component-qq-guild-api/commonMain" data-filterable-set=":simbot-component-qq:simbot-component-qq-guild-api/commonMain" data-active="" data-toggle=":simbot-component-qq:simbot-component-qq-guild-api/commonMain">common</button><button class="platform-bookmark" data-filterable-current=":simbot-component-qq:simbot-component-qq-guild-api/jsMain" data-filterable-set=":simbot-component-qq:simbot-component-qq-guild-api/jsMain" data-toggle=":simbot-component-qq:simbot-component-qq-guild-api/jsMain">js</button><button class="platform-bookmark" data-filterable-current=":simbot-component-qq:simbot-component-qq-guild-api/jvmMain" data-filterable-set=":simbot-component-qq:simbot-component-qq-guild-api/jvmMain" data-toggle=":simbot-component-qq:simbot-component-qq-guild-api/jvmMain">jvm</button><button class="platform-bookmark" data-filterable-current=":simbot-component-qq:simbot-component-qq-guild-api/nativeMain" data-filterable-set=":simbot-component-qq:simbot-component-qq-guild-api/nativeMain" data-toggle=":simbot-component-qq:simbot-component-qq-guild-api/nativeMain">native</button></div>
-<div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq:simbot-component-qq-guild-api/commonMain"><p class="paragraph">对 <a href="https://bot.q.qq.com/wiki/develop/api/">QQ频道API</a> 的最基本封装，不包含额外的功能性实现（比如bot、事件调度等）。</p><p class="paragraph">如果希望使用一个仅仅是针对API的原始封装模块而不需要基础/高级的事件流程控制，那么请考虑使用 api 模块。</p></div><div class="content sourceset-dependent-content" data-togglable=":simbot-component-qq:simbot-component-qq-guild-api/jsMain"><p class="paragraph">对 <a href="https://bot.q.qq.com/wiki/develop/api/">QQ频道API</a> 的最基本封装，不包含额外的功能性实现（比如bot、事件调度等）。</p><p class="paragraph">如果希望使用一个仅仅是针对API的原始封装模块而不需要基础/高级的事件流程控制，那么请考虑使用 api 模块。</p></div><div class="content sourceset-dependent-content" data-togglable=":simbot-component-qq:simbot-component-qq-guild-api/jvmMain"><p class="paragraph">对 <a href="https://bot.q.qq.com/wiki/develop/api/">QQ频道API</a> 的最基本封装，不包含额外的功能性实现（比如bot、事件调度等）。</p><p class="paragraph">如果希望使用一个仅仅是针对API的原始封装模块而不需要基础/高级的事件流程控制，那么请考虑使用 api 模块。</p></div><div class="content sourceset-dependent-content" data-togglable=":simbot-component-qq:simbot-component-qq-guild-api/nativeMain"><p class="paragraph">对 <a href="https://bot.q.qq.com/wiki/develop/api/">QQ频道API</a> 的最基本封装，不包含额外的功能性实现（比如bot、事件调度等）。</p><p class="paragraph">如果希望使用一个仅仅是针对API的原始封装模块而不需要基础/高级的事件流程控制，那么请考虑使用 api 模块。</p></div>    </div>
+      <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":simbot-component-qq:simbot-component-qq-guild-api/commonMain" data-filterable-set=":simbot-component-qq:simbot-component-qq-guild-api/commonMain" data-active="" data-toggle=":simbot-component-qq:simbot-component-qq-guild-api/commonMain">common</button><button class="platform-bookmark" data-filterable-current=":simbot-component-qq:simbot-component-qq-guild-api/jvmMain" data-filterable-set=":simbot-component-qq:simbot-component-qq-guild-api/jvmMain" data-toggle=":simbot-component-qq:simbot-component-qq-guild-api/jvmMain">jvm</button><button class="platform-bookmark" data-filterable-current=":simbot-component-qq:simbot-component-qq-guild-api/nativeMain" data-filterable-set=":simbot-component-qq:simbot-component-qq-guild-api/nativeMain" data-toggle=":simbot-component-qq:simbot-component-qq-guild-api/nativeMain">native</button><button class="platform-bookmark" data-filterable-current=":simbot-component-qq:simbot-component-qq-guild-api/webMain" data-filterable-set=":simbot-component-qq:simbot-component-qq-guild-api/webMain" data-toggle=":simbot-component-qq:simbot-component-qq-guild-api/webMain">web</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq:simbot-component-qq-guild-api/commonMain"><p class="paragraph">对 <a href="https://bot.q.qq.com/wiki/develop/api/">QQ频道API</a> 的最基本封装，不包含额外的功能性实现（比如bot、事件调度等）。</p><p class="paragraph">如果希望使用一个仅仅是针对API的原始封装模块而不需要基础/高级的事件流程控制，那么请考虑使用 api 模块。</p></div><div class="content sourceset-dependent-content" data-togglable=":simbot-component-qq:simbot-component-qq-guild-api/jvmMain"><p class="paragraph">对 <a href="https://bot.q.qq.com/wiki/develop/api/">QQ频道API</a> 的最基本封装，不包含额外的功能性实现（比如bot、事件调度等）。</p><p class="paragraph">如果希望使用一个仅仅是针对API的原始封装模块而不需要基础/高级的事件流程控制，那么请考虑使用 api 模块。</p></div><div class="content sourceset-dependent-content" data-togglable=":simbot-component-qq:simbot-component-qq-guild-api/nativeMain"><p class="paragraph">对 <a href="https://bot.q.qq.com/wiki/develop/api/">QQ频道API</a> 的最基本封装，不包含额外的功能性实现（比如bot、事件调度等）。</p><p class="paragraph">如果希望使用一个仅仅是针对API的原始封装模块而不需要基础/高级的事件流程控制，那么请考虑使用 api 模块。</p></div><div class="content sourceset-dependent-content" data-togglable=":simbot-component-qq:simbot-component-qq-guild-api/webMain"><p class="paragraph">对 <a href="https://bot.q.qq.com/wiki/develop/api/">QQ频道API</a> 的最基本封装，不包含额外的功能性实现（比如bot、事件调度等）。</p><p class="paragraph">如果希望使用一个仅仅是针对API的原始封装模块而不需要基础/高级的事件流程控制，那么请考虑使用 api 模块。</p></div>    </div>
   </div>
   <h2 class="">Packages</h2>
   <div class="table"><a data-name="215727794%2FPackages%2F2069736844" anchor-label="love.forte.simbot.qguild" id="215727794%2FPackages%2F2069736844" data-filterable-set=":simbot-component-qq:simbot-component-qq-guild-api/commonMain"></a>
@@ -404,21 +404,21 @@
         <div></div>
       </div>
     </div>
-<a data-name="785895863%2FPackages%2F1294647052" anchor-label="love.forte.simbot.qguild.api.message" id="785895863%2FPackages%2F1294647052" data-filterable-set=":simbot-component-qq:simbot-component-qq-guild-api/commonMain,:simbot-component-qq:simbot-component-qq-guild-api/jsMain,:simbot-component-qq:simbot-component-qq-guild-api/jvmMain,:simbot-component-qq:simbot-component-qq-guild-api/nativeMain"></a>
-    <div class="table-row table-row_platform-tagged" data-filterable-current=":simbot-component-qq:simbot-component-qq-guild-api/commonMain,:simbot-component-qq:simbot-component-qq-guild-api/jsMain,:simbot-component-qq:simbot-component-qq-guild-api/jvmMain,:simbot-component-qq:simbot-component-qq-guild-api/nativeMain" data-filterable-set=":simbot-component-qq:simbot-component-qq-guild-api/commonMain,:simbot-component-qq:simbot-component-qq-guild-api/jsMain,:simbot-component-qq:simbot-component-qq-guild-api/jvmMain,:simbot-component-qq:simbot-component-qq-guild-api/nativeMain">
+<a data-name="785895863%2FPackages%2F801410272" anchor-label="love.forte.simbot.qguild.api.message" id="785895863%2FPackages%2F801410272" data-filterable-set=":simbot-component-qq:simbot-component-qq-guild-api/commonMain,:simbot-component-qq:simbot-component-qq-guild-api/jvmMain,:simbot-component-qq:simbot-component-qq-guild-api/nativeMain,:simbot-component-qq:simbot-component-qq-guild-api/webMain"></a>
+    <div class="table-row table-row_platform-tagged" data-filterable-current=":simbot-component-qq:simbot-component-qq-guild-api/commonMain,:simbot-component-qq:simbot-component-qq-guild-api/jvmMain,:simbot-component-qq:simbot-component-qq-guild-api/nativeMain,:simbot-component-qq:simbot-component-qq-guild-api/webMain" data-filterable-set=":simbot-component-qq:simbot-component-qq-guild-api/commonMain,:simbot-component-qq:simbot-component-qq-guild-api/jvmMain,:simbot-component-qq:simbot-component-qq-guild-api/nativeMain,:simbot-component-qq:simbot-component-qq-guild-api/webMain">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="love.forte.simbot.qguild.api.message/index.html">love.forte.simbot.qguild.api.message</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="785895863%2FPackages%2F1294647052"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="785895863%2FPackages%2F801410272"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div class="pull-right platform-tags--wrapper">
             <div class="platform-tags no-gutters">
               <div class="platform-tag common-like">common</div>
-              <div class="platform-tag js-like">js</div>
               <div class="platform-tag jvm-like">jvm</div>
               <div class="platform-tag common-like">native</div>
+              <div class="platform-tag common-like">web</div>
             </div>
           </div>
         </div>
