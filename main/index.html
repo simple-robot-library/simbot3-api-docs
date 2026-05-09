@@ -1,135 +1,110 @@
 <!DOCTYPE html>
-<html class="no-js">
+<html class="no-js" lang="en">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
     <title>All modules</title>
-    <link href="images/logo-icon.svg" rel="icon" type="image/svg">
-    <script>var pathToRoot = "";</script>
-    <script>document.documentElement.classList.replace("no-js","js");</script>
+        <link href="images/logo-icon.svg" rel="icon" type="image/svg">
+    <!-- 百度统计 -->
+    <!--suppress ES6ConvertVarToLetConst -->
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            const hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?045f67a122223db9432c7856fc942fad";
+            const s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1JWL2DDTB4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-1JWL2DDTB4');
+    </script>
+        <script>var pathToRoot = "";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
     <script>const storage = localStorage.getItem("dokka-dark-mode")
-    if (storage == null) {
+      if (storage == null) {
         const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
         if (osDarkSchemePreferred === true) {
-            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
         }
-    } else {
+      } else {
         const savedDarkMode = JSON.parse(storage)
-        if(savedDarkMode === true) {
-            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
         }
-    }
+      }
     </script>
 <script type="text/javascript" src="scripts/sourceset_dependencies.js" async="async"></script>
 <link href="styles/style.css" rel="Stylesheet">
 <link href="styles/main.css" rel="Stylesheet">
 <link href="styles/prism.css" rel="Stylesheet">
 <link href="styles/logo-styles.css" rel="Stylesheet">
-<link href="styles/font-jb-sans-auto.css" rel="Stylesheet">
-<script type="text/javascript" src="scripts/clipboard.js" async="async"></script>
+<link href="ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="scripts/safe-local-storage_blocking.js"></script>
 <script type="text/javascript" src="scripts/navigation-loader.js" async="async"></script>
 <script type="text/javascript" src="scripts/platform-content-handler.js" async="async"></script>
 <script type="text/javascript" src="scripts/main.js" defer="defer"></script>
 <script type="text/javascript" src="scripts/prism.js" async="async"></script>
-<script type="text/javascript" src="scripts/symbol-parameters-wrapper_deferred.js" defer="defer"></script>
+<script type="text/javascript" src="ui-kit/ui-kit.min.js" defer="defer"></script>
 <link href="images/logo-icon.svg">
+<link href="images/logo-icon-light.svg">
 <link href="styles/kdoc-style.css" rel="Stylesheet">
 </head>
 <body>
-    <div class="root">
-<nav class="navigation" id="navigation-wrapper">
-    <div class="navigation--inner">
-        <div class="navigation-title">
-            <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
-            <div class="library-name">
-                    <a class="library-name--link" href="index.html">
-                            Simple Robot
-                    </a>
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+            <a class="library-name--link" href="index.html" tabindex="1">
+                    Simple Robot
+            </a>
+        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle"
+                type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">
+5.0.0-Preview2        </div>
+        <div class="navigation-controls">
+                <a class="navigation-controls--btn navigation-controls--btn_homepage" id="homepage-link"
+                   href="https://github.com/simple-robot/simpler-robot"></a>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button"
+                    type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
             </div>
-            <div class="library-version">
-3.3.0            </div>
         </div>
-    </div>
-    <div class="navigation-controls">
-        <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
-        <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
-    </div>
-</nav>
-        <div id="container">
-            <div class="sidebar" id="leftColumn">
-                <div class="sidebar--inner" id="sideMenu"></div>
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config='{"defaultSize": 280, "minSize": 200, "maxSize": 400}'>
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list"
+                    data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
+                            <span>
+                                    Simple Robot
+                            </span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
             </div>
-            <div id="main">
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
 <div class="main-content" id="content" pageIds="Simple Robot::.ext/allModules///PointingToDeclaration//0">
   <div class="breadcrumbs"></div>
   <div class="cover ">
     <h2 class="">All modules:</h2>
-    <div class="table"><a data-name="563079607%2FMain%2F0" anchor-label="simboot-api" id="563079607%2FMain%2F0" data-filterable-set=""></a>
-      <div class="table-row">
-        <div class="main-subrow ">
-          <div class="w-100"><span class="inline-flex">
-              <div><a href="simboot-api/index.html">simboot-api</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="563079607%2FMain%2F0"></span>
-                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-              </span></span></div>
-          <div><span class="brief-comment">
-              <p class="paragraph">simbot3中<strong>boot模块</strong>的基础模块。定义boot相关模块中的针对于快速启动的各标准接口, 是其他boot模块的基础模块。</p>
-            </span></div>
-        </div>
-      </div>
-<a data-name="1465734930%2FMain%2F0" anchor-label="simboot-core" id="1465734930%2FMain%2F0" data-filterable-set=""></a>
-      <div class="table-row">
-        <div class="main-subrow ">
-          <div class="w-100"><span class="inline-flex">
-              <div><a href="simboot-core/index.html">simboot-core</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1465734930%2FMain%2F0"></span>
-                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-              </span></span></div>
-          <div><span class="brief-comment">
-              <p class="paragraph"><code class="lang-kotlin">simboot-api</code> 模块的实现模块，根据其标准提供完整的基础实现。</p>
-            </span></div>
-        </div>
-      </div>
-<a data-name="-1566879980%2FMain%2F0" anchor-label="simboot-core-annotation" id="-1566879980%2FMain%2F0" data-filterable-set=""></a>
-      <div class="table-row">
-        <div class="main-subrow ">
-          <div class="w-100"><span class="inline-flex">
-              <div><a href="simboot-core-annotation/index.html">simboot-core-annotation</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1566879980%2FMain%2F0"></span>
-                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-              </span></span></div>
-          <div><span class="brief-comment">
-              <p class="paragraph"><code class="lang-kotlin">simboot-core</code> 所用的相关注解模块。</p>
-            </span></div>
-        </div>
-      </div>
-<a data-name="-746353845%2FMain%2F0" anchor-label="simboot-core-spring-boot-starter" id="-746353845%2FMain%2F0" data-filterable-set=""></a>
-      <div class="table-row">
-        <div class="main-subrow ">
-          <div class="w-100"><span class="inline-flex">
-              <div><a href="simboot-core-spring-boot-starter/index.html">simboot-core-spring-boot-starter</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-746353845%2FMain%2F0"></span>
-                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-              </span></span></div>
-          <div><span class="brief-comment">
-              <p class="paragraph"><code class="lang-kotlin">simboot-api</code> 的标准实现之一，提供可整合SpringBoot的快速启动器模块。</p>
-            </span></div>
-        </div>
-      </div>
-<a data-name="2133549262%2FMain%2F0" anchor-label="simbot-annotations" id="2133549262%2FMain%2F0" data-filterable-set=""></a>
-      <div class="table-row">
-        <div class="main-subrow ">
-          <div class="w-100"><span class="inline-flex">
-              <div><a href="simbot-annotations/index.html">simbot-annotations</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2133549262%2FMain%2F0"></span>
-                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-              </span></span></div>
-          <div><span class="brief-comment">
-              <p class="paragraph">部分 simbot 中会使用的基础注解。</p>
-            </span></div>
-        </div>
-      </div>
-<a data-name="-1194536040%2FMain%2F0" anchor-label="simbot-api" id="-1194536040%2FMain%2F0" data-filterable-set=""></a>
-      <div class="table-row">
+    <div class="table"><a data-name="-1194536040%2FMain%2F0" anchor-label="simbot-api" id="-1194536040%2FMain%2F0" data-filterable-set=""></a>
+      <div class="table-row table-row_multimodule">
         <div class="main-subrow ">
           <div class="w-100"><span class="inline-flex">
               <div><a href="simbot-api/index.html">simbot-api</a></div>
@@ -137,25 +112,359 @@
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div><span class="brief-comment">
-              <p class="paragraph">simbot3的基础模块，定义simbot中的各项标准接口, 是其他模块的基础模块。</p>
+              <p class="paragraph">Simple Robot 核心 API 定义模块，定义 Bot、事件、消息、组件等核心抽象。</p>
+            </span></div>
+        </div>
+      </div>
+<a data-name="336176590%2FMain%2F0" anchor-label="simbot-common-annotations" id="336176590%2FMain%2F0" data-filterable-set=""></a>
+      <div class="table-row table-row_multimodule">
+        <div class="main-subrow ">
+          <div class="w-100"><span class="inline-flex">
+              <div><a href="simbot-commons/simbot-common-annotations/index.html">simbot-common-annotations</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="336176590%2FMain%2F0"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div><span class="brief-comment">
+              <p class="paragraph">通用注解定义模块。</p>
+            </span></div>
+        </div>
+      </div>
+<a data-name="540795365%2FMain%2F0" anchor-label="simbot-common-apidefinition" id="540795365%2FMain%2F0" data-filterable-set=""></a>
+      <div class="table-row table-row_multimodule">
+        <div class="main-subrow ">
+          <div class="w-100"><span class="inline-flex">
+              <div><a href="simbot-commons/simbot-common-apidefinition/index.html">simbot-common-apidefinition</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="540795365%2FMain%2F0"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div><span class="brief-comment">
+              <p class="paragraph">API 定义抽象，用于描述通用 REST API 结构。</p>
+            </span></div>
+        </div>
+      </div>
+<a data-name="1311856517%2FMain%2F0" anchor-label="simbot-common-atomic" id="1311856517%2FMain%2F0" data-filterable-set=""></a>
+      <div class="table-row table-row_multimodule">
+        <div class="main-subrow ">
+          <div class="w-100"><span class="inline-flex">
+              <div><a href="simbot-commons/simbot-common-atomic/index.html">simbot-common-atomic</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1311856517%2FMain%2F0"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div><span class="brief-comment">
+              <p class="paragraph">跨平台原子操作支持。</p>
+            </span></div>
+        </div>
+      </div>
+<a data-name="1335373554%2FMain%2F0" anchor-label="simbot-common-collection" id="1335373554%2FMain%2F0" data-filterable-set=""></a>
+      <div class="table-row table-row_multimodule">
+        <div class="main-subrow ">
+          <div class="w-100"><span class="inline-flex">
+              <div><a href="simbot-commons/simbot-common-collection/index.html">simbot-common-collection</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1335373554%2FMain%2F0"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div><span class="brief-comment">
+              <p class="paragraph">跨平台集合工具支持。</p>
+            </span></div>
+        </div>
+      </div>
+<a data-name="-1607269295%2FMain%2F0" anchor-label="simbot-common-core" id="-1607269295%2FMain%2F0" data-filterable-set=""></a>
+      <div class="table-row table-row_multimodule">
+        <div class="main-subrow ">
+          <div class="w-100"><span class="inline-flex">
+              <div><a href="simbot-commons/simbot-common-core/index.html">simbot-common-core</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1607269295%2FMain%2F0"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div><span class="brief-comment">
+              <p class="paragraph">通用核心工具库。</p>
+            </span></div>
+        </div>
+      </div>
+<a data-name="507387691%2FMain%2F0" anchor-label="simbot-common-ktor-inputfile" id="507387691%2FMain%2F0" data-filterable-set=""></a>
+      <div class="table-row table-row_multimodule">
+        <div class="main-subrow ">
+          <div class="w-100"><span class="inline-flex">
+              <div><a href="simbot-commons/simbot-common-ktor-inputfile/index.html">simbot-common-ktor-inputfile</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="507387691%2FMain%2F0"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div><span class="brief-comment">
+              <p class="paragraph">基于 Ktor 的文件上传工具支持。</p>
+            </span></div>
+        </div>
+      </div>
+<a data-name="389687069%2FMain%2F0" anchor-label="simbot-common-stage-loop" id="389687069%2FMain%2F0" data-filterable-set=""></a>
+      <div class="table-row table-row_multimodule">
+        <div class="main-subrow ">
+          <div class="w-100"><span class="inline-flex">
+              <div><a href="simbot-commons/simbot-common-stage-loop/index.html">simbot-common-stage-loop</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="389687069%2FMain%2F0"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div><span class="brief-comment">
+              <p class="paragraph">阶段循环状态机支持。</p>
+            </span></div>
+        </div>
+      </div>
+<a data-name="2019488822%2FMain%2F0" anchor-label="simbot-common-streamable" id="2019488822%2FMain%2F0" data-filterable-set=""></a>
+      <div class="table-row table-row_multimodule">
+        <div class="main-subrow ">
+          <div class="w-100"><span class="inline-flex">
+              <div><a href="simbot-commons/simbot-common-streamable/index.html">simbot-common-streamable</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2019488822%2FMain%2F0"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div><span class="brief-comment">
+              <p class="paragraph">可流化类型支持。</p>
+            </span></div>
+        </div>
+      </div>
+<a data-name="-1760794225%2FMain%2F0" anchor-label="simbot-common-suspend-runner" id="-1760794225%2FMain%2F0" data-filterable-set=""></a>
+      <div class="table-row table-row_multimodule">
+        <div class="main-subrow ">
+          <div class="w-100"><span class="inline-flex">
+              <div><a href="simbot-commons/simbot-common-suspend-runner/index.html">simbot-common-suspend-runner</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1760794225%2FMain%2F0"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div><span class="brief-comment">
+              <p class="paragraph">挂起函数阻塞桥接与 SuspendReserve 支持。</p>
+            </span></div>
+        </div>
+      </div>
+<a data-name="-1694125853%2FMain%2F0" anchor-label="simbot-common-time" id="-1694125853%2FMain%2F0" data-filterable-set=""></a>
+      <div class="table-row table-row_multimodule">
+        <div class="main-subrow ">
+          <div class="w-100"><span class="inline-flex">
+              <div><a href="simbot-commons/simbot-common-time/index.html">simbot-common-time</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1694125853%2FMain%2F0"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div><span class="brief-comment"></span></div>
+        </div>
+      </div>
+<a data-name="900265107%2FMain%2F0" anchor-label="simbot-component-kook-api" id="900265107%2FMain%2F0" data-filterable-set=""></a>
+      <div class="table-row table-row_multimodule">
+        <div class="main-subrow ">
+          <div class="w-100"><span class="inline-flex">
+              <div><a href="simbot-component-kook/simbot-component-kook-api/index.html">simbot-component-kook-api</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="900265107%2FMain%2F0"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div><span class="brief-comment">
+              <p class="paragraph">对 <a href="https://developer.kookapp.cn/doc/">KOOK API</a> 的最基本封装，不包含额外的功能性实现（比如bot、事件调度等）。</p>
+            </span></div>
+        </div>
+      </div>
+<a data-name="-966416458%2FMain%2F0" anchor-label="simbot-component-kook-core" id="-966416458%2FMain%2F0" data-filterable-set=""></a>
+      <div class="table-row table-row_multimodule">
+        <div class="main-subrow ">
+          <div class="w-100"><span class="inline-flex">
+              <div><a href="simbot-component-kook/simbot-component-kook-core/index.html">simbot-component-kook-core</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-966416458%2FMain%2F0"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div><span class="brief-comment">
+              <p class="paragraph">KOOK 组件核心实现，提供完整的 simbot 组件集成。</p>
+            </span></div>
+        </div>
+      </div>
+<a data-name="1905106483%2FMain%2F0" anchor-label="simbot-component-kook-stdlib" id="1905106483%2FMain%2F0" data-filterable-set=""></a>
+      <div class="table-row table-row_multimodule">
+        <div class="main-subrow ">
+          <div class="w-100"><span class="inline-flex">
+              <div><a href="simbot-component-kook/simbot-component-kook-stdlib/index.html">simbot-component-kook-stdlib</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1905106483%2FMain%2F0"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div><span class="brief-comment">
+              <p class="paragraph">基于 api 模块的 KOOK Bot 基础实现（事件接收与处理）。</p>
+            </span></div>
+        </div>
+      </div>
+<a data-name="1793982731%2FMain%2F0" anchor-label="simbot-component-onebot-common" id="1793982731%2FMain%2F0" data-filterable-set=""></a>
+      <div class="table-row table-row_multimodule">
+        <div class="main-subrow ">
+          <div class="w-100"><span class="inline-flex">
+              <div><a href="simbot-component-onebot/simbot-component-onebot-common/index.html">simbot-component-onebot-common</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1793982731%2FMain%2F0"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div><span class="brief-comment">
+              <p class="paragraph">OneBot 组件通用定义。</p>
+            </span></div>
+        </div>
+      </div>
+<a data-name="-1373804076%2FMain%2F0" anchor-label="simbot-component-onebot-v11-common" id="-1373804076%2FMain%2F0" data-filterable-set=""></a>
+      <div class="table-row table-row_multimodule">
+        <div class="main-subrow ">
+          <div class="w-100"><span class="inline-flex">
+              <div><a href="simbot-component-onebot/simbot-component-onebot-v11/simbot-component-onebot-v11-common/index.html">simbot-component-onebot-v11-common</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1373804076%2FMain%2F0"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div><span class="brief-comment">
+              <p class="paragraph">OneBot v11 协议通用定义。</p>
+            </span></div>
+        </div>
+      </div>
+<a data-name="-1003361760%2FMain%2F0" anchor-label="simbot-component-onebot-v11-core" id="-1003361760%2FMain%2F0" data-filterable-set=""></a>
+      <div class="table-row table-row_multimodule">
+        <div class="main-subrow ">
+          <div class="w-100"><span class="inline-flex">
+              <div><a href="simbot-component-onebot/simbot-component-onebot-v11/simbot-component-onebot-v11-core/index.html">simbot-component-onebot-v11-core</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1003361760%2FMain%2F0"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div><span class="brief-comment">
+              <p class="paragraph">OneBot v11 组件核心实现。</p>
+            </span></div>
+        </div>
+      </div>
+<a data-name="-1428965399%2FMain%2F0" anchor-label="simbot-component-onebot-v11-event" id="-1428965399%2FMain%2F0" data-filterable-set=""></a>
+      <div class="table-row table-row_multimodule">
+        <div class="main-subrow ">
+          <div class="w-100"><span class="inline-flex">
+              <div><a href="simbot-component-onebot/simbot-component-onebot-v11/simbot-component-onebot-v11-event/index.html">simbot-component-onebot-v11-event</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1428965399%2FMain%2F0"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div><span class="brief-comment">
+              <p class="paragraph">OneBot v11 原始事件定义。</p>
+            </span></div>
+        </div>
+      </div>
+<a data-name="-1226329444%2FMain%2F0" anchor-label="simbot-component-onebot-v11-message" id="-1226329444%2FMain%2F0" data-filterable-set=""></a>
+      <div class="table-row table-row_multimodule">
+        <div class="main-subrow ">
+          <div class="w-100"><span class="inline-flex">
+              <div><a href="simbot-component-onebot/simbot-component-onebot-v11/simbot-component-onebot-v11-message/index.html">simbot-component-onebot-v11-message</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1226329444%2FMain%2F0"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div><span class="brief-comment">
+              <p class="paragraph">OneBot v11 消息段定义。</p>
+            </span></div>
+        </div>
+      </div>
+<a data-name="1805754125%2FMain%2F0" anchor-label="simbot-component-qq-guild-api" id="1805754125%2FMain%2F0" data-filterable-set=""></a>
+      <div class="table-row table-row_multimodule">
+        <div class="main-subrow ">
+          <div class="w-100"><span class="inline-flex">
+              <div><a href="simbot-component-qq/simbot-component-qq-guild-api/index.html">simbot-component-qq-guild-api</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1805754125%2FMain%2F0"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div><span class="brief-comment">
+              <p class="paragraph">对 <a href="https://bot.q.qq.com/wiki/develop/api/">QQ频道API</a> 的最基本封装，不包含额外的功能性实现（比如bot、事件调度等）。</p>
+            </span></div>
+        </div>
+      </div>
+<a data-name="1333939324%2FMain%2F0" anchor-label="simbot-component-qq-guild-core" id="1333939324%2FMain%2F0" data-filterable-set=""></a>
+      <div class="table-row table-row_multimodule">
+        <div class="main-subrow ">
+          <div class="w-100"><span class="inline-flex">
+              <div><a href="simbot-component-qq/simbot-component-qq-guild-core/index.html">simbot-component-qq-guild-core</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1333939324%2FMain%2F0"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div><span class="brief-comment"></span></div>
+        </div>
+      </div>
+<a data-name="638855545%2FMain%2F0" anchor-label="simbot-component-qq-guild-stdlib" id="638855545%2FMain%2F0" data-filterable-set=""></a>
+      <div class="table-row table-row_multimodule">
+        <div class="main-subrow ">
+          <div class="w-100"><span class="inline-flex">
+              <div><a href="simbot-component-qq/simbot-component-qq-guild-stdlib/index.html">simbot-component-qq-guild-stdlib</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="638855545%2FMain%2F0"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div><span class="brief-comment">
+              <p class="paragraph">基于api模块，对<a href="https://bot.q.qq.com/wiki/develop/api/">QQ频道API</a>的基本功能实现（事件接收与处理）。</p>
             </span></div>
         </div>
       </div>
 <a data-name="-1480742575%2FMain%2F0" anchor-label="simbot-core" id="-1480742575%2FMain%2F0" data-filterable-set=""></a>
-      <div class="table-row">
+      <div class="table-row table-row_multimodule">
         <div class="main-subrow ">
           <div class="w-100"><span class="inline-flex">
-              <div><a href="simbot-core/index.html">simbot-core</a></div>
+              <div><a href="simbot-cores/simbot-core/index.html">simbot-core</a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1480742575%2FMain%2F0"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div><span class="brief-comment">
-              <p class="paragraph"><code class="lang-kotlin">api</code> 模块的实现模块，根据其标准提供完整的基础实现。</p>
+              <p class="paragraph">Simple Robot 核心实现，提供 SimpleApplication 与 SimpleEventDispatcher。</p>
+            </span></div>
+        </div>
+      </div>
+<a data-name="1277904906%2FMain%2F0" anchor-label="simbot-core-spring-boot-starter" id="1277904906%2FMain%2F0" data-filterable-set=""></a>
+      <div class="table-row table-row_multimodule">
+        <div class="main-subrow ">
+          <div class="w-100"><span class="inline-flex">
+              <div><a href="simbot-cores/simbot-core-spring-boot-starter/index.html">simbot-core-spring-boot-starter</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1277904906%2FMain%2F0"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div><span class="brief-comment">
+              <p class="paragraph">Spring Boot 3 Starter 集成支持。</p>
+            </span></div>
+        </div>
+      </div>
+<a data-name="800247008%2FMain%2F0" anchor-label="simbot-core-spring-boot-starter-common" id="800247008%2FMain%2F0" data-filterable-set=""></a>
+      <div class="table-row table-row_multimodule">
+        <div class="main-subrow ">
+          <div class="w-100"><span class="inline-flex">
+              <div><a href="simbot-cores/simbot-core-spring-boot-starter-common/index.html">simbot-core-spring-boot-starter-common</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="800247008%2FMain%2F0"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div><span class="brief-comment">
+              <p class="paragraph">Spring Boot Starter 通用支持模块。</p>
+            </span></div>
+        </div>
+      </div>
+<a data-name="2049485423%2FMain%2F0" anchor-label="simbot-core-spring-boot-starter-v2" id="2049485423%2FMain%2F0" data-filterable-set=""></a>
+      <div class="table-row table-row_multimodule">
+        <div class="main-subrow ">
+          <div class="w-100"><span class="inline-flex">
+              <div><a href="simbot-cores/simbot-core-spring-boot-starter-v2/index.html">simbot-core-spring-boot-starter-v2</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2049485423%2FMain%2F0"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div><span class="brief-comment">
+              <p class="paragraph">Spring Boot 2 Starter 集成支持。</p>
+            </span></div>
+        </div>
+      </div>
+<a data-name="1370682282%2FMain%2F0" anchor-label="simbot-extension-continuous-session" id="1370682282%2FMain%2F0" data-filterable-set=""></a>
+      <div class="table-row table-row_multimodule">
+        <div class="main-subrow ">
+          <div class="w-100"><span class="inline-flex">
+              <div><a href="simbot-extensions/simbot-extension-continuous-session/index.html">simbot-extension-continuous-session</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1370682282%2FMain%2F0"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div><span class="brief-comment">
+              <p class="paragraph">持续会话扩展，支持基于事件的多轮会话流程。</p>
+            </span></div>
+        </div>
+      </div>
+<a data-name="1015140723%2FMain%2F0" anchor-label="simbot-gradle-suspendtransforms" id="1015140723%2FMain%2F0" data-filterable-set=""></a>
+      <div class="table-row table-row_multimodule">
+        <div class="main-subrow ">
+          <div class="w-100"><span class="inline-flex">
+              <div><a href="simbot-gradles/simbot-gradle-suspendtransforms/index.html">simbot-gradle-suspendtransforms</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1015140723%2FMain%2F0"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div><span class="brief-comment">
+              <p class="paragraph">Gradle 插件：suspend-transform 编译器插件配置支持。</p>
             </span></div>
         </div>
       </div>
 <a data-name="-950384448%2FMain%2F0" anchor-label="simbot-logger" id="-950384448%2FMain%2F0" data-filterable-set=""></a>
-      <div class="table-row">
+      <div class="table-row table-row_multimodule">
         <div class="main-subrow ">
           <div class="w-100"><span class="inline-flex">
               <div><a href="simbot-logger/index.html">simbot-logger</a></div>
@@ -163,59 +472,107 @@
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div><span class="brief-comment">
-              <p class="paragraph">simbot3的多平台日志实现，为其它模块提供统一的日志API。</p>
+              <p class="paragraph">跨平台日志抽象。</p>
             </span></div>
         </div>
       </div>
-<a data-name="-1040808149%2FMain%2F0" anchor-label="simbot-logger-slf4j-impl" id="-1040808149%2FMain%2F0" data-filterable-set=""></a>
-      <div class="table-row">
+<a data-name="414752879%2FMain%2F0" anchor-label="simbot-logger-slf4j2-impl" id="414752879%2FMain%2F0" data-filterable-set=""></a>
+      <div class="table-row table-row_multimodule">
         <div class="main-subrow ">
           <div class="w-100"><span class="inline-flex">
-              <div><a href="simbot-logger-slf4j-impl/index.html">simbot-logger-slf4j-impl</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1040808149%2FMain%2F0"></span>
+              <div><a href="simbot-logger-slf4j2-impl/index.html">simbot-logger-slf4j2-impl</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="414752879%2FMain%2F0"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div><span class="brief-comment">
-              <p class="paragraph">基于 ../simbot-logger 模块的 <a href="http://www.slf4j.org/">SLF4J</a> API 实现，可以应用于任何使用了 SLF4J API 的地方， 包括 ../simbot-logger。</p>
+              <p class="paragraph">基于 SLF4J 2.x 的日志实现。</p>
             </span></div>
         </div>
       </div>
-<a data-name="-316477755%2FMain%2F0" anchor-label="simbot-util-annotation-tool" id="-316477755%2FMain%2F0" data-filterable-set=""></a>
-      <div class="table-row">
+<a data-name="-1608011257%2FMain%2F0" anchor-label="simbot-processor-class-builder" id="-1608011257%2FMain%2F0" data-filterable-set=""></a>
+      <div class="table-row table-row_multimodule">
         <div class="main-subrow ">
           <div class="w-100"><span class="inline-flex">
-              <div><a href="simbot-util-annotation-tool/index.html">simbot-util-annotation-tool</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-316477755%2FMain%2F0"></span>
+              <div><a href="simbot-processors/class-builder/simbot-processor-class-builder/index.html">simbot-processor-class-builder</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1608011257%2FMain%2F0"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div><span class="brief-comment">
-              <p class="paragraph">这是一个服务于注解的工具库。</p>
+              <p class="paragraph">KSP 处理器：类构建器生成。</p>
             </span></div>
         </div>
       </div>
-<a data-name="687817331%2FMain%2F0" anchor-label="simbot-util-suspend-transformer" id="687817331%2FMain%2F0" data-filterable-set=""></a>
-      <div class="table-row">
+<a data-name="-1464338177%2FMain%2F0" anchor-label="simbot-processor-class-builder-annotation" id="-1464338177%2FMain%2F0" data-filterable-set=""></a>
+      <div class="table-row table-row_multimodule">
         <div class="main-subrow ">
           <div class="w-100"><span class="inline-flex">
-              <div><a href="simbot-util-suspend-transformer/index.html">simbot-util-suspend-transformer</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="687817331%2FMain%2F0"></span>
+              <div><a href="simbot-processors/class-builder/simbot-processor-class-builder-annotation/index.html">simbot-processor-class-builder-annotation</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1464338177%2FMain%2F0"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div><span class="brief-comment">
-              <p class="paragraph">simbot中独立出来并用于提供各平台兼容 <code class="lang-kotlin">suspend</code> 函数的扩展， 主要用于与编译器插件 <a href="https://github.com/forteScarlet/kotlin-suspend-transform-compiler-plugin">suspend-transform-compiler-plugin</a>  配合使用而脱离simbot主要体系（不掺杂过多代码）</p>
+              <p class="paragraph">类构建器处理器注解定义。</p>
+            </span></div>
+        </div>
+      </div>
+<a data-name="672810035%2FMain%2F0" anchor-label="simbot-processor-message-element-polymorphic-include" id="672810035%2FMain%2F0" data-filterable-set=""></a>
+      <div class="table-row table-row_multimodule">
+        <div class="main-subrow ">
+          <div class="w-100"><span class="inline-flex">
+              <div><a href="simbot-processors/simbot-processor-message-element-polymorphic-include/index.html">simbot-processor-message-element-polymorphic-include</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="672810035%2FMain%2F0"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div><span class="brief-comment">
+              <p class="paragraph">KSP 处理器：消息元素多态序列化注册生成。</p>
+            </span></div>
+        </div>
+      </div>
+<a data-name="-448102067%2FMain%2F0" anchor-label="simbot-quantcat-common" id="-448102067%2FMain%2F0" data-filterable-set=""></a>
+      <div class="table-row table-row_multimodule">
+        <div class="main-subrow ">
+          <div class="w-100"><span class="inline-flex">
+              <div><a href="simbot-quantcat/simbot-quantcat-common/index.html">simbot-quantcat-common</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-448102067%2FMain%2F0"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div><span class="brief-comment">
+              <p class="paragraph">注解 API: 注解驱动监听函数支持库。</p>
+            </span></div>
+        </div>
+      </div>
+<a data-name="1391360958%2FMain%2F0" anchor-label="simbot-test" id="1391360958%2FMain%2F0" data-filterable-set=""></a>
+      <div class="table-row table-row_multimodule">
+        <div class="main-subrow ">
+          <div class="w-100"><span class="inline-flex">
+              <div><a href="simbot-test/index.html">simbot-test</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1391360958%2FMain%2F0"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div><span class="brief-comment">
+              <p class="paragraph">测试工具模块，提供 Mock 实现。</p>
             </span></div>
         </div>
       </div>
     </div>
   </div>
 </div>
-      <div class="footer">
-        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2021-2023 <a href='https://github.com/simple-robot'>Simple Robot</a>, <a href='https://github.com/ForteScarlet'>ForteScarlet</a>. All rights reserved.</span><span
-                class="pull-right"><span>Generated by </span><a
-                href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
-      </div>
+    <div class="footer">
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>© 2024-2026 <a href='https://github.com/simple-robot'>Simple Robot</a>. All rights reserved.</div>
+                </div>
             </div>
         </div>
     </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>

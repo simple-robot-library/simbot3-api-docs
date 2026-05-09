@@ -1,0 +1,827 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>love.forte.simbot.kook.stdlib</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">    <!-- 百度统计 -->
+    <!--suppress ES6ConvertVarToLetConst -->
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            const hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?045f67a122223db9432c7856fc942fad";
+            const s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1JWL2DDTB4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-1JWL2DDTB4');
+    </script>
+<script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+      if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      } else {
+        const savedDarkMode = JSON.parse(storage)
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/safe-local-storage_blocking.js"></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../ui-kit/ui-kit.min.js" defer></script>
+<link href="../../../images/logo-icon.svg">
+<link href="../../../images/logo-icon-light.svg">
+<link href="../../../styles/kdoc-style.css" rel="Stylesheet"></head>
+<body>
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+<a class="library-name--link" href="../../../index.html" tabindex="1">
+                    Simple Robot
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">5.0.0-Preview2
+        </div>
+        <div class="navigation-controls">
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector common-like" data-active="" aria-pressed="true" data-filter=":simbot-component-kook:simbot-component-kook-stdlib/commonMain">common</button>
+                <button class="platform-tag platform-selector jvm-like" data-active="" aria-pressed="true" data-filter=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain">jvm</button>
+                <button class="platform-tag platform-selector common-like" data-active="" aria-pressed="true" data-filter=":simbot-component-kook:simbot-component-kook-stdlib/nativeMain">native</button>
+                <button class="platform-tag platform-selector common-like" data-active="" aria-pressed="true" data-filter=":simbot-component-kook:simbot-component-kook-stdlib/webMain">web</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option common-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":simbot-component-kook:simbot-component-kook-stdlib/commonMain" data-filter=":simbot-component-kook:simbot-component-kook-stdlib/commonMain">
+                                <span class="checkbox--icon"></span>
+                                common
+                            </label>
+                        </li>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain" data-filter=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain">
+                                <span class="checkbox--icon"></span>
+                                jvm
+                            </label>
+                        </li>
+                        <li role="option" class="dropdown--option platform-selector-option common-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":simbot-component-kook:simbot-component-kook-stdlib/nativeMain" data-filter=":simbot-component-kook:simbot-component-kook-stdlib/nativeMain">
+                                <span class="checkbox--icon"></span>
+                                native
+                            </label>
+                        </li>
+                        <li role="option" class="dropdown--option platform-selector-option common-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":simbot-component-kook:simbot-component-kook-stdlib/webMain" data-filter=":simbot-component-kook:simbot-component-kook-stdlib/webMain">
+                                <span class="checkbox--icon"></span>
+                                web
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </ul>
+                <a class="navigation-controls--btn navigation-controls--btn_homepage" id="homepage-link" href="https://github.com/simple-robot/simpler-robot"></a>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config="{&quot;defaultSize&quot;: 280, &quot;minSize&quot;: 200, &quot;maxSize&quot;: 400}">
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
+                            <span>
+                                    Simple Robot
+                            </span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
+<div class="main-content" data-page-type="package" id="content" pageids="simbot-component-kook-stdlib::love.forte.simbot.kook.stdlib////PointingToDeclaration//1038143712">
+  <div class="breadcrumbs"><a href="../index.html">simbot-component-kook-stdlib</a><span class="delimiter">/</span><span class="current">love.forte.simbot.kook.stdlib</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Package-level</span></span> <span><span>declarations</span></span></h1>
+    <div class="platform-hinted UnderCoverText with-platform-tabs" data-platform-hinted="data-platform-hinted">
+      <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":simbot-component-kook:simbot-component-kook-stdlib/commonMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-stdlib/commonMain" data-active="" data-toggle=":simbot-component-kook:simbot-component-kook-stdlib/commonMain">common</button><button class="platform-bookmark" data-filterable-current=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain" data-toggle=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain">jvm</button><button class="platform-bookmark" data-filterable-current=":simbot-component-kook:simbot-component-kook-stdlib/nativeMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-stdlib/nativeMain" data-toggle=":simbot-component-kook:simbot-component-kook-stdlib/nativeMain">native</button><button class="platform-bookmark" data-filterable-current=":simbot-component-kook:simbot-component-kook-stdlib/webMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-stdlib/webMain" data-toggle=":simbot-component-kook:simbot-component-kook-stdlib/webMain">web</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook:simbot-component-kook-stdlib/commonMain"><p class="paragraph">Bot 基础实现与事件处理。</p></div><div class="content sourceset-dependent-content" data-togglable=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain"><p class="paragraph">Bot 基础实现与事件处理。</p></div><div class="content sourceset-dependent-content" data-togglable=":simbot-component-kook:simbot-component-kook-stdlib/nativeMain"><p class="paragraph">Bot 基础实现与事件处理。</p></div><div class="content sourceset-dependent-content" data-togglable=":simbot-component-kook:simbot-component-kook-stdlib/webMain"><p class="paragraph">Bot 基础实现与事件处理。</p></div>    </div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="TYPE">Types</button><button class="section-tab" data-togglable="FUNCTION,EXTENSION_FUNCTION">Functions</button><button class="section-tab" data-togglable="PROPERTY,EXTENSION_PROPERTY">Properties</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="TYPE">
+        <h2 class="tableheader">Types</h2>
+        <div class="table"><a data-name="1400516439%2FClasslikes%2F812237914" anchor-label="Bot" id="1400516439%2FClasslikes%2F812237914" data-filterable-set=":simbot-component-kook:simbot-component-kook-stdlib/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-kook:simbot-component-kook-stdlib/commonMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-stdlib/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-bot/index.html"><span><span>Bot</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1400516439%2FClasslikes%2F812237914"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook:simbot-component-kook-stdlib/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-bot/index.html">Bot</a> : <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-coroutine-scope/index.html">CoroutineScope</a></div><div class="brief "><p class="paragraph">一个 KOOK Bot。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1776837301%2FClasslikes%2F812237914" anchor-label="BotConfiguration" id="1776837301%2FClasslikes%2F812237914" data-filterable-set=":simbot-component-kook:simbot-component-kook-stdlib/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-kook:simbot-component-kook-stdlib/commonMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-stdlib/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-bot-configuration/index.html"><span>Bot</span><wbr><span><span>Configuration</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1776837301%2FClasslikes%2F812237914"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook:simbot-component-kook-stdlib/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-bot-configuration/index.html">BotConfiguration</a></div><div class="brief "><p class="paragraph"><a href="-bot/index.html">Bot</a> 使用的配置。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1086601377%2FClasslikes%2F812237914" anchor-label="BotFactory" id="1086601377%2FClasslikes%2F812237914" data-filterable-set=":simbot-component-kook:simbot-component-kook-stdlib/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-kook:simbot-component-kook-stdlib/commonMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-stdlib/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-bot-factory/index.html"><span>Bot</span><wbr><span><span>Factory</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1086601377%2FClasslikes%2F812237914"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook:simbot-component-kook-stdlib/commonMain"><div class="symbol monospace"><span class="token keyword">object </span><a href="-bot-factory/index.html">BotFactory</a></div><div class="brief "><p class="paragraph">构建 <a href="-bot/index.html">Bot</a> 的工厂。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="29543812%2FClasslikes%2F812237914" anchor-label="EventDeserializationException" id="29543812%2FClasslikes%2F812237914" data-filterable-set=":simbot-component-kook:simbot-component-kook-stdlib/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-kook:simbot-component-kook-stdlib/commonMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-stdlib/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-event-deserialization-exception/index.html"><span>Event</span><wbr><span>Deserialization</span><wbr><span><span>Exception</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="29543812%2FClasslikes%2F812237914"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook:simbot-component-kook-stdlib/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-event-deserialization-exception/index.html">EventDeserializationException</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>source<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">message<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">cause<span class="token operator">: </span><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-core/kotlinx.serialization/-serialization-exception/index.html">SerializationException</a></span></span><span class="token punctuation">)</span> : <a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook/-kook-exception/index.html">KookException</a></div><div class="brief "><p class="paragraph">事件接收中因为事件无法反序列化而导致的错误。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-367040788%2FClasslikes%2F812237914" anchor-label="EventProcessor" id="-367040788%2FClasslikes%2F812237914" data-filterable-set=":simbot-component-kook:simbot-component-kook-stdlib/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-kook:simbot-component-kook-stdlib/commonMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-stdlib/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-event-processor/index.html"><span>Event</span><wbr><span><span>Processor</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-367040788%2FClasslikes%2F812237914"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook:simbot-component-kook-stdlib/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><span class="token keyword">interface </span><a href="-event-processor/index.html">EventProcessor</a></div><div class="brief "><p class="paragraph">事件处理器函数。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="684399642%2FClasslikes%2F955607388" anchor-label="JAsyncEventProcessor" id="684399642%2FClasslikes%2F955607388" data-filterable-set=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-j-async-event-processor/index.html"><span>JAsync</span><wbr><span>Event</span><wbr><span><span>Processor</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="684399642%2FClasslikes%2F955607388"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain" data-active="" data-toggle=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../../simbot-commons/simbot-common-annotations/love.forte.simbot.annotations/-api4-j/index.html"><span class="token annotation builtin">Api4J</span></a></div></div><span class="token keyword">fun </span><span class="token keyword">interface </span><a href="-j-async-event-processor/index.html">JAsyncEventProcessor</a> : <a href="-event-processor/index.html">EventProcessor</a></div><div class="brief "><p class="paragraph">一个异步式的 <a href="-event-processor/index.html">EventProcessor</a>，是提供给 Java 的友好类型。 可直接使用 <code class="lang-kotlin">EventProcessors.async((event, raw) -&gt; { ... })</code> 构建。</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="185014505%2FClasslikes%2F955607388" anchor-label="JBlockEventProcessor" id="185014505%2FClasslikes%2F955607388" data-filterable-set=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-j-block-event-processor/index.html"><span>JBlock</span><wbr><span>Event</span><wbr><span><span>Processor</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="185014505%2FClasslikes%2F955607388"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain" data-active="" data-toggle=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../../simbot-commons/simbot-common-annotations/love.forte.simbot.annotations/-api4-j/index.html"><span class="token annotation builtin">Api4J</span></a></div></div><span class="token keyword">fun </span><span class="token keyword">interface </span><a href="-j-block-event-processor/index.html">JBlockEventProcessor</a> : <a href="-event-processor/index.html">EventProcessor</a></div><div class="brief "><p class="paragraph">一个阻塞式的 <a href="-event-processor/index.html">EventProcessor</a>，是提供给 Java 的友好类型。 可直接使用 <code class="lang-kotlin">EventProcessors.block((event, raw) -&gt; { ... })</code> 构建。</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-754003851%2FClasslikes%2F812237914" anchor-label="KookBotClientCloseException" id="-754003851%2FClasslikes%2F812237914" data-filterable-set=":simbot-component-kook:simbot-component-kook-stdlib/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-kook:simbot-component-kook-stdlib/commonMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-stdlib/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-kook-bot-client-close-exception/index.html"><span>Kook</span><wbr><span>Bot</span><wbr><span>Client</span><wbr><span>Close</span><wbr><span><span>Exception</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-754003851%2FClasslikes%2F812237914"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook:simbot-component-kook-stdlib/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-kook-bot-client-close-exception/index.html">KookBotClientCloseException</a> : <a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook/-kook-exception/index.html">KookException</a></div><div class="brief "><p class="paragraph">Bot 连接成功后，当连接关闭时抛出的异常。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1825852466%2FClasslikes%2F812237914" anchor-label="KookBotConnectException" id="1825852466%2FClasslikes%2F812237914" data-filterable-set=":simbot-component-kook:simbot-component-kook-stdlib/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-kook:simbot-component-kook-stdlib/commonMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-stdlib/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-kook-bot-connect-exception/index.html"><span>Kook</span><wbr><span>Bot</span><wbr><span>Connect</span><wbr><span><span>Exception</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1825852466%2FClasslikes%2F812237914"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook:simbot-component-kook-stdlib/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-kook-bot-connect-exception/index.html">KookBotConnectException</a> : <a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook/-kook-exception/index.html">KookException</a></div><div class="brief "><p class="paragraph">bot启动过程中、连接失败（比如多次重试仍无法连接）时抛出的异常。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1349381522%2FClasslikes%2F812237914" anchor-label="ProcessorType" id="1349381522%2FClasslikes%2F812237914" data-filterable-set=":simbot-component-kook:simbot-component-kook-stdlib/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-kook:simbot-component-kook-stdlib/commonMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-stdlib/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-processor-type/index.html"><span>Processor</span><wbr><span><span>Type</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1349381522%2FClasslikes%2F812237914"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook:simbot-component-kook-stdlib/commonMain"><div class="symbol monospace"><span class="token keyword">enum </span><a href="-processor-type/index.html"><strike>ProcessorType</strike></a> : <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-enum/index.html">Enum</a><span class="token operator">&lt;</span><a href="-processor-type/index.html">ProcessorType</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph"><a href="-bot/index.html">Bot</a> 中的事件处理器类型。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2133058637%2FClasslikes%2F812237914" anchor-label="SubscribeSequence" id="-2133058637%2FClasslikes%2F812237914" data-filterable-set=":simbot-component-kook:simbot-component-kook-stdlib/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-kook:simbot-component-kook-stdlib/commonMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-stdlib/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-subscribe-sequence/index.html"><span>Subscribe</span><wbr><span><span>Sequence</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2133058637%2FClasslikes%2F812237914"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook:simbot-component-kook-stdlib/commonMain"><div class="symbol monospace"><span class="token keyword">enum </span><a href="-subscribe-sequence/index.html">SubscribeSequence</a> : <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-enum/index.html">Enum</a><span class="token operator">&lt;</span><a href="-subscribe-sequence/index.html">SubscribeSequence</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph"><a href="-bot/index.html">Bot</a> 中订阅事件时的序列类型。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1517789064%2FClasslikes%2F812237914" anchor-label="Ticket" id="-1517789064%2FClasslikes%2F812237914" data-filterable-set=":simbot-component-kook:simbot-component-kook-stdlib/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-kook:simbot-component-kook-stdlib/commonMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-stdlib/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-ticket/index.html"><span><span>Ticket</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1517789064%2FClasslikes%2F812237914"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook:simbot-component-kook-stdlib/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-ticket/index.html">Ticket</a></div><div class="brief "><p class="paragraph">Bot 所使用的部分权限"票据"。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="811316874%2FClasslikes%2F955607388" anchor-label="TypedJAsyncEventProcessor" id="811316874%2FClasslikes%2F955607388" data-filterable-set=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-typed-j-async-event-processor/index.html"><span>Typed</span><wbr><span>JAsync</span><wbr><span>Event</span><wbr><span><span>Processor</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="811316874%2FClasslikes%2F955607388"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain" data-active="" data-toggle=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../../simbot-commons/simbot-common-annotations/love.forte.simbot.annotations/-api4-j/index.html"><span class="token annotation builtin">Api4J</span></a></div></div><span class="token keyword">fun </span><span class="token keyword">interface </span><a href="-typed-j-async-event-processor/index.html">TypedJAsyncEventProcessor</a><span class="token operator">&lt;</span><a href="-typed-j-async-event-processor/index.html">E</a><span class="token operator"> : </span><a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.event/-event-extra/index.html">EventExtra</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">以异步的形式实现 <a href="-event-processor/index.html">EventProcessor</a>，是提供给 Java 的友好类型。 可直接使用 <code class="lang-kotlin">EventProcessors.async((event, raw) -&gt; { ... })</code> 构建。</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="311931737%2FClasslikes%2F955607388" anchor-label="TypedJBlockEventProcessor" id="311931737%2FClasslikes%2F955607388" data-filterable-set=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-typed-j-block-event-processor/index.html"><span>Typed</span><wbr><span>JBlock</span><wbr><span>Event</span><wbr><span><span>Processor</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="311931737%2FClasslikes%2F955607388"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain" data-active="" data-toggle=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../../simbot-commons/simbot-common-annotations/love.forte.simbot.annotations/-api4-j/index.html"><span class="token annotation builtin">Api4J</span></a></div></div><span class="token keyword">fun </span><span class="token keyword">interface </span><a href="-typed-j-block-event-processor/index.html">TypedJBlockEventProcessor</a><span class="token operator">&lt;</span><a href="-typed-j-block-event-processor/index.html">E</a><span class="token operator"> : </span><a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.event/-event-extra/index.html">EventExtra</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">以阻塞的形式实现 <a href="-event-processor/index.html">EventProcessor</a>，是提供给 Java 的友好类型。 可直接使用 <code class="lang-kotlin">EventProcessors.block((event, raw) -&gt; { ... })</code> 构建。</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="tableheader">Properties</h2>
+        <div class="table"><a data-name="864321243%2FProperties%2F1038143712" anchor-label="DEFAULT_COMPRESS" id="864321243%2FProperties%2F1038143712" data-filterable-set=":simbot-component-kook:simbot-component-kook-stdlib/commonMain,:simbot-component-kook:simbot-component-kook-stdlib/jvmMain,:simbot-component-kook:simbot-component-kook-stdlib/nativeMain,:simbot-component-kook:simbot-component-kook-stdlib/webMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-kook:simbot-component-kook-stdlib/commonMain,:simbot-component-kook:simbot-component-kook-stdlib/jvmMain,:simbot-component-kook:simbot-component-kook-stdlib/nativeMain,:simbot-component-kook:simbot-component-kook-stdlib/webMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-stdlib/commonMain,:simbot-component-kook:simbot-component-kook-stdlib/jvmMain,:simbot-component-kook:simbot-component-kook-stdlib/nativeMain,:simbot-component-kook:simbot-component-kook-stdlib/webMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-d-e-f-a-u-l-t_-c-o-m-p-r-e-s-s.html"><span>DEFAULT_</span><wbr><span>COMPRESS</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="864321243%2FProperties%2F1038143712"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":simbot-component-kook:simbot-component-kook-stdlib/commonMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-stdlib/commonMain" data-active="" data-toggle=":simbot-component-kook:simbot-component-kook-stdlib/commonMain">common</button><button class="platform-bookmark" data-filterable-current=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain" data-toggle=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain">jvm</button><button class="platform-bookmark" data-filterable-current=":simbot-component-kook:simbot-component-kook-stdlib/nativeMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-stdlib/nativeMain" data-toggle=":simbot-component-kook:simbot-component-kook-stdlib/nativeMain">native</button><button class="platform-bookmark" data-filterable-current=":simbot-component-kook:simbot-component-kook-stdlib/webMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-stdlib/webMain" data-toggle=":simbot-component-kook:simbot-component-kook-stdlib/webMain">web</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook:simbot-component-kook-stdlib/commonMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword">val </span><a href="-d-e-f-a-u-l-t_-c-o-m-p-r-e-s-s.html">DEFAULT_COMPRESS</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph"><a href="-bot-configuration/index.html">BotConfiguration</a> 中 <a href="-bot-configuration/is-compress.html">BotConfiguration.isCompress</a> 的默认值。</p></div></div><div class="content sourceset-dependent-content" data-togglable=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">const </span><span class="token keyword">val </span><a href="-d-e-f-a-u-l-t_-c-o-m-p-r-e-s-s.html">DEFAULT_COMPRESS</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">true</span></div><div class="brief "><p class="paragraph"><a href="-bot-configuration/index.html">BotConfiguration</a> 中 <a href="-bot-configuration/is-compress.html">BotConfiguration.isCompress</a> 的默认值， 默认开启，通过 <span data-unresolved-link="love.forte.simbot.kook.stdlib.internal//readToTextWithDeflated/io.ktor.websocket.Frame.Binary#/PointingToDeclaration/">Frame.Binary.readToTextWithDeflated</span> 的平台实现支持。</p></div></div><div class="content sourceset-dependent-content" data-togglable=":simbot-component-kook:simbot-component-kook-stdlib/nativeMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">const </span><span class="token keyword">val </span><a href="-d-e-f-a-u-l-t_-c-o-m-p-r-e-s-s.html">DEFAULT_COMPRESS</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span></div><div class="brief "><p class="paragraph"><a href="-bot-configuration/index.html">BotConfiguration</a> 中 <a href="-bot-configuration/is-compress.html">BotConfiguration.isCompress</a> 的默认值， 默认关闭且不保证支持。</p></div></div><div class="content sourceset-dependent-content" data-togglable=":simbot-component-kook:simbot-component-kook-stdlib/webMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">const </span><span class="token keyword">val </span><a href="-d-e-f-a-u-l-t_-c-o-m-p-r-e-s-s.html">DEFAULT_COMPRESS</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span></div><div class="brief "><p class="paragraph">Web 平台上 <a href="-bot-configuration/index.html">BotConfiguration</a> 中 <a href="-bot-configuration/is-compress.html">BotConfiguration.isCompress</a> 的默认值， 默认<strong>关闭</strong>，但是<strong>可以开启</strong>，通过 <span data-unresolved-link="love.forte.simbot.kook.stdlib.internal//readToTextWithDeflated/io.ktor.websocket.Frame.Binary#/PointingToDeclaration/">Frame.Binary.readToTextWithDeflated</span> 的平台实现支持。</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="tableheader">Functions</h2>
+        <div class="table"><a data-name="122512225%2FFunctions%2F955607388" anchor-label="async" id="122512225%2FFunctions%2F955607388" data-filterable-set=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="async.html"><span><span>async</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="122512225%2FFunctions%2F955607388"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain" data-active="" data-toggle=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../../simbot-commons/simbot-common-annotations/love.forte.simbot.annotations/-api4-j/index.html"><span class="token annotation builtin">Api4J</span></a></div></div><span class="token keyword">fun </span><a href="async.html"><span class="token function">async</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">function<span class="token operator">: </span><a href="-j-async-event-processor/index.html">JAsyncEventProcessor</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-event-processor/index.html">EventProcessor</a></div><div class="brief "><p class="paragraph">构建一个异步式的 <a href="-event-processor/index.html">EventProcessor</a></p></div><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../../simbot-commons/simbot-common-annotations/love.forte.simbot.annotations/-api4-j/index.html"><span class="token annotation builtin">Api4J</span></a></div></div><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="async.html">E</a><span class="token operator"> : </span><a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.event/-event-extra/index.html">EventExtra</a><span class="token operator">&gt; </span><a href="async.html"><span class="token function">async</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">type<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Class.html">Class</a><span class="token operator">&lt;</span><a href="async.html">E</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">function<span class="token operator">: </span><a href="-typed-j-async-event-processor/index.html">TypedJAsyncEventProcessor</a><span class="token operator">&lt;</span><a href="async.html">E</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-event-processor/index.html">EventProcessor</a></div><div class="brief "><p class="paragraph">构建一个处理目标类型 <a href="async.html">E</a> 的异步式 <a href="-event-processor/index.html">EventProcessor</a></p></div><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../../simbot-commons/simbot-common-annotations/love.forte.simbot.annotations/-api4-j/index.html"><span class="token annotation builtin">Api4J</span></a></div></div><span class="token keyword">fun </span><a href="async.html"><span class="token function">async</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">type<span class="token operator">: </span><a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.event/-event/-type/index.html">Event.Type</a><span class="token punctuation">, </span></span><span class="parameter ">function<span class="token operator">: </span><a href="-j-async-event-processor/index.html">JAsyncEventProcessor</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-event-processor/index.html">EventProcessor</a></div><div class="brief "><p class="paragraph">构建一个 <a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.event/-event/type.html">Event.type</a> 为 <a href="async.html">type</a> 的 的异步式 <a href="-event-processor/index.html">EventProcessor</a></p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="505116739%2FFunctions%2F955607388" anchor-label="block" id="505116739%2FFunctions%2F955607388" data-filterable-set=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="block.html"><span><span>block</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="505116739%2FFunctions%2F955607388"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain" data-active="" data-toggle=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../../simbot-commons/simbot-common-annotations/love.forte.simbot.annotations/-api4-j/index.html"><span class="token annotation builtin">Api4J</span></a></div></div><span class="token keyword">fun </span><a href="block.html"><span class="token function">block</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">function<span class="token operator">: </span><a href="-j-block-event-processor/index.html">JBlockEventProcessor</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-event-processor/index.html">EventProcessor</a></div><div class="brief "><p class="paragraph">构建一个阻塞式的 <a href="-event-processor/index.html">EventProcessor</a></p></div><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../../simbot-commons/simbot-common-annotations/love.forte.simbot.annotations/-api4-j/index.html"><span class="token annotation builtin">Api4J</span></a></div></div><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="block.html">E</a><span class="token operator"> : </span><a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.event/-event-extra/index.html">EventExtra</a><span class="token operator">&gt; </span><a href="block.html"><span class="token function">block</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">type<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Class.html">Class</a><span class="token operator">&lt;</span><a href="block.html">E</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">function<span class="token operator">: </span><a href="-typed-j-block-event-processor/index.html">TypedJBlockEventProcessor</a><span class="token operator">&lt;</span><a href="block.html">E</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-event-processor/index.html">EventProcessor</a></div><div class="brief "><p class="paragraph">构建一个处理目标类型 <a href="block.html">E</a> 的阻塞式 <a href="-event-processor/index.html">EventProcessor</a></p></div><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../../simbot-commons/simbot-common-annotations/love.forte.simbot.annotations/-api4-j/index.html"><span class="token annotation builtin">Api4J</span></a></div></div><span class="token keyword">fun </span><a href="block.html"><span class="token function">block</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">type<span class="token operator">: </span><a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.event/-event/-type/index.html">Event.Type</a><span class="token punctuation">, </span></span><span class="parameter ">function<span class="token operator">: </span><a href="-j-block-event-processor/index.html">JBlockEventProcessor</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-event-processor/index.html">EventProcessor</a></div><div class="brief "><p class="paragraph">构建一个 <a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.event/-event/type.html">Event.type</a> 为 <a href="block.html">type</a> 的阻塞式 <a href="-event-processor/index.html">EventProcessor</a></p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="EXTENSION_FUNCTION">
+        <h2 class="tableheader">Inherited functions</h2>
+        <div class="table"><a data-name="-907751309%2FFunctions%2F812237914" anchor-label="alsoStart" id="-907751309%2FFunctions%2F812237914" data-filterable-set=":simbot-component-kook:simbot-component-kook-stdlib/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-kook:simbot-component-kook-stdlib/commonMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-stdlib/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="also-start.html"><span>also</span><wbr><span><span>Start</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-907751309%2FFunctions%2F812237914"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook:simbot-component-kook-stdlib/commonMain"><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="-bot/index.html">Bot</a><span class="token punctuation">.</span><a href="also-start.html"><span class="token function">alsoStart</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-bot/index.html">Bot</a></div><div class="brief "><p class="paragraph">Start and return bot self.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2073444059%2FFunctions%2F812237914" anchor-label="closeAndJoin" id="-2073444059%2FFunctions%2F812237914" data-filterable-set=":simbot-component-kook:simbot-component-kook-stdlib/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-kook:simbot-component-kook-stdlib/commonMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-stdlib/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="close-and-join.html"><span>close</span><wbr><span>And</span><wbr><span><span>Join</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2073444059%2FFunctions%2F812237914"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook:simbot-component-kook-stdlib/commonMain"><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="-bot/index.html">Bot</a><span class="token punctuation">.</span><a href="close-and-join.html"><span class="token function">closeAndJoin</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Close bot and join.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="755143454%2FFunctions%2F812237914" anchor-label="engine" id="755143454%2FFunctions%2F812237914" data-filterable-set=":simbot-component-kook:simbot-component-kook-stdlib/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-kook:simbot-component-kook-stdlib/commonMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-stdlib/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="engine.html"><span><span>engine</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="755143454%2FFunctions%2F812237914"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook:simbot-component-kook-stdlib/commonMain"><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><a href="-bot-configuration/index.html">BotConfiguration</a><span class="token punctuation">.</span><a href="engine.html"><span class="token function">engine</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">init<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">true</span><span class="token punctuation">, </span></span><span class="parameter ">block<span class="token operator">: </span><a href="-bot-configuration/-engine-configuration/index.html">BotConfiguration.EngineConfiguration</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">配置 <a href="-bot-configuration/client-engine-config.html">BotConfiguration.clientEngineConfig</a>。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1340211665%2FFunctions%2F812237914" anchor-label="processor" id="1340211665%2FFunctions%2F812237914" data-filterable-set=":simbot-component-kook:simbot-component-kook-stdlib/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-kook:simbot-component-kook-stdlib/commonMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-stdlib/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="processor.html"><span><span>processor</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1340211665%2FFunctions%2F812237914"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook:simbot-component-kook-stdlib/commonMain"><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="processor.html">EX</a><span class="token operator"> : </span><a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.event/-event-extra/index.html">EventExtra</a><span class="token operator">&gt; </span><a href="-bot/index.html">Bot</a><span class="token punctuation">.</span><a href="processor.html"><span class="token function"><strike>processor</strike></span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">crossinline </span>processor<span class="token operator">: </span><span class="token keyword">suspend </span><a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.event/-event/index.html">Event</a><span class="token operator">&lt;</span><a href="processor.html">EX</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span>raw<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">针对一个具体的 <a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.event/-event-extra/index.html">EventExtra</a> 类型进行监听。</p></div><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><a href="-bot/index.html">Bot</a><span class="token punctuation">.</span><a href="processor.html"><span class="token function"><strike>processor</strike></span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">type<span class="token operator">: </span><a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.event/-event/-type/index.html">Event.Type</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">crossinline </span>processor<span class="token operator">: </span><span class="token keyword">suspend </span><a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.event/-event/index.html">Event</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span>raw<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">针对一个 <a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.event/-event/type.html">Event.type</a> 目标进行监听。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1682209116%2FFunctions%2F812237914" anchor-label="requestBy" id="1682209116%2FFunctions%2F812237914" data-filterable-set=":simbot-component-kook:simbot-component-kook-stdlib/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-kook:simbot-component-kook-stdlib/commonMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-stdlib/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="request-by.html"><span>request</span><wbr><span><span>By</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1682209116%2FFunctions%2F812237914"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook:simbot-component-kook-stdlib/commonMain"><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.api/-kook-api/index.html">KookApi</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="request-by.html"><span class="token function">requestBy</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">bot<span class="token operator">: </span><a href="-bot/index.html">Bot</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://api.ktor.io/ktor-client-core/io.ktor.client.statement/-http-response/index.html">HttpResponse</a></div><div class="brief "><p class="paragraph">使用 <a href="-bot/index.html">Bot</a> 向 <a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.api/-kook-api/index.html">KookApi</a> 发起请求。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="741251656%2FFunctions%2F955607388" anchor-label="requestByAsync" id="741251656%2FFunctions%2F955607388" data-filterable-set=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="request-by-async.html"><span>request</span><wbr><span>By</span><wbr><span><span>Async</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="741251656%2FFunctions%2F955607388"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain" data-active="" data-toggle=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../../simbot-commons/simbot-common-annotations/love.forte.simbot.annotations/-api4-j/index.html"><span class="token annotation builtin">Api4J</span></a></div></div><span class="token keyword">fun </span><a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.api/-kook-api/index.html">KookApi</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="request-by-async.html"><span class="token function">requestByAsync</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">bot<span class="token operator">: </span><a href="-bot/index.html">Bot</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/CompletableFuture.html">CompletableFuture</a><span class="token operator">&lt;</span><span class="token keyword">out </span><a href="https://api.ktor.io/ktor-client-core/io.ktor.client.statement/-http-response/index.html">HttpResponse</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">使用 <a href="-bot/index.html">Bot</a> 向 <a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.api/-kook-api/index.html">KookApi</a> 发起请求。</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2122246759%2FFunctions%2F955607388" anchor-label="requestByBlocking" id="2122246759%2FFunctions%2F955607388" data-filterable-set=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="request-by-blocking.html"><span>request</span><wbr><span>By</span><wbr><span><span>Blocking</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2122246759%2FFunctions%2F955607388"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain" data-active="" data-toggle=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../../simbot-commons/simbot-common-annotations/love.forte.simbot.annotations/-api4-j/index.html"><span class="token annotation builtin">Api4J</span></a></div></div><span class="token keyword">fun </span><a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.api/-kook-api/index.html">KookApi</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="request-by-blocking.html"><span class="token function">requestByBlocking</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">bot<span class="token operator">: </span><a href="-bot/index.html">Bot</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://api.ktor.io/ktor-client-core/io.ktor.client.statement/-http-response/index.html">HttpResponse</a></div><div class="brief "><p class="paragraph">使用 <a href="-bot/index.html">Bot</a> 向 <a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.api/-kook-api/index.html">KookApi</a> 发起请求。</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1909897464%2FFunctions%2F955607388" anchor-label="requestByReserve" id="-1909897464%2FFunctions%2F955607388" data-filterable-set=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="request-by-reserve.html"><span>request</span><wbr><span>By</span><wbr><span><span>Reserve</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1909897464%2FFunctions%2F955607388"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain" data-active="" data-toggle=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../../simbot-commons/simbot-common-annotations/love.forte.simbot.annotations/-api4-j/index.html"><span class="token annotation builtin">Api4J</span></a></div></div><span class="token keyword">fun </span><a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.api/-kook-api/index.html">KookApi</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="request-by-reserve.html"><span class="token function">requestByReserve</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">bot<span class="token operator">: </span><a href="-bot/index.html">Bot</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../../simbot-commons/simbot-common-suspend-runner/love.forte.simbot.suspendrunner.reserve/-suspend-reserve/index.html">SuspendReserve</a><span class="token operator">&lt;</span><a href="https://api.ktor.io/ktor-client-core/io.ktor.client.statement/-http-response/index.html">HttpResponse</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">使用 <a href="-bot/index.html">Bot</a> 向 <a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.api/-kook-api/index.html">KookApi</a> 发起请求。</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-296041661%2FFunctions%2F812237914" anchor-label="requestDataBy" id="-296041661%2FFunctions%2F812237914" data-filterable-set=":simbot-component-kook:simbot-component-kook-stdlib/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-kook:simbot-component-kook-stdlib/commonMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-stdlib/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="request-data-by.html"><span>request</span><wbr><span>Data</span><wbr><span><span>By</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-296041661%2FFunctions%2F812237914"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook:simbot-component-kook-stdlib/commonMain"><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="request-data-by.html">T</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.api/-kook-api/index.html">KookApi</a><span class="token operator">&lt;</span><a href="request-data-by.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="request-data-by.html"><span class="token function">requestDataBy</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">bot<span class="token operator">: </span><a href="-bot/index.html">Bot</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="request-data-by.html">T</a></div><div class="brief "><p class="paragraph">使用 <a href="-bot/index.html">Bot</a> 向 <a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.api/-kook-api/index.html">KookApi</a> 发起请求。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1183221891%2FFunctions%2F955607388" anchor-label="requestDataByAsync" id="1183221891%2FFunctions%2F955607388" data-filterable-set=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="request-data-by-async.html"><span>request</span><wbr><span>Data</span><wbr><span>By</span><wbr><span><span>Async</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1183221891%2FFunctions%2F955607388"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain" data-active="" data-toggle=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../../simbot-commons/simbot-common-annotations/love.forte.simbot.annotations/-api4-j/index.html"><span class="token annotation builtin">Api4J</span></a></div></div><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="request-data-by-async.html">T</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.api/-kook-api/index.html">KookApi</a><span class="token operator">&lt;</span><a href="request-data-by-async.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="request-data-by-async.html"><span class="token function">requestDataByAsync</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">bot<span class="token operator">: </span><a href="-bot/index.html">Bot</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/CompletableFuture.html">CompletableFuture</a><span class="token operator">&lt;</span><span class="token keyword">out </span><a href="request-data-by-async.html">T</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">使用 <a href="-bot/index.html">Bot</a> 向 <a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.api/-kook-api/index.html">KookApi</a> 发起请求。</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1513232360%2FFunctions%2F955607388" anchor-label="requestDataByBlocking" id="-1513232360%2FFunctions%2F955607388" data-filterable-set=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="request-data-by-blocking.html"><span>request</span><wbr><span>Data</span><wbr><span>By</span><wbr><span><span>Blocking</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1513232360%2FFunctions%2F955607388"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain" data-active="" data-toggle=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../../simbot-commons/simbot-common-annotations/love.forte.simbot.annotations/-api4-j/index.html"><span class="token annotation builtin">Api4J</span></a></div></div><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="request-data-by-blocking.html">T</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.api/-kook-api/index.html">KookApi</a><span class="token operator">&lt;</span><a href="request-data-by-blocking.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="request-data-by-blocking.html"><span class="token function">requestDataByBlocking</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">bot<span class="token operator">: </span><a href="-bot/index.html">Bot</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="request-data-by-blocking.html">T</a></div><div class="brief "><p class="paragraph">使用 <a href="-bot/index.html">Bot</a> 向 <a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.api/-kook-api/index.html">KookApi</a> 发起请求。</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1536577091%2FFunctions%2F955607388" anchor-label="requestDataByReserve" id="1536577091%2FFunctions%2F955607388" data-filterable-set=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="request-data-by-reserve.html"><span>request</span><wbr><span>Data</span><wbr><span>By</span><wbr><span><span>Reserve</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1536577091%2FFunctions%2F955607388"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain" data-active="" data-toggle=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../../simbot-commons/simbot-common-annotations/love.forte.simbot.annotations/-api4-j/index.html"><span class="token annotation builtin">Api4J</span></a></div></div><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="request-data-by-reserve.html">T</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.api/-kook-api/index.html">KookApi</a><span class="token operator">&lt;</span><a href="request-data-by-reserve.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="request-data-by-reserve.html"><span class="token function">requestDataByReserve</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">bot<span class="token operator">: </span><a href="-bot/index.html">Bot</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../../simbot-commons/simbot-common-suspend-runner/love.forte.simbot.suspendrunner.reserve/-suspend-reserve/index.html">SuspendReserve</a><span class="token operator">&lt;</span><a href="request-data-by-reserve.html">T</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">使用 <a href="-bot/index.html">Bot</a> 向 <a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.api/-kook-api/index.html">KookApi</a> 发起请求。</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1680877953%2FFunctions%2F812237914" anchor-label="requestResultBy" id="-1680877953%2FFunctions%2F812237914" data-filterable-set=":simbot-component-kook:simbot-component-kook-stdlib/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-kook:simbot-component-kook-stdlib/commonMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-stdlib/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="request-result-by.html"><span>request</span><wbr><span>Result</span><wbr><span><span>By</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1680877953%2FFunctions%2F812237914"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook:simbot-component-kook-stdlib/commonMain"><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.api/-kook-api/index.html">KookApi</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="request-result-by.html"><span class="token function">requestResultBy</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">bot<span class="token operator">: </span><a href="-bot/index.html">Bot</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.api/-api-result/index.html">ApiResult</a></div><div class="brief "><p class="paragraph">使用 <a href="-bot/index.html">Bot</a> 向 <a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.api/-kook-api/index.html">KookApi</a> 发起请求。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-504431867%2FFunctions%2F955607388" anchor-label="requestResultByAsync" id="-504431867%2FFunctions%2F955607388" data-filterable-set=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="request-result-by-async.html"><span>request</span><wbr><span>Result</span><wbr><span>By</span><wbr><span><span>Async</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-504431867%2FFunctions%2F955607388"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain" data-active="" data-toggle=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../../simbot-commons/simbot-common-annotations/love.forte.simbot.annotations/-api4-j/index.html"><span class="token annotation builtin">Api4J</span></a></div></div><span class="token keyword">fun </span><a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.api/-kook-api/index.html">KookApi</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="request-result-by-async.html"><span class="token function">requestResultByAsync</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">bot<span class="token operator">: </span><a href="-bot/index.html">Bot</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/CompletableFuture.html">CompletableFuture</a><span class="token operator">&lt;</span><span class="token keyword">out </span><a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.api/-api-result/index.html">ApiResult</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">使用 <a href="-bot/index.html">Bot</a> 向 <a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.api/-kook-api/index.html">KookApi</a> 发起请求。</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="481850506%2FFunctions%2F955607388" anchor-label="requestResultByBlocking" id="481850506%2FFunctions%2F955607388" data-filterable-set=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="request-result-by-blocking.html"><span>request</span><wbr><span>Result</span><wbr><span>By</span><wbr><span><span>Blocking</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="481850506%2FFunctions%2F955607388"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain" data-active="" data-toggle=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../../simbot-commons/simbot-common-annotations/love.forte.simbot.annotations/-api4-j/index.html"><span class="token annotation builtin">Api4J</span></a></div></div><span class="token keyword">fun </span><a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.api/-kook-api/index.html">KookApi</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="request-result-by-blocking.html"><span class="token function">requestResultByBlocking</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">bot<span class="token operator">: </span><a href="-bot/index.html">Bot</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.api/-api-result/index.html">ApiResult</a></div><div class="brief "><p class="paragraph">使用 <a href="-bot/index.html">Bot</a> 向 <a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.api/-kook-api/index.html">KookApi</a> 发起请求。</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-715887483%2FFunctions%2F955607388" anchor-label="requestResultByReserve" id="-715887483%2FFunctions%2F955607388" data-filterable-set=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="request-result-by-reserve.html"><span>request</span><wbr><span>Result</span><wbr><span>By</span><wbr><span><span>Reserve</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-715887483%2FFunctions%2F955607388"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain" data-active="" data-toggle=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../../simbot-commons/simbot-common-annotations/love.forte.simbot.annotations/-api4-j/index.html"><span class="token annotation builtin">Api4J</span></a></div></div><span class="token keyword">fun </span><a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.api/-kook-api/index.html">KookApi</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="request-result-by-reserve.html"><span class="token function">requestResultByReserve</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">bot<span class="token operator">: </span><a href="-bot/index.html">Bot</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../../simbot-commons/simbot-common-suspend-runner/love.forte.simbot.suspendrunner.reserve/-suspend-reserve/index.html">SuspendReserve</a><span class="token operator">&lt;</span><a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.api/-api-result/index.html">ApiResult</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">使用 <a href="-bot/index.html">Bot</a> 向 <a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.api/-kook-api/index.html">KookApi</a> 发起请求。</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1563544529%2FFunctions%2F812237914" anchor-label="requestTextBy" id="-1563544529%2FFunctions%2F812237914" data-filterable-set=":simbot-component-kook:simbot-component-kook-stdlib/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-kook:simbot-component-kook-stdlib/commonMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-stdlib/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="request-text-by.html"><span>request</span><wbr><span>Text</span><wbr><span><span>By</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1563544529%2FFunctions%2F812237914"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook:simbot-component-kook-stdlib/commonMain"><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.api/-kook-api/index.html">KookApi</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="request-text-by.html"><span class="token function">requestTextBy</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">bot<span class="token operator">: </span><a href="-bot/index.html">Bot</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">使用 <a href="-bot/index.html">Bot</a> 向 <a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.api/-kook-api/index.html">KookApi</a> 发起请求。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1756867413%2FFunctions%2F955607388" anchor-label="requestTextByAsync" id="1756867413%2FFunctions%2F955607388" data-filterable-set=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="request-text-by-async.html"><span>request</span><wbr><span>Text</span><wbr><span>By</span><wbr><span><span>Async</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1756867413%2FFunctions%2F955607388"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain" data-active="" data-toggle=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../../simbot-commons/simbot-common-annotations/love.forte.simbot.annotations/-api4-j/index.html"><span class="token annotation builtin">Api4J</span></a></div></div><span class="token keyword">fun </span><a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.api/-kook-api/index.html">KookApi</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="request-text-by-async.html"><span class="token function">requestTextByAsync</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">bot<span class="token operator">: </span><a href="-bot/index.html">Bot</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/CompletableFuture.html">CompletableFuture</a><span class="token operator">&lt;</span><span class="token keyword">out </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">使用 <a href="-bot/index.html">Bot</a> 向 <a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.api/-kook-api/index.html">KookApi</a> 发起请求。</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="286663226%2FFunctions%2F955607388" anchor-label="requestTextByBlocking" id="286663226%2FFunctions%2F955607388" data-filterable-set=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="request-text-by-blocking.html"><span>request</span><wbr><span>Text</span><wbr><span>By</span><wbr><span><span>Blocking</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="286663226%2FFunctions%2F955607388"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain" data-active="" data-toggle=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../../simbot-commons/simbot-common-annotations/love.forte.simbot.annotations/-api4-j/index.html"><span class="token annotation builtin">Api4J</span></a></div></div><span class="token keyword">fun </span><a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.api/-kook-api/index.html">KookApi</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="request-text-by-blocking.html"><span class="token function">requestTextByBlocking</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">bot<span class="token operator">: </span><a href="-bot/index.html">Bot</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">使用 <a href="-bot/index.html">Bot</a> 向 <a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.api/-kook-api/index.html">KookApi</a> 发起请求。</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-860731179%2FFunctions%2F955607388" anchor-label="requestTextByReserve" id="-860731179%2FFunctions%2F955607388" data-filterable-set=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="request-text-by-reserve.html"><span>request</span><wbr><span>Text</span><wbr><span>By</span><wbr><span><span>Reserve</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-860731179%2FFunctions%2F955607388"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain" data-active="" data-toggle=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook:simbot-component-kook-stdlib/jvmMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../../simbot-commons/simbot-common-annotations/love.forte.simbot.annotations/-api4-j/index.html"><span class="token annotation builtin">Api4J</span></a></div></div><span class="token keyword">fun </span><a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.api/-kook-api/index.html">KookApi</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="request-text-by-reserve.html"><span class="token function">requestTextByReserve</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">bot<span class="token operator">: </span><a href="-bot/index.html">Bot</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../../simbot-commons/simbot-common-suspend-runner/love.forte.simbot.suspendrunner.reserve/-suspend-reserve/index.html">SuspendReserve</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">使用 <a href="-bot/index.html">Bot</a> 向 <a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.api/-kook-api/index.html">KookApi</a> 发起请求。</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1811937275%2FFunctions%2F812237914" anchor-label="startAndJoin" id="1811937275%2FFunctions%2F812237914" data-filterable-set=":simbot-component-kook:simbot-component-kook-stdlib/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-kook:simbot-component-kook-stdlib/commonMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-stdlib/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="start-and-join.html"><span>start</span><wbr><span>And</span><wbr><span><span>Join</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1811937275%2FFunctions%2F812237914"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook:simbot-component-kook-stdlib/commonMain"><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="-bot/index.html">Bot</a><span class="token punctuation">.</span><a href="start-and-join.html"><span class="token function">startAndJoin</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Start bot and join.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="792410215%2FFunctions%2F812237914" anchor-label="subscribe" id="792410215%2FFunctions%2F812237914" data-filterable-set=":simbot-component-kook:simbot-component-kook-stdlib/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-kook:simbot-component-kook-stdlib/commonMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-stdlib/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="subscribe.html"><span><span>subscribe</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="792410215%2FFunctions%2F812237914"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook:simbot-component-kook-stdlib/commonMain"><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="subscribe.html">EX</a><span class="token operator"> : </span><a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.event/-event-extra/index.html">EventExtra</a><span class="token operator">&gt; </span><a href="-bot/index.html">Bot</a><span class="token punctuation">.</span><a href="subscribe.html"><span class="token function">subscribe</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">subscribeSequence<span class="token operator">: </span><a href="-subscribe-sequence/index.html">SubscribeSequence</a><span class="token operator"> = </span>SubscribeSequence.NORMAL<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">crossinline </span>processor<span class="token operator">: </span><span class="token keyword">suspend </span><a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.event/-event/index.html">Event</a><span class="token operator">&lt;</span><a href="subscribe.html">EX</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span>raw<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">订阅一个具体的 <a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.event/-event-extra/index.html">EventExtra</a> 类型的事件。</p></div><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><a href="-bot/index.html">Bot</a><span class="token punctuation">.</span><a href="subscribe.html"><span class="token function">subscribe</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">type<span class="token operator">: </span><a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.event/-event/-type/index.html">Event.Type</a><span class="token punctuation">, </span></span><span class="parameter ">subscribeSequence<span class="token operator">: </span><a href="-subscribe-sequence/index.html">SubscribeSequence</a><span class="token operator"> = </span>SubscribeSequence.NORMAL<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">crossinline </span>processor<span class="token operator">: </span><span class="token keyword">suspend </span><a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.event/-event/index.html">Event</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span>raw<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">订阅一个 <a href="../../../simbot-component-kook/simbot-component-kook-api/love.forte.simbot.kook.event/-event/type.html">Event.type</a> 目标的事件。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="270734626%2FFunctions%2F812237914" anchor-label="timeout" id="270734626%2FFunctions%2F812237914" data-filterable-set=":simbot-component-kook:simbot-component-kook-stdlib/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-kook:simbot-component-kook-stdlib/commonMain" data-filterable-set=":simbot-component-kook:simbot-component-kook-stdlib/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="timeout.html"><span><span>timeout</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="270734626%2FFunctions%2F812237914"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-kook:simbot-component-kook-stdlib/commonMain"><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><a href="-bot-configuration/index.html">BotConfiguration</a><span class="token punctuation">.</span><a href="timeout.html"><span class="token function">timeout</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">init<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">true</span><span class="token punctuation">, </span></span><span class="parameter ">block<span class="token operator">: </span><a href="-bot-configuration/-timeout-configuration/index.html">BotConfiguration.TimeoutConfiguration</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">配置 <a href="timeout.html">BotConfiguration.timeout</a>。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>© 2024-2026 <a href="https://github.com/simple-robot">Simple Robot</a>. All rights reserved.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

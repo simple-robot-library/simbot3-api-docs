@@ -1,0 +1,375 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>love.forte.simbot.suspendrunner.reserve</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">    <!-- 百度统计 -->
+    <!--suppress ES6ConvertVarToLetConst -->
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            const hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?045f67a122223db9432c7856fc942fad";
+            const s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1JWL2DDTB4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-1JWL2DDTB4');
+    </script>
+<script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+      if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      } else {
+        const savedDarkMode = JSON.parse(storage)
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/safe-local-storage_blocking.js"></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../ui-kit/ui-kit.min.js" defer></script>
+<link href="../../../images/logo-icon.svg">
+<link href="../../../images/logo-icon-light.svg">
+<link href="../../../styles/kdoc-style.css" rel="Stylesheet"></head>
+<body>
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+<a class="library-name--link" href="../../../index.html" tabindex="1">
+                    Simple Robot
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">5.0.0-Preview2
+        </div>
+        <div class="navigation-controls">
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector common-like" data-active="" aria-pressed="true" data-filter=":simbot-commons:simbot-common-suspend-runner/commonMain">common</button>
+                <button class="platform-tag platform-selector js-like" data-active="" aria-pressed="true" data-filter=":simbot-commons:simbot-common-suspend-runner/jsMain">js</button>
+                <button class="platform-tag platform-selector jvm-like" data-active="" aria-pressed="true" data-filter=":simbot-commons:simbot-common-suspend-runner/jvmMain">jvm</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option common-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":simbot-commons:simbot-common-suspend-runner/commonMain" data-filter=":simbot-commons:simbot-common-suspend-runner/commonMain">
+                                <span class="checkbox--icon"></span>
+                                common
+                            </label>
+                        </li>
+                        <li role="option" class="dropdown--option platform-selector-option js-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":simbot-commons:simbot-common-suspend-runner/jsMain" data-filter=":simbot-commons:simbot-common-suspend-runner/jsMain">
+                                <span class="checkbox--icon"></span>
+                                js
+                            </label>
+                        </li>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":simbot-commons:simbot-common-suspend-runner/jvmMain" data-filter=":simbot-commons:simbot-common-suspend-runner/jvmMain">
+                                <span class="checkbox--icon"></span>
+                                jvm
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </ul>
+                <a class="navigation-controls--btn navigation-controls--btn_homepage" id="homepage-link" href="https://github.com/simple-robot/simpler-robot"></a>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config="{&quot;defaultSize&quot;: 280, &quot;minSize&quot;: 200, &quot;maxSize&quot;: 400}">
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
+                            <span>
+                                    Simple Robot
+                            </span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
+<div class="main-content" data-page-type="package" id="content" pageids="simbot-common-suspend-runner::love.forte.simbot.suspendrunner.reserve////PointingToDeclaration//1006727722">
+  <div class="breadcrumbs"><a href="../index.html">simbot-common-suspend-runner</a><span class="delimiter">/</span><span class="current">love.forte.simbot.suspendrunner.reserve</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Package-level</span></span> <span><span>declarations</span></span></h1>
+    <div class="platform-hinted UnderCoverText with-platform-tabs" data-platform-hinted="data-platform-hinted">
+      <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":simbot-commons:simbot-common-suspend-runner/commonMain" data-filterable-set=":simbot-commons:simbot-common-suspend-runner/commonMain" data-active="" data-toggle=":simbot-commons:simbot-common-suspend-runner/commonMain">common</button><button class="platform-bookmark" data-filterable-current=":simbot-commons:simbot-common-suspend-runner/jsMain" data-filterable-set=":simbot-commons:simbot-common-suspend-runner/jsMain" data-toggle=":simbot-commons:simbot-common-suspend-runner/jsMain">js</button><button class="platform-bookmark" data-filterable-current=":simbot-commons:simbot-common-suspend-runner/jvmMain" data-filterable-set=":simbot-commons:simbot-common-suspend-runner/jvmMain" data-toggle=":simbot-commons:simbot-common-suspend-runner/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-commons:simbot-common-suspend-runner/commonMain"><p class="paragraph">SuspendReserve 挂起保留值类型。</p></div><div class="content sourceset-dependent-content" data-togglable=":simbot-commons:simbot-common-suspend-runner/jsMain"><p class="paragraph">SuspendReserve 挂起保留值类型。</p></div><div class="content sourceset-dependent-content" data-togglable=":simbot-commons:simbot-common-suspend-runner/jvmMain"><p class="paragraph">SuspendReserve 挂起保留值类型。</p></div>    </div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="TYPE">Types</button><button class="section-tab" data-togglable="FUNCTION,EXTENSION_FUNCTION">Functions</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="TYPE">
+        <h2 class="tableheader">Types</h2>
+        <div class="table"><a data-name="725446638%2FClasslikes%2F-1496081170" anchor-label="SuspendReserve" id="725446638%2FClasslikes%2F-1496081170" data-filterable-set=":simbot-commons:simbot-common-suspend-runner/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-commons:simbot-common-suspend-runner/commonMain" data-filterable-set=":simbot-commons:simbot-common-suspend-runner/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-suspend-reserve/index.html"><span>Suspend</span><wbr><span><span>Reserve</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="725446638%2FClasslikes%2F-1496081170"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-commons:simbot-common-suspend-runner/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-suspend-reserve/index.html">SuspendReserve</a><span class="token operator">&lt;</span><span class="token keyword">out </span><a href="-suspend-reserve/index.html">T</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">一个用于表示“预备”挂起函数的类型， 用于提供一层非挂起的“中转”转化器。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="tableheader">Functions</h2>
+        <div class="table"><a data-name="-1605778323%2FFunctions%2F1488837192" anchor-label="async" id="-1605778323%2FFunctions%2F1488837192" data-filterable-set=":simbot-commons:simbot-common-suspend-runner/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-commons:simbot-common-suspend-runner/jvmMain" data-filterable-set=":simbot-commons:simbot-common-suspend-runner/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="async.html"><span><span>async</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1605778323%2FFunctions%2F1488837192"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":simbot-commons:simbot-common-suspend-runner/jvmMain" data-filterable-set=":simbot-commons:simbot-common-suspend-runner/jvmMain" data-active="" data-toggle=":simbot-commons:simbot-common-suspend-runner/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-commons:simbot-common-suspend-runner/jvmMain"><div class="symbol monospace"><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="async.html">T</a><span class="token operator">&gt; </span><a href="async.html"><span class="token function">async</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-suspend-reserve/-transformer/index.html">SuspendReserve.Transformer</a><span class="token operator">&lt;</span><a href="async.html">T</a><span class="token punctuation">, </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/CompletableFuture.html">CompletableFuture</a><span class="token operator">&lt;</span><a href="async.html">T</a><span class="token operator">&gt;</span><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">得到一个将结果转化为 <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/CompletableFuture.html">CompletableFuture</a> 的异步执行转化器。</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1343502468%2FFunctions%2F1488837192" anchor-label="block" id="-1343502468%2FFunctions%2F1488837192" data-filterable-set=":simbot-commons:simbot-common-suspend-runner/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-commons:simbot-common-suspend-runner/jvmMain" data-filterable-set=":simbot-commons:simbot-common-suspend-runner/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="block.html"><span><span>block</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1343502468%2FFunctions%2F1488837192"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":simbot-commons:simbot-common-suspend-runner/jvmMain" data-filterable-set=":simbot-commons:simbot-common-suspend-runner/jvmMain" data-active="" data-toggle=":simbot-commons:simbot-common-suspend-runner/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-commons:simbot-common-suspend-runner/jvmMain"><div class="symbol monospace"><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="block.html">T</a><span class="token operator">&gt; </span><a href="block.html"><span class="token function">block</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-suspend-reserve/-transformer/index.html">SuspendReserve.Transformer</a><span class="token operator">&lt;</span><a href="block.html">T</a><span class="token punctuation">, </span><a href="block.html">T</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">得到一个阻塞直到结果完成的阻塞转化器。 此转化器不会使用任何作用域或上下文，<a href="-suspend-reserve/-transformer/invoke.html">SuspendReserve.Transformer.invoke</a> 中的相关参数会被忽略。</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1221585518%2FFunctions%2F-1496081170" anchor-label="deferred" id="-1221585518%2FFunctions%2F-1496081170" data-filterable-set=":simbot-commons:simbot-common-suspend-runner/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-commons:simbot-common-suspend-runner/commonMain" data-filterable-set=":simbot-commons:simbot-common-suspend-runner/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="deferred.html"><span><span>deferred</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1221585518%2FFunctions%2F-1496081170"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-commons:simbot-common-suspend-runner/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="deferred.html">T</a><span class="token operator">&gt; </span><a href="deferred.html"><span class="token function">deferred</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-suspend-reserve/-transformer/index.html">SuspendReserve.Transformer</a><span class="token operator">&lt;</span><a href="deferred.html">T</a><span class="token punctuation">, </span><a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-deferred/index.html">Deferred</a><span class="token operator">&lt;</span><a href="deferred.html">T</a><span class="token operator">&gt;</span><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">得到一个将结果转化为 <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-deferred/index.html">Deferred</a> 的转化器。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1487545544%2FFunctions%2F1488837192" anchor-label="flux" id="1487545544%2FFunctions%2F1488837192" data-filterable-set=":simbot-commons:simbot-common-suspend-runner/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-commons:simbot-common-suspend-runner/jvmMain" data-filterable-set=":simbot-commons:simbot-common-suspend-runner/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="flux.html"><span><span>flux</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1487545544%2FFunctions%2F1488837192"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":simbot-commons:simbot-common-suspend-runner/jvmMain" data-filterable-set=":simbot-commons:simbot-common-suspend-runner/jvmMain" data-active="" data-toggle=":simbot-commons:simbot-common-suspend-runner/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-commons:simbot-common-suspend-runner/jvmMain"><div class="symbol monospace"><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="flux.html">T</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="flux.html"><span class="token function">flux</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-suspend-reserve/-transformer/index.html">SuspendReserve.Transformer</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.flow/-flow/index.html">Flow</a><span class="token operator">&lt;</span><a href="flux.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">, </span><span data-unresolved-link="reactor.core.publisher/Flux///PointingToDeclaration/">Flux</span><span class="token operator">&lt;</span><a href="flux.html">T</a><span class="token operator">&gt;</span><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">得到一个将 <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.flow/-flow/index.html">Flow</a> 的结果转化为 <span data-unresolved-link="reactor.core.publisher/Flux///PointingToDeclaration/">Flux</span> 的响应式转化器。 需要你的依赖环境中存在 <a href="https://github.com/Kotlin/kotlinx.coroutines/tree/master/reactive"><code class="lang-kotlin">kotlinx-coroutines-reactor</code></a> 依赖。</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="68090803%2FFunctions%2F1488837192" anchor-label="list" id="68090803%2FFunctions%2F1488837192" data-filterable-set=":simbot-commons:simbot-common-suspend-runner/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-commons:simbot-common-suspend-runner/jvmMain" data-filterable-set=":simbot-commons:simbot-common-suspend-runner/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="list.html"><span><span>list</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="68090803%2FFunctions%2F1488837192"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":simbot-commons:simbot-common-suspend-runner/jvmMain" data-filterable-set=":simbot-commons:simbot-common-suspend-runner/jvmMain" data-active="" data-toggle=":simbot-commons:simbot-common-suspend-runner/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-commons:simbot-common-suspend-runner/jvmMain"><div class="symbol monospace"><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="list.html">T</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="list.html"><span class="token function">list</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-suspend-reserve/-transformer/index.html">SuspendReserve.Transformer</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.flow/-flow/index.html">Flow</a><span class="token operator">&lt;</span><a href="list.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">, </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="list.html">T</a><span class="token operator">&gt;</span><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">得到一个将 <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.flow/-flow/index.html">Flow</a><t> 的结果转化为 <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a>。</t></p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1435428594%2FFunctions%2F1488837192" anchor-label="mono" id="-1435428594%2FFunctions%2F1488837192" data-filterable-set=":simbot-commons:simbot-common-suspend-runner/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-commons:simbot-common-suspend-runner/jvmMain" data-filterable-set=":simbot-commons:simbot-common-suspend-runner/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="mono.html"><span><span>mono</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1435428594%2FFunctions%2F1488837192"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":simbot-commons:simbot-common-suspend-runner/jvmMain" data-filterable-set=":simbot-commons:simbot-common-suspend-runner/jvmMain" data-active="" data-toggle=":simbot-commons:simbot-common-suspend-runner/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-commons:simbot-common-suspend-runner/jvmMain"><div class="symbol monospace"><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="mono.html">T</a><span class="token operator">&gt; </span><a href="mono.html"><span class="token function">mono</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-suspend-reserve/-transformer/index.html">SuspendReserve.Transformer</a><span class="token operator">&lt;</span><a href="mono.html">T</a><span class="token punctuation">, </span><span data-unresolved-link="reactor.core.publisher/Mono///PointingToDeclaration/">Mono</span><span class="token operator">&lt;</span><a href="mono.html">T</a><span class="token operator">&gt;</span><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">得到一个将结果转化为 <span data-unresolved-link="reactor.core.publisher/Mono///PointingToDeclaration/">Mono</span> 的响应式转化器。 需要你的依赖环境中存在 <a href="https://github.com/Kotlin/kotlinx.coroutines/tree/master/reactive"><code class="lang-kotlin">kotlinx-coroutines-reactor</code></a> 依赖。</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1590742098%2FFunctions%2F-1481254512" anchor-label="promise" id="-1590742098%2FFunctions%2F-1481254512" data-filterable-set=":simbot-commons:simbot-common-suspend-runner/jsMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-commons:simbot-common-suspend-runner/jsMain" data-filterable-set=":simbot-commons:simbot-common-suspend-runner/jsMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="promise.html"><span><span>promise</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1590742098%2FFunctions%2F-1481254512"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":simbot-commons:simbot-common-suspend-runner/jsMain" data-filterable-set=":simbot-commons:simbot-common-suspend-runner/jsMain" data-active="" data-toggle=":simbot-commons:simbot-common-suspend-runner/jsMain">js</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-commons:simbot-common-suspend-runner/jsMain"><div class="symbol monospace"><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="promise.html">T</a><span class="token operator">&gt; </span><a href="promise.html"><span class="token function">promise</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../../simbot-commons/simbot-common-suspend-runner/love.forte.simbot.suspendrunner.reserve/-suspend-reserve/-transformer/index.html">SuspendReserve.Transformer</a><span class="token operator">&lt;</span><a href="promise.html">T</a><span class="token punctuation">, </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.js/-promise/index.html">Promise</a><span class="token operator">&lt;</span><a href="promise.html">T</a><span class="token operator">&gt;</span><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">得到一个将结果转化为 <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.js/-promise/index.html">Promise</a> 的异步执行转化器。</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1838711051%2FFunctions%2F1488837192" anchor-label="rx2Maybe" id="-1838711051%2FFunctions%2F1488837192" data-filterable-set=":simbot-commons:simbot-common-suspend-runner/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-commons:simbot-common-suspend-runner/jvmMain" data-filterable-set=":simbot-commons:simbot-common-suspend-runner/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="rx2-maybe.html"><span><span>rx2Maybe</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1838711051%2FFunctions%2F1488837192"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":simbot-commons:simbot-common-suspend-runner/jvmMain" data-filterable-set=":simbot-commons:simbot-common-suspend-runner/jvmMain" data-active="" data-toggle=":simbot-commons:simbot-common-suspend-runner/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-commons:simbot-common-suspend-runner/jvmMain"><div class="symbol monospace"><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="rx2-maybe.html">T</a><span class="token operator">&gt; </span><a href="rx2-maybe.html"><span class="token function">rx2Maybe</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-suspend-reserve/-transformer/index.html">SuspendReserve.Transformer</a><span class="token operator">&lt;</span><a href="rx2-maybe.html">T</a><span class="token punctuation">, </span><span data-unresolved-link="io.reactivex/Maybe///PointingToDeclaration/">Maybe</span><span class="token operator">&lt;</span><a href="rx2-maybe.html">T</a><span class="token operator">&gt;</span><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">得到一个将结果转化为 <span data-unresolved-link="io.reactivex/Maybe///PointingToDeclaration/">Rx2Maybe</span> 的响应式转化器。 需要你的依赖环境中存在 <a href="https://github.com/Kotlin/kotlinx.coroutines/tree/master/reactive"><code class="lang-kotlin">kotlinx-coroutines-rx2</code></a> 依赖。</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1487911114%2FFunctions%2F1488837192" anchor-label="rx3Maybe" id="-1487911114%2FFunctions%2F1488837192" data-filterable-set=":simbot-commons:simbot-common-suspend-runner/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-commons:simbot-common-suspend-runner/jvmMain" data-filterable-set=":simbot-commons:simbot-common-suspend-runner/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="rx3-maybe.html"><span><span>rx3Maybe</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1487911114%2FFunctions%2F1488837192"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":simbot-commons:simbot-common-suspend-runner/jvmMain" data-filterable-set=":simbot-commons:simbot-common-suspend-runner/jvmMain" data-active="" data-toggle=":simbot-commons:simbot-common-suspend-runner/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-commons:simbot-common-suspend-runner/jvmMain"><div class="symbol monospace"><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="rx3-maybe.html">T</a><span class="token operator">&gt; </span><a href="rx3-maybe.html"><span class="token function">rx3Maybe</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-suspend-reserve/-transformer/index.html">SuspendReserve.Transformer</a><span class="token operator">&lt;</span><a href="rx3-maybe.html">T</a><span class="token punctuation">, </span><span data-unresolved-link="io.reactivex.rxjava3.core/Maybe///PointingToDeclaration/">Maybe</span><span class="token operator">&lt;</span><a href="rx3-maybe.html">T</a><span class="token operator"> &amp; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt;</span><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">得到一个将结果转化为 <span data-unresolved-link="io.reactivex.rxjava3.core/Maybe///PointingToDeclaration/">Rx3Maybe</span> 的响应式转化器。 需要你的依赖环境中存在 <a href="https://github.com/Kotlin/kotlinx.coroutines/tree/master/reactive"><code class="lang-kotlin">kotlinx-coroutines-rx3</code></a> 依赖。</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="206867226%2FFunctions%2F-1496081170" anchor-label="suspendReserve" id="206867226%2FFunctions%2F-1496081170" data-filterable-set=":simbot-commons:simbot-common-suspend-runner/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-commons:simbot-common-suspend-runner/commonMain" data-filterable-set=":simbot-commons:simbot-common-suspend-runner/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="suspend-reserve.html"><span>suspend</span><wbr><span><span>Reserve</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="206867226%2FFunctions%2F-1496081170"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-commons:simbot-common-suspend-runner/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../../simbot-commons/simbot-common-annotations/love.forte.simbot.annotations/-internal-simbot-a-p-i/index.html"><span class="token annotation builtin">InternalSimbotAPI</span></a></div></div><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="suspend-reserve.html">T</a><span class="token operator">&gt; </span><a href="suspend-reserve.html"><span class="token function">suspendReserve</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">scope<span class="token operator">: </span><a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-coroutine-scope/index.html">CoroutineScope</a><span class="token punctuation">, </span></span><span class="parameter ">context<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.coroutines/-coroutine-context/index.html">CoroutineContext</a><span class="token punctuation">, </span></span><span class="parameter ">block<span class="token operator">: </span><span class="token keyword">suspend </span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="suspend-reserve.html">T</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-suspend-reserve/index.html">SuspendReserve</a><span class="token operator">&lt;</span><a href="suspend-reserve.html">T</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">得到 <a href="-suspend-reserve/index.html">SuspendReserve</a> 实例。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="EXTENSION_FUNCTION">
+        <h2 class="tableheader">Inherited functions</h2>
+        <div class="table"><a data-name="1204753344%2FFunctions%2F-1481254512" anchor-label="promise" id="1204753344%2FFunctions%2F-1481254512" data-filterable-set=":simbot-commons:simbot-common-suspend-runner/jsMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-commons:simbot-common-suspend-runner/jsMain" data-filterable-set=":simbot-commons:simbot-common-suspend-runner/jsMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="promise.html"><span><span>promise</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1204753344%2FFunctions%2F-1481254512"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":simbot-commons:simbot-common-suspend-runner/jsMain" data-filterable-set=":simbot-commons:simbot-common-suspend-runner/jsMain" data-active="" data-toggle=":simbot-commons:simbot-common-suspend-runner/jsMain">js</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-commons:simbot-common-suspend-runner/jsMain"><div class="symbol monospace"><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="promise.html">T</a><span class="token operator">&gt; </span><a href="-suspend-reserve/index.html#725446638%2FMain%2F-1481254512">SuspendReserve</a><span class="token operator">&lt;</span><a href="promise.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="promise.html"><span class="token function">promise</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.js/-promise/index.html">Promise</a><span class="token operator">&lt;</span><a href="promise.html">T</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">得到一个将结果转化为 <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.js/-promise/index.html">Promise</a> 的异步执行转化器。</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>© 2024-2026 <a href="https://github.com/simple-robot">Simple Robot</a>. All rights reserved.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
