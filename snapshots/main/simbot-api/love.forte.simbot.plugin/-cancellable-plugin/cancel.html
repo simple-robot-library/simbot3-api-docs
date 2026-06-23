@@ -2,7 +2,7 @@
 <html class="no-js" lang="en">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
-    <title>BotAlreadyClosedException</title>
+    <title>cancel</title>
 <link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">    <!-- 百度统计 -->
     <!--suppress ES6ConvertVarToLetConst -->
     <script>
@@ -62,7 +62,7 @@
             </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
         </button>
         <div class="navigation-controls--break ui-kit_mobile-only"></div>
-        <div class="library-version" id="library-version">5.0.0-Preview2-SNAPSHOT
+        <div class="library-version" id="library-version">5.0.0-Preview3-SNAPSHOT
         </div>
         <div class="navigation-controls">
         <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
@@ -114,12 +114,12 @@
         </nav>
         <div id="resizer" class="resizer" data-item-type="BAR"></div>
         <div id="main" data-item-type="SECTION" role="main">
-<div class="main-content" data-page-type="member" id="content" pageids="simbot-api::love.forte.simbot.bot/BotAlreadyClosedException/BotAlreadyClosedException/#/PointingToDeclaration//-1602927896">
-  <div class="breadcrumbs"><a href="../../index.html">simbot-api</a><span class="delimiter">/</span><a href="../index.html">love.forte.simbot.bot</a><span class="delimiter">/</span><a href="index.html">BotAlreadyClosedException</a><span class="delimiter">/</span><span class="current">BotAlreadyClosedException</span></div>
+<div class="main-content" data-page-type="member" id="content" pageids="simbot-api::love.forte.simbot.plugin/CancellablePlugin/cancel/#kotlin.Throwable?/PointingToDeclaration//-1602927896">
+  <div class="breadcrumbs"><a href="../../index.html">simbot-api</a><span class="delimiter">/</span><a href="../index.html">love.forte.simbot.plugin</a><span class="delimiter">/</span><a href="index.html">CancellablePlugin</a><span class="delimiter">/</span><span class="current">cancel</span></div>
   <div class="cover ">
-    <h1 class="cover"><span>Bot</span><wbr><span>Already</span><wbr><span>Closed</span><wbr><span><span>Exception</span></span></h1>
+    <h1 class="cover"><span><span>cancel</span></span></h1>
   </div>
-  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api/commonMain"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="source-link-wrapper"><span class="source-link" data-element-type="source-link">(<a href="https://github.com/simple-robot/simpler-robot/tree/dev/main/simbot-api/src/commonMain/kotlin/love/forte/simbot/bot/Bot.kt#L428">source</a>)</span></span></div><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">cause<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-throwable/index.html">Throwable</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span><span class="source-link-wrapper"><span class="source-link" data-element-type="source-link">(<a href="https://github.com/simple-robot/simpler-robot/tree/dev/main/simbot-api/src/commonMain/kotlin/love/forte/simbot/bot/Bot.kt#L429">source</a>)</span></span></div><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">message<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span><span class="source-link-wrapper"><span class="source-link" data-element-type="source-link">(<a href="https://github.com/simple-robot/simpler-robot/tree/dev/main/simbot-api/src/commonMain/kotlin/love/forte/simbot/bot/Bot.kt#L430">source</a>)</span></span></div><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">message<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">cause<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-throwable/index.html">Throwable</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span><span class="source-link-wrapper"><span class="source-link" data-element-type="source-link">(<a href="https://github.com/simple-robot/simpler-robot/tree/dev/main/simbot-api/src/commonMain/kotlin/love/forte/simbot/bot/Bot.kt#L431">source</a>)</span></span></div></div></div>
+  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-api/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="cancel.html"><span class="token function">cancel</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">cause<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-throwable/index.html">Throwable</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span><span class="source-link-wrapper"><span class="source-link" data-element-type="source-link">(<a href="https://github.com/simple-robot/simpler-robot/tree/dev/main/simbot-api/src/commonMain/kotlin/love/forte/simbot/plugin/Plugin.kt#L83">source</a>)</span></span></div><p class="paragraph">取消此插件。</p><p class="paragraph">当插件被取消时，其应当立刻尝试等待并停止其所有工作、取消其内部的所有可取消的子工作， 并且释放所有资源。过程中，应当立刻生效并拒绝所有新的行为申请。</p><p class="paragraph">当调用 <a href="cancel.html">cancel</a> 后，<a href="is-active.html">isActive</a> 的值立即变为 <code class="lang-kotlin">false</code>，并进入 <i>取消流程</i> 。 当取消流程完全结束后，<a href="is-canceled.html">isCanceled</a> 的值将会变为 <code class="lang-kotlin">true</code>。而在此期间，为 <i>正在关闭</i> 状态。</p><p class="paragraph">cancel 应当是原子的，且可以多次调用。当调用一次后，后续的其他调用将无效。</p><p class="paragraph">cancel 的实现应当尽可能地快速且避免阻塞。</p></div></div>
 </div>
     <div class="footer">
         <div class="footer--container">
