@@ -62,7 +62,7 @@
             </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
         </button>
         <div class="navigation-controls--break ui-kit_mobile-only"></div>
-        <div class="library-version" id="library-version">5.0.0-Preview1
+        <div class="library-version" id="library-version">5.0.0-Preview3
         </div>
         <div class="navigation-controls">
         <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
@@ -118,7 +118,7 @@
   <div class="breadcrumbs"><a href="../../index.html">simbot-component-onebot-v11-core</a><span class="delimiter">/</span><a href="../index.html">love.forte.simbot.component.onebot.v11.core.bot</a><span class="delimiter">/</span><span class="current">OneBotBot</span></div>
   <div class="cover ">
     <h1 class="cover"><span>One</span><wbr><span>Bot</span><wbr><span><span>Bot</span></span></h1>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../../../../simbot-component-onebot/simbot-component-onebot-common/love.forte.simbot.component.onebot.common.annotations/-one-bot-internal-implementations-only/index.html"><span class="token annotation builtin">OneBotInternalImplementationsOnly</span></a></div></div><span class="token keyword">interface </span><a href="index.html">OneBotBot</a> : <a href="../../../../../simbot-api/love.forte.simbot.bot/-bot/index.html">Bot</a>, <a href="../../love.forte.simbot.component.onebot.v11.core.api/-one-bot-api-executable/index.html">OneBotApiExecutable</a><span class="source-link-wrapper"><span class="source-link" data-element-type="source-link">(<a href="https://github.com/simple-robot/simpler-robot/tree/dev/main/simbot-component-onebot/simbot-component-onebot-v11/simbot-component-onebot-v11-core/src/commonMain/kotlin/love/forte/simbot/component/onebot/v11/core/bot/OneBotBot.kt#L77">source</a>)</span></span></div><p class="paragraph">一个 OneBot 协议的 <a href="../../../../../simbot-api/love.forte.simbot.bot/-bot/index.html">Bot</a>。</p><h3 class="">Bot 的终止</h3><p class="paragraph">Bot的运行状态 (<a href="../-one-bot-bot-manager/index.html#-885338811%2FProperties%2F-1060603697">isActive</a>) 可能会因为一些原因被更改：</p><ul><li><p class="paragraph">手动终止 (使用 <a href="index.html#-1196263663%2FFunctions%2F-1060603697">cancel</a>)。</p></li><li><p class="paragraph">父级Job或被关联的Job被终止 (可能来自 BotManager、Application等)。</p></li><li><p class="paragraph">会话连接失败且重试次数到达上限。比如 ws 的连接会话意外被中断， 且在重新连接的过程中始终失败并达到了重试次数上限，此时会话中的任务会被视为因异常结束， 并连带 <a href="index.html">OneBotBot</a> 的任务一同终结。</p></li></ul><h3 class="">日志</h3><p class="paragraph"><a href="index.html">OneBotBot</a> 的内部会输出三种日志：</p><ul><li><p class="paragraph"><code class="lang-kotlin">love.forte.simbot.component.onebot.v11.core.bot.OneBotBot.$uniqueId</code> bot的基本日志，例如连接信息、接收到的原始事件等debug日志。</p></li></ul><span class="kdoc-tag"><h4 class="">Author</h4><p class="paragraph">ForteScarlet</p></span></div></div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../../../../simbot-component-onebot/simbot-component-onebot-common/love.forte.simbot.component.onebot.common.annotations/-one-bot-internal-implementations-only/index.html"><span class="token annotation builtin">OneBotInternalImplementationsOnly</span></a></div><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-subclass-opt-in-required/index.html"><span class="token annotation builtin">SubclassOptInRequired</span></a><span class="token punctuation">(</span><span>markerClass<span class="token operator"> = </span><span class="token punctuation">[</span><span><a href="../../../../../simbot-component-onebot/simbot-component-onebot-common/love.forte.simbot.component.onebot.common.annotations/-internal-for-inheritance-one-bot-bot-api/index.html">InternalForInheritanceOneBotBotApi::class</a></span><wbr><span class="token punctuation">]</span></span><wbr><span class="token punctuation">)</span></div></div><span class="token keyword">interface </span><a href="index.html">OneBotBot</a> : <a href="../../../../../simbot-api/love.forte.simbot.bot/-bot/index.html">Bot</a>, <a href="../../../../../simbot-api/love.forte.simbot.bot/-initializable-bot/index.html">InitializableBot</a>, <a href="../../love.forte.simbot.component.onebot.v11.core.api/-one-bot-api-executable/index.html">OneBotApiExecutable</a><span class="source-link-wrapper"><span class="source-link" data-element-type="source-link">(<a href="https://github.com/simple-robot/simpler-robot/tree/dev/main/simbot-component-onebot/simbot-component-onebot-v11/simbot-component-onebot-v11-core/src/commonMain/kotlin/love/forte/simbot/component/onebot/v11/core/bot/OneBotBot.kt#L77">source</a>)</span></span></div><p class="paragraph">一个 OneBot 协议的 <a href="../../../../../simbot-api/love.forte.simbot.bot/-bot/index.html">Bot</a>。</p><h3 class="">Bot 的终止</h3><p class="paragraph">Bot的运行状态 (<a href="../-one-bot-bot-manager/index.html#-885338811%2FProperties%2F-1060603697">isActive</a>) 可能会因为一些原因被更改：</p><ul><li><p class="paragraph">手动终止 (使用 <a href="index.html#-1196263663%2FFunctions%2F-1060603697">cancel</a>)。</p></li><li><p class="paragraph">父级Job或被关联的Job被终止 (可能来自 BotManager、Application等)。</p></li><li><p class="paragraph">会话连接失败且重试次数到达上限。比如 ws 的连接会话意外被中断， 且在重新连接的过程中始终失败并达到了重试次数上限，此时会话中的任务会被视为因异常结束， 并连带 <a href="index.html">OneBotBot</a> 的任务一同终结。</p></li></ul><h3 class="">日志</h3><p class="paragraph"><a href="index.html">OneBotBot</a> 的内部会输出三种日志：</p><ul><li><p class="paragraph"><code class="lang-kotlin">love.forte.simbot.component.onebot.v11.core.bot.OneBotBot.$uniqueId</code> bot的基本日志，例如连接信息、接收到的原始事件等debug日志。</p></li></ul><span class="kdoc-tag"><h4 class="">Author</h4><p class="paragraph">ForteScarlet</p></span></div></div>
   </div>
   <div class="tabbedcontent">
     <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button><button class="section-tab" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION,EXTENSION_PROPERTY,EXTENSION_FUNCTION">Members &amp; Extensions</button></div>
@@ -180,7 +180,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">val </span><a href="configuration.html">configuration</a><span class="token operator">: </span><a href="../-one-bot-bot-configuration/index.html">OneBotBotConfiguration</a></div><div class="brief "><p class="paragraph">当前Bot的配置类。</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="configuration.html">configuration</a><span class="token operator">: </span><a href="../-one-bot-bot-configuration/index.html">OneBotBotConfiguration</a></div><div class="brief "><p class="paragraph">当前Bot的配置类。</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -414,6 +414,36 @@
               </div>
             </div>
           </div>
+<a data-name="405494100%2FProperties%2F-1060603697" anchor-label="isInitialized" id="405494100%2FProperties%2F-1060603697" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#405494100%2FProperties%2F-1060603697"><span>is</span><wbr><span><span>Initialized</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="405494100%2FProperties%2F-1060603697"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">val </span><a href="index.html#405494100%2FProperties%2F-1060603697">isInitialized</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="886691717%2FProperties%2F-1060603697" anchor-label="isInitializing" id="886691717%2FProperties%2F-1060603697" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#886691717%2FProperties%2F-1060603697"><span>is</span><wbr><span><span>Initializing</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="886691717%2FProperties%2F-1060603697"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">val </span><a href="index.html#886691717%2FProperties%2F-1060603697">isInitializing</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
 <a data-name="1984477956%2FProperties%2F-1060603697" anchor-label="isStarted" id="1984477956%2FProperties%2F-1060603697" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"></a>
           <div class="table-row table-row_content" data-filterable-current=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain">
             <div class="main-subrow keyValue ">
@@ -489,6 +519,21 @@
               <div>
                 <div class="title">
                   <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../../../../simbot-component-onebot/simbot-component-onebot-common/love.forte.simbot.component.onebot.common.annotations/-experimental-one-bot-a-p-i/index.html"><span class="token annotation builtin">ExperimentalOneBotAPI</span></a></div></div><span class="token keyword">abstract </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="get-message-content.html"><span class="token function">getMessageContent</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">messageId<span class="token operator">: </span><a href="../../../../../simbot-commons/simbot-common-core/love.forte.simbot.common.id/-i-d/index.html">ID</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../../../../simbot-component-onebot/simbot-component-onebot-v11/simbot-component-onebot-v11-message/love.forte.simbot.component.onebot.v11.message/-one-bot-message-content/index.html">OneBotMessageContent</a></div><div class="brief "><p class="paragraph">根据 <a href="get-message-content.html">messageId</a> 使用 <a href="../../love.forte.simbot.component.onebot.v11.core.api/-get-msg-api/index.html">GetMsgApi</a> 查询消息内容， 并得到对应的 <a href="../../../../../simbot-component-onebot/simbot-component-onebot-v11/simbot-component-onebot-v11-message/love.forte.simbot.component.onebot.v11.message/-one-bot-message-content/index.html">OneBotMessageContent</a>。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-814496301%2FFunctions%2F-1060603697" anchor-label="init" id="-814496301%2FFunctions%2F-1060603697" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain" data-filterable-set=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="init.html"><span><span>init</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-814496301%2FFunctions%2F-1060603697"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-onebot:simbot-component-onebot-v11:simbot-component-onebot-v11-core/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">suspend override </span><span class="token keyword">fun </span><a href="init.html"><span class="token function">init</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
                 </div>
               </div>
             </div>
