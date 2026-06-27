@@ -3,6 +3,10 @@ on:
   push:
     branches: 'kdoc-deploy/main-v5'
 
+concurrency:
+  group: "gh-pages-deploy-global"
+  cancel-in-progress: false
+
 jobs:
   deploy-main-v5-kdoc-pages:
     name: deploy-main-v5-kdoc-pages
