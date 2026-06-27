@@ -1,0 +1,31 @@
+name: Deploy KDoc Pages Template
+
+on:
+  workflow_call:
+    inputs:
+      destination_dir:
+        required: true
+        type: string
+        description: 'The destination directory for the KDoc pages in gh-pages branch'
+    secrets:
+      PUSH_TOKEN:
+        required: true
+
+concurrency:
+  group: deploy-to-gh-pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # https://github.com/marketplace/actions/github-pages-action
+      - name: Deploy to gh-pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          personal_token: ${{ secrets.PUSH_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: ${{ inputs.destination_dir }}
+          destination_dir: ${{ inputs.destination_dir }}
