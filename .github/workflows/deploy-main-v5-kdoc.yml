@@ -3,6 +3,11 @@ on:
   push:
     branches: 'kdoc-deploy/main-v5'
 
+# 添加 concurrency 配置
+concurrency:
+  group: deploy-to-gh-pages   # 发布目标为 gh-pages 分支的任务使用同一个 group name
+  cancel-in-progress: false   # 如果有新的运行，是否取消进行中的运行
+
 jobs:
   deploy-main-v5-kdoc-pages:
     name: deploy-main-v5-kdoc-pages
