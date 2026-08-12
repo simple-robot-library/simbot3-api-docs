@@ -2,7 +2,7 @@
 <html class="no-js">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
-    <title>Ticket</title>
+    <title>RetryConfig</title>
 <link href="../../../../images/logo-icon.svg" rel="icon" type="image/svg">    <!-- 百度统计 -->
     <!--suppress ES6ConvertVarToLetConst -->
     <script>
@@ -114,28 +114,28 @@
                 </div>
             </div>
             <div id="main">
-<div class="main-content" data-page-type="classlike" id="content" pageids="simbot-component-qq-guild-core::love.forte.simbot.component.qguild.bot.config/QGBotFileConfiguration.Ticket///PointingToDeclaration//-2139990268">
-  <div class="breadcrumbs"><a href="../../../index.html">simbot-component-qq-guild-core</a><span class="delimiter">/</span><a href="../../index.html">love.forte.simbot.component.qguild.bot.config</a><span class="delimiter">/</span><a href="../index.html">QGBotFileConfiguration</a><span class="delimiter">/</span><span class="current">Ticket</span></div>
+<div class="main-content" data-page-type="classlike" id="content" pageids="simbot-component-qq-guild-core::love.forte.simbot.component.qguild.bot.config/QGBotFileConfiguration.RetryConfig///PointingToDeclaration//-2139990268">
+  <div class="breadcrumbs"><a href="../../../index.html">simbot-component-qq-guild-core</a><span class="delimiter">/</span><a href="../../index.html">love.forte.simbot.component.qguild.bot.config</a><span class="delimiter">/</span><a href="../index.html">QGBotFileConfiguration</a><span class="delimiter">/</span><span class="current">RetryConfig</span></div>
   <div class="cover ">
-    <h1 class="cover"><span><span>Ticket</span></span></h1>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq-guild-core/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-core/kotlinx.serialization/-serializable/index.html"><span class="token annotation builtin">Serializable</span></a></div><div class="block"><span class="token annotation builtin">@</span><a href="../../-used-only-for-config-serialization/index.html"><span class="token annotation builtin">UsedOnlyForConfigSerialization</span></a></div></div><span class="token keyword">data </span><span class="token keyword">class </span><a href="index.html">Ticket</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>appId<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>secret<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>token<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="clearfix"><span class="floating-right">(<a href="https://github.com/simple-robot/simbot-component-qq-guild/tree/dev/main/simbot-component-qq-guild-core/src/commonMain/kotlin/love/forte/simbot/component/qguild/bot/config/QGBotFileConfiguration.kt#L84">source</a>)</span></span></div><p class="paragraph">bot票据信息。是与 <a href="../../../../simbot-component-qq-guild-stdlib/love.forte.simbot.qguild.stdlib/-bot/-ticket/index.html">Bot.Ticket</a> 相对应的映射类</p><h4 class="">See also</h4><div class="table"><div class="table-row" data-filterable-current=":simbot-component-qq-guild-core/commonMain" data-filterable-set=":simbot-component-qq-guild-core/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../../../../simbot-component-qq-guild-stdlib/love.forte.simbot.qguild.stdlib/-bot/-ticket/index.html"><span>Bot.</span><wbr><span>Ticket</span></a></div></span></div><div></div></div></div></div></div></div>
+    <h1 class="cover"><span>Retry</span><wbr><span><span>Config</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq-guild-core/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-core/kotlinx.serialization/-serializable/index.html"><span class="token annotation builtin">Serializable</span></a></div></div><span class="token keyword">data </span><span class="token keyword">class </span><a href="index.html">RetryConfig</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>maxRetries<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>exponentialDelay<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>retryOnServerErrors<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span></span></span><span class="token punctuation">)</span><span class="clearfix"><span class="floating-right">(<a href="https://github.com/simple-robot/simbot-component-qq-guild/tree/dev/main/simbot-component-qq-guild-core/src/commonMain/kotlin/love/forte/simbot/component/qguild/bot/config/QGBotFileConfiguration.kt#L331">source</a>)</span></span></div><p class="paragraph">如果配置了 <code class="lang-kotlin">retry</code>，则在转化为 <a href="../../../../simbot-component-qq-guild-stdlib/love.forte.simbot.qguild.stdlib/-bot-configuration/index.html">BotConfiguration</a> 的时候， 会通过 <a href="../../../../simbot-component-qq-guild-stdlib/love.forte.simbot.qguild.stdlib/-bot-configuration/api-client-additional-configuration.html">BotConfiguration.apiClientAdditionalConfiguration</a> 注册并配置 <a href="https://api.ktor.io/ktor-client-core/io.ktor.client.plugins/-http-request-retry/index.html">io.ktor.client.plugins.HttpRequestRetry</a> 插件。</p><p class="paragraph">如果需要更精细化的配置，则需要通过代码进行配置。</p><span class="kdoc-tag"><h4 class="">Since</h4><p class="paragraph">4.5.0</p></span></div></div>
   </div>
   <div class="tabbedcontent">
     <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
     <div class="tabs-section-body">
       <div data-togglable="CONSTRUCTOR">
         <h2 class="">Constructors</h2>
-        <div class="table"><a data-name="1484298996%2FConstructors%2F-2139990268" anchor-label="Ticket" id="1484298996%2FConstructors%2F-2139990268" data-filterable-set=":simbot-component-qq-guild-core/commonMain"></a>
+        <div class="table"><a data-name="1767429121%2FConstructors%2F-2139990268" anchor-label="RetryConfig" id="1767429121%2FConstructors%2F-2139990268" data-filterable-set=":simbot-component-qq-guild-core/commonMain"></a>
           <div class="table-row" data-togglable="CONSTRUCTOR" data-filterable-current=":simbot-component-qq-guild-core/commonMain" data-filterable-set=":simbot-component-qq-guild-core/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
-                  <div><a href="-ticket.html"><span><span>Ticket</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1484298996%2FConstructors%2F-2139990268"></span>
+                  <div><a href="-retry-config.html"><span>Retry</span><wbr><span><span>Config</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1767429121%2FConstructors%2F-2139990268"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq-guild-core/commonMain"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">appId<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">secret<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">token<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq-guild-core/commonMain"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">maxRetries<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">exponentialDelay<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span><span class="token punctuation">, </span></span><span class="parameter ">retryOnServerErrors<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span></span></span><span class="token punctuation">)</span></div></div></div>
                 </div>
               </div>
             </div>
@@ -144,47 +144,47 @@
       </div>
       <div data-togglable="PROPERTY">
         <h2 class="">Properties</h2>
-        <div class="table"><a data-name="-554425672%2FProperties%2F-2139990268" anchor-label="appId" id="-554425672%2FProperties%2F-2139990268" data-filterable-set=":simbot-component-qq-guild-core/commonMain"></a>
+        <div class="table"><a data-name="559968686%2FProperties%2F-2139990268" anchor-label="exponentialDelay" id="559968686%2FProperties%2F-2139990268" data-filterable-set=":simbot-component-qq-guild-core/commonMain"></a>
           <div class="table-row" data-filterable-current=":simbot-component-qq-guild-core/commonMain" data-filterable-set=":simbot-component-qq-guild-core/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
-                  <div><a href="app-id.html"><span>app</span><wbr><span><span>Id</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-554425672%2FProperties%2F-2139990268"></span>
+                  <div><a href="exponential-delay.html"><span>exponential</span><wbr><span><span>Delay</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="559968686%2FProperties%2F-2139990268"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq-guild-core/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="app-id.html">appId</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">用于识别一个机器人的 id</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq-guild-core/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="exponential-delay.html">exponentialDelay</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span></div><div class="brief "><p class="paragraph">是否启用指数延迟。如果启用，会使用 <a href="https://api.ktor.io/ktor-client-core/io.ktor.client.plugins/-http-request-retry/-configuration/exponential-delay.html">io.ktor.client.plugins.HttpRequestRetry.Configuration.exponentialDelay</a> 的默认值配置指数延迟。</p></div></div></div>
                 </div>
               </div>
             </div>
           </div>
-<a data-name="-2123102378%2FProperties%2F-2139990268" anchor-label="secret" id="-2123102378%2FProperties%2F-2139990268" data-filterable-set=":simbot-component-qq-guild-core/commonMain"></a>
+<a data-name="133750122%2FProperties%2F-2139990268" anchor-label="maxRetries" id="133750122%2FProperties%2F-2139990268" data-filterable-set=":simbot-component-qq-guild-core/commonMain"></a>
           <div class="table-row" data-filterable-current=":simbot-component-qq-guild-core/commonMain" data-filterable-set=":simbot-component-qq-guild-core/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
-                  <div><a href="secret.html"><span><span>secret</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2123102378%2FProperties%2F-2139990268"></span>
+                  <div><a href="max-retries.html"><span>max</span><wbr><span><span>Retries</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="133750122%2FProperties%2F-2139990268"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq-guild-core/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="secret.html">secret</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">用于在 oauth 场景进行请求签名的密钥</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq-guild-core/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="max-retries.html">maxRetries</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token operator"> = </span>null</div><div class="brief "><p class="paragraph">最大重试次数。如果为 <code class="lang-kotlin">null</code>，则不启用重试。</p></div></div></div>
                 </div>
               </div>
             </div>
           </div>
-<a data-name="1706748539%2FProperties%2F-2139990268" anchor-label="token" id="1706748539%2FProperties%2F-2139990268" data-filterable-set=":simbot-component-qq-guild-core/commonMain"></a>
+<a data-name="305148601%2FProperties%2F-2139990268" anchor-label="retryOnServerErrors" id="305148601%2FProperties%2F-2139990268" data-filterable-set=":simbot-component-qq-guild-core/commonMain"></a>
           <div class="table-row" data-filterable-current=":simbot-component-qq-guild-core/commonMain" data-filterable-set=":simbot-component-qq-guild-core/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
-                  <div><a href="token.html"><span><span>token</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1706748539%2FProperties%2F-2139990268"></span>
+                  <div><a href="retry-on-server-errors.html"><span>retry</span><wbr><span>On</span><wbr><span>Server</span><wbr><span><span>Errors</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="305148601%2FProperties%2F-2139990268"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq-guild-core/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="token.html">token</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">机器人token，用于以机器人身份调用 openapi，格式为 <code class="lang-kotlin">${app_id}.${random_str}</code></p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq-guild-core/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="retry-on-server-errors.html">retryOnServerErrors</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span></div><div class="brief "><p class="paragraph">是否启用服务器错误重试。如果启用，会使用 <a href="https://api.ktor.io/ktor-client-core/io.ktor.client.plugins/-http-request-retry/-configuration/retry-on-server-errors.html">io.ktor.client.plugins.HttpRequestRetry.Configuration.retryOnServerErrors</a> 的默认值配置服务器错误重试。</p></div></div></div>
                 </div>
               </div>
             </div>
