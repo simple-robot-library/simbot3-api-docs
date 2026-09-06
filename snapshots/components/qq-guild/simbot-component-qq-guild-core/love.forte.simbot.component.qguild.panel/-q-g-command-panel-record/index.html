@@ -1,0 +1,425 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>QGCommandPanelRecord</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">    <!-- 百度统计 -->
+    <!--suppress ES6ConvertVarToLetConst -->
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            const hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?045f67a122223db9432c7856fc942fad";
+            const s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1JWL2DDTB4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-1JWL2DDTB4');
+    </script>
+    <script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<link href="../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../ui-kit/ui-kit.min.js" defer></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script>
+<link href="../../../images/logo-icon.svg">
+<link href="../../../images/logo-icon-light.svg">
+<link href="../../../styles/kdoc-style.css" rel="Stylesheet"></head>
+<body>
+    <div class="root">
+    <nav class="navigation theme-dark" id="navigation-wrapper">
+<a class="library-name--link" href="../../../index.html">
+                    Simple Robot 组件 | QQ
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">4.7.1-SNAPSHOT
+        </div>
+        <div class="navigation-controls">
+        <div class="filter-section filter-section_loading" id="filter-section">
+                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":simbot-component-qq-guild-core/commonMain">common</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox">
+                    <div class="dropdown--header"><span>Platform filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close platform filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option common-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":simbot-component-qq-guild-core/commonMain" data-filter=":simbot-component-qq-guild-core/commonMain">
+                                <span class="checkbox--icon"></span>
+                                common
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </div>
+                <a class="navigation-controls--btn navigation-controls--btn_homepage" id="homepage-link" href="https://github.com/simple-robot/simbot-component-qq-guild"></a>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                    <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox">
+                        <div class="dropdown--header">
+                            <span>
+                                    Simple Robot 组件 | QQ
+                            </span>
+                            <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                                <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                            </button>
+                        </div>
+                        <div class="sidebar--inner" id="sideMenu"></div>
+                    </ul>
+                    <div class="dropdown--overlay"></div>
+                </div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="simbot-component-qq-guild-core::love.forte.simbot.component.qguild.panel/QGCommandPanelRecord///PointingToDeclaration//-2139990268">
+  <div class="breadcrumbs"><a href="../../index.html">simbot-component-qq-guild-core</a><span class="delimiter">/</span><a href="../index.html">love.forte.simbot.component.qguild.panel</a><span class="delimiter">/</span><span class="current">QGCommandPanelRecord</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>QGCommand</span><wbr><span>Panel</span><wbr><span><span>Record</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq-guild-core/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="index.html">QGCommandPanelRecord</a> : <a href="../../love.forte.simbot.component.qguild/-q-g-objective-container/index.html">QGObjectiveContainer</a><span class="token operator">&lt;</span><a href="../../../simbot-component-qq-guild-api/love.forte.simbot.qguild.model.panel/-command-panel-record/index.html">CommandPanelRecord</a><span class="token operator">&gt; </span>, <a href="../-q-g-command-panel-handle/index.html">QGCommandPanelHandle</a><span class="clearfix"><span class="floating-right">(<a href="https://github.com/simple-robot/simbot-component-qq-guild/tree/dev/main/simbot-component-qq-guild-core/src/commonMain/kotlin/love/forte/simbot/component/qguild/panel/QGCommandPanelManager.kt#L365">source</a>)</span></span></div><p class="paragraph">指令面板记录信息。</p><p class="paragraph">它的内容信息是获取时基于 <a href="../../../simbot-component-qq-guild-api/love.forte.simbot.qguild.model.panel/-command-panel-record/index.html">CommandPanelRecord</a> 的瞬时<strong>快照</strong>。</p><span class="kdoc-tag"><h4 class="">Since</h4><p class="paragraph">4.7.0</p></span></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button><button class="section-tab" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION,EXTENSION_PROPERTY,EXTENSION_FUNCTION">Members &amp; Extensions</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="-390142864%2FProperties%2F-2139990268" anchor-label="panel" id="-390142864%2FProperties%2F-2139990268" data-filterable-set=":simbot-component-qq-guild-core/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-qq-guild-core/commonMain" data-filterable-set=":simbot-component-qq-guild-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="panel.html"><span><span>panel</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-390142864%2FProperties%2F-2139990268"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq-guild-core/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">val </span><a href="panel.html">panel</a><span class="token operator">: </span><a href="../../../simbot-component-qq-guild-api/love.forte.simbot.qguild.model.panel/-command-panel/index.html">CommandPanel</a></div><div class="brief "><p class="paragraph">面板配置。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1749013984%2FProperties%2F-2139990268" anchor-label="scope" id="-1749013984%2FProperties%2F-2139990268" data-filterable-set=":simbot-component-qq-guild-core/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-qq-guild-core/commonMain" data-filterable-set=":simbot-component-qq-guild-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="scope.html"><span><span>scope</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1749013984%2FProperties%2F-2139990268"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq-guild-core/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">val </span><a href="scope.html">scope</a><span class="token operator">: </span><a href="../-q-g-command-panel-scope/index.html">QGCommandPanelScope</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">面板生效场景的枚举对象。如果出现了尚未支持或未知的 scope 则会得到 <code class="lang-kotlin">null</code>。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1434677001%2FProperties%2F-2139990268" anchor-label="scopeValue" id="1434677001%2FProperties%2F-2139990268" data-filterable-set=":simbot-component-qq-guild-core/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-qq-guild-core/commonMain" data-filterable-set=":simbot-component-qq-guild-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="scope-value.html"><span>scope</span><wbr><span><span>Value</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1434677001%2FProperties%2F-2139990268"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq-guild-core/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">val </span><a href="scope-value.html">scopeValue</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">面板生效场景的原始值。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="153561563%2FProperties%2F-2139990268" anchor-label="targetType" id="153561563%2FProperties%2F-2139990268" data-filterable-set=":simbot-component-qq-guild-core/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-qq-guild-core/commonMain" data-filterable-set=":simbot-component-qq-guild-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="target-type.html"><span>target</span><wbr><span><span>Type</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="153561563%2FProperties%2F-2139990268"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq-guild-core/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">val </span><a href="target-type.html">targetType</a><span class="token operator">: </span><a href="../-q-g-command-panel-target-type/index.html">QGCommandPanelTargetType</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">面板生效范围的枚举对象。如果出现了尚未支持或未知的 targetType 则会得到 <code class="lang-kotlin">null</code>。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="918424622%2FProperties%2F-2139990268" anchor-label="targetTypeValue" id="918424622%2FProperties%2F-2139990268" data-filterable-set=":simbot-component-qq-guild-core/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-qq-guild-core/commonMain" data-filterable-set=":simbot-component-qq-guild-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="target-type-value.html"><span>target</span><wbr><span>Type</span><wbr><span><span>Value</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="918424622%2FProperties%2F-2139990268"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq-guild-core/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">val </span><a href="target-type-value.html">targetTypeValue</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">面板生效范围的原始值。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1759262300%2FProperties%2F-2139990268" anchor-label="version" id="1759262300%2FProperties%2F-2139990268" data-filterable-set=":simbot-component-qq-guild-core/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-qq-guild-core/commonMain" data-filterable-set=":simbot-component-qq-guild-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="version.html"><span><span>version</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1759262300%2FProperties%2F-2139990268"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq-guild-core/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">val </span><a href="version.html">version</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">面板版本。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="">Inherited properties</h2>
+        <div class="table"><a data-name="-107271806%2FProperties%2F-2139990268" anchor-label="id" id="-107271806%2FProperties%2F-2139990268" data-filterable-set=":simbot-component-qq-guild-core/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-qq-guild-core/commonMain" data-filterable-set=":simbot-component-qq-guild-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-q-g-command-panel-handle/id.html"><span><span>id</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-107271806%2FProperties%2F-2139990268"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq-guild-core/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">val </span><a href="../-q-g-command-panel-handle/id.html">id</a><span class="token operator">: </span><span data-unresolved-link="love.forte.simbot.common.id/ID///PointingToDeclaration/">ID</span></div><div class="brief "><p class="paragraph">指令面板 ID。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-752232225%2FProperties%2F-2139990268" anchor-label="source" id="-752232225%2FProperties%2F-2139990268" data-filterable-set=":simbot-component-qq-guild-core/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-qq-guild-core/commonMain" data-filterable-set=":simbot-component-qq-guild-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../love.forte.simbot.component.qguild/-q-g-objective-container/source.html"><span><span>source</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-752232225%2FProperties%2F-2139990268"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq-guild-core/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">val </span><a href="../../love.forte.simbot.component.qguild/-q-g-objective-container/source.html">source</a><span class="token operator">: </span><a href="../../../simbot-component-qq-guild-api/love.forte.simbot.qguild.model.panel/-command-panel-record/index.html">CommandPanelRecord</a></div><div class="brief "><p class="paragraph">得到此容器中保留的原始对象。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Inherited functions</h2>
+        <div class="table"><a data-name="1049956284%2FFunctions%2F-2139990268" anchor-label="addGroupTargets" id="1049956284%2FFunctions%2F-2139990268" data-filterable-set=":simbot-component-qq-guild-core/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-qq-guild-core/commonMain" data-filterable-set=":simbot-component-qq-guild-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-q-g-command-panel-handle/add-group-targets.html"><span>add</span><wbr><span>Group</span><wbr><span><span>Targets</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1049956284%2FFunctions%2F-2139990268"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq-guild-core/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../-q-g-command-panel-handle/add-group-targets.html"><span class="token function">addGroupTargets</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">groupOpenids<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-collection/index.html">Collection</a><span class="token operator">&lt;</span><span data-unresolved-link="love.forte.simbot.common.id/ID///PointingToDeclaration/">ID</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">添加群聊相关的面板关联目标。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1867721277%2FFunctions%2F-2139990268" anchor-label="addTargets" id="-1867721277%2FFunctions%2F-2139990268" data-filterable-set=":simbot-component-qq-guild-core/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-qq-guild-core/commonMain" data-filterable-set=":simbot-component-qq-guild-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-q-g-command-panel-handle/add-targets.html"><span>add</span><wbr><span><span>Targets</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1867721277%2FFunctions%2F-2139990268"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq-guild-core/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../-q-g-command-panel-handle/add-targets.html"><span class="token function">addTargets</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">userOpenids<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-collection/index.html">Collection</a><span class="token operator">&lt;</span><span data-unresolved-link="love.forte.simbot.common.id/ID///PointingToDeclaration/">ID</span><span class="token operator">&gt;</span><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">groupOpenids<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-collection/index.html">Collection</a><span class="token operator">&lt;</span><span data-unresolved-link="love.forte.simbot.common.id/ID///PointingToDeclaration/">ID</span><span class="token operator">&gt;</span><span class="token operator">?</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">添加面板关联目标。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1950581710%2FFunctions%2F-2139990268" anchor-label="addUserTargets" id="1950581710%2FFunctions%2F-2139990268" data-filterable-set=":simbot-component-qq-guild-core/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-qq-guild-core/commonMain" data-filterable-set=":simbot-component-qq-guild-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-q-g-command-panel-handle/add-user-targets.html"><span>add</span><wbr><span>User</span><wbr><span><span>Targets</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1950581710%2FFunctions%2F-2139990268"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq-guild-core/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../-q-g-command-panel-handle/add-user-targets.html"><span class="token function">addUserTargets</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">userOpenids<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-collection/index.html">Collection</a><span class="token operator">&lt;</span><span data-unresolved-link="love.forte.simbot.common.id/ID///PointingToDeclaration/">ID</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">添加用户相关的面板关联目标。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1682802582%2FFunctions%2F-2139990268" anchor-label="delete" id="1682802582%2FFunctions%2F-2139990268" data-filterable-set=":simbot-component-qq-guild-core/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-qq-guild-core/commonMain" data-filterable-set=":simbot-component-qq-guild-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-q-g-command-panel-handle/delete.html"><span><span>delete</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1682802582%2FFunctions%2F-2139990268"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq-guild-core/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">suspend override </span><span class="token keyword">fun </span><a href="../-q-g-command-panel-handle/delete.html"><span class="token function">delete</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">vararg </span>options<span class="token operator">: </span><span data-unresolved-link="love.forte.simbot.ability/DeleteOption///PointingToDeclaration/">DeleteOption</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">删除此指令面板。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-257064281%2FFunctions%2F-2139990268" anchor-label="get" id="-257064281%2FFunctions%2F-2139990268" data-filterable-set=":simbot-component-qq-guild-core/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-qq-guild-core/commonMain" data-filterable-set=":simbot-component-qq-guild-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-q-g-command-panel-handle/get.html"><span><span>get</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-257064281%2FFunctions%2F-2139990268"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq-guild-core/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../-q-g-command-panel-handle/get.html"><span class="token function">get</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">QGCommandPanelRecord</a></div><div class="brief "><p class="paragraph">获取此面板的详情快照。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="332894687%2FFunctions%2F-2139990268" anchor-label="removeGroupTargets" id="332894687%2FFunctions%2F-2139990268" data-filterable-set=":simbot-component-qq-guild-core/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-qq-guild-core/commonMain" data-filterable-set=":simbot-component-qq-guild-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-q-g-command-panel-handle/remove-group-targets.html"><span>remove</span><wbr><span>Group</span><wbr><span><span>Targets</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="332894687%2FFunctions%2F-2139990268"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq-guild-core/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../-q-g-command-panel-handle/remove-group-targets.html"><span class="token function">removeGroupTargets</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">groupOpenids<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-collection/index.html">Collection</a><span class="token operator">&lt;</span><span data-unresolved-link="love.forte.simbot.common.id/ID///PointingToDeclaration/">ID</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">删除群聊面板关联目标。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-906632768%2FFunctions%2F-2139990268" anchor-label="removeTargets" id="-906632768%2FFunctions%2F-2139990268" data-filterable-set=":simbot-component-qq-guild-core/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-qq-guild-core/commonMain" data-filterable-set=":simbot-component-qq-guild-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-q-g-command-panel-handle/remove-targets.html"><span>remove</span><wbr><span><span>Targets</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-906632768%2FFunctions%2F-2139990268"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq-guild-core/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../-q-g-command-panel-handle/remove-targets.html"><span class="token function">removeTargets</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">userOpenids<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-collection/index.html">Collection</a><span class="token operator">&lt;</span><span data-unresolved-link="love.forte.simbot.common.id/ID///PointingToDeclaration/">ID</span><span class="token operator">&gt;</span><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">groupOpenids<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-collection/index.html">Collection</a><span class="token operator">&lt;</span><span data-unresolved-link="love.forte.simbot.common.id/ID///PointingToDeclaration/">ID</span><span class="token operator">&gt;</span><span class="token operator">?</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">删除面板关联目标。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2090421941%2FFunctions%2F-2139990268" anchor-label="removeUserTargets" id="-2090421941%2FFunctions%2F-2139990268" data-filterable-set=":simbot-component-qq-guild-core/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-qq-guild-core/commonMain" data-filterable-set=":simbot-component-qq-guild-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-q-g-command-panel-handle/remove-user-targets.html"><span>remove</span><wbr><span>User</span><wbr><span><span>Targets</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2090421941%2FFunctions%2F-2139990268"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq-guild-core/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../-q-g-command-panel-handle/remove-user-targets.html"><span class="token function">removeUserTargets</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">userOpenids<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-collection/index.html">Collection</a><span class="token operator">&lt;</span><span data-unresolved-link="love.forte.simbot.common.id/ID///PointingToDeclaration/">ID</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">删除用户面板关联目标。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1125207976%2FFunctions%2F-2139990268" anchor-label="update" id="1125207976%2FFunctions%2F-2139990268" data-filterable-set=":simbot-component-qq-guild-core/commonMain"></a>
+          <div class="table-row" data-filterable-current=":simbot-component-qq-guild-core/commonMain" data-filterable-set=":simbot-component-qq-guild-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-q-g-command-panel-handle/update.html"><span><span>update</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1125207976%2FFunctions%2F-2139990268"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq-guild-core/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../-q-g-command-panel-handle/update.html"><span class="token function">update</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">panel<span class="token operator">: </span><a href="../../../simbot-component-qq-guild-api/love.forte.simbot.qguild.model.panel/-command-panel/index.html">CommandPanel</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-q-g-command-panel-update-receipt/index.html">QGCommandPanelUpdateReceipt</a></div><div class="brief "><p class="paragraph">整体覆盖此面板的内容与备注。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1619772167%2FFunctions%2F-2139990268" anchor-label="update" id="-1619772167%2FFunctions%2F-2139990268" data-filterable-set=":simbot-component-qq-guild-core/commonMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":simbot-component-qq-guild-core/commonMain" data-filterable-set=":simbot-component-qq-guild-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../update.html"><span><span>update</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1619772167%2FFunctions%2F-2139990268"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq-guild-core/commonMain"><div class="symbol monospace"><span class="token keyword">inline suspend </span><span class="token keyword">fun </span><a href="../-q-g-command-panel-handle/index.html">QGCommandPanelHandle</a><span class="token punctuation">.</span><a href="../update.html"><span class="token function">update</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">block<span class="token operator">: </span><a href="../../../simbot-component-qq-guild-api/love.forte.simbot.qguild.model.panel/-command-panel-builder/index.html">CommandPanelBuilder</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-q-g-command-panel-update-receipt/index.html">QGCommandPanelUpdateReceipt</a></div><div class="brief "><p class="paragraph">使用 <a href="../../../simbot-component-qq-guild-api/love.forte.simbot.qguild.model.panel/-command-panel-builder/index.html">love.forte.simbot.qguild.model.panel.CommandPanelBuilder</a> DSL 整体覆盖此面板的内容与备注。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+        <span>© 2024-2026 <a href="https://github.com/simple-robot">Simple Robot</a>. All rights reserved.</span>
+        <span class="pull-right">
+            <span>Generated by </span>
+            <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                <span>dokka</span>
+            </a>
+        </span>
+    </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
