@@ -1,0 +1,440 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>Companion</title>
+<link href="../../../../../images/logo-icon.svg" rel="icon" type="image/svg">    <!-- 百度统计 -->
+    <!--suppress ES6ConvertVarToLetConst -->
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            const hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?045f67a122223db9432c7856fc942fad";
+            const s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1JWL2DDTB4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-1JWL2DDTB4');
+    </script>
+<script>var pathToRoot = "../../../../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+      if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      } else {
+        const savedDarkMode = JSON.parse(storage)
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../../../styles/style.css" rel="Stylesheet">
+<link href="../../../../../styles/main.css" rel="Stylesheet">
+<link href="../../../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../../../scripts/safe-local-storage_blocking.js"></script>
+<script type="text/javascript" src="../../../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../../../ui-kit/ui-kit.min.js" defer></script>
+<link href="../../../../../images/logo-icon.svg">
+<link href="../../../../../images/logo-icon-light.svg">
+<link href="../../../../../styles/kdoc-style.css" rel="Stylesheet"></head>
+<body>
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+<a class="library-name--link" href="../../../../../index.html" tabindex="1">
+                    Simple Robot
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">5.0.0-Alpha1-SNAPSHOT
+        </div>
+        <div class="navigation-controls">
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector common-like" data-active="" aria-pressed="true" data-filter=":simbot-component-qq:simbot-component-qq-api/commonMain">common</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option common-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":simbot-component-qq:simbot-component-qq-api/commonMain" data-filter=":simbot-component-qq:simbot-component-qq-api/commonMain">
+                                <span class="checkbox--icon"></span>
+                                common
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </ul>
+                <a class="navigation-controls--btn navigation-controls--btn_homepage" id="homepage-link" href="https://github.com/simple-robot/simpler-robot"></a>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config="{&quot;defaultSize&quot;: 280, &quot;minSize&quot;: 200, &quot;maxSize&quot;: 400}">
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
+                            <span>
+                                    Simple Robot
+                            </span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="simbot-component-qq-api::love.forte.simbot.qguild.event/InteractionType.Companion///PointingToDeclaration//-1798534426">
+  <div class="breadcrumbs"><a href="../../../index.html">simbot-component-qq-api</a><span class="delimiter">/</span><a href="../../index.html">love.forte.simbot.qguild.event</a><span class="delimiter">/</span><a href="../index.html">InteractionType</a><span class="delimiter">/</span><span class="current">Companion</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Companion</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq:simbot-component-qq-api/commonMain"><div class="symbol monospace"><span class="token keyword">object </span><a href="index.html">Companion</a><span class="source-link-wrapper"><span class="source-link" data-element-type="source-link">(<a href="https://github.com/simple-robot/simpler-robot/tree/dev/simbot-component-qq/simbot-component-qq-api/src/commonMain/kotlin/love/forte/simbot/qguild/event/interactions.kt#L114">source</a>)</span></span></div></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="PROPERTY">
+        <h2 class="tableheader">Properties</h2>
+        <div class="table"><a data-name="593069762%2FProperties%2F-1798534426" anchor-label="CALLBACK_COMMAND_VALUE" id="593069762%2FProperties%2F-1798534426" data-filterable-set=":simbot-component-qq:simbot-component-qq-api/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-qq:simbot-component-qq-api/commonMain" data-filterable-set=":simbot-component-qq:simbot-component-qq-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-c-a-l-l-b-a-c-k_-c-o-m-m-a-n-d_-v-a-l-u-e.html"><span>CALLBACK_</span><wbr><span>COMMAND_</span><wbr><span>VALUE</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="593069762%2FProperties%2F-1798534426"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq:simbot-component-qq-api/commonMain"><div class="symbol monospace"><span class="token keyword">const </span><span class="token keyword">val </span><a href="-c-a-l-l-b-a-c-k_-c-o-m-m-a-n-d_-v-a-l-u-e.html">CALLBACK_COMMAND_VALUE</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">12</span></div><div class="brief "><p class="paragraph">单聊快捷菜单回调（CALLBACK_COMMAND）值常量</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1113908719%2FProperties%2F-1798534426" anchor-label="CallbackCommand" id="1113908719%2FProperties%2F-1798534426" data-filterable-set=":simbot-component-qq:simbot-component-qq-api/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-qq:simbot-component-qq-api/commonMain" data-filterable-set=":simbot-component-qq:simbot-component-qq-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-callback-command.html"><span>Callback</span><wbr><span><span>Command</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1113908719%2FProperties%2F-1798534426"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq:simbot-component-qq-api/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-jvm-static/index.html"><span class="token annotation builtin">JvmStatic</span></a></div><div class="block"><span class="token annotation builtin">@get:</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-jvm-expose-boxed/index.html"><span class="token annotation builtin">JvmExposeBoxed</span></a></div></div><span class="token keyword">val </span><a href="-callback-command.html">CallbackCommand</a><span class="token operator">: </span><a href="../index.html">InteractionType</a></div><div class="brief "><p class="paragraph">单聊快捷菜单回调（CALLBACK_COMMAND）：用户点击单聊场景下的自定义菜单</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="398076767%2FProperties%2F-1798534426" anchor-label="CLEAR_SESSION_VALUE" id="398076767%2FProperties%2F-1798534426" data-filterable-set=":simbot-component-qq:simbot-component-qq-api/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-qq:simbot-component-qq-api/commonMain" data-filterable-set=":simbot-component-qq:simbot-component-qq-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-c-l-e-a-r_-s-e-s-s-i-o-n_-v-a-l-u-e.html"><span>CLEAR_</span><wbr><span>SESSION_</span><wbr><span>VALUE</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="398076767%2FProperties%2F-1798534426"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq:simbot-component-qq-api/commonMain"><div class="symbol monospace"><span class="token keyword">const </span><span class="token keyword">val </span><a href="-c-l-e-a-r_-s-e-s-s-i-o-n_-v-a-l-u-e.html">CLEAR_SESSION_VALUE</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">14</span></div><div class="brief "><p class="paragraph">清空会话（CLEAR_SESSION）值常量</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-587824996%2FProperties%2F-1798534426" anchor-label="ClearSession" id="-587824996%2FProperties%2F-1798534426" data-filterable-set=":simbot-component-qq:simbot-component-qq-api/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-qq:simbot-component-qq-api/commonMain" data-filterable-set=":simbot-component-qq:simbot-component-qq-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-clear-session.html"><span>Clear</span><wbr><span><span>Session</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-587824996%2FProperties%2F-1798534426"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq:simbot-component-qq-api/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-jvm-static/index.html"><span class="token annotation builtin">JvmStatic</span></a></div><div class="block"><span class="token annotation builtin">@get:</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-jvm-expose-boxed/index.html"><span class="token annotation builtin">JvmExposeBoxed</span></a></div></div><span class="token keyword">val </span><a href="-clear-session.html">ClearSession</a><span class="token operator">: </span><a href="../index.html">InteractionType</a></div><div class="brief "><p class="paragraph">清空会话（CLEAR_SESSION）：用户清空智能体会话历史</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-506718197%2FProperties%2F-1798534426" anchor-label="GROUP_AUTHORIZE_STATUS_VALUE" id="-506718197%2FProperties%2F-1798534426" data-filterable-set=":simbot-component-qq:simbot-component-qq-api/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-qq:simbot-component-qq-api/commonMain" data-filterable-set=":simbot-component-qq:simbot-component-qq-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-g-r-o-u-p_-a-u-t-h-o-r-i-z-e_-s-t-a-t-u-s_-v-a-l-u-e.html"><span>GROUP_</span><wbr><span>AUTHORIZE_</span><wbr><span>STATUS_</span><wbr><span>VALUE</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-506718197%2FProperties%2F-1798534426"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq:simbot-component-qq-api/commonMain"><div class="symbol monospace"><span class="token keyword">const </span><span class="token keyword">val </span><a href="-g-r-o-u-p_-a-u-t-h-o-r-i-z-e_-s-t-a-t-u-s_-v-a-l-u-e.html">GROUP_AUTHORIZE_STATUS_VALUE</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">20</span></div><div class="brief "><p class="paragraph">群授权状态变更（GROUP_AUTHORIZE_STATUS）值常量</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1200470726%2FProperties%2F-1798534426" anchor-label="GROUP_AUTHORIZE_VALUE" id="-1200470726%2FProperties%2F-1798534426" data-filterable-set=":simbot-component-qq:simbot-component-qq-api/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-qq:simbot-component-qq-api/commonMain" data-filterable-set=":simbot-component-qq:simbot-component-qq-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-g-r-o-u-p_-a-u-t-h-o-r-i-z-e_-v-a-l-u-e.html"><span>GROUP_</span><wbr><span>AUTHORIZE_</span><wbr><span>VALUE</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1200470726%2FProperties%2F-1798534426"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq:simbot-component-qq-api/commonMain"><div class="symbol monospace"><span class="token keyword">const </span><span class="token keyword">val </span><a href="-g-r-o-u-p_-a-u-t-h-o-r-i-z-e_-v-a-l-u-e.html">GROUP_AUTHORIZE_VALUE</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">19</span></div><div class="brief "><p class="paragraph">群授权（GROUP_AUTHORIZE）值常量</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="321480987%2FProperties%2F-1798534426" anchor-label="GroupAuthorize" id="321480987%2FProperties%2F-1798534426" data-filterable-set=":simbot-component-qq:simbot-component-qq-api/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-qq:simbot-component-qq-api/commonMain" data-filterable-set=":simbot-component-qq:simbot-component-qq-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-group-authorize.html"><span>Group</span><wbr><span><span>Authorize</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="321480987%2FProperties%2F-1798534426"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq:simbot-component-qq-api/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-jvm-static/index.html"><span class="token annotation builtin">JvmStatic</span></a></div><div class="block"><span class="token annotation builtin">@get:</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-jvm-expose-boxed/index.html"><span class="token annotation builtin">JvmExposeBoxed</span></a></div></div><span class="token keyword">val </span><a href="-group-authorize.html">GroupAuthorize</a><span class="token operator">: </span><a href="../index.html">InteractionType</a></div><div class="brief "><p class="paragraph">群授权（GROUP_AUTHORIZE）：群授权事件</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1930688823%2FProperties%2F-1798534426" anchor-label="GroupAuthorizeStatus" id="-1930688823%2FProperties%2F-1798534426" data-filterable-set=":simbot-component-qq:simbot-component-qq-api/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-qq:simbot-component-qq-api/commonMain" data-filterable-set=":simbot-component-qq:simbot-component-qq-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-group-authorize-status.html"><span>Group</span><wbr><span>Authorize</span><wbr><span><span>Status</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1930688823%2FProperties%2F-1798534426"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq:simbot-component-qq-api/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-jvm-static/index.html"><span class="token annotation builtin">JvmStatic</span></a></div><div class="block"><span class="token annotation builtin">@get:</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-jvm-expose-boxed/index.html"><span class="token annotation builtin">JvmExposeBoxed</span></a></div></div><span class="token keyword">val </span><a href="-group-authorize-status.html">GroupAuthorizeStatus</a><span class="token operator">: </span><a href="../index.html">InteractionType</a></div><div class="brief "><p class="paragraph">群授权状态变更（GROUP_AUTHORIZE_STATUS）</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1703240983%2FProperties%2F-1798534426" anchor-label="IN_OUT_STORY_VALUE" id="-1703240983%2FProperties%2F-1798534426" data-filterable-set=":simbot-component-qq:simbot-component-qq-api/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-qq:simbot-component-qq-api/commonMain" data-filterable-set=":simbot-component-qq:simbot-component-qq-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-i-n_-o-u-t_-s-t-o-r-y_-v-a-l-u-e.html"><span>IN_</span><wbr><span>OUT_</span><wbr><span>STORY_</span><wbr><span>VALUE</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1703240983%2FProperties%2F-1798534426"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq:simbot-component-qq-api/commonMain"><div class="symbol monospace"><span class="token keyword">const </span><span class="token keyword">val </span><a href="-i-n_-o-u-t_-s-t-o-r-y_-v-a-l-u-e.html">IN_OUT_STORY_VALUE</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">15</span></div><div class="brief "><p class="paragraph">进出故事集（IN_OUT_STORY）值常量</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-602721322%2FProperties%2F-1798534426" anchor-label="INLINE_KEYBOARD_VALUE" id="-602721322%2FProperties%2F-1798534426" data-filterable-set=":simbot-component-qq:simbot-component-qq-api/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-qq:simbot-component-qq-api/commonMain" data-filterable-set=":simbot-component-qq:simbot-component-qq-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-i-n-l-i-n-e_-k-e-y-b-o-a-r-d_-v-a-l-u-e.html"><span>INLINE_</span><wbr><span>KEYBOARD_</span><wbr><span>VALUE</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-602721322%2FProperties%2F-1798534426"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq:simbot-component-qq-api/commonMain"><div class="symbol monospace"><span class="token keyword">const </span><span class="token keyword">val </span><a href="-i-n-l-i-n-e_-k-e-y-b-o-a-r-d_-v-a-l-u-e.html">INLINE_KEYBOARD_VALUE</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">11</span></div><div class="brief "><p class="paragraph">消息按钮回调（INLINE_KEYBOARD）值常量</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="676796517%2FProperties%2F-1798534426" anchor-label="InlineKeyboard" id="676796517%2FProperties%2F-1798534426" data-filterable-set=":simbot-component-qq:simbot-component-qq-api/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-qq:simbot-component-qq-api/commonMain" data-filterable-set=":simbot-component-qq:simbot-component-qq-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-inline-keyboard.html"><span>Inline</span><wbr><span><span>Keyboard</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="676796517%2FProperties%2F-1798534426"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq:simbot-component-qq-api/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-jvm-static/index.html"><span class="token annotation builtin">JvmStatic</span></a></div><div class="block"><span class="token annotation builtin">@get:</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-jvm-expose-boxed/index.html"><span class="token annotation builtin">JvmExposeBoxed</span></a></div></div><span class="token keyword">val </span><a href="-inline-keyboard.html">InlineKeyboard</a><span class="token operator">: </span><a href="../index.html">InteractionType</a></div><div class="brief "><p class="paragraph">消息按钮回调（INLINE_KEYBOARD）：用户点击消息中的内联键盘按钮</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1575500025%2FProperties%2F-1798534426" anchor-label="InOutStory" id="1575500025%2FProperties%2F-1798534426" data-filterable-set=":simbot-component-qq:simbot-component-qq-api/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-qq:simbot-component-qq-api/commonMain" data-filterable-set=":simbot-component-qq:simbot-component-qq-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-in-out-story.html"><span>In</span><wbr><span>Out</span><wbr><span><span>Story</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1575500025%2FProperties%2F-1798534426"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq:simbot-component-qq-api/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-jvm-static/index.html"><span class="token annotation builtin">JvmStatic</span></a></div><div class="block"><span class="token annotation builtin">@get:</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-jvm-expose-boxed/index.html"><span class="token annotation builtin">JvmExposeBoxed</span></a></div></div><span class="token keyword">val </span><a href="-in-out-story.html">InOutStory</a><span class="token operator">: </span><a href="../index.html">InteractionType</a></div><div class="brief "><p class="paragraph">进出故事集（IN_OUT_STORY）：用户进入或退出故事集</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1978619498%2FProperties%2F-1798534426" anchor-label="MESSAGE_FEEDBACK_VALUE" id="-1978619498%2FProperties%2F-1798534426" data-filterable-set=":simbot-component-qq:simbot-component-qq-api/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-qq:simbot-component-qq-api/commonMain" data-filterable-set=":simbot-component-qq:simbot-component-qq-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-m-e-s-s-a-g-e_-f-e-e-d-b-a-c-k_-v-a-l-u-e.html"><span>MESSAGE_</span><wbr><span>FEEDBACK_</span><wbr><span>VALUE</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1978619498%2FProperties%2F-1798534426"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq:simbot-component-qq-api/commonMain"><div class="symbol monospace"><span class="token keyword">const </span><span class="token keyword">val </span><a href="-m-e-s-s-a-g-e_-f-e-e-d-b-a-c-k_-v-a-l-u-e.html">MESSAGE_FEEDBACK_VALUE</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">13</span></div><div class="brief "><p class="paragraph">消息反馈（MESSAGE_FEEDBACK）值常量</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1318665033%2FProperties%2F-1798534426" anchor-label="MessageFeedback" id="1318665033%2FProperties%2F-1798534426" data-filterable-set=":simbot-component-qq:simbot-component-qq-api/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-qq:simbot-component-qq-api/commonMain" data-filterable-set=":simbot-component-qq:simbot-component-qq-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-message-feedback.html"><span>Message</span><wbr><span><span>Feedback</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1318665033%2FProperties%2F-1798534426"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq:simbot-component-qq-api/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-jvm-static/index.html"><span class="token annotation builtin">JvmStatic</span></a></div><div class="block"><span class="token annotation builtin">@get:</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-jvm-expose-boxed/index.html"><span class="token annotation builtin">JvmExposeBoxed</span></a></div></div><span class="token keyword">val </span><a href="-message-feedback.html">MessageFeedback</a><span class="token operator">: </span><a href="../index.html">InteractionType</a></div><div class="brief "><p class="paragraph">消息反馈（MESSAGE_FEEDBACK）：用户对智能体消息进行点赞/点踩反馈</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="318557205%2FProperties%2F-1798534426" anchor-label="SWITCH_MODEL_VALUE" id="318557205%2FProperties%2F-1798534426" data-filterable-set=":simbot-component-qq:simbot-component-qq-api/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-qq:simbot-component-qq-api/commonMain" data-filterable-set=":simbot-component-qq:simbot-component-qq-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-s-w-i-t-c-h_-m-o-d-e-l_-v-a-l-u-e.html"><span>SWITCH_</span><wbr><span>MODEL_</span><wbr><span>VALUE</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="318557205%2FProperties%2F-1798534426"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq:simbot-component-qq-api/commonMain"><div class="symbol monospace"><span class="token keyword">const </span><span class="token keyword">val </span><a href="-s-w-i-t-c-h_-m-o-d-e-l_-v-a-l-u-e.html">SWITCH_MODEL_VALUE</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">16</span></div><div class="brief "><p class="paragraph">切换模型（SWITCH_MODEL）值常量</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2060729280%2FProperties%2F-1798534426" anchor-label="SwitchModel" id="2060729280%2FProperties%2F-1798534426" data-filterable-set=":simbot-component-qq:simbot-component-qq-api/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-qq:simbot-component-qq-api/commonMain" data-filterable-set=":simbot-component-qq:simbot-component-qq-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-switch-model.html"><span>Switch</span><wbr><span><span>Model</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2060729280%2FProperties%2F-1798534426"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq:simbot-component-qq-api/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-jvm-static/index.html"><span class="token annotation builtin">JvmStatic</span></a></div><div class="block"><span class="token annotation builtin">@get:</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-jvm-expose-boxed/index.html"><span class="token annotation builtin">JvmExposeBoxed</span></a></div></div><span class="token keyword">val </span><a href="-switch-model.html">SwitchModel</a><span class="token operator">: </span><a href="../index.html">InteractionType</a></div><div class="brief "><p class="paragraph">切换模型（SWITCH_MODEL）：用户切换智能体模型</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2041236194%2FProperties%2F-1798534426" anchor-label="USER_AUTHORIZE_VALUE" id="-2041236194%2FProperties%2F-1798534426" data-filterable-set=":simbot-component-qq:simbot-component-qq-api/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-qq:simbot-component-qq-api/commonMain" data-filterable-set=":simbot-component-qq:simbot-component-qq-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-u-s-e-r_-a-u-t-h-o-r-i-z-e_-v-a-l-u-e.html"><span>USER_</span><wbr><span>AUTHORIZE_</span><wbr><span>VALUE</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2041236194%2FProperties%2F-1798534426"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq:simbot-component-qq-api/commonMain"><div class="symbol monospace"><span class="token keyword">const </span><span class="token keyword">val </span><a href="-u-s-e-r_-a-u-t-h-o-r-i-z-e_-v-a-l-u-e.html">USER_AUTHORIZE_VALUE</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">18</span></div><div class="brief "><p class="paragraph">用户授权（USER_AUTHORIZE）值常量</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-813351465%2FProperties%2F-1798534426" anchor-label="UserAuthorize" id="-813351465%2FProperties%2F-1798534426" data-filterable-set=":simbot-component-qq:simbot-component-qq-api/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-qq:simbot-component-qq-api/commonMain" data-filterable-set=":simbot-component-qq:simbot-component-qq-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-user-authorize.html"><span>User</span><wbr><span><span>Authorize</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-813351465%2FProperties%2F-1798534426"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq:simbot-component-qq-api/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-jvm-static/index.html"><span class="token annotation builtin">JvmStatic</span></a></div><div class="block"><span class="token annotation builtin">@get:</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-jvm-expose-boxed/index.html"><span class="token annotation builtin">JvmExposeBoxed</span></a></div></div><span class="token keyword">val </span><a href="-user-authorize.html">UserAuthorize</a><span class="token operator">: </span><a href="../index.html">InteractionType</a></div><div class="brief "><p class="paragraph">用户授权（USER_AUTHORIZE）：用户授权事件</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="tableheader">Functions</h2>
+        <div class="table"><a data-name="932090956%2FFunctions%2F-1798534426" anchor-label="of" id="932090956%2FFunctions%2F-1798534426" data-filterable-set=":simbot-component-qq:simbot-component-qq-api/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-qq:simbot-component-qq-api/commonMain" data-filterable-set=":simbot-component-qq:simbot-component-qq-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="of.html"><span><span>of</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="932090956%2FFunctions%2F-1798534426"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq:simbot-component-qq-api/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-jvm-static/index.html"><span class="token annotation builtin">JvmStatic</span></a></div><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-jvm-expose-boxed/index.html"><span class="token annotation builtin">JvmExposeBoxed</span></a></div></div><span class="token keyword">fun </span><a href="of.html"><span class="token function">of</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">value<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../index.html">InteractionType</a></div><div class="brief "><p class="paragraph">构建任意数值的 <a href="../index.html">InteractionType</a></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>© 2024-2026 <a href="https://github.com/simple-robot">Simple Robot</a>. All rights reserved.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
