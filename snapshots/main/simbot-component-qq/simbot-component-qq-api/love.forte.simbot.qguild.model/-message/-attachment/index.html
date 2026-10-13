@@ -118,7 +118,7 @@
   <div class="breadcrumbs"><a href="../../../index.html">simbot-component-qq-api</a><span class="delimiter">/</span><a href="../../index.html">love.forte.simbot.qguild.model</a><span class="delimiter">/</span><a href="../index.html">Message</a><span class="delimiter">/</span><span class="current">Attachment</span></div>
   <div class="cover ">
     <h1 class="cover"><span><span>Attachment</span></span></h1>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq:simbot-component-qq-api/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-core/kotlinx.serialization/-serializable/index.html"><span class="token annotation builtin">Serializable</span></a><span class="token punctuation">(</span><span>with<span class="token operator"> = </span><a href="../../../../../simbot-component-qq/simbot-component-qq-api/love.forte.simbot.qguild.model/-message-attachment-serializer/index.html">MessageAttachmentSerializer::class</a></span><wbr><span class="token punctuation">)</span></div></div><span class="token keyword">class </span><a href="index.html">Attachment</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>url<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>properties<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span><span class="token operator"> = </span>emptyMap()</span></span><span class="token punctuation">)</span><span class="source-link-wrapper"><span class="source-link" data-element-type="source-link">(<a href="https://github.com/simple-robot/simpler-robot/tree/dev/simbot-component-qq/simbot-component-qq-api/src/commonMain/kotlin/love/forte/simbot/qguild/model/Message.kt#L406">source</a>)</span></span></div><p class="paragraph"><a href="https://bot.q.qq.com/wiki/develop/api/openapi/message/model.html#messageattachment">MessageAttachment</a></p><p class="paragraph">在接收的时候似乎会针对不同类型存在额外的 <a href="../../../../../simbot-component-qq/simbot-component-qq-api/love.forte.simbot.qguild.model/-message/-attachment/--root--.html">properties</a>， 例如对于图片文件接收到的信息实际为：</p><div class="sample-container"><pre><code class="block lang-json" theme="idea">{<br>   "content_type": "image/gif",<br>   "filename": "{59CA8472-3FBB-98E9-9284-FB9D3D3148BC}.jpg",<br>   "height": 240,<br>   "id": "2249362854",<br>   "size": 499562,<br>   "url": "gchat.qpic.cn/qmeetpic/47750961638939775/1701030-2249362854-59CA84723FBB98E99284FB9D3D3148BC/0",<br>   "width": 240<br>}</code></pre><span class="copy-tooltip"><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div><span class="copy-icon"></span></span></div><p class="paragraph">因此 <a href="index.html">Attachment</a> 的实际序列化借助 k/v 均为 <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a> 的 <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/index.html">Map</a> 进行，并尝试从其中提取 <code class="lang-kotlin">url</code> 属性赋于 <a href="../../../../../simbot-component-qq/simbot-component-qq-api/love.forte.simbot.qguild.model/-message/-attachment/--root--.html">url</a> 中。</p></div></div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq:simbot-component-qq-api/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-core/kotlinx.serialization/-serializable/index.html"><span class="token annotation builtin">Serializable</span></a></div></div><span class="token keyword">class </span><a href="index.html">Attachment</a><span class="source-link-wrapper"><span class="source-link" data-element-type="source-link">(<a href="https://github.com/simple-robot/simpler-robot/tree/dev/simbot-component-qq/simbot-component-qq-api/src/commonMain/kotlin/love/forte/simbot/qguild/model/Message.kt#L392">source</a>)</span></span></div><p class="paragraph"><a href="https://bot.q.qq.com/wiki/develop/api-v2/autogen/event/group_message_create.html#schema-messageattachment">MessageAttachment</a></p></div></div>
   </div>
   <div class="tabbedcontent">
     <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
@@ -135,7 +135,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq:simbot-component-qq-api/commonMain"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">url<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">properties<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span><span class="token operator"> = </span>emptyMap()</span></span><span class="token punctuation">)</span></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq:simbot-component-qq-api/commonMain"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">url<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">properties<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span><span class="token operator"> = </span>emptyMap()</span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">兼容旧版使用字符串属性表创建附件的方式。</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -144,7 +144,82 @@
       </div>
       <div data-togglable="PROPERTY">
         <h2 class="tableheader">Properties</h2>
-        <div class="table"><a data-name="464722185%2FProperties%2F-1798534426" anchor-label="properties" id="464722185%2FProperties%2F-1798534426" data-filterable-set=":simbot-component-qq:simbot-component-qq-api/commonMain"></a>
+        <div class="table"><a data-name="-1613869937%2FProperties%2F-1798534426" anchor-label="asrReferText" id="-1613869937%2FProperties%2F-1798534426" data-filterable-set=":simbot-component-qq:simbot-component-qq-api/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-qq:simbot-component-qq-api/commonMain" data-filterable-set=":simbot-component-qq:simbot-component-qq-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="asr-refer-text.html"><span>asr</span><wbr><span>Refer</span><wbr><span><span>Text</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1613869937%2FProperties%2F-1798534426"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq:simbot-component-qq-api/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-core/kotlinx.serialization/-serial-name/index.html"><span class="token annotation builtin">SerialName</span></a><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">"asr_refer_text"</span></span></span><wbr><span class="token punctuation">)</span></div></div><span class="token keyword">val </span><a href="asr-refer-text.html">asrReferText</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">语音识别参考结果。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1445448565%2FProperties%2F-1798534426" anchor-label="contentType" id="-1445448565%2FProperties%2F-1798534426" data-filterable-set=":simbot-component-qq:simbot-component-qq-api/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-qq:simbot-component-qq-api/commonMain" data-filterable-set=":simbot-component-qq:simbot-component-qq-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="content-type.html"><span>content</span><wbr><span><span>Type</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1445448565%2FProperties%2F-1798534426"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq:simbot-component-qq-api/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-core/kotlinx.serialization/-serial-name/index.html"><span class="token annotation builtin">SerialName</span></a><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">"content_type"</span></span></span><wbr><span class="token punctuation">)</span></div></div><span class="token keyword">val </span><a href="content-type.html">contentType</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">附件内容类型。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2051938699%2FProperties%2F-1798534426" anchor-label="filename" id="-2051938699%2FProperties%2F-1798534426" data-filterable-set=":simbot-component-qq:simbot-component-qq-api/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-qq:simbot-component-qq-api/commonMain" data-filterable-set=":simbot-component-qq:simbot-component-qq-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="filename.html"><span><span>filename</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2051938699%2FProperties%2F-1798534426"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq:simbot-component-qq-api/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="filename.html">filename</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">文件名。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1496389397%2FProperties%2F-1798534426" anchor-label="height" id="1496389397%2FProperties%2F-1798534426" data-filterable-set=":simbot-component-qq:simbot-component-qq-api/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-qq:simbot-component-qq-api/commonMain" data-filterable-set=":simbot-component-qq:simbot-component-qq-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="height.html"><span><span>height</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1496389397%2FProperties%2F-1798534426"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq:simbot-component-qq-api/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="height.html">height</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">图片高度，单位为像素；非图片附件可能没有此字段。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-735486687%2FProperties%2F-1798534426" anchor-label="id" id="-735486687%2FProperties%2F-1798534426" data-filterable-set=":simbot-component-qq:simbot-component-qq-api/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-qq:simbot-component-qq-api/commonMain" data-filterable-set=":simbot-component-qq:simbot-component-qq-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="id.html"><span><span>id</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-735486687%2FProperties%2F-1798534426"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq:simbot-component-qq-api/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../../../../simbot-component-qq/simbot-component-qq-common/love.forte.simbot.qguild.common/-q-g-unstable-property/index.html"><span class="token annotation builtin">QGUnstableProperty</span></a></div></div><span class="token keyword">val </span><a href="id.html">id</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">附件 ID，官方文档未列出此字段，因此此字段并不稳定。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="464722185%2FProperties%2F-1798534426" anchor-label="properties" id="464722185%2FProperties%2F-1798534426" data-filterable-set=":simbot-component-qq:simbot-component-qq-api/commonMain"></a>
           <div class="table-row table-row_content" data-filterable-current=":simbot-component-qq:simbot-component-qq-api/commonMain" data-filterable-set=":simbot-component-qq:simbot-component-qq-api/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
@@ -154,7 +229,22 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq:simbot-component-qq-api/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="properties.html">properties</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">此 attachment 中接收到的所有属性。</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq:simbot-component-qq-api/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="properties.html"><strike>properties</strike></a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">附件属性的旧版字符串视图。新代码应使用类型化属性。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-483103429%2FProperties%2F-1798534426" anchor-label="size" id="-483103429%2FProperties%2F-1798534426" data-filterable-set=":simbot-component-qq:simbot-component-qq-api/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-qq:simbot-component-qq-api/commonMain" data-filterable-set=":simbot-component-qq:simbot-component-qq-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="size.html"><span><span>size</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-483103429%2FProperties%2F-1798534426"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq:simbot-component-qq-api/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="size.html">size</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-long/index.html">Long</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">文件大小，单位为字节。</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -169,7 +259,37 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq:simbot-component-qq-api/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="url.html">url</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">下载地址。</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq:simbot-component-qq-api/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="url.html">url</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">附件下载地址。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-291041431%2FProperties%2F-1798534426" anchor-label="voiceWavUrl" id="-291041431%2FProperties%2F-1798534426" data-filterable-set=":simbot-component-qq:simbot-component-qq-api/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-qq:simbot-component-qq-api/commonMain" data-filterable-set=":simbot-component-qq:simbot-component-qq-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="voice-wav-url.html"><span>voice</span><wbr><span>Wav</span><wbr><span><span>Url</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-291041431%2FProperties%2F-1798534426"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq:simbot-component-qq-api/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-core/kotlinx.serialization/-serial-name/index.html"><span class="token annotation builtin">SerialName</span></a><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">"voice_wav_url"</span></span></span><wbr><span class="token punctuation">)</span></div></div><span class="token keyword">val </span><a href="voice-wav-url.html">voiceWavUrl</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">语音转换后的 WAV 文件地址。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2027542072%2FProperties%2F-1798534426" anchor-label="width" id="2027542072%2FProperties%2F-1798534426" data-filterable-set=":simbot-component-qq:simbot-component-qq-api/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":simbot-component-qq:simbot-component-qq-api/commonMain" data-filterable-set=":simbot-component-qq:simbot-component-qq-api/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="width.html"><span><span>width</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2027542072%2FProperties%2F-1798534426"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":simbot-component-qq:simbot-component-qq-api/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="width.html">width</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">图片宽度，单位为像素；非图片附件可能没有此字段。</p></div></div></div>
                 </div>
               </div>
             </div>
