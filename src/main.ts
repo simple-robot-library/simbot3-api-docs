@@ -1,8 +1,6 @@
-import {createApp} from 'vue'
+import { createApp } from 'vue'
+import 'animal-island-vue/style'
 import './style.css'
 import App from './App.vue'
 
-const app = createApp(App);
-
-
-app.mount('#app')
+createApp(App).mount('#app')

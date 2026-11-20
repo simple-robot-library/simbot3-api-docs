@@ -16,18 +16,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       # 检出仓库代码
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
         # setup nodejs
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v6
         with:
-          node-version: 16.x
+          node-version: '24'
           cache: npm
 
         # releases
         
       # main-v4
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
           ref: 'kdoc-deploy/main-v4'
           path: 'public/kdoc/main-v4'
@@ -38,7 +38,7 @@ jobs:
         working-directory: ./public
 
       # main-v5
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
           ref: 'kdoc-deploy/main-v5'
           path: 'public/kdoc/main-v5'
@@ -49,7 +49,7 @@ jobs:
         working-directory: ./public
 
       # main
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
           ref: 'kdoc-deploy/main'
           path: 'public/kdoc/main'
@@ -71,7 +71,7 @@ jobs:
 #        working-directory: ./public
 
       # KOOK
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
           ref: 'kdoc-deploy/component-kook'
           path: 'public/kdoc/cp-kook'
@@ -82,7 +82,7 @@ jobs:
         working-directory: ./public
 
       # KOOK v3
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
           ref: 'kdoc-deploy/component-kook-v3'
           path: 'public/kdoc/cp-kook-v3'
@@ -93,7 +93,7 @@ jobs:
         working-directory: ./public
 
       # QQ频道
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
           ref: 'kdoc-deploy/component-qq-guild'
           path: 'public/kdoc/cp-qg'
@@ -105,7 +105,7 @@ jobs:
         working-directory: ./public
 
       # QQ频道 V3
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
           ref: 'kdoc-deploy/component-qq-guild-v3'
           path: 'public/kdoc/cp-qg-v3'
@@ -118,7 +118,7 @@ jobs:
 
         
       # Telegram
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
           ref: 'kdoc-deploy/component-telegram'
           path: 'public/kdoc/cp-tg'
@@ -130,7 +130,7 @@ jobs:
         working-directory: ./public
 
       # OneBot
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
           ref: 'kdoc-deploy/component-onebot'
           path: 'public/kdoc/cp-ob'
@@ -144,7 +144,7 @@ jobs:
       # snapshots
 
       # main 快照
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
           ref: 'kdoc-deploy/snapshots/main'
           path: 'public/kdoc/snapshots/main'
@@ -155,7 +155,7 @@ jobs:
         working-directory: ./public
 
       # main v4 快照
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
           ref: 'kdoc-deploy/snapshots/main-v4'
           path: 'public/kdoc/snapshots/main-v4'
@@ -177,7 +177,7 @@ jobs:
 #        working-directory: ./public
 
       # KOOK快照
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
           ref: 'kdoc-deploy/snapshots/component-kook'
           path: 'public/kdoc/snapshots/cp-kook'
@@ -188,7 +188,7 @@ jobs:
         working-directory: ./public
 
       # KOOK快照 v3
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
           ref: 'kdoc-deploy/snapshots/component-kook-v3'
           path: 'public/kdoc/snapshots/cp-kook-v3'
@@ -199,7 +199,7 @@ jobs:
         working-directory: ./public
 
       # QQ频道快照
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
           ref: 'kdoc-deploy/snapshots/component-qq-guild'
           path: 'public/kdoc/snapshots/cp-qg'
@@ -211,7 +211,7 @@ jobs:
 
 
       # QQ频道 V3 快照
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
           ref: 'kdoc-deploy/snapshots/component-qq-guild-v3'
           path: 'public/kdoc/snapshots/cp-qg-v3'
@@ -222,7 +222,7 @@ jobs:
         working-directory: ./public
         
       # TG快照
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
           ref: 'kdoc-deploy/snapshots/component-telegram'
           path: 'public/kdoc/snapshots/cp-tg'
@@ -233,7 +233,7 @@ jobs:
         working-directory: ./public
 
       # OneBot快照
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
           ref: 'kdoc-deploy/snapshots/component-onebot'
           path: 'public/kdoc/snapshots/cp-ob'
@@ -250,7 +250,7 @@ jobs:
 
       # https://github.com/marketplace/actions/github-pages-action
       - name: Push to doc repository
-        uses: peaceiris/actions-gh-pages@v3
+        uses: peaceiris/actions-gh-pages@v4.1.0
         with:
           personal_token: ${{ secrets.PUSH_TOKEN }}
           publish_branch: gh-pages
