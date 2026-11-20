@@ -36,7 +36,7 @@ function toHref(href: string) {
               <p>查阅 Simple Robot 核心库 API 和各平台组件手册。</p>
               <div class="hero-actions">
                 <Button type="primary" @click="() => toHref('https://simbot.forte.love')">官网</Button>
-                <Button type="default" @click="() => toHref('/main')">API 文档</Button>
+                <Button type="default" @click="() => toHref('/main/')">API 文档</Button>
                 <Button type="text" @click="() => toHref('https://github.com/simple-robot')">GitHub</Button>
               </div>
             </Card>
