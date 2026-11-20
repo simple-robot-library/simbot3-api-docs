@@ -10,8 +10,8 @@
                   :content-style="layoutCenterContentStyle">
 
           <n-grid cols="8" item-responsive responsive="screen">
-            <n-grid-item span="0 m:1 l:1 xl:2"></n-grid-item>
-            <n-grid-item span="8 m:6 l:6 xl:4">
+            <n-grid-item span="0 m:1 l:1 3xl:2"></n-grid-item>
+            <n-grid-item span="8 m:6 l:6 3xl:4">
               <n-flex vertical>
                 <n-collapse :default-expanded-names="[...collapseActions]" @item-header-click="handleItemHeaderClick">
                   <n-card embedded :bordered="false">
